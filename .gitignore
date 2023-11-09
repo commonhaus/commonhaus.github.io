@@ -1,0 +1,8 @@
+*~
+.DS_Store
+
+# hugo build
+public
+site/resources
+node_modules
+site/.hugo_build.lock
