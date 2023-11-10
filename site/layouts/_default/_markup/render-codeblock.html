@@ -1,0 +1,10 @@
+{{ $lineNumbers := false }}
+{{ $ignoredLanguages := slice "md" "markdown" "text" "txt" }}
+
+{{ if and (transform.CanHighlight .Type ) (not (in $ignoredLanguages .Type)) }}
+  {{ $lineNumbers = "inline" }}
+{{ end }}
+
+{{ $options := merge .Options (dict "linenos" $lineNumbers) }}
+{{ $result := transform.HighlightCodeBlock . $options }}
+{{ $result.Wrapped }}
