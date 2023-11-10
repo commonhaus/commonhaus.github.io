@@ -1,0 +1,63 @@
+name: publish
+
+on:
+  push:
+    branches:
+    - main
+  workflow_dispatch:
+
+env:
+  GH_BOT_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
+  GH_BOT_NAME: "GitHub Action"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Git Sumbodule Update
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name ${{ env.GH_BOT_NAME }}
+          git config user.email ${{ env.GH_BOT_EMAIL }}
+
+          git pull --recurse-submodules
+          git submodule update --init --remote --recursive
+
+          if git diff --quiet; then
+            echo "-- No changes -- "
+          else
+            git commit -am "Auto updated submodule references" && git push
+          fi
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.5'
+          cache-dependency-path: 'site/package-lock.json'
+          cache: 'npm'
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.120.4'
+          extended: true
+
+      - name: NPM Install
+        working-directory: ./site
+        run: npm install
+
+      - name: Build
+        working-directory: ./site
+        run: hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}

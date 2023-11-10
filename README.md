@@ -1,6 +1,6 @@
 # The Commonhaus Foundation Website
 
-![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103) ![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)
+[License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)
 
 Welcome to the GitHub repository for The Commonhaus Foundation's website. This repository contains the source code and content for our official website.
 
@@ -26,4 +26,3 @@ This website's content is licensed under the Creative Commons Attribution-ShareA
 For more details, visit our [website](https://www.commonhaus.org) or contact us through our [discussion forum][discussions].
 
 Thank you for supporting open-source collaboration!
-

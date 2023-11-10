@@ -4,5 +4,5 @@
 # hugo build
 public
 site/resources
-node_modules
 site/.hugo_build.lock
+node_modules
