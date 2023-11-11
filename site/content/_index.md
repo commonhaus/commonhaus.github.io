@@ -1,7 +1,3 @@
----
-author: Dirk Olbrich
-title: Hi, and welcome.
-date: 2019-05-15
----
+Placeholder. More coming. 
 
-Live long and code.
+Check out About in the top right
