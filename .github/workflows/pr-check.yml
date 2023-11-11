@@ -1,4 +1,4 @@
-name: publish
+name: pr-check
 
 on:
   pull_request:
