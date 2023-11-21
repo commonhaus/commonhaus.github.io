@@ -22,12 +22,16 @@ markup:
   defaultMarkdownHandler: goldmark
 module:
   mounts:
-  - source: ../foundation/governance
+  - source: ../foundation/bylaws/README.md
+    target: content/bylaws/_index.md
+  - source: ../foundation/bylaws
     includeFiles: '*.md'
-    target: content/governance
-  - source: ../foundation/
+    target: content/bylaws
+  - source: ../foundation/policies/README.md
+    target: content/policies/_index.md
+  - source: ../foundation/policies
     includeFiles: '*.md'
-    target: content
+    target: content/policies
   - source: content
     target: content
   - source: ../foundation/
