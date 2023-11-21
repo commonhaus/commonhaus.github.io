@@ -11,6 +11,8 @@ permissions:
   contents: read
 
 env:
+  GH_BOT_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
+  GH_BOT_NAME: "GitHub Action"
   HUGO_VERSION: 0.120.4
 
 jobs:
@@ -25,9 +27,8 @@ jobs:
       - name: Install Dart Sass
         run: sudo snap install dart-sass
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
-          submodules: recursive
           fetch-depth: 0
 
       - name: Git Sumbodule Update
@@ -41,7 +42,7 @@ jobs:
           git submodule update --init --remote --recursive
 
       - name: Use Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '18.5'
           cache-dependency-path: 'site/package-lock.json'
