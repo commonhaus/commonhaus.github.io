@@ -1,8 +1,19 @@
+*.swp
+*/plugins/*/main.js
+*/plugins/*/manifest.json
+*/plugins/*/styles.css
+*sync-conflict*
 *~
 .DS_Store
-
-# hugo build
-public
-site/resources
-site/.hugo_build.lock
+.frontmatter
+.nextcloudsync.log
+.sync_*
+.trash
+.vscode
+graph.json
 node_modules
+old
+public
+site/.hugo_build.lock
+site/resources
+workspace*
