@@ -1,0 +1,24 @@
+query($name: String!, $owner: String!, $categoryId: ID!) {
+  repository(owner: $owner, name: $name) {
+    discussions(last: 10, categoryId: $categoryId) {
+      nodes {
+        id
+        title
+        category {
+            name
+            id
+        }
+        author {
+            login
+            url
+            avatarUrl
+        }
+        url
+        body
+        bodyText
+        createdAt
+      }
+    }
+  }
+}
+
