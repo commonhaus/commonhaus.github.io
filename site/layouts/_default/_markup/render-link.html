@@ -159,6 +159,10 @@ either of these shortcodes in conjunction with this render hook.
         {{- end }}
       {{- end }}
     {{- end }}
+    {{- /* Read the href value, and replace README.md with index.html in the href */}}
+    {{- $href := $attrs.href }}
+    {{- $newHref := replace $href "README.md" "index.html" }}
+    {{- $attrs = merge $attrs (dict "href" $newHref) }}
   {{- else }}
     {{- with $u.Fragment }}
       {{- /* Destination is on the same page; prepend relative permalink. */}}

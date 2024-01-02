@@ -1,7 +1,66 @@
 <!DOCTYPE html>
 <html lang='{{ .Site.LanguageCode }}'>
-{{ partial "head.html" . }}
-
+<head>
+  {{ partial "head.html" . }}
+  <script>
+    function setTheme() {
+      const storedTheme = localStorage.getItem('color-theme');
+      console.log("toggle.theme", storedTheme, document.documentElement.dataset.storedTheme)
+      if (storedTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+        document.documentElement.dataset.storedTheme = 'dark';
+      } else if (storedTheme === 'light') {
+        document.documentElement.classList.remove('dark');
+        document.documentElement.dataset.storedTheme = 'light';
+      } else if (storedTheme === 'system' || !storedTheme) {
+        document.documentElement.dataset.storedTheme = 'system';
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      }
+    }
+    // Toggle theme when button is clicked
+    function toggleTheme() {
+      const storedTheme = localStorage.getItem('color-theme');
+      let newTheme = storedTheme;
+      if (storedTheme === 'dark') {
+        newTheme = 'light';
+      } else if (storedTheme === 'light') {
+        newTheme = 'system';
+      } else {
+        newTheme = 'dark';
+      }
+      localStorage.setItem('color-theme', newTheme);
+      setTheme();
+      updateButton();
+    }
+    function updateButton() {
+      const button = document.getElementById('theme-toggle');
+      const storedTheme = localStorage.getItem('color-theme');
+      let nextTitle, newAriaLabel;
+      if (storedTheme === 'dark') {
+        newAriaLabel = 'dark';
+        nextTitle = 'Color scheme: dark; next: light';
+      } else if (storedTheme === 'light') {
+        newAriaLabel = 'light';
+        nextTitle = 'Color scheme: light; next: system preferences';
+      } else {
+        newAriaLabel = 'system';
+        nextTitle = 'Color scheme: system preferences; next: dark';
+      }
+      button.setAttribute('aria-label', newAriaLabel);
+      button.setAttribute('title', nextTitle);
+    }
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    setTheme();
+    // Update the button once things have been rendered
+    window.onload = function() {
+      updateButton();
+    };
+  </script>
+</head>
 <body class="flex flex-col min-h-screen bg-slate-50 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
     {{- partial "dev/dev-tools.html" . -}}
     {{- partial "header.html" . -}}
