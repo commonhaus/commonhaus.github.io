@@ -56,12 +56,14 @@ function generateDiscussionContent(discussion: Discussion, id: string, category:
 
   let status = '';
   let data = `---
-title: "${prefix} ${title}"
+title: "${title}"
+rss-title: "${prefix} ${title}"
 github: "${discussion.url}"
 author: "${discussion.author.login}"
 date: ${discussion.createdAt}${updated}
-url: "/posts/${id}.html"
+url: "/activity/${id}.html"
 tags:
+- post
 - ${category}`;
 
 if (discussion.closed) {
@@ -116,7 +118,7 @@ function updateAuthors(discussions: Discussion[]): void {
 function updateCategory(data: DiscussionsData, category: string) {
   // Filter discussions by category (Announcements),
   const discussions = filterDiscussionsByCategory(data, category);
-  writeDiscussionsToFiles(discussions, `./site/posts`, category);
+  writeDiscussionsToFiles(discussions, `./site/activity`, category);
   // Update authors.yml (add/update author of last 10 discussions)
   updateAuthors(discussions);
 }

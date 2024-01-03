@@ -31,7 +31,6 @@ const markdown = {
 const site = lume({
     src: "site",
     dest: "public",
-    includes: "_includes",
     prettyUrls: false,
 }, { markdown });
 
@@ -51,7 +50,7 @@ site
         },
     }))
     .use(feed({
-        output: ["/posts.rss", "/posts.json"],
+        output: ["/feed/activity.rss", "/feed/activity.json"],
         query: "post",
         limit: 10,
         info: {
@@ -59,9 +58,37 @@ site
             description: "=description",
         },
         items: {
-            title: "=title",
+            title: "=rss-title",
             published: "=date",
-            updated: "=status.updated",
+            updated: "=updated",
+        },
+    }))
+    .use(feed({
+        output: ["/feed/notice.rss", "/feed/notice.json"],
+        query: "post announcements",
+        limit: 10,
+        info: {
+            title: "=metas.site",
+            description: "=description",
+        },
+        items: {
+            title: "=rss-title",
+            published: "=date",
+            updated: "=updated",
+        },
+    }))
+    .use(feed({
+        output: ["/feed/review.rss", "/feed/review.json"],
+        query: "post reviews",
+        limit: 10,
+        info: {
+            title: "=metas.site",
+            description: "=description",
+        },
+        items: {
+            title: "=rss-title",
+            published: "=date",
+            updated: "=updated",
         },
     }))
     .use(nav())
