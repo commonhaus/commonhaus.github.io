@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title }}</title>
+<meta name="author" content="{{ metas.author }}">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "{{ title }}",
+    "description": "{{ description }}"
+}
+</script>
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<header class="site">
+<h1>
+    <a href="/" class="logo" aria-label="Commonhaus Foundation Home" title="Home">
+        <span aria-hidden="true" class="h-site-tiny">CF</span>
+        <span aria-hidden="true" class="h-site-med">Commonhaus</span>
+        <span aria-hidden="true" class="h-site-lrg">Commonhaus Foundation</span>
+    </a>
+</h1>
+<nav aria-label="Site">
+    <ul>
+        <li><a href="/foundation" aria-label="About" title="About">
+            <span aria-hidden="true" class="h-site-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span>
+            <span aria-hidden="true" class="h-site-med">About</span>
+            <span aria-hidden="true" class="h-site-lrg">About</span>
+        </a></li>
+        <li><a href="/announcements" aria-label="Announcements" title="Announcements">
+            <span aria-hidden="true" class="h-site-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-megaphone"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></span>
+            <span aria-hidden="true" class="h-site-med">Announcements</span>
+        </a></li>
+        <li><a href="/community" aria-label="Community" title="Community">
+            <span aria-hidden="true" class="h-site-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-messages-square"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg></span>
+            <span aria-hidden="true" class="h-site-med">Community</span>
+        </a></li>
+    </ul>
+</nav>
+</header>
+<main>
+{{ content -}}
+</main>
+<footer class="site">
+Footer
+</footer>
+</body>
+</html>

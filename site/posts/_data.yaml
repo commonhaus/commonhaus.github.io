@@ -1,0 +1,5 @@
+layout: layouts/post.vto
+tags:
+- post
+metas:
+  robots: false

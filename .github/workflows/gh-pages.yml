@@ -35,19 +35,27 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup Deno environment
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Git Config
+        run: |
+          git config user.name ${{ env.GH_BOT_NAME }}
+          git config user.email ${{ env.GH_BOT_EMAIL }}
 
       - name: Git Sumbodule Update
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config user.name ${{ env.GH_BOT_NAME }}
-          git config user.email ${{ env.GH_BOT_EMAIL }}
-
           git pull --recurse-submodules
           git submodule update --init --remote --recursive
+          deno task lastmod
 
           if git diff --quiet; then
             echo "-- No changes -- "
@@ -55,14 +63,20 @@ jobs:
             git commit -am "🆙 Auto-update submodule references" && git push
           fi
 
+      - name: Git Discussion Update
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          deno task discuss
+          if git diff --quiet; then
+            echo "-- No changes -- "
+          else
+            git commit -am "💬 Auto-update GH Discussions" && git push
+          fi
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
-
-      - name: Setup Deno environment
-        uses: denoland/setup-deno@v1
-        with:
-          deno-version: v1.x
 
       - name: Build site
         run: deno task build

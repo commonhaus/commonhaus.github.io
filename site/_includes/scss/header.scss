@@ -1,0 +1,51 @@
+header.site {
+  .h-site-med,
+  .h-site-lrg {
+    display: none;
+  }
+
+  h1 {
+    font-size: 1em;
+    flex: 1 1 auto;
+  }
+  nav {
+    font-size: 1em;
+    background-color: bisque;
+    ul {
+      list-style-type: none; // Removes the bullet points
+      margin: 0; // Removes the default margin
+      padding: 0; // Removes the default padding
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1em;
+      li {
+        display: inline;
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  header.site {
+    .h-site-tiny {
+      display: none;
+    }
+    .h-site-med {
+      display: inline;
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  header.site h1 {
+    .h-site-med {
+      display: none;
+    }
+    .h-site-lrg {
+      display: inline;
+    }
+  }
+}

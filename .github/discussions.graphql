@@ -1,6 +1,6 @@
-query($name: String!, $owner: String!, $categoryId: ID!) {
+query($name: String!, $owner: String!) {
   repository(owner: $owner, name: $name) {
-    discussions(last: 10, categoryId: $categoryId) {
+    discussions(first: 50, orderBy: {field: UPDATED_AT, direction: DESC}) {
       nodes {
         id
         title
@@ -17,6 +17,13 @@ query($name: String!, $owner: String!, $categoryId: ID!) {
         body
         bodyText
         createdAt
+        updatedAt
+        closed
+        closedAt
+        isAnswered
+        answerChosenAt
+        locked
+        activeLockReason
       }
     }
   }

@@ -1,0 +1,38 @@
+@mixin content-align {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+@mixin content-pad {
+  padding: 1em;
+}
+body {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+header.site {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  @include content-align();
+  position: sticky;
+  top: 0;
+  background-color: burlywood;
+}
+main {
+  flex: 1 1 auto;
+  height: 80%;
+  background-color: beige;
+}
+article {
+  @include content-align();
+  background-color: blanchedalmond;
+}
+footer.site {
+  @include content-pad();
+  background-color: aqua;
+}
