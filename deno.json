@@ -5,9 +5,9 @@
     "serve": "deno task lume -s",
     "debug": "LUME_LOGS=debug deno task lume",
     "query": "gh api graphql -F owner='commonhaus' -F name='foundation-draft' -F query=@./.github/discussions.graphql > discussions.json",
-    "assemble": "deno run --allow-net --allow-read=. --allow-write=. ./.github/discussions.ts",
+    "assemble": "deno run --allow-read=. --allow-write=. ./.github/discussions.ts",
     "discuss": "deno task query && deno task assemble",
-    "lastmod": "deno run -A --allow-read=. --allow-write=. ./.github/lastmod.ts"
+    "lastmod": "deno run --allow-run=\"git\" --allow-read=. --allow-write=. ./.github/lastmod.ts"
   },
   "compilerOptions": {
     "types": [

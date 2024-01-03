@@ -1,11 +1,12 @@
 import lume from "lume/mod.ts";
-import { Data, Page } from "lume/core/file.ts";
+import { Page } from "lume/core/file.ts";
 import { safeLoad } from "https://deno.land/x/js_yaml_port@3.14.0/js-yaml.js";
 
 import date from "lume/plugins/date.ts";
 import favicon from "lume/plugins/favicon.ts";
 import feed from "lume/plugins/feed.ts";
 import metas from "lume/plugins/metas.ts";
+import nav from "lume/plugins/nav.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
 import sass from "lume/plugins/sass.ts";
 import sitemap from "lume/plugins/sitemap.ts";
@@ -14,8 +15,6 @@ import slugify_urls from "lume/plugins/slugify_urls.ts";
 import anchor from "npm:markdown-it-anchor";
 import footnote from "npm:markdown-it-footnote";
 import callouts from "npm:markdown-it-obsidian-callouts";
-import { load } from "https://deno.land/std@0.208.0/yaml/_loader/loader.ts";
-import { customByTagNameSym } from "https://deno.land/x/deno_dom@v0.1.43/src/dom/selectors/custom-api.ts";
 
 const markdown = {
     options: {
@@ -65,6 +64,7 @@ site
             updated: "=status.updated",
         },
     }))
+    .use(nav())
     .use(sass({
         includes: "_includes/scss",
     }))
