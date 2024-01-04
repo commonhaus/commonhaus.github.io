@@ -1,0 +1,20 @@
+{
+  "tasks": {
+    "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
+    "build": "deno task lume",
+    "serve": "deno task lume -s",
+    "debug": "LUME_LOGS=debug deno task lume",
+    "query": "gh api graphql -F owner='commonhaus' -F name='foundation-draft' -F query=@./.github/discussions.graphql > discussions.json",
+    "assemble": "deno run --allow-read=. --allow-write=. ./.github/discussions.ts",
+    "discuss": "deno task query && deno task assemble",
+    "lastmod": "deno run --allow-run=\"git\" --allow-read=. --allow-write=. ./.github/lastmod.ts"
+  },
+  "compilerOptions": {
+    "types": [
+      "lume/types.ts"
+    ]
+  },
+  "imports": {
+    "lume/": "https://deno.land/x/lume@v2.0.1/"
+  }
+}
