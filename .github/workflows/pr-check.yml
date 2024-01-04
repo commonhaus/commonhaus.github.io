@@ -16,46 +16,56 @@ env:
   HUGO_VERSION: 0.120.4
 
 jobs:
+  main-root:
+    runs-on: ubuntu-latest
+    if: github.repository == 'commonhaus/commonhaus.github.io'
+    steps:
+      - id: is-main-root
+        run: echo "This is 'commonhaus/commonhaus.github.io'"
+
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Install Hugo CLI
-        run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
-          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
-
-      - name: Install Dart Sass
-        run: sudo snap install dart-sass
+      - name: Setup Deno environment
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
 
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Git Sumbodule Update
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Git Config
         run: |
           git config user.name ${{ env.GH_BOT_NAME }}
           git config user.email ${{ env.GH_BOT_EMAIL }}
 
+      - name: Git Sumbodule Update
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
           git pull --recurse-submodules
           git submodule update --init --remote --recursive
+          deno task lastmod
 
-      - name: Use Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18.5'
-          cache-dependency-path: 'site/package-lock.json'
-          cache: 'npm'
+          if git diff --quiet; then
+            echo "-- No changes -- "
+          else
+            git commit -am "🆙 Auto-update submodule references" && git push
+          fi
 
-      - name: NPM Install
-        working-directory: ./site
-        run: npm ci
-
-      - name: Build with Hugo
+      - name: Git Discussion Update
         env:
-          HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
-        working-directory: ./site
-        run: hugo --minify
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          deno task discuss
+          if git diff --quiet; then
+            echo "-- No changes -- "
+          else
+            git commit -am "💬 Auto-update GH Discussions" && git push
+          fi
+
+      - name: Build site
+        run: deno task build
+
 
