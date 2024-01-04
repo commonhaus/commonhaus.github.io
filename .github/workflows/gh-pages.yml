@@ -17,6 +17,7 @@ env:
   GH_BOT_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
   GH_BOT_NAME: "GitHub Action"
   HUGO_VERSION: 0.120.4
+  REPO: commonhaus/commonhaus.github.io
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
@@ -25,13 +26,6 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  main-root:
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' && github.repository == 'commonhaus/commonhaus.github.io'
-    steps:
-      - id: is-main-root
-        run: echo "This is the main branch of 'commonhaus/commonhaus.github.io'"
-
   build:
     runs-on: ubuntu-latest
     steps:
@@ -74,26 +68,21 @@ jobs:
             git commit -am "💬 Auto-update GH Discussions" && git push
           fi
 
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v3
-
       - name: Build site
         run: deno task build
 
+      - name: Setup Pages
+        if: github.ref == 'refs/heads/main' && github.repository == ${{ env.REPO }}
+        id: pages
+        uses: actions/configure-pages@v4
+
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        if: github.ref == 'refs/heads/main' && github.repository == ${{ env.REPO }}
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: [main-root, build]
-    steps:
       - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main' && github.repository == ${{ env.REPO }}
         id: deployment
         uses: actions/deploy-pages@v4
