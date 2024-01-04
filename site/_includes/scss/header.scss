@@ -103,7 +103,15 @@ header.site {
     padding-right: $icon-text-padding;
   }
 }
-
+@media (min-width: 350px) {
+  header.site {
+    ul.submenu {
+      li {
+        min-width: 200px;
+      }
+    }
+  }
+}
 @media (min-width: 500px) {
   header.site {
     .h-site-tiny {
@@ -118,7 +126,6 @@ header.site {
     }
   }
 }
-
 @media (min-width: 700px) {
   header.site h1 {
     .h-site-med {
