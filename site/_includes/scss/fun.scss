@@ -1,4 +1,3 @@
-$header-height: 24px;
 $image-width: 20%;
 /* epic-treehouse.png generated using dreamshaper_8; https://civitai.com/images/4974282. */
 main.site-main {
@@ -12,7 +11,7 @@ main.site-main {
   &:before {
     content: "";
     position: fixed;
-    top: $header-height; // Adjust this value if you want to leave space for a header
+    top: 2.5em; // Adjust this value if you want to leave space for a header
     left: 0;
     width: $image-width;
     max-width: 250px;
@@ -21,6 +20,7 @@ main.site-main {
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
+    border-top: 1px solid black;
     border-right: 1px solid black;
     z-index: -6; // This will ensure the background is behind the content
   }
