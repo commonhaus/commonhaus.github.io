@@ -1,9 +1,12 @@
 $header-height: 24px;
 $image-width: 20%;
+/* epic-treehouse.png generated using dreamshaper_8; https://civitai.com/images/4974282. */
 main.site-main {
   position: relative;
   article {
-    padding-left: calc($image-width + 1em);
+    margin-left: $image-width;
+    min-height: 100%;
+    height: 100%;
   }
 
   &:before {
@@ -11,20 +14,23 @@ main.site-main {
     position: fixed;
     top: $header-height; // Adjust this value if you want to leave space for a header
     width: $image-width;
+    max-width: 250px;
     height: 100%; // This will make the element cover the entire viewport
     background-image: url("/images/epic-treehouse.png");
     background-repeat: no-repeat;
     background-position: top center;
     background-size: auto 100%;
-    z-index: -2; // This will ensure the background is behind the content
+    border-right: 1px solid black;
+    z-index: -6; // This will ensure the background is behind the content
   }
   &:after {
     content: "";
     position: fixed;
     top: 0; // Adjust this value if you want to leave space for a header
     width: $image-width;
+    max-width: 250px;
     height: 100vh;
-    background-image: linear-gradient(to right, rgba(var(--bg-primary-rgb), 0.2), rgba(var(--bg-primary-rgb), 0) 20%, rgba(var(--bg-primary-rgb), 0) 70%, rgba(var(--bg-primary-rgb), 0.2) 75%, rgba(var(--bg-primary-rgb), 1) 90%);
-    z-index: -1; // This will ensure the background is behind the content
+    background-image: linear-gradient(to right, rgba(var(--bg-primary-rgb), 0.2), rgba(var(--bg-primary-rgb), 0) 20%, rgba(var(--bg-primary-rgb), 0) 80%, rgba(var(--bg-primary-rgb), 0.2));
+    z-index: -5; // This will ensure the background is behind the content
   }
 }

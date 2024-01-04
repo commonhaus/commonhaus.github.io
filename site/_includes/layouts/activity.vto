@@ -1,15 +1,15 @@
 ---
 title: Default page title
-layout: layouts/base.vto
+layout: layouts/activitySidebar.vto
 ---
 <article aria-labelledby="articleTitle">
 <heading>
-<h1 id="articleTitle">{{ page |> closeLock }}{{ title }}</h1>
+<h1 id="articleTitle">{{ page |> closeLock }}<a href="{{ page.data.github }}">{{ title }} {{ page.data.svg.github }}</a>{{ page |> closeLock }}</h1>
 </heading>
 {{ content }}
 <footer class="byline">
   <div class="posted">posted <time datetime="{{ page.data.date }}">{{ page.data.date |> date('d MMMM yyyy') }}</time></div>
-  {{- if page.data.updated }}
+  {{- if page.data.hasUpdate }}
   <div class="updated">updated <time datetime="{{ page.data.updated }}">{{ page.data.updated |> date('d MMMM yyyy') }}</time></div>
   {{- /if }}
   {{- if page.data.tags }}<div class="tags">tags {{ for tag of page.data.tags }} {{ tag }} {{ /for }}</div>{{ /if }}

@@ -1,6 +1,18 @@
 $icon-text-padding: .3em; // Adjust this value as needed
 $menu-item-padding: .6em; // Adjust this value as needed
 
+nav ul {
+  list-style-type: none; // Removes the bullet points
+  margin: 0; // Removes the default margin
+  padding: 0; // Removes the default padding
+}
+
+nav.index {
+  li {
+    padding-bottom: .5em;
+  }
+}
+
 header.site {
   background-color: var(--bg-secondary);
   border-bottom: 1px dotted var(--bg-shadow);
@@ -21,12 +33,6 @@ header.site {
   nav {
     min-height: 24px;
     font-size: 1em;
-
-    ul {
-      list-style-type: none; // Removes the bullet points
-      margin: 0; // Removes the default margin
-      padding: 0; // Removes the default padding
-    }
 
     .h-site-more:hover,
     a:hover {

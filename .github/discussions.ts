@@ -49,18 +49,14 @@ const prefixMap: Record<string, string> = {
 function generateDiscussionContent(discussion: Discussion, id: string, category: string): string {
   const title = discussion.title.replace(/"/g, '\\"')
   const prefix = prefixMap[category];
-  let updated = '';
-  if (discussion.updatedAt && discussion.updatedAt !== discussion.createdAt) {
-    updated = `\nupdated: ${discussion.updatedAt}`;
-  }
-
   let status = '';
   let data = `---
 title: "${title}"
 rss-title: "${prefix} ${title}"
 github: "${discussion.url}"
 author: "${discussion.author.login}"
-date: ${discussion.createdAt}${updated}
+date: ${discussion.createdAt}
+updated: ${discussion.updatedAt ? discussion.updatedAt : discussion.createdAt}
 url: "/activity/${id}.html"
 tags:
 - post

@@ -8,10 +8,10 @@ layout: layouts/index.vto
         Notices and Announcements
     </h2>
     <ul>
-    {{- for post of search.pages("post announcements") }}
+    {{- for post of search.pages("post announcements", "updated=desc", 10) }}
         <li>
             <time datetime="{{ post.date |> date('DATE') }}">{{ post.date |> date("dd MMM") }}</time>
-            {{ page |> closeLock }}<a href="{{ post.url }}">{{ post.title }}</a>
+            <a href="{{ post.url }}">{{ page |> closeLock }}{{ post.title }}</a>
         </li>
     {{- /for }}
     </ul>
@@ -22,10 +22,10 @@ layout: layouts/index.vto
         Reviews and Call for Input
     </h2>
     <ul>
-    {{- for post of search.pages("post reviews") }}
+    {{- for post of search.pages("post reviews", "updated=desc", 10) }}
         <li>
             <time datetime="{{ post.date |> date('DATE') }}">{{ post.date |> date("dd MMM") }}</time>
-            {{ page |> closeLock }}<a href="{{ post.url }}">{{ post.title }}</a>
+            <a href="{{ post.url }}">{{ page |> closeLock }}{{ post.title }}</a>
         </li>
     {{- /for }}
     </ul>

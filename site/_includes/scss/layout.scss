@@ -28,10 +28,29 @@ main {
 
   > article,
   > section {
+    flex: 2 1 auto;
     @include content-align();
+    img {
+      max-width: 90%;
+    }
+  }
+
+  > aside {
+    @include content-pad();
+    flex: 1 1 auto;
   }
 }
 footer.site {
   @include content-pad();
   background-color: aqua;
+}
+@media(min-width: 500px) {
+  main:has(aside) {
+    display: flex;
+    flex-direction: row;
+
+    > aside {
+      min-width: 200px;
+    }
+  }
 }

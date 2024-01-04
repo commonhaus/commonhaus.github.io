@@ -161,14 +161,9 @@ site.preprocess([".html"], (pages) => {
             page.data.github = page.src.entry?.path.replace("/foundation/", "https://github.com/commonhaus/foundation-draft/blob/main/");
         }
 
+        // For all pages, set a value if the updated date is different from the published date
         if (page.data.date && page.data.updated) {
-           if (page.data.date.getFullYear() == page.data.updated.getFullYear()
-                && page.data.date.getMonth() == page.data.updated.getMonth()
-                && page.data.date.getDate() == page.data.updated.getDate()) {
-                page.data.updated = undefined;
-            } else {
-                console.log("Same-day revision", page.src.path, page.data.date, page.data.updated);
-            }
+            page.data.hasUpdate = page.data.date.toDateString() !== page.data.updated.toDateString();
         }
     }
 });
