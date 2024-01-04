@@ -11,7 +11,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "{{ title }}",
-    "description": "{{ description }}"
+    "description": "{{- description -}}"
 }
 </script>
 <link rel="stylesheet" href="/assets/site.css">
@@ -19,26 +19,54 @@
 <body>
 <header class="site">
 <h1>
-    <a href="/" class="logo" aria-label="Commonhaus Foundation Home" title="Home">
+    <a href="/" class="logo" aria-label="Commonhaus Foundation Home">
         <span aria-hidden="true" class="h-site-tiny">CF</span>
         <span aria-hidden="true" class="h-site-med">Commonhaus</span>
         <span aria-hidden="true" class="h-site-lrg">Commonhaus Foundation</span>
     </a>
 </h1>
 <nav aria-label="Site">
-    <ul>
-        <li><a href="/foundation" aria-label="About" title="About">
-            <span aria-hidden="true" class="h-site-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg></span>
-            <span aria-hidden="true" class="h-site-med">About</span>
-            <span aria-hidden="true" class="h-site-lrg">About</span>
-        </a></li>
-        <li><a href="/activity" aria-label="Activity" title="Activity">
-            <span aria-hidden="true" class="h-site-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-megaphone"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></span>
-            <span aria-hidden="true" class="h-site-med">Activity</span>
-        </a></li>
-        <li><a href="/community" aria-label="Community" title="Community">
-            <span aria-hidden="true" class="h-site-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-messages-square"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg></span>
-            <span aria-hidden="true" class="h-site-med">Community</span>
+    <ul class="top-level">
+        <li>
+            <a href="/foundation" aria-label="About" aria-haspopup="true">
+                <span aria-hidden="true" class="h-site-icon">{{ page.data.svg.info }}</span>
+                <span aria-hidden="true" class="h-site-text">About</span>
+            </a>
+            <span aria-hidden="true" class="h-site-more">{{ page.data.svg.down }}</span>
+            <ul class="submenu" aria-label="About the Commonhaus Foundation">
+                <li><a href="/foundation/bylaws">
+                    <span aria-hidden="true" class="h-site-sub-icon">{{ page.data.svg.policy }}</span>
+                    <span>Bylaws</span>
+                    </a>
+                </li>
+                <li><a href="/foundation/policies">
+                    <span aria-hidden="true" class="h-site-sub-icon">{{ page.data.svg.policy }}</span>
+                    Policy</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="/activity" aria-label="Activity" aria-haspopup="true">
+                <span aria-hidden="true" class="h-site-icon">{{ page.data.svg.activity }}</span>
+                <span aria-hidden="true" class="h-site-text">Activity</span>
+            </a>
+            <span aria-hidden="true" class="h-site-more">{{ page.data.svg.down }}</span>
+            <ul class="submenu" aria-label="Activity Feed">
+                <li><a href="/activity/#notices">
+                    <span aria-hidden="true" class="h-site-sub-icon">{{ page.data.svg.announcement }}</span>
+                    <span>Notices</span>
+                    </a>
+                </li>
+                <li><a href="/activity/#reviews">
+                    <span aria-hidden="true" class="h-site-sub-icon">{{ page.data.svg.review }}</span>
+                    <span>Reviews</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li><a href="/community" aria-label="Community">
+            <span aria-hidden="true" class="h-site-icon">{{ page.data.svg.community }}</span>
+            <span aria-hidden="true" class="h-site-text">Community</span>
         </a></li>
     </ul>
 </nav>

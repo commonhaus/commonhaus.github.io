@@ -21,16 +21,15 @@ header.site {
   @include content-align();
   position: sticky;
   top: 0;
-  background-color: burlywood;
 }
 main {
   flex: 1 1 auto;
   height: 80%;
-  background-color: beige;
-}
-article {
-  @include content-align();
-  background-color: blanchedalmond;
+
+  > article,
+  > section {
+    @include content-align();
+  }
 }
 footer.site {
   @include content-pad();

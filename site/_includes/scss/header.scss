@@ -1,40 +1,120 @@
+$icon-text-padding: .3em; // Adjust this value as needed
+$menu-item-padding: .6em; // Adjust this value as needed
+
 header.site {
+  background-color: var(--bg-secondary);
+  border-bottom: 1px dotted var(--bg-shadow);
+
   .h-site-med,
-  .h-site-lrg {
+  .h-site-lrg,
+  .h-site-text {
     display: none;
   }
 
   h1 {
+    height: 1em;
+    min-height: 24px;
     font-size: 1em;
     flex: 1 1 auto;
   }
+
   nav {
+    min-height: 24px;
     font-size: 1em;
-    background-color: bisque;
+
     ul {
       list-style-type: none; // Removes the bullet points
       margin: 0; // Removes the default margin
       padding: 0; // Removes the default padding
+    }
+
+    .h-site-more:hover,
+    a:hover {
+      background-color: var(--bg-accent);
+    }
+
+    > ul.top-level {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      flex-wrap: wrap;
-      gap: 1em;
-      li {
+      flex-wrap: nowrap;
+      gap: $menu-item-padding;
+
+      > li {
         display: inline;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 10px 0; // make sure the hoverable area is large enough
+
+        a {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+        }
+      }
+    }
+
+    ul.top-level > li:hover,
+    ul.submenu:hover {
+      cursor: pointer;
+      ul.submenu {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    ul.submenu {
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+
+      position: absolute;
+      right: 0;
+      top: 90%;
+      background-color: var(--bg-secondary);
+      border-radius: 0 0 5px 5px;
+      box-shadow: 0px 3px 5px -1px  var(--bg-shadow);
+
+      a {
+        margin: .2em;
+        padding: .5em;
       }
     }
   }
+
+  a {
+    color: var(--text-normal);
+    text-decoration: none;
+  }
+
+  .h-site-icon,
+  .h-site-sub-icon,
+  .h-site-more {
+    color: var(--text-faint);
+  }
+  .h-site-more {
+    padding-left: $icon-text-padding;
+  }
+  .h-site-sub-icon {
+    padding-right: $icon-text-padding;
+  }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 500px) {
   header.site {
     .h-site-tiny {
       display: none;
     }
+    .h-site-text,
     .h-site-med {
       display: inline;
+    }
+    .h-site-icon {
+      padding-right: $icon-text-padding;
     }
   }
 }
