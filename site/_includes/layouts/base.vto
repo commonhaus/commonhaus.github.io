@@ -27,58 +27,24 @@
 </h1>
 <nav aria-label="Site">
     <ul class="top-level">
+    {{ for x of page.data.menu }}
         <li>
-            <a href="/foundation" aria-label="About" aria-haspopup="true">
-                <span aria-hidden="true" class="h-site-icon">{{ page.data.svg.info }}</span>
-                <span aria-hidden="true" class="h-site-text">About</span>
+            <a href="{{ x.href }}" aria-label="{{ x.title }}" aria-haspopup="true">
+                <span aria-hidden="true" class="h-site-icon">{{ page.data.svg[x.icon] }}</span>
+                <span aria-hidden="true" class="h-site-text">{{ x.title }}</span>
             </a>
             <span aria-hidden="true" class="h-site-more">{{ page.data.svg.down }}</span>
-            <ul class="submenu" aria-label="About the Commonhaus Foundation">
-                <li><a href="/foundation/bylaws">
-                    <span aria-hidden="true" class="h-site-sub-icon">{{ page.data.svg.policy }}</span>
-                    <span>Bylaws</span>
-                    </a>
-                </li>
-                <li><a href="/foundation/policies">
-                    <span aria-hidden="true" class="h-site-sub-icon">{{ page.data.svg.policy }}</span>
-                    Policy</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="/activity" aria-label="Activity" aria-haspopup="true">
-                <span aria-hidden="true" class="h-site-icon">{{ page.data.svg.activity }}</span>
-                <span aria-hidden="true" class="h-site-text">Activity</span>
-            </a>
-            <span aria-hidden="true" class="h-site-more">{{ page.data.svg.down }}</span>
-            <ul class="submenu" aria-label="Activity Feed">
-                <li><a href="/activity/#notices">
-                    <span aria-hidden="true" class="h-site-sub-icon">{{ page.data.svg.announcement }}</span>
-                    <span>Notices</span>
-                    </a>
-                </li>
-                <li><a href="/activity/#reviews">
-                    <span aria-hidden="true" class="h-site-sub-icon">{{ page.data.svg.review }}</span>
-                    <span>Reviews</span>
-                    </a>
-                </li>
-            </ul>
-        </li>
-        <li><a href="/foundation/communication.html" aria-label="Community" aria-haspopup="true">
-                <span aria-hidden="true" class="h-site-icon">{{ page.data.svg.msg_sq_heart }}</span>
-                <span aria-hidden="true" class="h-site-text">Community</span>
-            </a>
-            <span aria-hidden="true" class="h-site-more">{{ page.data.svg.down }}</span>
-            <ul class="submenu" aria-label="Community">
-            {{ for x of page.data.community }}
-                <li><a href="{{ x.url }}">
-                    <span aria-hidden="true" class="h-site-sub-icon">{{ page.data.svg[x.icon] }}</span>
-                    <span>{{ x.title }}</span>
+            <ul class="submenu" aria-label="{{ x.submenu.label }}">
+            {{ for y of x.submenu.children }}
+                <li><a href="{{ x.href }}">
+                    <span aria-hidden="true" class="h-site-sub-icon">{{ page.data.svg[y.icon] }}</span>
+                    <span>{{ y.title }}</span>
                     </a>
                 </li>
             {{ /for }}
             </ul>
         </li>
+    {{ /for }}
     </ul>
 </nav>
 </header>
