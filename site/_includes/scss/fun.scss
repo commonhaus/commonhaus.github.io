@@ -13,13 +13,14 @@ main.site-main {
     content: "";
     position: fixed;
     top: $header-height; // Adjust this value if you want to leave space for a header
+    left: 0;
     width: $image-width;
     max-width: 250px;
     height: 100%; // This will make the element cover the entire viewport
     background-image: url("/images/epic-treehouse.png");
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: auto 100%;
+    background-size: cover;
     border-right: 1px solid black;
     z-index: -6; // This will ensure the background is behind the content
   }
@@ -27,6 +28,7 @@ main.site-main {
     content: "";
     position: fixed;
     top: 0; // Adjust this value if you want to leave space for a header
+    left: 0;
     width: $image-width;
     max-width: 250px;
     height: 100vh;
