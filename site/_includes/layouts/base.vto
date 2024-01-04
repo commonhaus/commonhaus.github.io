@@ -48,7 +48,7 @@
     </ul>
 </nav>
 </header>
-<main>
+<main {{ if page.data.cssclasses }} class="{{ page.data.cssclasses }}"{{ /if }}>
 {{ content -}}
 </main>
 <footer class="site">
