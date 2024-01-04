@@ -50,7 +50,7 @@ site
         },
     }))
     .use(feed({
-        output: ["/feed/activity.rss", "/feed/activity.json"],
+        output: ["/feed/index.rss", "/feed/index.json"],
         query: "post",
         limit: 10,
         info: {
@@ -171,6 +171,21 @@ site.preprocess([".html"], (pages) => {
             }
         }
     }
+});
+
+site.filter("closeLock", (page: Page) => {
+    let result = "";
+    if (page.data.closed) {
+        result += `<span class="act-status" aria-label="closed">${page.data.svg.closed}</span> `;
+    }
+    if (page.data.locked) {
+        result += `<span class="act-status" aria-label="locked">${page.data.svg.lock}</span> `;
+    }
+    return result;
+});
+site.filter("testLock", (page: Page) => {
+    return `<span class="act-status" aria-label="closed">${page.data.svg.closed}</span>
+    <span class="act-status" aria-label="locked">${page.data.svg.lock}</span> `;
 });
 
 export default site;

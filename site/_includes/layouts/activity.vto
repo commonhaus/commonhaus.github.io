@@ -1,32 +1,17 @@
 ---
-layout: layouts/index.vto
+title: Default page title
+layout: layouts/base.vto
 ---
+<article aria-labelledby="articleTitle">
+<heading>
+<h1 id="articleTitle">{{ page |> closeLock }}{{ title }}</h1>
+</heading>
 {{ content }}
-
-<section id="notices">
-    <h2>
-        Notices and Announcements
-    </h2>
-    <ul>
-    {{- for post of search.pages("post announcements") }}
-        <li>
-            <time datetime="{{ page.data.date |> date('DATE') }}">{{ post.date |> date("dd MMM") }}</time>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-    {{- /for }}
-    </ul>
-</section>
-
-<section id="reviews">
-    <h2>
-        Reviews and Call for Input
-    </h2>
-    <ul>
-    {{- for post of search.pages("post reviews") }}
-        <li>
-            <time datetime="{{ page.data.date |> date('DATE') }}">{{ post.date |> date("dd MMM") }}</time>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-    {{- /for }}
-    </ul>
-</section>
+<footer class="byline">
+  <div class="posted">posted <time datetime="{{ page.data.date }}">{{ page.data.date |> date('d MMMM yyyy') }}</time></div>
+  {{- if page.data.updated }}
+  <div class="updated">updated <time datetime="{{ page.data.updated }}">{{ page.data.updated |> date('d MMMM yyyy') }}</time></div>
+  {{- /if }}
+  {{- if page.data.tags }}<div class="tags">tags {{ for tag of page.data.tags }} {{ tag }} {{ /for }}</div>{{ /if }}
+</footer>
+</article>
