@@ -1,0 +1,56 @@
+@mixin content-align {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+@mixin content-pad {
+  padding: 1em;
+}
+body {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+header.site {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  @include content-align();
+  position: sticky;
+  top: 0;
+}
+main {
+  flex: 1 1 auto;
+  height: 80%;
+
+  > article,
+  > section {
+    flex: 2 1 auto;
+    @include content-align();
+    img {
+      max-width: 90%;
+    }
+  }
+
+  > aside {
+    @include content-pad();
+    flex: 1 1 auto;
+  }
+}
+footer.site {
+  @include content-pad();
+  background-color: aqua;
+}
+@media(min-width: 500px) {
+  main:has(aside) {
+    display: flex;
+    flex-direction: row;
+
+    > aside {
+      min-width: 200px;
+    }
+  }
+}

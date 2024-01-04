@@ -1,0 +1,261 @@
+BOOTSTRAPPING:
+  description: >
+    This document serves as a guide for the early stages of establishing the
+    Commonhaus Foundation. It delineates interim procedures and commitments to
+    ensure that project undertakings are aligned with the foundation's evolving
+    needs. Key focuses include fostering mutual trust and ensuring operational
+    flexibility during this foundational phase. The document also references
+    governance structures and decision-making protocols to be followed during
+    bootstrapping.
+  date: 2023-11-18T18:36:33.000Z
+  layout: layouts/bylaws.vto
+CODE_OF_CONDUCT:
+  description: >
+    This Code of Conduct document, adhering to the Contributor Covenant v2.1, is
+    specifically tailored for certain repositories and projects under the
+    Commonhaus Foundation. It supplements the foundation-wide Code of Conduct by
+    providing detailed contact information and procedures for reporting and
+    addressing issues related to specific projects, as well as foundation-wide
+    concerns. This ensures a consistent and respectful approach across all
+    levels of the foundation's operations.
+  date: 2023-12-15T14:15:46.000Z
+  layout: layouts/bylaws.vto
+COMMUNICATION:
+  description: >
+    Connect and engage directly with the Commonhaus Foundation and its
+    associated projects. This constantly updated page offers comprehensive,
+    up-to-date information on a variety of communication platforms, including
+    mailing lists, GitHub discussions, and Discord. It's your essential guide to
+    effectively reaching out to the foundation, participating in vibrant
+    discussions, and becoming an integral part of our diverse and collaborative
+    community.
+  date: 2023-12-15T14:15:46.000Z
+  layout: layouts/bylaws.vto
+GOVERNANCE:
+  description: >
+    Overview of Commonhaus Foundation roles, responsibilities, and
+    decision-making processes integral to managing our open-source projects,
+    emphasizing our commitment to transparency, inclusivity, and
+    community-driven development.
+  date: 2023-12-15T14:15:46.000Z
+  layout: layouts/bylaws.vto
+README:
+  description: >
+    Discover the Commonhaus Foundation: our mission, values, and initiatives.
+    This overview introduces our approach to nurturing open-source projects
+    through community collaboration. Learn about our policies, bylaws, and how
+    to get involved.
+  date: 2023-12-15T14:15:46.000Z
+  layout: layouts/bylaws.vto
+SECURITY:
+  description: >
+    Guidance on securely reporting vulnerabilities in Commonhaus Foundation
+    projects. This resource outlines responsible disclosure protocols,
+    emphasizing direct communication with project maintainers and
+    confidentiality. It provides step-by-step instructions on appropriately
+    reporting security issues to ensure they are addressed effectively and
+    safely, safeguarding the integrity of the projects and the broader
+    community.
+  date: 2023-09-26T05:01:43.000Z
+  layout: layouts/bylaws.vto
+TRADEMARKS:
+  description: >
+    This document details the trademarks owned by the foundation, encompassing
+    logos, phrases, and other brand elements. It provides comprehensive usage
+    guidelines, outlining permissible and prohibited uses to maintain brand
+    integrity. The file also describes the foundation’s measures to protect its
+    trademarks and includes licensing information for external use. Contact
+    details for trademark-related inquiries are provided for further assistance
+    and reporting of misuse.
+  date: 2023-11-08T18:27:19.000Z
+  layout: layouts/bylaws.vto
+bylaws:
+  1-purpose:
+    description: >
+      Discover the foundational purpose and non-profit status of the Commonhaus
+      Foundation in this key section of our bylaws. It underscores our
+      dedication to open-source innovation and collaboration, outlining our core
+      objectives: facilitating community collaboration, empowering diverse
+      contributors, and fostering the longevity of open-source projects. This
+      section establishes the legal and ethical framework that guides all our
+      activities and initiatives.
+    date: 2023-12-15T14:15:46.000Z
+    layout: layouts/bylaws.vto
+  2-cf-membership:
+    description: >
+      Explore the membership structure of the Commonhaus Foundation in this
+      comprehensive section of our bylaws. It delineates the different
+      categories of membership, including project leaders, general members, and
+      provisions for inactive or retired members. Additionally, it covers
+      important aspects such as membership dues, renewal processes, and policies
+      on suspension and revocation. This document is a crucial resource for
+      anyone interested in joining or understanding the membership dynamics of
+      the foundation.
+    date: 2023-12-15T14:15:46.000Z
+    layout: layouts/bylaws.vto
+  3-cf-council:
+    description: >
+      Dive into the workings of the Commonhaus Foundation Council, the central
+      governing body of the foundation, detailed in this section of our bylaws.
+      This document outlines the council's roles, responsibilities, and its
+      commitment to community-oriented leadership while adhering to legal
+      requirements. It covers aspects of strategic governance, fiduciary duties,
+      and member communication, offering insights into how the council operates
+      to foster a less authoritarian, more community-engaged approach. Essential
+       for understanding the leadership dynamics and decision-making processes
+       within the foundation.
+    date: 2023-12-15T14:15:46.000Z
+    layout: layouts/bylaws.vto
+  4-cf-advisory-board:
+    description: >
+      Learn about the Commonhaus Foundation Advisory Board, a key group
+      comprising representatives from supporting organizations and companies.
+      This section of our bylaws details the board's role as a crucial link
+      between the foundation and the broader tech industry. While the board does
+      not have decision-making authority, it provides invaluable insights and
+      strategic guidance to the Commonhaus Foundation Council, ensuring a
+      balance between sponsor influence and independent leadership. Essential
+      reading for understanding the collaborative dynamics that shape the
+      foundation's direction.
+    date: 2023-12-15T14:15:46.000Z
+    layout: layouts/bylaws.vto
+  5-decision-making:
+    description: >
+      Navigate the decision-making, voting, and election processes of the
+      Commonhaus Foundation with this essential bylaw section. This document
+      aims to simplify procedures, allowing for efficient progress while
+      ensuring ample opportunities for members to voice concerns. It covers
+      consensus-seeking methods in meetings, discussions, and mailing lists, and
+      details the election process, reflecting the foundation's commitment to
+      inclusive and straightforward governance aligned with open source
+      principles.
+    date: 2023-12-15T14:15:46.000Z
+    layout: layouts/bylaws.vto
+  6-notice-records:
+    description: >
+      Understand the Commonhaus Foundation approach to notice and record-keeping
+      through this detailed bylaw section. It outlines policies focusing on
+      asynchronous and electronic methods, ensuring efficient and accessible
+      communication within the foundation. Key areas include notification
+      requirements, expedited processes, and comprehensive record-keeping
+      practices, highlighting methods, platforms, accessibility, security,
+      compliance, and management. This document represents the foundation's
+      commitment to modern, streamlined, and transparent governance practices.
+    date: 2023-12-15T14:15:46.000Z
+    layout: layouts/bylaws.vto
+  7-liability-indemnification:
+    description: >
+      Learn about the protections and responsibilities of the Commonhaus
+      Foundation's
+       leaders in this crucial section of our bylaws. It explains how Council members
+       and officers are safeguarded from personal legal responsibility for their
+       official actions, except in cases of serious misconduct. The document also
+       covers the foundation's approach to insurance, detailing decision-making
+       processes and types of coverage to ensure the organization's and its members'
+       security. This is essential reading for understanding the legal safeguards in
+       place for those guiding the foundation.
+    date: 2023-12-15T14:15:46.000Z
+    layout: layouts/bylaws.vto
+  8-amendments:
+    description: >
+      Navigate the modern, electronic process for amending the Commonhaus
+      Foundation's bylaws with this key bylaw section. It outlines an efficient,
+      asynchronous method using GitHub for proposing changes, from submission to
+      approval. The document details steps including proposal submission,
+      categorization of changes, and community consultation, ensuring a
+      transparent and inclusive amendment process. Ideal for members and
+      contributors who wish to understand or participate in the evolving
+      governance of the foundation.
+    date: 2023-12-15T14:15:46.000Z
+    layout: layouts/bylaws.vto
+  README:
+    description: >
+      Access the essential index of the Commonhaus Foundation's bylaws,
+      providing a clear and concise table of contents for easy navigation. This
+      document outlines key sections like purpose, membership, council, advisory
+      board, decision-making processes, and more. It also clarifies the
+      canonical version of the bylaws and the formal process for their
+      amendment. Ideal for quickly locating specific bylaw sections and
+      understanding the framework for governance changes within the foundation.
+    date: 2023-12-15T14:15:46.000Z
+    layout: layouts/bylaws.vto
+policies:
+  code-of-conduct:
+    description: >
+      This document serves as the official Code of Conduct for the Commonhaus
+      Foundation, outlining the expectations and standards for behavior within
+      the community. It details the commitment to creating a respectful,
+      inclusive, and collaborative space, and provides guidelines for conduct,
+      along with procedures for reporting and resolving issues.
+    date: 2023-12-15T14:15:46.000Z
+    layout: layouts/bylaws.vto
+  conflict-of-interest:
+    description: >
+      This policy outlines the Commonhaus Foundation's approach to conflicts of
+      interest, ensuring that all members and contributors act in the best
+      interests of the foundation. It details the procedures for identifying,
+      disclosing, and managing conflicts of interest, and provides a framework
+      for addressing potential conflicts.
+    date: 2023-12-15T14:15:46.000Z
+    layout: layouts/bylaws.vto
+  dissolution-policy:
+    description: >
+      This policy outlines the Commonhaus Foundation's approach to dissolution,
+      providing a framework for the process and procedures to be followed. It
+      details the steps for initiating dissolution, including the
+      decision-making process and the distribution of assets. It also outlines
+      the procedures for the foundation's dissolution in the event of
+      bankruptcy.
+    date: 2023-12-15T14:15:46.000Z
+    layout: layouts/bylaws.vto
+  ip-policy:
+    description: >
+      This policy outlines the Commonhaus Foundation's approach to intellectual
+      property, ensuring that all members and contributors act in the best
+      interests of the foundation. It details the procedures for identifying,
+      disclosing, and managing intellectual property, and provides a framework
+      for addressing potential conflicts.
+    date: 2023-12-15T14:15:46.000Z
+    layout: layouts/bylaws.vto
+  README:
+    description: >
+      This document acts as a central index to the various policies of the
+      Commonhaus Foundation, ensuring compliance with laws and regulations in
+      areas such as nonprofit operations, intellectual property, and employment.
+      It provides organized access to key documents, including the Bylaws, Code
+      of Conduct, Conflict of Interest Policy, and others. Additionally, the
+      document details the process for amending these policies, outlining a
+      structured approach to ensure that updates and changes are made
+      systematically and in accordance with legal requirements. This is a vital
+      resource for understanding the governance and operational guidelines that
+      shape the foundation's activities and decisions.
+    date: 2023-12-15T14:15:46.000Z
+    layout: layouts/bylaws.vto
+  succession-plan:
+    description: >
+      Understand the Commonhaus Foundation's approach to maintaining project
+      continuity and administrative access in this vital policy document. It
+      addresses the balance between ensuring project longevity and respecting
+      the independence of project leaders. This policy outlines the permissions
+      required by the foundation for member projects and details how it
+      collaboratively works with project leaders to manage these projects,
+      ensuring their sustainability and relevance in the tech community.
+      Essential for members and contributors who seek to comprehend the
+      foundation's strategy for nurturing and preserving its projects.
+    date: 2023-12-15T14:15:46.000Z
+    layout: layouts/bylaws.vto
+  trademark-policy:
+    description: >
+      This Trademark Policy document specifies the guidelines for the use and
+      licensing of trademarks associated with the Commonhaus Foundation and its
+      related projects. It clarifies that the foundation holds ownership over
+      all its trademarks, both registered and unregistered. The policy
+      delineates the permitted and prohibited uses of these trademarks, ensuring
+      they are used appropriately and legally. The document also covers the
+      licensing processes, specifying how external entities can legally use
+      these trademarks. Furthermore, it includes provisions for protecting the
+      trademarks against misuse or infringement. This policy is essential for
+      anyone using the foundation's trademarks or seeking to understand their
+      legal and appropriate application.
+    date: 2023-12-15T14:15:46.000Z
+    layout: layouts/bylaws.vto

@@ -1,0 +1,39 @@
+about:
+  title: About
+  href: /foundation
+  icon: info
+  submenu:
+    label: About the Commonhaus Foundation
+    children:
+      - title: Bylaws
+        href: /foundation/bylaws
+        icon: policy
+      - title: Policies
+        href: /foundation/policies
+        icon: policy
+activity:
+  title: Activity
+  href: /activity
+  icon: activity
+  submenu:
+    label: Activity Feed
+    children:
+      - title: Notices
+        href: /activity/#notices
+        icon: announcement
+      - title: Reviews
+        href: /activity/#reviews
+        icon: review
+community:
+  title: Community
+  href: /foundation/communication.html
+  icon: msg_sq_heart
+  submenu:
+    label: Community
+    children:
+      - title: GitHub (GH)
+        href: https://github.com/commonhaus/foundation-draft
+        icon: github
+      - title: GH Discussions
+        href: https://github.com/commonhaus/foundation-draft/discussions
+        icon: msg_sq

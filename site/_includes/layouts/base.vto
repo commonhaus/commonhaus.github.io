@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title }}</title>
+<meta name="author" content="{{ metas.author }}">
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "{{ title }}",
+    "description": "{{- description -}}"
+}
+</script>
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<header class="site">
+<h1>
+    <a href="/" class="logo" aria-label="Commonhaus Foundation Home">
+        <span aria-hidden="true" class="h-site-tiny">CF</span>
+        <span aria-hidden="true" class="h-site-med">Commonhaus</span>
+        <span aria-hidden="true" class="h-site-lrg">Commonhaus Foundation</span>
+    </a>
+</h1>
+<nav aria-label="Site">
+    <ul class="top-level">
+    {{ for x of page.data.menu }}
+        <li>
+            <a href="{{ x.href }}" aria-label="{{ x.title }}" aria-haspopup="true">
+                <span aria-hidden="true" class="h-site-icon">{{ page.data.svg[x.icon] }}</span>
+                <span aria-hidden="true" class="h-site-text">{{ x.title }}</span>
+            </a>
+            <span aria-hidden="true" class="h-site-more">{{ page.data.svg.down }}</span>
+            <ul class="submenu" aria-label="{{ x.submenu.label }}">
+            {{ for y of x.submenu.children }}
+                <li><a href="{{ x.href }}">
+                    <span aria-hidden="true" class="h-site-sub-icon">{{ page.data.svg[y.icon] }}</span>
+                    <span>{{ y.title }}</span>
+                    </a>
+                </li>
+            {{ /for }}
+            </ul>
+        </li>
+    {{ /for }}
+    </ul>
+</nav>
+</header>
+<main {{ if page.data.cssclasses }} class="{{ page.data.cssclasses }}"{{ /if }}>
+{{ content -}}
+</main>
+<footer class="site">
+Footer
+</footer>
+</body>
+</html>
