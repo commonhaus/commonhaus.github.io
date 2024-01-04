@@ -1,5 +1,6 @@
 $icon-text-padding: .3em; // Adjust this value as needed
 $menu-item-padding: .6em; // Adjust this value as needed
+$h-font-size: 18px;
 
 nav ul {
   list-style-type: none; // Removes the bullet points
@@ -16,7 +17,9 @@ nav.index {
 header.site {
   background-color: var(--bg-secondary);
   border-bottom: 1px dotted var(--bg-shadow);
+  font-size: $h-font-size;
   z-index: 5;
+  line-height: 1.2;
 
   .h-site-med,
   .h-site-lrg,
@@ -25,15 +28,16 @@ header.site {
   }
 
   h1 {
-    height: 1em;
+    margin: 0;
+    font-weight: normal;
     min-height: 24px;
-    font-size: 1em;
+    font-size: $h-font-size;
     flex: 1 1 auto;
   }
 
   nav {
     min-height: 24px;
-    font-size: 1em;
+    font-size: $h-font-size;
 
     .h-site-more:hover,
     a:hover {

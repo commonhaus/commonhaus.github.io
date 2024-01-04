@@ -16,7 +16,9 @@ header.site {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
+  height: 2.5em;
+  min-height: 2.5em;
   flex-wrap: wrap;
   @include content-align();
   position: sticky;
