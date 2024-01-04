@@ -64,10 +64,21 @@
                 </li>
             </ul>
         </li>
-        <li><a href="/community" aria-label="Community">
-            <span aria-hidden="true" class="h-site-icon">{{ page.data.svg.community }}</span>
-            <span aria-hidden="true" class="h-site-text">Community</span>
-        </a></li>
+        <li><a href="/foundation/communication.html" aria-label="Community" aria-haspopup="true">
+                <span aria-hidden="true" class="h-site-icon">{{ page.data.svg.msg_sq_heart }}</span>
+                <span aria-hidden="true" class="h-site-text">Community</span>
+            </a>
+            <span aria-hidden="true" class="h-site-more">{{ page.data.svg.down }}</span>
+            <ul class="submenu" aria-label="Community">
+            {{ for x of page.data.community }}
+                <li><a href="{{ x.url }}">
+                    <span aria-hidden="true" class="h-site-sub-icon">{{ page.data.svg[x.icon] }}</span>
+                    <span>{{ x.title }}</span>
+                    </a>
+                </li>
+            {{ /for }}
+            </ul>
+        </li>
     </ul>
 </nav>
 </header>
