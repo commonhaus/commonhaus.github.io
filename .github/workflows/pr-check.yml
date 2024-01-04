@@ -35,36 +35,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Git Config
-        run: |
-          git config user.name ${{ env.GH_BOT_NAME }}
-          git config user.email ${{ env.GH_BOT_EMAIL }}
-
-      - name: Git Sumbodule Update
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git pull --recurse-submodules
-          git submodule update --init --remote --recursive
-          deno task lastmod
-
-          if git diff --quiet; then
-            echo "-- No changes -- "
-          else
-            git commit -am "🆙 Auto-update submodule references" && git push
-          fi
-
-      - name: Git Discussion Update
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          deno task discuss
-          if git diff --quiet; then
-            echo "-- No changes -- "
-          else
-            git commit -am "💬 Auto-update GH Discussions" && git push
-          fi
-
       - name: Build site
         run: deno task build
 
