@@ -32,12 +32,14 @@ const site = lume({
     src: "site",
     dest: "public",
     prettyUrls: false,
+    location: new URL("https://www.commonhaus.org")
 }, { markdown });
 
-site.ignore("foundation/node_modules", "foundation/.git", "foundation/.github", "foundation/.pandoc", "foundation/templates");
+site.ignore("foundation/node_modules", "foundation/templates");
 
 // Copy the content of "static" directory to the root of your site
 site.copy("static", "/");
+site.mergeKey("cssclasses", "stringArray");
 
 site
     .use(date())

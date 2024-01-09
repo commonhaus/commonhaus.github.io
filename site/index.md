@@ -1,6 +1,7 @@
 ---
 title: Welcome!
-cssclasses: site-main
+cssclasses: 
+- site-main
 ---
 Please excuse the dust, debris, and general unfinished feel.
 
