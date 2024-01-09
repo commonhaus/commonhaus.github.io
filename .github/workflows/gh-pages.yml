@@ -16,7 +16,7 @@ permissions:
 env:
   GH_BOT_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
   GH_BOT_NAME: "GitHub Action"
-  HUGO_VERSION: 0.120.4
+  DENO_DIR: .deno-cache
   REPO: commonhaus/commonhaus.github.io
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
@@ -28,6 +28,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
     steps:
       - name: Setup Deno environment
         uses: denoland/setup-deno@v1
@@ -37,6 +39,12 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Cache Deno dependencies
+        uses: actions/cache@v2
+        with:
+          path: ${{ env.DENO_DIR }}
+          key: ${{ hashFiles('deno.lock') }}
 
       - name: Git Config
         run: |
