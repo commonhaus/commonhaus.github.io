@@ -1,4 +1,5 @@
 BOOTSTRAPPING:
+  url: /bylaws/bootstrapping.html
   description: >
     This document serves as a guide for the early stages of establishing the
     Commonhaus Foundation. It delineates interim procedures and commitments to
@@ -10,6 +11,7 @@ BOOTSTRAPPING:
   date: 2023-11-18T18:36:33.000Z
   layout: layouts/bylaws.vto
 CODE_OF_CONDUCT:
+  url: /about/code_of_conduct.html
   description: >
     This Code of Conduct document, adhering to the Contributor Covenant v2.1, is
     specifically tailored for certain repositories and projects under the
@@ -21,6 +23,7 @@ CODE_OF_CONDUCT:
   date: 2023-12-15T14:15:46.000Z
   layout: layouts/bylaws.vto
 COMMUNICATION:
+  url: /community/
   description: >
     Connect and engage directly with the Commonhaus Foundation and its
     associated projects. This constantly updated page offers comprehensive,
@@ -32,6 +35,7 @@ COMMUNICATION:
   date: 2023-12-15T14:15:46.000Z
   layout: layouts/bylaws.vto
 GOVERNANCE:
+  url: /about/governance.html
   description: >
     Overview of Commonhaus Foundation roles, responsibilities, and
     decision-making processes integral to managing our open-source projects,
@@ -40,6 +44,7 @@ GOVERNANCE:
   date: 2023-12-15T14:15:46.000Z
   layout: layouts/bylaws.vto
 README:
+  url: /about/
   description: >
     Discover the Commonhaus Foundation: our mission, values, and initiatives.
     This overview introduces our approach to nurturing open-source projects
@@ -48,6 +53,7 @@ README:
   date: 2023-12-15T14:15:46.000Z
   layout: layouts/bylaws.vto
 SECURITY:
+  url: /about/security.html
   description: >
     Guidance on securely reporting vulnerabilities in Commonhaus Foundation
     projects. This resource outlines responsible disclosure protocols,
@@ -59,6 +65,7 @@ SECURITY:
   date: 2023-09-26T05:01:43.000Z
   layout: layouts/bylaws.vto
 TRADEMARKS:
+  url: /about/trademarks.html
   description: >
     This document details the trademarks owned by the foundation, encompassing
     logos, phrases, and other brand elements. It provides comprehensive usage
