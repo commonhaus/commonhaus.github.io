@@ -36,7 +36,7 @@
             <span aria-hidden="true" class="h-site-more">{{ page.data.svg.down }}</span>
             <ul class="submenu" aria-label="{{ x.submenu.label }}">
             {{ for y of x.submenu.children }}
-                <li><a href="{{ x.href }}">
+                <li><a href="{{ y.href }}">
                     <span aria-hidden="true" class="h-site-sub-icon">{{ page.data.svg[y.icon] }}</span>
                     <span>{{ y.title }}</span>
                     </a>

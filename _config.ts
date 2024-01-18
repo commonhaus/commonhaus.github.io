@@ -111,11 +111,13 @@ site
 // If it is a README, remove readme.html from the URL (index.html instead)
 // Otherwise, just return the URL
 site.data("url", (page: Page) => {
-    if (page.src.ext !== ".md" || page.src.path.indexOf("templates") >= 0) {
+    if (page.src.ext !== ".md"
+            || page.src.path.indexOf("templates") >= 0) {
         return false;
     }
+    page.data.url = page.data.url.replace("/foundation", "");
     if (page.data.basename == "README") {
-        return page.data.url.toLocaleLowerCase().replace("readme.html", "")
+        return page.data.url.replace("README.html", "")
     }
     return page.data.url;
 }, "/foundation");
