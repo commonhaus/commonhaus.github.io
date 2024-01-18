@@ -1,15 +1,15 @@
 about:
   title: About
-  href: /foundation
+  href: /about
   icon: info
   submenu:
     label: About the Commonhaus Foundation
     children:
       - title: Bylaws
-        href: /foundation/bylaws
+        href: /bylaws
         icon: policy
       - title: Policies
-        href: /foundation/policies
+        href: /policies
         icon: policy
 activity:
   title: Activity
@@ -26,7 +26,7 @@ activity:
         icon: review
 community:
   title: Community
-  href: /foundation/communication.html
+  href: /community/
   icon: msg_sq_heart
   submenu:
     label: Community
