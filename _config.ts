@@ -115,7 +115,9 @@ site.data("url", (page: Page) => {
             || page.src.path.indexOf("templates") >= 0) {
         return false;
     }
-    page.data.url = page.data.url.replace("/foundation", "");
+    page.data.url = page.data.url
+            .replace("/foundation", "")
+            .replace(/\/\d+-/, "/");
     if (page.data.basename == "README") {
         return page.data.url.replace("README.html", "")
     }
