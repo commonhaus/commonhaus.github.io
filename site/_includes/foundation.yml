@@ -8,7 +8,7 @@ BOOTSTRAPPING:
     flexibility during this foundational phase. The document also references
     governance structures and decision-making protocols to be followed during
     bootstrapping.
-  date: 2023-11-18T18:36:33.000Z
+  date: 2024-01-23T19:48:42.000Z
   layout: layouts/bylaws.vto
 CODE_OF_CONDUCT:
   url: /about/code_of_conduct.html
@@ -50,7 +50,7 @@ README:
     This overview introduces our approach to nurturing open-source projects
     through community collaboration. Learn about our policies, bylaws, and how
     to get involved.
-  date: 2023-12-15T14:15:46.000Z
+  date: 2024-01-23T19:42:25.000Z
   layout: layouts/bylaws.vto
 SECURITY:
   url: /about/security.html
@@ -98,7 +98,7 @@ bylaws:
       on suspension and revocation. This document is a crucial resource for
       anyone interested in joining or understanding the membership dynamics of
       the foundation.
-    date: 2024-01-19T22:42:16.000Z
+    date: 2024-01-23T19:42:25.000Z
     layout: layouts/bylaws.vto
   3-cf-council:
     description: >
@@ -111,7 +111,7 @@ bylaws:
       to foster a less authoritarian, more community-engaged approach. Essential
        for understanding the leadership dynamics and decision-making processes
        within the foundation.
-    date: 2024-01-13T23:46:57.000Z
+    date: 2024-01-23T19:42:25.000Z
     layout: layouts/bylaws.vto
   4-cf-advisory-board:
     description: >
@@ -136,7 +136,7 @@ bylaws:
       details the election process, reflecting the foundation's commitment to
       inclusive and straightforward governance aligned with open source
       principles.
-    date: 2023-12-15T14:15:46.000Z
+    date: 2024-01-23T19:42:50.000Z
     layout: layouts/bylaws.vto
   6-notice-records:
     description: >
@@ -184,7 +184,7 @@ bylaws:
       canonical version of the bylaws and the formal process for their
       amendment. Ideal for quickly locating specific bylaw sections and
       understanding the framework for governance changes within the foundation.
-    date: 2023-12-15T14:15:46.000Z
+    date: 2024-01-23T19:42:25.000Z
     layout: layouts/bylaws.vto
 policies:
   code-of-conduct:
@@ -249,7 +249,7 @@ policies:
       ensuring their sustainability and relevance in the tech community.
       Essential for members and contributors who seek to comprehend the
       foundation's strategy for nurturing and preserving its projects.
-    date: 2024-01-10T18:46:27.000Z
+    date: 2024-01-23T19:48:42.000Z
     layout: layouts/bylaws.vto
   trademark-policy:
     description: >
