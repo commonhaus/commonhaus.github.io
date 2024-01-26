@@ -41,7 +41,7 @@ GOVERNANCE:
     decision-making processes integral to managing our open-source projects,
     emphasizing our commitment to transparency, inclusivity, and
     community-driven development.
-  date: 2023-12-15T14:15:46.000Z
+  date: 2024-01-26T22:07:28.000Z
   layout: layouts/bylaws.vto
 README:
   url: /about/
@@ -50,7 +50,7 @@ README:
     This overview introduces our approach to nurturing open-source projects
     through community collaboration. Learn about our policies, bylaws, and how
     to get involved.
-  date: 2024-01-23T19:42:25.000Z
+  date: 2024-01-26T22:07:28.000Z
   layout: layouts/bylaws.vto
 SECURITY:
   url: /about/security.html
