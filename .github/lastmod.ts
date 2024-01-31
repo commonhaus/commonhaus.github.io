@@ -23,8 +23,8 @@ function gitLastCommitDate(filePath: string): Date {
     return new Date(output);
 }
 
-    // deno-lint-ignore no-explicit-any
-    function getMetaKey(keyString: string): Record<string, any> | undefined {
+// deno-lint-ignore no-explicit-any
+function getMetaKey(keyString: string): Record<string, any> | undefined {
     const keys = keyString.split("/");
     // deno-lint-ignore no-explicit-any
     let struct: Record<string, any> | undefined = meta;
@@ -40,17 +40,25 @@ function gitLastCommitDate(filePath: string): Date {
 }
 
 async function readDir(path: string, relative: string) {
+    const missing = [];
     for await (const dirEntry of Deno.readDir(path)) {
         if (dirEntry.isFile && dirEntry.name.endsWith(".md")) {
             const filePath = `${relative}${dirEntry.name}`;
             const struct = getMetaKey(filePath.replace(".md", ""));
-            if (struct) {
-                struct.date = gitLastCommitDate(filePath);
-                struct.layout = 'layouts/bylaws.vto';
+            if (!struct) {
+                console.error(`No metadata for ${filePath}`);
+                missing.push(filePath);
+                continue;
             }
+
+            struct.date = gitLastCommitDate(filePath);
+            struct.layout = 'layouts/bylaws.vto';
         } else if (dirEntry.isDirectory && !ignore.includes(dirEntry.name)) {
             await readDir(`${path}/${dirEntry.name}`, `${relative}${dirEntry.name}/`);
         }
+    }
+    if (missing.length > 0) {
+        throw new Error("Missing metadata for " + missing.join(", "));
     }
 }
 
