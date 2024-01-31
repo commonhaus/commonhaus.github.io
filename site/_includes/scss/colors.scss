@@ -3,12 +3,13 @@ body {
   --text-muted: #888;
   --text-normal: #333;
 
+  --fg-accent: rgb(215, 142, 8);
+
   --bg-primary: #fafafa;
   --bg-primary-rgb: 250, 250, 250;
   --bg-secondary: #f8f8f8;
 
   --bg-accent: #f0f0f0;
-
   --bg-shadow: rgba(0, 0, 0, 0.1);
 
   background-color: var(--bg-primary);

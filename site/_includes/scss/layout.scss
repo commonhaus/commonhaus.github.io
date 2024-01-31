@@ -41,6 +41,10 @@ main {
     @include content-pad();
     flex: 1 1 auto;
   }
+
+  header.byline {
+    float: right;
+  }
 }
 footer.site {
   @include content-pad();
