@@ -4,9 +4,12 @@ language: en
 layout: layouts/base.vto
 ---
 <article>
+<header class="byline">
+  <a aria-label="Edit source on GitHub" href="{{ github }}" class="github">{{ page.data.svg.github }}</a>
+</header>
 {{ content }}
-<footer class="byline">
-  <div class="posted">last updated <time datetime="{{ page.data.date |> date('DATE') }}">{{ page.data.date |> date('d MMMM yyyy') }}</time></div>
-  <a href="{{ github }}" class="github">GitHub</a>
+<footer class="footer">
+  <a aria-label="Edit source on GitHub" href="{{ github }}" class="github">{{ page.data.svg.github }}</a>
+  <span class="posted">Last updated <time datetime="{{ page.data.date |> date('DATE') }}">{{ page.data.date |> date('d MMMM yyyy') }}</time></span>
 </footer>
 </article>
