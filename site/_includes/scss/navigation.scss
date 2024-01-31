@@ -102,12 +102,6 @@ header.site {
     color: var(--text-normal);
     text-decoration: none;
   }
-
-  .h-site-icon,
-  .h-site-sub-icon,
-  .h-site-more {
-    color: var(--text-faint);
-  }
   .h-site-more {
     padding-left: $icon-text-padding;
   }
@@ -115,6 +109,14 @@ header.site {
     padding-right: $icon-text-padding;
   }
 }
+
+a.github,
+.h-site-icon,
+.h-site-sub-icon,
+.h-site-more {
+  color: var(--fg-accent);
+}
+
 @media (min-width: 350px) {
   header.site {
     ul.submenu {
