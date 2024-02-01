@@ -11,5 +11,5 @@ Checkout:
 
 - [Announcements and notices](./activity/index.md#announcements-and-notices)
 - [Reviews and Calls for input](./activity/index.md#reviews-and-calls-for-input)
-- [Draft Bylaws](../foundation/bylaws/README.md)
-- [Draft Policies](../foundation/policies/README.md)
+- [Draft Bylaws](/bylaws/)
+- [Draft Policies](/policies/)

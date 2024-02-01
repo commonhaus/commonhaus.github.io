@@ -9,7 +9,8 @@
     "assemble": "deno run --allow-read=. --allow-write=. ./.github/discussions.ts",
     "discuss": "deno task query && deno task assemble",
     "lastmod": "deno run --allow-run=\"git\" --allow-read=. --allow-write=. ./.github/lastmod.ts",
-    "checklinks": "deno run --allow-read --allow-net https://deno.land/x/link_checker/crawl.ts https://www.commonhaus.org"
+    "checklinks": "deno run --allow-read --allow-net https://deno.land/x/link_checker/crawl.ts https://www.commonhaus.org",
+    "checklocal": "deno run --allow-read --allow-net https://deno.land/x/link_checker/crawl.ts http://localhost:3000/"
   },
   "compilerOptions": {
     "types": [

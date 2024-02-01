@@ -11,6 +11,7 @@ import resolveUrls from "lume/plugins/resolve_urls.ts";
 import sass from "lume/plugins/sass.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import slugify_urls from "lume/plugins/slugify_urls.ts";
+import toc from "https://deno.land/x/lume_markdown_plugins@v0.7.0/toc.ts";
 
 import anchor from "npm:markdown-it-anchor";
 import footnote from "npm:markdown-it-footnote";
@@ -45,6 +46,7 @@ site
     .use(date())
     .use(metas())
     .use(resolveUrls())
+    .use(toc())
     .use(slugify_urls({
         replace: {
             "&": "and",
@@ -127,6 +129,30 @@ site.data("url", (page: Page) => {
 // deno-lint-ignore no-explicit-any
 const FOUNDATION_DATA: Record<string, any> = safeLoad(Deno.readTextFileSync("./site/_includes/foundation.yml"));
 
+// Ignore pages based on the foundation.yml file
+site.addEventListener("beforeBuild", () => {
+    // deno-lint-ignore no-explicit-any
+    const structure: Record<string, any> | undefined = FOUNDATION_DATA;
+    if (structure) {
+        ignorePages(structure, "foundation/");
+    }
+});
+
+function ignorePages(structure: Record<string, unknown>, path: string) {
+    Object.entries(structure).forEach(([key, value]) => {
+        const obj = value as Record<string, unknown>;
+        if (obj != null) {
+            if (obj["ignore"]) {
+                console.log(`Ignoring ${path}${key}.md`);
+                site.ignore(`${path}${key}.md`);
+            } else if (!obj["layout"]) {
+                // this is not a page, it is a nested type
+                ignorePages(value as Record<string, unknown>, `${path}${key}/`);
+            }
+        }
+    });
+}
+
 site.preprocess([".html"], (pages) => {
     for (const page of pages) {
         // For foundation pages:
@@ -164,6 +190,12 @@ site.preprocess([".html"], (pages) => {
                     page.data.title = page.data.basename;
                 }
             }
+
+            const entry = page.data.bylaws.nav.find((x: { href: string }) => x.href === page.data.url);
+            if (entry) {
+                page.data.ord = entry.ord;
+            }
+
             page.data.github = page.src.entry?.path.replace("/foundation/", "https://github.com/commonhaus/foundation-draft/blob/main/");
         }
 

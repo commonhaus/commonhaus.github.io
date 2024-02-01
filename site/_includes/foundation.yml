@@ -10,6 +10,10 @@ BOOTSTRAPPING:
     bootstrapping.
   date: 2024-01-23T19:48:42.000Z
   layout: layouts/bylaws.vto
+CONTRIBUTING:
+  ignore: true
+  date: 2024-01-15T22:39:01.000Z
+  layout: layouts/bylaws.vto
 CODE_OF_CONDUCT:
   url: /about/code_of_conduct.html
   description: >
@@ -52,18 +56,6 @@ README:
     to get involved.
   date: 2024-01-26T22:07:28.000Z
   layout: layouts/bylaws.vto
-SECURITY:
-  url: /about/security.html
-  description: >
-    Guidance on securely reporting vulnerabilities in Commonhaus Foundation
-    projects. This resource outlines responsible disclosure protocols,
-    emphasizing direct communication with project maintainers and
-    confidentiality. It provides step-by-step instructions on appropriately
-    reporting security issues to ensure they are addressed effectively and
-    safely, safeguarding the integrity of the projects and the broader
-    community.
-  date: 2023-09-26T05:01:43.000Z
-  layout: layouts/bylaws.vto
 TRADEMARKS:
   url: /about/trademarks.html
   description: >
@@ -77,6 +69,11 @@ TRADEMARKS:
   date: 2023-11-08T18:27:19.000Z
   layout: layouts/bylaws.vto
 bylaws:
+  0-preface:
+    description: |
+      Overview of terms and concepts in the Commonhaus Foundation bylaws
+    layout: layouts/bylaws.vto
+    date: 2024-01-23T19:42:25.000Z
   1-purpose:
     description: >
       Discover the foundational purpose and non-profit status of the Commonhaus
@@ -237,6 +234,17 @@ policies:
       resource for understanding the governance and operational guidelines that
       shape the foundation's activities and decisions.
     date: 2023-12-15T14:15:46.000Z
+    layout: layouts/bylaws.vto
+  security-policy:
+    description: >
+      Guidance on securely reporting vulnerabilities in Commonhaus Foundation
+      projects. This resource outlines responsible disclosure protocols,
+      emphasizing direct communication with project maintainers and
+      confidentiality. It provides step-by-step instructions on appropriately
+      reporting security issues to ensure they are addressed effectively and
+      safely, safeguarding the integrity of the projects and the broader
+      community.
+    date: 2024-01-23T19:42:25.000Z
     layout: layouts/bylaws.vto
   succession-plan:
     description: >
