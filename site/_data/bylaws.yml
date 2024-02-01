@@ -1,0 +1,31 @@
+nav:
+- title: Preface
+  href: /bylaws/preface.html
+  ord: 1
+- title: Purpose
+  href: /bylaws/purpose.html
+  ord: 2
+- title: CF Membership
+  href: /bylaws/cf-membership.html
+  ord: 3
+- title: CF Council
+  href: /bylaws/cf-council.html
+  ord: 4
+- title: CF Advisory Board
+  href: /bylaws/cf-advisory-board.html
+  ord: 5
+- title: Decision Making
+  href: /bylaws/decision-making.html
+  ord: 6
+- title: Notice and Records
+  href: /bylaws/notice-records.html
+  ord: 7
+- title: Liability and Indemnification
+  href: /bylaws/liability-indemnification.html
+  ord: 8
+- title: Ammendments
+  href: /bylaws/amendments.html
+  ord: 9
+- title: Bootstrapping
+  href: /bylaws/bootstrapping.html
+  ord: A

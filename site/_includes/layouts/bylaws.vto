@@ -3,7 +3,7 @@ title: Default page title
 language: en
 layout: layouts/base.vto
 ---
-<article>
+<article {{ if page.data.ord }}class="bylaws" style='--ord: "{{ page.data.ord }}";'{{ /if }}>
 <header class="byline">
   <a aria-label="Edit source on GitHub" href="{{ github }}" class="github">{{ page.data.svg.github }}</a>
 </header>
@@ -13,3 +13,37 @@ layout: layouts/base.vto
   <span class="posted">Last updated <time datetime="{{ page.data.date |> date('DATE') }}">{{ page.data.date |> date('d MMMM yyyy') }}</time></span>
 </footer>
 </article>
+<aside class="bylaw-contents">
+  <nav aria-label="Bylaw Navigation" class="index">
+    <ul class="top-level">
+    {{- for x of page.data.bylaws.nav }}
+        <li data-ord="{{ x.ord }}">
+            <a href="{{ x.href }}" aria-label="{{ x.title }}" aria-haspopup="true">
+                <span aria-hidden="true" class="h-site-icon">{{ page.data.svg[x.icon] }}</span>
+                <span aria-hidden="true" class="h-site-text">{{ x.title }}</span>
+            </a>
+            {{- if page.data.url == x.href && toc.length }}
+            <div class="pagenav">
+            <ol>
+              {{- for item of toc }}
+              <li data-ord="{{ x.ord }}">
+                <a href="#{{ item.slug }}">{{ item.text }}</a>
+                {{- if item.children.length }}
+                  <ol>
+                    {{- for child of item.children }}
+                    <li data-ord="{{ x.ord }}">
+                      <a href="#{{ child.slug }}">{{ child.text }}</a>
+                    </li>
+                    {{- /for }}
+                  </ol>
+                {{- /if }}
+              </li>
+              {{- /for }}
+            </ol>
+            </div>
+            {{- /if }}
+        </li>
+    {{- /for }}
+    </ul>
+  </nav>
+</aside>
