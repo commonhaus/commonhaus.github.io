@@ -1,7 +1,8 @@
 ---
 title: WebSite Components
 layout: layouts/aside-toc.vto
-robots: false
+metas:
+  robots: false
 ---
 
 # Heading 1
