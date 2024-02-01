@@ -1,0 +1,38 @@
+body {
+  --callout-color: 95, 95, 209;
+}
+
+.callout {
+  background-color: rgba(var(--callout-color), 0.1);
+  overflow: hidden;
+  margin: 1em 0;
+  padding: 0;
+  border-radius: 6px;
+}
+
+.callout-title {
+  color: rgb(var(--callout-title-color, var(--callout-color)));
+  display: flex;
+  gap: .5em;
+  align-items: center;
+  padding: .5em;
+
+  & .callout-title-icon {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    height: 1em;
+    max-height: 1em;
+    width: 1em;
+    max-width: 1em;
+  }
+
+  & .callout-title-inner {
+    font-weight: 700;
+    flex: 2;
+  }
+}
+
+.callout-content {
+  padding: 0 .5em;
+}
