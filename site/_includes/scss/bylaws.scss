@@ -1,0 +1,46 @@
+article.bylaws {
+  h1 {counter-reset: h2}
+  h2 {counter-reset: h3}
+  h1:before {
+    content: var(--ord) ". "
+  }
+  h2:before {
+    counter-increment: h2;
+    content: var(--ord) "." counter(h2) ". "
+  }
+  h3:before {
+    counter-increment: h3;
+    content: var(--ord) "." counter(h2) "." counter(h3) ". "
+  }
+}
+aside.bylaw-contents {
+  background-color: var(--bg-secondary);
+  border-left: 1px dotted var(--bg-shadow);
+
+  ul.top-level {
+    > li:before {
+      content: attr(data-ord);
+    }
+  }
+  div.pagenav {
+    border-top: 1px dotted var(--bg-shadow);
+    background-color: var(--bg-primary);
+    border-bottom: 1px dotted var(--bg-shadow);
+    padding: .5em;
+    ol {
+      counter-reset: item;
+      padding: 0; // Removes the default padding
+
+      &:first-of-type {
+        padding-top: .5em;
+      }
+    }
+    li {
+      display: block;
+    }
+    li:before {
+      content: attr(data-ord) "." counters(item, ".") " ";
+      counter-increment: item
+    }
+  }
+}
