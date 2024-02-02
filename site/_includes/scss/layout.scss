@@ -58,5 +58,13 @@ footer.site {
     > aside {
       min-width: 200px;
     }
+
+    > aside.activity {
+      max-width: 300px;
+      width: 300px;
+      time {
+        white-space: nowrap;
+      }
+    }
   }
 }

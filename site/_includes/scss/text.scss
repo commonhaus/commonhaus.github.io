@@ -2,3 +2,21 @@ a.header-anchor {
   color: var(--text-normal);
   text-decoration: none;
 }
+a.github,
+.h-site-icon,
+.h-site-sub-icon,
+.h-site-more,
+.act-status-icon,
+.aside-nav-icon {
+  color: var(--fg-accent);
+}
+.h-site-icon,
+.h-site-sub-icon,
+.h-site-more,
+.act-status-icon,
+.aside-nav-icon {
+  svg {
+    height: .9em;
+    width: .9em;
+  }
+}

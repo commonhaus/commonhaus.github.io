@@ -1,0 +1,30 @@
+query($name: String!, $owner: String!) {
+  repository(owner: $owner, name: $name) {
+    pullRequests(first: 15, orderBy: {field: UPDATED_AT, direction: DESC}) {
+      nodes {
+        id
+        title
+        number
+        author {
+            login
+            url
+            avatarUrl
+        }
+        labels(first: 10) {
+          nodes {
+            name
+          }
+        }
+        url
+        body
+        bodyText
+        createdAt
+        updatedAt
+        closed
+        closedAt
+        locked
+        activeLockReason
+      }
+    }
+  }
+}
