@@ -27,6 +27,11 @@ header.site {
     display: none;
   }
 
+  .h-site-icon svg {
+    height: 1.2em;
+    width: 1.2em;
+  }
+
   h1 {
     margin: 0;
     font-weight: normal;
@@ -108,13 +113,6 @@ header.site {
   .h-site-sub-icon {
     padding-right: $icon-text-padding;
   }
-}
-
-a.github,
-.h-site-icon,
-.h-site-sub-icon,
-.h-site-more {
-  color: var(--fg-accent);
 }
 
 @media (min-width: 350px) {
