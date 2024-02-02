@@ -8,11 +8,11 @@ BOOTSTRAPPING:
     flexibility during this foundational phase. The document also references
     governance structures and decision-making protocols to be followed during
     bootstrapping.
-  date: 2024-01-23T19:48:42.000Z
+  date: 2024-02-02T15:07:59.000Z
   layout: layouts/bylaws.vto
 CONTRIBUTING:
   ignore: true
-  date: 2024-01-15T22:39:01.000Z
+  date: 2024-02-02T15:23:54.000Z
   layout: layouts/bylaws.vto
 CODE_OF_CONDUCT:
   url: /about/code_of_conduct.html
@@ -24,7 +24,7 @@ CODE_OF_CONDUCT:
     addressing issues related to specific projects, as well as foundation-wide
     concerns. This ensures a consistent and respectful approach across all
     levels of the foundation's operations.
-  date: 2023-12-15T14:15:46.000Z
+  date: 2024-02-02T15:07:59.000Z
   layout: layouts/bylaws.vto
 COMMUNICATION:
   url: /community/
@@ -36,7 +36,7 @@ COMMUNICATION:
     effectively reaching out to the foundation, participating in vibrant
     discussions, and becoming an integral part of our diverse and collaborative
     community.
-  date: 2023-12-15T14:15:46.000Z
+  date: 2024-02-02T15:07:59.000Z
   layout: layouts/bylaws.vto
 GOVERNANCE:
   url: /about/governance.html
@@ -54,7 +54,7 @@ README:
     This overview introduces our approach to nurturing open-source projects
     through community collaboration. Learn about our policies, bylaws, and how
     to get involved.
-  date: 2024-01-26T22:07:28.000Z
+  date: 2024-02-02T15:07:59.000Z
   layout: layouts/bylaws.vto
 TRADEMARKS:
   url: /about/trademarks.html
@@ -73,7 +73,7 @@ bylaws:
     description: |
       Overview of terms and concepts in the Commonhaus Foundation bylaws
     layout: layouts/bylaws.vto
-    date: 2024-01-23T19:42:25.000Z
+    date: 2024-02-02T15:07:59.000Z
   1-purpose:
     description: >
       Discover the foundational purpose and non-profit status of the Commonhaus
@@ -83,7 +83,7 @@ bylaws:
       contributors, and fostering the longevity of open-source projects. This
       section establishes the legal and ethical framework that guides all our
       activities and initiatives.
-    date: 2023-12-15T14:15:46.000Z
+    date: 2024-02-02T15:07:59.000Z
     layout: layouts/bylaws.vto
   2-cf-membership:
     description: >
@@ -95,7 +95,7 @@ bylaws:
       on suspension and revocation. This document is a crucial resource for
       anyone interested in joining or understanding the membership dynamics of
       the foundation.
-    date: 2024-01-23T19:42:25.000Z
+    date: 2024-02-02T15:07:59.000Z
     layout: layouts/bylaws.vto
   3-cf-council:
     description: >
@@ -108,7 +108,7 @@ bylaws:
       to foster a less authoritarian, more community-engaged approach. Essential
        for understanding the leadership dynamics and decision-making processes
        within the foundation.
-    date: 2024-01-23T19:42:25.000Z
+    date: 2024-02-02T15:07:59.000Z
     layout: layouts/bylaws.vto
   4-cf-advisory-board:
     description: >
@@ -121,7 +121,7 @@ bylaws:
       balance between sponsor influence and independent leadership. Essential
       reading for understanding the collaborative dynamics that shape the
       foundation's direction.
-    date: 2024-01-19T22:42:16.000Z
+    date: 2024-02-02T15:07:59.000Z
     layout: layouts/bylaws.vto
   5-decision-making:
     description: >
@@ -133,7 +133,7 @@ bylaws:
       details the election process, reflecting the foundation's commitment to
       inclusive and straightforward governance aligned with open source
       principles.
-    date: 2024-01-23T19:42:50.000Z
+    date: 2024-02-02T15:07:59.000Z
     layout: layouts/bylaws.vto
   6-notice-records:
     description: >
@@ -145,7 +145,7 @@ bylaws:
       practices, highlighting methods, platforms, accessibility, security,
       compliance, and management. This document represents the foundation's
       commitment to modern, streamlined, and transparent governance practices.
-    date: 2023-12-15T14:15:46.000Z
+    date: 2024-02-02T15:07:59.000Z
     layout: layouts/bylaws.vto
   7-liability-indemnification:
     description: >
@@ -181,7 +181,7 @@ bylaws:
       canonical version of the bylaws and the formal process for their
       amendment. Ideal for quickly locating specific bylaw sections and
       understanding the framework for governance changes within the foundation.
-    date: 2024-01-23T19:42:25.000Z
+    date: 2024-02-02T15:07:59.000Z
     layout: layouts/bylaws.vto
 policies:
   code-of-conduct:
@@ -191,7 +191,7 @@ policies:
       the community. It details the commitment to creating a respectful,
       inclusive, and collaborative space, and provides guidelines for conduct,
       along with procedures for reporting and resolving issues.
-    date: 2023-12-15T14:15:46.000Z
+    date: 2024-02-02T15:07:59.000Z
     layout: layouts/bylaws.vto
   conflict-of-interest:
     description: >
@@ -200,7 +200,7 @@ policies:
       interests of the foundation. It details the procedures for identifying,
       disclosing, and managing conflicts of interest, and provides a framework
       for addressing potential conflicts.
-    date: 2023-12-15T14:15:46.000Z
+    date: 2024-02-02T15:14:26.000Z
     layout: layouts/bylaws.vto
   dissolution-policy:
     description: >
@@ -210,7 +210,7 @@ policies:
       decision-making process and the distribution of assets. It also outlines
       the procedures for the foundation's dissolution in the event of
       bankruptcy.
-    date: 2023-12-15T14:15:46.000Z
+    date: 2024-02-02T15:07:59.000Z
     layout: layouts/bylaws.vto
   ip-policy:
     description: >
@@ -244,7 +244,7 @@ policies:
       reporting security issues to ensure they are addressed effectively and
       safely, safeguarding the integrity of the projects and the broader
       community.
-    date: 2024-01-23T19:42:25.000Z
+    date: 2024-02-02T15:07:59.000Z
     layout: layouts/bylaws.vto
   succession-plan:
     description: >
@@ -257,7 +257,7 @@ policies:
       ensuring their sustainability and relevance in the tech community.
       Essential for members and contributors who seek to comprehend the
       foundation's strategy for nurturing and preserving its projects.
-    date: 2024-01-23T19:48:42.000Z
+    date: 2024-02-02T15:07:59.000Z
     layout: layouts/bylaws.vto
   trademark-policy:
     description: >
@@ -272,5 +272,5 @@ policies:
       trademarks against misuse or infringement. This policy is essential for
       anyone using the foundation's trademarks or seeking to understand their
       legal and appropriate application.
-    date: 2023-12-15T14:15:46.000Z
+    date: 2024-02-02T15:07:59.000Z
     layout: layouts/bylaws.vto
