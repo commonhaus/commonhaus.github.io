@@ -12,7 +12,7 @@ BOOTSTRAPPING:
   layout: layouts/bylaws.vto
 CONTRIBUTING:
   ignore: true
-  date: 2024-02-02T15:07:59.000Z
+  date: 2024-02-02T15:23:54.000Z
   layout: layouts/bylaws.vto
 CODE_OF_CONDUCT:
   url: /about/code_of_conduct.html
