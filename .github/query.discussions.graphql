@@ -1,9 +1,10 @@
 query($name: String!, $owner: String!) {
   repository(owner: $owner, name: $name) {
-    discussions(first: 50, orderBy: {field: UPDATED_AT, direction: DESC}) {
+    discussions(first: 15, orderBy: {field: UPDATED_AT, direction: DESC}) {
       nodes {
         id
         title
+        number
         category {
             name
             id
@@ -12,6 +13,11 @@ query($name: String!, $owner: String!) {
             login
             url
             avatarUrl
+        }
+        labels(first: 10) {
+          nodes {
+            name
+          }
         }
         url
         body
@@ -28,4 +34,3 @@ query($name: String!, $owner: String!) {
     }
   }
 }
-

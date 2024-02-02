@@ -17,4 +17,5 @@ public
 site/.hugo_build.lock
 site/resources
 workspace*
-discussions.json
+activity*.json
+schema.docs.graphql

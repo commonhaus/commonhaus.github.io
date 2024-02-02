@@ -2,16 +2,22 @@
 title: Default page title
 layout: layouts/activitySidebar.vto
 ---
-<article aria-labelledby="articleTitle">
-<heading>
-<h1 id="articleTitle">{{ page |> closeLock }}<a href="{{ page.data.github }}">{{ title }} {{ page.data.svg.github }}</a>{{ page |> closeLock }}</h1>
-</heading>
-{{ content }}
+<article aria-labelledby="articleTitle" class="activity {{ page.data.type }}{{ if page.data.closedAt }} closed{{ /if }}">
+<div class="card">
+<header>
+  <h1 id="articleTitle">{{ page |> pageLock }}<a href="{{ page.data.github }}">{{ title }}</a></h1>
+</header>
+<div class="content">
+  {{ content }}
+</div>
 <footer class="byline">
-  <div class="posted">posted <time datetime="{{ page.data.date }}">{{ page.data.date |> date('d MMMM yyyy') }}</time></div>
-  {{- if page.data.hasUpdate }}
+  {{ page |> authorAvatar }}
+  {{- if page.data.status && page.data.status.closedAt }}
+  <div class="closed">closed on <time datetime="{{ page.data.status.closedAt }}">{{ page.data.status.closedAt |> date('d MMMM yyyy') }}</time></div>
+  {{- else if page.data.hasUpdate }}
   <div class="updated">updated <time datetime="{{ page.data.updated }}">{{ page.data.updated |> date('d MMMM yyyy') }}</time></div>
   {{- /if }}
-  {{- if page.data.tags }}<div class="tags">tags {{ for tag of page.data.tags }} {{ tag }} {{ /for }}</div>{{ /if }}
+  <div class="posted">posted <time datetime="{{ page.data.date }}">{{ page.data.date |> date('d MMMM yyyy') }}</time></div>
 </footer>
+</div>
 </article>

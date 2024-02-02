@@ -206,20 +206,51 @@ site.preprocess([".html"], (pages) => {
     }
 });
 
-site.filter("closeLock", (page: Page) => {
-    let result = "";
-    if (page.data.closed) {
-        result += `<span class="act-status" aria-label="closed">${page.data.svg.closed}</span> `;
+site.filter("pageLock", (page: Page) => {
+    let result = '';
+    if (page.data.pinned) {
+        result += `<span aria-label="pinned">${page.data.svg.pin}</span> `;
     }
-    if (page.data.locked) {
-        result += `<span class="act-status" aria-label="locked">${page.data.svg.lock}</span> `;
+    if (page.data.closedAt) {
+        result += `<span aria-label="closed">${page.data.svg.closed}</span> `;
     }
-    return result;
+    if (page.data.lockReason) {
+        result += `<span aria-label="locked">${page.data.svg.lock}</span> `;
+    }
+    return result ? `<span class="act-status-icon">${result}</span>` : '';
+});
+site.filter("postLock", (data: Record<string, unknown>) => {
+    let result = '';
+    const svg = data.svg as any;
+    if (data.pinned) {
+        result += `<span aria-label="pinned">${svg.pin}</span> `;
+    }
+    if (data.closedAt) {
+        result += `<span aria-label="closed">${svg.closed}</span> `;
+    }
+    if (data.lockReason) {
+        result += `<span aria-label="locked">${svg.lock}</span> `;
+    }
+    return result ? `<span class="act-status-icon">${result}</span>` : '';
 });
 site.filter("testLock", (page: Page) => {
-    return `<span class="act-status" aria-label="closed">${page.data.svg.closed}</span>
-    <span class="act-status" aria-label="locked">${page.data.svg.lock}</span> `;
+    return `<span class="act-status-icon">
+    <span aria-label="pinned">${page.data.svg.pin}</span>
+    <span aria-label="closed">${page.data.svg.closed}</span>
+    <span aria-label="locked">${page.data.svg.lock}</span>
+    </span>`;
+});
+site.filter("authorAvatar", (page: Page) => {
+    const login = page.data.author;
+    const author = page.data.authors[login];
+    if (author) {
+        return `<a class="avatar" href="${author.url}" target="_top">
+            <img src="${author.avatar}" />
+            <span>${login}</span>
+        </a>`;
+    } else {
+        return `<div class="avatar">${login}</div>\n`;
+    }
 });
 
 export default site;
-
