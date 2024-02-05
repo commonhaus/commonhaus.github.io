@@ -13,3 +13,4 @@ Checkout:
 - [Reviews and Calls for input](./activity/index.md#reviews-and-calls-for-input)
 - [Draft Bylaws](/bylaws/)
 - [Draft Policies](/policies/)
+- [FAQ](./faq.html)
