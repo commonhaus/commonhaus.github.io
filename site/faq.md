@@ -2,6 +2,19 @@
 title: Frequently Asked Questions
 ---
 
+## Why create a new foundation?
+
+Though there are several foundations for open source projects to choose to join,
+each has its own focus and requirements.
+The CF is a home for self-governing, code-centric open source projects.
+Each open source project has their own unique needs and goals,
+and not every foundation is the right fit for every project.
+The CF is a new option for projects to consider when looking for a foundation to call home.
+
+There are many critical application frameworks and libraries within the open source ecosystem that are not currently part of a foundation.
+The CF is a place these projects may choose to call home,
+helping to strengthen the open source ecosystem as a whole by ensuring more projects are sustainable in the long term.
+
 ## Why not the Apache Software Foundation?
 
 The Apache Software Foundation (ASF) has a long standing tradition of being a home for open source projects of all types,
@@ -29,16 +42,3 @@ The CF does not require project name changes when joining.
 Open source projects at the CF may implement standards or specifications defined by other organizations,
 such as the EF, but the CF will not oversee projects developing standards or specifications.
 That is not where the CF will focus its efforts.
-
-## Why create a new foundation?
-
-Though there are several foundations for open source projects to choose to join,
-each has its own focus and requirements.
-The CF is a home for self-governing, code-centric open source projects.
-Each open source project has their own unique needs and goals,
-and not every foundation is the right fit for every project.
-The CF is a new option for projects to consider when looking for a foundation to call home.
-
-There are many critical application frameworks and libraries within the open source ecosystem that are not currently part of a foundation.
-The CF is a place these projects may choose to call home,
-helping to strengthen the open source ecosystem as a whole by ensuring more projects are sustainable in the long term.
