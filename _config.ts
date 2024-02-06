@@ -5,6 +5,7 @@ import { safeLoad } from "https://deno.land/x/js_yaml_port@3.14.0/js-yaml.js";
 import date from "lume/plugins/date.ts";
 import favicon from "lume/plugins/favicon.ts";
 import feed from "lume/plugins/feed.ts";
+import inline from "lume/plugins/inline.ts";
 import metas from "lume/plugins/metas.ts";
 import nav from "lume/plugins/nav.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
@@ -95,6 +96,7 @@ site
             updated: "=updated",
         },
     }))
+    .use(inline(/* Options */))
     .use(nav())
     .use(sass({
         includes: "_includes/scss",
@@ -114,7 +116,8 @@ site
 // Otherwise, just return the URL
 site.data("url", (page: Page) => {
     if (page.src.ext !== ".md"
-            || page.src.path.indexOf("templates") >= 0) {
+            || page.src.path.indexOf("templates") >= 0
+            || page.data.ignore === true) {
         return false;
     }
     page.data.url = page.data.url

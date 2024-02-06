@@ -5,12 +5,16 @@ about:
   submenu:
     label: About the Commonhaus Foundation
     children:
+      - title: Governance Overview
+        href: /about/governance.html
       - title: Bylaws
         href: /bylaws
         icon: policy
       - title: Policies
         href: /policies
         icon: policy
+      - title: FAQ
+        href: /about/faq.html
 activity:
   title: Activity
   href: /activity
