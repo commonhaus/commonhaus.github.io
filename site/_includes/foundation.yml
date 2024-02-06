@@ -11,19 +11,15 @@ BOOTSTRAPPING:
   date: 2024-02-02T15:07:59.000Z
   layout: layouts/bylaws.vto
 CONTRIBUTING:
-  ignore: true
+  url: /about/contributing.html
+  metas:
+    robots: false
   date: 2024-02-02T15:23:54.000Z
   layout: layouts/bylaws.vto
 CODE_OF_CONDUCT:
-  url: /about/code_of_conduct.html
-  description: >
-    This Code of Conduct document, adhering to the Contributor Covenant v2.1, is
-    specifically tailored for certain repositories and projects under the
-    Commonhaus Foundation. It supplements the foundation-wide Code of Conduct by
-    providing detailed contact information and procedures for reporting and
-    addressing issues related to specific projects, as well as foundation-wide
-    concerns. This ensures a consistent and respectful approach across all
-    levels of the foundation's operations.
+  url: /about/code-of-conduct.html
+  metas:
+    robots: false
   date: 2024-02-02T15:07:59.000Z
   layout: layouts/bylaws.vto
 COMMUNICATION:
@@ -38,13 +34,18 @@ COMMUNICATION:
     community.
   date: 2024-02-02T15:07:59.000Z
   layout: layouts/bylaws.vto
+FAQ:
+  url: /about/faq.html
+  description: >
+    This FAQ document provides answers to common questions about the Commonhaus
+    Foundation and why it should be considered as a home for Open Source
+    projects instead of other organizations.
+  date: 2024-02-06T21:00:56.000Z
+  layout: layouts/bylaws.vto
 GOVERNANCE:
   url: /about/governance.html
-  description: >
-    Overview of Commonhaus Foundation roles, responsibilities, and
-    decision-making processes integral to managing our open-source projects,
-    emphasizing our commitment to transparency, inclusivity, and
-    community-driven development.
+  metas:
+    robots: false
   date: 2024-01-26T22:07:28.000Z
   layout: layouts/bylaws.vto
 README:
