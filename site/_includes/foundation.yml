@@ -186,6 +186,7 @@ bylaws:
     layout: layouts/bylaws.vto
 policies:
   code-of-conduct:
+    url: /policies/code-of-conduct/
     description: >
       This document serves as the official Code of Conduct for the Commonhaus
       Foundation, outlining the expectations and standards for behavior within
@@ -195,6 +196,7 @@ policies:
     date: 2024-02-05T22:42:11.000Z
     layout: layouts/bylaws.vto
   conflict-of-interest:
+    url: /policies/conflict-of-interest/
     description: >
       This policy outlines the Commonhaus Foundation's approach to conflicts of
       interest, ensuring that all members and contributors act in the best
@@ -204,6 +206,7 @@ policies:
     date: 2024-02-02T15:14:26.000Z
     layout: layouts/bylaws.vto
   dissolution-policy:
+    url: /policies/dissolution-policy/
     description: >
       This policy outlines the Commonhaus Foundation's approach to dissolution,
       providing a framework for the process and procedures to be followed. It
@@ -214,6 +217,7 @@ policies:
     date: 2024-02-02T15:07:59.000Z
     layout: layouts/bylaws.vto
   ip-policy:
+    url: /policies/ip-policy/
     description: >
       This policy outlines the Commonhaus Foundation's approach to intellectual
       property, ensuring that all members and contributors act in the best
@@ -237,6 +241,7 @@ policies:
     date: 2023-12-15T14:15:46.000Z
     layout: layouts/bylaws.vto
   security-policy:
+    url: /policies/security-policy/
     description: >
       Guidance on securely reporting vulnerabilities in Commonhaus Foundation
       projects. This resource outlines responsible disclosure protocols,
@@ -248,6 +253,7 @@ policies:
     date: 2024-02-02T15:07:59.000Z
     layout: layouts/bylaws.vto
   succession-plan:
+    url: /policies/succession-plan/
     description: >
       Understand the Commonhaus Foundation's approach to maintaining project
       continuity and administrative access in this vital policy document. It
@@ -261,6 +267,7 @@ policies:
     date: 2024-02-02T15:07:59.000Z
     layout: layouts/bylaws.vto
   trademark-policy:
+    url: /policies/trademark-policy/
     description: >
       This Trademark Policy document specifies the guidelines for the use and
       licensing of trademarks associated with the Commonhaus Foundation and its
