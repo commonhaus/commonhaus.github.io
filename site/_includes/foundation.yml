@@ -148,18 +148,16 @@ bylaws:
       commitment to modern, streamlined, and transparent governance practices.
     date: 2024-02-02T15:07:59.000Z
     layout: layouts/bylaws.vto
-  7-liability-indemnification:
+  7-liability-indemnification-dissolution:
     description: >
-      Learn about the protections and responsibilities of the Commonhaus
-      Foundation's
-       leaders in this crucial section of our bylaws. It explains how Council members
-       and officers are safeguarded from personal legal responsibility for their
-       official actions, except in cases of serious misconduct. The document also
-       covers the foundation's approach to insurance, detailing decision-making
-       processes and types of coverage to ensure the organization's and its members'
-       security. This is essential reading for understanding the legal safeguards in
-       place for those guiding the foundation.
-    date: 2023-12-15T14:15:46.000Z
+      Explore the Commonhaus Foundation's approach to liability,
+      indemnification, and dissolution. It outlines the foundation's commitment
+      to protecting its members and contributors from legal liabilities,
+      ensuring that they can participate in the foundation's activities without
+      undue risk. The document also details the procedures for indemnification
+      and the dissolution process, ensuring that the foundation's assets are
+      distributed in a manner consistent with its mission and values.
+    date: 2024-02-13T22:16:20.000Z
     layout: layouts/bylaws.vto
   8-amendments:
     description: >
@@ -182,7 +180,7 @@ bylaws:
       canonical version of the bylaws and the formal process for their
       amendment. Ideal for quickly locating specific bylaw sections and
       understanding the framework for governance changes within the foundation.
-    date: 2024-02-02T15:07:59.000Z
+    date: 2024-02-13T22:16:20.000Z
     layout: layouts/bylaws.vto
 policies:
   code-of-conduct:
@@ -204,17 +202,6 @@ policies:
       disclosing, and managing conflicts of interest, and provides a framework
       for addressing potential conflicts.
     date: 2024-02-02T15:14:26.000Z
-    layout: layouts/bylaws.vto
-  dissolution-policy:
-    url: /policies/dissolution-policy/
-    description: >
-      This policy outlines the Commonhaus Foundation's approach to dissolution,
-      providing a framework for the process and procedures to be followed. It
-      details the steps for initiating dissolution, including the
-      decision-making process and the distribution of assets. It also outlines
-      the procedures for the foundation's dissolution in the event of
-      bankruptcy.
-    date: 2024-02-02T15:07:59.000Z
     layout: layouts/bylaws.vto
   ip-policy:
     url: /policies/ip-policy/
@@ -238,7 +225,7 @@ policies:
       systematically and in accordance with legal requirements. This is a vital
       resource for understanding the governance and operational guidelines that
       shape the foundation's activities and decisions.
-    date: 2023-12-15T14:15:46.000Z
+    date: 2024-02-13T22:16:20.000Z
     layout: layouts/bylaws.vto
   security-policy:
     url: /policies/security-policy/
