@@ -269,3 +269,14 @@ policies:
       legal and appropriate application.
     date: 2024-02-14T14:17:17.000Z
     layout: layouts/bylaws.vto
+  CLA:
+    url: /policies/cla/
+    description: >
+      This document outlines the Commonhaus Foundation's Contributor License
+      Agreement (CLA). It details the terms and conditions under which
+      contributions are made, ensuring that the foundation and its projects can
+      use and distribute the contributions. The CLA also provides a framework
+      for contributors to assert their rights and responsibilities, ensuring
+      that their contributions are used in accordance with their intentions.
+    date: 2024-02-16T00:03:48.000Z
+    layout: layouts/bylaws.vto
