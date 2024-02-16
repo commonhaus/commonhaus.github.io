@@ -201,7 +201,7 @@ policies:
       interests of the foundation. It details the procedures for identifying,
       disclosing, and managing conflicts of interest, and provides a framework
       for addressing potential conflicts.
-    date: 2024-02-02T15:14:26.000Z
+    date: 2024-02-17T16:10:44.000Z
     layout: layouts/bylaws.vto
   ip-policy:
     url: /policies/ip-policy/
@@ -267,7 +267,7 @@ policies:
       trademarks against misuse or infringement. This policy is essential for
       anyone using the foundation's trademarks or seeking to understand their
       legal and appropriate application.
-    date: 2024-02-14T14:17:17.000Z
+    date: 2024-02-17T16:10:26.000Z
     layout: layouts/bylaws.vto
   CLA:
     url: /policies/cla/
@@ -278,5 +278,5 @@ policies:
       use and distribute the contributions. The CLA also provides a framework
       for contributors to assert their rights and responsibilities, ensuring
       that their contributions are used in accordance with their intentions.
-    date: 2024-02-16T00:03:48.000Z
+    date: 2024-02-16T18:24:37.000Z
     layout: layouts/bylaws.vto
