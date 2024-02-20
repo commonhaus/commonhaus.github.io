@@ -96,7 +96,7 @@ bylaws:
       on suspension and revocation. This document is a crucial resource for
       anyone interested in joining or understanding the membership dynamics of
       the foundation.
-    date: 2024-02-14T00:35:35.000Z
+    date: 2024-02-17T16:11:01.000Z
     layout: layouts/bylaws.vto
   3-cf-council:
     description: >
@@ -148,7 +148,7 @@ bylaws:
       commitment to modern, streamlined, and transparent governance practices.
     date: 2024-02-14T00:35:35.000Z
     layout: layouts/bylaws.vto
-  7-liability-indemnification-dissolution:
+  7-indemnification-dissolution:
     description: >
       Explore the Commonhaus Foundation's approach to liability,
       indemnification, and dissolution. It outlines the foundation's commitment
@@ -157,7 +157,7 @@ bylaws:
       undue risk. The document also details the procedures for indemnification
       and the dissolution process, ensuring that the foundation's assets are
       distributed in a manner consistent with its mission and values.
-    date: 2024-02-13T22:16:20.000Z
+    date: 2024-02-17T16:11:01.000Z
     layout: layouts/bylaws.vto
   8-amendments:
     description: >
@@ -180,7 +180,7 @@ bylaws:
       canonical version of the bylaws and the formal process for their
       amendment. Ideal for quickly locating specific bylaw sections and
       understanding the framework for governance changes within the foundation.
-    date: 2024-02-13T22:16:20.000Z
+    date: 2024-02-17T16:11:01.000Z
     layout: layouts/bylaws.vto
 policies:
   code-of-conduct:
@@ -211,7 +211,7 @@ policies:
       interests of the foundation. It details the procedures for identifying,
       disclosing, and managing intellectual property, and provides a framework
       for addressing potential conflicts.
-    date: 2024-02-07T22:02:05.000Z
+    date: 2024-02-17T16:11:17.000Z
     layout: layouts/bylaws.vto
   README:
     description: >
@@ -251,7 +251,7 @@ policies:
       ensuring their sustainability and relevance in the tech community.
       Essential for members and contributors who seek to comprehend the
       foundation's strategy for nurturing and preserving its projects.
-    date: 2024-02-14T00:35:35.000Z
+    date: 2024-02-20T00:08:14.000Z
     layout: layouts/bylaws.vto
   trademark-policy:
     url: /policies/trademark-policy/
