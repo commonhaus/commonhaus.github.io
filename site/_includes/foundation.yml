@@ -14,7 +14,7 @@ CONTRIBUTING:
   url: /about/contributing.html
   metas:
     robots: false
-  date: 2024-02-15T01:33:44.000Z
+  date: 2024-02-21T17:44:44.000Z
   layout: layouts/bylaws.vto
 CODE_OF_CONDUCT:
   url: /about/code-of-conduct.html
@@ -146,7 +146,7 @@ bylaws:
       practices, highlighting methods, platforms, accessibility, security,
       compliance, and management. This document represents the foundation's
       commitment to modern, streamlined, and transparent governance practices.
-    date: 2024-02-14T00:35:35.000Z
+    date: 2024-02-21T17:44:44.000Z
     layout: layouts/bylaws.vto
   7-indemnification-dissolution:
     description: >
@@ -191,7 +191,7 @@ policies:
       the community. It details the commitment to creating a respectful,
       inclusive, and collaborative space, and provides guidelines for conduct,
       along with procedures for reporting and resolving issues.
-    date: 2024-02-05T22:42:11.000Z
+    date: 2024-02-21T17:44:44.000Z
     layout: layouts/bylaws.vto
   conflict-of-interest:
     url: /policies/conflict-of-interest/
@@ -201,7 +201,7 @@ policies:
       interests of the foundation. It details the procedures for identifying,
       disclosing, and managing conflicts of interest, and provides a framework
       for addressing potential conflicts.
-    date: 2024-02-17T16:10:44.000Z
+    date: 2024-02-21T17:44:44.000Z
     layout: layouts/bylaws.vto
   ip-policy:
     url: /policies/ip-policy/
@@ -211,7 +211,7 @@ policies:
       interests of the foundation. It details the procedures for identifying,
       disclosing, and managing intellectual property, and provides a framework
       for addressing potential conflicts.
-    date: 2024-02-17T16:11:17.000Z
+    date: 2024-02-21T17:44:44.000Z
     layout: layouts/bylaws.vto
   README:
     description: >
@@ -225,7 +225,7 @@ policies:
       systematically and in accordance with legal requirements. This is a vital
       resource for understanding the governance and operational guidelines that
       shape the foundation's activities and decisions.
-    date: 2024-02-13T22:16:20.000Z
+    date: 2024-02-21T17:44:44.000Z
     layout: layouts/bylaws.vto
   security-policy:
     url: /policies/security-policy/
@@ -251,7 +251,7 @@ policies:
       ensuring their sustainability and relevance in the tech community.
       Essential for members and contributors who seek to comprehend the
       foundation's strategy for nurturing and preserving its projects.
-    date: 2024-02-20T00:08:14.000Z
+    date: 2024-02-21T17:44:44.000Z
     layout: layouts/bylaws.vto
   trademark-policy:
     url: /policies/trademark-policy/
@@ -267,7 +267,7 @@ policies:
       trademarks against misuse or infringement. This policy is essential for
       anyone using the foundation's trademarks or seeking to understand their
       legal and appropriate application.
-    date: 2024-02-17T16:10:26.000Z
+    date: 2024-02-21T17:44:44.000Z
     layout: layouts/bylaws.vto
   CLA:
     url: /policies/cla/
