@@ -1,15 +1,25 @@
 BOOTSTRAPPING:
-  url: /bylaws/bootstrapping.html
-  description: >
-    This document serves as a guide for the early stages of establishing the
-    Commonhaus Foundation. It delineates interim procedures and commitments to
-    ensure that project undertakings are aligned with the foundation's evolving
-    needs. Key focuses include fostering mutual trust and ensuring operational
-    flexibility during this foundational phase. The document also references
-    governance structures and decision-making protocols to be followed during
-    bootstrapping.
+  ignore: true
   date: 2024-02-02T15:07:59.000Z
   layout: layouts/bylaws.vto
+agreements:
+  bootstrapping:
+    BOOTSTRAPPING:
+      ignore: true
+      date: 2024-02-22T18:23:49.000Z
+      layout: layouts/bylaws.vto
+    bootstrapping:
+      url: /bylaws/bootstrapping.html
+      description: >
+        This document serves as a guide for the early stages of establishing the
+        Commonhaus Foundation. It delineates interim procedures and commitments
+        to ensure that project undertakings are aligned with the foundation's
+        evolving needs. Key focuses include fostering mutual trust and ensuring
+        operational flexibility during this foundational phase. The document
+        also references governance structures and decision-making protocols to
+        be followed during bootstrapping.
+      date: 2024-02-02T15:07:59.000Z
+      layout: layouts/bylaws.vto
 CONTRIBUTING:
   url: /about/contributing.html
   metas:
@@ -96,7 +106,7 @@ bylaws:
       on suspension and revocation. This document is a crucial resource for
       anyone interested in joining or understanding the membership dynamics of
       the foundation.
-    date: 2024-02-17T16:11:01.000Z
+    date: 2024-02-22T18:23:59.000Z
     layout: layouts/bylaws.vto
   3-cf-council:
     description: >
@@ -109,7 +119,7 @@ bylaws:
       to foster a less authoritarian, more community-engaged approach. Essential
        for understanding the leadership dynamics and decision-making processes
        within the foundation.
-    date: 2024-02-14T00:35:35.000Z
+    date: 2024-02-22T18:23:59.000Z
     layout: layouts/bylaws.vto
   4-cf-advisory-board:
     description: >
