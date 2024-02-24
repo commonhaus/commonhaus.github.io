@@ -18,7 +18,7 @@ agreements:
         operational flexibility during this foundational phase. The document
         also references governance structures and decision-making protocols to
         be followed during bootstrapping.
-      date: 2024-02-02T15:07:59.000Z
+      date: 2024-02-24T14:12:10.000Z
       layout: layouts/bylaws.vto
 CONTRIBUTING:
   url: /about/contributing.html
@@ -106,7 +106,7 @@ bylaws:
       on suspension and revocation. This document is a crucial resource for
       anyone interested in joining or understanding the membership dynamics of
       the foundation.
-    date: 2024-02-22T18:23:59.000Z
+    date: 2024-02-24T14:12:10.000Z
     layout: layouts/bylaws.vto
   3-cf-council:
     description: >
@@ -119,7 +119,7 @@ bylaws:
       to foster a less authoritarian, more community-engaged approach. Essential
        for understanding the leadership dynamics and decision-making processes
        within the foundation.
-    date: 2024-02-22T18:23:59.000Z
+    date: 2024-02-24T14:12:10.000Z
     layout: layouts/bylaws.vto
   4-cf-advisory-board:
     description: >
@@ -156,7 +156,7 @@ bylaws:
       practices, highlighting methods, platforms, accessibility, security,
       compliance, and management. This document represents the foundation's
       commitment to modern, streamlined, and transparent governance practices.
-    date: 2024-02-21T17:44:44.000Z
+    date: 2024-02-24T14:12:10.000Z
     layout: layouts/bylaws.vto
   7-indemnification-dissolution:
     description: >
@@ -167,7 +167,7 @@ bylaws:
       undue risk. The document also details the procedures for indemnification
       and the dissolution process, ensuring that the foundation's assets are
       distributed in a manner consistent with its mission and values.
-    date: 2024-02-17T16:11:01.000Z
+    date: 2024-02-24T14:12:10.000Z
     layout: layouts/bylaws.vto
   8-amendments:
     description: >
@@ -179,7 +179,7 @@ bylaws:
       transparent and inclusive amendment process. Ideal for members and
       contributors who wish to understand or participate in the evolving
       governance of the foundation.
-    date: 2023-12-15T14:15:46.000Z
+    date: 2024-02-24T14:12:10.000Z
     layout: layouts/bylaws.vto
   README:
     description: >
@@ -201,7 +201,7 @@ policies:
       the community. It details the commitment to creating a respectful,
       inclusive, and collaborative space, and provides guidelines for conduct,
       along with procedures for reporting and resolving issues.
-    date: 2024-02-21T17:44:44.000Z
+    date: 2024-02-24T14:12:10.000Z
     layout: layouts/bylaws.vto
   conflict-of-interest:
     url: /policies/conflict-of-interest/
@@ -211,7 +211,7 @@ policies:
       interests of the foundation. It details the procedures for identifying,
       disclosing, and managing conflicts of interest, and provides a framework
       for addressing potential conflicts.
-    date: 2024-02-21T17:44:44.000Z
+    date: 2024-02-24T14:12:10.000Z
     layout: layouts/bylaws.vto
   ip-policy:
     url: /policies/ip-policy/
@@ -221,7 +221,7 @@ policies:
       interests of the foundation. It details the procedures for identifying,
       disclosing, and managing intellectual property, and provides a framework
       for addressing potential conflicts.
-    date: 2024-02-21T21:11:10.000Z
+    date: 2024-02-24T14:12:10.000Z
     layout: layouts/bylaws.vto
   README:
     description: >
@@ -261,7 +261,7 @@ policies:
       ensuring their sustainability and relevance in the tech community.
       Essential for members and contributors who seek to comprehend the
       foundation's strategy for nurturing and preserving its projects.
-    date: 2024-02-21T17:44:44.000Z
+    date: 2024-02-24T14:12:10.000Z
     layout: layouts/bylaws.vto
   trademark-policy:
     url: /policies/trademark-policy/
