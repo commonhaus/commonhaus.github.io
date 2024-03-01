@@ -1,17 +1,8 @@
-name: publish
+name: publish gh-pages
 
 on:
-  push:
-    branches:
-      - 'main'
-  repository_dispatch:
   workflow_dispatch:
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: write
-  pages: write
-  id-token: write
+  workflow_call:
 
 env:
   GH_BOT_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
@@ -19,17 +10,23 @@ env:
   DENO_DIR: .deno-cache
   REPO: commonhaus/commonhaus.github.io
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+permissions: {}
+
 concurrency:
   group: "pages"
   cancel-in-progress: true
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+    # Cancel in-progress runs if a new one is queued
     steps:
       - name: Setup Deno environment
         uses: denoland/setup-deno@v1
@@ -45,36 +42,6 @@ jobs:
         with:
           path: ${{ env.DENO_DIR }}
           key: ${{ hashFiles('deno.lock') }}
-
-      - name: Git Config
-        run: |
-          git config user.name ${{ env.GH_BOT_NAME }}
-          git config user.email ${{ env.GH_BOT_EMAIL }}
-
-      - name: Git Submodule Update
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git pull --recurse-submodules
-          git submodule update --init --remote --recursive
-          deno task lastmod
-
-          if git diff --quiet; then
-            echo "-- No changes -- "
-          else
-            git commit -am "🆙 Auto-update submodule references" && git push
-          fi
-
-      - name: Git Discussion Update
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          deno task activity
-          if git diff --quiet; then
-            echo "-- No changes -- "
-          else
-            git commit -am "💬 Auto-update GH Activity" && git push
-          fi
 
       - name: Build site
         run: deno task build
