@@ -1,0 +1,75 @@
+name: update-vote-results
+
+on:
+  repository_dispatch:
+  workflow_dispatch:
+
+env:
+  GH_BOT_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
+  GH_BOT_NAME: "GitHub Action"
+  DENO_DIR: .deno-cache
+  REPO: commonhaus/commonhaus.github.io
+
+permissions: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Setup Deno environment
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Cache Deno dependencies
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.DENO_DIR }}
+          key: ${{ hashFiles('deno.lock') }}
+
+      - name: Git Config
+        run: |
+          git config user.name ${{ env.GH_BOT_NAME }}
+          git config user.email ${{ env.GH_BOT_EMAIL }}
+
+      - name: Git Submodule Update
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git pull --recurse-submodules
+          git submodule update --init --remote --recursive
+          deno task lastmod
+
+          if git diff --quiet; then
+            echo "-- No changes -- "
+          else
+            git commit -am "🆙 Auto-update submodule references" && git push
+          fi
+
+      - name: Git Discussion Update
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          deno task activity
+          if git diff --quiet; then
+            echo "-- No changes -- "
+          else
+            git commit -am "💬 Auto-update GH Activity" && git push
+          fi
+
+  publish-gh-pages:
+    uses: ./.github/workflows/gh-pages.yml
+    concurrency:
+      group: "pages"
+      cancel-in-progress: true
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    secrets: inherit
