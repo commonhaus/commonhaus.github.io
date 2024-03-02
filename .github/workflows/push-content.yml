@@ -4,6 +4,13 @@ on:
   push:
     branches:
       - 'main'
+    paths:
+      - '.github/*.ts'
+      - '.github/*.graphql'
+      - '_config.ts'
+      - 'deno.json'
+      - 'site/**'
+
   repository_dispatch:
   workflow_dispatch:
 
@@ -70,6 +77,7 @@ jobs:
           fi
 
   publish-gh-pages:
+    needs: build
     uses: ./.github/workflows/gh-pages.yml
     concurrency:
       group: "pages"
