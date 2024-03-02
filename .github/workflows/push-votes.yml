@@ -1,8 +1,16 @@
 name: update-vote-results
 
 on:
-  repository_dispatch:
   workflow_dispatch:
+    inputs:
+      id:
+        description: "The bot comment id"
+        required: true
+        default: "-1"
+      type:
+        description: "The comment type (discussion or issue)"
+        required: true
+        default: "discussion"
 
 env:
   GH_BOT_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
@@ -38,38 +46,22 @@ jobs:
           git config user.name ${{ env.GH_BOT_NAME }}
           git config user.email ${{ env.GH_BOT_EMAIL }}
 
-      - name: Git Submodule Update
+      - name: Git Vote Update
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_EVENT: ${{ toJson(github.event) }}
         run: |
-          git pull --recurse-submodules
-          git submodule update --init --remote --recursive
-          deno task lastmod
+          echo "Updating vote results..."
+          echo "${GITHUB_EVENT}"
 
-          if git diff --quiet; then
-            echo "-- No changes -- "
-          else
-            git commit -am "🆙 Auto-update submodule references" && git push
-          fi
-
-      - name: Git Discussion Update
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          deno task activity
-          if git diff --quiet; then
-            echo "-- No changes -- "
-          else
-            git commit -am "💬 Auto-update GH Activity" && git push
-          fi
-
-  publish-gh-pages:
-    uses: ./.github/workflows/gh-pages.yml
-    concurrency:
-      group: "pages"
-      cancel-in-progress: true
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    secrets: inherit
+  # publish-gh-pages:
+  #   needs: build
+  #   uses: ./.github/workflows/gh-pages.yml
+  #   concurrency:
+  #     group: "pages"
+  #     cancel-in-progress: true
+  #   permissions:
+  #     contents: read
+  #     pages: write
+  #     id-token: write
+  #   secrets: inherit
