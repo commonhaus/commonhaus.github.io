@@ -70,7 +70,7 @@ const prefixMap: Record<string, string> = {
   reviews: '[🗳️  ]',
 };
 
-const pins: PinnedItemData = JSON.parse(Deno.readTextFileSync('activity-pinned.json'));
+const pins: PinnedItemData = JSON.parse(Deno.readTextFileSync('./site/activity/activity-pinned.json'));
 const pinnedIds = pins.data.repository.pinnedDiscussions.nodes
     .map((node) => node.discussion.id);
 
@@ -168,8 +168,8 @@ function updatePullRequests(data: PullRequestData) {
 // Usage:
 // First, use a deno task to download the last 10 discussions from GitHub > discussions.json
 // Parse the discussions.json file
-const discuss: DiscussionsData = JSON.parse(Deno.readTextFileSync('activity-discussions.json'));
+const discuss: DiscussionsData = JSON.parse(Deno.readTextFileSync('./site/activity/activity-discussions.json'));
 updateDiscussions(discuss);
 
-const prs: PullRequestData = JSON.parse(Deno.readTextFileSync('activity-prs.json'));
+const prs: PullRequestData = JSON.parse(Deno.readTextFileSync('./site/activity/activity-prs.json'));
 updatePullRequests(prs);

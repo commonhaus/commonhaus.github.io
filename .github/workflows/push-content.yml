@@ -70,7 +70,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           deno task activity
-          if git diff --quiet; then
+          git add -A -- ./site/activity
+          if git diff --quiet HEAD; then
             echo "-- No changes -- "
           else
             git commit -am "💬 Auto-update GH Activity" && git push
