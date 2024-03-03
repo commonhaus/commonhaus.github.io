@@ -1,16 +1,20 @@
 {
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
+
     "attach": "echo \"import 'lume/cli.ts'\" | deno run --inspect-wait --unstable -A -",
     "build": "deno task lume",
     "serve": "deno task lume -s",
     "debug": "deno task attach -s",
-    "q-discuss": "gh api graphql -F owner='commonhaus' -F name='foundation-draft' -F query=@./.github/query.discussions.graphql > activity-discussions.json",
-    "q-pins": "gh api graphql -F owner='commonhaus' -F name='foundation-draft' -F query=@./.github/query.pinned.graphql > activity-pinned.json",
-    "q-pr": "gh api graphql -F owner='commonhaus' -F name='foundation-draft' -F query=@./.github/query.pullrequests.graphql > activity-prs.json",
-    "assemble": "deno run --allow-read=. --allow-write=. ./.github/activities.ts",
+
+    "q-discuss": "gh api graphql -F owner='commonhaus' -F name='foundation-draft' -F query=@./.github/query.discussions.graphql > ./site/activity/activity-discussions.json",
+    "q-pins": "gh api graphql -F owner='commonhaus' -F name='foundation-draft' -F query=@./.github/query.pinned.graphql > ./site/activity/activity-pinned.json",
+    "q-pr": "gh api graphql -F owner='commonhaus' -F name='foundation-draft' -F query=@./.github/query.pullrequests.graphql > ./site/activity/activity-prs.json",
+    "assemble": "deno run --allow-read=./site/activity,./site/_data/authors.yml --allow-write=./site/activity,./site/_data/authors.yml ./.github/activities.ts",
     "activity": "deno task q-pins && deno task q-discuss && deno task q-pr && deno task assemble",
-    "lastmod": "deno run --allow-run=\"git\" --allow-read=. --allow-write=. ./.github/lastmod.ts",
+
+    "lastmod": "deno run --allow-run=\"git\" --allow-read=./site --allow-write=./site/_includes/foundation.yml ./.github/lastmod.ts",
+
     "checklinks": "deno run --allow-read --allow-net https://deno.land/x/link_checker/crawl.ts https://www.commonhaus.org",
     "checklocal": "deno run --allow-read --allow-net https://deno.land/x/link_checker/crawl.ts http://localhost:3000/"
   },
