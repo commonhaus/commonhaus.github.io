@@ -1,0 +1,94 @@
+---
+layout: layouts/base.vto
+---
+<article aria-labelledby="articleTitle" class="vote {{ page.data.type }}{{ if page.data.closed }} closed{{ /if }}">
+<div class="card">
+<header>
+  <h1 id="articleTitle"><span>Voting results for</span>
+<a class="repo-link" href="{{ page.data.github }}">{{ page.data.voteItem }}</a> <a class="item-title" href="{{ page.data.github }}">{{ page.data.itemTitle }}</a></h1>
+</header>
+<div class="content">
+
+<ul>
+<li><strong>Method</strong>: {{ page.data.voteType }}</li>
+<li><strong>Group</strong>: {{ page.data.group }} ({{ page.data.groupSize }} members)</li>
+<li><strong>Response threshold</strong>: {{ page.data.votingThreshold }}<sup><a href="#fn1" id="fnref1">1</a></sup></li>
+</ul>
+
+<table class="vote-result">
+  <caption>Vote Results</caption>
+  <colgroup>
+    <col class="name-reaction" />
+    <col class="total-votes" />
+    <col class="team-votes" />
+    <col class="voting-members" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Response Group<sup><a href="#fn2" id="fnref2">2</a></sup></th>
+      <th>Total Votes</th>
+      <th>Team Votes</th>
+      <th>Voting members</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{- for k of page.data.sortedCategories }}
+    <tr>
+      <th>{{ k[0] }} ({{ k[1].reactions.join(", ") }})</th>
+      <td>{{ k[1].total }}</td>
+      <td>{{ k[1].teamTotal }}</td>
+      <td>{{ k[1].team |> listVoters }}</td>
+    </tr>
+    {{- /for }}
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>Total</th>
+      <td>{{ page.data.countedVotes }}</td>
+      <td>{{ page.data.groupVotes }}</td>
+      <td></td>
+    </tr>
+  </tfoot>
+</table>
+{{ if page.data.ignored }}
+<section class="ignored">
+<p>The following reactions were not counted: {{ page.data.ignored.reactions.join(", ") }}</p>
+</section>
+{{ /if -}}
+{{ if page.data.duplicates }}
+<section class="duplicates">
+  <p>The following votes were not counted (multiple votes, using most recent):</p>
+  <div class="duplicates">
+  {{- for d of page.data.duplicates }}
+  <span><a href="{{ d.user.url }}">{{ d.user.login }}</a>:{{ d.reaction }}</span>
+  {{- /for }}
+  </div>
+</section>
+{{- /if }}
+
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>The response threshold is the minimum number of votes required to consider the vote valid without a meeting.
+If the total number of votes is less than the response threshold, a meeting will be held, and <a href="/bylaws/decision-making.html">normal quorum rules</a> will apply.
+<a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p>For votes using Martha's rules, this will be "approve", "ok", and "revise".
+For manual, reaction-based votes, reactions will be appear individually. For manual votes based on comment responses, there will be one "comment" group.
+<a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+</div>
+
+<footer class="byline">
+  {{- if page.data.closed }}
+  <div class="closed">closed on <time datetime="{{ page.data.closedAt }}">{{ page.data.closedAt |> date('d MMMM yyyy') }}</time></div>
+  {{- else if page.data.updated }}
+  <div class="updated">updated <time datetime="{{ page.data.updated }}">{{ page.data.updated |> date('d MMMM yyyy') }}</time></div>
+  {{- /if }}
+  <div class="posted">posted <time datetime="{{ page.data.date }}">{{ page.data.date |> date('d MMMM yyyy') }}</time></div>
+</footer>
+</div>
+</article>
+

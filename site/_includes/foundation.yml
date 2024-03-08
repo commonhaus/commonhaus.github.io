@@ -1,13 +1,5 @@
-BOOTSTRAPPING:
-  ignore: true
-  date: 2024-02-02T15:07:59.000Z
-  layout: layouts/bylaws.vto
 agreements:
   bootstrapping:
-    BOOTSTRAPPING:
-      ignore: true
-      date: 2024-02-22T18:23:49.000Z
-      layout: layouts/bylaws.vto
     bootstrapping:
       url: /bylaws/bootstrapping.html
       description: >

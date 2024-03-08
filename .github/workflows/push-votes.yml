@@ -3,14 +3,9 @@ name: update-vote-results
 on:
   workflow_dispatch:
     inputs:
-      id:
-        description: "The bot comment id"
+      comment_id:
+        type: string
         required: true
-        default: "-1"
-      type:
-        description: "The comment type (discussion or issue)"
-        required: true
-        default: "discussion"
 
 env:
   GH_BOT_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
@@ -49,19 +44,25 @@ jobs:
       - name: Git Vote Update
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_EVENT: ${{ toJson(github.event) }}
+          INPUT: ${{ github.event.inputs.comment_id }}
         run: |
           echo "Updating vote results..."
-          echo "${GITHUB_EVENT}"
+          deno task votes "${INPUT}"
+          git add -A -- ./site/votes
+          if git diff --quiet HEAD; then
+            echo "-- No changes -- "
+          else
+            git commit -am "🗳️ Auto-update GH Votes" && git push
+          fi
 
-  # publish-gh-pages:
-  #   needs: build
-  #   uses: ./.github/workflows/gh-pages.yml
-  #   concurrency:
-  #     group: "pages"
-  #     cancel-in-progress: true
-  #   permissions:
-  #     contents: read
-  #     pages: write
-  #     id-token: write
-  #   secrets: inherit
+  publish-gh-pages:
+    needs: build
+    uses: ./.github/workflows/gh-pages.yml
+    concurrency:
+      group: "pages"
+      cancel-in-progress: true
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    secrets: inherit
