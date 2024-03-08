@@ -16,6 +16,9 @@
 </script>
 <script src="/assets/anchors.js" inline></script>
 <link rel="stylesheet" href="/assets/site.css" />
+{{- for x of page.data.scripts }}
+<script src="{{ x }}" inline></script>
+{{ /for -}}
 </head>
 <body onload="adjustAnchors();">
 <header class="site">
