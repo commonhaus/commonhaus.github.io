@@ -62,3 +62,19 @@ jobs:
         if: github.ref == 'refs/heads/main' && github.repository == ${{ env.REPO }}
         id: deployment
         uses: actions/deploy-pages@v4
+
+  check:
+    runs-on: ubuntu-latest
+    needs: publish
+    if: always()
+    steps:
+      - if: ${{ needs.publish.result != 'failure' }}
+        run: |
+          echo "Deployment successful"
+
+      - if: ${{ needs.publish.result == 'failure' }}
+        run: |
+          echo "Deployment failed"
+          exit 1
+
+

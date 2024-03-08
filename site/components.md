@@ -95,3 +95,15 @@ Lorem **ipsum** dolor *sit* amet, ***consectetur*** adipiscing elit, sed do eius
 
 > [!CAUTION]
 > Negative potential consequences of an action.
+
+---
+
+## Vote status badges
+
+![](/votes/vote-closed.svg)
+
+![](/votes/vote-progress.svg)
+
+![](/votes/vote-quorum.svg)
+
+![](/votes/vote-unknown.svg)

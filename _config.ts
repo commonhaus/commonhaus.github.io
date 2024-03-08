@@ -129,13 +129,11 @@ site.data("url", (page: Page) => {
     return page.data.url;
 }, "/foundation");
 
-// deno-lint-ignore no-explicit-any
-const FOUNDATION_DATA: Record<string, any> = safeLoad(Deno.readTextFileSync("./site/_includes/foundation.yml"));
+const FOUNDATION_DATA: Record<string, unknown> = safeLoad(Deno.readTextFileSync("./site/_includes/foundation.yml"));
 
 // Ignore pages based on the foundation.yml file
 site.addEventListener("beforeBuild", () => {
-    // deno-lint-ignore no-explicit-any
-    const structure: Record<string, any> | undefined = FOUNDATION_DATA;
+    const structure: Record<string, unknown> | undefined = FOUNDATION_DATA;
     if (structure) {
         ignorePages(structure, "foundation/");
     }
@@ -253,6 +251,16 @@ site.filter("authorAvatar", (page: Page) => {
         </a>`;
     } else {
         return `<div class="avatar">${login}</div>\n`;
+    }
+});
+site.filter("listVoters", (voters: unknown) => {
+    if (voters && Array.isArray(voters)) {
+        return voters
+            .map((voter: { login: string; url: string; }) =>
+                 `<a href="${voter.url}" target="_top">${voter.login}</a>`)
+            .join(", ");
+    } else {
+        console.log(voters, "is not an array");
     }
 });
 
