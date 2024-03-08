@@ -6,7 +6,7 @@ on:
       - 'main'
     paths:
       - '.github/*.ts'
-      - '.github/*.graphql'
+      - '.github/graphql/**'
       - '_config.ts'
       - 'deno.json'
       - 'site/**'
