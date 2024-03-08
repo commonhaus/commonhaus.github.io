@@ -77,6 +77,10 @@ jobs:
             git commit -am "💬 Auto-update GH Activity" && git push
           fi
 
+      - name: Sleep for 30 seconds (wait a bit before queueing the next job)
+        run: sleep 30s
+        shell: bash
+
   publish-gh-pages:
     needs: build
     uses: ./.github/workflows/gh-pages.yml
