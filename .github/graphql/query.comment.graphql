@@ -1,0 +1,51 @@
+query($commentId: ID!) {
+    node(id: $commentId) {
+        ... on IssueComment {
+            issue {
+                id
+                closed
+                closedAt
+                number
+                labels(first: 10) {
+                    nodes {
+                        name
+                    }
+                }
+                repository {
+                    nameWithOwner
+                }
+                title
+                url
+            }
+            body
+            createdAt
+            id
+            updatedAt
+            url
+        }
+        ... on DiscussionComment {
+            id
+            discussion {
+                id
+                closed
+                closedAt
+                number
+                labels(first: 10) {
+                    nodes {
+                        name
+                    }
+                }
+                repository {
+                    nameWithOwner
+                }
+                title
+                url
+            }
+            body
+            createdAt
+            id
+            updatedAt
+            url
+        }
+    }
+}
