@@ -61,7 +61,7 @@ const closedSvg = createSVG({
     width: 132,
     height: 18,
     color: "#CCD1FF",
-    status: 'quorum',
+    status: 'closed',
     progress: 1
 });
 
