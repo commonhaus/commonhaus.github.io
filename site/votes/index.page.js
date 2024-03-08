@@ -40,34 +40,32 @@ function createSVG({ width, height, color, status, progress }) {
       <rect width="${width}" height="${height}" fill="url(#smooth)"/>
     </g>
     <g id="fg">
-      <text class="shadow vote" x="${voteTextX + .5}" y="15" text-anchor="middle">vote</text>
-      <text class="high vote" x="${voteTextX}" y="14" text-anchor="middle">vote</text>
-      <text class="shadow status" x="${statusTextX}" y="15" text-anchor="start">${status}</text>
-      <text class="high status" x="${statusTextX}" y="14" text-anchor="start">${status}</text>
+      <text class="high vote" x="${voteTextX}" y="13" text-anchor="middle">vote</text>
+      <text class="high status" x="${statusTextX}" y="13" text-anchor="start">${status}</text>
     </g>
   </svg>
     `;
 }
 
 const unknownSvg = createSVG({
-    width: 120,
-    height: 20,
+    width: 110,
+    height: 18,
     color: "#F4F4F4",
     status: 'unknown',
     progress: 1
 });
 
 const closedSvg = createSVG({
-    width: 120,
-    height: 20,
+    width: 110,
+    height: 18,
     color: "#CCD1FF",
     status: 'quorum',
     progress: 1
 });
 
 const quorumSvg = createSVG({
-    width: 120,
-    height: 20,
+    width: 110,
+    height: 18,
     color: "#CCFFE0",
     status: 'quorum',
     progress: 1
@@ -130,12 +128,14 @@ export default function* ({ page }) {
         // gp.groupVotes = 1;
 
         let svgContent = unknownSvg;
-        if (gp.hasQuorum) {
+        if (gp.closed) {
+            svgContent = closedSvg;
+        } else if (gp.hasQuorum) {
             svgContent = quorumSvg;
         } else {
             svgContent = createSVG({
-                width: 120,
-                height: 20,
+                width: 110,
+                height: 18,
                 color: "#FFFACD",
                 status: 'in progress',
                 progress: gp.groupVotes / requiredVotes
@@ -167,8 +167,8 @@ export default function* ({ page }) {
     yield {
         url: '/votes/vote-progress.svg',
         content: createSVG({
-            width: 120,
-            height: 20,
+            width: 110,
+            height: 18,
             color: "#FFFACD",
             status: 'in progress',
             progress: .6
