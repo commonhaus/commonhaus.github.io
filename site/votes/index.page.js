@@ -101,7 +101,7 @@ export default function* ({ page }) {
 
     const index = [];
     for (const gp of genPages) {
-        index.push(`<li><a href='${gp.url}'>${gp.voteItem}</a><a href='${gp.url}'>${gp.itemTitle}</a></li>`);
+        index.push(`<li><a href='${gp.url}'>${gp.voteItem}</a> <a href='${gp.url}'>${gp.itemTitle}</a></li>`);
     }
 
     const general = {
