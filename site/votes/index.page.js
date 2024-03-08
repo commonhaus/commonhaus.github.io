@@ -1,11 +1,12 @@
 import { path } from "https://deno.land/x/vento@v0.10.0/deps.ts";
 
 function createSVG({ width, height, color, status, progress }) {
-    const voteWidth = 40;
+    const voteWidth = 46;
     const voteTextX = voteWidth / 2;
     const statusWidth = width - voteWidth;
     const statusTextX = voteWidth + 4;
     const progressBarWidth = statusWidth * progress; // Width of the progress bar
+    const linkIndicatorX = width - 3;
     return `
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">
     <defs>
@@ -40,15 +41,16 @@ function createSVG({ width, height, color, status, progress }) {
       <rect width="${width}" height="${height}" fill="url(#smooth)"/>
     </g>
     <g id="fg">
-      <text class="high vote" x="${voteTextX}" y="13" text-anchor="middle">vote</text>
+      <text class="high vote" x="${voteTextX}" y="13" text-anchor="middle">🗳️vote</text>
       <text class="high status" x="${statusTextX}" y="13" text-anchor="start">${status}</text>
+      <text class="link-indicator" x="${linkIndicatorX}" y="13" text-anchor="end">🔗</text> <!-- Link indicator -->
     </g>
   </svg>
     `;
 }
 
 const unknownSvg = createSVG({
-    width: 110,
+    width: 132,
     height: 18,
     color: "#F4F4F4",
     status: 'unknown',
@@ -56,7 +58,7 @@ const unknownSvg = createSVG({
 });
 
 const closedSvg = createSVG({
-    width: 110,
+    width: 132,
     height: 18,
     color: "#CCD1FF",
     status: 'quorum',
@@ -64,7 +66,7 @@ const closedSvg = createSVG({
 });
 
 const quorumSvg = createSVG({
-    width: 110,
+    width: 132,
     height: 18,
     color: "#CCFFE0",
     status: 'quorum',
@@ -134,7 +136,7 @@ export default function* ({ page }) {
             svgContent = quorumSvg;
         } else {
             svgContent = createSVG({
-                width: 110,
+                width: 132,
                 height: 18,
                 color: "#FFFACD",
                 status: 'in progress',
@@ -167,7 +169,7 @@ export default function* ({ page }) {
     yield {
         url: '/votes/vote-progress.svg',
         content: createSVG({
-            width: 110,
+            width: 132,
             height: 18,
             color: "#FFFACD",
             status: 'in progress',
