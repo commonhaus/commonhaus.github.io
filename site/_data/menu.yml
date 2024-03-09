@@ -5,15 +5,17 @@ about:
   submenu:
     label: About the Commonhaus Foundation
     children:
+      - title: About Us
+        href: /about
       - title: Governance Overview
         href: /about/governance.html
-      - title: Bylaws
+      - title: Foundation Bylaws
         href: /bylaws
         icon: policy
-      - title: Policies
+      - title: Foundation Policies
         href: /policies
         icon: policy
-      - title: FAQ
+      - title: Frequently Asked Questions
         href: /about/faq.html
 activity:
   title: Activity
@@ -22,7 +24,9 @@ activity:
   submenu:
     label: Activity Feed
     children:
-      - title: Announcements
+      - title: Activity Overview
+        href: /activity
+      - title: Latest Announcements
         href: /activity/#notices
         icon: announcement
       - title: Consensus Building
@@ -35,6 +39,8 @@ community:
   submenu:
     label: Community
     children:
+      - title: Community Overview
+        href: /community/
       - title: GitHub (GH)
         href: https://github.com/commonhaus/foundation-draft
         icon: github
