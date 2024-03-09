@@ -1,13 +1,15 @@
 article.activity {
   .card {
     position: relative;
-    max-width: 500px;
+    max-width: 800px;
     margin: 1em auto;
     padding: 1em;
-    border: 2px solid #ccc;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   .byline {
     position: relative;
+    font-size: 0.9em;
   }
   .avatar {
     float: right;
@@ -23,7 +25,41 @@ article.activity {
       border: 1px solid var(--bg-accent);
     }
   }
+
+  &.vote {
+    #articleTitle {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .2em;
+    }
+
+    #articleTitle {
+      font-size: 1.2em; /* Adjust as needed */
+      margin-bottom: 0.5em; /* Adjust as needed */
+    }
+
+    #articleTitle span {
+      font-size: 0.8em; /* Adjust as needed */
+      color: var(--text-muted); /* Adjust as needed */
+      font-weight: normal;
+    }
+
+    a.repo-link {
+      font-size: 0.9em; /* Adjust as needed */
+      color: var(--fg-accent); /* Adjust as needed */
+      text-decoration: none;
+      font-weight: normal;
+    }
+
+    a.item-title {
+      font-size: 1.4em; /* Adjust as needed */
+      color: var(--text-normal); /* Adjust as needed */
+    }
+  }
 }
+
 .activityIndex {
   li {
     padding-top: .2em;
@@ -37,3 +73,33 @@ article.activity {
     padding: 0 .2em 0 0;
   }
 }
+
+table.vote-result {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--table-border-color);
+
+  th,
+  td {
+    padding: 10px;
+    border: 1px solid var(--table-border-color);
+    text-align: left;
+  }
+
+  thead,
+  tfoot {
+    background-color: var(--table-header-footer-bg);
+  }
+
+  tbody th,
+  tbody td:first-child {
+    background-color: var(--table-header-footer-bg);
+  }
+
+  thead th:nth-child(3),
+  tfoot td:nth-child(3),
+  tbody td:nth-child(3) {
+    background-color: rgba(var(--table-team-votes-bg), 0.2);
+  }
+}
+
