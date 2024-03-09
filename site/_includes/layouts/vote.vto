@@ -8,6 +8,7 @@ layout: layouts/base.vto
 <a class="repo-link" href="{{ page.data.github }}">{{ page.data.voteItem }}</a> <a class="item-title" href="{{ page.data.github }}">{{ page.data.itemTitle }}</a></h1>
 </header>
 <div class="content">
+<a href="#result"><img src="{{ page.data.url.replace('.html', '.svg') }}"></a>
 
 <ul>
 <li><strong>Method</strong>: {{ page.data.voteType }}</li>
@@ -15,7 +16,7 @@ layout: layouts/base.vto
 <li><strong>Response threshold</strong>: {{ page.data.votingThreshold }}<sup><a href="#fn1" id="fnref1">1</a></sup></li>
 </ul>
 
-<table class="vote-result">
+<table class="vote-result" id="result">
   <caption>Vote Results</caption>
   <colgroup>
     <col class="name-reaction" />
