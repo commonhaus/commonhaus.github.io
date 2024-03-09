@@ -35,7 +35,7 @@ layout: layouts/base.vto
   <tbody>
     {{- for k of page.data.sortedCategories }}
     <tr>
-      <th>{{ k[0] }} ({{ k[1].reactions.join(", ") }})</th>
+      <th>{{ k[0] }}{{ if k[1].reactions.length }} ({{ k[1].reactions.join(", ") }}){{ /if }}</th>
       <td>{{ k[1].total }}</td>
       <td>{{ k[1].teamTotal }}</td>
       <td>{{ k[1].team |> listVoters }}</td>
