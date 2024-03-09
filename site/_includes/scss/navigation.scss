@@ -1,6 +1,7 @@
 $icon-text-padding: .3em; // Adjust this value as needed
 $menu-item-padding: .6em; // Adjust this value as needed
 $h-font-size: 18px;
+$f-font-size: .8em;
 
 nav ul {
   list-style-type: none; // Removes the bullet points
@@ -115,6 +116,27 @@ header.site {
   }
 }
 
+footer.site {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--bg-shadow);
+  z-index: 5;
+  font-size: $f-font-size;
+  .footer-copyright {
+    flex-basis: 100%;
+  }
+  ol {
+    display: flex;
+    flex-direction: row;
+  }
+  li {
+    display: inline;
+
+    &:not(:last-of-type)::after {
+      content: "\00a0|\00a0";
+    }
+  }
+}
+
 @media (min-width: 350px) {
   header.site {
     ul.submenu {
@@ -124,7 +146,7 @@ header.site {
     }
   }
 }
-@media (min-width: 500px) {
+@media (min-width: 550px) {
   header.site {
     .h-site-tiny {
       display: none;

@@ -1,7 +1,7 @@
 ---
-layout: layouts/base.vto
+layout: layouts/activitySidebar.vto
 ---
-<article aria-labelledby="articleTitle" class="vote {{ page.data.type }}{{ if page.data.closed }} closed{{ /if }}">
+<article aria-labelledby="articleTitle" class="activity vote {{ page.data.type }}{{ if page.data.closed }} closed{{ /if }}">
 <div class="card">
 <header>
   <h1 id="articleTitle"><span>Voting results for</span>
@@ -18,12 +18,6 @@ layout: layouts/base.vto
 
 <table class="vote-result" id="result">
   <caption>Vote Results</caption>
-  <colgroup>
-    <col class="name-reaction" />
-    <col class="total-votes" />
-    <col class="team-votes" />
-    <col class="voting-members" />
-  </colgroup>
   <thead>
     <tr>
       <th>Response Group<sup><a href="#fn2" id="fnref2">2</a></sup></th>
