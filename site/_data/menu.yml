@@ -22,10 +22,10 @@ activity:
   submenu:
     label: Activity Feed
     children:
-      - title: Notices
+      - title: Announcements
         href: /activity/#notices
         icon: announcement
-      - title: Reviews
+      - title: Consensus Building
         href: /activity/#reviews
         icon: review
 community:
