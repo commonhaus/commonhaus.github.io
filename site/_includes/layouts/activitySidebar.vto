@@ -1,7 +1,8 @@
 ---
 layout: layouts/base.vto
 ---
-{{> const activityTitle = page.data.tags.includes("announcements") ? 'Notices' : 'Reviews' }}
+{{> const activityTitle = page.data.tags.includes("announcements") ? 'Announcements' : 'Consensus Building' }}
+{{> const activityType = page.data.tags.includes("announcements") ? 'post announcements' : 'post reviews' }}
 {{ content }}
 <aside class="activity">
   <nav aria-label="Activity Navigation" class="activityIndex">
@@ -13,7 +14,7 @@ layout: layouts/base.vto
       </a>
     </p>
     <ul aria-label="{{ activityTitle }}">
-    {{- for post of search.pages(page.data.tags.join(" "), "date=desc") }}
+    {{- for post of search.pages(activityType, "date=desc") }}
       <li {{ page.data.url == post.url ? 'class="active"' : '' }}>
         <time datetime="{{ post.date |> date('DATE') }}">{{ post.date |> date("dd MMM") }}</time>
         <a href="{{ post.url }}">{{ post |> postLock }}{{ post.title }}</a>
