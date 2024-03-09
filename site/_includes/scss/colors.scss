@@ -12,5 +12,10 @@ body {
   --bg-accent: #f0f0f0;
   --bg-shadow: rgba(0, 0, 0, 0.1);
 
+  --table-header-footer-bg: #F5F6F1;
+  --table-left-column-bg: #F5F6F1;
+  --table-team-votes-bg: 173, 216, 230;
+  --table-border-color: #ccc;
+
   background-color: var(--bg-primary);
 }

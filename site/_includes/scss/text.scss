@@ -2,6 +2,7 @@ a.header-anchor {
   color: var(--text-normal);
   text-decoration: none;
 }
+
 a.github,
 .h-site-icon,
 .h-site-sub-icon,
@@ -10,6 +11,7 @@ a.github,
 .aside-nav-icon {
   color: var(--fg-accent);
 }
+
 .h-site-icon,
 .h-site-sub-icon,
 .h-site-more,
@@ -19,4 +21,41 @@ a.github,
     height: .9em;
     width: .9em;
   }
+}
+
+.footnotes-sep {
+  border-top: 1px solid var(--table-border-color);
+  margin: 1em 0;
+}
+
+.footnotes {
+  font-size: 0.8em;
+  color: var(--text-normal);
+}
+
+.footnotes-list {
+  padding-left: 1.2em;
+}
+
+.footnote-item {
+  margin-bottom: 1em;
+}
+
+.footnote-item p {
+  margin-bottom: 0.5em;
+}
+
+.footnote-backref {
+  text-decoration: none;
+  color: var(--fg-accent);
+}
+
+a[href^="#fn"] {
+  font-weight: normal;
+  text-decoration: none;
+  color: var(--fg-accent);
+  padding-left: 2px;
+}
+a[href^="#fn"]:hover {
+  text-decoration: underline;
 }
