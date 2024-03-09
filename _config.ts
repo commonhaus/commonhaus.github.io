@@ -7,6 +7,7 @@ import favicon from "lume/plugins/favicon.ts";
 import feed from "lume/plugins/feed.ts";
 import inline from "lume/plugins/inline.ts";
 import metas from "lume/plugins/metas.ts";
+import modifyUrls from "lume/plugins/modify_urls.ts";
 import nav from "lume/plugins/nav.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
 import sass from "lume/plugins/sass.ts";
@@ -47,6 +48,17 @@ site
     .use(date())
     .use(metas())
     .use(resolveUrls())
+    .use(modifyUrls({
+        fn: (url) => {
+            if (url.includes('CONTACTS.yaml')) {
+                return 'https://github.com/commonhaus/foundation-draft/blob/main/CONTACTS.yaml';
+            }
+            if (url.includes('../../templates')) {
+                return url.replace('../../templates', 'https://github.com/commonhaus/foundation-draft/blob/main/templates');
+            }
+            return url;
+        },
+    }))
     .use(toc())
     .use(slugify_urls({
         replace: {
@@ -70,7 +82,7 @@ site
     }))
     .use(feed({
         output: ["/feed/notice.rss", "/feed/notice.json"],
-        query: "post announcements",
+        query: "post notice",
         limit: 10,
         info: {
             title: "=metas.site",

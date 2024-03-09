@@ -85,6 +85,7 @@ interface PinnedItemData {
 
 const prefixMap: Record<string, string> = {
     announcements: '[📣  ]',
+    'consensus building': '[🗳️  ]',
     reviews: '[🗳️  ]',
 };
 
@@ -133,6 +134,14 @@ tags:
 - post`;
     if (item.category) {
         data += `\n- ${item.category.name.toLowerCase()}`;
+        if (item.category.name.toLowerCase() === 'consensus building') {
+            data += '\n- reviews';
+        }
+    }
+    if (item.labels.nodes) {
+        for (const label of item.labels.nodes) {
+            data += `\n- ${label.name}`;
+        }
     }
     if (item.closed) {
         data += `\nclosedAt: ${item.closedAt}`
