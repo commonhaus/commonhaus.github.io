@@ -48,7 +48,7 @@ GOVERNANCE:
   url: /about/governance.html
   metas:
     robots: false
-  date: 2024-02-15T14:24:54.000Z
+  date: 2024-03-12T14:23:52.000Z
   layout: layouts/bylaws.vto
 README:
   url: /about/
@@ -57,7 +57,7 @@ README:
     This overview introduces our approach to nurturing open-source projects
     through community collaboration. Learn about our policies, bylaws, and how
     to get involved.
-  date: 2024-02-09T14:49:48.000Z
+  date: 2024-03-12T14:23:52.000Z
   layout: layouts/bylaws.vto
 TRADEMARKS:
   url: /about/trademarks.html
@@ -76,7 +76,7 @@ bylaws:
     description: |
       Overview of terms and concepts in the Commonhaus Foundation bylaws
     layout: layouts/bylaws.vto
-    date: 2024-02-14T00:35:35.000Z
+    date: 2024-03-12T14:23:52.000Z
   1-purpose:
     description: >
       Discover the foundational purpose and non-profit status of the Commonhaus
@@ -111,7 +111,7 @@ bylaws:
       to foster a less authoritarian, more community-engaged approach. Essential
        for understanding the leadership dynamics and decision-making processes
        within the foundation.
-    date: 2024-02-24T14:12:10.000Z
+    date: 2024-03-12T14:23:52.000Z
     layout: layouts/bylaws.vto
   4-cf-advisory-board:
     description: >
@@ -124,7 +124,7 @@ bylaws:
       balance between sponsor influence and independent leadership. Essential
       reading for understanding the collaborative dynamics that shape the
       foundation's direction.
-    date: 2024-02-02T15:07:59.000Z
+    date: 2024-03-12T14:23:52.000Z
     layout: layouts/bylaws.vto
   5-decision-making:
     description: >
@@ -193,7 +193,7 @@ policies:
       the community. It details the commitment to creating a respectful,
       inclusive, and collaborative space, and provides guidelines for conduct,
       along with procedures for reporting and resolving issues.
-    date: 2024-03-04T07:16:23.000Z
+    date: 2024-03-12T14:23:52.000Z
     layout: layouts/bylaws.vto
   conflict-of-interest:
     url: /policies/conflict-of-interest/
@@ -203,7 +203,7 @@ policies:
       interests of the foundation. It details the procedures for identifying,
       disclosing, and managing conflicts of interest, and provides a framework
       for addressing potential conflicts.
-    date: 2024-02-24T14:12:10.000Z
+    date: 2024-03-12T14:23:52.000Z
     layout: layouts/bylaws.vto
   ip-policy:
     url: /policies/ip-policy/
@@ -213,7 +213,7 @@ policies:
       interests of the foundation. It details the procedures for identifying,
       disclosing, and managing intellectual property, and provides a framework
       for addressing potential conflicts.
-    date: 2024-02-24T14:12:10.000Z
+    date: 2024-03-12T14:23:52.000Z
     layout: layouts/bylaws.vto
   README:
     description: >
@@ -227,7 +227,7 @@ policies:
       systematically and in accordance with legal requirements. This is a vital
       resource for understanding the governance and operational guidelines that
       shape the foundation's activities and decisions.
-    date: 2024-02-21T17:44:44.000Z
+    date: 2024-03-12T14:23:52.000Z
     layout: layouts/bylaws.vto
   security-policy:
     url: /policies/security-policy/
@@ -253,7 +253,7 @@ policies:
       ensuring their sustainability and relevance in the tech community.
       Essential for members and contributors who seek to comprehend the
       foundation's strategy for nurturing and preserving its projects.
-    date: 2024-02-24T14:12:10.000Z
+    date: 2024-03-12T14:23:52.000Z
     layout: layouts/bylaws.vto
   trademark-policy:
     url: /policies/trademark-policy/
@@ -269,7 +269,7 @@ policies:
       trademarks against misuse or infringement. This policy is essential for
       anyone using the foundation's trademarks or seeking to understand their
       legal and appropriate application.
-    date: 2024-02-21T17:44:44.000Z
+    date: 2024-03-12T14:23:52.000Z
     layout: layouts/bylaws.vto
   CLA:
     url: /policies/cla/
