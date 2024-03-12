@@ -1,15 +1,31 @@
+@use 'fonts';
+
+/*
+ * links
+ */
+ a {
+  color: var(--text-normal);
+  text-decoration-line: underline;
+  text-decoration-color: var(--link-decoration-color);
+}
+a:hover {
+  text-decoration-color: var(--link-decoration-color-hover);
+}
 a.header-anchor {
   color: var(--text-normal);
   text-decoration: none;
 }
 
+/**
+ * svg links
+ */
 a.github,
 .h-site-icon,
 .h-site-sub-icon,
 .h-site-more,
 .act-status-icon,
 .aside-nav-icon {
-  color: var(--fg-accent);
+  color: var(--link-decoration-color);
 }
 
 .h-site-icon,

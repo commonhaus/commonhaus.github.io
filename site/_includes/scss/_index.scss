@@ -1,0 +1,35 @@
+@mixin content-align {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+@mixin content-pad {
+  padding: 1em;
+}
+
+@mixin figtree-light {
+  font-family: 'Figtree', Helvetica, Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@mixin figtree-regular {
+  font-family: 'Figtree', Helvetica, Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin figtree-medium {
+  font-family: 'Figtree', Helvetica, Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin figtree-bold {
+  font-family: 'Figtree', Helvetica, Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
