@@ -110,12 +110,14 @@
   "updated": "2024-03-09T02:27:02Z",
   "url": "/votes/commonhaus/foundation/95.html",
   "tags": [
-    "vote/open",
     "notice",
+    "vote/done",
     "vote/quorum",
-    "vote"
+    "vote",
+    "closed"
   ],
-  "closed": false,
+  "closed": true,
+  "closedAt": "2024-03-09T03:17:52Z",
   "sortedCategories": [
     [
       "comment",
