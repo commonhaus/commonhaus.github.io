@@ -99,11 +99,6 @@ export default function* ({ page }) {
     // recurse to find/generate pages for individual vote results
     createIndex(genPages, dir, "/votes");
 
-    const index = [];
-    for (const gp of genPages) {
-        index.push(`<li><a href='${gp.url}'>${gp.voteItem}</a> <a href='${gp.url}'>${gp.itemTitle}</a></li>`);
-    }
-
     const general = {
         templateEngine: ['vto', 'md'],
         layout: 'layouts/vote.vto',
@@ -178,11 +173,10 @@ export default function* ({ page }) {
     }
 
     yield {
-        layout: 'layouts/index.vto',
+        layout: 'layouts/voteIndex.vto',
         title: "Index of Vote results",
         description: "Vote results",
         url: "/votes/index.html",
-        cssclasses: ['vote-index'],
-        content: `<ul>${index.join('')}</ul>`
+        cssclasses: ['vote-index']
     }
 }
