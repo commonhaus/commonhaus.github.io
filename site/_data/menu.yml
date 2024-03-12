@@ -7,7 +7,7 @@ about:
     children:
       - title: About Us
         href: /about
-      - title: Governance Overview
+      - title: Governance
         href: /about/governance.html
       - title: Foundation Bylaws
         href: /bylaws
@@ -22,12 +22,14 @@ activity:
   submenu:
     label: Activity Feed
     children:
-      - title: Activity Overview
+      - title: Overview
         href: /activity
-      - title: Latest Announcements
+      - title: Announcements
         href: /activity/#notices
       - title: Consensus Building
         href: /activity/#reviews
+      - title: Vote Results
+        href: /votes
 community:
   title: Community
   href: /community/
@@ -35,9 +37,10 @@ community:
   submenu:
     label: Community
     children:
-      - title: Community Overview
+      - title: Overview
         href: /community/
-      - title: GitHub (GH)
-        href: https://github.com/commonhaus/foundation
       - title: Discussions
         href: https://github.com/commonhaus/foundation/discussions
+      - title: GitHub Repository
+        href: https://github.com/commonhaus/foundation
+
