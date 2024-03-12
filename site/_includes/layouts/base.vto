@@ -22,13 +22,11 @@
 </head>
 <body onload="adjustAnchors();">
 <header class="site">
-<h1>
-    <a href="/" class="logo" aria-label="Commonhaus Foundation Home">
-        <span aria-hidden="true" class="h-site-tiny">CF</span>
-        <span aria-hidden="true" class="h-site-med">Commonhaus</span>
-        <span aria-hidden="true" class="h-site-lrg">Commonhaus Foundation</span>
-    </a>
-</h1>
+<span class="logo">
+  <a href="/" class="logo" aria-label="Commonhaus Foundation Home">
+      <img src="/static/images/CF_logo_horizontal_reverse.svg" class="icon" id="icon-1" inline>
+  </a>
+</span>
 <nav aria-label="Site">
     <ul class="top-level">
     {{ for x of page.data.menu }}

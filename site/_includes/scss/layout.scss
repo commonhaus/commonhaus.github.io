@@ -1,44 +1,34 @@
-@mixin content-align {
-  padding-left: 1em;
-  padding-right: 1em;
-}
-@mixin content-pad {
-  padding: 1em;
-}
+@use 'index' as cf;
+
 body {
   display: flex;
   margin: 0;
   flex-direction: column;
   min-height: 100vh;
   min-width: 100vw;
+
+  --header-height: 100px;
 }
 header.site {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-  height: 2.5em;
-  min-height: 2.5em;
-  flex-wrap: wrap;
-  @include content-align();
+  height: var(--header-height);
   position: sticky;
   top: 0;
 }
 main {
   flex: 1 1 auto;
-  min-height: calc(100vh - 2.5em - 5em);
+  min-height: calc(100vh - var(--header-height) - 5em);
 
   > article,
   > section {
     flex: 2 1 auto;
-    @include content-align();
+    @include cf.content-align();
     img {
       max-width: 90%;
     }
   }
 
   > aside {
-    @include content-pad();
+    @include cf.content-pad();
     flex: 1 1 auto;
   }
 
@@ -47,7 +37,7 @@ main {
   }
 }
 footer.site {
-  @include content-pad();
+  @include cf.content-pad();
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

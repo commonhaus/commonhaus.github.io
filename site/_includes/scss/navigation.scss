@@ -1,5 +1,6 @@
+@use 'index' as cf;
+
 $icon-text-padding: .3em; // Adjust this value as needed
-$menu-item-padding: .6em; // Adjust this value as needed
 $h-font-size: 18px;
 $f-font-size: .8em;
 
@@ -15,9 +16,54 @@ nav.index {
   }
 }
 
+/** Header / footer colors */
 header.site {
-  background-color: var(--bg-secondary);
-  border-bottom: 1px dotted var(--bg-shadow);
+  color: var(--fg-navigation);
+  background-color: var(--bg-navigation-top);
+
+  ul.top-level > li {
+    border-color: var(--bg-navigation-top);
+    border-style: solid;
+    border-width: 0 1px 0 0;
+  }
+  ul.top-level > li:hover {
+    border-image: linear-gradient(var(--bg-navigation-top), var(--bg-navigation-top) 30%, var(--bg-nav-submenu)) 1;
+  }
+  nav ul.submenu {
+    color: var(--fg-nav-submenu);
+    background-color: var(--bg-nav-submenu);
+    border-right: 1px solid var(--bg-nav-submenu);
+    a {
+      color: var(--fg-nav-submenu);
+    }
+  }
+  a,
+  a:visited,
+  .h-site-icon,
+  .h-site-more {
+    color: var(--fg-navigation);
+    text-decoration: none;
+  }
+}
+footer.site {
+  color: var(--fg-navigation);
+  background-color: var(--bg-navigation-bottom);
+  a {
+    color: var(--fg-navigation);
+  }
+}
+
+/** Header spacing and margins, etc. */
+header.site {
+  --logo-height: 80px;
+
+  @include cf.content-pad();
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+
   font-size: $h-font-size;
   z-index: 5;
   line-height: 1.2;
@@ -33,30 +79,30 @@ header.site {
     width: 1.2em;
   }
 
-  h1 {
-    margin: 0;
-    font-weight: normal;
-    min-height: 24px;
-    font-size: $h-font-size;
-    flex: 1 1 auto;
-  }
+  span.logo {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
 
-  nav {
-    min-height: 24px;
-    font-size: $h-font-size;
-
-    .h-site-more:hover,
-    a:hover {
-      background-color: var(--bg-accent);
+    a > svg{
+      margin: 0;
+      height: var(--logo-height);
     }
+  }
+  nav {
+    font-size: $h-font-size;
 
     > ul.top-level {
+      height: 100%;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;
+      align-items: stretch;
       flex-wrap: nowrap;
-      gap: $menu-item-padding;
+      gap: .5em;
 
       > li {
         display: inline;
@@ -65,12 +111,18 @@ header.site {
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: center;
-        padding: 10px 0; // make sure the hoverable area is large enough
+        padding: 10px .2em 10px .5em; // make sure the hoverable area is large enough
 
         a {
           display: flex;
           flex-direction: row;
           flex-wrap: nowrap;
+        }
+        span.h-site-more {
+          padding-top: 5px;
+        }
+        span.h-site-text {
+          @include cf.figtree-bold;
         }
       }
     }
@@ -88,12 +140,10 @@ header.site {
     ul.submenu {
       visibility: hidden;
       opacity: 0;
-      transition: opacity 0.2s ease-in-out;
 
       position: absolute;
-      right: 0;
+      right: -1px;
       top: 80%;
-      background-color: var(--bg-secondary);
       border-radius: 0 0 5px 5px;
       box-shadow: 0px 3px 5px -1px  var(--bg-shadow);
 
@@ -102,11 +152,6 @@ header.site {
         padding: .5em;
       }
     }
-  }
-
-  a {
-    color: var(--text-normal);
-    text-decoration: none;
   }
   .h-site-more {
     padding-left: $icon-text-padding;
@@ -117,8 +162,6 @@ header.site {
 }
 
 footer.site {
-  background-color: var(--bg-secondary);
-  border-top: 1px solid var(--bg-shadow);
   z-index: 5;
   font-size: $f-font-size;
   .footer-copyright {
@@ -156,7 +199,7 @@ footer.site {
       display: inline;
     }
     .h-site-icon {
-      padding-right: $icon-text-padding;
+      display: none;
     }
   }
 }

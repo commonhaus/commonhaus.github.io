@@ -1,20 +1,71 @@
 body {
+  --fern-green: #4D7343;
+  --fern-green-rgb: 77,115,67;
+  --fern-green-hsl: 108,26,36;
+
+  --asparagus: #78A658;
+  --asparagus-rgb: 120, 166, 88;
+  --asparagus-hsl: 95, 31, 50;
+
+  --yellow-green: #A9D962;
+  --yellow-green-rgb: 169, 217, 98;
+  --yellow-green-hsl: 84, 61, 62;
+
+  --light-blue: #BAD3D9;
+  --light-blue-rgb: 186, 211, 217;
+  --light-blue-hsl: 192, 29, 79;
+  --ash-gray: #a7bec3; // 20% of light-blue
+  --ash-gray-rgb: 167, 190, 195;
+  --ash-gray-hsl: 191, 19, 71;
+
+  --goldenrod: #D6A509;
+  --goldenrod-rgb: 214, 165, 9;
+  --goldenrod-hsl: 46, 92, 44;
+
+  --cocoa-brown: #D96704;
+  --cocoa-brown-rgb: 217, 103, 4;
+  --cocoa-brown-hsl: 28, 96, 43;
+
+  --british-racing-green: #1A402A;
+  --british-racing-green-rgb: 26, 64, 42;
+  --british-racing-green-hsl: 145, 42, 18;
+
+  --dark-green: #012626;
+  --dark-green-rgb: 1, 38, 38;
+  --dark-green-hsl: 180, 95, 8;
+
+  --ffffff: #FFFFFF;
+  --white: var(--ffffff);
+  --white-rgb: 255, 255, 255;
+
   --text-faint: #aaa;
   --text-muted: #888;
   --text-normal: #333;
 
-  --fg-accent: rgb(215, 142, 8);
-
-  --bg-primary: #fafafa;
-  --bg-primary-rgb: 250, 250, 250;
+  --bg-primary: var(--white);
   --bg-secondary: #f8f8f8;
 
-  --bg-accent: #f0f0f0;
+  --fg-navigation: var(--white);
+  --bg-navigation-top: var(--dark-green);
+  --bg-navigation-bottom: var(--british-racing-green);
+
+  --fg-nav-submenu: var(--dark-green);
+  --bg-nav-submenu: var(--ash-gray);
+
+  --fg-accent-1: var(--white);
+  --bg-accent-1: var(--goldenrod);
+
+  --fg-accent-2: var(--text-normal);
+  --bg-accent-2: var(--light-blue);
+
+  --link-decoration-color: var(--goldenrod);
+  --link-decoration-color-hover: var(--light-blue);
+
   --bg-shadow: rgba(0, 0, 0, 0.1);
 
   --table-header-footer-bg: #F5F6F1;
   --table-left-column-bg: #F5F6F1;
-  --table-team-votes-bg: 173, 216, 230;
+  --table-team-votes-bg: var(--light-blue-rgb);
   --table-border-color: #ccc;
 
   background-color: var(--bg-primary);
