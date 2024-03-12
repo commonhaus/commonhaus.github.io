@@ -11,10 +11,8 @@ about:
         href: /about/governance.html
       - title: Foundation Bylaws
         href: /bylaws
-        icon: policy
       - title: Foundation Policies
         href: /policies
-        icon: policy
       - title: Frequently Asked Questions
         href: /about/faq.html
 activity:
@@ -28,10 +26,8 @@ activity:
         href: /activity
       - title: Latest Announcements
         href: /activity/#notices
-        icon: announcement
       - title: Consensus Building
         href: /activity/#reviews
-        icon: review
 community:
   title: Community
   href: /community/
@@ -43,7 +39,5 @@ community:
         href: /community/
       - title: GitHub (GH)
         href: https://github.com/commonhaus/foundation
-        icon: github
-      - title: GH Discussions
+      - title: Discussions
         href: https://github.com/commonhaus/foundation/discussions
-        icon: msg_sq
