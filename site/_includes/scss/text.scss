@@ -33,9 +33,10 @@ a.github,
 .h-site-more,
 .act-status-icon,
 .aside-nav-icon {
+  min-width: var(--font-smaller);
   svg {
-    height: .9em;
-    width: .9em;
+    height: var(--font-smaller);
+    width: var(--font-smaller);
   }
 }
 
@@ -45,7 +46,7 @@ a.github,
 }
 
 .footnotes {
-  font-size: 0.8em;
+  font-size: var(--footnote-size);
   color: var(--text-normal);
 }
 
