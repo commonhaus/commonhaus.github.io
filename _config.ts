@@ -51,10 +51,10 @@ site
     .use(modifyUrls({
         fn: (url) => {
             if (url.includes('CONTACTS.yaml')) {
-                return 'https://github.com/commonhaus/foundation-draft/blob/main/CONTACTS.yaml';
+                return 'https://github.com/commonhaus/foundation/blob/main/CONTACTS.yaml';
             }
             if (url.includes('../../templates')) {
-                return url.replace('../../templates', 'https://github.com/commonhaus/foundation-draft/blob/main/templates');
+                return url.replace('../../templates', 'https://github.com/commonhaus/foundation/blob/main/templates');
             }
             return url;
         },
@@ -209,7 +209,7 @@ site.preprocess([".html"], (pages) => {
                 page.data.ord = entry.ord;
             }
 
-            page.data.github = page.src.entry?.path.replace("/foundation/", "https://github.com/commonhaus/foundation-draft/blob/main/");
+            page.data.github = page.src.entry?.path.replace("/foundation/", "https://github.com/commonhaus/foundation/blob/main/");
         }
 
         // For all pages, set a value if the updated date is different from the published date

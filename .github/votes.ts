@@ -99,7 +99,7 @@ function runGraphQL(commentId: string, filePath: string): string {
         args: [
             'api', 'graphql',
             '-F', "owner=commonhaus",
-            '-F', "name=foundation-draft",
+            '-F', "name=foundation",
             '-F', `commentId=${commentId}`,
             '-F', `query=@${filePath}`,
         ]

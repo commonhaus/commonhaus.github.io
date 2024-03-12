@@ -42,8 +42,8 @@ community:
       - title: Community Overview
         href: /community/
       - title: GitHub (GH)
-        href: https://github.com/commonhaus/foundation-draft
+        href: https://github.com/commonhaus/foundation
         icon: github
       - title: GH Discussions
-        href: https://github.com/commonhaus/foundation-draft/discussions
+        href: https://github.com/commonhaus/foundation/discussions
         icon: msg_sq
