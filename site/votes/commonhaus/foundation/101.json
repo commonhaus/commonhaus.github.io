@@ -2,7 +2,7 @@
   "voteType": "manualComments",
   "hasQuorum": false,
   "group": "commonhaus/founders",
-  "groupSize": 8,
+  "groupSize": 9,
   "groupVotes": 7,
   "countedVotes": 9,
   "droppedVotes": 0,
@@ -59,6 +59,11 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/441240?v=4"
     },
     {
+      "login": "maxandersen",
+      "url": "https://api.github.com/users/maxandersen",
+      "avatarUrl": "https://avatars.githubusercontent.com/u/54129?v=4"
+    },
+    {
       "login": "cealsair",
       "url": "https://api.github.com/users/cealsair",
       "avatarUrl": "https://avatars.githubusercontent.com/u/25405698?v=4"
@@ -102,7 +107,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-03-11T21:06:51Z",
-  "updated": "2024-03-12T13:35:42Z",
+  "updated": "2024-03-12T14:29:14Z",
   "url": "/votes/commonhaus/foundation/101.html",
   "tags": [
     "vote/open",
