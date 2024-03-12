@@ -1,53 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@use 'index' as cf;
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
 body {
-  font-family: 'IBM Plex Sans', Verdana, Arial, sans-serif;
+  @include cf.figtree-light;
 }
-
-.ibm-plex sans-regular {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+h1 {
+  @include cf.figtree-regular;
+  font-size: 2em;
 }
-
-.ibm-plex sans-regular-italic {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 400;
-  font-style: italic;
+h2 {
+  @include cf.figtree-regular;
+  font-size: 1.8em;
 }
-
-.ibm-plex sans-light {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+h3 {
+  @include cf.figtree-regular;
+  font-size: 1.6em;
 }
-
-.ibm-plex sans-light-italic {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 300;
-  font-style: italic;
+h4 {
+  @include cf.figtree-medium;
+  font-size: 1.4em;
 }
-
-.ibm-plex sans-medium {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 500;
-  font-style: normal;
+h5 {
+  @include cf.figtree-medium;
+  font-size: 1.2em;
 }
-
-.ibm-plex sans-medium-italic {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.ibm-plex sans-bold {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.ibm-plex sans-bold-italic {
-  font-family: "IBM Plex Sans", sans-serif;
-  font-weight: 700;
-  font-style: italic;
+h6 {
+  @include cf.figtree-medium;
+  font-size: 1.2em;
 }
