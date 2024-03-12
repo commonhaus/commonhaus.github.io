@@ -25,9 +25,9 @@ activity:
       - title: Overview
         href: /activity
       - title: Announcements
-        href: /activity/#notices
-      - title: Consensus Building
-        href: /activity/#reviews
+        href: /activity/announcements.html
+      - title: Notice
+        href: /activity/notices.html
       - title: Vote Results
         href: /votes
 community:
