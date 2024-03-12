@@ -14,13 +14,12 @@
     "description": "{{- page.data.description -}}"
 }
 </script>
-<script src="/assets/anchors.js" inline></script>
 <link rel="stylesheet" href="/assets/site.css" />
 {{- for x of page.data.scripts }}
 <script src="{{ x }}" inline></script>
 {{ /for -}}
 </head>
-<body onload="adjustAnchors();">
+<body>
 <header class="site">
 <span class="logo">
   <a href="/" class="logo" aria-label="Commonhaus Foundation Home">
