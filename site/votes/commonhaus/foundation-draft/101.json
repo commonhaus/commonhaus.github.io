@@ -3,8 +3,8 @@
   "hasQuorum": false,
   "group": "commonhaus/founders",
   "groupSize": 8,
-  "groupVotes": 2,
-  "countedVotes": 3,
+  "groupVotes": 3,
+  "countedVotes": 5,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -20,10 +20,15 @@
           "login": "ebullient",
           "url": "https://github.com/ebullient",
           "avatarUrl": "https://avatars.githubusercontent.com/u/808713?u=8c50c6169b230fc62777f6910f6669b753ae95a8&v=4"
+        },
+        {
+          "login": "yrodiere",
+          "url": "https://github.com/yrodiere",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/412878?u=952a892aea58858acd1668c10aa6c36ba3dcd7b5&v=4"
         }
       ],
-      "teamTotal": 2,
-      "total": 3
+      "teamTotal": 3,
+      "total": 5
     }
   },
   "duplicates": [],
@@ -77,7 +82,7 @@
   "repoName": "commonhaus/foundation-draft",
   "type": "vote",
   "date": "2024-03-11T21:06:51Z",
-  "updated": "2024-03-12T00:27:30Z",
+  "updated": "2024-03-12T12:25:17Z",
   "url": "/votes/commonhaus/foundation-draft/101.html",
   "tags": [
     "vote/open",
@@ -100,10 +105,15 @@
             "login": "ebullient",
             "url": "https://github.com/ebullient",
             "avatarUrl": "https://avatars.githubusercontent.com/u/808713?u=8c50c6169b230fc62777f6910f6669b753ae95a8&v=4"
+          },
+          {
+            "login": "yrodiere",
+            "url": "https://github.com/yrodiere",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/412878?u=952a892aea58858acd1668c10aa6c36ba3dcd7b5&v=4"
           }
         ],
-        "teamTotal": 2,
-        "total": 3
+        "teamTotal": 3,
+        "total": 5
       }
     ]
   ]
