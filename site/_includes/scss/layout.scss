@@ -8,11 +8,19 @@ body {
   min-width: 100vw;
 
   --header-height: 100px;
+  --anchor-target-height: 120px;
 }
 header.site {
   height: var(--header-height);
   position: sticky;
   top: 0;
+}
+:target::before {
+  content: "";
+  display: block;
+  height: var(--anchor-target-height);
+  margin-top: calc(-1 * var(--anchor-target-height)); /* Negative of the same height */
+  visibility: hidden;
 }
 main {
   flex: 1 1 auto;
