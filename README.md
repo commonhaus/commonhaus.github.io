@@ -4,8 +4,8 @@
 
 Welcome to the GitHub repository for The Commonhaus Foundation's website. This repository contains the source code and content for our official website.
 
-[discussions]: https://github.com/commonhaus/foundation-draft/discussions
-[contributions]: https://github.com/commonhaus/foundation-draft/CONTRIBUTING.md
+[discussions]: https://github.com/commonhaus/foundation/discussions
+[contributions]: https://github.com/commonhaus/foundation/CONTRIBUTING.md
 
 ## About The Commonhaus Foundation
 
