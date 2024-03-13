@@ -44,21 +44,13 @@ async function readDir(path: string, relative: string) {
     for await (const dirEntry of Deno.readDir(path)) {
         if (dirEntry.isFile && dirEntry.name.endsWith(".md")) {
             const filePath = `${relative}${dirEntry.name}`;
-            const rootName = dirEntry.name.replace(".md", "");
-            if (path.includes("agreements/") && !path.endsWith(rootName)) {
-                // don't include signed agreements (where file name doesn't match directory name)
-                // agreements/bootstrapping/bootstrapping.md is fine
-                // agreements/bootstrapping/bootstrapping-signed.md is not
-                continue;
-            }
             const struct = getMetaKey(filePath.replace(".md", ""));
             if (!struct) {
-                // not all agreements will need to be on the website.
-                // record that they are missing, but don't fail.
                 console.error(`No metadata for ${filePath}`);
-                if (!path.includes("agreements")) {
-                    missing.push(filePath);
+                if (filePath.includes("agreements")) {
+                    continue;
                 }
+                missing.push(filePath);
                 continue;
             }
 
