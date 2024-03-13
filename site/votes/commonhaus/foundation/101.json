@@ -1,10 +1,10 @@
 {
   "voteType": "manualComments",
-  "hasQuorum": false,
+  "hasQuorum": true,
   "group": "commonhaus/founders",
   "groupSize": 9,
-  "groupVotes": 7,
-  "countedVotes": 9,
+  "groupVotes": 9,
+  "countedVotes": 11,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -27,6 +27,11 @@
           "avatarUrl": "https://avatars.githubusercontent.com/u/808713?u=8c50c6169b230fc62777f6910f6669b753ae95a8&v=4"
         },
         {
+          "login": "evanchooly",
+          "url": "https://github.com/evanchooly",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/195021?v=4"
+        },
+        {
           "login": "gavinking",
           "url": "https://github.com/gavinking",
           "avatarUrl": "https://avatars.githubusercontent.com/u/579974?u=2053a5f4ed0ddd89b2f7de04d7ea64c386fc619d&v=4"
@@ -35,6 +40,11 @@
           "login": "kenfinnigan",
           "url": "https://github.com/kenfinnigan",
           "avatarUrl": "https://avatars.githubusercontent.com/u/441240?u=aea870e6cad6edfff45e4fc1603b4531c8f57b44&v=4"
+        },
+        {
+          "login": "maxandersen",
+          "url": "https://github.com/maxandersen",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/54129?v=4"
         },
         {
           "login": "nmcl",
@@ -47,8 +57,8 @@
           "avatarUrl": "https://avatars.githubusercontent.com/u/412878?u=952a892aea58858acd1668c10aa6c36ba3dcd7b5&v=4"
         }
       ],
-      "teamTotal": 7,
-      "total": 9
+      "teamTotal": 9,
+      "total": 11
     }
   },
   "duplicates": [],
@@ -107,11 +117,12 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-03-11T21:06:51Z",
-  "updated": "2024-03-12T14:29:14Z",
+  "updated": "2024-03-13T13:19:43Z",
   "url": "/votes/commonhaus/foundation/101.html",
   "tags": [
     "vote/open",
     "notice",
+    "vote/quorum",
     "vote"
   ],
   "closed": false,
@@ -137,6 +148,11 @@
             "avatarUrl": "https://avatars.githubusercontent.com/u/808713?u=8c50c6169b230fc62777f6910f6669b753ae95a8&v=4"
           },
           {
+            "login": "evanchooly",
+            "url": "https://github.com/evanchooly",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/195021?v=4"
+          },
+          {
             "login": "gavinking",
             "url": "https://github.com/gavinking",
             "avatarUrl": "https://avatars.githubusercontent.com/u/579974?u=2053a5f4ed0ddd89b2f7de04d7ea64c386fc619d&v=4"
@@ -145,6 +161,11 @@
             "login": "kenfinnigan",
             "url": "https://github.com/kenfinnigan",
             "avatarUrl": "https://avatars.githubusercontent.com/u/441240?u=aea870e6cad6edfff45e4fc1603b4531c8f57b44&v=4"
+          },
+          {
+            "login": "maxandersen",
+            "url": "https://github.com/maxandersen",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/54129?v=4"
           },
           {
             "login": "nmcl",
@@ -157,8 +178,8 @@
             "avatarUrl": "https://avatars.githubusercontent.com/u/412878?u=952a892aea58858acd1668c10aa6c36ba3dcd7b5&v=4"
           }
         ],
-        "teamTotal": 7,
-        "total": 9
+        "teamTotal": 9,
+        "total": 11
       }
     ]
   ]
