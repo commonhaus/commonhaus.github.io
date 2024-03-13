@@ -94,20 +94,6 @@ site
             updated: "=updated",
         },
     }))
-    .use(feed({
-        output: ["/feed/review.rss", "/feed/review.json"],
-        query: "post reviews",
-        limit: 10,
-        info: {
-            title: "=metas.site",
-            description: "=description",
-        },
-        items: {
-            title: "=rss-title",
-            published: "=date",
-            updated: "=updated",
-        },
-    }))
     .use(inline(/* Options */))
     .use(nav())
     .use(sass({
@@ -166,8 +152,8 @@ function ignorePages(structure: Record<string, unknown>, path: string) {
     });
 }
 
-site.preprocess([".html"], (pages) => {
-    for (const page of pages) {
+site.preprocess([".html"], (filteredPages, allPages) => {
+    for (const page of filteredPages) {
         // For foundation pages:
         if (page.src.path.startsWith("/foundation")) {
 
@@ -190,6 +176,9 @@ site.preprocess([".html"], (pages) => {
                 if (keys.length > 1) {
                     page.data.tags.push(keys[0]);
                 }
+            } else {
+                console.error(`No metadata for ${page.src.path}`);
+                allPages.splice(allPages.indexOf(page), 1);
             }
 
             // If the title hasn't been set, set it to the first H1 in the content
@@ -244,7 +233,7 @@ site.filter("postLock", (data: Record<string, unknown>) => {
     if (data.lockReason) {
         result += `<span aria-label="locked">${svg.lock}</span> `;
     }
-    return result ? `<span class="act-status-icon">${result}</span>` : '';
+    return result ? `<span class="act-status-icon">${result}</span>` : '<span class="act-status-icon"></span>';
 });
 site.filter("testLock", (page: Page) => {
     return `<span class="act-status-icon">
