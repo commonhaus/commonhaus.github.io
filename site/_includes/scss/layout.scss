@@ -1,4 +1,4 @@
-@use 'index' as cf;
+@use 'index' as *;
 
 body {
   display: flex;
@@ -7,8 +7,12 @@ body {
   min-height: 100vh;
   min-width: 100vw;
 
-  --header-height: 100px;
-  --anchor-target-height: 120px;
+  // default is very very small (Z-fold)
+  --width-padding: .5em;
+  --height-padding: .5em;
+  --logo-height: 40px;
+  --header-height: 40px;
+  --anchor-target-height: calc(var(--header-height) + 2*var(--height-padding));
 }
 header.site {
   height: var(--header-height);
@@ -19,24 +23,27 @@ header.site {
   content: "";
   display: block;
   height: var(--anchor-target-height);
-  margin-top: calc(-1 * var(--anchor-target-height)); /* Negative of the same height */
+  margin-top: calc(-1 * var(--anchor-target-height)); // offset for the sticky header
   visibility: hidden;
 }
 main {
   flex: 1 1 auto;
+  // allow for the header, and to show a little bit of the footer
+  // if the page content is very short
   min-height: calc(100vh - var(--header-height) - 5em);
+  overflow: auto;
 
   > article,
   > section {
     flex: 2 1 auto;
-    @include cf.content-align();
+    @include content-align();
     img {
       max-width: 90%;
     }
   }
 
   > aside {
-    @include cf.content-pad();
+    @include content-pad();
     flex: 1 1 auto;
   }
 
@@ -45,15 +52,27 @@ main {
   }
 }
 footer.site {
-  @include cf.content-pad();
+  @include content-pad();
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   gap: .5em;
 }
+@media(min-width: 350px) {
+  body {
+    --width-padding: 1em;
+    --logo-height: 50px;
+    --header-height: 50px;
+  }
+}
 @media(min-width: 500px) {
-  main:has(aside) {
+  body {
+    --logo-height: 50px;
+    --header-height: 50px;
+    --width-padding: 3em;
+  }
+  main.has-aside {
     display: flex;
     flex-direction: row;
 
@@ -68,5 +87,11 @@ footer.site {
         white-space: nowrap;
       }
     }
+  }
+}
+@media(min-width: 800px) {
+  main:not(.has-aside):not(.site-main) {
+    max-width: 800px;
+    margin: 0 auto;
   }
 }

@@ -1,5 +1,5 @@
 ---
-layout: layouts/index.vto
+layout: layouts/baseIndex.vto
 ---
 {{- set allPosts = search.pages("vote", "date=desc") }}
 {{- set postsByYear = allPosts.reduce((acc, post) => {
@@ -14,6 +14,7 @@ layout: layouts/index.vto
 <section id="votes" class="activityIndex">
 {{- for year of sortedYears }}
   <section id="y{{year}}" aria-label="Votes from {{year}}">
+
   <h2 aria-hidden="true">{{ year }}</h2>
   <ul>
   {{- set posts = postsByYear[year] }}

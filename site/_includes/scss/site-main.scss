@@ -1,0 +1,40 @@
+@use 'index' as *;
+
+main.site-main {
+  section.text {
+    @include max-width-margin;
+  }
+  div.hero {
+    background-image: url("/images/hero-mainimage.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: var(--white);
+
+    section.text {
+      @include content-pad;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      h1 {
+        margin: 0;
+        padding: 0;
+        @include content-pad();
+      }
+      p {
+        margin: 0;
+        padding: 0;
+        max-width: calc(70%);
+        @include content-pad();
+      }
+      p:has(button) {
+        @include content-pad();
+      }
+    }
+  }
+}

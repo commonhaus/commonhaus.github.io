@@ -1,9 +1,7 @@
-@use 'index' as cf;
+@use 'index' as *;
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
 
 body {
-  @include cf.figtree-light;
-
   --h1-size: 2em;
   --h2-size: 1.8em;
   --h3-size: 1.6em;
@@ -17,28 +15,31 @@ body {
   --font-smallest: 0.8em;
 
   --footnote-size: var(--font-smaller);
+
+  @include figtree-light;
+  font-size: var(--font-text-size);
 }
 h1 {
-  @include cf.figtree-regular;
+  @include figtree-regular;
   font-size: var(--h1-size);
 }
 h2 {
-  @include cf.figtree-regular;
+  @include figtree-regular;
   font-size: var(--h2-size);
 }
 h3 {
-  @include cf.figtree-regular;
+  @include figtree-regular;
   font-size: var(--h3-size);
 }
 h4 {
-  @include cf.figtree-medium;
+  @include figtree-medium;
   font-size: var(--h4-size);
 }
 h5 {
-  @include cf.figtree-medium;
+  @include figtree-medium;
   font-size: var(--h5-size);
 }
 h6 {
-  @include cf.figtree-medium;
+  @include figtree-medium;
   font-size: var(--h6-size);
 }

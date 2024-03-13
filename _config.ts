@@ -177,7 +177,7 @@ site.preprocess([".html"], (filteredPages, allPages) => {
                     page.data.tags.push(keys[0]);
                 }
             } else {
-                console.error(`No metadata for ${page.src.path}`);
+                // Skip any pages that don't have a corresponding entry in the foundation.yml file
                 allPages.splice(allPages.indexOf(page), 1);
             }
 

@@ -130,6 +130,7 @@ date: ${item.createdAt}
 updated: ${item.updatedAt ? item.updatedAt : item.createdAt}
 url: "/activity/${id}.html"
 type: ${type}
+cssclasses: ['activity', 'has-aside']
 tags:
 - post`;
     if (item.category) {

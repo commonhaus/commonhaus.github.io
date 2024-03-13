@@ -4,8 +4,8 @@ article.activity {
     max-width: 800px;
     margin: 1em auto;
     padding: 1em;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--card-border-color);
+    box-shadow: 0 2px 5px var(--bg-shadow);
   }
   .byline {
     position: relative;
@@ -20,9 +20,7 @@ article.activity {
     img {
       width: 24px;
       height: 24px;
-      background: #fff;
-      border-radius: 20px;
-      border: 1px solid var(--bg-accent);
+      background: var(--white);
     }
   }
 

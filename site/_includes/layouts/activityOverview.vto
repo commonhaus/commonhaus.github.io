@@ -1,5 +1,5 @@
 ---
-layout: layouts/index.vto
+layout: layouts/baseIndex.vto
 ---
 {{ content }}
 
@@ -18,9 +18,9 @@ layout: layouts/index.vto
     </ul>
 </section>
 
-<section id="reviews" class="activityIndex">
+<section id="consensus-building" class="activityIndex">
     <h2>
-        Notice
+        Consensus Building (Notice)
     </h2>
     <ul>
     {{- for post of search.pages("post notice", "updated=desc", 5) }}
@@ -35,7 +35,7 @@ layout: layouts/index.vto
 
 <section id="votes" class="activityIndex">
     <h2>
-        Votes
+        Vote Results
     </h2>
     <ul>
     {{- for post of search.pages("vote", "updated=desc", 5) }}

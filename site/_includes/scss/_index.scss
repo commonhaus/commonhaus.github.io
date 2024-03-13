@@ -1,9 +1,17 @@
 @mixin content-align {
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: var(--width-padding);
+  padding-right: var(--width-padding);
+}
+@mixin content-align-y {
+  padding-top: var(--height-padding);
+  padding-bottom: var(--height-padding);
 }
 @mixin content-pad {
-  padding: 1em;
+  padding: var(--height-padding) var(--width-padding);
+}
+@mixin max-width-margin {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 @mixin figtree-light {
