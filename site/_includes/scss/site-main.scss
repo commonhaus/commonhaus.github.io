@@ -51,7 +51,7 @@ main.site-main {
   hr {
     border: none;
     border-top: 1px solid var(--card-border-color); /* Change color as needed */
-    margin: 2em;
+    margin: 3em;
   }
 
   h2 {
@@ -61,6 +61,18 @@ main.site-main {
     h2 {
       text-align: left;
     }
+  }
+
+  section:not(.hero) {
+    @include content-align;
+    @include max-width-margin;
+  }
+
+  section:first-of-type {
+    margin-top: 1em;
+  }
+  section:last-of-type {
+    margin-bottom: 3em;
   }
 
   .why {
@@ -78,6 +90,12 @@ main.site-main {
         width: 100%;
         height: auto;
       }
+    }
+
+    .two-columns {
+      -webkit-column-count: 1; /* Chrome, Safari, Opera */
+      -moz-column-count: 1;    /* Firefox */
+      column-count: 1;
     }
 
     @media (min-width: 600px) {
@@ -98,23 +116,14 @@ main.site-main {
         }
       }
     }
+    @media (min-width: 700px) {
+      .two-columns {
+        -webkit-column-count: 2; /* Chrome, Safari, Opera */
+        -moz-column-count: 2;    /* Firefox */
+        column-count: 2;
+      }
+    }
   }
-
-  // .image-block {
-  //   display: flex;
-  //   flex-direction: row;
-  //   align-items: center;
-  //   gap: 3em;
-
-  //   .image {
-  //     flex: 1;
-  //     width: 20%;
-  //   }
-
-  //   .text {
-  //     flex: 2;
-  //   }
-  // }
 
   .cards {
     display: flex;
@@ -151,6 +160,13 @@ main.site-main {
           padding: 0;
         }
       }
+    }
+  }
+
+  .projects .card {
+    img {
+      max-height: 100px;
+      width: auto;
     }
   }
 }

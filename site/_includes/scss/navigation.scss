@@ -289,7 +289,10 @@ header.site {
 
         li {
           min-width: 200px;
-          padding: .5em 1em;
+          a {
+            padding: .5em 1em;
+            display: block;
+          }
           &:hover {
             background-color: var(--bg-nav-submenu-alt);
           }
