@@ -13,6 +13,8 @@ import resolveUrls from "lume/plugins/resolve_urls.ts";
 import sass from "lume/plugins/sass.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import slugify_urls from "lume/plugins/slugify_urls.ts";
+import svgo from "lume/plugins/svgo.ts";
+
 import toc from "https://deno.land/x/lume_markdown_plugins@v0.7.0/toc.ts";
 
 import anchor from "npm:markdown-it-anchor";
@@ -61,6 +63,7 @@ site
     }))
     .use(toc())
     .use(slugify_urls({
+        extensions: [".html"],
         replace: {
             "&": "and",
             "@": "",

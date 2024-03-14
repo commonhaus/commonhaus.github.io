@@ -6,6 +6,10 @@
   padding-top: var(--height-padding);
   padding-bottom: var(--height-padding);
 }
+@mixin margin-align-y {
+  margin-top: var(--height-padding);
+  margin-bottom: var(--height-padding);
+}
 @mixin content-pad {
   padding: var(--height-padding) var(--width-padding);
 }
