@@ -15,7 +15,9 @@ article.bylaws {
     content: var(--ord) "." counter(h2) "." counter(h3) ". "
   }
 }
-aside.bylaw-contents {
+
+aside.bylaw-contents,
+aside.policy-contents {
   @include margin-align-y();
   @include content-align-y();
 
@@ -27,45 +29,27 @@ aside.bylaw-contents {
       text-indent: -1em; // Adjust as needed
       padding-bottom: 0;
       padding-top: .5em;
-
-      &:before {
-        content: attr(data-ord) ". ";
-        position: absolute;
-        left: -1em; // Adjust as needed
-      }
     }
   }
 
   div.pagenav {
     padding-left: .5em;
+
     ol {
       counter-reset: item;
-      padding-left: 1.5em; // Adjust as needed
+      padding-left: var(--hang-pad-left);
       list-style-type: none; // Removes the default numbering
 
       > li {
         position: relative;
-        text-indent: -0.5em; // Adjust as needed
+        text-indent: var(--hang-text-indent);
         margin: 0; // Reset default margin
         padding-top: .5em;
         padding-bottom: 0;
-
-        &:before {
-          content: attr(data-ord) "." counters(item, ".") " ";
-          counter-increment: item;
-          position: absolute;
-          left: -2.4em; // Adjust as needed
-        }
       }
 
       ol {
         padding: 0; // Adjust as needed
-
-        > li {
-          &:before {
-            left: -2.4em; // Adjust as needed
-          }
-        }
       }
     }
   }
@@ -82,5 +66,45 @@ aside.bylaw-contents {
     border: none;
     border-top: 1px solid var(--border-color); /* Change color as needed */
     margin: 1em .5em 1em 0 ;
+  }
+}
+
+aside.bylaw-contents {
+  --hang-pad-left: 1.5em;
+  --hang-text-indent: -0.5em;
+
+  ul.top-level li:before {
+    content: attr(data-ord) ". ";
+    position: absolute;
+    left: -1em; // Adjust as needed
+  }
+
+  div.pagenav {
+    ol > li:before {
+      content: attr(data-ord) "." counters(item, ".") " ";
+      counter-increment: item;
+      position: absolute;
+      left: -2.4em; // Adjust as needed
+    }
+  }
+}
+
+aside.policy-contents {
+  --hang-pad-left: 1em;
+  --hang-text-indent: -1em;
+
+  ul.top-level li:before {
+    content: '•';
+    position: absolute;
+    left: -1em; // Adjust as needed
+  }
+
+  div.pagenav {
+    ol > li:before {
+      content: counters(item, ".") ". ";
+      counter-increment: item;
+      position: absolute;
+      left: -1em; // Adjust as needed
+    }
   }
 }

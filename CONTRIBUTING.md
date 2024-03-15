@@ -45,6 +45,20 @@ This project uses [Deno](https://deno.land/) as the runtime, the [Lume static si
 - `site/foundation`: This is a GitHub submodule. It is the source for bylaws, policies, and other governance documents.
 - `site/votes`: This contains generated vote results.
 
+### Weird things
+
+- **Foundation pages** have to render properly in both the original repository (and in pdfs) and on the website. That means, some weirdness. 
+  - `bylaws.vto` and `foundation.vto` both assume the content already contains the h1/title (which these pages do). 
+  - `_includes/foundation.json` is generated/updated with the last modified information for the foundation repository.
+  - `_includes/foundation.yml` is hand-tended to specify the pages from the foundation repository that should be included in the website (and to specify the URL they should use and provide a meta description, etc.).
+- **Activities** are GH Discussions, Pull Requestsm and Vote Results. All are generated as a result of GraphQL queries.
+  - Discussions and Pull Requests are stored as markdown files in the `site/activity` directory.
+  - Vote results are captured as JSON files in `site/votes` and then rendered as both html and svg files.
+- **Sidebars**: 
+  - `bylaws.vto' defines a navigation sidebar for bylaws and policies.
+  - `activityVote.vto` and `activity.vto` both use `activitySidebar.vto` to define a sidebar for individual activity pages.
+
+
 ## Contributing
 
 Once you've set up the project, you're ready to start contributing! Please make sure to read and follow our [Code of Conduct](CODE_OF_CONDUCT.md).
