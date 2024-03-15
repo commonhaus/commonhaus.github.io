@@ -1,5 +1,3 @@
-import url from "lume/plugins/url.ts";
-import { get } from "../../../../../../../Users/elh/Library/Caches/deno/npm/registry.npmjs.org/immutable/4.3.4/dist/immutable.d.ts";
 
 const interestingFiles = [
     '.md',
