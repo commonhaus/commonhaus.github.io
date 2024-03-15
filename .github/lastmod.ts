@@ -56,6 +56,7 @@ async function readDir(path: string, relative: string) {
 
             struct.date = gitLastCommitDate(filePath);
             struct.layout = 'layouts/bylaws.vto';
+            struct.cssclasses = ['bylaws', 'has-aside'];
         } else if (dirEntry.isDirectory && !ignore.includes(dirEntry.name)) {
             await readDir(`${path}/${dirEntry.name}`, `${relative}${dirEntry.name}/`);
         }

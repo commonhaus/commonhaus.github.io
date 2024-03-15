@@ -1,3 +1,5 @@
+@use 'index' as *;
+
 article.bylaws {
   h1 {counter-reset: h2}
   h2 {counter-reset: h3}
@@ -14,33 +16,71 @@ article.bylaws {
   }
 }
 aside.bylaw-contents {
-  background-color: var(--bg-secondary);
-  border-left: 1px dotted var(--bg-shadow);
+  @include margin-align-y();
+  @include content-align-y();
 
   ul.top-level {
-    > li:before {
-      content: attr(data-ord);
-    }
-  }
-  div.pagenav {
-    border-top: 1px dotted var(--bg-shadow);
-    background-color: var(--bg-primary);
-    border-bottom: 1px dotted var(--bg-shadow);
-    padding: .5em;
-    ol {
-      counter-reset: item;
-      padding: 0; // Removes the default padding
+    padding-left: 2em; // Adjust as needed
 
-      &:first-of-type {
-        padding-top: .5em;
+    > li {
+      position: relative;
+      text-indent: -1em; // Adjust as needed
+      padding-bottom: 0;
+      padding-top: .5em;
+
+      &:before {
+        content: attr(data-ord) ". ";
+        position: absolute;
+        left: -1em; // Adjust as needed
       }
     }
-    li {
-      display: block;
+  }
+
+  div.pagenav {
+    padding-left: .5em;
+    ol {
+      counter-reset: item;
+      padding-left: 1.5em; // Adjust as needed
+      list-style-type: none; // Removes the default numbering
+
+      > li {
+        position: relative;
+        text-indent: -0.5em; // Adjust as needed
+        margin: 0; // Reset default margin
+        padding-top: .5em;
+        padding-bottom: 0;
+
+        &:before {
+          content: attr(data-ord) "." counters(item, ".") " ";
+          counter-increment: item;
+          position: absolute;
+          left: -2.4em; // Adjust as needed
+        }
+      }
+
+      ol {
+        padding: 0; // Adjust as needed
+
+        > li {
+          &:before {
+            left: -2.4em; // Adjust as needed
+          }
+        }
+      }
     }
-    li:before {
-      content: attr(data-ord) "." counters(item, ".") " ";
-      counter-increment: item
+  }
+
+  .edit {
+    font-size: var(--font-smaller);
+    h3 {
+      font-size: var(--font-size);
+      margin-bottom: .5em;
     }
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--border-color); /* Change color as needed */
+    margin: 1em .5em 1em 0 ;
   }
 }

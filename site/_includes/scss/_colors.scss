@@ -51,6 +51,8 @@ body {
 
   --fg-nav-submenu: var(--dark-green);
   --bg-nav-submenu: var(--ash-gray);
+  --bg-nav-submenu-alt: var(--light-blue);
+  --bg-nav-border: rgba(var(--white-rgb), .5);
 
   --fg-accent-1: var(--white);
   --bg-accent-1: var(--goldenrod);
@@ -61,12 +63,21 @@ body {
   --link-decoration-color: var(--goldenrod);
   --link-decoration-color-hover: var(--light-blue);
 
-  --bg-shadow: rgba(0, 0, 0, 0.1);
+  --bg-shadow: rgba(0, 0, 0, 0.5);
+
+  --border-color: #ccc;
 
   --table-header-footer-bg: #F5F6F1;
   --table-left-column-bg: #F5F6F1;
   --table-team-votes-bg: var(--light-blue-rgb);
-  --table-border-color: #ccc;
+  --table-border-color: var(--border-color);
+
+  --card-border-color: var(--border-color);
+
+  --button-text-color: var(--dark-green);
+  --button-bg-color: var(--light-blue);
+  --button-bg-color-hover: var(--ash-gray);
+  --button-border-color: transparent;
 
   background-color: var(--bg-primary);
 }

@@ -1,11 +1,14 @@
+@use 'index' as *;
+
 article.activity {
+  @include content-align-y();
   .card {
     position: relative;
     max-width: 800px;
     margin: 1em auto;
     padding: 1em;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--card-border-color);
+    box-shadow: 0 2px 5px var(--bg-shadow);
   }
   .byline {
     position: relative;
@@ -20,9 +23,7 @@ article.activity {
     img {
       width: 24px;
       height: 24px;
-      background: #fff;
-      border-radius: 20px;
-      border: 1px solid var(--bg-accent);
+      background: var(--white);
     }
   }
 
@@ -36,25 +37,25 @@ article.activity {
     }
 
     #articleTitle {
-      font-size: 1.2em; /* Adjust as needed */
+      font-size: var(--font-large); /* Adjust as needed */
       margin-bottom: 0.5em; /* Adjust as needed */
     }
 
     #articleTitle span {
-      font-size: 0.8em; /* Adjust as needed */
+      font-size: var(--font-smaller); /* Adjust as needed */
       color: var(--text-muted); /* Adjust as needed */
       font-weight: normal;
     }
 
     a.repo-link {
-      font-size: 0.9em; /* Adjust as needed */
+      font-size: var(--font-small); /* Adjust as needed */
       color: var(--fg-accent); /* Adjust as needed */
       text-decoration: none;
       font-weight: normal;
     }
 
     a.item-title {
-      font-size: 1.4em; /* Adjust as needed */
+      font-size: var(--font-larger); /* Adjust as needed */
       color: var(--text-normal); /* Adjust as needed */
     }
   }
@@ -63,13 +64,30 @@ article.activity {
 .activityIndex {
   li {
     padding-top: .2em;
+    padding-bottom: .5em; // Add space below each list item
+
     display: flex;
-    align-items: baseline;
+    flex-wrap: nowrap;
+    align-items: center;
     gap: .5em;
     justify-content: start;
+
+    &.archive {
+      time {
+        white-space: nowrap;
+      }
+      .data {
+        word-break: break-word;
+      }
+    }
+    &:not(.archive) {
+      text-indent: -1.2em; // Move the first line to the left
+      padding-left: 1em; // Move the rest of the content to the right
+    }
   }
+
   time {
-    font-family: monospace;
+    font-family: var(--font-monospace);
     padding: 0 .2em 0 0;
   }
 }

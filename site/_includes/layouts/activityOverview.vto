@@ -1,5 +1,5 @@
 ---
-layout: layouts/index.vto
+layout: layouts/baseIndex.vto
 ---
 {{ content }}
 
@@ -9,25 +9,25 @@ layout: layouts/index.vto
     </h2>
     <ul>
     {{- for post of search.pages("post announcements !notice", "updated=desc", 5) }}
-        <li>
+        <li class="archive">
             <time datetime="{{ post.date |> date('DATE') }}">{{ post.date |> date("dd MMM") }}</time>
             {{ post |> postLock }}
-            <a href="{{ post.url }}">{{ post.title }}</a>
+            <div class="data"><a href="{{ post.url }}">{{ post.title }}</a></div>
         </li>
     {{- /for }}
     </ul>
 </section>
 
-<section id="reviews" class="activityIndex">
+<section id="consensus-building" class="activityIndex">
     <h2>
-        Notice
+        Consensus Building (Notice)
     </h2>
     <ul>
     {{- for post of search.pages("post notice", "updated=desc", 5) }}
-        <li>
+        <li class="archive">
             <time datetime="{{ post.date |> date('DATE') }}">{{ post.date |> date("dd MMM") }}</time>
             {{ post |> postLock }}
-            <a href="{{ post.url }}">{{ post.title }}</a>
+            <div class="data"><a href="{{ post.url }}">{{ post.title }}</a></div>
         </li>
     {{- /for }}
     </ul>
@@ -35,15 +35,17 @@ layout: layouts/index.vto
 
 <section id="votes" class="activityIndex">
     <h2>
-        Votes
+        Vote Results
     </h2>
     <ul>
     {{- for post of search.pages("vote", "updated=desc", 5) }}
-        <li>
+        <li class="archive">
             <time datetime="{{ post.date |> date('DATE') }}">{{ post.date |> date("dd MMM") }}</time>
             {{ post |> postLock }}
-            <span class="repo">{{ post.voteItem }}</span>
-            <a href="{{ post.url }}">{{ post.itemTitle }}</a>
+            <div class="data">
+              <a href="{{ post.url }}">{{ post.itemTitle }}</a>
+              <span class="repo">{{ post.voteItem }}</span>
+            </div>
         </li>
     {{- /for }}
     </ul>

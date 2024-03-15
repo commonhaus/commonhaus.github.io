@@ -13,9 +13,10 @@ layout: layouts/base.vto
   <span class="posted">Last updated <time datetime="{{ page.data.date |> date('DATE') }}">{{ page.data.date |> date('d MMMM yyyy') }}</time></span>
 </footer>
 </article>
+
 <aside class="test-contents">
   Aside (toc)
-  <nav aria-label="Bylaw Navigation" class="index">
+  <nav aria-label="Test Navigation" class="index">
     <ul>
       {{- for item of toc }}
       <li>

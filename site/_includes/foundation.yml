@@ -12,18 +12,27 @@ agreements:
         be followed during bootstrapping.
       date: 2024-02-28T18:32:52.000Z
       layout: layouts/bylaws.vto
+      cssclasses:
+        - bylaws
+        - has-aside
 CONTRIBUTING:
   url: /about/contributing.html
   metas:
     robots: false
   date: 2024-02-21T17:44:44.000Z
   layout: layouts/bylaws.vto
+  cssclasses:
+    - bylaws
+    - has-aside
 CODE_OF_CONDUCT:
   url: /about/code-of-conduct.html
   metas:
     robots: false
   date: 2024-02-21T13:47:53.000Z
   layout: layouts/bylaws.vto
+  cssclasses:
+    - bylaws
+    - has-aside
 COMMUNICATION:
   url: /community/
   description: >
@@ -36,6 +45,9 @@ COMMUNICATION:
     community.
   date: 2024-02-02T15:07:59.000Z
   layout: layouts/bylaws.vto
+  cssclasses:
+    - bylaws
+    - has-aside
 FAQ:
   url: /about/faq.html
   description: >
@@ -44,12 +56,18 @@ FAQ:
     projects instead of other organizations.
   date: 2024-02-11T14:41:07.000Z
   layout: layouts/bylaws.vto
+  cssclasses:
+    - bylaws
+    - has-aside
 GOVERNANCE:
   url: /about/governance.html
   metas:
     robots: false
   date: 2024-03-12T14:23:52.000Z
   layout: layouts/bylaws.vto
+  cssclasses:
+    - bylaws
+    - has-aside
 README:
   url: /about/
   description: >
@@ -59,6 +77,9 @@ README:
     to get involved.
   date: 2024-03-12T14:23:52.000Z
   layout: layouts/bylaws.vto
+  cssclasses:
+    - bylaws
+    - has-aside
 TRADEMARKS:
   url: /about/trademarks.html
   description: >
@@ -71,12 +92,18 @@ TRADEMARKS:
     and reporting of misuse.
   date: 2023-11-08T18:27:19.000Z
   layout: layouts/bylaws.vto
+  cssclasses:
+    - bylaws
+    - has-aside
 bylaws:
   0-preface:
     description: |
       Overview of terms and concepts in the Commonhaus Foundation bylaws
     layout: layouts/bylaws.vto
     date: 2024-03-12T14:23:52.000Z
+    cssclasses:
+      - bylaws
+      - has-aside
   1-purpose:
     description: >
       Discover the foundational purpose and non-profit status of the Commonhaus
@@ -88,6 +115,9 @@ bylaws:
       activities and initiatives.
     date: 2024-02-14T00:35:35.000Z
     layout: layouts/bylaws.vto
+    cssclasses:
+      - bylaws
+      - has-aside
   2-cf-membership:
     description: >
       Explore the membership structure of the Commonhaus Foundation in this
@@ -100,6 +130,9 @@ bylaws:
       the foundation.
     date: 2024-02-24T14:12:10.000Z
     layout: layouts/bylaws.vto
+    cssclasses:
+      - bylaws
+      - has-aside
   3-cf-council:
     description: >
       Dive into the workings of the Commonhaus Foundation Council, the central
@@ -113,6 +146,9 @@ bylaws:
        within the foundation.
     date: 2024-03-12T14:23:52.000Z
     layout: layouts/bylaws.vto
+    cssclasses:
+      - bylaws
+      - has-aside
   4-cf-advisory-board:
     description: >
       Learn about the Commonhaus Foundation Advisory Board, a key group
@@ -126,6 +162,9 @@ bylaws:
       foundation's direction.
     date: 2024-03-12T14:23:52.000Z
     layout: layouts/bylaws.vto
+    cssclasses:
+      - bylaws
+      - has-aside
   5-decision-making:
     description: >
       Navigate the decision-making, voting, and election processes of the
@@ -138,6 +177,9 @@ bylaws:
       principles.
     date: 2024-02-14T00:35:35.000Z
     layout: layouts/bylaws.vto
+    cssclasses:
+      - bylaws
+      - has-aside
   6-notice-records:
     description: >
       Understand the Commonhaus Foundation approach to notice and record-keeping
@@ -150,6 +192,9 @@ bylaws:
       commitment to modern, streamlined, and transparent governance practices.
     date: 2024-02-24T14:12:10.000Z
     layout: layouts/bylaws.vto
+    cssclasses:
+      - bylaws
+      - has-aside
   7-indemnification-dissolution:
     description: >
       Explore the Commonhaus Foundation's approach to liability,
@@ -161,6 +206,9 @@ bylaws:
       distributed in a manner consistent with its mission and values.
     date: 2024-02-24T14:12:10.000Z
     layout: layouts/bylaws.vto
+    cssclasses:
+      - bylaws
+      - has-aside
   8-amendments:
     description: >
       Navigate the modern, electronic process for amending the Commonhaus
@@ -173,6 +221,9 @@ bylaws:
       governance of the foundation.
     date: 2024-02-24T14:12:10.000Z
     layout: layouts/bylaws.vto
+    cssclasses:
+      - bylaws
+      - has-aside
   README:
     description: >
       Access the essential index of the Commonhaus Foundation's bylaws,
@@ -184,6 +235,9 @@ bylaws:
       understanding the framework for governance changes within the foundation.
     date: 2024-02-17T16:11:01.000Z
     layout: layouts/bylaws.vto
+    cssclasses:
+      - bylaws
+      - has-aside
 policies:
   code-of-conduct:
     url: /policies/code-of-conduct/
@@ -195,6 +249,9 @@ policies:
       along with procedures for reporting and resolving issues.
     date: 2024-03-12T14:23:52.000Z
     layout: layouts/bylaws.vto
+    cssclasses:
+      - bylaws
+      - has-aside
   conflict-of-interest:
     url: /policies/conflict-of-interest/
     description: >
@@ -205,6 +262,9 @@ policies:
       for addressing potential conflicts.
     date: 2024-03-12T14:23:52.000Z
     layout: layouts/bylaws.vto
+    cssclasses:
+      - bylaws
+      - has-aside
   ip-policy:
     url: /policies/ip-policy/
     description: >
@@ -215,6 +275,9 @@ policies:
       for addressing potential conflicts.
     date: 2024-03-12T14:23:52.000Z
     layout: layouts/bylaws.vto
+    cssclasses:
+      - bylaws
+      - has-aside
   README:
     description: >
       This document acts as a central index to the various policies of the
@@ -229,6 +292,9 @@ policies:
       shape the foundation's activities and decisions.
     date: 2024-03-12T14:23:52.000Z
     layout: layouts/bylaws.vto
+    cssclasses:
+      - bylaws
+      - has-aside
   security-policy:
     url: /policies/security-policy/
     description: >
@@ -241,6 +307,9 @@ policies:
       community.
     date: 2024-02-02T15:07:59.000Z
     layout: layouts/bylaws.vto
+    cssclasses:
+      - bylaws
+      - has-aside
   succession-plan:
     url: /policies/succession-plan/
     description: >
@@ -255,6 +324,9 @@ policies:
       foundation's strategy for nurturing and preserving its projects.
     date: 2024-03-12T14:23:52.000Z
     layout: layouts/bylaws.vto
+    cssclasses:
+      - bylaws
+      - has-aside
   trademark-policy:
     url: /policies/trademark-policy/
     description: >
@@ -271,6 +343,9 @@ policies:
       legal and appropriate application.
     date: 2024-03-12T14:23:52.000Z
     layout: layouts/bylaws.vto
+    cssclasses:
+      - bylaws
+      - has-aside
   CLA:
     url: /policies/cla/
     description: >
@@ -282,3 +357,6 @@ policies:
       that their contributions are used in accordance with their intentions.
     date: 2024-02-16T18:24:37.000Z
     layout: layouts/bylaws.vto
+    cssclasses:
+      - bylaws
+      - has-aside

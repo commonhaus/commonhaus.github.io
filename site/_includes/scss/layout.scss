@@ -1,4 +1,4 @@
-@use 'index' as cf;
+@use 'index' as *;
 
 body {
   display: flex;
@@ -7,66 +7,99 @@ body {
   min-height: 100vh;
   min-width: 100vw;
 
-  --header-height: 100px;
-  --anchor-target-height: 120px;
+  // default is very very small (Z-fold)
+  --width-padding: .5em;
+  --height-padding: .5em;
+  --aside-width: 100vw;
+  --logo-height: 40px;
+  --header-height: 40px;
+  --anchor-target-height: calc(var(--header-height) + 2*var(--height-padding));
 }
 header.site {
   height: var(--header-height);
   position: sticky;
   top: 0;
 }
-:target::before {
-  content: "";
-  display: block;
-  height: var(--anchor-target-height);
-  margin-top: calc(-1 * var(--anchor-target-height)); /* Negative of the same height */
-  visibility: hidden;
-}
 main {
   flex: 1 1 auto;
   min-height: calc(100vh - var(--header-height) - 5em);
+  overflow: auto;
 
   > article,
   > section {
     flex: 2 1 auto;
-    @include cf.content-align();
+    @include content-align();
     img {
       max-width: 90%;
     }
   }
 
   > aside {
-    @include cf.content-pad();
-    flex: 1 1 auto;
-  }
-
-  header.byline {
-    float: right;
+    @include content-pad();
+    margin-top: 1em;
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
   }
 }
 footer.site {
-  @include cf.content-pad();
+  @include content-pad();
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   gap: .5em;
 }
+
+@media(min-width: 350px) {
+  body {
+    --width-padding: 1em;
+    --height-padding: 1em;
+    --logo-height: 50px;
+    --header-height: 50px;
+  }
+}
 @media(min-width: 500px) {
-  main:has(aside) {
+  body {
+    --logo-height: 50px;
+    --header-height: 50px;
+    --width-padding: 3em;
+  }
+}
+@media(min-width: 600px) {
+  body {
+    --aside-width: 25vw;
+  }
+  main.has-aside {
     display: flex;
     flex-direction: row;
 
-    > aside {
-      min-width: 200px;
+    > article,
+    > section {
+      @include content-align-with-aside();
     }
 
-    > aside.activity {
-      max-width: 300px;
-      width: 300px;
-      time {
-        white-space: nowrap;
+    > aside {
+      @include aside-margin-width();
+      background-color: unset;
+      border-top: unset;
+      margin-top: unset;
+
+      &.activity {
+        time {
+          white-space: nowrap;
+        }
       }
     }
+  }
+}
+@media(min-width: 800px) {
+  main:not(.has-aside):not(.site-main) {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+@media(min-width: 1000px) {
+  body {
+    --aside-width: 400px;
   }
 }
