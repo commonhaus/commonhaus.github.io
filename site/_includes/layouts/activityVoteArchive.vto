@@ -19,11 +19,11 @@ layout: layouts/baseIndex.vto
   <ul>
   {{- set posts = postsByYear[year] }}
   {{- for post of posts }}
-    <li>
+    <li class="archive">
       <time datetime="{{ post.date |> date('DATE') }}">{{ post.date |> date("dd MMM") }}</time>
       {{ post |> postLock }}
-      <a href="{{ post.url }}">{{ post.voteItem }}</a>
       <span>{{ post.itemTitle }}</span>
+      <a href="{{ post.url }}">{{ post.voteItem }}</a>
     </li>
   {{- /for }}
   </ul>

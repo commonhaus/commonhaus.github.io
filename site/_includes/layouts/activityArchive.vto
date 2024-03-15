@@ -16,13 +16,13 @@ layout: layouts/baseIndex.vto
   <section id="y{{year}}" aria-label="page.data.indexName from {{year}}">
 
   <h2 aria-hidden="true">{{ year }}</h2>
-  <ul>
+  <ul class="archive">
   {{- set posts = postsByYear[year] }}
   {{- for post of posts }}
-    <li>
+    <li class="archive">
       <time datetime="{{ post.date |> date('DATE') }}">{{ post.date |> date("dd MMM") }}</time>
       {{ post |> postLock }}
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <div class="data"><a href="{{ post.url }}">{{ post.title }}</a></div>
     </li>
   {{- /for }}
   </ul>

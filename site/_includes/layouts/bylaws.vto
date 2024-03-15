@@ -4,14 +4,7 @@ language: en
 layout: layouts/base.vto
 ---
 <article {{ if page.data.ord }}class="bylaws" style='--ord: "{{ page.data.ord }}";'{{ /if }}>
-<header class="byline">
-  <a aria-label="Edit source on GitHub" href="{{ github }}" class="github">{{ page.data.svg.github }}</a>
-</header>
 {{ content }}
-<footer class="footer">
-  <a aria-label="Edit source on GitHub" href="{{ github }}" class="github">{{ page.data.svg.github }}</a>
-  <span class="posted">Last updated <time datetime="{{ page.data.date |> date('DATE') }}">{{ page.data.date |> date('d MMMM yyyy') }}</time></span>
-</footer>
 </article>
 
 <aside class="bylaw-contents">
@@ -43,5 +36,13 @@ layout: layouts/base.vto
         </li>
     {{- /for }}
     </ul>
-  </nav>
+ </nav>
+
+  <hr />
+
+  <div class="edit">
+    <h3>About this Page</h3>
+    <div class="posted">Last updated <time datetime="{{ page.data.date |> date('DATE') }}">{{ page.data.date |> date('d MMMM yyyy') }}</time></div>
+    <a href="{{ github }}">Edit source</a> on GitHub
+  </div>
 </aside>

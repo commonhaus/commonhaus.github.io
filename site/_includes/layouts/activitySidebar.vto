@@ -24,7 +24,6 @@ layout: layouts/base.vto
           ? post.title.replace("Vote results for ", "")
           : post.title -}}
       <li {{ page.data.url == post.url ? 'class="active"' : '' }}>
-        <time datetime="{{ post.date |> date('DATE') }}">{{ post.date |> date("dd MMM") }}</time>
         <a href="{{ post.url }}">{{ post |> postLock }}{{ postTitle }}</a>
       </li>
     {{- /for }}

@@ -155,6 +155,19 @@ function ignorePages(structure: Record<string, unknown>, path: string) {
     });
 }
 
+// Fixup attributes at build time if necessary
+site.preprocess(['.md'], (pages) => {
+    for (const page of pages) {
+        if (typeof page.data.content !== "string") {
+            continue;
+        }
+        if (/^\/activity\/\d/.test(page.src.path)) {
+            page.data.cssclasses = page.data.cssclasses || [];
+            page.data.cssclasses.push('activity', 'has-aside');
+        }
+    }
+});
+
 site.preprocess([".html"], (filteredPages, allPages) => {
     for (const page of filteredPages) {
         // For foundation pages:
@@ -236,7 +249,7 @@ site.filter("postLock", (data: Record<string, unknown>) => {
     if (data.lockReason) {
         result += `<span aria-label="locked">${svg.lock}</span> `;
     }
-    return result ? `<span class="act-status-icon">${result}</span>` : '<span class="act-status-icon"></span>';
+    return result ? `<span class="act-status-icon">${result}</span>` : `<span class="act-status-icon">${svg.blank}</span>`;
 });
 site.filter("testLock", (page: Page) => {
     return `<span class="act-status-icon">

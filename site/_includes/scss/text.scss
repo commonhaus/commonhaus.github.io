@@ -4,7 +4,6 @@ body {
   --button-border-radius: 6px;
 }
 
-
 // General links
 
 a {
@@ -80,7 +79,7 @@ a[href^="#fn"]:hover {
 // Buttons
 
 button {
-  font-size: var(--font-text-size);
+  font-size: var(--font-size);
   padding: 0.5em 1em;
   border: 1px solid var(--button-border-color);
   border-radius: var(--button-border-radius);

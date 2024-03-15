@@ -10,6 +10,7 @@ body {
   // default is very very small (Z-fold)
   --width-padding: .5em;
   --height-padding: .5em;
+  --aside-width: 100vw;
   --logo-height: 40px;
   --header-height: 40px;
   --anchor-target-height: calc(var(--header-height) + 2*var(--height-padding));
@@ -19,17 +20,8 @@ header.site {
   position: sticky;
   top: 0;
 }
-:target::before {
-  content: "";
-  display: block;
-  height: var(--anchor-target-height);
-  margin-top: calc(-1 * var(--anchor-target-height)); // offset for the sticky header
-  visibility: hidden;
-}
 main {
   flex: 1 1 auto;
-  // allow for the header, and to show a little bit of the footer
-  // if the page content is very short
   min-height: calc(100vh - var(--header-height) - 5em);
   overflow: auto;
 
@@ -44,11 +36,9 @@ main {
 
   > aside {
     @include content-pad();
-    flex: 1 1 auto;
-  }
-
-  header.byline {
-    float: right;
+    margin-top: 1em;
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
   }
 }
 footer.site {
@@ -59,6 +49,7 @@ footer.site {
   align-items: center;
   gap: .5em;
 }
+
 @media(min-width: 350px) {
   body {
     --width-padding: 1em;
@@ -73,19 +64,30 @@ footer.site {
     --header-height: 50px;
     --width-padding: 3em;
   }
+}
+@media(min-width: 600px) {
+  body {
+    --aside-width: 25vw;
+  }
   main.has-aside {
     display: flex;
     flex-direction: row;
 
-    > aside {
-      min-width: 200px;
+    > article,
+    > section {
+      @include content-align-with-aside();
     }
 
-    > aside.activity {
-      max-width: 300px;
-      width: 300px;
-      time {
-        white-space: nowrap;
+    > aside {
+      @include aside-margin-width();
+      background-color: unset;
+      border-top: unset;
+      margin-top: unset;
+
+      &.activity {
+        time {
+          white-space: nowrap;
+        }
       }
     }
   }
@@ -94,5 +96,10 @@ footer.site {
   main:not(.has-aside):not(.site-main) {
     max-width: 800px;
     margin: 0 auto;
+  }
+}
+@media(min-width: 1000px) {
+  body {
+    --aside-width: 400px;
   }
 }
