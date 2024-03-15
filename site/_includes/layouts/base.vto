@@ -15,6 +15,7 @@
 }
 </script>
 <link rel="stylesheet" href="/assets/site.css" />
+<script src="/assets/scroll-toggle.js" inline></script>
 {{- for x of page.data.scripts }}
 <script src="{{ x }}" inline></script>
 {{ /for -}}
@@ -23,27 +24,26 @@
 <header class="site">
 <span class="logo">
   <a href="/" class="logo" aria-label="Commonhaus Foundation Home">
-      <img src="/static/images/CF_logo_horizontal_reverse.svg" class="icon" id="icon-1" inline>
+    <img src="/images/cf_logo_horizontal_reverse.svg" inline>
   </a>
 </span>
 <nav aria-label="Site">
+    <input id="menu-toggle" type="checkbox" />
+    <label class='menu-button-container' for="menu-toggle">
+      <div class='menu-button'></div>
+    </label>
     <ul class="top-level">
     {{ for x of page.data.menu }}
-        <li>
-            <a href="{{ x.href }}" aria-label="{{ x.title }}" aria-haspopup="true">
-                <span aria-hidden="true" class="h-site-icon">{{ page.data.svg[x.icon] }}</span>
-                <span aria-hidden="true" class="h-site-text">{{ x.title }}</span>
-            </a>
+        <li class="item" aria-label="{{ x.title }}" >
+          <span class="entry">
+            <a href="{{ x.href }}" aria-haspopup="true">{{ x.title }}</a>
             <span aria-hidden="true" class="h-site-more">{{ page.data.svg.down }}</span>
-            <ul class="submenu" aria-label="{{ x.submenu.label }}">
-            {{ for y of x.submenu.children }}
-                <li><a href="{{ y.href }}">
-                    <span aria-hidden="true" class="h-site-sub-icon">{{ page.data.svg[y.icon] }}</span>
-                    <span>{{ y.title }}</span>
-                    </a>
-                </li>
-            {{ /for }}
-            </ul>
+          </span>
+          <ul class="submenu" aria-label="{{ x.submenu.label }}">
+          {{ for y of x.submenu.children }}
+              <li><a href="{{ y.href }}">{{ y.title }}</a></li>
+          {{ /for }}
+          </ul>
         </li>
     {{ /for }}
     </ul>

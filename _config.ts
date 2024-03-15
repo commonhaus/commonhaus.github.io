@@ -13,6 +13,8 @@ import resolveUrls from "lume/plugins/resolve_urls.ts";
 import sass from "lume/plugins/sass.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import slugify_urls from "lume/plugins/slugify_urls.ts";
+import svgo from "lume/plugins/svgo.ts";
+
 import toc from "https://deno.land/x/lume_markdown_plugins@v0.7.0/toc.ts";
 
 import anchor from "npm:markdown-it-anchor";
@@ -61,6 +63,7 @@ site
     }))
     .use(toc())
     .use(slugify_urls({
+        extensions: [".html"],
         replace: {
             "&": "and",
             "@": "",
@@ -152,6 +155,19 @@ function ignorePages(structure: Record<string, unknown>, path: string) {
     });
 }
 
+// Fixup attributes at build time if necessary
+site.preprocess(['.md'], (pages) => {
+    for (const page of pages) {
+        if (typeof page.data.content !== "string") {
+            continue;
+        }
+        if (/^\/activity\/\d/.test(page.src.path)) {
+            page.data.cssclasses = page.data.cssclasses || [];
+            page.data.cssclasses.push('activity', 'has-aside');
+        }
+    }
+});
+
 site.preprocess([".html"], (filteredPages, allPages) => {
     for (const page of filteredPages) {
         // For foundation pages:
@@ -177,7 +193,7 @@ site.preprocess([".html"], (filteredPages, allPages) => {
                     page.data.tags.push(keys[0]);
                 }
             } else {
-                console.error(`No metadata for ${page.src.path}`);
+                // Skip any pages that don't have a corresponding entry in the foundation.yml file
                 allPages.splice(allPages.indexOf(page), 1);
             }
 
@@ -233,7 +249,7 @@ site.filter("postLock", (data: Record<string, unknown>) => {
     if (data.lockReason) {
         result += `<span aria-label="locked">${svg.lock}</span> `;
     }
-    return result ? `<span class="act-status-icon">${result}</span>` : '<span class="act-status-icon"></span>';
+    return result ? `<span class="act-status-icon">${result}</span>` : `<span class="act-status-icon">${svg.blank}</span>`;
 });
 site.filter("testLock", (page: Page) => {
     return `<span class="act-status-icon">
