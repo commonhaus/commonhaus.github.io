@@ -1,0 +1,39 @@
+---
+title: Default page title
+language: en
+layout: layouts/base.vto
+---
+<article class="bylaws">
+{{ content }}
+</article>
+
+<aside class="policy-contents">
+  <nav aria-label="CF Policy Navigation" class="index">
+    <ul class="top-level">
+    {{- for x of search.pages("policies", "url=asc") }}
+      <li>
+        <a href="{{ x.url }}">{{ x.title }}</a>
+        {{- if page.data.url == x.url && toc.length }}
+        <div class="pagenav">
+          <ol>
+          {{- for item of toc }}
+            <li>
+              <a href="#{{ item.slug }}">{{ item.text }}</a>
+            </li>
+          {{- /for }}
+          </ol>
+        </div>
+        {{- /if }}
+      </li>
+    {{- /for }}
+    </ul>
+ </nav>
+
+  <hr />
+
+  <div class="edit">
+    <h3>About this Page</h3>
+    <div class="posted">Last updated <time datetime="{{ page.data.date |> date('DATE') }}">{{ page.data.date |> date('d MMMM yyyy') }}</time></div>
+    <a href="{{ repoUrl }}">Edit source</a> on GitHub
+  </div>
+</aside>
