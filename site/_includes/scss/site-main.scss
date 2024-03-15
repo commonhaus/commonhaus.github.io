@@ -109,7 +109,7 @@ main.site-main {
       .image {
         order: 3;
         flex: 1;
-        max-width: 30vw; // Adjust as needed
+        max-width: 20vw;
         img {
           width: 100%;
           height: auto;
@@ -140,7 +140,6 @@ main.site-main {
 
       img {
         width: 25vw;
-        height: 25vw;
       }
       .text-content {
         display: flex;
@@ -158,6 +157,34 @@ main.site-main {
         p {
           margin: 0;
           padding: 0;
+        }
+      }
+    }
+  }
+
+  .what .cards {
+    @media (min-width: 500px) and (max-width: 800px) {
+      .card {
+        flex-direction: row; // Make the image and text be side by side
+        justify-content: space-between; // Add some space between the image and text
+        img {
+          width: 100px;
+        }
+      }
+    }
+    @media (min-width: 800px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      .card {
+        flex: 1 0 calc(33% - 2em); // Take up half the width of the container (minus the gap)
+        max-width: calc(33% - 2em); // Limit width to half the container (minus the gap)
+        text-wrap: stable;
+
+        img {
+          width: 100px;
         }
       }
     }
