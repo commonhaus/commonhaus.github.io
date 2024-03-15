@@ -46,11 +46,11 @@ cssclasses:
       <img src="/images/home_homeburst.svg" aria-hidden="true">
       <div class="text-content">
         <h3>Stable, long-term home</h3>
-        <p>CF acknowledges the evolutionary nature of projects. By providing a neutral home, we offer an anchor that supports the growth and evolution of each project over time.</p>
+        <p>CF acknowledges the evolving nature of projects. By providing a neutral home, we offer an anchor supporting growth over time. We're committed to ensuring smooth transitions and fostering long-term resilience with thoughtful succession planning.</p>
       </div>
     </div>
     <div class="card">
-      <img src="/images/home_tailored.svg" aria-hidden="true">
+      <img src="/images/home_minimal.svg" aria-hidden="true">
       <div class="text-content">
         <h3>Minimum viable governance</h3>
         <p>Adhering to a "community-first" model, CF offers foundational support that respects project autonomy, ensuring governance is effective without being restrictive.</p>
