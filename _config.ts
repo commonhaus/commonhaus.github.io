@@ -13,7 +13,6 @@ import resolveUrls from "lume/plugins/resolve_urls.ts";
 import sass from "lume/plugins/sass.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import slugify_urls from "lume/plugins/slugify_urls.ts";
-import svgo from "lume/plugins/svgo.ts";
 
 import toc from "https://deno.land/x/lume_markdown_plugins@v0.7.0/toc.ts";
 
@@ -103,7 +102,7 @@ site
         includes: "_includes/scss",
     }))
     .use(sitemap({
-        query: "indexable=true",
+        query: "metas.robots!=false",
         // }))
         // favicon.svg file must have 1/1 aspect ratio
         // https://lume.land/plugins/favicon/
