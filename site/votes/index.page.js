@@ -177,6 +177,10 @@ export default function* ({ page }) {
         title: "Index of Vote results",
         description: "Vote results",
         url: "/votes/index.html",
-        cssclasses: ['vote-index']
+        cssclasses: ['vote-index'],
+        metas: {
+            robots: false,
+            description: "vote index"
+        }
     }
 }
