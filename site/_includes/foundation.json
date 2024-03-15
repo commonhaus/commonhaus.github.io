@@ -439,5 +439,34 @@
       "legal"
     ],
     "genUrl": "/policies/succession-plan.html"
+  },
+  "agreements/bootstrapping/2024-03-15-bootstrapping-morphia.md": {
+    "date": "2024-03-15T23:04:32.000Z",
+    "srcPath": "agreements/bootstrapping/2024-03-15-bootstrapping-morphia.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-03-15-bootstrapping-morphia.md",
+    "type": "submodule",
+    "layout": "layouts/policies.vto",
+    "cssclasses": [
+      "bylaws",
+      "has-aside"
+    ],
+    "tags": [
+      "policies",
+      "legal"
+    ],
+    "genUrl": "/agreements/bootstrapping/2024-03-15-bootstrapping-morphia.html"
+  },
+  "elections/candidate-template.md": {
+    "date": "2024-03-15T16:53:45.000Z",
+    "srcPath": "elections/candidate-template.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/elections/candidate-template.md",
+    "type": "submodule",
+    "layout": "layouts/foundation.vto",
+    "cssclasses": [
+      "foundation"
+    ],
+    "genUrl": "/elections/candidate-template.html"
   }
 }
