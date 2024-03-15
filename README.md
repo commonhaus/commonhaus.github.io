@@ -19,8 +19,9 @@ We welcome contributions from the community! If you wish to contribute to the we
 
 ### Sections of the site are either generated or sourced from other locations.
 
-- `site/activity` pages are generated from PRs and other activity in other Commonhaus Foundation repositories.
+- `site/activity` pages are generated from PRs and other activity in other Commonhaus Foundation repositories. See 
 - `site/foundation` is a github submodule; it is the source for bylaws, policies, and other governance documents.
+- `site/votes` contains generated vote results
 
 ## License
 
