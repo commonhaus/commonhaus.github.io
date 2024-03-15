@@ -86,7 +86,7 @@ function createIndex(pages, dir, uri) {
             data.voteItem = `${data.repoName}#${data.number}`;
             data.updated = new Date(data.updated);
             data.url = `${uri}/${file.name.replace(/\.json$/, '.html')}`;
-            data.cssclasses = ['vote-result', data.voteType];
+            data.cssclasses = ['vote-result', data.voteType, 'has-aside'];
             pages.push(data);
         }
     }
@@ -101,7 +101,7 @@ export default function* ({ page }) {
 
     const general = {
         templateEngine: ['vto', 'md'],
-        layout: 'layouts/vote.vto',
+        layout: 'layouts/activityVote.vto',
         description: "vote result",
         metas: {
             robots: false,
@@ -173,7 +173,7 @@ export default function* ({ page }) {
     }
 
     yield {
-        layout: 'layouts/voteIndex.vto',
+        layout: 'layouts/activityVoteArchive.vto',
         title: "Index of Vote results",
         description: "Vote results",
         url: "/votes/index.html",

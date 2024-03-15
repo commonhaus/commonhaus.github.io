@@ -14,5 +14,5 @@ trim_trailing_whitespace = false
 [*.{java,ts,js}]
 indent_size = 4
 
-[*.{yml,yaml,html,rb,css,xml,scss,vto}]
+[*.{yml,yaml,html,json,rb,css,xml,scss,vto}]
 indent_size = 2
