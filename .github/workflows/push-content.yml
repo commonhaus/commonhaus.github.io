@@ -67,7 +67,7 @@ jobs:
 
       - name: Git Discussion Update
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.WEB_REPO_READ }}
         run: |
           deno task activity
           git add -A -- ./site/activity
