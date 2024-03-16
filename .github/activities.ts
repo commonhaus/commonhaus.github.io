@@ -229,6 +229,7 @@ function updatePullRequests(data: PullRequestData) {
 }
 
 function updateEgcReps(data: TeamData) {
+    console.log(data);
     const members = data.data.organization.team.members.nodes;
     updateAuthors(members);
 }
