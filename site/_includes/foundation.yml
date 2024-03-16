@@ -16,11 +16,6 @@ GOVERNANCE:
   metas:
     robots: false
 
-README:
-  url: /about/
-  description: >
-    Overview of the Commonhaus Foundation: our mission, values, and initiatives.
-
 TRADEMARKS:
   url: /about/trademarks.html
   description: >
