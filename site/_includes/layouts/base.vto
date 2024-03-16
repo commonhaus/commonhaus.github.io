@@ -15,16 +15,20 @@
 }
 </script>
 <link rel="stylesheet" href="/assets/site.css" />
-<script src="/assets/scroll-toggle.js" inline></script>
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/images/CF_icon_default.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="text/javascript" src="/assets/scroll-toggle.js" inline></script>
 {{- for x of page.data.scripts }}
-<script src="{{ x }}" inline></script>
+<script type="text/javascript" src="{{ x }}"></script>
 {{ /for -}}
 </head>
 <body>
 <header class="site">
 <span class="logo">
   <a href="/" class="logo" aria-label="Commonhaus Foundation Home">
-    <img src="/images/cf_logo_horizontal_reverse.svg" inline>
+    <img src="/images/CF_logo_horizontal_reverse.svg" inline>
   </a>
 </span>
 <nav aria-label="Site">
@@ -33,19 +37,19 @@
       <div class='menu-button'></div>
     </label>
     <ul class="top-level">
-    {{ for x of page.data.menu }}
+    {{- for x of page.data.menu }}
         <li class="item" aria-label="{{ x.title }}" >
           <span class="entry">
             <a href="{{ x.href }}" aria-haspopup="true">{{ x.title }}</a>
             <span aria-hidden="true" class="h-site-more">{{ page.data.svg.down }}</span>
           </span>
           <ul class="submenu" aria-label="{{ x.submenu.label }}">
-          {{ for y of x.submenu.children }}
+          {{- for y of x.submenu.children }}
               <li><a href="{{ y.href }}">{{ y.title }}</a></li>
-          {{ /for }}
+          {{- /for }}
           </ul>
         </li>
-    {{ /for }}
+    {{- /for }}
     </ul>
 </nav>
 </header>

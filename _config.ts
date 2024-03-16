@@ -3,10 +3,10 @@ import { Data, Page } from "lume/core/file.ts";
 import { safeLoad } from "https://deno.land/x/js_yaml_port@3.14.0/js-yaml.js";
 
 import date from "lume/plugins/date.ts";
-import favicon from "lume/plugins/favicon.ts";
 import feed from "lume/plugins/feed.ts";
 import inline from "lume/plugins/inline.ts";
 import metas from "lume/plugins/metas.ts";
+import minifyHTML from "lume/plugins/minify_html.ts";
 import modifyUrls from "lume/plugins/modify_urls.ts";
 import nav from "lume/plugins/nav.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
@@ -125,12 +125,20 @@ site.mergeKey("cssclasses", "stringArray");
 
 site
     .use(date())
+    .use(inline(/* Options */))
     .use(metas())
+    .use(minifyHTML({
+        options: {
+            keep_closing_tags: true,
+            keep_html_and_head_opening_tags: true,
+        }
+    }))
+    .use(nav())
     .use(resolveUrls())
+    .use(toc())
     .use(modifyUrls({
         fn: fixFoundationUrls
     }))
-    .use(toc())
     .use(slugify_urls({
         extensions: [".html"],
         replace: {
@@ -166,18 +174,11 @@ site
             updated: "=updated",
         },
     }))
-    .use(inline(/* Options */))
-    .use(nav())
     .use(sass({
         includes: "_includes/scss",
     }))
     .use(sitemap({
         query: "metas.robots!=false",
-        // }))
-        // favicon.svg file must have 1/1 aspect ratio
-        // https://lume.land/plugins/favicon/
-        // .use(favicon({
-        //     input: "/my-custom-favicon.png",
     }));
 
 // Fixup attributes at build time if necessary
