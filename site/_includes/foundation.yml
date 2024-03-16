@@ -1,20 +1,15 @@
 COMMUNICATION:
   url: /community/
   description: >
-    Connect and engage directly with the Commonhaus Foundation and its
-    associated projects. This constantly updated page offers comprehensive,
-    up-to-date information on a variety of communication platforms, including
-    mailing lists, GitHub discussions, and Discord. It's your essential guide to
-    effectively reaching out to the foundation, participating in vibrant
-    discussions, and becoming an integral part of our diverse and collaborative
-    community.
+    Direct channels to connect with the Commonhaus Foundation and engage with
+    projects. Offers details on mailing lists, GitHub discussions, and Discord,
+    facilitating active participation in our community.
 
 FAQ:
   url: /about/faq.html
   description: >
-    This FAQ document provides answers to common questions about the Commonhaus
-    Foundation and why it should be considered as a home for Open Source
-    projects instead of other organizations.
+    Common questions about the Commonhaus Foundation and its advantages for
+    Open Source projects.
 
 GOVERNANCE:
   url: /about/governance.html
@@ -24,21 +19,13 @@ GOVERNANCE:
 README:
   url: /about/
   description: >
-    Discover the Commonhaus Foundation: our mission, values, and initiatives.
-    This overview introduces our approach to nurturing open-source projects
-    through community collaboration. Learn about our policies, bylaws, and how
-    to get involved.
+    Overview of the Commonhaus Foundation: our mission, values, and initiatives.
 
 TRADEMARKS:
   url: /about/trademarks.html
   description: >
-    This document details the trademarks owned by the foundation, encompassing
-    logos, phrases, and other brand elements. It provides comprehensive usage
-    guidelines, outlining permissible and prohibited uses to maintain brand
-    integrity. The file also describes the foundation’s measures to protect its
-    trademarks and includes licensing information for external use. Contact
-    details for trademark-related inquiries are provided for further assistance
-    and reporting of misuse.
+    A listing of the foundation's trademarks, including logos and phrases,
+    with guidelines for their proper use.
 
 bylaws/README:
   url: /bylaws/
@@ -53,98 +40,60 @@ bylaws/0-preface:
 bylaws/1-purpose:
   url: /bylaws/purpose.html
   description: >
-    Discover the foundational purpose and non-profit status of the Commonhaus
-    Foundation in this key section of our bylaws. It underscores our
-    dedication to open-source innovation and collaboration, outlining our core
-    objectives: facilitating community collaboration, empowering diverse
-    contributors, and fostering the longevity of open-source projects. This
-    section establishes the legal and ethical framework that guides all our
-    activities and initiatives.
+    Outlines the Commonhaus Foundation's purpose, aligning with its 501(c)(6) status.
+    Highlights commitment to open-source innovation, community collaboration,
+    and project sustainability.
 
 bylaws/2-cf-membership:
   url: /bylaws/cf-membership.html
   description: >
-    Explore the membership structure of the Commonhaus Foundation in this
-    comprehensive section of our bylaws. It delineates the different
-    categories of membership, including project leaders, general members, and
-    provisions for inactive or retired members. Additionally, it covers
-    important aspects such as membership dues, renewal processes, and policies
-    on suspension and revocation. This document is a crucial resource for
-    anyone interested in joining or understanding the membership dynamics of
-    the foundation.
+    Details the Commonhaus Foundation's membership policies, including dues, renewals,
+    and suspension.
 
 bylaws/3-cf-council:
   url: /bylaws/cf-council.html
   description: >
-    Dive into the workings of the Commonhaus Foundation Council, the central
-    governing body of the foundation, detailed in this section of our bylaws.
-    This document outlines the council's roles, responsibilities, and its
-    commitment to community-oriented leadership while adhering to legal
-    requirements. It covers aspects of strategic governance, fiduciary duties,
-    and member communication, offering insights into how the council operates
-    to foster a less authoritarian, more community-engaged approach. Essential
-    for understanding the leadership dynamics and decision-making processes
-    within the foundation.
+    Bylaws defining the composition, roles, and responsibilities of the
+    Commonhaus Foundation Council, the central governing body of the foundation.
+    It covers aspects of strategic governance, fiduciary duties, elections,
+    voting requirements, and member communication.
 
 bylaws/4-cf-advisory-board:
   url: /bylaws/cf-advisory-board.html
   description: >
-    Learn about the Commonhaus Foundation Advisory Board, a key group
-    comprising representatives from supporting organizations and companies.
-    This section of our bylaws details the board's role as a crucial link
-    between the foundation and the broader tech industry. While the board does
-    not have decision-making authority, it provides invaluable insights and
-    strategic guidance to the Commonhaus Foundation Council, ensuring a
-    balance between sponsor influence and independent leadership. Essential
-    reading for understanding the collaborative dynamics that shape the
-    foundation's direction.
+    Describes the Advisory Board, including representatives from supportive
+    organizations and companies, acting as a link between the foundation and
+    the broader tech industry.
 
 bylaws/5-decision-making:
   url: /bylaws/decision-making.html
   description: >
-    Navigate the decision-making, voting, and election processes of the
-    Commonhaus Foundation with this essential bylaw section. This document
-    aims to simplify procedures, allowing for efficient progress while
-    ensuring ample opportunities for members to voice concerns. It covers
-    consensus-seeking methods in meetings, discussions, and mailing lists, and
-    details the election process, reflecting the foundation's commitment to
-    inclusive and straightforward governance aligned with open source
-    principles.
+    Outlines the foundation's decision-making, voting, and election processes.
+    Simplifies procedures for efficient progression and member participation.
+    Details on consensus-seeking, elections, and ensuring governance aligns
+    with open-source principles.
 
 bylaws/6-notice-records:
   url: /bylaws/notice-records.html
   description: >
-    Understand the Commonhaus Foundation approach to notice and record-keeping
-    through this detailed bylaw section. It outlines policies focusing on
-    asynchronous and electronic methods, ensuring efficient and accessible
-    communication within the foundation. Key areas include notification
-    requirements, expedited processes, and comprehensive record-keeping
-    practices, highlighting methods, platforms, accessibility, security,
-    compliance, and management. This document represents the foundation's
-    commitment to modern, streamlined, and transparent governance practices.
+    Covers the foundation's notice and record-keeping policies.
+    Emphasizes asynchronous, electronic communication for efficiency and accessibility.
+    Includes notification protocols, record-keeping practices, and ensuring transparent governance.
 
 bylaws/7-indemnification-dissolution:
   url: /bylaws/indemnification-dissolution.html
   description: >
-    Explore the Commonhaus Foundation's approach to liability,
-    indemnification, and dissolution. It outlines the foundation's commitment
-    to protecting its members and contributors from legal liabilities,
-    ensuring that they can participate in the foundation's activities without
-    undue risk. The document also details the procedures for indemnification
-    and the dissolution process, ensuring that the foundation's assets are
-    distributed in a manner consistent with its mission and values.
+    Details the foundation's policies on liability, indemnification, and dissolution.
+    Emphasizes protecting members and contributors from legal risks, and outlines processes
+    for indemnification and asset distribution upon dissolution, aligning with the foundation's mission and values.
 
 bylaws/8-amendments:
   url: /bylaws/amendments.html
   description: >
-    Navigate the modern, electronic process for amending the Commonhaus
-    Foundation's bylaws with this key bylaw section. It outlines an efficient,
-    asynchronous method using GitHub for proposing changes, from submission to
-    approval. The document details steps including proposal submission,
-    categorization of changes, and community consultation, ensuring a
-    transparent and inclusive amendment process. Ideal for members and
-    contributors who wish to understand or participate in the evolving
-    governance of the foundation.
+    Describes the process for amending the foundation's bylaws, utilizing GitHub for
+    an efficient, asynchronous method from proposal to approval. Covers proposal submission,
+    change categorization, and community consultation for a transparent, inclusive process.
+    Essential for members and contributors interested in governance participation or updates.
 
 policies/code-of-conduct:
   url: /policies/code-of-conduct/
@@ -176,63 +125,35 @@ policies/ip-policy:
 policies/README:
   url: /policies/
   description: >
-    This document acts as a central index to the various policies of the
-    Commonhaus Foundation, ensuring compliance with laws and regulations in
-    areas such as nonprofit operations, intellectual property, and employment.
-    It provides organized access to key documents, including the Bylaws, Code
-    of Conduct, Conflict of Interest Policy, and others. Additionally, the
-    document details the process for amending these policies, outlining a
-    structured approach to ensure that updates and changes are made
-    systematically and in accordance with legal requirements. This is a vital
-    resource for understanding the governance and operational guidelines that
-    shape the foundation's activities and decisions.
+    Central index for Commonhaus Foundation policies, ensuring compliance
+    with laws and regulations. Offers access to key documents like Bylaws,
+    Code of Conduct, Conflict of Interest Policy, and more.
 
 policies/security-policy:
   url: /policies/security-policy/
   description: >
-    Guidance on securely reporting vulnerabilities in Commonhaus Foundation
-    projects. This resource outlines responsible disclosure protocols,
-    emphasizing direct communication with project maintainers and
-    confidentiality. It provides step-by-step instructions on appropriately
-    reporting security issues to ensure they are addressed effectively and
-    safely, safeguarding the integrity of the projects and the broader
-    community.
+    How to securely report vulnerabilities in Commonhaus Foundation projects.
+    Details responsible disclosure protocols, direct communication with
+    maintainers, and confidentiality. Step-by-step instructions for effective
+    and safe reporting, maintaining project integrity and community safety.
 
 policies/succession-plan:
   url: /policies/succession-plan/
   description: >
-    Understand the Commonhaus Foundation's approach to maintaining project
-    continuity and administrative access in this vital policy document. It
-    addresses the balance between ensuring project longevity and respecting
-    the independence of project leaders. This policy outlines the permissions
-    required by the foundation for member projects and details how it
-    collaboratively works with project leaders to manage these projects,
-    ensuring their sustainability and relevance in the tech community.
-    Essential for members and contributors who seek to comprehend the
-    foundation's strategy for nurturing and preserving its projects.
-    date: 2024-03-12T14:23:52.000Z
+    Details the Commonhaus Foundation's strategy for project continuity and
+    leadership transitions.
 
 policies/trademark-policy:
   url: /policies/trademark-policy/
   description: >
-    This Trademark Policy document specifies the guidelines for the use and
-    licensing of trademarks associated with the Commonhaus Foundation and its
-    related projects. It clarifies that the foundation holds ownership over
-    all its trademarks, both registered and unregistered. The policy
-    delineates the permitted and prohibited uses of these trademarks, ensuring
-    they are used appropriately and legally. The document also covers the
-    licensing processes, specifying how external entities can legally use
-    these trademarks. Furthermore, it includes provisions for protecting the
-    trademarks against misuse or infringement. This policy is essential for
-    anyone using the foundation's trademarks or seeking to understand their
-    legal and appropriate application.
+    Specifies guidelines for using Commonhaus Foundation's trademarks,
+    including usage rights, licensing, and measures against misuse. Essential
+    for anyone using or intending to use the foundation's trademarks.
 
 policies/CLA:
   url: /policies/cla/
   description: >
-    This document outlines the Commonhaus Foundation's Contributor License
-    Agreement (CLA). It details the terms and conditions under which
-    contributions are made, ensuring that the foundation and its projects can
-    use and distribute the contributions. The CLA also provides a framework
-    for contributors to assert their rights and responsibilities, ensuring
-    that their contributions are used in accordance with their intentions.
+    Outlines the terms under which contributions are made to the Commonhaus
+    Foundation, ensuring proper use and distribution of contributions. It
+    provides a framework for contributors to understand their rights and
+    responsibilities.
