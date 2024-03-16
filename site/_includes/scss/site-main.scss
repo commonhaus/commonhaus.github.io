@@ -1,5 +1,42 @@
 @use 'index' as *;
 
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  align-items: center;
+  margin-top: 2em;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+
+    img {
+      width: 25vw;
+    }
+    .text-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: .5em;
+
+      h3 {
+        font-size: var(--font-large);
+        @include figtree-medium;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+      p {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+}
+
 main.site-main {
   > div.hero {
     background-image: url("/images/hero_mainimage.webp");
@@ -125,43 +162,6 @@ main.site-main {
     }
   }
 
-  .cards {
-    display: flex;
-    flex-direction: column;
-    gap: 3em;
-    align-items: center;
-    margin-top: 2em;
-
-    .card {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2em;
-
-      img {
-        width: 25vw;
-      }
-      .text-content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: .5em;
-
-        h3 {
-          font-size: var(--font-large);
-          @include figtree-medium;
-          margin: 0;
-          padding: 0;
-          text-align: center;
-        }
-        p {
-          margin: 0;
-          padding: 0;
-        }
-      }
-    }
-  }
-
   .what .cards {
     @media (min-width: 500px) and (max-width: 800px) {
       .card {
@@ -198,3 +198,31 @@ main.site-main {
   }
 }
 
+main.about {
+  .cards {
+    flex-direction: row;
+    flex-wrap: wrap; // Allow the cards to wrap onto multiple lines
+    justify-content: space-between; // Distribute cards evenly in the container
+
+    .card {
+      max-width: 300px; // Set maximum width of each card
+      flex-direction: row; // Make the image and text be side by side
+      align-items: start; // Align items to the top
+      gap: 1em; // Add some space between the image and text
+
+      img {
+        width: 75px; // Adjust as needed
+        height: 75px; // Adjust as needed
+        border-radius: 50%; // This makes the image round
+        object-fit: cover; // This ensures the image covers the whole area
+      }
+
+      .text-content {
+        align-items: flex-start;
+      }
+      .subhead {
+        font-size: var(--font-small);
+      }
+    }
+  }
+}
