@@ -22,27 +22,27 @@ aside.policy-contents {
   @include content-align-y();
 
   ul.top-level {
-    padding-left: 2em; // Adjust as needed
+    padding-left: var(--hang-pad-left);
 
     > li {
       position: relative;
-      text-indent: -1em; // Adjust as needed
+      text-indent: var(--hang-text-indent);
       padding-bottom: 0;
       padding-top: .5em;
     }
   }
 
   div.pagenav {
-    padding-left: .5em;
+    padding-left: var(--nest-indent);
 
     ol {
       counter-reset: item;
-      padding-left: var(--hang-pad-left);
+      padding-left: var(--nest-hang-pad-left);
       list-style-type: none; // Removes the default numbering
 
       > li {
         position: relative;
-        text-indent: var(--hang-text-indent);
+        text-indent: var(--nest-hang-text-indent);
         margin: 0; // Reset default margin
         padding-top: .5em;
         padding-bottom: 0;
@@ -70,8 +70,11 @@ aside.policy-contents {
 }
 
 aside.bylaw-contents {
-  --hang-pad-left: 1.5em;
-  --hang-text-indent: -0.5em;
+  --hang-pad-left: 2em;
+  --hang-text-indent: -1em;
+  --nest-hang-pad-left: 1.5em;
+  --nest-hang-text-indent: -0.5em;
+  --nest-indent: .5em;
 
   ul.top-level li:before {
     content: attr(data-ord) ". ";
@@ -90,13 +93,16 @@ aside.bylaw-contents {
 }
 
 aside.policy-contents {
-  --hang-pad-left: 1em;
-  --hang-text-indent: -1em;
+  --hang-pad-left: 0;
+  --hang-text-indent: 0;
+  --nest-hang-pad-left: 1em;
+  --nest-hang-text-indent: -1em;
+  --nest-indent: 1.2em;
 
   ul.top-level li:before {
     content: '•';
     position: absolute;
-    left: -1em; // Adjust as needed
+    left: -1em;
   }
 
   div.pagenav {
@@ -104,7 +110,7 @@ aside.policy-contents {
       content: counters(item, ".") ". ";
       counter-increment: item;
       position: absolute;
-      left: -1em; // Adjust as needed
+      left: -1em;
     }
   }
 }
