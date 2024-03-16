@@ -47,9 +47,13 @@ Our project representatives play a pivotal role in the Commonhaus Foundation's [
 
 [Detailed list or descriptions of current project leaders and their projects]
 
-## Become a CF member
+## Get Involved
 
-Join us in building a home where open-source projects can grow, innovate, and make a lasting impact.
+The Commonhaus Foundation relies on the participation of a global community. Whether you're a developer, contributor, project leader, or simply passionate about open-source, there are many ways to contribute and make an impact. From joining discussions, contributing to projects, or participating in governance, your voice and contributions are valued here.
+
+Learn more about how you can become an active member of the Commonhaus Foundation and help shape the future of open-source innovation.
+
+[Join the Commonhaus Community](#join-the-community) | [Explore Our Projects](#explore-our-projects).
 
 [cfc]: ../foundation/bylaws/3-cf-council.md
 [egc]: ../foundation/bylaws/3-cf-council.md#extended-governance-committee-egc
