@@ -127,15 +127,9 @@ site
     .use(date())
     .use(inline(/* Options */))
     .use(metas())
-    .use(minifyHTML({
-        options: {
-            keep_closing_tags: true,
-            keep_html_and_head_opening_tags: true,
-        }
-    }))
+    .use(toc())
     .use(nav())
     .use(resolveUrls())
-    .use(toc())
     .use(modifyUrls({
         fn: fixFoundationUrls
     }))
@@ -145,6 +139,18 @@ site
             "&": "and",
             "@": "",
         },
+    }))
+    .use(sass({
+        includes: "_includes/scss",
+    }))
+    .use(sitemap({
+        query: "metas.robots!=false",
+    }))
+    .use(minifyHTML({
+        options: {
+            keep_closing_tags: true,
+            keep_html_and_head_opening_tags: true,
+        }
     }))
     .use(feed({
         output: ["/feed/index.rss", "/feed/index.json"],
@@ -173,12 +179,6 @@ site
             published: "=date",
             updated: "=updated",
         },
-    }))
-    .use(sass({
-        includes: "_includes/scss",
-    }))
-    .use(sitemap({
-        query: "metas.robots!=false",
     }));
 
 // Fixup attributes at build time if necessary
