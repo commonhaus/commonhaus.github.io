@@ -1,6 +1,9 @@
 ---
 title: About us
 description: Mission and vision of The Commonhaus Foundation, including a list of current board members and project leaders.
+templateEngine: [vto, md]
+cssclasses:
+- about
 ---
 
 The Commonhaus Foundation is dedicated to supporting the growth and stability of open-source projects through collaboration and innovation. Inspired by our foundational principles, we create a home for projects and communities.
@@ -37,7 +40,23 @@ Cultivate a dynamic and inclusive ecosystem where open-source projects thrive on
 
 Commonhaus Foundation [Councilors][cfc] represent community interests and ensure the foundation operates responsibly. Elected by CF Members, they serve as the voice of our community, prioritizing the CF community's interests in their decision-making.
 
-[Detailed list or bios of current board members]
+<div class="cards">
+{{ for councilor of page.data.councilors }}
+  <div class="card">
+    <img src="{{ councilor.avatar }}" alt="{{ councilor.login }}'s avatar" />
+    <div class="text-content">
+      <h3><a href="{{ councilor.url }}">{{ councilor.login }}</a></h3>
+      <div class="subhead">
+        {{ if councilor.termStart == 2023 }}Founder{{ if councilor.role }}, {{ /if }}{{ /if }}
+        {{ if councilor.role }}{{ councilor.role }}{{ /if }}</div>
+      {{ if councilor.description }}
+        <p>{{ councilor.description }}</p>
+      {{ /if }}
+      <footer>Term start: {{ councilor.termStart }}</footer>
+    </div>
+  </div>
+{{ /for }}
+</div>
 
 _Note: Founding councilors will stand for election as their terms expire._
 
@@ -45,7 +64,20 @@ _Note: Founding councilors will stand for election as their terms expire._
 
 Our project representatives play a pivotal role in the Commonhaus Foundation's [Extended Governance Committee][egc] (EGC), ensuring that the perspectives of each foundation project are represented in foundation-wide decisions.
 
-[Detailed list or descriptions of current project leaders and their projects]
+<div class="cards">
+{{ for representative of page.data.egc }}
+  <div class="card">
+    <img src="{{ representative.avatar }}" alt="{{ representative.login }}'s avatar" />
+    <div class="text-content">
+      <h3><a href="{{ representative.url }}">{{ representative.login }}</a></h3>
+      <div class="subhead"><a href="{{ representative.projectUrl }}">{{ representative.projectName }}</a></div>
+      {{ if representative.description }}
+        <p>{{ representative.description }}</p>
+      {{ /if }}
+    </div>
+  </div>
+{{ /for }}
+</div>
 
 ## Get Involved
 
