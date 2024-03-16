@@ -82,6 +82,23 @@ interface PinnedItemData {
         };
     };
 }
+interface TeamData {
+    errors?: Error[];
+    data: {
+        organization: {
+            team: {
+                members: {
+                    nodes: Author[];
+                };
+            };
+        };
+    };
+}
+
+const authorsPath = './site/_data/authors.yml';
+const authorsYaml = Deno.readTextFileSync(authorsPath);
+const authors = safeLoad(authorsYaml) || {};
+let authorsUpdated = false;
 
 const prefixMap: Record<string, string> = {
     announcements: '[📣  ]',
@@ -170,21 +187,17 @@ function writeItemsToFiles(items: ItemWithAuthor[], outputDir: string, type: str
     }
 }
 
-function updateAuthors(items: ItemWithAuthor[]): void {
-    const authorsPath = './site/_data/authors.yml';
-    const authorsYaml = Deno.readTextFileSync(authorsPath);
-    const authors = safeLoad(authorsYaml) || {};
-    for (const item of items) {
-        const author = item.author;
-        if (!authors[author.login]) {
-            authors[author.login] = {
-                login: author.login,
-                url: author.url,
-                avatar: author.avatarUrl,
+function updateAuthors(newAuthors: Author[]): void {
+    for (const a of newAuthors) {
+        if (!authors[a.login]) {
+            authorsUpdated = true;
+            authors[a.login] = {
+                login: a.login,
+                url: a.url,
+                avatar: a.avatarUrl,
             };
         }
     }
-    Deno.writeTextFileSync(authorsPath, safeDump(authors));
 }
 
 function updateDiscussions(data: DiscussionsData) {
@@ -198,7 +211,7 @@ function updateDiscussions(data: DiscussionsData) {
     writeItemsToFiles(discussions, `./site/activity`, "discussion");
 
     // Update authors.yml (add/update author of last 10 discussions)
-    updateAuthors(discussions);
+    updateAuthors(discussions.map((discussion) => discussion.author));
 }
 
 function updatePullRequests(data: PullRequestData) {
@@ -212,7 +225,12 @@ function updatePullRequests(data: PullRequestData) {
     writeItemsToFiles(prs, `./site/activity`, "pullRequest");
 
     // Update authors.yml (add/update author of last 10 discussions)
-    updateAuthors(prs);
+    updateAuthors(prs.map((pr) => pr.author));
+}
+
+function updateEgcReps(data: TeamData) {
+    const members = data.data.organization.team.members.nodes;
+    updateAuthors(members);
 }
 
 // Usage:
@@ -231,3 +249,14 @@ if (prs.errors || !prs.data) {
     Deno.exit(1);
 }
 updatePullRequests(prs);
+
+const reps: TeamData = JSON.parse(runGraphQL('.github/graphql/query.egc.graphql'));
+if (reps.errors || !reps.data) {
+    console.error(reps);
+    Deno.exit(1);
+}
+updateEgcReps(reps);
+
+if (authorsUpdated) {
+    Deno.writeTextFileSync(authorsPath, safeDump(authors));
+}
