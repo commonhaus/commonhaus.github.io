@@ -1,0 +1,13 @@
+query {
+  organization(login: "commonhaus") {
+    team(slug: "cf-egc") {
+      members {
+        nodes {
+          login
+          url
+          avatarUrl
+        }
+      }
+    }
+  }
+}
