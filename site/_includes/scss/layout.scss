@@ -95,7 +95,7 @@ footer.site {
 @media(min-width: 800px) {
   main:not(.has-aside):not(.site-main) {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto var(--height-padding) auto;
   }
 }
 @media(min-width: 1000px) {
