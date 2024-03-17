@@ -1,12 +1,12 @@
 ---
 layout: layouts/base.vto
 ---
-{{> const activityTitle = page.data.tags.includes("notice")
-    ? 'Notice'
-    : page.data.tags.includes("vote") ? 'Votes' : 'Announcement' }}
-{{> const activityType = page.data.tags.includes("notice")
-    ? 'post notice'
-    : page.data.tags.includes("vote") ? 'vote' :'post announcements !notice' }}
+{{> const activityTitle = page.data.tags.includes("announcements")
+    ? 'Announcements'
+    : page.data.tags.includes("vote") ? 'Votes' : 'Notice' }}
+{{> const activityType = page.data.tags.includes("announcements")
+    ? 'announcements'
+    : page.data.tags.includes("vote") ? 'vote' :'notice !announcements !vote' }}
 {{ content }}
 
 <aside class="activity">
