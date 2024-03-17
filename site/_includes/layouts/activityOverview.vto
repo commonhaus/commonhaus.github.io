@@ -8,7 +8,7 @@ layout: layouts/baseIndex.vto
         Announcements
     </h2>
     <ul>
-    {{- for post of search.pages("post announcements !notice", "updated=desc", 5) }}
+    {{- for post of search.pages("announcements", "updated=desc", 5) }}
         <li class="archive">
             <time datetime="{{ post.date |> date('DATE') }}">{{ post.date |> date("dd MMM") }}</time>
             {{ post |> postLock }}
@@ -23,7 +23,7 @@ layout: layouts/baseIndex.vto
         Consensus Building (Notice)
     </h2>
     <ul>
-    {{- for post of search.pages("post notice", "updated=desc", 5) }}
+    {{- for post of search.pages("notice !announcements", "updated=desc", 5) }}
         <li class="archive">
             <time datetime="{{ post.date |> date('DATE') }}">{{ post.date |> date("dd MMM") }}</time>
             {{ post |> postLock }}
