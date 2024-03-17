@@ -8,7 +8,7 @@ cssclasses:
 
 The Commonhaus Foundation is dedicated to supporting the growth and stability of open-source projects through collaboration and innovation. Inspired by our foundational principles, we create a home for projects and communities.
 
-## Our Guiding Principles
+## Our guiding principles
 
 By embodying these principles, the Commonhaus Foundation aims to provide a nurturing home for open-source projects, where innovation is celebrated, collaboration is encouraged, and long-term success is achieved.
 
@@ -28,11 +28,11 @@ By embodying these principles, the Commonhaus Foundation aims to provide a nurtu
 
     We advocate for forward-looking strategies that ensure projects are not just successful today but continue to thrive and evolve. Through succession planning, mentorship, and strategic guidance, we support projects in building a legacy that lasts.
 
-## Our Mission
+## Our mission
 
 Empower a diverse community of developers, contributors, and users to create, maintain, and evolve open-source libraries and frameworks, ensuring long-term growth and stability through shared stewardship and community collaboration.
 
-## Our Vision
+## Our vision
 
 Cultivate a dynamic and inclusive ecosystem where open-source projects thrive on collaborative innovation, fostering a space for everyone to contribute without the complexities of traditional governance models.
 
@@ -79,13 +79,13 @@ Our project representatives play a pivotal role in the Commonhaus Foundation's [
 {{ /for }}
 </div>
 
-## Get Involved
+## Get involved
 
 The Commonhaus Foundation relies on the participation of a global community. Whether you're a developer, contributor, project leader, or simply passionate about open-source, there are many ways to contribute and make an impact. From joining discussions, contributing to projects, or participating in governance, your voice and contributions are valued here.
 
 Learn more about how you can become an active member of the Commonhaus Foundation and help shape the future of open-source innovation.
 
-[Join the Commonhaus Community](#join-the-community) | [Explore Our Projects](#explore-our-projects).
+[Join the Commonhaus Community](#join-the-community) 
 
 [cfc]: ../foundation/bylaws/3-cf-council.md
 [egc]: ../foundation/bylaws/3-cf-council.md#extended-governance-committee-egc
