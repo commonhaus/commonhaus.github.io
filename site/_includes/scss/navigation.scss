@@ -145,6 +145,46 @@ header.site {
           margin-top: 8px;
         }
       }
+
+      // height and top are set in JavaScript, see scroll-toggle.js,
+      // which sets the height to the window height minus the header height
+      // and toggles the no-scroll class on the body when the menu is showing
+      ul.top-level {
+        z-index: $z-index-submenu;
+        display: block;
+        position: fixed;
+        width: 100vw;
+        // height: set in scroll-toggle.js
+        // top: set in scroll-toggle.js
+        right: 0;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out, opacity 0.8s ease-out;
+        background-color: var(--bg-nav-submenu);
+
+        > li {
+          .entry {
+            @include content-pad;
+            display: block;
+            background-color: var(--bg-nav-submenu);
+            a,
+            svg {
+              color: var(--fg-nav-submenu);
+            }
+          }
+
+          li {
+            a {
+              display: block;
+              @include content-pad;
+            }
+            background-color: var(--bg-nav-submenu-alt);
+            &:not(:last-child) {
+              border-bottom: 1px solid var(--bg-nav-border);
+            }
+          }
+        }
+      }
     }
 
     #menu-toggle:checked {
@@ -160,22 +200,6 @@ header.site {
         transform: rotate(-405deg);
       }
     }
-    // height and top are set in JavaScript, see scroll-toggle.js,
-    // which sets the height to the window height minus the header height
-    // and toggles the no-scroll class on the body when the menu is showing
-    #menu-toggle ~ ul.top-level {
-      z-index: $z-index-submenu;
-      display: block;
-      position: fixed;
-      width: 100vw;
-      // height: set in scroll-toggle.js
-      // top: set in scroll-toggle.js
-      right: 0;
-      opacity: 0;
-      transform: translateX(100%);
-      transition: transform 0.3s ease-in-out, opacity 0.8s ease-out;
-      background-color: var(--bg-nav-submenu);
-    }
     #menu-toggle:checked ~ nav {
       z-index: $z-index-submenu;
     }
@@ -184,28 +208,6 @@ header.site {
       transform: translateX(0);
       transition: transform 0.3s ease-in-out;
       overflow-y: auto;
-      > li {
-        .entry {
-          @include content-pad;
-          display: block;
-          background-color: var(--bg-nav-submenu);
-          a,
-          svg {
-            color: var(--fg-nav-submenu);
-          }
-        }
-
-        li {
-          a {
-            display: block;
-            @include content-pad;
-          }
-          background-color: var(--bg-nav-submenu-alt);
-          &:not(:last-child) {
-            border-bottom: 1px solid var(--bg-nav-border);
-          }
-        }
-      }
     }
   }
 }
