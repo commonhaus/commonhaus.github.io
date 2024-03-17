@@ -10,6 +10,8 @@ The Commonhaus Foundation is dedicated to supporting the growth and stability of
 
 ## Our Guiding Principles
 
+By embodying these principles, the Commonhaus Foundation aims to provide a nurturing home for open-source projects, where innovation is celebrated, collaboration is encouraged, and long-term success is achieved.
+
 - **Honor project and community identity**
 
     We respect the unique identity of each project and its community, ensuring they retain their character and autonomy within the broader open-source ecosystem. Celebrating diversity and individuality, we empower projects to continue their development under their own vision and leadership.
@@ -25,8 +27,6 @@ The Commonhaus Foundation is dedicated to supporting the growth and stability of
 - **Encourage long-term thinking for sustained project impact**
 
     We advocate for forward-looking strategies that ensure projects are not just successful today but continue to thrive and evolve. Through succession planning, mentorship, and strategic guidance, we support projects in building a legacy that lasts.
-
-By embodying these principles, the Commonhaus Foundation aims to provide a nurturing home for open-source projects, where innovation is celebrated, collaboration is encouraged, and long-term success is achieved.
 
 ## Our Mission
 
