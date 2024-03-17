@@ -18,21 +18,16 @@ interface Author {
     login: string;
     url: string;
     avatar: string;
+    avatarAlt?: string;
     description?: string;
+    name?: string;
+    company?: string;
 }
-interface Councilor {
-    login: string;
-    url: string;
-    avatar: string;
+interface Councilor extends Author {
     termStart: number;
     role?: string;
-    description?: string;
 }
-interface ProjectRep {
-    login: string;
-    url: string;
-    avatar: string;
-    description?: string;
+interface ProjectRep extends Author {
     projectName: string;
     projectUrl: string;
 }
@@ -51,16 +46,11 @@ for(const item of cfcData) {
         continue;
     }
     const councilor: Councilor = {
-        login: author.login,
-        url: author.url,
-        avatar: author.avatar,
+        ...author,
         termStart: item['term-start'],
-    }
+    };
     if (item.role) {
         councilor.role = item.role;
-    }
-    if (author.description) {
-        councilor.description = author.description;
     }
     councilors.push(councilor);
 }
@@ -73,15 +63,10 @@ for(const item of prData) {
         continue;
     }
     const rep: ProjectRep = {
-        login: author.login,
-        url: author.url,
-        avatar: author.avatar,
+        ...author,
         projectName: item.project ? item.project : item.name,
         projectUrl: item.url,
-    }
-    if (author.description) {
-        rep.description = author.description;
-    }
+    };
     egc.push(rep);
 }
 

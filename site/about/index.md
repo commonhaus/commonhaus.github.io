@@ -41,21 +41,32 @@ Cultivate a dynamic and inclusive ecosystem where open-source projects thrive on
 Commonhaus Foundation [Councilors][cfc] represent community interests and ensure the foundation operates responsibly. Elected by CF Members, they serve as the voice of our community, prioritizing the CF community's interests in their decision-making.
 
 <div class="cards">
-{{ for councilor of page.data.councilors }}
+{{- for councilor of page.data.councilors }}
   <div class="card">
-    <img src="{{ councilor.avatar }}" alt="{{ councilor.login }}'s avatar" />
+    {{- if councilor.avatarAlt }}
+    <div class="avatar-flip">
+        <img class="avatar-front" src="{{ councilor.avatar }}" alt="{{ councilor.login }}'s avatar" />
+        <img class="avatar-back" src="{{ councilor.avatarAlt }}" alt="{{ councilor.login }}'s second avatar" />
+    {{- else }}
+    <div class="avatar">
+      <img src="{{ councilor.avatar }}" alt="{{ councilor.login }}'s avatar" />
+    {{- /if }}
+    </div>
     <div class="text-content">
       <h3><a href="{{ councilor.url }}">{{ councilor.login }}</a></h3>
       <div class="subhead">
-        {{ if councilor.termStart == 2023 }}Founder{{ if councilor.role }}, {{ /if }}{{ /if }}
-        {{ if councilor.role }}{{ councilor.role }}{{ /if }}</div>
-      {{ if councilor.description }}
-        <p>{{ councilor.description }}</p>
-      {{ /if }}
+        {{- if councilor.name }}{{ councilor.name }}<br />{{ /if -}}
+        {{- if councilor.termStart == 2023 }}Founder{{ if councilor.role }}, {{ /if }}{{ /if -}}
+        {{- if councilor.role }}{{ councilor.role }}{{ /if -}}
+      </div>
+      <p>
+        {{- if councilor.description }}{{ councilor.description }}
+        {{- else if councilor.company }}<br />{{ councilor.company }}{{ /if -}}
+      </p>
       <footer>Term start: {{ councilor.termStart }}</footer>
     </div>
   </div>
-{{ /for }}
+{{- /for }}
 </div>
 
 _Note: Founding councilors will stand for election as their terms expire._
@@ -65,18 +76,30 @@ _Note: Founding councilors will stand for election as their terms expire._
 Our project representatives play a pivotal role in the Commonhaus Foundation's [Extended Governance Committee][egc] (EGC), ensuring that the perspectives of each foundation project are represented in foundation-wide decisions.
 
 <div class="cards">
-{{ for representative of page.data.egc }}
+{{- for representative of page.data.egc }}
   <div class="card">
-    <img src="{{ representative.avatar }}" alt="{{ representative.login }}'s avatar" />
+    {{- if representative.avatarAlt }}
+    <div class="avatar-flip">
+      <img class="avatar-front" src="{{ representative.avatar }}" alt="{{ representative.login }}'s avatar" />
+      <img class="avatar-back" src="{{ representative.avatarAlt }}" alt="{{ representative.login }}'s second avatar" />
+    {{- else }}
+    <div class="avatar">
+      <img src="{{ representative.avatar }}" alt="{{ representative.login }}'s avatar" />
+    {{- /if }}
+    </div>
     <div class="text-content">
       <h3><a href="{{ representative.url }}">{{ representative.login }}</a></h3>
-      <div class="subhead"><a href="{{ representative.projectUrl }}">{{ representative.projectName }}</a></div>
-      {{ if representative.description }}
-        <p>{{ representative.description }}</p>
-      {{ /if }}
+      <div class="subhead">
+          {{- if representative.name }}{{ representative.name }}<br />{{ /if -}}
+          <a href="{{ representative.projectUrl }}">{{ representative.projectName }}</a>
+      </div>
+      <p>
+        {{- if representative.description }}{{ representative.description }}
+        {{- else if representative.company }}<br />{{ representative.company }}{{ /if -}}
+      </p>
     </div>
   </div>
-{{ /for }}
+{{- /for }}
 </div>
 
 ## Get involved
