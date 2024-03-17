@@ -9,6 +9,7 @@ interface CouncilContact {
     role?: string;
 }
 interface ProjectContact {
+    project?: string;
     name: string;
     url: string;
     'gh-id': string;
@@ -43,20 +44,20 @@ const councilors: Councilor[] = [];
 const egc: ProjectRep[] = [];
 
 const cfcData: CouncilContact[] = CONTACT_DATA['cf-council'] as CouncilContact[];
-for(const contact of cfcData) {
-    const author = AUTHOR_DATA[contact['gh-id']] as Author;
+for(const item of cfcData) {
+    const author = AUTHOR_DATA[item['gh-id']] as Author;
     if (!author) {
-        console.log("No author data for", contact['gh-id']);
+        console.log("No author data for", item['gh-id']);
         continue;
     }
     const councilor: Councilor = {
         login: author.login,
         url: author.url,
         avatar: author.avatar,
-        termStart: contact['term-start'],
+        termStart: item['term-start'],
     }
-    if (contact.role) {
-        councilor.role = contact.role;
+    if (item.role) {
+        councilor.role = item.role;
     }
     if (author.description) {
         councilor.description = author.description;
@@ -65,18 +66,18 @@ for(const contact of cfcData) {
 }
 
 const prData: ProjectContact[] = CONTACT_DATA['egc'] as ProjectContact[];
-for(const project of prData) {
-    const author = AUTHOR_DATA[project['gh-id']] as Author;
+for(const item of prData) {
+    const author = AUTHOR_DATA[item['gh-id']] as Author;
     if (!author) {
-        console.log("No author data for", project['gh-id']);
+        console.log("No author data for", item['gh-id']);
         continue;
     }
     const rep: ProjectRep = {
         login: author.login,
         url: author.url,
         avatar: author.avatar,
-        projectName: project.name,
-        projectUrl: project.url,
+        projectName: item.project ? item.project : item.name,
+        projectUrl: item.url,
     }
     if (author.description) {
         rep.description = author.description;
