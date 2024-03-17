@@ -24,6 +24,8 @@ interface Author {
     login: string;
     url: string;
     avatarUrl: string;
+    company?: string;
+    name?: string;
 }
 interface ItemWithAuthor {
     id: string;
@@ -196,6 +198,12 @@ function updateAuthors(newAuthors: Author[]): void {
                 url: a.url,
                 avatar: a.avatarUrl,
             };
+            if (a.name) {
+                authors[a.login].name = a.name;
+            }
+            if (a.company) {
+                authors[a.login].company = a.company;
+            }
         }
     }
 }
@@ -229,14 +237,21 @@ function updatePullRequests(data: PullRequestData) {
 }
 
 function updateEgcReps(data: TeamData) {
-    console.log(data);
     const members = data.data.organization.team.members.nodes;
     updateAuthors(members);
 }
 
+const reps: TeamData = JSON.parse(runGraphQL('.github/graphql/query.egc.graphql'));
+if (reps.errors || !reps.data) {
+    console.error(reps);
+    Deno.exit(1);
+}
+updateEgcReps(reps);
+
 // Usage:
 // First, use a deno task to download the last 10 discussions from GitHub > discussions.json
 // Parse the discussions.json file
+
 const discuss: DiscussionsData = JSON.parse(runGraphQL('.github/graphql/query.discussions.graphql'));
 if (discuss.errors || !discuss.data) {
     console.error(discuss);
@@ -250,13 +265,6 @@ if (prs.errors || !prs.data) {
     Deno.exit(1);
 }
 updatePullRequests(prs);
-
-const reps: TeamData = JSON.parse(runGraphQL('.github/graphql/query.egc.graphql'));
-if (reps.errors || !reps.data) {
-    console.error(reps);
-    Deno.exit(1);
-}
-updateEgcReps(reps);
 
 if (authorsUpdated) {
     Deno.writeTextFileSync(authorsPath, safeDump(authors));

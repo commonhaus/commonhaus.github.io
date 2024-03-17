@@ -199,28 +199,60 @@ main.site-main {
 }
 
 main.about {
+
   .cards {
+    @include content-align-y;
+
     flex-direction: row;
     flex-wrap: wrap; // Allow the cards to wrap onto multiple lines
     justify-content: space-between; // Distribute cards evenly in the container
+    align-items: flex-start; // Align items to the top
 
     .card {
-      max-width: 300px; // Set maximum width of each card
+      width: 200px;
+      max-width: 300px;
       flex-direction: row; // Make the image and text be side by side
       align-items: start; // Align items to the top
       gap: 1em; // Add some space between the image and text
 
-      img {
+      .avatar,
+      .avatar-flip {
         width: 75px; // Adjust as needed
         height: 75px; // Adjust as needed
-        border-radius: 50%; // This makes the image round
+        position: relative;
+      }
+      .avatar-flip {
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 33%; // This makes the image round
         object-fit: cover; // This ensures the image covers the whole area
+      }
+
+      .avatar-front, .avatar-back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+      }
+
+      .avatar-back {
+        transform: rotateY(180deg);
+      }
+
+      &:hover .avatar-flip {
+        transform: rotateY(180deg);
       }
 
       .text-content {
         align-items: flex-start;
       }
-      .subhead {
+
+      footer {
         font-size: var(--font-small);
       }
     }

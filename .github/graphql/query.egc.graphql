@@ -6,6 +6,8 @@ query {
           login
           url
           avatarUrl
+          company
+          name
         }
       }
     }
