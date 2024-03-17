@@ -186,9 +186,9 @@ header.site {
       overflow-y: auto;
       > li {
         .entry {
+          @include content-pad;
           display: block;
           background-color: var(--bg-nav-submenu);
-          @include content-pad;
           a,
           svg {
             color: var(--fg-nav-submenu);
@@ -196,7 +196,10 @@ header.site {
         }
 
         li {
-          @include content-pad;
+          a {
+            display: block;
+            @include content-pad;
+          }
           background-color: var(--bg-nav-submenu-alt);
           &:not(:last-child) {
             border-bottom: 1px solid var(--bg-nav-border);
