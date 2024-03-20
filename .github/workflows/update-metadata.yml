@@ -1,21 +1,16 @@
-name: update-activity-content
+name: update-metadata
 
 on:
-  push:
-    branches:
-      - 'main'
-    paths:
-      - '.github/*.ts'
-      - '.github/graphql/**'
-      - '_config.ts'
-      - 'deno.json'
-      - 'site/**'
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '47 21 * * 3'
 
   repository_dispatch:
   workflow_dispatch:
 
 permissions:
   contents: read
+
 env:
   GH_BOT_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
   GH_BOT_NAME: "GitHub Action"
@@ -51,30 +46,16 @@ jobs:
           git config user.name ${{ env.GH_BOT_NAME }}
           git config user.email ${{ env.GH_BOT_EMAIL }}
 
-      - name: Git Submodule Update
+      - name: Contact information update
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.WEB_REPO_READ }}
         run: |
-          git pull --recurse-submodules
-          git submodule update --init --remote --recursive
-          deno task lastmod
-
-          if git diff --quiet; then
-            echo "-- No changes -- "
-          else
-            git commit -am "🆙 Auto-update submodule references" && git push
-          fi
-
-      - name: Git Discussion Update
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          deno task activity
-          git add -A -- ./site/activity
+          deno task about
+          git add -A -- ./site/_data/about.yml
           if git diff --quiet HEAD; then
             echo "-- No changes -- "
           else
-            git commit -am "💬 Auto-update GH Activity" && git push
+            git commit -am "👥 Auto-update contact metadata" && git push
           fi
 
       - name: Sleep for 30 seconds (wait a bit before queueing the next job)

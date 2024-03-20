@@ -8,6 +8,7 @@ query {
           avatarUrl
           company
           name
+          bio
         }
       }
     }

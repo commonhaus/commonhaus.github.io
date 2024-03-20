@@ -7,6 +7,7 @@
     "serve": "deno task lume -s",
     "debug": "deno task attach -s",
 
+    "about": "deno run --allow-run=gh --allow-read=./.github/graphql,./site/_data/about.yml --allow-write=./site/_data/about.yml ./.github/about.ts",
     "activity": "deno run --allow-run=gh --allow-read=./.github/graphql,./site/activity,./site/_data/authors.yml --allow-write=./site/activity,./site/_data/authors.yml ./.github/activities.ts",
     "lastmod": "deno run --allow-run=git,gh --allow-read=. --allow-write=./site/_includes/foundation.json ./.github/lastmod.ts",
     "votes": "deno run --allow-run=gh --allow-read=./.github/graphql,./site/votes --allow-write=./site/votes ./.github/votes.ts",

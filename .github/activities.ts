@@ -84,18 +84,6 @@ interface PinnedItemData {
         };
     };
 }
-interface TeamData {
-    errors?: Error[];
-    data: {
-        organization: {
-            team: {
-                members: {
-                    nodes: Author[];
-                };
-            };
-        };
-    };
-}
 
 const authorsPath = './site/_data/authors.yml';
 const authorsYaml = Deno.readTextFileSync(authorsPath);
@@ -235,18 +223,6 @@ function updatePullRequests(data: PullRequestData) {
     // Update authors.yml (add/update author of last 10 discussions)
     updateAuthors(prs.map((pr) => pr.author));
 }
-
-function updateEgcReps(data: TeamData) {
-    const members = data.data.organization.team.members.nodes;
-    updateAuthors(members);
-}
-
-const reps: TeamData = JSON.parse(runGraphQL('.github/graphql/query.egc.graphql'));
-if (reps.errors || !reps.data) {
-    console.error(reps);
-    Deno.exit(1);
-}
-updateEgcReps(reps);
 
 // Usage:
 // First, use a deno task to download the last 10 discussions from GitHub > discussions.json
