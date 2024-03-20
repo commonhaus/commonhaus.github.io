@@ -1,48 +1,18 @@
-commonhaus-bot:
-  login: commonhaus-bot
-  url: 'https://github.com/commonhaus-bot'
-  avatar: 'https://avatars.githubusercontent.com/u/156364140?v=4'
-aalmiray:
-  login: aalmiray
-  url: 'https://github.com/aalmiray'
-  avatar: >-
-    https://avatars.githubusercontent.com/u/13969?u=6a649c057ec7a4fb3acbd57899cc03c5f7c46819&v=4
-  name: Andres Almiray
-maxandersen:
-  login: maxandersen
-  url: 'https://github.com/maxandersen'
-  avatar: 'https://avatars.githubusercontent.com/u/54129?v=4'
-  name: Max Rydahl Andersen
-  company: Red Hat
-evanchooly:
-  login: evanchooly
-  url: 'https://github.com/evanchooly'
-  avatar: 'https://avatars.githubusercontent.com/u/195021?v=4'
-  name: Justin Lee
-  company: '@datadog'
-nmcl:
-  login: nmcl
-  url: 'https://github.com/nmcl'
-  avatar: 'https://avatars.githubusercontent.com/u/580667?v=4'
-  name: Mark Little
-  company: Red Hat
 ebullient:
   login: ebullient
   url: 'https://github.com/ebullient'
   avatar: >-
     https://avatars.githubusercontent.com/u/808713?u=8c50c6169b230fc62777f6910f6669b753ae95a8&v=4
-  avatarAlt: >-
-    https://www.ebullient.dev/images/devoxx-uk-2022-tiny.jpeg
-  name: Erin Schnabel
-  company: Red Hat
-cealsair:
-  login: cealsair
-  url: 'https://github.com/cealsair'
+evanchooly:
+  login: evanchooly
+  url: 'https://github.com/evanchooly'
+  avatar: 'https://avatars.githubusercontent.com/u/195021?v=4'
+aalmiray:
+  login: aalmiray
+  url: 'https://github.com/aalmiray'
   avatar: >-
-    https://avatars.githubusercontent.com/u/25405698?u=0d403bf8e726802918d95b99445bd15e5db9336e&v=4
-  name: Cesar
-kenfinnigan:
-  login: kenfinnigan
-  url: 'https://github.com/kenfinnigan'
-  avatar: >-
-    https://avatars.githubusercontent.com/u/441240?u=aea870e6cad6edfff45e4fc1603b4531c8f57b44&v=4
+    https://avatars.githubusercontent.com/u/13969?u=6a649c057ec7a4fb3acbd57899cc03c5f7c46819&v=4
+maxandersen:
+  login: maxandersen
+  url: 'https://github.com/maxandersen'
+  avatar: 'https://avatars.githubusercontent.com/u/54129?v=4'

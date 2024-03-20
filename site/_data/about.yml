@@ -1,0 +1,62 @@
+aalmiray:
+  login: aalmiray
+  url: 'https://github.com/aalmiray'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/13969?u=6a649c057ec7a4fb3acbd57899cc03c5f7c46819&v=4
+  company: null
+  name: Andres Almiray
+  bio: "I code for fun and help others in the process. Java Champion. Co-founder of Hackergarten & Hack.Commit.Push. Creator of @jreleaser \U0001F680"
+maxandersen:
+  login: maxandersen
+  url: 'https://github.com/maxandersen'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/54129?v=4'
+  company: Red Hat
+  name: Max Rydahl Andersen
+  bio: >-
+    Danish guy enjoying working on open source software. Making things happen at
+    Red Hat.
+evanchooly:
+  login: evanchooly
+  url: 'https://github.com/evanchooly'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/195021?v=4'
+  company: '@datadog'
+  name: Justin Lee
+  bio: >-
+    Java Champion. Kotlin fanatic. Bit twiddler. New Yorker. Senior Software
+    Engineer at @datadog
+nmcl:
+  login: nmcl
+  url: 'https://github.com/nmcl'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/580667?v=4'
+  company: Red Hat JBoss
+  name: Mark Little
+  bio: >-
+    I lead the technical direction, research, and development for Red Hat JBoss
+    Middleware.
+ebullient:
+  login: ebullient
+  url: 'https://github.com/ebullient'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/808713?u=8c50c6169b230fc62777f6910f6669b753ae95a8&v=4
+  company: Red Hat
+  name: Erin Schnabel
+  bio: "Distinguished Engineer and maker of things @ Red Hat. \r\nFormer @IBM."
+cealsair:
+  login: cealsair
+  url: 'https://github.com/cealsair'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/25405698?u=0d403bf8e726802918d95b99445bd15e5db9336e&v=4
+  company: null
+  name: Cesar
+  bio: ''
+commonhaus-bot:
+  login: commonhaus-bot
+  url: 'https://github.com/commonhaus-bot'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/156364140?u=434747bc94bd694e66bfdb283f4c944dc2cf7e53&v=4
+  company: '@commonhaus'
+  name: Commonhaus Bot
+  bio: >-
+    Automating innovation and fostering collaboration in the open-source
+    community. Here to streamline processes and support the Commonhaus
+    Foundation's mission. 
