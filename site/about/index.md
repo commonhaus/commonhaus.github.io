@@ -45,25 +45,25 @@ Commonhaus Foundation [Councilors][cfc] represent community interests and ensure
   <div class="card">
     {{- if councilor.avatarAlt }}
     <div class="avatar-flip">
-        <img class="avatar-front" src="{{ councilor.avatar }}" alt="{{ councilor.login }}'s avatar" />
+        <img class="avatar-front" src="{{ councilor.avatarUrl }}" alt="{{ councilor.login }}'s avatar" />
         <img class="avatar-back" src="{{ councilor.avatarAlt }}" alt="{{ councilor.login }}'s second avatar" />
     {{- else }}
     <div class="avatar">
-      <img src="{{ councilor.avatar }}" alt="{{ councilor.login }}'s avatar" />
+      <img src="{{ councilor.avatarUrl }}" alt="{{ councilor.login }}'s avatar" />
     {{- /if }}
     </div>
     <div class="text-content">
       <h3><a href="{{ councilor.url }}">{{ councilor.login }}</a></h3>
       <div class="subhead">
         {{- if councilor.name }}{{ councilor.name }}<br />{{ /if -}}
-        {{- if councilor.termStart == 2023 }}Founder{{ if councilor.role }}, {{ /if }}{{ /if -}}
+        {{- if councilor['term-start'] == 2023 }}Founder{{ if councilor.role }}, {{ /if }}{{ /if -}}
         {{- if councilor.role }}{{ councilor.role }}{{ /if -}}
       </div>
       <p>
-        {{- if councilor.description }}{{ councilor.description }}
+        {{- if councilor.bio }}{{ councilor.bio |> md }}
         {{- else if councilor.company }}<br />{{ councilor.company }}{{ /if -}}
       </p>
-      <footer>Term start: {{ councilor.termStart }}</footer>
+      <footer>Term start: {{ councilor['term-start'] }}</footer>
     </div>
   </div>
 {{- /for }}
@@ -80,11 +80,11 @@ Our project representatives play a pivotal role in the Commonhaus Foundation's [
   <div class="card">
     {{- if representative.avatarAlt }}
     <div class="avatar-flip">
-      <img class="avatar-front" src="{{ representative.avatar }}" alt="{{ representative.login }}'s avatar" />
+      <img class="avatar-front" src="{{ representative.avatarUrl }}" alt="{{ representative.login }}'s avatar" />
       <img class="avatar-back" src="{{ representative.avatarAlt }}" alt="{{ representative.login }}'s second avatar" />
     {{- else }}
     <div class="avatar">
-      <img src="{{ representative.avatar }}" alt="{{ representative.login }}'s avatar" />
+      <img src="{{ representative.avatarUrl }}" alt="{{ representative.login }}'s avatar" />
     {{- /if }}
     </div>
     <div class="text-content">
@@ -94,7 +94,7 @@ Our project representatives play a pivotal role in the Commonhaus Foundation's [
           <a href="{{ representative.projectUrl }}">{{ representative.projectName }}</a>
       </div>
       <p>
-        {{- if representative.description }}{{ representative.description }}
+        {{- if representative.bio }}{{ representative.bio }}
         {{- else if representative.company }}<br />{{ representative.company }}{{ /if -}}
       </p>
     </div>
@@ -108,7 +108,7 @@ The Commonhaus Foundation relies on the participation of a global community. Whe
 
 Learn more about how you can become an active member of the Commonhaus Foundation and help shape the future of open-source innovation.
 
-[Join the Commonhaus Community](#join-the-community) 
+[Join the Commonhaus Community](#join-the-community)
 
 [cfc]: ../foundation/bylaws/3-cf-council.md
 [egc]: ../foundation/bylaws/3-cf-council.md#extended-governance-committee-egc

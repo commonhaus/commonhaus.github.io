@@ -43,21 +43,21 @@ cssclasses:
   </div>
   <div class="cards">
     <div class="card">
-      <img src="/images/home_homeburst.svg" aria-hidden="true">
+      <img src="/images/home_homeburst.svg" aria-hidden="true" alt="a house">
       <div class="text-content">
         <h3>Stable, long-term home</h3>
         <p>CF acknowledges the evolving nature of projects. By providing a neutral home, we offer an anchor supporting growth over time. We're committed to ensuring smooth transitions and fostering long-term resilience with thoughtful succession planning.</p>
       </div>
     </div>
     <div class="card">
-      <img src="/images/home_minimal.svg" aria-hidden="true">
+      <img src="/images/home_minimal.svg" aria-hidden="true" alt="a compressed block representing minimal/reduced overhead">
       <div class="text-content">
         <h3>Minimum viable governance</h3>
         <p>Adhering to a "community-first" model, CF offers foundational support that respects project autonomy, ensuring governance is effective without being restrictive.</p>
       </div>
     </div>
     <div class="card">
-      <img src="/images/home_access.svg" aria-hidden="true">
+      <img src="/images/home_access.svg" aria-hidden="true" alt="A piggy bank with a sprouting plant">
       <div class="text-content">
         <h3>Streamlined access to funding</h3>
         <p>As a fiscal host with connections to platforms like GitHub Sponsors and OpenCollective, CF simplifies the process of securing funding, providing your project with the resources it needs for sustainability and growth.</p>
@@ -80,7 +80,7 @@ cssclasses:
       </div>
     </div> -->
     <!-- Other Project Cards -->
-    {{- for project of projects.filter((p) => !p.draft) }}
+    {{- for project of page.data.listProjects() }}
     <div class="card">
       <span class="logo">
       {{ if project.logo }}<img src="{{ project.logo }}" aria-hidden="true"{{ if project.wordmark }} class="wordmark"{{ /if }}>{{ /if }}
@@ -88,7 +88,7 @@ cssclasses:
       <div class="text-content">
         <h3>{{ project.name }}</h3>
         <p>{{ project.description }}</p>
-        <a href="{{ project.link }}" class="button">Learn More</a>
+        <a href="{{ project.home }}" class="button">Learn More</a>
       </div>
     </div>
     {{- /for }}
