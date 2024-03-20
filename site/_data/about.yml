@@ -60,3 +60,11 @@ commonhaus-bot:
     Automating innovation and fostering collaboration in the open-source
     community. Here to streamline processes and support the Commonhaus
     Foundation's mission. 
+kenfinnigan:
+  login: kenfinnigan
+  url: 'https://github.com/kenfinnigan'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/441240?u=aea870e6cad6edfff45e4fc1603b4531c8f57b44&v=4
+  company: '@lumigo-io '
+  name: Ken Finnigan
+  bio: 'Engineer, author, amateur genealogist. @lumigo-io. Former: Workday, Red Hat'
