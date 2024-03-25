@@ -31,31 +31,46 @@ nav.index {
 }
 
 footer.site {
-  @include content-pad();
   color: var(--fg-navigation);
   background-color: var(--bg-navigation-bottom);
 
   z-index: $z-index-footer;
   font-size: var(--f-font-size);
-  .footer-copyright {
-    flex-basis: 100%;
+  a {
+    color: var(--fg-navigation);
   }
-
-  ol {
+  ul, ol {
     display: flex;
     flex-direction: row;
   }
   li {
     display: inline;
-
-    &:not(:last-of-type)::after {
-      content: "\00a0|\00a0";
+  }
+  ul.footer-links li:not(:last-of-type)::after {
+    content: "\00a0\00a0";
+  }
+  .footer-connect {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      font-size: var(--font-size);
+    }
+    ul {
+      gap: .5em;
+    }
+    svg {
+      height: 18px;
     }
   }
-  a {
-    color: var(--fg-navigation);
+  .footer-links {
+    flex-wrap: wrap;
   }
 }
+
+
 
 header.site {
   color: var(--fg-navigation);

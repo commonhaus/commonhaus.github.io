@@ -43,11 +43,6 @@ main {
 }
 footer.site {
   @include content-pad();
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: .5em;
 }
 
 @media(min-width: 350px) {
