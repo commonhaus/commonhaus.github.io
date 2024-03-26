@@ -319,6 +319,7 @@ header.site {
           }
           &:hover {
             background-color: var(--bg-nav-submenu-alt);
+            border-radius: 0 0 5px 5px;
           }
         }
       }
