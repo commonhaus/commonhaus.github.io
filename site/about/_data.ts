@@ -84,6 +84,7 @@ for(const item of augmentedRepData) {
     }
     const rep: ProjectRep = {
         ...user,
+        ...item,
         projectName: project.name,
         projectUrl: project.home,
     };
