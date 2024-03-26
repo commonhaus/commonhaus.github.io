@@ -153,6 +153,11 @@ site
     }))
     .use(sass({
         includes: "_includes/scss",
+        format: "compressed",
+        options: {
+            sourceMap: false,
+            sourceMapIncludeSources: true,
+        }
     }))
     .use(sitemap({
         query: "metas.robots!=false",
