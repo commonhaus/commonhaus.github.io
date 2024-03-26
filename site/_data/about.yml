@@ -48,7 +48,9 @@ cealsair:
     https://avatars.githubusercontent.com/u/25405698?u=0d403bf8e726802918d95b99445bd15e5db9336e&v=4
   company: null
   name: Cesar
-  bio: ''
+  bio: >-
+    Senior Developer Advocate @ GitLab. Former @ Red Hat, IBM, Oracle, BEA
+    Systems, TIBCO, Lucent Technologies, AT&T Bell Labs. 
 commonhaus-bot:
   login: commonhaus-bot
   url: 'https://github.com/commonhaus-bot'
@@ -68,3 +70,19 @@ kenfinnigan:
   company: '@lumigo-io '
   name: Ken Finnigan
   bio: 'Engineer, author, amateur genealogist. @lumigo-io. Former: Workday, Red Hat'
+cowtowncoder:
+  login: cowtowncoder
+  url: 'https://github.com/cowtowncoder'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/55065?u=fdce6737a39cbda5176c8aa3bda56c2bf95190f0&v=4
+  company: Fasterxml.com
+  name: Tatu Saloranta
+  bio: 'Java Champion, OSS tinkerer, probably best known as "Dr Jackson".'
+jkschneider:
+  login: jkschneider
+  url: 'https://github.com/jkschneider'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/1697736?u=e30dd29d0621d14d9e2ffe24e79fd8ce908f884b&v=4
+  company: '@openrewrite '
+  name: Jonathan Schnéider
+  bio: 'co-founder/CEO @ Moderne (https://moderne.io).'
