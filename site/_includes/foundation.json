@@ -485,5 +485,22 @@
       "legal"
     ],
     "genUrl": "/agreements/bootstrapping/2024-03-25-bootstrapping-jackson.html"
+  },
+  "agreements/bootstrapping/2024-03-25-bootstrapping-openrewrite.md": {
+    "date": "2024-03-26T02:24:22.000Z",
+    "srcPath": "agreements/bootstrapping/2024-03-25-bootstrapping-openrewrite.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-03-25-bootstrapping-openrewrite.md",
+    "type": "submodule",
+    "layout": "layouts/policies.vto",
+    "cssclasses": [
+      "bylaws",
+      "has-aside"
+    ],
+    "tags": [
+      "policies",
+      "legal"
+    ],
+    "genUrl": "/agreements/bootstrapping/2024-03-25-bootstrapping-openrewrite.html"
   }
 }
