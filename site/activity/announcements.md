@@ -2,6 +2,6 @@
 title: Announcements
 layout: layouts/activityArchive.vto
 indexId: announcements
-indexQuery: "post announcements !notice"
+indexQuery: "announcements"
 indexName: Announcements
 ---
