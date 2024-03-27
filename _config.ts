@@ -212,6 +212,27 @@ site.preprocess(['.md'], (pages) => {
             return Object.values(PROJECT_DATA)
                 .filter((project) => !project.draft);
         }
+        page.data.archiveByYear = () => {
+            if (!page.data.indexQuery) {
+                return [];
+            }
+            // Group posts matching the given query by year
+            const allPosts = site.search.pages(page.data.indexQuery, "date=desc");
+             const postsByYear: Record<string, Data[]> = {};
+            if (allPosts.length > 0) {
+                allPosts.forEach((post) => {
+                    const year = new Date(post.date).getFullYear();
+                    if (!postsByYear[year]) {
+                        postsByYear[year] = [];
+                    }
+                    postsByYear[year].push(post);
+                });
+            }
+            return {
+                years: Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a)),
+                posts: postsByYear
+            };
+        }
     }
 });
 
