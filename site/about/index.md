@@ -108,7 +108,7 @@ The Commonhaus Foundation relies on the participation of a global community. Whe
 
 Learn more about how you can become an active member of the Commonhaus Foundation and help shape the future of open-source innovation.
 
-[Join the Commonhaus Community](#join-the-community)
+[Join the Commonhaus Community](../foundation/COMMUNICATION.md)
 
 [cfc]: ../foundation/bylaws/3-cf-council.md
 [egc]: ../foundation/bylaws/3-cf-council.md#extended-governance-committee-egc

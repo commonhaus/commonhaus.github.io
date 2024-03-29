@@ -12,7 +12,7 @@ cssclasses:
     <p>
       Explore ways to contribute to, and benefit from, our collective endeavor. Your journey toward making a meaningful impact starts here.
     </p>
-    <p class="button-container"><button>Get involved</button></p>
+    <p class="button-container"><a href="foundation/COMMUNICATION.md" class="button">Get involved</a></p>
   </section>
 </div>
 
