@@ -78,7 +78,8 @@ a[href^="#fn"]:hover {
 
 // Buttons
 
-button {
+button,
+a.button {
   font-size: var(--font-size);
   padding: 0.5em 1em;
   border: 1px solid var(--button-border-color);
@@ -89,7 +90,9 @@ button {
 
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
-}
-button:hover {
-  background-color: var(--button-bg-color-hover);
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--button-bg-color-hover);
+  }
 }
