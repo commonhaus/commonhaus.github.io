@@ -57,7 +57,7 @@ footer.site {
   body {
     --logo-height: 50px;
     --header-height: 50px;
-    --width-padding: 3em;
+    --width-padding: 2em;
   }
 }
 @media(min-width: 600px) {
@@ -85,6 +85,11 @@ footer.site {
         }
       }
     }
+  }
+}
+@media(min-width: 700px) {
+  body {
+    --width-padding: 3em;
   }
 }
 @media(min-width: 800px) {

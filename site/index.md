@@ -7,10 +7,10 @@ cssclasses:
 ---
 <div class="hero">
   <section class="text">
-    <h1>Nurture projects in a community that evolves together</h1>
-    <div class="subhead">Join a vibrant open-source ecosystem where flexibility and collaboration drive mutual growth for projects and their communities.</div>
+    <h1>Building your open-source project's forever home</h1>
+    <div class="subhead">We are a non-profit organization dedicated to the sustainability of open-source libraries and frameworks.</div>
     <p>
-      Explore ways to contribute to, and benefit from, our collective endeavor. Your journey toward making a meaningful impact starts here.
+      Explore ways to contribute to and grow with our collective endeavor. Your journey toward making a meaningful impact starts here.
     </p>
     <p class="button-container"><a href="foundation/COMMUNICATION.md" class="button">Get involved</a></p>
   </section>
@@ -46,21 +46,21 @@ cssclasses:
       <img src="/images/home_homeburst.svg" aria-hidden="true" alt="a house">
       <div class="text-content">
         <h3>Stable, long-term home</h3>
-        <p>CF acknowledges the evolving nature of projects. By providing a neutral home, we offer an anchor supporting growth over time. We're committed to ensuring smooth transitions and fostering long-term resilience with thoughtful succession planning.</p>
+        <p>We acknowledge the evolving nature of projects. By providing a neutral home, we offer an anchor supporting growth over time. We're committed to ensuring smooth transitions and fostering long-term project health with thoughtful succession planning.</p>
       </div>
     </div>
     <div class="card">
       <img src="/images/home_minimal.svg" aria-hidden="true" alt="a compressed block representing minimal/reduced overhead">
       <div class="text-content">
         <h3>Minimum viable governance</h3>
-        <p>Adhering to a "community-first" model, CF offers foundational support that respects project autonomy, ensuring governance is effective without being restrictive.</p>
+        <p>Adhering to a "community-first" model, we offer support that respects project autonomy, ensuring governance is effective without being restrictive.</p>
       </div>
     </div>
     <div class="card">
       <img src="/images/home_access.svg" aria-hidden="true" alt="A piggy bank with a sprouting plant">
       <div class="text-content">
         <h3>Streamlined access to funding</h3>
-        <p>As a fiscal host with connections to platforms like GitHub Sponsors and OpenCollective, CF simplifies the process of securing funding, providing your project with the resources it needs for sustainability and growth.</p>
+        <p>As a fiscal host with connections to platforms like GitHub Sponsors and OpenCollective, we simplify the process of securing funding, providing your project with the resources it needs for sustainability and growth.</p>
       </div>
     </div>
   </div>
