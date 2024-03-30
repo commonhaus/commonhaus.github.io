@@ -7,12 +7,9 @@ cssclasses:
 ---
 <div class="hero">
   <section class="text">
-    <h1>Building your open-source project's forever home</h1>
+    <h1>Building a forever home for open-source projects</h1>
     <div class="subhead">We are a non-profit organization dedicated to the sustainability of open-source libraries and frameworks.</div>
-    <p>
-      Explore ways to contribute to and grow with our collective endeavor. Your journey toward making a meaningful impact starts here.
-    </p>
-    <p class="button-container"><a href="foundation/COMMUNICATION.md" class="button">Get involved</a></p>
+    <p class="button-container"><a href="foundation/COMMUNICATION.md" class="button">Build with us</a></p>
   </section>
 </div>
 
@@ -88,7 +85,7 @@ cssclasses:
       <div class="text-content">
         <h3>{{ project.name }}</h3>
         <p>{{ project.description }}</p>
-        <a href="{{ project.home }}" class="button">Learn More</a>
+        <a href="{{ project.home }}">Learn More</a>
       </div>
     </div>
     {{- /for }}
