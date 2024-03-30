@@ -1,7 +1,7 @@
 ---
 templateEngine: [vto]
 layout: layouts/base.vto
-title: Welcome!
+title: Building a forever home for open-source projects
 cssclasses: 
 - site-main
 ---
