@@ -6,7 +6,7 @@ cssclasses:
 - about
 ---
 
-The Commonhaus Foundation champions the growth and stability of open-source projects. We foster a space where developers, contributors, and users collaborate and support each other, ensuring the sustainable development of open-source libraries and frameworks.
+The Commonhaus Foundation champions the growth and stability of open-source projects by fostering a community where developers, contributors, and users support each other. Together, we ensure the sustainable development of essential open-source libraries and frameworks.
 
 ## Our guiding principles
 
@@ -35,6 +35,10 @@ We want to empower a diverse community of developers, contributors, and users to
 We envision a welcoming ecosystem where open-source projects grow through collaboration and mutual support, simplifying participation for all by moving beyond conventional governance hurdles.
 
 We prioritize **Application Frameworks** and **Libraries** that are critical for developers. We support self-governing, code-centric projects, steering clear of specifications and standards debates to focus on tangible outcomes.
+
+## Community and sponsorship
+
+Our doors are open to everyone passionate about open-source innovation. We invite all individuals, not just code contributors, to participate and help shape our organization. Our [Bylaws][] detail membership and governance, emphasizing collaboration, diverse perspectives, and advisory input from our [Advisory Board][cfab] to align sponsorship with community interests.
 
 ## Current Councilors
 
@@ -110,5 +114,7 @@ Learn more about how you can become an active member of the Commonhaus Foundatio
 
 [Join the Commonhaus Community](../foundation/COMMUNICATION.md)
 
+[Bylaws]: ../foundation/bylaws/0-preface.md
+[cfab]: ../foundation/bylaws/4-cf-advisory-board.md
 [cfc]: ../foundation/bylaws/3-cf-council.md
 [egc]: ../foundation/bylaws/3-cf-council.md#extended-governance-committee-egc
