@@ -7,6 +7,8 @@ about:
     children:
       - title: About Us
         href: /about
+      - title: Our Projects
+        href: /#our-projects
       - title: Governance
         href: /about/governance.html
       - title: Foundation Bylaws
