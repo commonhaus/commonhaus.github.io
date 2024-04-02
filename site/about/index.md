@@ -6,7 +6,7 @@ cssclasses:
 - about
 ---
 
-The Commonhaus Foundation is dedicated to supporting the growth and stability of open-source projects through collaboration and innovation. Inspired by our foundational principles, we create a home for projects and communities.
+The Commonhaus Foundation champions the growth and stability of open-source projects. We foster a space where developers, contributors, and users collaborate and support each other, ensuring the sustainable development of open-source libraries and frameworks.
 
 ## Our guiding principles
 
@@ -14,7 +14,7 @@ By embodying these principles, the Commonhaus Foundation aims to provide a nurtu
 
 - **Honor project and community identity**
 
-    We respect the unique identity of each project and its community, ensuring they retain their character and autonomy within the broader open-source ecosystem. Celebrating diversity and individuality, we empower projects to continue their development under their own vision and leadership.
+    We celebrate the distinctiveness of each project and its community, and respect their right to evolve according to their own vision and leadership.
 
 - **Offer guidance and support instead of imposing mandates**
 
@@ -34,7 +34,7 @@ Empower a diverse community of developers, contributors, and users to create, ma
 
 ## Our vision
 
-Cultivate a dynamic and inclusive ecosystem where open-source projects thrive on collaborative innovation, fostering a space for everyone to contribute without the complexities of traditional governance models.
+Create a welcoming ecosystem where open-source projects grow through collaboration and mutual support, simplifying participation for all by moving beyond conventional governance hurdles.
 
 ## Current Councilors
 
