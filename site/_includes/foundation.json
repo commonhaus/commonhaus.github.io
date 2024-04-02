@@ -502,5 +502,22 @@
       "legal"
     ],
     "genUrl": "/agreements/bootstrapping/2024-03-25-bootstrapping-openrewrite.html"
+  },
+  "agreements/bootstrapping/2024-04-02-bootstrapping-hibernate.md": {
+    "date": "2024-04-02T13:12:36.000Z",
+    "srcPath": "agreements/bootstrapping/2024-04-02-bootstrapping-hibernate.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-04-02-bootstrapping-hibernate.md",
+    "type": "submodule",
+    "layout": "layouts/policies.vto",
+    "cssclasses": [
+      "bylaws",
+      "has-aside"
+    ],
+    "tags": [
+      "policies",
+      "legal"
+    ],
+    "genUrl": "/agreements/bootstrapping/2024-04-02-bootstrapping-hibernate.html"
   }
 }
