@@ -28,13 +28,13 @@ By embodying these principles, the Commonhaus Foundation aims to provide a nurtu
 
     We advocate for forward-looking strategies that ensure projects are not just successful today but continue to thrive and evolve. Through succession planning, mentorship, and strategic guidance, we support projects in building a legacy that lasts.
 
-## Our mission
+## Our mission, vision and focus
 
-Empower a diverse community of developers, contributors, and users to create, maintain, and evolve open-source libraries and frameworks, ensuring long-term growth and stability through shared stewardship and community collaboration.
+We want to empower a diverse community of developers, contributors, and users to create, maintain, and evolve open-source libraries and frameworks, ensuring long-term growth and stability through shared stewardship and community collaboration.
 
-## Our vision
+We envision a welcoming ecosystem where open-source projects grow through collaboration and mutual support, simplifying participation for all by moving beyond conventional governance hurdles.
 
-Create a welcoming ecosystem where open-source projects grow through collaboration and mutual support, simplifying participation for all by moving beyond conventional governance hurdles.
+We prioritize **Application Frameworks** and **Libraries** that are critical for developers. We support self-governing, code-centric projects, steering clear of specifications and standards debates to focus on tangible outcomes.
 
 ## Current Councilors
 
