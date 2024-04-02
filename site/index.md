@@ -16,7 +16,9 @@ cssclasses:
 <!-- not hero -->
 
 <section class="why">
-  <h2>We want projects to succeed on their own terms</h2>
+  <h2 id="succeed-on-your-terms" tabindex="-1">
+    <a class="header-anchor" href="#succeed-on-your-terms">We want projects to succeed on their own terms</a>
+  </h2>
   <div class="text">
     <p>
       At the Commonhaus Foundation (CF), we're committed to creating a collaborative environment that nurtures the growth and sustainability of projects and their communities.
@@ -35,7 +37,9 @@ cssclasses:
 
 <section class="what">
   <div>
-    <h2>What sets Commonhaus apart</h2>
+    <h2 id="what-sets-commonhaus-apart" tabindex="-1">
+      <a class="header-anchor" href="#what-sets-commonhaus-apart">What sets Commonhaus apart</a>
+    </h2>
     <p>Inspired by the <a href="./codehaus.md">legacy of Codehaus</a>, the Commonhaus Foundation offers a balanced approach to governance and support, designed for the unique needs of established open-source projects.</p>
   </div>
   <div class="cards">
@@ -66,7 +70,9 @@ cssclasses:
 <hr />
 
 <section class="projects">
-  <h2>Our Projects</h2>
+  <h2 id="our-projects" tabindex="-1">
+    <a class="header-anchor" href="#our-projects">Our Projects</a>
+  </h2>
   <div class="cards">
     <!-- Highlighted Project Card -->
     <!-- <div class="card featured">
