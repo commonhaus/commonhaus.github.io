@@ -10,6 +10,7 @@ metas:
 Lorem **ipsum** dolor *sit* amet, ***consectetur*** adipiscing elit, sed do eiusmod tempor ==incididunt ut labore== et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. jiodsa jiowjeiwq
 
 ***Strong emphasis***
+
 - With some *emphasis*
 - And **strength**
 - And ~~strikethrough~~
@@ -114,10 +115,10 @@ Lorem **ipsum** dolor *sit* amet, ***consectetur*** adipiscing elit, sed do eius
 
 ## Vote status badges
 
-![](/votes/vote-closed.svg)
+![done](/votes/vote-closed.svg)
 
-![](/votes/vote-progress.svg)
+![progess](/votes/vote-progress.svg)
 
-![](/votes/vote-quorum.svg)
+![quorum](/votes/vote-quorum.svg)
 
-![](/votes/vote-unknown.svg)
+![unknown](/votes/vote-unknown.svg)
