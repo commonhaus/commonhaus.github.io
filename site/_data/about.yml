@@ -86,3 +86,11 @@ jkschneider:
   company: '@openrewrite '
   name: Jonathan Schnéider
   bio: 'co-founder/CEO @ Moderne (https://moderne.io).'
+gavinking:
+  login: gavinking
+  url: 'https://github.com/gavinking'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/579974?u=2053a5f4ed0ddd89b2f7de04d7ea64c386fc619d&v=4
+  company: Red Hat
+  name: Gavin King
+  bio: "Distinguished Engineer at IBM / Red Hat.\r\n\r\nCreator of @Hibernate, @cdi-spec, and @ceylon.\r\n\r\nWorking on @jakartaee Persistence and Data specifications."
