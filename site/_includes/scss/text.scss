@@ -1,7 +1,8 @@
+@use 'index' as *;
 @use 'fonts';
 
 body {
-  --button-border-radius: 6px;
+  --button-border-radius: 30px;
 }
 
 // General links
@@ -81,7 +82,7 @@ a[href^="#fn"]:hover {
 button,
 a.button {
   font-size: var(--font-size);
-  padding: 0.5em 1em;
+  padding: 0.5em 1.5em;
   border: 1px solid var(--button-border-color);
   border-radius: var(--button-border-radius);
 
@@ -91,6 +92,13 @@ a.button {
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
   text-decoration: none;
+
+  &.text {
+    display: inline-block;
+    margin: 1.5rem 0;
+    background-color: var(--button-bg-color);
+    box-shadow: 0 2px 2px 0 var(--bg-shadow);
+  }
 
   &:hover {
     background-color: var(--button-bg-color-hover);
