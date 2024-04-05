@@ -1,13 +1,44 @@
 body {
-  --callout-color: 95, 95, 209;
+  --callout-note: 27  99, 141; // Blue
+  --callout-tip: 77, 115, 67; // Green
+  --callout-important: 97, 69, 160; // Purple
+  --callout-warning: 235, 113, 0; // Orange
+  --callout-caution: 151, 47, 47; // Red
+  --callout-content-color: 255, 255, 255; // White
+}
+
+
+.callout[data-callout=note] {
+  --callout-color: var(--callout-note);
+}
+
+.callout[data-callout=tip] {
+  --callout-color: var(--callout-tip);
+}
+
+.callout[data-callout=important] {
+  --callout-color: var(--callout-important);
+}
+
+.callout[data-callout=warning] {
+  --callout-color: var(--callout-warning);
+}
+
+.callout[data-callout=caution] {
+  --callout-color: var(--callout-caution);
+}
+
+.callout-content {
+  color: var(--callout-content-color);
 }
 
 .callout {
   background-color: rgba(var(--callout-color), 0.1);
   overflow: hidden;
   margin: 1em 0;
-  padding: 0;
-  border-radius: 6px;
+  padding:.5rem 1rem;
+  border-left: 5px solid rgb(var(--callout-color));
+  border-right: 5px solid rgb(var(--callout-color));
 }
 
 .callout-title {
