@@ -40,7 +40,7 @@ cssclasses:
     <h2 id="what-sets-commonhaus-apart" tabindex="-1">
       <a class="header-anchor" href="#what-sets-commonhaus-apart">What sets Commonhaus apart</a>
     </h2>
-    <p>Inspired by the <a href="./codehaus.md">legacy of Codehaus</a>, the Commonhaus Foundation offers a balanced approach to governance and support, designed for the unique needs of established open-source projects.</p>
+    <p>Inspired by the <a href="./about/codehaus.md">legacy of Codehaus</a>, the Commonhaus Foundation offers a balanced approach to governance and support, designed for the unique needs of established open-source projects.</p>
   </div>
   <div class="cards">
     <div class="card">
