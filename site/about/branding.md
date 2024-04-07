@@ -1,5 +1,6 @@
 ---
 title: Branding Guidelines
+description: Guidelines for correctly using the Commonhause Foundation logo, color palette, and typography
 ---
 Our visual and verbal identity mirrors our dedication to fostering open source communities and promoting collaborative development.
 This guide offers a detailed look at the appropriate application of our brand assets.
