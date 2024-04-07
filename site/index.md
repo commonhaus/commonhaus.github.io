@@ -1,14 +1,14 @@
 ---
 templateEngine: [vto]
 layout: layouts/base.vto
-title: Building a forever home for open-source projects
+title: Building a forever home for open source projects
 cssclasses: 
 - site-main
 ---
 <div class="hero">
   <section class="text">
-    <h1>Building a forever home for open-source projects</h1>
-    <div class="subhead">We are a non-profit organization dedicated to the sustainability of open-source libraries and frameworks.</div>
+    <h1>Building a forever home for open source projects</h1>
+    <div class="subhead">We are a non-profit organization dedicated to the sustainability of open source libraries and frameworks.</div>
     <p class="button-container"><a href="foundation/COMMUNICATION.md" class="button">Build with us</a></p>
   </section>
 </div>
@@ -40,7 +40,7 @@ cssclasses:
     <h2 id="what-sets-commonhaus-apart" tabindex="-1">
       <a class="header-anchor" href="#what-sets-commonhaus-apart">What sets Commonhaus apart</a>
     </h2>
-    <p>Inspired by the <a href="./about/codehaus.md">legacy of Codehaus</a>, the Commonhaus Foundation offers a balanced approach to governance and support, designed for the unique needs of established open-source projects.</p>
+    <p>Inspired by the <a href="./about/codehaus.md">legacy of Codehaus</a>, the Commonhaus Foundation offers a balanced approach to governance and support, designed for the unique needs of established open source projects.</p>
   </div>
   <div class="cards">
     <div class="card">

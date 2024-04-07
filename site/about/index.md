@@ -6,11 +6,12 @@ cssclasses:
 - about
 ---
 
-The Commonhaus Foundation champions the growth and stability of open-source projects by fostering a community where developers, contributors, and users support each other. Together, we ensure the sustainable development of essential open-source libraries and frameworks.
+The Commonhaus Foundation champions the growth and stability of open source projects by fostering a community where developers, contributors, and users support each other.
+Together, we ensure the sustainable development of essential open source libraries and frameworks.
 
 ## Our guiding principles
 
-By embodying these principles, the Commonhaus Foundation aims to provide a nurturing home for open-source projects, where innovation is celebrated, collaboration is encouraged, and long-term success is achieved.
+By embodying these principles, the Commonhaus Foundation aims to provide a nurturing home for open source projects, where innovation is celebrated, collaboration is encouraged, and long-term success is achieved.
 
 - **Honor project and community identity**
 
@@ -30,15 +31,16 @@ By embodying these principles, the Commonhaus Foundation aims to provide a nurtu
 
 ## Our mission, vision and focus
 
-We want to empower a diverse community of developers, contributors, and users to create, maintain, and evolve open-source libraries and frameworks, ensuring long-term growth and stability through shared stewardship and community collaboration.
+We want to empower a diverse community of developers, contributors, and users to create, maintain, and evolve open source libraries and frameworks, ensuring long-term growth and stability through shared stewardship and community collaboration.
 
-We envision a welcoming ecosystem where open-source projects grow through collaboration and mutual support, simplifying participation for all by moving beyond conventional governance hurdles.
+We envision a welcoming ecosystem where open source projects grow through collaboration and mutual support, simplifying participation for all by moving beyond conventional governance hurdles.
 
 We prioritize **Application Frameworks** and **Libraries** that are critical for developers. We support self-governing, code-centric projects, steering clear of specifications and standards debates to focus on tangible outcomes.
 
 ## Community and sponsorship
 
-Our doors are open to everyone passionate about open-source innovation. We invite all individuals, not just code contributors, to participate and help shape our organization. Our [Bylaws][] detail membership and governance, emphasizing collaboration, diverse perspectives, and advisory input from our [Advisory Board][cfab] to align sponsorship with community interests.
+Our doors are open to everyone passionate about open source innovation. We invite all individuals, not just code contributors, to participate and help shape our organization.
+Our [Bylaws][] detail membership and governance, emphasizing collaboration, diverse perspectives, and advisory input from our [Advisory Board][cfab] to align sponsorship with community interests.
 
 ## Current Councilors
 
@@ -108,7 +110,9 @@ Our project representatives play a pivotal role in the Commonhaus Foundation's [
 
 ## Get involved
 
-The Commonhaus Foundation relies on the participation of a global community. Whether you're a developer, contributor, project leader, or simply passionate about open-source, there are many ways to contribute and make an impact. From joining discussions, contributing to projects, or participating in governance, your voice and contributions are valued here.
+The Commonhaus Foundation relies on the participation of a global community.
+Whether you're a developer, contributor, project leader, or simply passionate about open source, there are many ways to contribute and make an impact.
+From joining discussions, contributing to projects, or participating in governance, your voice and contributions are valued here.
 
 <a href="foundation/COMMUNICATION.md" class="text button">Build with us</a>
 

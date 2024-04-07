@@ -50,7 +50,7 @@ cealsair:
   name: Cesar
   bio: >-
     Senior Developer Advocate @ GitLab. Former @ Red Hat, IBM, Oracle, BEA
-    Systems, TIBCO, Lucent Technologies, AT&T Bell Labs. 
+    Systems, TIBCO, Lucent Technologies, AT&T Bell Labs.
 commonhaus-bot:
   login: commonhaus-bot
   url: 'https://github.com/commonhaus-bot'
@@ -59,9 +59,9 @@ commonhaus-bot:
   company: '@commonhaus'
   name: Commonhaus Bot
   bio: >-
-    Automating innovation and fostering collaboration in the open-source
+    Automating innovation and fostering collaboration in the open source
     community. Here to streamline processes and support the Commonhaus
-    Foundation's mission. 
+    Foundation's mission.
 kenfinnigan:
   login: kenfinnigan
   url: 'https://github.com/kenfinnigan'

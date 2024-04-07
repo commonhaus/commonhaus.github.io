@@ -1,17 +1,17 @@
 ---
 title: Branding Guidelines
 ---
-Our visual and verbal identity reflects our commitment to open-source innovation and collaboration.
-This guide provides an overview of how to use our brand assets correctly.
+Our visual and verbal identity mirrors our dedication to fostering open source communities and promoting collaborative development.
+This guide offers a detailed look at the appropriate application of our brand assets.
 
 ## Logo usage
 
-Our logo is a visual representation of our foundation's mission and values.
-It should be used thoughtfully and consistently according to the following guidelines:
+Our logo symbolizes our foundation's dedication to the [principles and values](./index.md#our-guiding-principles) that guide our efforts.
+It is essential to use our logo with care and consistency, adhering to these guidelines:
 
-- Do not alter the logo's colors or proportions.
-- Ensure the logo has sufficient space around it, free from text or other visual elements.
-- The logo should not be used in a way that suggests endorsement or partnership without explicit permission.
+- Maintain the original colors and proportions of the logo without modifications.
+- Ensure the logo is surrounded by ample space, keeping it clear of text or other visual distractions.
+- Usage of the logo to imply endorsement or partnership is strictly limited to those with explicit authorization.
 
 ## Color palette
 
@@ -39,7 +39,7 @@ When writing or creating content for the Commonhaus Foundation, please adhere to
 - Use sentence case for headings and titles.
 - Maintain a professional yet approachable tone.
 - Be concise and clear, avoiding jargon when possible.
-- Focus on inclusivity and respect for all members of the open-source community.
+- Focus on inclusivity and respect for all members of the open source community.
 
 ## Contact
 
