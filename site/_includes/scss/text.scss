@@ -31,10 +31,9 @@ a.github,
 .h-site-more,
 .act-status-icon,
 .aside-nav-icon {
-  min-width: var(--font-smaller);
+  min-height: var(--font-smaller);
   svg {
     height: var(--font-smaller);
-    width: var(--font-smaller);
   }
 }
 
