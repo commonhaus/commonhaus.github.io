@@ -1,5 +1,4 @@
 User-agent: *
 
 Disallow: /votes/
-Disallow: /activity/
 Disallow: /agreements/
