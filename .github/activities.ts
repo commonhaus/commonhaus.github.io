@@ -127,6 +127,9 @@ function generateContent(item: ItemWithAuthor, id: string, type: string): string
     const prefix = item.category
         ? prefixMap[item.category.name.toLowerCase()]
         : '';
+    const match = item.body.match(/<!-- meta::description ([\s\S]*?)-->/);
+    const description = match ? match[1].trim() : '';
+
     let data = `---
 title: "${title}"
 rss-title: "${prefix}${title}"
@@ -162,6 +165,10 @@ tags:
     if (pinnedIds.includes(item.id)) {
         data += `\npinned: true`;
     }
+    if (description) {
+        const safeDescription = safeDump(description);
+        data += `\ndescription: ${safeDescription}`;
+    }
     data += `\n---\n${item.body}\n`;
     // console.log(data);
     return data;
@@ -170,6 +177,9 @@ tags:
 function writeItemsToFiles(items: ItemWithAuthor[], outputDir: string, type: string): void {
     ensureDirSync(outputDir);
     for (const item of items) {
+        if (item.body.includes('<!-- meta::draft -->')) {
+            continue;
+        }
         const id = item.number.toString();
         const content = generateContent(item, id, type);
         const filePath = join(outputDir, `${id}.md`);
