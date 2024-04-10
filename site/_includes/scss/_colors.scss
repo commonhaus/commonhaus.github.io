@@ -81,3 +81,18 @@ body {
 
   background-color: var(--bg-primary);
 }
+
+
+.dark body {
+
+--bg-primary: #1e1e1e;
+--text-normal: #B3B3B3;
+--border-color: #434343;
+--bg-navigation-top: #011212;
+--bg-navigation-bottom: #0f0f0f;
+--fg-navigation: #c8c7c7;
+
+a {color: #c8c7c7;}
+a.button {color: var(--dark-green);}
+
+}
