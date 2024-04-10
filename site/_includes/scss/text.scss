@@ -3,6 +3,7 @@
 
 body {
   --button-border-radius: 30px;
+  color: var(--text-normal);
 }
 
 // General links
@@ -31,9 +32,10 @@ a.github,
 .h-site-more,
 .act-status-icon,
 .aside-nav-icon {
-  min-height: var(--font-smaller);
+  min-width: var(--font-smaller);
   svg {
     height: var(--font-smaller);
+    width: var(--font-smaller);
   }
 }
 
