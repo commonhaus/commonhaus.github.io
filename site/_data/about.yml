@@ -96,3 +96,10 @@ gavinking:
   company: Red Hat
   name: Gavin King
   bio: "Distinguished Engineer at IBM / Red Hat.\r\n\r\nCreator of @Hibernate, @cdi-spec, and @ceylon.\r\n\r\nWorking on @jakartaee Persistence and Data specifications."
+timtebeek:
+  login: timtebeek
+  url: 'https://github.com/timtebeek'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/1027334?v=4'
+  company: '@moderneinc '
+  name: Tim te Beek
+  bio: ''
