@@ -9,7 +9,7 @@ cssclasses:
   <section class="text">
     <h1>Building a forever home for open source projects</h1>
     <div class="subhead">We are a non-profit organization dedicated to the sustainability of open source libraries and frameworks.</div>
-    <p class="button-container"><a href="foundation/COMMUNICATION.md" class="button">Build with us</a></p>
+    <p class="button-container"><a href="https://github.com/sponsors/commonhaus" class="button">Build with us</a></p>
   </section>
 </div>
 
