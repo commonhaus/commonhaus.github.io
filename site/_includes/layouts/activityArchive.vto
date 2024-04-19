@@ -4,7 +4,7 @@ layout: layouts/baseIndex.vto
 {{- set postsByYear = page.data.archiveByYear() }}
 <section id="{{page.data.indexId}}" class="activityIndex">
 {{- for year of postsByYear.years }}
-  <section id="y{{year}}" aria-label="page.data.indexName from {{year}}">
+  <section id="y{{year}}" aria-label="{{page.data.indexName}} from {{year}}">
 
   <h2 aria-hidden="true">{{ year }}</h2>
   <ul class="archive">

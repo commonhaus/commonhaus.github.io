@@ -1,6 +1,7 @@
 ---
 title: WebSite Components
 layout: layouts/test-aside-toc.vto
+hidden: true
 metas:
   robots: false
 ---

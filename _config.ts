@@ -166,6 +166,7 @@ site
         options: {
             keep_closing_tags: true,
             keep_html_and_head_opening_tags: true,
+            keep_spaces_between_attributes: true,
         }
     }))
     .use(feed({
@@ -218,7 +219,7 @@ site.preprocess(['.md'], (pages) => {
             }
             // Group posts matching the given query by year
             const allPosts = site.search.pages(page.data.indexQuery, "date=desc");
-             const postsByYear: Record<string, Data[]> = {};
+            const postsByYear: Record<string, Data[]> = {};
             if (allPosts.length > 0) {
                 allPosts.forEach((post) => {
                     const year = new Date(post.date).getFullYear();
@@ -231,6 +232,24 @@ site.preprocess(['.md'], (pages) => {
             return {
                 years: Object.keys(postsByYear).sort((a, b) => Number(b) - Number(a)),
                 posts: postsByYear
+            };
+        }
+        page.data.indexBySection = () => {
+            const allPosts = site.search.pages("", "url");
+            const postsBySection: Record<string, Data[]> = {};
+            if (allPosts.length > 0) {
+                allPosts.forEach((post) => {
+                    const section = post.url.substring(1, post.url.indexOf('/', 1));
+                    if (!postsBySection[section]) {
+                        postsBySection[section] = [];
+                    }
+                    postsBySection[section].push(post);
+                });
+            }
+
+            return {
+                list: Object.keys(postsBySection).sort(),
+                posts: postsBySection
             };
         }
     }
@@ -303,12 +322,11 @@ site.filter("listVoters", (voters: unknown) => {
     if (voters && Array.isArray(voters)) {
         return voters
             .map((voter: { login: string; url: string; }) =>
-                 `<a href="${voter.url}" target="_top">${voter.login}</a>`)
+                `<a href="${voter.url}" target="_top">${voter.login}</a>`)
             .join(", ");
     } else {
         console.log(voters, "is not an array");
     }
 });
-
 
 export default site;

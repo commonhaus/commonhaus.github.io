@@ -59,7 +59,7 @@ const augmentedCfcData = cfcData.map(item => augmentReference<CouncilContact>(CO
 for(const item of augmentedCfcData) {
     const user = USER_DATA[item.login] as User;
     if (!user) {
-        console.log("No about data for", item.login);
+        console.log("CFC: No about data for", item.login);
         continue;
     }
     const councilor: Councilor = {
@@ -75,7 +75,7 @@ for(const item of augmentedRepData) {
     const user = USER_DATA[item.login] as User;
     const project = PROJECT_DATA[item.project] as Record<string, string>;
     if (!user) {
-        console.log("No about data for", item.login);
+        console.log("EGC: No about data for", item.login);
         continue;
     }
     if (!project) {
