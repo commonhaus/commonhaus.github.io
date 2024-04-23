@@ -11,7 +11,7 @@ function setTheme() {
   return theme_color;
 }
 function toggleTheme() {
-  const themeOrder = ['dark', 'light', 'system'];
+  const themeOrder = ['light', 'dark', 'system'];
   const storedTheme = localStorage.getItem('color-theme') || 'system';
   const newTheme = themeOrder[(themeOrder.indexOf(storedTheme) + 1) % themeOrder.length];
   localStorage.setItem('color-theme', newTheme);
