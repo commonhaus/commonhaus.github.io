@@ -3,8 +3,8 @@
   "hasQuorum": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 9,
-  "groupVotes": 3,
-  "countedVotes": 4,
+  "groupVotes": 4,
+  "countedVotes": 5,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -24,13 +24,18 @@
           "avatarUrl": "https://avatars.githubusercontent.com/u/808713?u=8c50c6169b230fc62777f6910f6669b753ae95a8&v=4"
         },
         {
+          "login": "evanchooly",
+          "url": "https://github.com/evanchooly",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/195021?v=4"
+        },
+        {
           "login": "kenfinnigan",
           "url": "https://github.com/kenfinnigan",
           "avatarUrl": "https://avatars.githubusercontent.com/u/441240?u=aea870e6cad6edfff45e4fc1603b4531c8f57b44&v=4"
         }
       ],
-      "teamTotal": 3,
-      "total": 4
+      "teamTotal": 4,
+      "total": 5
     }
   },
   "duplicates": [],
@@ -39,11 +44,6 @@
       "login": "cowtowncoder",
       "url": "https://api.github.com/users/cowtowncoder",
       "avatarUrl": "https://avatars.githubusercontent.com/u/55065?v=4"
-    },
-    {
-      "login": "evanchooly",
-      "url": "https://api.github.com/users/evanchooly",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/195021?v=4"
     },
     {
       "login": "gavinking",
@@ -74,7 +74,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-04-24T16:58:09Z",
-  "updated": "2024-04-24T18:45:23Z",
+  "updated": "2024-04-24T20:03:42Z",
   "url": "/votes/commonhaus/foundation/143.html",
   "tags": [
     "vote/open",
@@ -101,13 +101,18 @@
             "avatarUrl": "https://avatars.githubusercontent.com/u/808713?u=8c50c6169b230fc62777f6910f6669b753ae95a8&v=4"
           },
           {
+            "login": "evanchooly",
+            "url": "https://github.com/evanchooly",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/195021?v=4"
+          },
+          {
             "login": "kenfinnigan",
             "url": "https://github.com/kenfinnigan",
             "avatarUrl": "https://avatars.githubusercontent.com/u/441240?u=aea870e6cad6edfff45e4fc1603b4531c8f57b44&v=4"
           }
         ],
-        "teamTotal": 3,
-        "total": 4
+        "teamTotal": 4,
+        "total": 5
       }
     ]
   ]
