@@ -2,7 +2,7 @@
   "voteType": "marthas",
   "hasQuorum": false,
   "group": "commonhaus/cf-egc",
-  "groupSize": 10,
+  "groupSize": 9,
   "groupVotes": 3,
   "countedVotes": 4,
   "droppedVotes": 0,
@@ -41,11 +41,6 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/55065?v=4"
     },
     {
-      "login": "commonhaus-bot",
-      "url": "https://api.github.com/users/commonhaus-bot",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/156364140?v=4"
-    },
-    {
       "login": "evanchooly",
       "url": "https://api.github.com/users/evanchooly",
       "avatarUrl": "https://avatars.githubusercontent.com/u/195021?v=4"
@@ -79,7 +74,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-04-24T16:58:09Z",
-  "updated": "2024-04-24T17:13:30Z",
+  "updated": "2024-04-24T18:45:23Z",
   "url": "/votes/commonhaus/foundation/143.html",
   "tags": [
     "vote/open",
