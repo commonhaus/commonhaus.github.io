@@ -74,7 +74,9 @@ jobs:
           if git diff --quiet HEAD; then
             echo "-- No changes -- "
           else
-            git commit -am "💬 Auto-update GH Activity" && git push
+            git commit -am "💬 Auto-update GH Activity"
+            git pull --rebase
+            git push
           fi
 
       - name: Sleep for 30 seconds (wait a bit before queueing the next job)
