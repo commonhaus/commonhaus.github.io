@@ -86,7 +86,12 @@ cssclasses:
     {{- for project of page.data.listProjects() }}
     <div class="card">
       <span class="logo">
-      {{ if project.logo }}<img src="{{ project.logo }}" aria-hidden="true"{{ if project.wordmark }} class="wordmark"{{ /if }}>{{ /if }}
+      {{- if project["logo-dark"] }}
+        <img src='{{ project["logo-dark"] }}' alt="" aria-hidden="true" class='dark-only{{ if project.wordmark }} wordmark{{ /if }}' />
+      {{ /if }}
+      {{ if project.logo }}
+        <img src="{{ project.logo }}" alt="" aria-hidden="true" class='{{- if project["logo-dark"] }}light-only{{ /if }}{{ if project.wordmark }} wordmark{{ /if }}'/>
+      {{ /if }}
       </span>
       <div class="text-content">
         <h3>{{ project.name }}</h3>
