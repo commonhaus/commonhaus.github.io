@@ -66,23 +66,34 @@ article.activity {
     padding-top: .2em;
     padding-bottom: .5em; // Add space below each list item
 
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    gap: .5em;
-    justify-content: start;
-
     &.archive {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+
+      gap: .5em;
+      justify-content: start;
+
       time {
         white-space: nowrap;
       }
       .data {
         word-break: break-word;
+        a {
+          padding-right: 5px;
+        }
       }
     }
     &:not(.archive) {
-      text-indent: -1.2em; // Move the first line to the left
-      padding-left: 1em; // Move the rest of the content to the right
+      display: block;
+      a {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: start;
+
+        gap: .2em;
+        justify-content: start;
+      }
     }
   }
 

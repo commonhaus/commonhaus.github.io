@@ -75,6 +75,7 @@ footer.site {
 
     > aside {
       @include aside-margin-width();
+      @include content-pad-narrow();
       background-color: unset;
       border-top: unset;
       margin-top: unset;
