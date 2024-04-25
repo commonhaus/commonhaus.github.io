@@ -1,10 +1,10 @@
 {
   "voteType": "marthas",
-  "hasQuorum": false,
+  "hasQuorum": true,
   "group": "commonhaus/cf-egc",
   "groupSize": 9,
-  "groupVotes": 6,
-  "countedVotes": 7,
+  "groupVotes": 9,
+  "countedVotes": 10,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -19,6 +19,16 @@
           "avatarUrl": "https://avatars.githubusercontent.com/u/13969?u=6a649c057ec7a4fb3acbd57899cc03c5f7c46819&v=4"
         },
         {
+          "login": "cealsair",
+          "url": "https://github.com/cealsair",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/25405698?u=0d403bf8e726802918d95b99445bd15e5db9336e&v=4"
+        },
+        {
+          "login": "cowtowncoder",
+          "url": "https://github.com/cowtowncoder",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/55065?u=fdce6737a39cbda5176c8aa3bda56c2bf95190f0&v=4"
+        },
+        {
           "login": "ebullient",
           "url": "https://github.com/ebullient",
           "avatarUrl": "https://avatars.githubusercontent.com/u/808713?u=8c50c6169b230fc62777f6910f6669b753ae95a8&v=4"
@@ -27,6 +37,11 @@
           "login": "evanchooly",
           "url": "https://github.com/evanchooly",
           "avatarUrl": "https://avatars.githubusercontent.com/u/195021?v=4"
+        },
+        {
+          "login": "gavinking",
+          "url": "https://github.com/gavinking",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/579974?u=2053a5f4ed0ddd89b2f7de04d7ea64c386fc619d&v=4"
         },
         {
           "login": "kenfinnigan",
@@ -44,28 +59,12 @@
           "avatarUrl": "https://avatars.githubusercontent.com/u/1027334?v=4"
         }
       ],
-      "teamTotal": 6,
-      "total": 7
+      "teamTotal": 9,
+      "total": 10
     }
   },
   "duplicates": [],
-  "missingGroupActors": [
-    {
-      "login": "cowtowncoder",
-      "url": "https://api.github.com/users/cowtowncoder",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/55065?v=4"
-    },
-    {
-      "login": "gavinking",
-      "url": "https://api.github.com/users/gavinking",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/579974?v=4"
-    },
-    {
-      "login": "cealsair",
-      "url": "https://api.github.com/users/cealsair",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/25405698?v=4"
-    }
-  ],
+  "missingGroupActors": [],
   "commentId": "IC_kwDOKRPTI857tHF2",
   "github": "https://github.com/commonhaus/foundation/pull/143",
   "itemId": "PR_kwDOKRPTI85tPBJY",
@@ -74,11 +73,12 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-04-24T16:58:09Z",
-  "updated": "2024-04-25T09:19:33Z",
+  "updated": "2024-04-26T14:23:18Z",
   "url": "/votes/commonhaus/foundation/143.html",
   "tags": [
     "vote/open",
     "notice",
+    "vote/quorum",
     "vote"
   ],
   "closed": false,
@@ -96,6 +96,16 @@
             "avatarUrl": "https://avatars.githubusercontent.com/u/13969?u=6a649c057ec7a4fb3acbd57899cc03c5f7c46819&v=4"
           },
           {
+            "login": "cealsair",
+            "url": "https://github.com/cealsair",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/25405698?u=0d403bf8e726802918d95b99445bd15e5db9336e&v=4"
+          },
+          {
+            "login": "cowtowncoder",
+            "url": "https://github.com/cowtowncoder",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/55065?u=fdce6737a39cbda5176c8aa3bda56c2bf95190f0&v=4"
+          },
+          {
             "login": "ebullient",
             "url": "https://github.com/ebullient",
             "avatarUrl": "https://avatars.githubusercontent.com/u/808713?u=8c50c6169b230fc62777f6910f6669b753ae95a8&v=4"
@@ -104,6 +114,11 @@
             "login": "evanchooly",
             "url": "https://github.com/evanchooly",
             "avatarUrl": "https://avatars.githubusercontent.com/u/195021?v=4"
+          },
+          {
+            "login": "gavinking",
+            "url": "https://github.com/gavinking",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/579974?u=2053a5f4ed0ddd89b2f7de04d7ea64c386fc619d&v=4"
           },
           {
             "login": "kenfinnigan",
@@ -121,8 +136,8 @@
             "avatarUrl": "https://avatars.githubusercontent.com/u/1027334?v=4"
           }
         ],
-        "teamTotal": 6,
-        "total": 7
+        "teamTotal": 9,
+        "total": 10
       }
     ]
   ]
