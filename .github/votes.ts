@@ -165,7 +165,7 @@ if (voteData.categories) {
         // +1, -1, laugh, confused, heart, hooray, rocket, eyes
         // thumbs_up, plus_one, thumbs_down, minus_one
         category.reactions = category.reactions.map((r: string) =>
-            r.replace('+1', '👍')
+            r.toLowerCase().replace('+1', '👍')
                 .replace('thumbs_up', '👍')
                 .replace('plus_one', '👍')
                 .replace('-1', '👎')
