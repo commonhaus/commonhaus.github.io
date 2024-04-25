@@ -197,9 +197,16 @@ main.site-main {
     }
   }
 }
+.dark {
+  img.dark-only {
+    display: block;
+  }
+  img.light-only {
+    display: none;
+  }
+}
 
 main.about {
-
   .cards {
     @include content-align-y;
 
