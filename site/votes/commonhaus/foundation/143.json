@@ -10,7 +10,7 @@
   "categories": {
     "approve": {
       "reactions": [
-        "PLUS_ONE"
+        "👍"
       ],
       "team": [
         {
@@ -87,7 +87,7 @@
       "approve",
       {
         "reactions": [
-          "PLUS_ONE"
+          "👍"
         ],
         "team": [
           {
