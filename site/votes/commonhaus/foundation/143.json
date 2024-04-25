@@ -3,8 +3,8 @@
   "hasQuorum": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 9,
-  "groupVotes": 5,
-  "countedVotes": 6,
+  "groupVotes": 6,
+  "countedVotes": 7,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -37,10 +37,15 @@
           "login": "maxandersen",
           "url": "https://github.com/maxandersen",
           "avatarUrl": "https://avatars.githubusercontent.com/u/54129?v=4"
+        },
+        {
+          "login": "timtebeek",
+          "url": "https://github.com/timtebeek",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/1027334?v=4"
         }
       ],
-      "teamTotal": 5,
-      "total": 6
+      "teamTotal": 6,
+      "total": 7
     }
   },
   "duplicates": [],
@@ -56,11 +61,6 @@
       "avatarUrl": "https://avatars.githubusercontent.com/u/579974?v=4"
     },
     {
-      "login": "timtebeek",
-      "url": "https://api.github.com/users/timtebeek",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/1027334?v=4"
-    },
-    {
       "login": "cealsair",
       "url": "https://api.github.com/users/cealsair",
       "avatarUrl": "https://avatars.githubusercontent.com/u/25405698?v=4"
@@ -74,7 +74,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-04-24T16:58:09Z",
-  "updated": "2024-04-25T05:39:25Z",
+  "updated": "2024-04-25T09:19:33Z",
   "url": "/votes/commonhaus/foundation/143.html",
   "tags": [
     "vote/open",
@@ -114,10 +114,15 @@
             "login": "maxandersen",
             "url": "https://github.com/maxandersen",
             "avatarUrl": "https://avatars.githubusercontent.com/u/54129?v=4"
+          },
+          {
+            "login": "timtebeek",
+            "url": "https://github.com/timtebeek",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/1027334?v=4"
           }
         ],
-        "teamTotal": 5,
-        "total": 6
+        "teamTotal": 6,
+        "total": 7
       }
     ]
   ]
