@@ -3,8 +3,8 @@
   "hasQuorum": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 9,
-  "groupVotes": 7,
-  "countedVotes": 8,
+  "groupVotes": 8,
+  "countedVotes": 9,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -22,6 +22,11 @@
           "login": "cealsair",
           "url": "https://github.com/cealsair",
           "avatarUrl": "https://avatars.githubusercontent.com/u/25405698?u=0d403bf8e726802918d95b99445bd15e5db9336e&v=4"
+        },
+        {
+          "login": "cowtowncoder",
+          "url": "https://github.com/cowtowncoder",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/55065?u=fdce6737a39cbda5176c8aa3bda56c2bf95190f0&v=4"
         },
         {
           "login": "ebullient",
@@ -49,17 +54,12 @@
           "avatarUrl": "https://avatars.githubusercontent.com/u/1027334?v=4"
         }
       ],
-      "teamTotal": 7,
-      "total": 8
+      "teamTotal": 8,
+      "total": 9
     }
   },
   "duplicates": [],
   "missingGroupActors": [
-    {
-      "login": "cowtowncoder",
-      "url": "https://api.github.com/users/cowtowncoder",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/55065?v=4"
-    },
     {
       "login": "gavinking",
       "url": "https://api.github.com/users/gavinking",
@@ -74,7 +74,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-04-24T16:58:09Z",
-  "updated": "2024-04-25T19:04:13Z",
+  "updated": "2024-04-26T03:35:26Z",
   "url": "/votes/commonhaus/foundation/143.html",
   "tags": [
     "vote/open",
@@ -99,6 +99,11 @@
             "login": "cealsair",
             "url": "https://github.com/cealsair",
             "avatarUrl": "https://avatars.githubusercontent.com/u/25405698?u=0d403bf8e726802918d95b99445bd15e5db9336e&v=4"
+          },
+          {
+            "login": "cowtowncoder",
+            "url": "https://github.com/cowtowncoder",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/55065?u=fdce6737a39cbda5176c8aa3bda56c2bf95190f0&v=4"
           },
           {
             "login": "ebullient",
@@ -126,8 +131,8 @@
             "avatarUrl": "https://avatars.githubusercontent.com/u/1027334?v=4"
           }
         ],
-        "teamTotal": 7,
-        "total": 8
+        "teamTotal": 8,
+        "total": 9
       }
     ]
   ]
