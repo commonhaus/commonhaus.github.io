@@ -7,5 +7,6 @@ layout: layouts/activityOverview.vto
 - Feed for CF Notice: [RSS](/feed/notice.rss), [JSON](/feed/notice.json)
 
 > [!note] Related Bylaws
+>
 > - [Notice](../foundation/bylaws/6-notice-records.md#notice)
 > - [Decision Making](../foundation/bylaws/5-decision-making.md)
