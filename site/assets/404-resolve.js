@@ -5,3 +5,6 @@ if (window.location.pathname.startsWith('/votes')) {
         window.location.replace('/votes');
     }
 }
+if (window.location.pathname == "/activity/123.html/n/nInitial") {
+    window.location.replace("/activity/123.html");
+}
