@@ -44,7 +44,7 @@ layout: layouts/baseIndex.vto
             {{ post |> postLock }}
             <div class="data">
               <a href="{{ post.url }}">{{ post.itemTitle }}</a>
-              <span class="repo">{{ post.voteItem }}</span>
+              <a class="repo-link" href="{{ post.url }}">{{ post.voteItem }}</a>
             </div>
         </li>
     {{- /for }}

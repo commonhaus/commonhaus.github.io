@@ -21,7 +21,7 @@
     ]
   },
   "imports": {
-    "lume/": "https://deno.land/x/lume@v2.1.2/",
+    "lume/": "https://deno.land/x/lume@v2.1.4/",
     "npm:markdown-it": "npm:markdown-it@14.0.0",
     "npm:markdown-it-anchor": "npm:markdown-it-anchor@8.6.7",
     "npm:markdown-it-footnote": "npm:markdown-it-footnote@4.0.0",

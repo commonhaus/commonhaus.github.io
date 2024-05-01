@@ -4,8 +4,13 @@ layout: layouts/activitySidebar.vto
 <article aria-labelledby="articleTitle" class="activity vote{{ if page.data.closed }} closed{{ /if }}">
 <div class="card">
 <header>
-  <h1 id="articleTitle"><span>Voting results for</span>
-<a class="repo-link" href="{{ page.data.github }}">{{ page.data.voteItem }}</a> <a class="item-title" href="{{ page.data.github }}">{{ page.data.itemTitle }}</a></h1>
+  <h1 id="articleTitle">
+  <span>
+    Voting results for
+    <a class="repo-link" href="{{ page.data.github }}">{{ page.data.voteItem }}</a>
+  </span>
+  <a class="item-title" href="{{ page.data.github }}">{{ page.data.itemTitle }}</a>
+  </h1>
 </header>
 <div class="content">
 <a href="#result"><img src="{{ page.data.url.replace('.html', '.svg') }}"></a>
