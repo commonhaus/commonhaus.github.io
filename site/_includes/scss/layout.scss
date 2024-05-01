@@ -57,7 +57,6 @@ footer.site {
   body {
     --logo-height: 50px;
     --header-height: 50px;
-    --width-padding: 2em;
   }
 }
 @media(min-width: 600px) {
@@ -88,12 +87,10 @@ footer.site {
     }
   }
 }
-@media(min-width: 700px) {
+@media(min-width: 800px) {
   body {
     --width-padding: 3em;
   }
-}
-@media(min-width: 800px) {
   main:not(.has-aside):not(.site-main) {
     max-width: 800px;
     margin: 0 auto var(--height-padding) auto;

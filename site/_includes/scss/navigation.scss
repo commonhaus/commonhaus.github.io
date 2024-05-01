@@ -262,17 +262,16 @@ header.site {
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: nowrap;
-        gap: .5em;
+        gap: .2em;
 
         > li {
-          display: inline;
           position: relative;
           display: flex;
           flex-direction: row;
           flex-wrap: nowrap;
           align-items: center;
           padding-right: .2em;
-          padding-left: .5em;
+          padding-left: .4em;
           overflow: visible;
 
           border-color: var(--bg-navigation-top);

@@ -76,19 +76,25 @@ body {
 
   --button-text-color: var(--dark-green);
   --button-bg-color: var(--light-blue);
+  --button-reset-color: #ccc;
   --button-bg-color-hover: var(--ash-gray);
   --button-border-color: transparent;
+
+  --accent: var(--asparagus);
+  --ok: var(--fern-green);
+  --required: var(--goldenrod);
 
   background-color: var(--bg-primary);
 }
 
-
 .dark body {
-
   --bg-primary: #1e1e1e;
   --bg-secondary: #232323;
 
   --text-normal: #B3B3B3;
+  --text-muted: #aaa;
+  --text-faint: #888;
+
   --border-color: #434343;
   --bg-navigation-top: #011212;
   --bg-navigation-bottom: #0f0f0f;
@@ -97,6 +103,8 @@ body {
   --table-header-footer-bg: var(--bg-secondary);
   --table-left-column-bg: var(--bg-secondary);
   --table-team-votes-bg: var(--british-racing-green-rgb);
+
+  --ok: var(--asparagus);
 
   a {
     color: #c8c7c7;
