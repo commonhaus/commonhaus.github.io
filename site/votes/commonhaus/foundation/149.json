@@ -3,9 +3,9 @@
   "hasQuorum": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 9,
-  "groupVotes": 3,
-  "countedVotes": 3,
-  "droppedVotes": 0,
+  "groupVotes": 4,
+  "countedVotes": 4,
+  "droppedVotes": 1,
   "votingThreshold": "all",
   "categories": {
     "approve": {
@@ -13,6 +13,11 @@
         "👍"
       ],
       "team": [
+        {
+          "login": "aalmiray",
+          "url": "https://github.com/aalmiray",
+          "avatarUrl": "https://avatars.githubusercontent.com/u/13969?u=6a649c057ec7a4fb3acbd57899cc03c5f7c46819&v=4"
+        },
         {
           "login": "ebullient",
           "url": "https://github.com/ebullient",
@@ -29,17 +34,18 @@
           "avatarUrl": "https://avatars.githubusercontent.com/u/1027334?v=4"
         }
       ],
-      "teamTotal": 3,
-      "total": 3
+      "teamTotal": 4,
+      "total": 4
     }
   },
-  "duplicates": [],
-  "missingGroupActors": [
+  "duplicates": [
     {
-      "login": "aalmiray",
-      "url": "https://api.github.com/users/aalmiray",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/13969?v=4"
-    },
+      "user": {},
+      "createdAt": "2024-05-01T10:27:28.000+00:00",
+      "reaction": "👍"
+    }
+  ],
+  "missingGroupActors": [
     {
       "login": "cowtowncoder",
       "url": "https://api.github.com/users/cowtowncoder",
@@ -74,7 +80,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-05-01T00:05:22Z",
-  "updated": "2024-05-01T09:38:32Z",
+  "updated": "2024-05-01T10:32:33Z",
   "url": "/votes/commonhaus/foundation/149.html",
   "tags": [
     "vote/open",
@@ -91,6 +97,11 @@
         ],
         "team": [
           {
+            "login": "aalmiray",
+            "url": "https://github.com/aalmiray",
+            "avatarUrl": "https://avatars.githubusercontent.com/u/13969?u=6a649c057ec7a4fb3acbd57899cc03c5f7c46819&v=4"
+          },
+          {
             "login": "ebullient",
             "url": "https://github.com/ebullient",
             "avatarUrl": "https://avatars.githubusercontent.com/u/808713?u=8c50c6169b230fc62777f6910f6669b753ae95a8&v=4"
@@ -106,8 +117,8 @@
             "avatarUrl": "https://avatars.githubusercontent.com/u/1027334?v=4"
           }
         ],
-        "teamTotal": 3,
-        "total": 3
+        "teamTotal": 4,
+        "total": 4
       }
     ]
   ]
