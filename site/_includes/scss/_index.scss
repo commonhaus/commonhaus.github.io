@@ -53,6 +53,13 @@
   font-style: normal;
 }
 
+@mixin figtree-italic {
+  font-family: 'Figtree', Helvetica, Arial, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: italic;
+}
+
 @mixin figtree-bold {
   font-family: 'Figtree', Helvetica, Arial, sans-serif;
   font-optical-sizing: auto;
