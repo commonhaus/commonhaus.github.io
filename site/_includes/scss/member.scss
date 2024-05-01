@@ -1,0 +1,194 @@
+@use 'index' as *;
+@use 'heart-spinner' as *;
+
+main.member {
+  @include content-align-y;
+  position: relative;
+
+  a.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    cursor: pointer;
+  }
+
+  .hold {
+    min-width: 250px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  img {
+    float: right;
+    width: 50px;
+    height: 50px;
+    background: var(--white);
+    border-radius: 33%; // This makes the image round
+  }
+
+  .info-block,
+  .setting,
+  .control-heading {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: .2em;
+  }
+
+  .control-heading {
+    flex-basis: 100%;
+    margin-bottom: 0;
+  }
+
+  .information,
+  .info-block,
+  .setting {
+    h2, h3, &.no-title {
+      border-top: 1px solid var(--border-color);
+    }
+    h2 {
+      padding-top: .8rem;
+      font-size: var(--font-large);
+    }
+    h3 {
+      padding-top: .8rem;
+      font-size: var(--font-size);
+      @include figtree-medium;
+    }
+    footer {
+      flex-basis: 100%;
+    }
+  }
+
+  .information {
+    flex-grow: 2;
+    padding-right: 1rem;
+  }
+
+  .setting {
+    @include content-align-y;
+  }
+  .control {
+    display: flex;
+    flex-direction: row;
+    gap: .1em;
+    align-items: center;
+  }
+
+  button.input,
+  button.input-square,
+  input[type="text"],
+  input[type="email"] {
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    @include figtree-light;
+    cursor: pointer;
+    height: 30px;
+  }
+
+  button.input {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    @include figtree-medium;
+  }
+
+  button.input-square {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+
+    svg {
+      width: 20px; // adjust as needed
+      height: 20px; // adjust as needed
+      flex-shrink: 0;
+    }
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    padding: 10px;
+    min-width: 20em;
+  }
+
+  input[type="email"]:invalid {
+    border-color: red; // Adjust as needed
+  }
+
+  button[name="reset"] {
+    background-color: var(--button-reset-color);
+  }
+
+  .label {
+    color: var(--accent);
+    @include figtree-medium;
+  }
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: var(--border-color);
+    color: var(--text-normal);
+    padding: 5px 0;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 0;
+    margin-left: -150px;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .good-until {
+    display: flex;
+    flex-direction: row wrap;
+    justify-content: space-between;
+  }
+  .ok,
+  .required {
+    @include figtree-light;
+    font-size: var(--font-size);
+  }
+  .ok {
+    color: var(--ok);
+  }
+  .required {
+    color: var(--required);
+  }
+
+  code,
+  footer {
+    font-size: var(--font-smaller);
+  }
+
+  footer.agreement-version {
+    @include figtree-italic;
+    text-align: right;
+    color: var(--text-muted);
+    a {
+      color: var(--text-muted);
+    }
+  }
+
+  @media (min-width: 800px) {
+    min-width: 800px;
+  }
+}

@@ -7,6 +7,9 @@
     "serve": "deno task lume -s",
     "debug": "deno task attach -s",
 
+    "vite-dev": "deno run -A --unstable --node-modules-dir npm:vite build --watch",
+    "vite-build": "deno run -A --unstable --node-modules-dir npm:vite build",
+
     "about": "deno run --allow-run=gh --allow-read=./.github/graphql,./site/_data/about.yml --allow-write=./site/_data/about.yml ./.github/about.ts",
     "activity": "deno run --allow-run=gh --allow-read=./.github/graphql,./site/activity,./site/_data/authors.yml --allow-write=./site/activity,./site/_data/authors.yml ./.github/activities.ts",
     "lastmod": "deno run --allow-run=git,gh --allow-read=. --allow-write=./site/_includes/foundation.json ./.github/lastmod.ts",
