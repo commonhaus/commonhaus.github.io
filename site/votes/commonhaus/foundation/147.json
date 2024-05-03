@@ -3,9 +3,9 @@
   "hasQuorum": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 9,
-  "groupVotes": 2,
-  "countedVotes": 2,
-  "droppedVotes": 0,
+  "groupVotes": 3,
+  "countedVotes": 3,
+  "droppedVotes": 1,
   "votingThreshold": "all",
   "categories": {
     "approve": {
@@ -22,15 +22,28 @@
         {
           "login": "gavinking",
           "url": "https://github.com/gavinking",
-          "createdAt": "2024-05-03T21:29:14.000+00:00",
+          "createdAt": "2024-05-03T21:29:24.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "kenfinnigan",
+          "url": "https://github.com/kenfinnigan",
+          "createdAt": "2024-05-03T22:36:24.000+00:00",
           "reaction": "👍"
         }
       ],
-      "teamTotal": 2,
-      "total": 2
+      "teamTotal": 3,
+      "total": 3
     }
   },
-  "duplicates": [],
+  "duplicates": [
+    {
+      "login": "gavinking",
+      "url": "https://github.com/gavinking",
+      "createdAt": "2024-05-03T21:29:14.000+00:00",
+      "reaction": "👍"
+    }
+  ],
   "missingGroupActors": [
     {
       "login": "cowtowncoder",
@@ -53,10 +66,6 @@
       "url": "https://api.github.com/users/cealsair"
     },
     {
-      "login": "kenfinnigan",
-      "url": "https://api.github.com/users/kenfinnigan"
-    },
-    {
       "login": "ebullient",
       "url": "https://api.github.com/users/ebullient"
     }
@@ -69,7 +78,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-05-03T21:17:11Z",
-  "updated": "2024-05-03T21:29:17Z",
+  "updated": "2024-05-03T22:36:26Z",
   "url": "/votes/commonhaus/foundation/147.html",
   "tags": [
     "vote/open",
