@@ -50,6 +50,15 @@ layout: layouts/activitySidebar.vto
     </tr>
   </tfoot>
 </table>
+{{ if page.data.missingGroupActors && page.data.missingGroupActors.length }}
+<section class="missing">
+  <p>The following votes are missing:
+  {{- for user of page.data.missingGroupActors }}
+  <span><a href="{{ user.url }}">{{ user.login }}</a> </span>
+  {{- /for }}
+  </p>
+</section>
+{{- /if }}
 {{ if page.data.ignored }}
 <section class="ignored">
 <p>The following reactions were not counted: {{ page.data.ignored.reactions.join(", ") }}</p>
@@ -57,10 +66,10 @@ layout: layouts/activitySidebar.vto
 {{ /if -}}
 {{ if page.data.duplicates && page.data.duplicates.length }}
 <section class="duplicates">
-  <p>The following votes were not counted (multiple votes, using most recent):</p>
+  <p>The following votes were not counted (duplicate votes, using most recent):</p>
   <div class="duplicates">
   {{- for d of page.data.duplicates }}
-  <span><a href="{{ d.user.url }}">{{ d.user.login }}</a>:{{ d.reaction }}</span>
+  <span><a href="{{ d.user.url }}">{{ d.user.login }}</a>({{ d.reaction }})</span>
   {{- /for }}
   </div>
 </section>
