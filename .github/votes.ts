@@ -46,21 +46,17 @@ interface Result {
         };
     };
 }
-interface Voter {
+interface VoteRecord {
     login: string;
     url: string;
-    avatarUrl: string;
+    createdAt: string;
+    reaction: string;
 }
 interface VoteCategory {
     reactions: string[];
-    team: Voter[];
+    team: VoteRecord[];
     teamTotal: number;
     total: number;
-}
-interface DuplicateVote {
-    user: Voter;
-    createdAt: string;
-    reaction: string;
 }
 interface VoteData {
     voteType: string;
@@ -72,8 +68,8 @@ interface VoteData {
     droppedVotes: number;
     votingThreshold: string;
     categories?: Record<string, VoteCategory>;
-    duplicates: DuplicateVote[]
-    missingGroupActors: Voter[];
+    duplicates: VoteRecord[]
+    missingGroupActors: VoteRecord[];
 
     // Fields are added (or modified) by this script for rendering
     closed?: boolean;
