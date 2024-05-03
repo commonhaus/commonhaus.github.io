@@ -1,7 +1,7 @@
 body {
   --fern-green: #4D7343;
-  --fern-green-rgb: 77,115,67;
-  --fern-green-hsl: 108,26,36;
+  --fern-green-rgb: 77, 115, 67;
+  --fern-green-hsl: 108, 26, 36;
 
   --asparagus: #78A658;
   --asparagus-rgb: 120, 166, 88;
@@ -85,14 +85,25 @@ body {
 
 .dark body {
 
---bg-primary: #1e1e1e;
---text-normal: #B3B3B3;
---border-color: #434343;
---bg-navigation-top: #011212;
---bg-navigation-bottom: #0f0f0f;
---fg-navigation: #c8c7c7;
+  --bg-primary: #1e1e1e;
+  --bg-secondary: #232323;
 
-a {color: #c8c7c7;}
-a.button {color: var(--dark-green);}
+  --text-normal: #B3B3B3;
+  --border-color: #434343;
+  --bg-navigation-top: #011212;
+  --bg-navigation-bottom: #0f0f0f;
+  --fg-navigation: #c8c7c7;
+
+  --table-header-footer-bg: var(--bg-secondary);
+  --table-left-column-bg: var(--bg-secondary);
+  --table-team-votes-bg: var(--british-racing-green-rgb);
+
+  a {
+    color: #c8c7c7;
+  }
+
+  a.button {
+    color: var(--dark-green);
+  }
 
 }
