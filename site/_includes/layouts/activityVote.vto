@@ -69,7 +69,7 @@ layout: layouts/activitySidebar.vto
   <p>The following votes were not counted (duplicate votes, using most recent):</p>
   <div class="duplicates">
   {{- for d of page.data.duplicates }}
-  <span><a href="{{ d.user.url }}">{{ d.user.login }}</a>({{ d.reaction }})</span>
+  <span><a href="{{ d.url }}">{{ d.login }}</a>({{ d.reaction }})</span>
   {{- /for }}
   </div>
 </section>
