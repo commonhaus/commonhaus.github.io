@@ -15,38 +15,31 @@
       "team": [
         {
           "login": "aalmiray",
-          "url": "https://github.com/aalmiray",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/13969?u=6a649c057ec7a4fb3acbd57899cc03c5f7c46819&v=4"
+          "url": "https://github.com/aalmiray"
         },
         {
           "login": "cealsair",
-          "url": "https://github.com/cealsair",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/25405698?u=0d403bf8e726802918d95b99445bd15e5db9336e&v=4"
+          "url": "https://github.com/cealsair"
         },
         {
           "login": "cowtowncoder",
-          "url": "https://github.com/cowtowncoder",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/55065?u=fdce6737a39cbda5176c8aa3bda56c2bf95190f0&v=4"
+          "url": "https://github.com/cowtowncoder"
         },
         {
           "login": "ebullient",
-          "url": "https://github.com/ebullient",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/808713?u=8c50c6169b230fc62777f6910f6669b753ae95a8&v=4"
+          "url": "https://github.com/ebullient"
         },
         {
           "login": "evanchooly",
-          "url": "https://github.com/evanchooly",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/195021?v=4"
+          "url": "https://github.com/evanchooly"
         },
         {
           "login": "kenfinnigan",
-          "url": "https://github.com/kenfinnigan",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/441240?u=aea870e6cad6edfff45e4fc1603b4531c8f57b44&v=4"
+          "url": "https://github.com/kenfinnigan"
         },
         {
           "login": "timtebeek",
-          "url": "https://github.com/timtebeek",
-          "avatarUrl": "https://avatars.githubusercontent.com/u/1027334?v=4"
+          "url": "https://github.com/timtebeek"
         }
       ],
       "teamTotal": 7,
@@ -55,7 +48,10 @@
   },
   "duplicates": [
     {
-      "user": {},
+      "user": {
+        "login": "aalmiray",
+        "url": "https://github.com/aalmiray"
+      },
       "createdAt": "2024-05-01T10:27:28.000+00:00",
       "reaction": "👍"
     }
@@ -63,13 +59,11 @@
   "missingGroupActors": [
     {
       "login": "gavinking",
-      "url": "https://api.github.com/users/gavinking",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/579974?v=4"
+      "url": "https://api.github.com/users/gavinking"
     },
     {
       "login": "maxandersen",
-      "url": "https://api.github.com/users/maxandersen",
-      "avatarUrl": "https://avatars.githubusercontent.com/u/54129?v=4"
+      "url": "https://api.github.com/users/maxandersen"
     }
   ],
   "commentId": "IC_kwDOKRPTI858cHZl",
@@ -80,7 +74,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-05-01T00:05:22Z",
-  "updated": "2024-05-03T17:53:49Z",
+  "updated": "2024-05-03T19:32:57Z",
   "url": "/votes/commonhaus/foundation/149.html",
   "tags": [
     "vote/open",
@@ -98,38 +92,31 @@
         "team": [
           {
             "login": "aalmiray",
-            "url": "https://github.com/aalmiray",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/13969?u=6a649c057ec7a4fb3acbd57899cc03c5f7c46819&v=4"
+            "url": "https://github.com/aalmiray"
           },
           {
             "login": "cealsair",
-            "url": "https://github.com/cealsair",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/25405698?u=0d403bf8e726802918d95b99445bd15e5db9336e&v=4"
+            "url": "https://github.com/cealsair"
           },
           {
             "login": "cowtowncoder",
-            "url": "https://github.com/cowtowncoder",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/55065?u=fdce6737a39cbda5176c8aa3bda56c2bf95190f0&v=4"
+            "url": "https://github.com/cowtowncoder"
           },
           {
             "login": "ebullient",
-            "url": "https://github.com/ebullient",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/808713?u=8c50c6169b230fc62777f6910f6669b753ae95a8&v=4"
+            "url": "https://github.com/ebullient"
           },
           {
             "login": "evanchooly",
-            "url": "https://github.com/evanchooly",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/195021?v=4"
+            "url": "https://github.com/evanchooly"
           },
           {
             "login": "kenfinnigan",
-            "url": "https://github.com/kenfinnigan",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/441240?u=aea870e6cad6edfff45e4fc1603b4531c8f57b44&v=4"
+            "url": "https://github.com/kenfinnigan"
           },
           {
             "login": "timtebeek",
-            "url": "https://github.com/timtebeek",
-            "avatarUrl": "https://avatars.githubusercontent.com/u/1027334?v=4"
+            "url": "https://github.com/timtebeek"
           }
         ],
         "teamTotal": 7,
