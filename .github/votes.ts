@@ -175,8 +175,6 @@ if (voteData.categories) {
                 .replace('eyes', '👀')
         );
     }
-
-    voteData.sortedCategories = Object.entries(voteData.categories).sort();
 }
 
 // The relative path for the vote file
