@@ -110,10 +110,6 @@ export default function* ({ page }) {
     };
 
     for (const gp of genPages) {
-        const newPage = { ...general, ...gp };
-        newPage.sortedCategories = newPage.categories ? Object.entries(newPage.categories).sort() : [];
-        yield newPage;
-
         // required votes based on supermajority, majority, or all
         // round up: whole human
         const requiredVotes = gp.votingThreshold == 'supermajority'
@@ -125,12 +121,16 @@ export default function* ({ page }) {
         // gp.hasQuorum = false;
         // gp.groupVotes = 1;
 
+        let suffix = '';
         let svgContent = unknownSvg;
         if (gp.closed) {
+            suffix = '?closed';
             svgContent = closedSvg;
         } else if (gp.hasQuorum) {
+            suffix = '?quorum';
             svgContent = quorumSvg;
         } else {
+            suffix = `?progress=${gp.groupVotes}`;
             svgContent = createSVG({
                 width: 132,
                 height: 18,
@@ -140,8 +140,13 @@ export default function* ({ page }) {
             });
         }
 
+        const newPage = { ...general, ...gp };
+        newPage.sortedCategories = newPage.categories ? Object.entries(newPage.categories).sort() : [];
+        newPage.voteSvg = newPage.url.replace(/\.html$/,`.svg${suffix}`);
+        yield newPage;
+
         const svg = {
-            url: newPage.url.replace(/\.html$/, '.svg'),
+            url: newPage.url.replace(/\.html$/,'.svg'),
             content: svgContent
         }
         yield svg;
