@@ -113,10 +113,12 @@
   "updated": "2024-05-06T20:02:29Z",
   "url": "/votes/commonhaus/foundation/149.html",
   "tags": [
-    "vote/open",
     "notice",
+    "vote/done",
     "vote/quorum",
-    "vote"
+    "vote",
+    "closed"
   ],
-  "closed": false
+  "closed": true,
+  "closedAt": "2024-05-06T20:22:50Z"
 }
