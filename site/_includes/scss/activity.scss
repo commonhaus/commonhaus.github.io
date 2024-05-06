@@ -58,6 +58,10 @@ article.activity {
       font-size: var(--font-larger);
       color: var(--text-normal);
     }
+
+    section div.duplicates span:not(:last-child)::after {
+      content: ', ';
+    }
   }
 }
 
