@@ -111,7 +111,7 @@ export default function* ({ page }) {
 
     for (const gp of genPages) {
         const newPage = { ...general, ...gp };
-        newPage.sortedCategories = Object.entries(newPage.categories).sort();
+        newPage.sortedCategories = newPage.categories ? Object.entries(newPage.categories).sort() : [];
         yield newPage;
 
         // required votes based on supermajority, majority, or all

@@ -129,7 +129,7 @@ if (!item) {
 }
 
 const match = comment.body.match(/<!-- vote::data ([\s\S]*?)-->/);
-const voteData: VoteData = JSON.parse(match ? match[1].trim() : '');
+const voteData: VoteData = match ? JSON.parse(match[1].trim()) : {};
 
 voteData.commentId = comment.id;
 voteData.github = item.url;
