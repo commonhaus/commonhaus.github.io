@@ -18,6 +18,8 @@ GOVERNANCE:
 
 TRADEMARKS:
   url: /trademarks/
+  cssclasses:
+  - trademarks
   description: >
     A listing of the foundation's trademarks, including logos and phrases,
     with guidelines for their proper use.
