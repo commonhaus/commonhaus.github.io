@@ -1,6 +1,7 @@
 {
   "voteType": "marthas",
   "hasQuorum": false,
+  "isDone": true,
   "group": "commonhaus/cf-egc",
   "groupSize": 9,
   "groupVotes": 5,
@@ -74,6 +75,12 @@
       "url": "https://api.github.com/users/cealsair"
     }
   ],
+  "manualCloseComments": {
+    "author": {},
+    "createdAt": "2024-05-05T18:54:01.000+00:00",
+    "body": "Majority have responded, we can fail forward. I want to include this step in a revised project application template.",
+    "url": "https://github.com/commonhaus/foundation/pull/147#issuecomment-2094911796"
+  },
   "commentId": "IC_kwDOKRPTI858zHs7",
   "github": "https://github.com/commonhaus/foundation/pull/147",
   "itemId": "PR_kwDOKRPTI85txIgV",
@@ -82,12 +89,14 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-05-03T21:17:11Z",
-  "updated": "2024-05-04T00:23:33Z",
+  "updated": "2024-05-08T18:13:06Z",
   "url": "/votes/commonhaus/foundation/147.html",
   "tags": [
-    "vote/open",
     "notice",
-    "vote"
+    "vote/done",
+    "vote",
+    "closed"
   ],
-  "closed": false
+  "closed": true,
+  "closedAt": "2024-05-05T18:53:58Z"
 }
