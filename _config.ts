@@ -59,8 +59,8 @@ const mergeFoundationPageData = (page: Page, allPages: Page<Data>[]) => {
     // 4. if the page matches a bylaws entry (_data/bylaws.yml), set that ordinal as a page attribute
 
     const srcPath = page.src.path.replace("/foundation/", "");
-    const metaData = FOUNDATION_DATA[srcPath + ".md"];
-    const pageData = FOUNDATION_PAGES[srcPath];
+    const metaData = FOUNDATION_DATA[srcPath + ".md"] as Data;
+    const pageData = FOUNDATION_PAGES[srcPath] as Data;
 
     if (!pageData || !metaData) {
         // Skip/Remove any pages that don't have a corresponding entry in the foundation.yml file
@@ -75,6 +75,7 @@ const mergeFoundationPageData = (page: Page, allPages: Page<Data>[]) => {
         ...pageData,
     };
     page.data.date = new Date(page.data.date);
+    page.data.cssclasses = (metaData.cssclasses || []).concat(pageData.cssclasses || []);
 
     // If the title hasn't been set, set it to the first H1 in the content
     // Add the link to the github page based on the src path
