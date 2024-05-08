@@ -48,7 +48,7 @@ article.activity {
       flex-basis: 100%;
     }
 
-    a.repo-link {
+    a.vote-issue {
       font-size: var(--font-small);
       text-decoration: none;
       font-weight: normal;
@@ -86,12 +86,12 @@ article.activity {
         a {
           padding-right: 5px;
         }
-        a.repo-link {
-          color: var(--text-muted);
-          font-size: var(--font-small);
-          text-decoration: none;
-          font-weight: normal;
-        }
+      }
+      a.vote-issue {
+        color: var(--text-muted);
+        font-size: var(--font-small);
+        text-decoration: none;
+        font-weight: normal;
       }
     }
     &:not(.archive) {

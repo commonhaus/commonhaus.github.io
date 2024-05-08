@@ -7,13 +7,25 @@ layout: layouts/activitySidebar.vto
   <h1 id="articleTitle">
   <span>
     Voting results for
-    <a class="repo-link" href="{{ page.data.github }}">{{ page.data.voteItem }}</a>
+    <a class="vote-issue" href="{{ page.data.github }}">{{ page.data.voteItem }}</a>
   </span>
   <a class="item-title" href="{{ page.data.github }}">{{ page.data.itemTitle }}</a>
   </h1>
 </header>
 <div class="content">
 <a href="#result"><img src="{{ page.data.voteSvg }}"></a>
+
+{{ if page.data.manualCloseComments && page.data.manualCloseComments.body }}
+<section class="manual">
+  <p>This vote was <a href="{{ page.data.manualCloseComments.url }}">closed</a>
+  by <a href="{{ page.data.manualCloseComments.author.url }}">{{ page.data.manualCloseComments.author.login }}</a>
+  with the following comments on <time datetime="{{ page.data.manualCloseComments.createdAt }}">{{ page.data.manualCloseComments.createdAt |> date('d MMMM yyyy') }}</time>:</p>
+  <blockquote>
+  {{ page.data.manualCloseComments.body |> md }}
+  </blockquote>
+</section>
+<hr />
+{{ /if }}
 
 <ul>
 <li><strong>Method</strong>: {{ page.data.voteType }}</li>
