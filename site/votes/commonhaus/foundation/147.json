@@ -76,7 +76,10 @@
     }
   ],
   "manualCloseComments": {
-    "author": {},
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
     "createdAt": "2024-05-05T18:54:01.000+00:00",
     "body": "Majority have responded, we can fail forward. I want to include this step in a revised project application template.",
     "url": "https://github.com/commonhaus/foundation/pull/147#issuecomment-2094911796"
