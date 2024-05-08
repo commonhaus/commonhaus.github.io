@@ -4,7 +4,7 @@
   "group": "commonhaus/cf-egc",
   "groupSize": 9,
   "groupVotes": 5,
-  "countedVotes": 5,
+  "countedVotes": 6,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -45,7 +45,7 @@
         }
       ],
       "teamTotal": 5,
-      "total": 5
+      "total": 6
     }
   },
   "duplicates": [],
@@ -75,7 +75,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-05-05T23:48:08Z",
-  "updated": "2024-05-07T14:58:22Z",
+  "updated": "2024-05-08T02:46:05Z",
   "url": "/votes/commonhaus/foundation/154.html",
   "tags": [
     "vote/open",
