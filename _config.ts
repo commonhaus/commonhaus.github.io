@@ -208,6 +208,12 @@ site.preprocess(['.md'], (pages) => {
             page.data.cssclasses = page.data.cssclasses || [];
             page.data.cssclasses.push('activity', 'has-aside');
         }
+        if (page.src.path.startsWith("/foundation")) {
+            const regex = /(send an email to|email|be directed to) the \[`?.+?`? mailing list\]\[CONTACTS.yaml\]/g;
+            const replacement = '[use our online form](https://forms.gle/t2d4DR6CxXSag26s5)';
+            const content = page.data.content as string;
+            page.data.content = content.replace(regex, replacement);
+        }
         // add function to get list of projects
         page.data.listProjects = () => {
             return Object.values(PROJECT_DATA)
