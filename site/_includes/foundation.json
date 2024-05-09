@@ -84,7 +84,7 @@
     "genUrl": "/FAQ.html"
   },
   "bylaws/2-cf-membership.md": {
-    "date": "2024-04-07T14:31:03.000Z",
+    "date": "2024-05-13T11:47:07.000Z",
     "srcPath": "bylaws/2-cf-membership.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/bylaws/2-cf-membership.md",
@@ -152,7 +152,7 @@
     "genUrl": "/bylaws/3-cf-council.html"
   },
   "bylaws/5-decision-making.md": {
-    "date": "2024-02-14T00:35:35.000Z",
+    "date": "2024-05-17T13:38:55.000Z",
     "srcPath": "bylaws/5-decision-making.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/bylaws/5-decision-making.md",
@@ -220,7 +220,7 @@
     "genUrl": "/bylaws/4-cf-advisory-board.html"
   },
   "bylaws/README.md": {
-    "date": "2024-02-17T16:11:01.000Z",
+    "date": "2024-05-17T14:12:18.000Z",
     "srcPath": "bylaws/README.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/bylaws/README.md",
@@ -519,5 +519,22 @@
       "legal"
     ],
     "genUrl": "/agreements/bootstrapping/2024-04-02-bootstrapping-hibernate.html"
+  },
+  "agreements/membership/README.md": {
+    "date": "2024-05-10T17:30:27.000Z",
+    "srcPath": "agreements/membership/README.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/membership/README.md",
+    "type": "submodule",
+    "layout": "layouts/policies.vto",
+    "cssclasses": [
+      "bylaws",
+      "has-aside"
+    ],
+    "tags": [
+      "policies",
+      "legal"
+    ],
+    "genUrl": "/agreements/membership/"
   }
 }
