@@ -4,8 +4,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 9,
-  "groupVotes": 1,
-  "countedVotes": 1,
+  "groupVotes": 3,
+  "countedVotes": 3,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -19,6 +19,27 @@
           "url": "https://github.com/ebullient",
           "createdAt": "2024-05-11T15:46:41.000+00:00",
           "reaction": "👍"
+        },
+        {
+          "login": "timtebeek",
+          "url": "https://github.com/timtebeek",
+          "createdAt": "2024-05-11T16:10:02.000+00:00",
+          "reaction": "👍"
+        }
+      ],
+      "teamTotal": 2,
+      "total": 2
+    },
+    "ok": {
+      "reactions": [
+        "👀"
+      ],
+      "team": [
+        {
+          "login": "aalmiray",
+          "url": "https://github.com/aalmiray",
+          "createdAt": "2024-05-11T17:04:27.000+00:00",
+          "reaction": "👀"
         }
       ],
       "teamTotal": 1,
@@ -27,10 +48,6 @@
   },
   "duplicates": [],
   "missingGroupActors": [
-    {
-      "login": "aalmiray",
-      "url": "https://api.github.com/users/aalmiray"
-    },
     {
       "login": "cowtowncoder",
       "url": "https://api.github.com/users/cowtowncoder"
@@ -42,10 +59,6 @@
     {
       "login": "gavinking",
       "url": "https://api.github.com/users/gavinking"
-    },
-    {
-      "login": "timtebeek",
-      "url": "https://api.github.com/users/timtebeek"
     },
     {
       "login": "maxandersen",
@@ -69,7 +82,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-05-11T16:03:39Z",
-  "updated": "2024-05-11T16:03:39Z",
+  "updated": "2024-05-11T17:04:32Z",
   "url": "/votes/commonhaus/foundation/158.html",
   "tags": [
     "vote/open",
