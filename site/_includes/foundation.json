@@ -519,5 +519,22 @@
       "legal"
     ],
     "genUrl": "/agreements/bootstrapping/2024-04-02-bootstrapping-hibernate.html"
+  },
+  "agreements/membership/README.md": {
+    "date": "2024-05-10T17:30:27.000Z",
+    "srcPath": "agreements/membership/README.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/membership/README.md",
+    "type": "submodule",
+    "layout": "layouts/policies.vto",
+    "cssclasses": [
+      "bylaws",
+      "has-aside"
+    ],
+    "tags": [
+      "policies",
+      "legal"
+    ],
+    "genUrl": "/agreements/membership/"
   }
 }
