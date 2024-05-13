@@ -99,7 +99,9 @@
     "vote/open",
     "notice",
     "vote/quorum",
-    "vote"
+    "vote",
+    "closed"
   ],
-  "closed": false
+  "closed": true,
+  "closedAt": "2024-05-13T11:47:07Z"
 }
