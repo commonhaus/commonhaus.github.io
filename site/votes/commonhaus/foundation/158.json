@@ -45,6 +45,12 @@
           "reaction": "👍"
         },
         {
+          "login": "gavinking",
+          "url": "https://github.com/gavinking",
+          "createdAt": "2024-05-13T16:36:14.000+00:00",
+          "reaction": "👍"
+        },
+        {
           "login": "kenfinnigan",
           "url": "https://github.com/kenfinnigan",
           "createdAt": "2024-05-11T17:18:32.000+00:00",
@@ -57,23 +63,16 @@
           "reaction": "👍"
         }
       ],
-      "teamTotal": 7,
-      "total": 7
+      "teamTotal": 8,
+      "total": 8
     },
     "ok": {
       "reactions": [
         "👀"
       ],
-      "team": [
-        {
-          "login": "gavinking",
-          "url": "https://github.com/gavinking",
-          "createdAt": "2024-05-13T12:10:01.000+00:00",
-          "reaction": "👀"
-        }
-      ],
-      "teamTotal": 1,
-      "total": 2
+      "team": [],
+      "teamTotal": 0,
+      "total": 1
     }
   },
   "duplicates": [
@@ -99,7 +98,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-05-11T16:03:39Z",
-  "updated": "2024-05-13T13:24:37Z",
+  "updated": "2024-05-13T16:36:17Z",
   "url": "/votes/commonhaus/foundation/158.html",
   "tags": [
     "vote/open",
