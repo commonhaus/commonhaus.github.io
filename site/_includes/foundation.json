@@ -48,7 +48,7 @@
     "genUrl": "/CONTRIBUTING.html"
   },
   "TRADEMARKS.md": {
-    "date": "2024-05-05T18:53:57.000Z",
+    "date": "2024-05-20T20:28:34.000Z",
     "srcPath": "TRADEMARKS.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/TRADEMARKS.md",
@@ -169,7 +169,7 @@
     "genUrl": "/bylaws/5-decision-making.html"
   },
   "bylaws/6-notice-records.md": {
-    "date": "2024-02-24T14:12:10.000Z",
+    "date": "2024-05-20T14:25:32.000Z",
     "srcPath": "bylaws/6-notice-records.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/bylaws/6-notice-records.md",
@@ -271,7 +271,7 @@
     "genUrl": "/agreements/bootstrapping/bootstrapping.html"
   },
   "agreements/bootstrapping/2024-03-13-bootstrapping-jreleaser.md": {
-    "date": "2024-04-07T14:31:03.000Z",
+    "date": "2024-05-20T20:28:34.000Z",
     "srcPath": "agreements/bootstrapping/2024-03-13-bootstrapping-jreleaser.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-03-13-bootstrapping-jreleaser.md",
@@ -288,7 +288,7 @@
     "genUrl": "/agreements/bootstrapping/2024-03-13-bootstrapping-jreleaser.html"
   },
   "agreements/bootstrapping/2024-03-12-bootstrapping-jbang.md": {
-    "date": "2024-04-07T14:31:03.000Z",
+    "date": "2024-05-20T20:28:34.000Z",
     "srcPath": "agreements/bootstrapping/2024-03-12-bootstrapping-jbang.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-03-12-bootstrapping-jbang.md",
@@ -441,7 +441,7 @@
     "genUrl": "/policies/succession-plan.html"
   },
   "agreements/bootstrapping/2024-03-15-bootstrapping-morphia.md": {
-    "date": "2024-04-07T14:31:03.000Z",
+    "date": "2024-05-20T20:28:34.000Z",
     "srcPath": "agreements/bootstrapping/2024-03-15-bootstrapping-morphia.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-03-15-bootstrapping-morphia.md",
@@ -470,7 +470,7 @@
     "genUrl": "/elections/candidate-template.html"
   },
   "agreements/bootstrapping/2024-03-25-bootstrapping-jackson.md": {
-    "date": "2024-04-07T14:31:03.000Z",
+    "date": "2024-05-20T20:28:34.000Z",
     "srcPath": "agreements/bootstrapping/2024-03-25-bootstrapping-jackson.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-03-25-bootstrapping-jackson.md",
@@ -487,7 +487,7 @@
     "genUrl": "/agreements/bootstrapping/2024-03-25-bootstrapping-jackson.html"
   },
   "agreements/bootstrapping/2024-03-25-bootstrapping-openrewrite.md": {
-    "date": "2024-04-07T14:31:03.000Z",
+    "date": "2024-05-20T20:28:34.000Z",
     "srcPath": "agreements/bootstrapping/2024-03-25-bootstrapping-openrewrite.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-03-25-bootstrapping-openrewrite.md",
@@ -504,7 +504,7 @@
     "genUrl": "/agreements/bootstrapping/2024-03-25-bootstrapping-openrewrite.html"
   },
   "agreements/bootstrapping/2024-04-02-bootstrapping-hibernate.md": {
-    "date": "2024-04-07T14:31:03.000Z",
+    "date": "2024-05-20T20:28:34.000Z",
     "srcPath": "agreements/bootstrapping/2024-04-02-bootstrapping-hibernate.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-04-02-bootstrapping-hibernate.md",
@@ -536,5 +536,22 @@
       "legal"
     ],
     "genUrl": "/agreements/membership/"
+  },
+  "agreements/bootstrapping/2024-05-18-bootstrapping-sdkman.md": {
+    "date": "2024-05-20T20:28:34.000Z",
+    "srcPath": "agreements/bootstrapping/2024-05-18-bootstrapping-sdkman.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-05-18-bootstrapping-sdkman.md",
+    "type": "submodule",
+    "layout": "layouts/policies.vto",
+    "cssclasses": [
+      "bylaws",
+      "has-aside"
+    ],
+    "tags": [
+      "policies",
+      "legal"
+    ],
+    "genUrl": "/agreements/bootstrapping/2024-05-18-bootstrapping-sdkman.html"
   }
 }
