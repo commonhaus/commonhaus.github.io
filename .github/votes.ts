@@ -151,12 +151,6 @@ if (item.closed) {
 }
 
 if (voteData.categories) {
-    const ignored: VoteCategory | undefined = voteData.categories['ignored'];
-    if (ignored) {
-        voteData.ignored = ignored;
-        delete voteData.categories['ignored'];
-    }
-
     for (const category of Object.values(voteData.categories)) {
         // +1, -1, laugh, confused, heart, hooray, rocket, eyes
         // thumbs_up, plus_one, thumbs_down, minus_one
@@ -174,6 +168,12 @@ if (voteData.categories) {
                 .replace('rocket', '🚀')
                 .replace('eyes', '👀')
         );
+    }
+
+    const ignored: VoteCategory | undefined = voteData.categories['ignored'];
+    if (ignored) {
+        voteData.ignored = ignored;
+        delete voteData.categories['ignored'];
     }
 }
 
