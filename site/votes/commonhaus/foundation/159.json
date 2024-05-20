@@ -1,11 +1,11 @@
 {
   "voteType": "marthas",
-  "hasQuorum": false,
+  "hasQuorum": true,
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 9,
-  "groupVotes": 8,
-  "countedVotes": 8,
+  "groupVotes": 9,
+  "countedVotes": 9,
   "droppedVotes": 1,
   "votingThreshold": "all",
   "categories": {
@@ -24,6 +24,12 @@
           "login": "cealsair",
           "url": "https://github.com/cealsair",
           "createdAt": "2024-05-19T22:42:10.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "cowtowncoder",
+          "url": "https://github.com/cowtowncoder",
+          "createdAt": "2024-05-20T18:24:22.000+00:00",
           "reaction": "👍"
         },
         {
@@ -63,8 +69,8 @@
           "reaction": "👍"
         }
       ],
-      "teamTotal": 8,
-      "total": 8
+      "teamTotal": 9,
+      "total": 9
     }
   },
   "duplicates": [
@@ -75,12 +81,7 @@
       "reaction": "👍"
     }
   ],
-  "missingGroupActors": [
-    {
-      "login": "cowtowncoder",
-      "url": "https://api.github.com/users/cowtowncoder"
-    }
-  ],
+  "missingGroupActors": [],
   "manualCloseComments": null,
   "commentId": "IC_kwDOKRPTI85-RY2E",
   "github": "https://github.com/commonhaus/foundation/pull/159",
@@ -90,12 +91,16 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-05-17T23:31:27Z",
-  "updated": "2024-05-20T14:24:51Z",
+  "updated": "2024-05-20T18:26:07Z",
   "url": "/votes/commonhaus/foundation/159.html",
   "tags": [
+    "vote/open",
     "notice",
     "vote/done",
-    "vote"
+    "vote/quorum",
+    "vote",
+    "closed"
   ],
-  "closed": false
+  "closed": true,
+  "closedAt": "2024-05-20T14:25:32Z"
 }
