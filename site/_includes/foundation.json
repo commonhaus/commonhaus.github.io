@@ -48,7 +48,7 @@
     "genUrl": "/CONTRIBUTING.html"
   },
   "TRADEMARKS.md": {
-    "date": "2024-05-20T20:28:34.000Z",
+    "date": "2024-05-21T17:51:01.000Z",
     "srcPath": "TRADEMARKS.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/TRADEMARKS.md",
@@ -553,5 +553,22 @@
       "legal"
     ],
     "genUrl": "/agreements/bootstrapping/2024-05-18-bootstrapping-sdkman.html"
+  },
+  "agreements/bootstrapping/2024-05-06-bootstrapping-objenesis.md": {
+    "date": "2024-05-21T17:51:01.000Z",
+    "srcPath": "agreements/bootstrapping/2024-05-06-bootstrapping-objenesis.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-05-06-bootstrapping-objenesis.md",
+    "type": "submodule",
+    "layout": "layouts/policies.vto",
+    "cssclasses": [
+      "bylaws",
+      "has-aside"
+    ],
+    "tags": [
+      "policies",
+      "legal"
+    ],
+    "genUrl": "/agreements/bootstrapping/2024-05-06-bootstrapping-objenesis.html"
   }
 }
