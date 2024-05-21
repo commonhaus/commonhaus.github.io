@@ -77,5 +77,3 @@ jobs:
         run: |
           echo "Deployment failed"
           exit 1
-
-
