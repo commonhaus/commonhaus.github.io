@@ -60,19 +60,19 @@
   "missingGroupActors": [
     {
       "login": "evanchooly",
-      "url": "https://api.github.com/users/evanchooly"
+      "url": "https://github.com/evanchooly"
     },
     {
       "login": "timtebeek",
-      "url": "https://api.github.com/users/timtebeek"
+      "url": "https://github.com/timtebeek"
     },
     {
       "login": "maxandersen",
-      "url": "https://api.github.com/users/maxandersen"
+      "url": "https://github.com/maxandersen"
     },
     {
       "login": "cealsair",
-      "url": "https://api.github.com/users/cealsair"
+      "url": "https://github.com/cealsair"
     }
   ],
   "manualCloseComments": {
