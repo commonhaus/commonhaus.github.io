@@ -65,47 +65,47 @@
   "missingGroupActors": [
     {
       "login": "kenfinnigan",
-      "url": "https://api.github.com/users/kenfinnigan",
+      "url": "https://github.com/kenfinnigan",
       "avatarUrl": "https://avatars.githubusercontent.com/u/441240?v=4"
     },
     {
       "login": "maxandersen",
-      "url": "https://api.github.com/users/maxandersen",
+      "url": "https://github.com/maxandersen",
       "avatarUrl": "https://avatars.githubusercontent.com/u/54129?v=4"
     },
     {
       "login": "cealsair",
-      "url": "https://api.github.com/users/cealsair",
+      "url": "https://github.com/cealsair",
       "avatarUrl": "https://avatars.githubusercontent.com/u/25405698?v=4"
     },
     {
       "login": "gavinking",
-      "url": "https://api.github.com/users/gavinking",
+      "url": "https://github.com/gavinking",
       "avatarUrl": "https://avatars.githubusercontent.com/u/579974?v=4"
     },
     {
       "login": "nmcl",
-      "url": "https://api.github.com/users/nmcl",
+      "url": "https://github.com/nmcl",
       "avatarUrl": "https://avatars.githubusercontent.com/u/580667?v=4"
     },
     {
       "login": "evanchooly",
-      "url": "https://api.github.com/users/evanchooly",
+      "url": "https://github.com/evanchooly",
       "avatarUrl": "https://avatars.githubusercontent.com/u/195021?v=4"
     },
     {
       "login": "aalmiray",
-      "url": "https://api.github.com/users/aalmiray",
+      "url": "https://github.com/aalmiray",
       "avatarUrl": "https://avatars.githubusercontent.com/u/13969?v=4"
     },
     {
       "login": "yrodiere",
-      "url": "https://api.github.com/users/yrodiere",
+      "url": "https://github.com/yrodiere",
       "avatarUrl": "https://avatars.githubusercontent.com/u/412878?v=4"
     },
     {
       "login": "ebullient",
-      "url": "https://api.github.com/users/ebullient",
+      "url": "https://github.com/ebullient",
       "avatarUrl": "https://avatars.githubusercontent.com/u/808713?v=4"
     }
   ],
