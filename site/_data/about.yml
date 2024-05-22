@@ -103,3 +103,22 @@ timtebeek:
   company: '@moderneinc '
   name: Tim te Beek
   bio: 'Staff software engineer at Moderne, supporting the OpenRewrite community.'
+marc0der:
+  login: marc0der
+  url: 'https://github.com/marc0der'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/144390?v=4'
+  company: Equal Experts
+  name: Marco Vermeulen
+  bio: >-
+    Polyglot FP on the JVM @EqualExperts. Creator of @sdkman, co-author of
+    Manning Functional Programming in Kotlin https://bit.ly/fpinkotlin
+henri-tremblay:
+  login: henri-tremblay
+  url: 'https://github.com/henri-tremblay'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/1216819?v=4'
+  company: TS Imagine
+  name: Henri Tremblay
+  bio: >-
+    Java Champion. Leads EasyMock and Objenesis and contributes to Ehcache.
+    Loves optimization and productivity. In Java and in general. Likes to be
+    useful. 
