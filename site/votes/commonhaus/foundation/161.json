@@ -3,7 +3,7 @@
   "hasQuorum": false,
   "isDone": false,
   "group": "commonhaus/cf-egc",
-  "groupSize": 9,
+  "groupSize": 11,
   "groupVotes": 4,
   "countedVotes": 4,
   "droppedVotes": 0,
@@ -50,6 +50,14 @@
       "url": "https://github.com/aalmiray"
     },
     {
+      "login": "marc0der",
+      "url": "https://github.com/marc0der"
+    },
+    {
+      "login": "henri-tremblay",
+      "url": "https://github.com/henri-tremblay"
+    },
+    {
       "login": "evanchooly",
       "url": "https://github.com/evanchooly"
     },
@@ -75,7 +83,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-05-21T19:04:45Z",
-  "updated": "2024-05-22T12:27:41Z",
+  "updated": "2024-05-22T21:27:41Z",
   "url": "/votes/commonhaus/foundation/161.html",
   "tags": [
     "vote/open",
