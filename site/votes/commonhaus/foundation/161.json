@@ -4,8 +4,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 11,
-  "groupVotes": 4,
-  "countedVotes": 4,
+  "groupVotes": 5,
+  "countedVotes": 5,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -14,6 +14,12 @@
         "👍"
       ],
       "team": [
+        {
+          "login": "aalmiray",
+          "url": "https://github.com/aalmiray",
+          "createdAt": "2024-05-24T18:15:28.000+00:00",
+          "reaction": "👍"
+        },
         {
           "login": "cowtowncoder",
           "url": "https://github.com/cowtowncoder",
@@ -39,16 +45,12 @@
           "reaction": "👍"
         }
       ],
-      "teamTotal": 4,
-      "total": 4
+      "teamTotal": 5,
+      "total": 5
     }
   },
   "duplicates": [],
   "missingGroupActors": [
-    {
-      "login": "aalmiray",
-      "url": "https://github.com/aalmiray"
-    },
     {
       "login": "marc0der",
       "url": "https://github.com/marc0der"
@@ -83,7 +85,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-05-21T19:04:45Z",
-  "updated": "2024-05-22T21:27:41Z",
+  "updated": "2024-05-24T18:15:32Z",
   "url": "/votes/commonhaus/foundation/161.html",
   "tags": [
     "vote/open",
