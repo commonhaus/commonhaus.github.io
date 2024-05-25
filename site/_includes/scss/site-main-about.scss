@@ -197,6 +197,12 @@ main.site-main {
     }
   }
 }
+img.dark-only {
+  display: none;
+}
+img.light-only {
+  display: block;
+}
 .dark {
   img.dark-only {
     display: block;
