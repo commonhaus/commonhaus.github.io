@@ -52,6 +52,7 @@ jobs:
           git config user.email ${{ env.GH_BOT_EMAIL }}
 
       - name: Git Submodule Update
+        id: submodule
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -65,6 +66,7 @@ jobs:
             git commit -am "🆙 Auto-update submodule references"
             git pull --rebase
             git push
+            echo "updated=true" >> $GITHUB_OUTPUT
           fi
 
       - name: Git Discussion Update
@@ -84,7 +86,7 @@ jobs:
           fi
 
       - name: Push GH Pages
-        if: ${{ steps.discussion.outputs.updated == 'true' }}
+        if: ${{ steps.submodule.outputs.updated == 'true' || steps.discussion.outputs.updated == 'true' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
