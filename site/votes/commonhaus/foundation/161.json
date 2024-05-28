@@ -1,11 +1,11 @@
 {
   "voteType": "marthas",
-  "hasQuorum": false,
-  "isDone": false,
+  "hasQuorum": true,
+  "isDone": true,
   "group": "commonhaus/cf-egc",
   "groupSize": 11,
-  "groupVotes": 6,
-  "countedVotes": 6,
+  "groupVotes": 11,
+  "countedVotes": 11,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -18,6 +18,12 @@
           "login": "aalmiray",
           "url": "https://github.com/aalmiray",
           "createdAt": "2024-05-24T18:15:28.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "cealsair",
+          "url": "https://github.com/cealsair",
+          "createdAt": "2024-05-29T19:49:51.000+00:00",
           "reaction": "👍"
         },
         {
@@ -39,9 +45,33 @@
           "reaction": "👍"
         },
         {
+          "login": "gavinking",
+          "url": "https://github.com/gavinking",
+          "createdAt": "2024-05-28T21:34:00.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "henri-tremblay",
+          "url": "https://github.com/henri-tremblay",
+          "createdAt": "2024-05-29T02:23:10.000+00:00",
+          "reaction": "👍"
+        },
+        {
           "login": "kenfinnigan",
           "url": "https://github.com/kenfinnigan",
           "createdAt": "2024-05-22T12:24:36.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "marc0der",
+          "url": "https://github.com/marc0der",
+          "createdAt": "2024-05-29T19:45:30.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "maxandersen",
+          "url": "https://github.com/maxandersen",
+          "createdAt": "2024-05-29T20:49:42.000+00:00",
           "reaction": "👍"
         },
         {
@@ -51,34 +81,21 @@
           "reaction": "👍"
         }
       ],
-      "teamTotal": 6,
-      "total": 6
+      "teamTotal": 11,
+      "total": 11
     }
   },
   "duplicates": [],
-  "missingGroupActors": [
-    {
-      "login": "marc0der",
-      "url": "https://github.com/marc0der"
+  "missingGroupActors": [],
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
     },
-    {
-      "login": "henri-tremblay",
-      "url": "https://github.com/henri-tremblay"
-    },
-    {
-      "login": "gavinking",
-      "url": "https://github.com/gavinking"
-    },
-    {
-      "login": "maxandersen",
-      "url": "https://github.com/maxandersen"
-    },
-    {
-      "login": "cealsair",
-      "url": "https://github.com/cealsair"
-    }
-  ],
-  "manualCloseComments": null,
+    "createdAt": "2024-05-30T17:56:36.000+00:00",
+    "body": "Closed after good questions and unanimous consent",
+    "url": "https://github.com/commonhaus/foundation/pull/161#issuecomment-2140477778"
+  },
   "commentId": "IC_kwDOKRPTI85-jnu9",
   "github": "https://github.com/commonhaus/foundation/pull/161",
   "itemId": "PR_kwDOKRPTI85wHguJ",
@@ -87,12 +104,15 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-05-21T19:04:45Z",
-  "updated": "2024-05-24T18:31:00Z",
+  "updated": "2024-05-30T17:56:41Z",
   "url": "/votes/commonhaus/foundation/161.html",
   "tags": [
-    "vote/open",
     "notice",
-    "vote"
+    "vote/done",
+    "vote/quorum",
+    "vote",
+    "closed"
   ],
-  "closed": false
+  "closed": true,
+  "closedAt": "2024-05-30T17:58:20Z"
 }
