@@ -1,11 +1,11 @@
 {
   "voteType": "marthas",
-  "hasQuorum": false,
+  "hasQuorum": true,
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 11,
-  "groupVotes": 10,
-  "countedVotes": 10,
+  "groupVotes": 11,
+  "countedVotes": 11,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -69,23 +69,24 @@
           "reaction": "👍"
         },
         {
+          "login": "maxandersen",
+          "url": "https://github.com/maxandersen",
+          "createdAt": "2024-05-29T20:49:42.000+00:00",
+          "reaction": "👍"
+        },
+        {
           "login": "timtebeek",
           "url": "https://github.com/timtebeek",
           "createdAt": "2024-05-22T09:38:11.000+00:00",
           "reaction": "👍"
         }
       ],
-      "teamTotal": 10,
-      "total": 10
+      "teamTotal": 11,
+      "total": 11
     }
   },
   "duplicates": [],
-  "missingGroupActors": [
-    {
-      "login": "maxandersen",
-      "url": "https://github.com/maxandersen"
-    }
-  ],
+  "missingGroupActors": [],
   "manualCloseComments": null,
   "commentId": "IC_kwDOKRPTI85-jnu9",
   "github": "https://github.com/commonhaus/foundation/pull/161",
@@ -95,11 +96,12 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-05-21T19:04:45Z",
-  "updated": "2024-05-29T19:49:54Z",
+  "updated": "2024-05-29T21:27:38Z",
   "url": "/votes/commonhaus/foundation/161.html",
   "tags": [
     "vote/open",
     "notice",
+    "vote/quorum",
     "vote"
   ],
   "closed": false
