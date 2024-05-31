@@ -51,6 +51,11 @@ jobs:
           git config user.name ${{ env.GH_BOT_NAME }}
           git config user.email ${{ env.GH_BOT_EMAIL }}
 
+      - id: git-push
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        run: |
+          echo "updated=true" >> $GITHUB_OUTPUT
+
       - name: Git Submodule Update
         id: submodule
         env:
@@ -86,7 +91,7 @@ jobs:
           fi
 
       - name: Push GH Pages
-        if: ${{ steps.submodule.outputs.updated == 'true' || steps.discussion.outputs.updated == 'true' }}
+        if: ${{ steps.git-push.outputs.updated == 'true' || steps.submodule.outputs.updated == 'true' || steps.discussion.outputs.updated == 'true' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
