@@ -9,6 +9,7 @@ on:
       - '.github/graphql/**'
       - '_config.ts'
       - 'deno.json'
+      - 'member/**'
       - 'site/**'
 
   repository_dispatch:

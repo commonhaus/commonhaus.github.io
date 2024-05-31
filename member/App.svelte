@@ -30,11 +30,12 @@
 
   onMount(async () => {
     getCookies(document.cookie);
-    if ($cookies["id"] === undefined) {
-      window.location.assign(`${uriBase}/github`);
-    } else {
-      cleanup = await loadData();
-    }
+    console.log("Cookies", $cookies);
+    // if ($cookies["id"] === undefined) {
+    //   window.location.assign(`${uriBase}/github`);
+    // } else {
+    //   cleanup = await loadData();
+    // }
   });
   onDestroy(async () => {
     if (cleanup) {
