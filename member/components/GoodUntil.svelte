@@ -2,6 +2,7 @@
   import {
     checkRecent,
     checkRecentAttestation,
+    commonhausData,
     getAttestationTitle,
     getNextAttestationDate,
     getPrimaryRole,
@@ -33,9 +34,9 @@
     </li>
   {/if}
   {#each attestIds as id}
-    {@const ok = checkRecentAttestation(id)}
+    {@const ok = checkRecentAttestation(id, $commonhausData)}
     <li class="good-until">
-      <span>{getAttestationTitle(id)}</span> <span class:ok={ok} class:required={!ok}>{getNextAttestationDate(id)}</span>
+      <span>{getAttestationTitle(id)}</span> <span class:ok={ok} class:required={!ok}>{getNextAttestationDate(id, $commonhausData)}</span>
     </li>
   {/each}
 </ul>

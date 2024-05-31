@@ -1,23 +1,24 @@
 <!-- ForwardEmail.svelte -->
 <script>
-  import { onMount } from "svelte";
-  import { checkRecentAttestation, commonhausData } from "../lib/stores";
+  import {
+    checkRecentAttestation,
+    commonhausData,
+    gitHubData,
+  } from "../lib/stores";
   import ControlButton from "./ControlButton.svelte";
-  export let service;
-  export let status;
-  export let login;
 
+  let eligible = false;
+  let service = {};
+  let status = "UNKNOWN";
   let hasAttestation = false;
 
-  $: eligible =
-    (status !== "UNKNOWN" && status !== "PENDING" && status !== "SPONSOR") ||
-    (service && service.active);
-
-  onMount(async () => {
-    return commonhausData.subscribe(() => {
-      hasAttestation = checkRecentAttestation("email");
-    });
-  });
+  $: {
+    service = $commonhausData.services.forward_email;
+    eligible =
+      (status !== "UNKNOWN" && status !== "PENDING" && status !== "SPONSOR") ||
+      (service && service.active);
+  }
+  $: hasAttestation = checkRecentAttestation("email", $commonhausData);
 </script>
 
 <section class="info-block">
@@ -38,10 +39,10 @@
       {#if service && service.active}
         <p>
           <span class="label">Active</span>:
-            <code>{login}@commonhaus.dev</code
-              >{#if service.alt_alias && service.alt_alias.length > 0}
-                {#each service.alt_alias as alias (alias)},
-                <code>{alias}</code
+          <code>{$gitHubData.login}@commonhaus.dev</code
+          >{#if service.alt_alias && service.alt_alias.length > 0}
+            {#each service.alt_alias as alias (alias)},
+              <code>{alias}</code
               >{#if alias !== service.alt_alias[service.alt_alias.length - 1]},
               {/if}
             {/each}

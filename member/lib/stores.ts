@@ -62,15 +62,15 @@ export const getAttestationText = (id: string): AttestationText => {
     return attestationInfo.attestations[id];
 }
 
-export const getNextAttestationDate = (id: string): string => {
-    const attestation = get(commonhausData)?.good_until?.attestation || {};
+export const getNextAttestationDate = (id: string, data: CommonhausMember): string => {
+    const attestation = data?.good_until?.attestation || {};
     return attestation
         ? (attestation[id]?.date || 'due')
         : 'due';
 }
 
-export const checkRecentAttestation = (id: string): boolean => {
-    const attestation = get(commonhausData)?.good_until?.attestation || {};
+export const checkRecentAttestation = (id: string, data: CommonhausMember): boolean => {
+    const attestation = data?.good_until?.attestation || {};
     if (!attestation) {
         return false;
     }
@@ -80,8 +80,8 @@ export const checkRecentAttestation = (id: string): boolean => {
     return checkRecent(attestation[id]?.date) && attestation[id]?.version === getAttestationVersion(id);
 }
 
-export const getRecentAttestationVersion = (id: string): string => {
-    const attestation = get(commonhausData)?.good_until?.attestation || {};
+export const getRecentAttestationVersion = (id: string, data: CommonhausMember): string => {
+    const attestation = data?.good_until?.attestation || {};
     if (attestation && attestation[id]) {
         return attestation[id].version;
     }
@@ -206,12 +206,15 @@ const handleResponse = async (response: Response) => {
     const message = await response.json();
     for (const [key, value] of Object.entries(message)) {
         if (key === "INFO") {
+            console.debug("INFO", value);
             gitHubData.set(value as GitHubUser);
             errorFlag("info", false);
         } else if (key === "HAUS") {
+            console.debug("HAUS", value);
             commonhausData.set(value as CommonhausMember);
             errorFlag("haus", false);
         } else if (key === "ALIAS") {
+            console.debug("ALIAS", value);
             aliasTargets.set(value as Record<string, Alias>);
             errorFlag("alias", false);
         }

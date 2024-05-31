@@ -15,12 +15,11 @@
   } from "./lib/stores";
 
   let cleanup;
+  let loaded = false;
 
   const loadData = async () => {
     const controller1 = await load(INFO);
-    console.log("GitHub data loaded");
     const controller2 = await load(COMMONHAUS);
-    console.log("Membership and profile data loaded");
 
     return () => {
       controller1.abort();
@@ -30,10 +29,11 @@
 
   onMount(async () => {
     getCookies(document.cookie);
-    console.debug("Cookies", $cookies, cleanup);
-    if ($cookies["id"] === undefined) {
+    console.debug("Cookies", $cookies);
+    if (!$cookies["id"]) {
       window.location.assign(`${uriBase}/github`);
     } else {
+      loaded = true;
       cleanup = await loadData();
     }
   });
@@ -44,6 +44,7 @@
   });
 
   $: {
+    console.debug("location", $location, "knownUser", $knownUser);
     if ($location !== "" && !$knownUser) {
       window.location.hash = "";
     }
