@@ -25,7 +25,7 @@
   $: attestIds = getRequiredAttestations(primaryRole);
   $: missing = attestIds.some((id) => !checkRecentAttestation(id));
 
-  $: console.log(roles, primaryRole, attestIds, missing);
+  $: console.debug(roles, primaryRole, attestIds, missing);
 
   onMount(async () => {
     await fetchLatestStatus();

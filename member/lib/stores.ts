@@ -74,7 +74,7 @@ export const checkRecentAttestation = (id: string): boolean => {
     if (!attestation) {
         return false;
     }
-    console.log(id,
+    console.debug(id,
         attestation[id]?.date, checkRecent(attestation[id]?.date),
         attestation[id]?.version, getAttestationVersion(id));
     return checkRecent(attestation[id]?.date) && attestation[id]?.version === getAttestationVersion(id);
