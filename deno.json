@@ -3,7 +3,7 @@
     "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
 
     "attach": "echo \"import 'lume/cli.ts'\" | deno run --inspect-wait --unstable -A -",
-    "build": "deno task lume",
+    "build": "deno task lume && deno task vite-build",
     "serve": "deno task lume -s",
     "debug": "deno task attach -s",
 
