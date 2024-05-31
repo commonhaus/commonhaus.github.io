@@ -86,11 +86,5 @@
 {:else if $knownUser}
   <Membership />
 
-  <ForwardEmail
-    service={$commonhausData.services
-      ? $commonhausData.services.forward_email
-      : null}
-    status={$commonhausData.status}
-    login={$gitHubData.login}
-  />
+  <ForwardEmail />
 {/if}

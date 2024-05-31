@@ -4,6 +4,7 @@
     ALIASES,
     aliasTargets,
     checkRecentAttestation,
+    commonhausData,
     errorFlags,
     getAttestationText,
     getNextAttestationDate,
@@ -27,10 +28,12 @@
   let nextDate = 'due';
   let aliasUpdates = {};
 
-  $: recentAttestation = checkRecentAttestation("email");
-  $: recentVersion = getRecentAttestationVersion("email");
-  $: nextDate = getNextAttestationDate("email");
-  $: versionChanged = recentVersion !== emailAttestation.version;
+  $: {
+    recentAttestation = checkRecentAttestation("email", $commonhausData);
+    recentVersion = getRecentAttestationVersion("email", $commonhausData);
+    nextDate = getNextAttestationDate("email", $commonhausData);
+    versionChanged = recentVersion !== emailAttestation.version;
+  }
 
   onMount(async () => {
     await load(ALIASES);

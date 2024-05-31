@@ -11,7 +11,6 @@
     getPrimaryRole,
     gitHubData,
     signAttestations,
-    attestationInfo,
     getRecentAttestationVersion,
     getAttestationVersion,
   } from "../lib/stores";
@@ -19,13 +18,14 @@
 
   let primaryRole, roles, attestIds, missing, description;
 
-  $: roles = $gitHubData.roles || [];
-  $: primaryRole = getPrimaryRole(roles);
-  $: description = getRoleDescription(primaryRole);
-  $: attestIds = getRequiredAttestations(primaryRole);
-  $: missing = attestIds.some((id) => !checkRecentAttestation(id));
+  $: {
+    roles = $gitHubData.roles || [];
+    primaryRole = getPrimaryRole(roles);
+    description = getRoleDescription(primaryRole);
+    attestIds = getRequiredAttestations(primaryRole);
+  }
 
-  $: console.debug(roles, primaryRole, attestIds, missing);
+  $: missing = attestIds.some((id) => !checkRecentAttestation(id, $commonhausData));
 
   onMount(async () => {
     await fetchLatestStatus();
@@ -48,18 +48,15 @@
 </p>
 
 {#if $commonhausData.good_until?.contribution}
-  <p
-    class={checkRecent($commonhausData.good_until.contribution)
-      ? ""
-      : "highlight"}
-  >
-    <span class="label">Contributions</span>: {$commonhausData.good_until
-      .contribution}
+  {@const ok = checkRecent($commonhausData.good_until.contribution)}
+  <p>
+    <span class="label">Contributions</span>: <span class:ok={ok} class:required={!ok}>{$commonhausData.good_until.contribution}</span>
   </p>
 {/if}
 {#if $commonhausData.good_until?.dues}
-  <p class={checkRecent($commonhausData.good_until.dues) ? "" : "highlight"}>
-    <span class="label">Dues</span>: {$commonhausData.good_until.dues}
+  {@const ok = checkRecent($commonhausData.good_until.dues)}
+  <p>
+    <span class="label">Dues</span>: <span class:ok={ok} class:required={!ok}>{$commonhausData.good_until.dues}</span>
   </p>
 {/if}
 <div class="information">
@@ -69,12 +66,12 @@
 {#each attestIds as id}
   {@const attestation = getAttestationText(id)}
   {@const currentVersion = getAttestationVersion(id)}
-  {@const recentVersion = getRecentAttestationVersion(id)}
+  {@const recentVersion = getRecentAttestationVersion(id, $commonhausData)}
   {@const versionChanged = recentVersion != currentVersion}
   <section class="information">
     <h3 class="good-until">
       <span>{@html attestation.title}</span>
-      {#if checkRecentAttestation(id)}
+      {#if checkRecentAttestation(id, $commonhausData)}
         <span class="ok">{$commonhausData.good_until.attestation[id].date}</span>
       {:else}
         <span class="required">due{#if versionChanged } (updated){/if}</span>
