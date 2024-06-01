@@ -4,8 +4,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 11,
-  "groupVotes": 4,
-  "countedVotes": 4,
+  "groupVotes": 5,
+  "countedVotes": 5,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -37,10 +37,16 @@
           "url": "https://github.com/henri-tremblay",
           "createdAt": "2024-06-01T01:00:04.000+00:00",
           "reaction": "👍"
+        },
+        {
+          "login": "kenfinnigan",
+          "url": "https://github.com/kenfinnigan",
+          "createdAt": "2024-06-01T02:04:22.000+00:00",
+          "reaction": "👍"
         }
       ],
-      "teamTotal": 4,
-      "total": 4
+      "teamTotal": 5,
+      "total": 5
     }
   },
   "duplicates": [],
@@ -68,10 +74,6 @@
     {
       "login": "cealsair",
       "url": "https://github.com/cealsair"
-    },
-    {
-      "login": "kenfinnigan",
-      "url": "https://github.com/kenfinnigan"
     }
   ],
   "manualCloseComments": null,
@@ -83,7 +85,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-05-31T16:10:47Z",
-  "updated": "2024-06-01T01:41:40Z",
+  "updated": "2024-06-01T02:11:16Z",
   "url": "/votes/commonhaus/foundation/168.html",
   "tags": [
     "vote/open",
