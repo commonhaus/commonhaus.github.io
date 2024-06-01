@@ -4,9 +4,9 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 11,
-  "groupVotes": 6,
-  "countedVotes": 6,
-  "droppedVotes": 0,
+  "groupVotes": 7,
+  "countedVotes": 7,
+  "droppedVotes": 1,
   "votingThreshold": "all",
   "categories": {
     "approve": {
@@ -49,18 +49,27 @@
           "url": "https://github.com/kenfinnigan",
           "createdAt": "2024-06-01T02:04:22.000+00:00",
           "reaction": "👍"
+        },
+        {
+          "login": "marc0der",
+          "url": "https://github.com/marc0der",
+          "createdAt": "2024-06-01T08:27:01.000+00:00",
+          "reaction": "👍"
         }
       ],
-      "teamTotal": 6,
-      "total": 6
+      "teamTotal": 7,
+      "total": 7
     }
   },
-  "duplicates": [],
-  "missingGroupActors": [
+  "duplicates": [
     {
       "login": "marc0der",
-      "url": "https://github.com/marc0der"
-    },
+      "url": "https://github.com/marc0der",
+      "createdAt": "2024-06-01T08:26:37.000+00:00",
+      "reaction": "👍"
+    }
+  ],
+  "missingGroupActors": [
     {
       "login": "gavinking",
       "url": "https://github.com/gavinking"
@@ -87,7 +96,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-05-31T16:10:47Z",
-  "updated": "2024-06-01T08:08:11Z",
+  "updated": "2024-06-01T08:27:03Z",
   "url": "/votes/commonhaus/foundation/168.html",
   "tags": [
     "vote/open",
