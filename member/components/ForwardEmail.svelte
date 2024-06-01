@@ -13,7 +13,7 @@
   let hasAttestation = false;
 
   $: {
-    service = $commonhausData.services.forward_email;
+    service = $commonhausData.services?.forward_email || {};
     eligible =
       (status !== "UNKNOWN" && status !== "PENDING" && status !== "SPONSOR") ||
       (service && service.active);
