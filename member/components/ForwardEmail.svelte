@@ -14,6 +14,7 @@
 
   $: {
     service = $commonhausData.services?.forward_email || {};
+    status = $commonhausData.status;
     eligible =
       (status !== "UNKNOWN" && status !== "PENDING" && status !== "SPONSOR") ||
       (service && service.active);
