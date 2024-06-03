@@ -25,7 +25,9 @@
     attestIds = getRequiredAttestations(primaryRole);
   }
 
-  $: missing = attestIds.some((id) => !checkRecentAttestation(id, $commonhausData));
+  $: missing = attestIds.some(
+    (id) => !checkRecentAttestation(id, $commonhausData),
+  );
 
   onMount(async () => {
     await fetchLatestStatus();
@@ -50,13 +52,17 @@
 {#if $commonhausData.good_until?.contribution}
   {@const ok = checkRecent($commonhausData.good_until.contribution)}
   <p>
-    <span class="label">Contributions</span>: <span class:ok={ok} class:required={!ok}>{$commonhausData.good_until.contribution}</span>
+    <span class="label">Contributions</span>:
+    <span class:ok class:required={!ok}
+      >{$commonhausData.good_until.contribution}</span
+    >
   </p>
 {/if}
 {#if $commonhausData.good_until?.dues}
   {@const ok = checkRecent($commonhausData.good_until.dues)}
   <p>
-    <span class="label">Dues</span>: <span class:ok={ok} class:required={!ok}>{$commonhausData.good_until.dues}</span>
+    <span class="label">Dues</span>:
+    <span class:ok class:required={!ok}>{$commonhausData.good_until.dues}</span>
   </p>
 {/if}
 <div class="information">
@@ -72,14 +78,21 @@
     <h3 class="good-until">
       <span>{@html attestation.title}</span>
       {#if checkRecentAttestation(id, $commonhausData)}
-        <span class="ok">{$commonhausData.good_until.attestation[id].date}</span>
+        <span class="ok">{$commonhausData.good_until.attestation[id].date}</span
+        >
       {:else}
-        <span class="required">due{#if versionChanged } (updated){/if}</span>
+        <span class="required"
+          >due{#if versionChanged}
+            (updated){/if}</span
+        >
       {/if}
     </h3>
     {@html attestation.body}
     <footer class="agreement-version">
-      version <a href="https://github.com/commonhaus/foundation/blob/main/agreements/membership/members.yaml">{currentVersion}</a>
+      version <a
+        href="https://github.com/commonhaus/foundation/blob/main/agreements/membership/members.yaml"
+        >{currentVersion}</a
+      >
     </footer>
   </section>
 {/each}

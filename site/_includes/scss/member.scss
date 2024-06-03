@@ -2,7 +2,7 @@
 @use 'heart-spinner' as *;
 
 main.member {
-  @include content-align-y;
+  @include content-pad;
   position: relative;
 
   a.close {
@@ -46,7 +46,7 @@ main.member {
   .information,
   .info-block,
   .setting {
-    h2, h3, &.no-title {
+    h2, &.no-title {
       border-top: 1px solid var(--border-color);
     }
     h2 {
@@ -54,6 +54,7 @@ main.member {
       font-size: var(--font-large);
     }
     h3 {
+      border-top: 1px dotted var(--border-color);
       padding-top: .8rem;
       font-size: var(--font-size);
       @include figtree-medium;
@@ -179,12 +180,36 @@ main.member {
     font-size: var(--font-smaller);
   }
 
+  #member-app {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .content {
+    flex: 2 1 auto;
+    min-height: calc(100vh - 15em);
+  }
+
   footer.agreement-version {
     @include figtree-italic;
     text-align: right;
     color: var(--text-muted);
     a {
       color: var(--text-muted);
+    }
+  }
+
+  footer.member-footer {
+    @include margin-align-y;
+    @include content-align-y;
+    border-top: 1px solid var(--border-color);
+    text-align: right;
+
+    button[name="reset"] {
+      color: var(--text-faint);
+      border-color: transparent;
+      background-color: transparent;
     }
   }
 

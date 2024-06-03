@@ -25,27 +25,29 @@
   let recentAttestation = false;
   let recentVersion = emailAttestation.version;
   let versionChanged = false;
-  let nextDate = 'due';
+  let nextDate = "due";
   let aliasUpdates = {};
 
   $: {
     recentAttestation = checkRecentAttestation("email", $commonhausData);
-    recentVersion = getRecentAttestationVersion("email", $commonhausData);
     nextDate = getNextAttestationDate("email", $commonhausData);
+
+    recentVersion = getRecentAttestationVersion("email", $commonhausData);
     versionChanged = recentVersion !== emailAttestation.version;
   }
 
+  $: aliasUpdates = JSON.parse(JSON.stringify($aliasTargets));
+
   onMount(async () => {
     await load(ALIASES);
-    resetAll();
     aliasesLoaded = true;
   });
 
   async function refresh() {
     console.log("refreshing");
     await load(ALIASES + "?refresh=true");
-    resetAll();
   }
+
   async function saveAll() {
     // send only the email and the udpated target recipients
     const recipients = {};
@@ -53,12 +55,12 @@
       recipients[email] = alias.recipients;
     }
     await post(ALIASES, recipients);
-    resetAll();
   }
 
   function resetAll() {
     aliasUpdates = JSON.parse(JSON.stringify($aliasTargets));
   }
+
   async function iAgree() {
     await signAttestation("email");
   }
@@ -81,7 +83,9 @@
 {:else if recentAttestation && $errorFlags.alias}
   <Oops>There was an error working with your email addresses.</Oops>
 {:else if recentAttestation}
-  <p>Your email {Object.keys(aliasUpdates).length === 1 ? "alias" : "aliases"}:</p>
+  <p>
+    Your email {Object.keys(aliasUpdates).length === 1 ? "alias" : "aliases"}:
+  </p>
   {#if Object.keys(aliasUpdates).length > 0}
     {#each Object.keys(aliasUpdates) as alias}
       <EmailAlias {alias} {aliasUpdates} />
@@ -89,6 +93,7 @@
   {:else}
     <EmailAlias alias={$gitHubData.login} {aliasUpdates} />
   {/if}
+
   <div class="setting">
     <span></span>
     <span class="control">
@@ -98,8 +103,22 @@
           aria-label="Refetch email information"
           on:click={refresh}
         >
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list-restart"><path d="M21 6H3"/><path d="M7 12H3"/><path d="M7 18H3"/><path d="M12 18a5 5 0 0 0 9-3 4.5 4.5 0 0 0-4.5-4.5c-1.33 0-2.54.54-3.41 1.41L11 14"/><path d="M11 10v4h4"/></svg>
-        <span class="tooltiptext">Refresh email information</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-list-restart"
+            ><path d="M21 6H3" /><path d="M7 12H3" /><path d="M7 18H3" /><path
+              d="M12 18a5 5 0 0 0 9-3 4.5 4.5 0 0 0-4.5-4.5c-1.33 0-2.54.54-3.41 1.41L11 14"
+            /><path d="M11 10v4h4" /></svg
+          >
+          <span class="tooltiptext">Refresh email information</span>
         </button>
       </div>
       <button name="saveAll" class="input" on:click={saveAll}>Save</button>
@@ -114,21 +133,27 @@
     {#if recentAttestation}
       <span class="ok">{nextDate}</span>
     {:else}
-      <span class="required">due{#if versionChanged } (updated){/if}</span>
+      <span class="required"
+        >due{#if versionChanged}
+          (updated){/if}</span
+      >
     {/if}
   </h2>
   {@html emailAttestation.body}
   <footer class="agreement-version">
-    version <a href="https://github.com/commonhaus/foundation/blob/main/agreements/membership/members.yaml">{emailAttestation.version}</a>
+    version <a
+      href="https://github.com/commonhaus/foundation/blob/main/agreements/membership/members.yaml"
+      >{emailAttestation.version}</a
+    >
   </footer>
 </section>
 {#if !recentAttestation}
-<div class="setting">
-  <span></span>
-  <span>
-    <button name="agree" on:click={iAgree}>I Agree</button>
-  </span>
-</div>
+  <div class="setting">
+    <span></span>
+    <span>
+      <button name="agree" on:click={iAgree}>I Agree</button>
+    </span>
+  </div>
 {/if}
 
 <div class="information">
