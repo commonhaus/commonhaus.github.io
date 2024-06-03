@@ -2,7 +2,6 @@
   import {
     errorFlags,
     gitHubData,
-    commonhausData,
     hasResponse,
     knownUser,
   } from "../lib/stores";
@@ -73,18 +72,9 @@
     <p>Your involvement makes a difference. Join us today!</p>
   </section>
 {:else if $knownUser && $errorFlags.haus}
-  <section class="info-block error">
-    <h2>Membership status</h2>
-
-    <div class="information">
-      <p>Oops! There was an error loading your membership data.</p>
-      <p>
-        Have a look in the browser's console log, and let us know what happened.
-      </p>
-    </div>
-  </section>
+  <Oops>There was an error loading your membership data.</Oops>
 {:else if $knownUser}
   <Membership />
-
   <ForwardEmail />
+  <Discord />
 {/if}

@@ -3,14 +3,18 @@
   import {
     checkRecentAttestation,
     commonhausData,
+    getAttestationTitle,
+    getNextAttestationDate,
     gitHubData,
   } from "../lib/stores";
   import ControlButton from "./ControlButton.svelte";
 
   let eligible = false;
+  let date = "due";
+  let hasAttestation = false;
   let service = {};
   let status = "UNKNOWN";
-  let hasAttestation = false;
+  let title = getAttestationTitle("email");
 
   $: {
     service = $commonhausData.services?.forward_email || {};
@@ -19,7 +23,10 @@
       (status !== "UNKNOWN" && status !== "PENDING" && status !== "SPONSOR") ||
       (service && service.active);
   }
-  $: hasAttestation = checkRecentAttestation("email", $commonhausData);
+  $: {
+    date = getNextAttestationDate("email", $commonhausData);
+    hasAttestation = checkRecentAttestation("email", $commonhausData);
+  }
 </script>
 
 <section class="info-block">
@@ -34,9 +41,6 @@
 
   {#if eligible}
     <div class="information">
-      {#if !hasAttestation}
-        <p class="required">Requires signed service agreement</p>
-      {/if}
       {#if service && service.active}
         <p>
           <span class="label">Active</span>:
@@ -49,9 +53,15 @@
             {/each}
           {/if}
         </p>
-      {:else}
-        <p>Not configured</p>
       {/if}
+      <ul>
+        <li class="good-until">
+          <span>{title}</span>
+          <span class:ok={hasAttestation} class:required={!hasAttestation}
+            >{date}</span
+          >
+        </li>
+      </ul>
     </div>
   {:else}
     <div class="information">

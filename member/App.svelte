@@ -1,5 +1,6 @@
 <script>
   import { onMount, onDestroy } from "svelte";
+  import Footer from "./components/Footer.svelte";
   import Home from "./routes/Home.svelte";
   import Status from "./routes/MembershipStatus.svelte";
   import Email from "./routes/ForwardEmail.svelte";
@@ -8,6 +9,7 @@
     INFO,
     cookies,
     getCookies,
+    hasResponse,
     knownUser,
     load,
     location,
@@ -29,7 +31,6 @@
 
   onMount(async () => {
     getCookies(document.cookie);
-    console.debug("Cookies", $cookies);
     if (!$cookies["id"]) {
       window.location.assign(`${uriBase}/github`);
     } else {
@@ -44,17 +45,22 @@
   });
 
   $: {
-    console.debug("location", $location, "knownUser", $knownUser);
     if ($location !== "" && !$knownUser) {
       window.location.hash = "";
     }
   }
 </script>
 
+<div class="content">
 {#if $location === ""}
   <Home />
 {:else if $location === "#/status"}
   <Status />
 {:else if $location === "#/email"}
   <Email />
+{/if}
+</div>
+
+{#if $hasResponse}
+  <Footer />
 {/if}

@@ -74,9 +74,6 @@ export const checkRecentAttestation = (id: string, data: CommonhausMember): bool
     if (!attestation) {
         return false;
     }
-    console.debug(id,
-        attestation[id]?.date, checkRecent(attestation[id]?.date),
-        attestation[id]?.version, getAttestationVersion(id));
     return checkRecent(attestation[id]?.date) && attestation[id]?.version === getAttestationVersion(id);
 }
 
@@ -209,10 +206,12 @@ const handleResponse = async (response: Response) => {
             console.debug("INFO", value);
             gitHubData.set(value as GitHubUser);
             errorFlag("info", false);
+            errorFlag("unknown", false);
         } else if (key === "HAUS") {
             console.debug("HAUS", value);
             commonhausData.set(value as CommonhausMember);
             errorFlag("haus", false);
+            errorFlag("unknown", false);
         } else if (key === "ALIAS") {
             console.debug("ALIAS", value);
             aliasTargets.set(value as Record<string, Alias>);
