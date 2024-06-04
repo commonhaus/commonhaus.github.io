@@ -2,7 +2,6 @@
 @use 'heart-spinner' as *;
 
 main.member {
-  @include content-pad;
   position: relative;
 
   a.close {
