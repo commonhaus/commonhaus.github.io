@@ -15,7 +15,7 @@
 
   $: {
     if (aliasData?.recipients !== previousRecipients) {
-      recipients = aliasData?.recipients.join(", ") || "";
+      recipients = aliasData?.recipients?.join(", ") || "";
       previousRecipients = aliasData?.recipients;
     }
   }
@@ -64,6 +64,6 @@
     {/if}
   </span>
   <footer>
-    Verified recipients: <code>{aliasData.verified_recipients.join(", ")}</code>
+    Verified recipients: <code>{aliasData.verified_recipients?.join(", ") || ''}</code>
   </footer>
 </div>
