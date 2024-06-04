@@ -17,10 +17,12 @@
 {:else if $knownUser && $errorFlags.info}
   <Oops>There was an error loading your user data.</Oops>
 {:else}
-  {#if $gitHubData.avatarUrl}
-    <img src={$gitHubData.avatarUrl} alt="{$gitHubData.login}'s avatar" />
-  {/if}
-  <h1>Hello, {$gitHubData.name}!</h1>
+  <h1>
+    {#if $gitHubData.avatarUrl}
+      <img src={$gitHubData.avatarUrl} alt="{$gitHubData.login}'s avatar" />
+    {/if}
+    <span>Hello, {$gitHubData.name}!</span>
+  </h1>
 
   <p>It's great to have you here.</p>
 
