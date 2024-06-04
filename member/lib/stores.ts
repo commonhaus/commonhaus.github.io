@@ -227,11 +227,11 @@ const handleErrors = (uri: string, error: Error) => {
         console.error(error.message);
     }
 
-    if (uri.startsWith(INFO)) {
+    if (uri.includes(INFO)) {
         errorFlag("info", true);
-    } else if (uri.startsWith(COMMONHAUS)) {
+    } else if (uri.includes(COMMONHAUS)) {
         errorFlag("haus", true);
-    } else if (uri.startsWith(ALIASES)) {
+    } else if (uri.includes(ALIASES)) {
         errorFlag("alias", true);
     }
 }
