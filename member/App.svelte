@@ -1,4 +1,7 @@
 <script>
+  if (import.meta.env.VITE_APP_DEV_MODE) {
+    import("./dev-mode.js");
+  }
   import { onMount, onDestroy } from "svelte";
   import Footer from "./components/Footer.svelte";
   import Home from "./routes/Home.svelte";
@@ -8,8 +11,10 @@
     COMMONHAUS,
     INFO,
     cookies,
+    errorFlags,
     getCookies,
     hasResponse,
+    isForbidden,
     knownUser,
     load,
     location,
@@ -28,18 +33,12 @@
     const controller1 = await load(INFO);
     const controller2 = await load(COMMONHAUS);
 
-    window.addEventListener(
-      "error",
-      (event) => {
-        logger("Global Error", event);
-      }
-    );
-    window.addEventListener(
-      "unhandledrejection",
-      (event) => {
-        logger("Unhandled rejection", event);
-      }
-    );
+    window.addEventListener("error", (event) => {
+      logger("Global Error", event);
+    });
+    window.addEventListener("unhandledrejection", (event) => {
+      logger("Unhandled rejection", event);
+    });
 
     return () => {
       controller1.abort();
@@ -63,7 +62,12 @@
   });
 
   $: {
-    if ($location !== "" && !$knownUser) {
+    if (
+      $location !== "" &&
+      (!$knownUser ||
+        isForbidden($errorFlags.info) ||
+        isForbidden($errorFlags.haus))
+    ) {
       window.location.hash = "";
     }
   }

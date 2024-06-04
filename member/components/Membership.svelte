@@ -1,4 +1,5 @@
 <script>
+  import { mayHaveAttestations } from "../lib/memberStatus";
   import { commonhausData, gitHubData } from "../lib/stores";
   import ControlButton from "./ControlButton.svelte";
   import GoodUntil from "./GoodUntil.svelte";
@@ -14,9 +15,9 @@
 
   <div class="information">
     <p><span class="label">Status</span>: {$commonhausData.status}</p>
-    {#if $commonhausData.status !== 'UNKNOWN' && $commonhausData.good_until}
+    {#if mayHaveAttestations($commonhausData.status) && $commonhausData.goodUntil}
     <GoodUntil
-        good_until={$commonhausData.good_until}
+        goodUntil={$commonhausData.goodUntil}
         roles={$gitHubData.roles || []} />
     {/if}
   </div>
