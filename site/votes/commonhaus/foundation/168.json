@@ -6,7 +6,7 @@
   "groupSize": 11,
   "groupVotes": 10,
   "countedVotes": 11,
-  "droppedVotes": 0,
+  "droppedVotes": 1,
   "votingThreshold": "all",
   "categories": {
     "approve": {
@@ -65,7 +65,7 @@
         {
           "login": "marc0der",
           "url": "https://github.com/marc0der",
-          "createdAt": "2024-06-01T08:27:01.000+00:00",
+          "createdAt": "2024-06-04T16:36:10.000+00:00",
           "reaction": "👍"
         },
         {
@@ -79,7 +79,14 @@
       "total": 11
     }
   },
-  "duplicates": [],
+  "duplicates": [
+    {
+      "login": "marc0der",
+      "url": "https://github.com/marc0der",
+      "createdAt": "2024-06-01T08:27:01.000+00:00",
+      "reaction": "👍"
+    }
+  ],
   "missingGroupActors": [
     {
       "login": "timtebeek",
@@ -95,7 +102,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-05-31T16:10:47Z",
-  "updated": "2024-06-04T16:11:41Z",
+  "updated": "2024-06-04T18:27:41Z",
   "url": "/votes/commonhaus/foundation/168.html",
   "tags": [
     "vote/open",
