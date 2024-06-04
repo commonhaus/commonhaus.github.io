@@ -7,7 +7,7 @@
     "serve": "deno task lume -s",
     "debug": "deno task attach -s",
 
-    "vite-dev": "deno run -A --unstable --node-modules-dir npm:vite build --watch",
+    "vite-dev": "export VITE_APP_DEV_MODE=true && deno run -A --unstable --node-modules-dir npm:vite build --watch",
     "vite-build": "deno run -A --unstable --node-modules-dir npm:vite build",
 
     "about": "deno run --allow-run=gh --allow-read=./.github/graphql,./site/_data/about.yml --allow-write=./site/_data/about.yml ./.github/about.ts",

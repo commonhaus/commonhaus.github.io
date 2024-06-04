@@ -1,16 +1,13 @@
-import attestData from 'attest-yaml'; // see vite.config.ts
 import { Writable, writable, derived, get } from "svelte/store";
 import { Alias } from "../@types/forwardemail.d.ts";
 import {
-    AttestationInfo,
-    AttestationText,
+    ApplicationData,
     CommonhausMember,
+    DataType,
     ErrorFlags,
+    ErrorStatus,
     GitHubUser,
-    RoleDescription
 } from "../@types/data.d.ts";
-
-const datePattern = /^\d{4}-\d{2}-\d{2}$/;
 
 export const uriBase = window.location.hostname.includes("localhost")
     ? "http://localhost:8082/member"
@@ -19,9 +16,11 @@ export const uriBase = window.location.hostname.includes("localhost")
 export const INFO = uriBase + "/me";
 export const ALIASES = uriBase + "/aliases";
 export const COMMONHAUS = uriBase + "/commonhaus";
+export const APPLY = COMMONHAUS + "/apply";
 
 export const gitHubData: Writable<GitHubUser> = writable({});
 export const commonhausData: Writable<CommonhausMember> = writable({});
+export const applicationData: Writable<ApplicationData> = writable({});
 
 export const errorFlags = writable<ErrorFlags>({});
 
@@ -30,89 +29,6 @@ export const knownUser = derived([gitHubData, errorFlags], ([$data, $errors]) =>
 
 export const cookies = writable<Record<string, string>>({});
 export const aliasTargets = writable<Record<string, Alias>>({});
-
-export const attestationInfo: AttestationInfo = attestData;
-
-export const getPrimaryRole = (roles: string[]): string => {
-    const rolePriority = attestationInfo.rolePriority;
-    const sortedRoles = roles.sort((a, b) => rolePriority.indexOf(a) - rolePriority.indexOf(b));
-    return sortedRoles[0];
-}
-
-export const getRoleDescription = (role: string): RoleDescription => {
-    return attestationInfo.role[role];
-}
-
-export const getRequiredAttestations = (role: string): string[] => {
-    const roleDescription = getRoleDescription(role);
-    return roleDescription?.attestations || [];
-}
-
-export const getAttestationTitle = (id: string): string => {
-    const attestation = getAttestationText(id);
-    return attestation?.title || id;
-}
-
-export const getAttestationVersion = (id: string): string => {
-    const attestation = getAttestationText(id);
-    return attestation?.version || attestationInfo.version;
-}
-
-export const getAttestationText = (id: string): AttestationText => {
-    return attestationInfo.attestations[id];
-}
-
-export const getNextAttestationDate = (id: string, data: CommonhausMember): string => {
-    const attestation = data?.good_until?.attestation || {};
-    return attestation
-        ? (attestation[id]?.date || 'due')
-        : 'due';
-}
-
-export const checkRecentAttestation = (id: string, data: CommonhausMember): boolean => {
-    const attestation = data?.good_until?.attestation || {};
-    if (!attestation) {
-        return false;
-    }
-    return checkRecent(attestation[id]?.date) && attestation[id]?.version === getAttestationVersion(id);
-}
-
-export const getRecentAttestationVersion = (id: string, data: CommonhausMember): string => {
-    const attestation = data?.good_until?.attestation || {};
-    if (attestation && attestation[id]) {
-        return attestation[id].version;
-    }
-    return getAttestationVersion(id);
-}
-
-export const checkRecent = (date: string): boolean => {
-    if (!datePattern.test(date)) {
-        return false;
-    }
-    const now = new Date();
-    const compare = new Date(date);
-    return compare >= now;
-}
-
-export const signAttestation = async (id: string) => {
-    const URI = `${COMMONHAUS}/attest`;
-    const body = {
-        id,
-        version: getAttestationVersion(id)
-    };
-
-    await post(URI, body);
-}
-
-export const signAttestations = async (ids: string[]) => {
-    const URI = `${COMMONHAUS}/attest/all`;
-    const body = ids.map(id => ({
-        id,
-        version: getAttestationVersion(id)
-    }));
-
-    await post(URI, body);
-}
 
 export const fetchLatestStatus = async () => {
     const URI = `${COMMONHAUS}/status`;
@@ -150,12 +66,29 @@ export const getCookies = (cookieStr: string): void => {
     cookies.update((_) => (parsedCookies));
 }
 
-const errorFlag = (flag: string, value: boolean) => {
-    errorFlags.update((flags) => ({
-        ...flags,
-        [flag]: value
-    }));
+const errorFlag = (flag: keyof ErrorFlags, value: ErrorStatus) => {
+    errorFlags.update((flags) => {
+        const newFlags = { ...flags };
+        if (value === ErrorStatus.OK) {
+            delete newFlags[flag];
+        } else {
+            newFlags[flag] = value;
+        }
+        return newFlags;
+    });
 };
+
+export const isForbidden = (e: ErrorStatus): boolean => {
+    return e !== undefined && e === ErrorStatus.FORBIDDEN;
+}
+
+export const hasError = (e: ErrorStatus): boolean => {
+    return e !== undefined && e !== ErrorStatus.OK && e !== ErrorStatus.FORBIDDEN;
+}
+
+export const isOk = (e: ErrorStatus): boolean => {
+    return e === undefined || e === ErrorStatus.OK;
+}
 
 export const load = async (uri: string): Promise<AbortController> => {
     const controller = new AbortController();
@@ -193,45 +126,100 @@ export const post = async (uri: string, body: unknown): Promise<void> => {
     }
 }
 
+export const testData = async (uri: string, status: number, message: string, data: unknown) => {
+    try {
+        const response = new Response(JSON.stringify(data), {
+            status,
+            statusText: message,
+            headers: {
+                'Content-type': 'application/json'
+            }
+        });
+        console.log("TEST", data, uri, status, message);
+        await handleResponse(response);
+    } catch (error) {
+        handleErrors(uri, error);
+    }
+}
+
+export const appendData = async (key: string, data: object) => {
+    try {
+        const newData: Record<string, object> = {};
+        if (key === "INFO") {
+            newData[key] = { ...get(gitHubData), ...data };
+        } else if (key == "APPLY") {
+            newData[key] = { ...get(applicationData), ...data };
+        } else if (key === "HAUS") {
+            newData[key] = { ...get(commonhausData), ...data };
+        } else if (key === "ALIAS") {
+            newData[key] = { ...get(aliasTargets), ...data };
+        }
+
+        const response = new Response(JSON.stringify(newData), {
+            status: 200,
+            statusText: "OK",
+            headers: {
+                'Content-type': 'application/json'
+            }
+        });
+        console.log("APPEND", newData);
+        await handleResponse(response);
+    } catch (error) {
+        handleErrors(COMMONHAUS, error);
+    }
+}
+
 const handleResponse = async (response: Response) => {
     if (!response.ok) {
-        if (response.status === 405) {
-            errorFlag("unknown", true);
-        }
-        throw new Error(response.statusText);
+        throw new Error(`${response.status} ${response.statusText}`);
     }
     const message = await response.json();
     for (const [key, value] of Object.entries(message)) {
         if (key === "INFO") {
             console.debug("INFO", value);
             gitHubData.set(value as GitHubUser);
-            errorFlag("info", false);
-            errorFlag("unknown", false);
+            errorFlag("info", ErrorStatus.OK);
+            errorFlag("unknown", ErrorStatus.OK);
+        } else if (key == "APPLY") {
+            console.debug("APPLY", value);
+            applicationData.set(value as ApplicationData);
+            errorFlag("apply", ErrorStatus.OK);
+            errorFlag("unknown", ErrorStatus.OK);
         } else if (key === "HAUS") {
             console.debug("HAUS", value);
             commonhausData.set(value as CommonhausMember);
-            errorFlag("haus", false);
-            errorFlag("unknown", false);
+            errorFlag("haus", ErrorStatus.OK);
+            errorFlag("unknown", ErrorStatus.OK);
         } else if (key === "ALIAS") {
             console.debug("ALIAS", value);
             aliasTargets.set(value as Record<string, Alias>);
-            errorFlag("alias", false);
+            errorFlag("alias", ErrorStatus.OK);
         }
     }
 }
 
 const handleErrors = (uri: string, error: Error) => {
+    if (uri.includes(INFO)) {
+        errorFlag("info", flagValue(error));
+    } else if (uri.includes(APPLY)) {
+        errorFlag("apply", flagValue(error));
+    } else if (uri.includes(COMMONHAUS)) {
+        errorFlag("haus", flagValue(error));
+    } else if (uri.includes(ALIASES)) {
+        errorFlag("alias", flagValue(error));
+    }
+}
+
+const flagValue = (error: Error): ErrorStatus => {
     if (error.name === 'AbortError') {
         console.log('Fetch aborted');
     } else {
         console.error(error.message);
+        if (error.message.startsWith("403")) {
+            return ErrorStatus.FORBIDDEN;
+        } else if (error.message.startsWith("5")) {
+            return ErrorStatus.SERVER;
+        }
     }
-
-    if (uri.includes(INFO)) {
-        errorFlag("info", true);
-    } else if (uri.includes(COMMONHAUS)) {
-        errorFlag("haus", true);
-    } else if (uri.includes(ALIASES)) {
-        errorFlag("alias", true);
-    }
+    return ErrorStatus.OTHER;
 }

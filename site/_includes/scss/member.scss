@@ -110,6 +110,7 @@ main.member {
     }
   }
 
+  textarea,
   input[type="text"],
   input[type="email"] {
     padding: 10px;
@@ -118,6 +119,11 @@ main.member {
 
   input[type="email"]:invalid {
     border-color: red; // Adjust as needed
+  }
+
+  textarea {
+    width: 100%;
+    min-height: 15vh;
   }
 
   button[name="reset"] {
@@ -175,7 +181,8 @@ main.member {
   }
 
   code,
-  footer {
+  footer,
+  .modified {
     font-size: var(--font-smaller);
   }
 
@@ -190,6 +197,7 @@ main.member {
     min-height: calc(100vh - 15em);
   }
 
+  .modified,
   footer.agreement-version {
     @include figtree-italic;
     text-align: right;

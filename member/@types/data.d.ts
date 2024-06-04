@@ -10,7 +10,7 @@ export interface GitHubUser {
     name?: string;
     avatarUrl?: string;
     company?: string;
-    roles?: string[];
+    roles?: MemberRole[];
 }
 
 export interface GoodStanding {
@@ -28,30 +28,49 @@ export interface Discord {
 
 export interface Services {
     discord: Discord;
-    forward_email: ForwardEmail;
+    forwardEmail: ForwardEmail;
 }
 
 export interface ForwardEmail {
     active: boolean;
-    alt_alias: string[];
+    altAlias: string[];
 }
 
 export interface Attestation {
-    with_status: string;
+    withStatus: string;
     date: string;
     version: string;
 }
 
+export enum MemberRole {
+    CFC = 'cfc',
+    EGC = 'egc',
+    MEMBER = 'member',
+    SPONSOR = 'sponsor'
+}
+
+export enum MemberStatus {
+    COMMITTEE = 'COMMITTEE',
+    ACTIVE = 'ACTIVE',
+    DECLINED = 'DECLINED',
+    PENDING = 'PENDING',
+    INACTIVE = 'INACTIVE',
+    REVOKED = 'REVOKED',
+    SUSPENDED = 'SUSPENDED',
+    SPONSOR = 'SPONSOR',
+    UNKNOWN = 'UNKNOWN'
+}
+
 export interface CommonhausMember {
-    status?: string;
-    good_until?: GoodStanding;
+    status?: MemberStatus;
+    goodUntil?: GoodStanding;
     services?: Services;
     attestations?: Attestation[];
 }
 
 export interface AttestationInfo {
     version: string;
-    rolePriority: string[];
+    rolePriority: MemberRole[];
     role: Record<string, RoleDescription>;
     attestations: Record<string, AttestationText>;
 }
@@ -68,9 +87,35 @@ export interface AttestationText {
     body: string;
 }
 
+export interface ApplicationData {
+    created?: string;
+    updated?: string;
+    contributions?: string;
+    additionalNotes?: string;
+    feedback?: {
+        htmlContent: string;
+        date: string;
+    }
+}
+
+export enum DataType {
+    INFO = 'INFO',
+    ALIAS = 'ALIAS',
+    HAUS = 'HAUS',
+    APPLY = 'APPLY'
+}
+
+export enum ErrorStatus {
+    OK = 'OK',
+    FORBIDDEN = 'FORBIDDEN',
+    SERVER = 'SERVER',
+    OTHER = 'OTHER'
+}
+
 export interface ErrorFlags {
-    info?: boolean;
-    haus?: boolean;
-    alias?: boolean;
-    unknown?: boolean;
+    apply?: ErrorStatus;
+    info?: ErrorStatus;
+    haus?: ErrorStatus;
+    alias?: ErrorStatus;
+    unknown?: ErrorStatus;
 }

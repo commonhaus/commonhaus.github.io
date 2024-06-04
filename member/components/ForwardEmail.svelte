@@ -1,10 +1,14 @@
 <!-- ForwardEmail.svelte -->
 <script>
+  import { MemberStatus } from "../@types/data.d.ts";
   import {
     checkRecentAttestation,
-    commonhausData,
     getAttestationTitle,
     getNextAttestationDate,
+  } from "../lib/attestations";
+  import { mayHaveEmail } from "../lib/memberStatus";
+  import {
+    commonhausData,
     gitHubData,
   } from "../lib/stores";
   import ControlButton from "./ControlButton.svelte";
@@ -13,15 +17,13 @@
   let date = "due";
   let hasAttestation = false;
   let service = {};
-  let status = "UNKNOWN";
+  let status = MemberStatus.UNKNOWN;
   let title = getAttestationTitle("email");
 
   $: {
-    service = $commonhausData.services?.forward_email || {};
+    service = $commonhausData.services?.forwardEmail || {};
     status = $commonhausData.status;
-    eligible =
-      (status !== "UNKNOWN" && status !== "PENDING" && status !== "SPONSOR") ||
-      (service && service.active);
+    eligible = mayHaveEmail(status) || (service && service.active);
   }
   $: {
     date = getNextAttestationDate("email", $commonhausData);

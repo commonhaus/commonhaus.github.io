@@ -1,23 +1,30 @@
 <script>
   import { onMount } from "svelte";
+  import { MemberStatus } from "../@types/data.d.ts";
   import {
-    ALIASES,
-    aliasTargets,
     checkRecentAttestation,
-    commonhausData,
-    errorFlags,
     getAttestationText,
     getNextAttestationDate,
     getRecentAttestationVersion,
+    signAttestation,
+  } from "../lib/attestations";
+  import {
+    ALIASES,
+    aliasTargets,
+    commonhausData,
+    errorFlags,
     gitHubData,
+    hasError,
+    isForbidden,
+    isOk,
     load,
     post,
-    signAttestation,
   } from "../lib/stores";
   import CloseButton from "../components/CloseButton.svelte";
   import EmailAlias from "../components/EmailAlias.svelte";
   import Loading from "../components/Loading.svelte";
   import Oops from "../components/Oops.svelte";
+  import { mayHaveEmail } from "../lib/memberStatus";
 
   const emailAttestation = getAttestationText("email");
 
@@ -49,7 +56,7 @@
   }
 
   async function saveAll() {
-    // send only the email and the udpated target recipients
+    // send only the email alias and the updated target recipients
     const recipients = {};
     for (const [email, alias] of Object.entries(aliasUpdates)) {
       recipients[email] = alias.recipients;
@@ -78,82 +85,95 @@
   email aliases for our members.
 </p>
 
-{#if !aliasesLoaded}
-  <Loading>Loading email aliases</Loading>
-{:else if recentAttestation && $errorFlags.alias}
+{#if isForbidden($errorFlags.alias) || !mayHaveEmail($commonhausData.status)}
+  <section class="information">
+    <p>You are not eligible for ForwardEmail service (membership status).</p>
+  </section>
+{:else if hasError($errorFlags.alias)}
   <Oops>There was an error working with your email addresses.</Oops>
-{:else if recentAttestation}
-  <p>
-    Your email {Object.keys(aliasUpdates).length === 1 ? "alias" : "aliases"}:
-  </p>
-  {#if Object.keys(aliasUpdates).length > 0}
-    {#each Object.keys(aliasUpdates) as alias}
-      <EmailAlias {alias} {aliasUpdates} />
-    {/each}
-  {:else}
-    <EmailAlias alias={$gitHubData.login} {aliasUpdates} />
+{:else if !aliasesLoaded}
+  <Loading>Loading email aliases</Loading>
+{:else if isOk($errorFlags.alias)}
+  {#if recentAttestation}
+    <section class="information">
+      <p>
+        Your email {Object.keys(aliasUpdates).length === 1
+          ? "alias"
+          : "aliases"}:
+      </p>
+      {#if Object.keys(aliasUpdates).length > 0}
+        {#each Object.keys(aliasUpdates) as alias}
+          <EmailAlias {alias} {aliasUpdates} />
+        {/each}
+      {:else}
+        <EmailAlias alias={$gitHubData.login} {aliasUpdates} />
+      {/if}
+
+      <div class="setting">
+        <span></span>
+        <span class="control">
+          <div class="tooltip">
+            <button
+              class="input-square"
+              aria-label="Refetch email information"
+              on:click={refresh}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-list-restart"
+                ><path d="M21 6H3" /><path d="M7 12H3" /><path
+                  d="M7 18H3"
+                /><path
+                  d="M12 18a5 5 0 0 0 9-3 4.5 4.5 0 0 0-4.5-4.5c-1.33 0-2.54.54-3.41 1.41L11 14"
+                /><path d="M11 10v4h4" /></svg
+              >
+              <span class="tooltiptext">Refresh email information</span>
+            </button>
+          </div>
+          <button name="saveAll" class="input" on:click={saveAll}>Save</button>
+          <button name="reset" class="input" on:click={resetAll}>Cancel</button>
+        </span>
+      </div>
+    </section>
   {/if}
 
-  <div class="setting">
-    <span></span>
-    <span class="control">
-      <div class="tooltip">
-        <button
-          class="input-square"
-          aria-label="Refetch email information"
-          on:click={refresh}
+  <section class="information">
+    <h2 class="good-until">
+      <span>{@html emailAttestation.title}</span>
+      {#if recentAttestation}
+        <span class="ok">{nextDate}</span>
+      {:else}
+        <span class="required"
+          >due{#if versionChanged}
+            (updated){/if}</span
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-list-restart"
-            ><path d="M21 6H3" /><path d="M7 12H3" /><path d="M7 18H3" /><path
-              d="M12 18a5 5 0 0 0 9-3 4.5 4.5 0 0 0-4.5-4.5c-1.33 0-2.54.54-3.41 1.41L11 14"
-            /><path d="M11 10v4h4" /></svg
-          >
-          <span class="tooltiptext">Refresh email information</span>
-        </button>
-      </div>
-      <button name="saveAll" class="input" on:click={saveAll}>Save</button>
-      <button name="reset" class="input" on:click={resetAll}>Cancel</button>
-    </span>
-  </div>
-{/if}
-
-<section class="information">
-  <h2 class="good-until">
-    <span>{@html emailAttestation.title}</span>
-    {#if recentAttestation}
-      <span class="ok">{nextDate}</span>
-    {:else}
-      <span class="required"
-        >due{#if versionChanged}
-          (updated){/if}</span
+      {/if}
+    </h2>
+    {@html emailAttestation.body}
+    <footer class="agreement-version">
+      version <a
+        href="https://github.com/commonhaus/foundation/blob/main/agreements/membership/members.yaml"
+        >{emailAttestation.version}</a
       >
-    {/if}
-  </h2>
-  {@html emailAttestation.body}
-  <footer class="agreement-version">
-    version <a
-      href="https://github.com/commonhaus/foundation/blob/main/agreements/membership/members.yaml"
-      >{emailAttestation.version}</a
-    >
-  </footer>
-</section>
-{#if !recentAttestation}
-  <div class="setting">
-    <span></span>
-    <span>
-      <button name="agree" on:click={iAgree}>I Agree</button>
-    </span>
-  </div>
+    </footer>
+  </section>
+
+  {#if !recentAttestation}
+    <div class="setting">
+      <span></span>
+      <span>
+        <button name="agree" on:click={iAgree}>I Agree</button>
+      </span>
+    </div>
+  {/if}
 {/if}
 
 <div class="information">
