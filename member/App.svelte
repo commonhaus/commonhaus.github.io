@@ -13,15 +13,33 @@
     knownUser,
     load,
     location,
-    uriBase
+    uriBase,
   } from "./lib/stores";
 
   let cleanup;
   let loaded = false;
 
+  const logger = (message, event) => {
+    console.error(message, event.reason);
+    console.debug(event);
+  };
+
   const loadData = async () => {
     const controller1 = await load(INFO);
     const controller2 = await load(COMMONHAUS);
+
+    window.addEventListener(
+      "error",
+      (event) => {
+        logger("Global Error", event);
+      }
+    );
+    window.addEventListener(
+      "unhandledrejection",
+      (event) => {
+        logger("Unhandled rejection", event);
+      }
+    );
 
     return () => {
       controller1.abort();
@@ -52,13 +70,13 @@
 </script>
 
 <div class="content">
-{#if $location === ""}
-  <Home />
-{:else if $location === "#/status"}
-  <Status />
-{:else if $location === "#/email"}
-  <Email />
-{/if}
+  {#if $location === ""}
+    <Home />
+  {:else if $location === "#/status"}
+    <Status />
+  {:else if $location === "#/email"}
+    <Email />
+  {/if}
 </div>
 
 {#if $hasResponse}
