@@ -8,18 +8,22 @@ import preprocess from "npm:svelte-preprocess";
 
 import "npm:svelte";
 
+const devMode = Deno.env.get("VITE_APP_DEV_MODE") === "true";
+
 function devOnlyTools() {
   return {
     name: "dev-only-tools",
     transform(source, id) {
       if (id.includes("dev-mode")) {
-        if (Deno.env.get("VITE_APP_DEV_MODE") === "true") {
-          return source;
+        if (devMode) {
+          return {
+            code: source,
+            map: null, // provide source map if available
+          };
         } else {
           return "";
         }
       }
-      return source;
     }
   }
 }
@@ -69,7 +73,8 @@ export default defineConfig({
     outDir: 'public',
     emptyOutDir: false,
     ssr: false,
-    minify: false,
+    minify: !devMode,
+    sourcemap: devMode,
     rollupOptions: {
       input: 'member/member.ts',
       output: {
