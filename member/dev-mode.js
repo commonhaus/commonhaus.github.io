@@ -141,7 +141,7 @@ window["commonhaus"] = {
             }
         });
     },
-    attestBylaws: async () => {
+    appendBylaws: async () => {
         await appendData("HAUS", {
             "goodUntil": {
                 "attestation": {
@@ -154,7 +154,7 @@ window["commonhaus"] = {
             }
         });
     },
-    attestCouncil: async () => {
+    appendCouncil: async () => {
         await appendData("HAUS", {
             "goodUntil": {
                 "attestation": {
@@ -167,7 +167,7 @@ window["commonhaus"] = {
             }
         });
     },
-    attestEgc: async () => {
+    appendEgc: async () => {
         await appendData("HAUS", {
             "goodUntil": {
                 "attestation": {
@@ -180,7 +180,7 @@ window["commonhaus"] = {
             }
         });
     },
-    attestCoc: async () => {
+    appendCoc: async () => {
         await appendData("HAUS", {
             "goodUntil": {
                 "attestation": {
@@ -193,7 +193,7 @@ window["commonhaus"] = {
             }
         });
     },
-    attestEmail: async () => {
+    appendEmail: async () => {
         await appendData("HAUS", {
             "goodUntil": {
                 "attestation": {
@@ -206,20 +206,16 @@ window["commonhaus"] = {
             }
         });
     },
-    alias: async () => {
+    appendAlias: async () => {
         await appendData("ALIAS", alias);
     },
-    appClear: async () => {
-        await testData(APPLY, 200, "OK", {
-            APPLY: {}
-        });
+    appendAppClear: async () => {
+        await appendData("APPLY", {});
     },
-    appSubmitted: async () => {
-        await testData(APPLY, 200, "OK", {
-            APPLY: application
-        });
+    appendAppSubmitted: async () => {
+        await appendData("APPLY", application);
     },
-    appFeedback: async () => {
+    appendAppFeedback: async () => {
         await appendData("APPLY", {
             "feedback": {
                 "date": "2024-06-03",
@@ -227,10 +223,18 @@ window["commonhaus"] = {
             },
         });
     },
-    appUpdated: async () => {
+    appendAppUpdated: async () => {
         await appendData("APPLY", {
             "contributions": "Revise content",
             "updated": "2024-06-04"
+        });
+    },
+    appendRoleSponsor: async () => {
+        await appendData("INFO", {
+            roles: ["sponsor"]
+        });
+        await appendData("HAUS", {
+            status: "SPONSOR"
         });
     },
     // Define more methods...
