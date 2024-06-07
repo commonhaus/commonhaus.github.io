@@ -103,12 +103,14 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-05-31T16:10:47Z",
-  "updated": "2024-06-07T09:27:39Z",
+  "updated": "2024-06-07T12:22:21Z",
   "url": "/votes/commonhaus/foundation/168.html",
   "tags": [
     "vote/open",
     "vote/quorum",
-    "vote"
+    "vote",
+    "closed"
   ],
-  "closed": false
+  "closed": true,
+  "closedAt": "2024-06-07T12:22:16Z"
 }
