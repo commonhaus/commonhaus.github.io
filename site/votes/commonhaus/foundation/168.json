@@ -1,7 +1,7 @@
 {
   "voteType": "marthas",
   "hasQuorum": true,
-  "isDone": false,
+  "isDone": true,
   "group": "commonhaus/cf-egc",
   "groupSize": 11,
   "groupVotes": 11,
@@ -94,7 +94,15 @@
     }
   ],
   "missingGroupActors": [],
-  "manualCloseComments": null,
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2024-06-07T14:15:32.000+00:00",
+    "body": "proceed\r\n\r\nFirst pass of agreements approved! We may have future revisions, but we have an official first pass. ;)",
+    "url": "https://github.com/commonhaus/foundation/pull/168#issuecomment-2154938839"
+  },
   "commentId": "IC_kwDOKRPTI85_tRyT",
   "github": "https://github.com/commonhaus/foundation/pull/168",
   "itemId": "PR_kwDOKRPTI85xJLMX",
@@ -103,10 +111,10 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-05-31T16:10:47Z",
-  "updated": "2024-06-07T12:22:21Z",
+  "updated": "2024-06-07T14:15:35Z",
   "url": "/votes/commonhaus/foundation/168.html",
   "tags": [
-    "vote/open",
+    "vote/done",
     "vote/quorum",
     "vote",
     "closed"
