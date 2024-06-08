@@ -16,7 +16,7 @@ export const uriBase = window.location.hostname.includes("localhost")
 export const INFO = uriBase + "/me";
 export const ALIASES = uriBase + "/aliases";
 export const COMMONHAUS = uriBase + "/commonhaus";
-export const APPLY = COMMONHAUS + "/apply";
+export const APPLY = uriBase + "/apply";
 
 export const gitHubData: Writable<GitHubUser> = writable({});
 export const commonhausData: Writable<CommonhausMember> = writable({});
@@ -86,6 +86,10 @@ export const hasError = (e: ErrorStatus): boolean => {
     return e !== undefined && e !== ErrorStatus.OK && e !== ErrorStatus.FORBIDDEN;
 }
 
+export const hasOtherError = (e: ErrorStatus): boolean => {
+    return e !== undefined && e === ErrorStatus.OTHER;
+}
+
 export const isOk = (e: ErrorStatus): boolean => {
     return e === undefined || e === ErrorStatus.OK;
 }
@@ -135,7 +139,7 @@ export const testData = async (uri: string, status: number, message: string, dat
                 'Content-type': 'application/json'
             }
         });
-        console.log("TEST", data, uri, status, message);
+        console.debug("TEST", data, uri, status, message);
         await handleResponse(response);
     } catch (error) {
         handleErrors(uri, error);
@@ -162,7 +166,7 @@ export const appendData = async (key: string, data: object) => {
                 'Content-type': 'application/json'
             }
         });
-        console.log("APPEND", newData);
+        console.debug("APPEND", newData);
         await handleResponse(response);
     } catch (error) {
         handleErrors(COMMONHAUS, error);
@@ -212,11 +216,13 @@ const handleErrors = (uri: string, error: Error) => {
 
 const flagValue = (error: Error): ErrorStatus => {
     if (error.name === 'AbortError') {
-        console.log('Fetch aborted');
+        console.debug('Fetch aborted');
     } else {
         console.error(error.message);
         if (error.message.startsWith("403")) {
             return ErrorStatus.FORBIDDEN;
+        } else if (error.message.startsWith("404")) {
+            return ErrorStatus.NOT_FOUND;
         } else if (error.message.startsWith("5")) {
             return ErrorStatus.SERVER;
         }

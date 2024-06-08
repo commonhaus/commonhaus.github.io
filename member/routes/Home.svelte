@@ -9,13 +9,13 @@
     isOk,
     knownUser,
   } from "../lib/stores";
-  import Discord from "../components/Discord.svelte";
-  import ForwardEmail from "../components/ForwardEmail.svelte";
-  import Loading from "../components/Loading.svelte";
-  import Membership from "../components/Membership.svelte";
+  import Discord from "../components/Home-Discord.svelte";
+  import ForwardEmail from "../components/Home-ForwardEmail.svelte";
+  import Membership from "../components/Home-Membership.svelte";
   import Oops from "../components/Oops.svelte";
+  import Loading from "../components/Loading.svelte";
   import Unknown from "../components/Unknown.svelte";
-  import { mayHaveEmail, showDiscord } from "../lib/memberStatus";
+  import { showDiscord } from "../lib/memberStatus";
 </script>
 
 {#if !$hasResponse}

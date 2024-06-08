@@ -97,11 +97,14 @@ Lorem **ipsum** dolor *sit* amet, ***consectetur*** adipiscing elit, sed do eius
 
 ## Callouts
 
-> [!NOTE]  
-> Highlights information that users should take into account, even when skimming.
-
 > [!TIP]
 > Optional information to help a user be more successful.
+
+> [!SUCCESS]
+> Successful operation
+
+> [!NOTE]  
+> Highlights information that users should take into account, even when skimming.
 
 > [!IMPORTANT]  
 > Crucial information necessary for users to succeed.

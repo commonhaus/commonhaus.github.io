@@ -1,6 +1,5 @@
 <script>
   import { onMount } from "svelte";
-  import { MemberStatus } from "../@types/data.d.ts";
   import {
     checkRecentAttestation,
     getAttestationText,
@@ -20,6 +19,7 @@
     load,
     post,
   } from "../lib/stores";
+  import Attestation from "../components/Attestation.svelte";
   import CloseButton from "../components/CloseButton.svelte";
   import EmailAlias from "../components/EmailAlias.svelte";
   import Loading from "../components/Loading.svelte";
@@ -51,7 +51,7 @@
   });
 
   async function refresh() {
-    console.log("refreshing");
+    console.debug("refreshing");
     await load(ALIASES + "?refresh=true");
   }
 
@@ -145,35 +145,7 @@
     </section>
   {/if}
 
-  <section class="information">
-    <h2 class="good-until">
-      <span>{@html emailAttestation.title}</span>
-      {#if recentAttestation}
-        <span class="ok">{nextDate}</span>
-      {:else}
-        <span class="required"
-          >due{#if versionChanged}
-            (updated){/if}</span
-        >
-      {/if}
-    </h2>
-    {@html emailAttestation.body}
-    <footer class="agreement-version">
-      version <a
-        href="https://github.com/commonhaus/foundation/blob/main/agreements/membership/members.yaml"
-        >{emailAttestation.version}</a
-      >
-    </footer>
-  </section>
-
-  {#if !recentAttestation}
-    <div class="setting">
-      <span></span>
-      <span>
-        <button name="agree" on:click={iAgree}>I Agree</button>
-      </span>
-    </div>
-  {/if}
+  <Attestation id="email" />
 {/if}
 
 <div class="information">

@@ -1,30 +1,61 @@
 body {
-  --callout-note: 27  99, 141; // Blue
-  --callout-tip: 77, 115, 67; // Green
-  --callout-important: 97, 69, 160; // Purple
+  --callout-note: 27, 99, 141; // Blue #1B638D
+  --callout-note-title: var(--callout-note);
+
+  --callout-tip: var(--light-blue-rgb);
+  --callout-tip-title: var(--callout-note);
+
+  --callout-success: var(--yellow-green-rgb); // Green
+  --callout-success-title: var(--fern-green-rgb); // Green
+
+  --callout-important: 97, 69, 160; // Purple #6145A0
+  --callout-important-title: var(--callout-important);
+
   --callout-warning: 235, 113, 0; // Orange
-  --callout-caution: 151, 47, 47; // Red
+  --callout-warning-title: var(--callout-warning);
+
+  --callout-caution: 151, 47, 47; // Red #972f2f
+  --callout-caution-title: var(--callout-caution);
+
   --callout-content-color: 255, 255, 255; // White
 }
 
+.dark body {
+  --callout-tip-title: var(--light-blue-rgb);
+  --callout-success-title: var(--yellow-green-rgb);
+
+  --callout-note-title: 70, 165, 220; // Blue #46A5DC
+  --callout-important-title: 150, 129, 201; // Purple #9681C9
+  --callout-caution-title: 213, 119, 119; // Red #D57777
+}
 
 .callout[data-callout=note] {
+  --callout-title-color: var(--callout-note-title);
   --callout-color: var(--callout-note);
 }
 
 .callout[data-callout=tip] {
+  --callout-title-color: var(--callout-tip-title);
   --callout-color: var(--callout-tip);
 }
 
+.callout[data-callout=success] {
+  --callout-title-color: var(--callout-success-title);
+  --callout-color: var(--callout-success);
+}
+
 .callout[data-callout=important] {
+  --callout-title-color: var(--callout-important-title);
   --callout-color: var(--callout-important);
 }
 
 .callout[data-callout=warning] {
+  --callout-title-color: var(--callout-warning-title);
   --callout-color: var(--callout-warning);
 }
 
 .callout[data-callout=caution] {
+  --callout-title-color: var(--callout-caution-title);
   --callout-color: var(--callout-caution);
 }
 
@@ -42,7 +73,7 @@ body {
 }
 
 .callout-title {
-  color: rgb(var(--callout-title-color, var(--callout-color)));
+  color: rgb(var(--callout-title-color));
   display: flex;
   gap: .5em;
   align-items: center;

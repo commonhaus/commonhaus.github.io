@@ -32,7 +32,7 @@ export interface Services {
 }
 
 export interface ForwardEmail {
-    active: boolean;
+    configured: boolean;
     altAlias: string[];
 }
 
@@ -66,12 +66,14 @@ export interface CommonhausMember {
     goodUntil?: GoodStanding;
     services?: Services;
     attestations?: Attestation[];
+    applicationId?: string;
 }
 
 export interface AttestationInfo {
     version: string;
     rolePriority: MemberRole[];
     role: Record<string, RoleDescription>;
+    agreement: string,
     attestations: Record<string, AttestationText>;
 }
 
@@ -108,6 +110,7 @@ export enum DataType {
 export enum ErrorStatus {
     OK = 'OK',
     FORBIDDEN = 'FORBIDDEN',
+    NOT_FOUND = 'NOT_FOUND',
     SERVER = 'SERVER',
     OTHER = 'OTHER'
 }

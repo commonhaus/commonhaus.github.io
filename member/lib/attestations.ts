@@ -27,10 +27,14 @@ export const getAttestationText = (id: string): AttestationText => {
 }
 
 export const getNextAttestationDate = (id: string, data: CommonhausMember): string => {
-    const attestation = data?.goodUntil?.attestation || {};
-    return attestation
-        ? (attestation[id]?.date || 'due')
-        : 'due';
+    const specificAttestation = data?.goodUntil?.attestation?.[id];
+    if (specificAttestation) {
+        if (specificAttestation.version !== getAttestationVersion(id)) {
+            return 'due (updated)';
+        }
+        return checkRecent(specificAttestation.date) ? specificAttestation.date : 'due';
+    }
+    return 'due';
 }
 
 export const checkRecentAttestation = (id: string, data: CommonhausMember): boolean => {
@@ -56,6 +60,10 @@ export const checkRecent = (date: string): boolean => {
     const now = new Date();
     const compare = new Date(date);
     return compare >= now;
+}
+
+export const getNext = (date: string): string => {
+    return checkRecent(date) ? date : 'due';
 }
 
 export const signAttestation = async (id: string) => {
