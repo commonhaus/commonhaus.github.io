@@ -1,5 +1,4 @@
 import { MemberStatus, MemberRole, RoleDescription } from "../@types/data.d.ts";
-import { roles } from "../components/GoodUntil.svelte";
 import { attestationInfo } from "./attestations.ts";
 
 export const getPrimaryRole = (roles: MemberRole[]): MemberRole => {
@@ -11,7 +10,6 @@ export const getPrimaryRole = (roles: MemberRole[]): MemberRole => {
 export const getRoleDescription = (role: string): RoleDescription => {
     return attestationInfo.role[role];
 }
-
 
 export const mayHaveAttestations = (status: MemberStatus): boolean => {
     return status !== MemberStatus.UNKNOWN
@@ -34,9 +32,14 @@ export const showDiscord = (status: MemberStatus): boolean => {
         && status !== MemberStatus.SUSPENDED;
 }
 
-export const showApplication = (status: MemberStatus): boolean => {
-    return status === MemberStatus.SPONSOR
-        || status === MemberStatus.PENDING
-        || status === MemberStatus.DECLINED
-        || status === MemberStatus.INACTIVE;
+export const hasRole = (roles: string[], role: string): boolean => {
+    return roles?.includes(role);
+}
+
+export const showApplication = (status: MemberStatus, roles: string[]): boolean => {
+    if (!roles) {
+        return false; // not loaded/logged in yet.
+    }
+    return (roles.includes("member") && status ===  MemberStatus.INACTIVE)
+        || (!roles.includes("member") && status !== MemberStatus.REVOKED);
 }

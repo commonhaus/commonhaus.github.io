@@ -34,7 +34,7 @@ main.member {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    gap: .2em;
+    gap: .5em;
   }
 
   .control-heading {
@@ -70,6 +70,12 @@ main.member {
 
   .setting {
     @include content-align-y;
+    justify-content: space-between;
+
+    .control {
+      flex-basis: 100%;
+      justify-content: flex-end;
+    }
   }
   .control {
     display: flex;
@@ -138,29 +144,29 @@ main.member {
   .tooltip {
     position: relative;
     display: inline-block;
-  }
 
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 200px;
-    background-color: var(--border-color);
-    color: var(--text-normal);
-    padding: 5px 0;
-    border-radius: 6px;
+    .tooltiptext {
+      visibility: hidden;
+      width: 200px;
+      background-color: var(--border-color);
+      color: var(--text-normal);
+      padding: 5px 0;
+      border-radius: 6px;
 
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 0;
-    margin-left: -150px;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 0;
+      margin-left: -150px;
 
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
 
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
+    &:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
   }
 
   .good-until {
@@ -184,6 +190,10 @@ main.member {
   footer,
   .modified {
     font-size: var(--font-smaller);
+  }
+
+  .prompt {
+    font-size: var(--font-small);
   }
 
   #member-app {
@@ -220,6 +230,22 @@ main.member {
     }
   }
 
+  @media (min-width: 500px) {
+    .setting {
+      .control {
+        flex: 1 1 auto;
+
+        button {
+          white-space: nowrap;
+          text-wrap: nowrap;
+          padding-left: 1em;
+        }
+      }
+      .prompt {
+        flex: 2 1 auto;
+      }
+    }
+  }
   @media (min-width: 800px) {
     min-width: 800px;
   }

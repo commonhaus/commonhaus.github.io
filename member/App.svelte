@@ -6,6 +6,7 @@
   import Footer from "./components/Footer.svelte";
   import Home from "./routes/Home.svelte";
   import Status from "./routes/MembershipStatus.svelte";
+  import Apply from "./routes/MemberApplicationForm.svelte";
   import Email from "./routes/ForwardEmail.svelte";
   import {
     COMMONHAUS,
@@ -78,6 +79,8 @@
     <Home />
   {:else if $location === "#/status"}
     <Status />
+  {:else if $location === "#/apply"}
+    <Apply />
   {:else if $location === "#/email"}
     <Email />
   {/if}

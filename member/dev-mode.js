@@ -1,4 +1,4 @@
-import { APPLY, COMMONHAUS, appendData, testData } from './lib/stores.ts';
+import { COMMONHAUS, INFO, appendData, load, testData } from './lib/stores.ts';
 import app from "./member.ts";
 
 const user = {
@@ -47,8 +47,14 @@ window["commonhaus"] = {
     blank: async () => {
         await testData(COMMONHAUS, 200, "OK", {
             HAUS: {},
-            INFO: {}
+            INFO: {},
+            ALIAS: {},
+            APPLY: {}
         });
+    },
+    reset: async () => {
+        await load(INFO + "?refresh=true");
+        await load(COMMONHAUS);
     },
     unauth: async () => {
         await testData(COMMONHAUS, 403, "FORBIDDEN", {
@@ -229,12 +235,12 @@ window["commonhaus"] = {
             "updated": "2024-06-04"
         });
     },
-    appendRoleSponsor: async () => {
+    changeRoles: async (roles, status) => {
         await appendData("INFO", {
-            roles: ["sponsor"]
+            roles
         });
         await appendData("HAUS", {
-            status: "SPONSOR"
+            status
         });
     },
     // Define more methods...
