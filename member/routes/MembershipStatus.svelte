@@ -21,7 +21,7 @@
   } from "../lib/stores";
   import Attestation from "../components/Attestation.svelte";
   import CloseButton from "../components/CloseButton.svelte";
-  import Loading from "../components/Loading.svelte";
+  import Loading from "../components/Loading-coffee.svelte";
   import Oops from "../components/Oops.svelte";
 
   let primaryRole, roles, attestIds, description;
@@ -49,15 +49,17 @@
 <h1>Membership status</h1>
 
 {#if !$hasResponse}
-  <Loading>Loading membership information</Loading>
+  <Loading>membership information</Loading>
 {:else if hasError($errorFlags.haus)}
   <Oops>There was an error loading your membership data.</Oops>
 {:else}
   <p>
-    <span class="label">Current status</span>: {$commonhausData.status}
+    <span class="label">Current status</span>
+    <span>{$commonhausData.status}</span>
   </p>
   <p>
-    <span class="label">All roles</span>: {roles ? roles.join(", ") : "none"}
+    <span class="label">All roles</span>
+    <span>{roles ? roles.join(", ") : "none"}</span>
   </p>
 
   {#if roles.includes("member")}
@@ -68,13 +70,13 @@
     <section class="information">
       <h2>Membership Eligibility</h2>
       <p class="good-until">
-        <span>Contributions</span>:
+        <span>Contributions</span>
         <span class:ok={contribOk} class:required={!contribOk}
           >(coming soon)</span
         >
       </p>
       <p class="good-until">
-        <span>Dues</span>:
+        <span>Dues</span>
         <span class:ok={duesOk} class:required={!duesOk}>(coming soon)</span>
       </p>
       <footer>
@@ -88,6 +90,8 @@
         </a>
       </footer>
     </section>
+  {:else}
+  <p><a href="#/apply">Apply for Commonhaus Foundation Membership</a></p>
   {/if}
 
   {#if mayHaveAttestations($commonhausData.status)}

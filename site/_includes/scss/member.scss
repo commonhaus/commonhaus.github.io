@@ -1,5 +1,6 @@
 @use 'index' as *;
 @use 'heart-spinner' as *;
+@use 'coffee-spinner' as *;
 
 main.member {
   position: relative;
@@ -16,6 +17,7 @@ main.member {
     min-width: 250px;
     margin: 0 auto;
     text-align: center;
+    box-sizing: border-box;
   }
 
   img {
@@ -121,6 +123,8 @@ main.member {
   input[type="email"] {
     padding: 10px;
     min-width: 20em;
+    background-color: var(--input-bg-color);
+    color: var(--text-normal);
   }
 
   input[type="email"]:invalid {
@@ -139,6 +143,9 @@ main.member {
   .label {
     color: var(--accent);
     @include figtree-medium;
+    &:after {
+      content: ":";
+    }
   }
 
   .tooltip {

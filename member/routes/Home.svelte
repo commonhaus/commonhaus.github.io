@@ -13,13 +13,13 @@
   import ForwardEmail from "../components/Home-ForwardEmail.svelte";
   import Membership from "../components/Home-Membership.svelte";
   import Oops from "../components/Oops.svelte";
-  import Loading from "../components/Loading.svelte";
+  import Loading from "../components/Loading-coffee.svelte";
   import Unknown from "../components/Unknown.svelte";
   import { showDiscord } from "../lib/memberStatus";
 </script>
 
 {#if !$hasResponse}
-<Loading>Loading user data...</Loading>
+<Loading>user data</Loading>
 {:else if hasError($errorFlags.info) || hasError($errorFlags.haus)}
   <Oops>There was an error loading your user data.</Oops>
 {:else if isOk($errorFlags.info)}
@@ -33,7 +33,7 @@
   <p>It's great to have you here.</p>
 
   <div class="information">
-    <p><span class="label">Login</span>: {$gitHubData.login}</p>
+    <p><span class="label">Login</span> {$gitHubData.login}</p>
   </div>
 
   {#if !$knownUser || isForbidden($errorFlags.haus)}

@@ -13,12 +13,13 @@
   import { hasRole, showApplication } from "../lib/memberStatus";
   import Callout from "../components/Callout.svelte";
   import CloseButton from "../components/CloseButton.svelte";
-  import Loading from "../components/Loading.svelte";
+  import Loading from "../components/Loading-coffee.svelte";
   import Oops from "../components/Oops.svelte";
 
   let contributions = "";
   let additionalNotes = "";
   let roleString = "";
+  let hasForm = false;
 
   $: {
     if ($commonhausData.status || $gitHubData.roles || $applicationData) {
@@ -29,13 +30,8 @@
   }
 
   onMount(async () => {
-    console.debug(
-      "loading application data",
-      $commonhausData,
-      $errorFlags.apply,
-      $gitHubData.roles,
-    );
-    if ($commonhausData.applicationId || showApplication($commonhausData.status, $gitHubData.roles)) {
+    if (showApplication($commonhausData.status, $gitHubData.roles)) {
+      hasForm = true;
       await load(APPLY);
       resetForm();
     }
@@ -51,6 +47,7 @@
       contributions,
       additionalNotes,
     });
+    resetForm();
   };
   const resetForm = () => {
     additionalNotes = $applicationData.additionalNotes;
@@ -68,16 +65,18 @@
   offices, and a <code>@commonhaus.dev</code> email address.
 </p>
 
-{#if $commonhausData.applicationId && !$applicationData}
-  <Loading>Loading membership information</Loading>
+{#if hasForm && !$applicationData}
+  <Loading>membership information</Loading>
 {:else if hasOtherError($errorFlags.apply)}
   <Oops>There was an error processing your membership application.</Oops>
 {:else}
   <p>
-    <span class="label">Status</span>: {$commonhausData.status}
+    <span class="label">Status</span>
+    <span>{$commonhausData.status}</span>
   </p>
   <p>
-    <span class="label">All roles</span>: {roleString}
+    <span class="label">All roles</span>
+    <span>{roleString}</span>
   </p>
 
   {#if showApplication($commonhausData.status, $gitHubData.roles)}
@@ -93,7 +92,7 @@
 
     <form on:submit|preventDefault={submitForm}>
       <section class="information">
-        <h3><label for="contributions">Contribution details:</label></h3>
+        <h3><label for="contributions">Contribution details</label></h3>
         <p>
           Briefly describe your contributions to CF or its projects over the
           past three months. Include links to pull requests, issues,
@@ -108,7 +107,7 @@
       </section>
 
       <section class="information">
-        <h3><label for="additionalNotes">Additional notes:</label></h3>
+        <h3><label for="additionalNotes">Additional notes</label></h3>
         <p>(Optional) Any other information or comments you'd like to add?</p>
         <textarea
           class="setting"
