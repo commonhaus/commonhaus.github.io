@@ -33,8 +33,8 @@
   </h2>
 
   <div class="information">
-    <p><span class="label">Status</span>: {$commonhausData.status}</p>
-    <p><span class="label">All roles</span>: {roles.join(", ")}</p>
+    <p><span class="label">Status</span> {$commonhausData.status}</p>
+    <p><span class="label">All roles</span> {roles.join(", ")}</p>
     {#if mayHaveAttestations($commonhausData.status) && localGood}
       <ul>
         {#each attestIds as id}

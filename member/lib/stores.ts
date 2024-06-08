@@ -86,6 +86,10 @@ export const hasError = (e: ErrorStatus): boolean => {
     return e !== undefined && e !== ErrorStatus.OK && e !== ErrorStatus.FORBIDDEN;
 }
 
+export const notFound = (e: ErrorStatus): boolean => {
+    return e !== undefined && e === ErrorStatus.NOT_FOUND;
+}
+
 export const hasOtherError = (e: ErrorStatus): boolean => {
     return e !== undefined && e === ErrorStatus.OTHER;
 }
@@ -206,7 +210,12 @@ const handleErrors = (uri: string, error: Error) => {
     if (uri.includes(INFO)) {
         errorFlag("info", flagValue(error));
     } else if (uri.includes(APPLY)) {
-        errorFlag("apply", flagValue(error));
+        const errorStatus = flagValue(error);
+        if (errorStatus === ErrorStatus.NOT_FOUND) {
+            applicationData.set({});
+        } else {
+            errorFlag("apply", flagValue(error));
+        }
     } else if (uri.includes(COMMONHAUS)) {
         errorFlag("haus", flagValue(error));
     } else if (uri.includes(ALIASES)) {

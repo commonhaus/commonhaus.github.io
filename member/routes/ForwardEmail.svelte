@@ -22,7 +22,7 @@
   import Attestation from "../components/Attestation.svelte";
   import CloseButton from "../components/CloseButton.svelte";
   import EmailAlias from "../components/EmailAlias.svelte";
-  import Loading from "../components/Loading.svelte";
+  import Loading from "../components/Loading-coffee.svelte";
   import Oops from "../components/Oops.svelte";
   import { mayHaveEmail } from "../lib/memberStatus";
 
@@ -92,7 +92,7 @@
 {:else if hasError($errorFlags.alias)}
   <Oops>There was an error working with your email addresses.</Oops>
 {:else if !aliasesLoaded}
-  <Loading>Loading email aliases</Loading>
+  <Loading>email aliases</Loading>
 {:else if isOk($errorFlags.alias)}
   {#if recentAttestation}
     <section class="information">

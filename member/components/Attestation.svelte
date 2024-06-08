@@ -13,6 +13,8 @@
 
   export let id;
 
+  let pending = false;
+
   let attestation, currentVersion, date, ok;
   $: {
     attestation = getAttestationText(id);
@@ -22,7 +24,9 @@
   }
 
   const iAgree = async (id) => {
+    pending = true;
     await signAttestation(id);
+    pending = false;
   };
 </script>
 
@@ -32,7 +36,7 @@
     <span class:ok class:required={!ok}>{date}</span>
   </h3>
   {@html attestation.body}
-  {#if !ok}
+  {#if !ok && !pending}
     <div class="setting">
       <span class="prompt">{attestationInfo.agreement}</span>
       <span class="control">

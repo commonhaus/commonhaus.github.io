@@ -1,0 +1,36 @@
+body {
+  --steam-animation: steaming 2500ms ease infinite;
+  --steam-height: -10px;
+  --steam-start-height: 8px;
+  --steam1-delay: 100ms;
+  --steam2-delay: 250ms;
+  --steam3-delay: 50ms;
+}
+.coffee-wrapper {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  padding-left: 12px;
+}
+.coffee-cup {
+  fill: var(--cocoa-brown);
+}
+.steam {
+  fill: var(--text-faint);
+  transform: translateY(var(--steam-start-height));
+  animation: var(--steam-animation);
+}
+.steam1 {
+  animation-delay: var(--steam1-delay);
+}
+.steam2 {
+  animation-delay: var(--steam2-delay);
+}
+.steam3 {
+  animation-delay: var(--steam3-delay);
+}
+@keyframes steaming {
+  50% {
+    transform: translateY(var(--steam-height));
+  }
+}

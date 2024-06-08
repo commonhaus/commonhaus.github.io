@@ -45,7 +45,7 @@
     <div class="information">
       {#if service && service.active}
         <p>
-          <span class="label">Active</span>:
+          <span class="label">Active</span>
           <code>{$gitHubData.login}@commonhaus.dev</code
           >{#if service.alt_alias && service.alt_alias.length > 0}
             {#each service.alt_alias as alias (alias)},
