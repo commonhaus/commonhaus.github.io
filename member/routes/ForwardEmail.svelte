@@ -35,6 +35,8 @@
   let nextDate = "due";
   let aliasUpdates = {};
 
+  let pending = true;
+
   $: {
     recentAttestation = checkRecentAttestation("email", $commonhausData);
     nextDate = getNextAttestationDate("email", $commonhausData);
@@ -48,6 +50,7 @@
   onMount(async () => {
     await load(ALIASES);
     aliasesLoaded = true;
+    pending = false;
   });
 
   async function refresh() {
@@ -56,20 +59,20 @@
   }
 
   async function saveAll() {
+    pending = true;
     // send only the email alias and the updated target recipients
     const recipients = {};
     for (const [email, alias] of Object.entries(aliasUpdates)) {
       recipients[email] = alias.recipients;
     }
     await post(ALIASES, recipients);
+    pending = false;
   }
 
   function resetAll() {
+    pending = true;
     aliasUpdates = JSON.parse(JSON.stringify($aliasTargets));
-  }
-
-  async function iAgree() {
-    await signAttestation("email");
+    pending = false;
   }
 </script>
 
@@ -138,8 +141,18 @@
               <span class="tooltiptext">Refresh email information</span>
             </button>
           </div>
-          <button name="saveAll" class="input" on:click={saveAll}>Save</button>
-          <button name="reset" class="input" on:click={resetAll}>Cancel</button>
+          <button
+            name="saveAll"
+            class="input"
+            on:click={saveAll}
+            disabled={pending}>Save</button
+          >
+          <button
+            name="reset"
+            class="input"
+            on:click={resetAll}
+            disabled={pending}>Cancel</button
+          >
         </span>
       </div>
     </section>

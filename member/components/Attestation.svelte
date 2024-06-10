@@ -36,11 +36,11 @@
     <span class:ok class:required={!ok}>{date}</span>
   </h3>
   {@html attestation.body}
-  {#if !ok && !pending}
+  {#if !ok}
     <div class="setting">
       <span class="prompt">{attestationInfo.agreement}</span>
       <span class="control">
-        <button name="agree" on:click={iAgree(id)}>I Agree</button>
+        <button name="agree" on:click={iAgree(id)} disabled={pending}>I Agree</button>
       </span>
     </div>
   {/if}

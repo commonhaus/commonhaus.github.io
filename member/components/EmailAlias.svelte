@@ -8,6 +8,8 @@
   let emailErrors = {};
   let recipients = "";
   let previousRecipients = [];
+  let pending = false;
+  let hasRecipients = false;
 
   $: aliasData = aliasUpdates[alias] || {
     recipients: []
@@ -19,6 +21,7 @@
       previousRecipients = aliasData?.recipients;
     }
   }
+  $: hasRecipients = aliasData.verified_recipients && aliasData.verified_recipients.length > 0;
 
   const handleInputChange = debounce((alias, event) => {
     const emails = event.target.value.split(",").map((email) => email.trim());
@@ -29,7 +32,9 @@
 
   const generatePassword = async (alias) => {
     if (window.confirm('Are you sure you want to generate a new password?')) {
+      pending = true;
       await post(ALIASES + "/password", { alias: alias });
+      pending = false;
     }
   };
 
@@ -54,7 +59,7 @@
       <button
         class="input-square"
         aria-label="Generate a SMTP Password for this alias"
-        disabled={!aliasData.verified_recipients || aliasData.verified_recipients.length === 0}
+        disabled={pending || !hasRecipients}
         on:click={() => generatePassword(alias)}
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-square-asterisk"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M12 8v8"/><path d="m8.5 14 7-4"/><path d="m8.5 10 7 4"/></svg>
