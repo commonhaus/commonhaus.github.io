@@ -8,7 +8,7 @@
     gitHubData,
     hasOtherError,
     load,
-    post
+    post,
   } from "../lib/stores";
   import { hasRole, showApplication } from "../lib/memberStatus";
   import Callout from "../components/Callout.svelte";
@@ -20,10 +20,15 @@
   let additionalNotes = "";
   let roleString = "";
   let hasForm = false;
+  let pending = true;
 
   $: {
     if ($commonhausData.status || $gitHubData.roles || $applicationData) {
-      console.debug("application data changed", $commonhausData, $gitHubData.roles);
+      console.debug(
+        "application data changed",
+        $commonhausData,
+        $gitHubData.roles,
+      );
       roleString = $gitHubData.roles?.join(", ") || "none";
       resetForm();
     }
@@ -33,7 +38,8 @@
     if (showApplication($commonhausData.status, $gitHubData.roles)) {
       hasForm = true;
       await load(APPLY);
-      resetForm();
+      resetFormFields();
+      pending = false;
     }
   });
   const addNotes = () => {
@@ -43,13 +49,21 @@
     }
   };
   const submitForm = async () => {
+    pending = true;
     await post(APPLY, {
       contributions,
       additionalNotes,
     });
-    resetForm();
+    resetFormFields();
+    pending = false;
+
   };
   const resetForm = () => {
+    pending = true;
+    resetFormFields();
+    pending = false;
+  };
+  const resetFormFields = () => {
     additionalNotes = $applicationData.additionalNotes;
     contributions = $applicationData.contributions;
     addNotes();
@@ -119,10 +133,17 @@
       <div class="setting">
         <span></span>
         <span class="control">
-          <button name="saveAll" class="input" on:click={submitForm}
-            >Save</button
+          <button
+            name="saveAll"
+            class="input"
+            on:click={submitForm}
+            disabled={pending}>Save</button
           >
-          <button name="reset" class="input" on:click={resetForm}>Cancel</button
+          <button
+            name="reset"
+            class="input"
+            on:click={resetForm}
+            disabled={pending}>Cancel</button
           >
         </span>
       </div>
