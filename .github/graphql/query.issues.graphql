@@ -1,0 +1,19 @@
+query($name: String!, $owner: String!) {
+  repository(owner: $owner, name: $name) {
+    issues(first: 5, orderBy: {field: UPDATED_AT, direction: DESC}) {
+      nodes {
+        id
+        title
+        number
+        author {
+            login
+            url
+        }
+        url
+        body
+        createdAt
+        updatedAt
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+query($owner: String!) {
+  repositoryOwner(login: $owner) {
+    login
+    ... on User {
+      login
+      id
+      databaseId
+    }
+  }
+}
