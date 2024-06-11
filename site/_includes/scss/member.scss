@@ -137,6 +137,9 @@ main.member {
     position: relative;
     min-height: 15vh;
     width: 95%;
+    border-width: 1px;
+    border-radius: 6px;
+    border-color: var(--border-color);
   }
 
   button[name="reset"] {
