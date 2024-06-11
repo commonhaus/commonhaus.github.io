@@ -113,7 +113,6 @@
           discussions, or other relevant activities.
         </p>
         <textarea
-          class="setting"
           id="contributions"
           bind:value={contributions}
           required
@@ -124,7 +123,6 @@
         <h3><label for="additionalNotes">Additional notes</label></h3>
         <p>(Optional) Any other information or comments you'd like to add?</p>
         <textarea
-          class="setting"
           id="additionalNotes"
           bind:value={additionalNotes}
         ></textarea>

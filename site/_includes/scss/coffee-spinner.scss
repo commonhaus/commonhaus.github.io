@@ -1,10 +1,10 @@
 body {
-  --steam-animation: steaming 2500ms ease infinite;
-  --steam-height: -10px;
-  --steam-start-height: 8px;
-  --steam1-delay: 100ms;
-  --steam2-delay: 250ms;
-  --steam3-delay: 50ms;
+  --steam-animation: steaming 2500ms ease-in-out infinite;
+  --steam-height: -20px;
+  --steam-start-height: 70px;
+  --steam1-delay: 400ms;
+  --steam2-delay: 750ms;
+  --steam3-delay: 1100ms;
 }
 .coffee-wrapper {
   width: 100px;
@@ -12,13 +12,17 @@ body {
   margin: 0 auto;
   padding-left: 12px;
 }
-.coffee-cup {
-  fill: var(--cocoa-brown);
+.cup-outline {
+  fill: var(--bg-primary);
+}
+.cup-fg {
+  fill: var(--light-blue);
 }
 .steam {
   fill: var(--text-faint);
   transform: translateY(var(--steam-start-height));
   animation: var(--steam-animation);
+  opacity: 0; // start invisible
 }
 .steam1 {
   animation-delay: var(--steam1-delay);
@@ -30,7 +34,15 @@ body {
   animation-delay: var(--steam3-delay);
 }
 @keyframes steaming {
+  0% {
+    transform: translateY(var(--steam-start-height));
+    opacity: 0; // start invisible
+  }
   50% {
+    opacity: 1; // fully visible while moving up
+  }
+  100% {
     transform: translateY(var(--steam-height));
+    opacity: 0; // end invisible
   }
 }
