@@ -54,7 +54,7 @@ window["commonhaus"] = {
     },
     reset: async () => {
         await load(INFO + "?refresh=true");
-        await load(COMMONHAUS);
+        await load(COMMONHAUS + "?refresh=true");
     },
     unauth: async () => {
         await testData(COMMONHAUS, 403, "FORBIDDEN", {
