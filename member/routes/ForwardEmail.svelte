@@ -17,6 +17,7 @@
     isForbidden,
     isOk,
     load,
+    outboundPost,
     post,
   } from "../lib/stores";
   import Attestation from "../components/Attestation.svelte";
@@ -35,8 +36,6 @@
   let nextDate = "due";
   let aliasUpdates = {};
 
-  let pending = true;
-
   $: {
     recentAttestation = checkRecentAttestation("email", $commonhausData);
     nextDate = getNextAttestationDate("email", $commonhausData);
@@ -50,7 +49,6 @@
   onMount(async () => {
     await load(ALIASES);
     aliasesLoaded = true;
-    pending = false;
   });
 
   async function refresh() {
@@ -59,20 +57,16 @@
   }
 
   async function saveAll() {
-    pending = true;
     // send only the email alias and the updated target recipients
     const recipients = {};
     for (const [email, alias] of Object.entries(aliasUpdates)) {
       recipients[email] = alias.recipients;
     }
     await post(ALIASES, recipients);
-    pending = false;
   }
 
   function resetAll() {
-    pending = true;
     aliasUpdates = JSON.parse(JSON.stringify($aliasTargets));
-    pending = false;
   }
 </script>
 
@@ -92,10 +86,12 @@
   <section class="information">
     <p>You are not eligible for ForwardEmail service (membership status).</p>
   </section>
+{:else if $outboundPost}
+  <Loading>Processing...</Loading>
 {:else if hasError($errorFlags.alias)}
   <Oops>There was an error working with your email addresses.</Oops>
 {:else if !aliasesLoaded}
-  <Loading>email aliases</Loading>
+  <Loading>Fetching your email aliases</Loading>
 {:else if isOk($errorFlags.alias)}
   {#if recentAttestation}
     <section class="information">
@@ -145,13 +141,13 @@
             name="saveAll"
             class="input"
             on:click={saveAll}
-            disabled={pending}>Save</button
+            disabled={$outboundPost}>Save</button
           >
           <button
             name="reset"
             class="input"
             on:click={resetAll}
-            disabled={pending}>Cancel</button
+            disabled={$outboundPost}>Cancel</button
           >
         </span>
       </div>

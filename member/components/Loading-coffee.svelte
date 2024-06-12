@@ -66,5 +66,5 @@
       </g>
     </svg>
   </div>
-  <p>Fetching your <slot></slot></p>
+  <p><slot></slot></p>
 </div>

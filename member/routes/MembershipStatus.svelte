@@ -10,6 +10,7 @@
     getPrimaryRole,
     getRoleDescription,
     mayHaveAttestations,
+    showApplication,
   } from "../lib/memberStatus";
   import {
     commonhausData,
@@ -18,19 +19,25 @@
     gitHubData,
     hasError,
     hasResponse,
+    outboundPost
   } from "../lib/stores";
   import Attestation from "../components/Attestation.svelte";
   import CloseButton from "../components/CloseButton.svelte";
   import Loading from "../components/Loading-coffee.svelte";
   import Oops from "../components/Oops.svelte";
 
-  let primaryRole, roles, attestIds, description;
+  let primaryRole, roles, attestIds, description, hasApplication;
 
   $: {
     roles = $gitHubData.roles || [];
     primaryRole = getPrimaryRole(roles);
     description = getRoleDescription(primaryRole);
     attestIds = getRequiredAttestations(primaryRole);
+    hasApplication = $gitHubData.hasApplication;
+  }
+
+  $: if ($outboundPost) {
+    window.scrollTo(0, 0);
   }
 
   onMount(async () => {
@@ -49,7 +56,9 @@
 <h1>Membership status</h1>
 
 {#if !$hasResponse}
-  <Loading>membership information</Loading>
+  <Loading>Rummaging for your membership information</Loading>
+{:else if $outboundPost}
+  <Loading>Processing...</Loading>
 {:else if hasError($errorFlags.haus)}
   <Oops>There was an error loading your membership data.</Oops>
 {:else}
@@ -90,8 +99,9 @@
         </a>
       </footer>
     </section>
-  {:else}
-  <p><a href="#/apply">Apply for Commonhaus Foundation Membership</a></p>
+  {:else if showApplication($commonhausData.status, roles)}
+    {@const text = hasApplication ? "Review application" : "Apply"}
+    <p><a href="#/apply">{text} for Commonhaus Foundation Membership</a></p>
   {/if}
 
   {#if mayHaveAttestations($commonhausData.status)}

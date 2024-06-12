@@ -86,6 +86,26 @@ body {
   --ok: var(--fern-green);
   --required: var(--goldenrod);
 
+  --callout-note: 27, 99, 141; // Blue #1B638D
+  --callout-note-title: var(--callout-note);
+
+  --callout-tip: var(--light-blue-rgb);
+  --callout-tip-title: var(--callout-note);
+
+  --callout-success: var(--yellow-green-rgb); // Green
+  --callout-success-title: var(--fern-green-rgb); // Green
+
+  --callout-important: 97, 69, 160; // Purple #6145A0
+  --callout-important-title: var(--callout-important);
+
+  --callout-warning: 235, 113, 0; // Orange
+  --callout-warning-title: var(--callout-warning);
+
+  --callout-caution: 151, 47, 47; // Red #972f2f
+  --callout-caution-title: var(--callout-caution);
+
+  --callout-content-color: 255, 255, 255; // White
+
   background-color: var(--bg-primary);
 }
 
@@ -107,6 +127,13 @@ body {
   --table-team-votes-bg: var(--british-racing-green-rgb);
 
   --ok: var(--asparagus);
+
+  --callout-tip-title: var(--light-blue-rgb);
+  --callout-success-title: var(--yellow-green-rgb);
+
+  --callout-note-title: 70, 165, 220; // Blue #46A5DC
+  --callout-important-title: 150, 129, 201; // Purple #9681C9
+  --callout-caution-title: 213, 119, 119; // Red #D57777
 
   a {
     color: #c8c7c7;

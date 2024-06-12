@@ -8,6 +8,7 @@
     isForbidden,
     isOk,
     knownUser,
+    outboundPost
   } from "../lib/stores";
   import Discord from "../components/Home-Discord.svelte";
   import ForwardEmail from "../components/Home-ForwardEmail.svelte";
@@ -16,10 +17,13 @@
   import Loading from "../components/Loading-coffee.svelte";
   import Unknown from "../components/Unknown.svelte";
   import { showDiscord } from "../lib/memberStatus";
+
 </script>
 
 {#if !$hasResponse}
-<Loading>user data</Loading>
+  <Loading>Fetching your user data</Loading>
+{:else if $outboundPost}
+  <Loading>Processing...</Loading>
 {:else if hasError($errorFlags.info) || hasError($errorFlags.haus)}
   <Oops>There was an error loading your user data.</Oops>
 {:else if isOk($errorFlags.info)}

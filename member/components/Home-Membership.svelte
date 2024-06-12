@@ -9,18 +9,22 @@
   } from "../lib/attestations";
   import {
     getPrimaryRole,
-    mayHaveAttestations
+    mayHaveAttestations,
+
+    showApplication
+
   } from "../lib/memberStatus";
   import { commonhausData, gitHubData } from "../lib/stores";
   import ControlButton from "./ControlButton.svelte";
 
-  let primaryRole, attestIds, roles, localGood;
+  let primaryRole, attestIds, roles, localGood, hasApplication;
 
   $: {
     roles = $gitHubData.roles || [];
     localGood = $commonhausData.goodUntil || {};
     primaryRole = getPrimaryRole(roles);
     attestIds = getRequiredAttestations(primaryRole);
+    hasApplication =  $gitHubData.hasApplication;
   }
 </script>
 
@@ -62,8 +66,9 @@
           <span class:ok={duesOk} class:required={!duesOk}>(coming soon)</span>
         </li>
       </ul>
-    {:else}
-    <p><a href="#/apply">Apply for Commonhaus Foundation Membership</a></p>
+    {:else if showApplication($commonhausData.status, roles)}
+      {@const text = hasApplication ? "Review application" : "Apply"}
+      <p><a href="#/apply">{text} for Commonhaus Foundation Membership</a></p>
     {/if}
   </div>
 </section>

@@ -3,11 +3,12 @@
     import("./dev-mode.js");
   }
   import { onMount, onDestroy } from "svelte";
+  import Apply from "./routes/MemberApplicationForm.svelte";
+  import Email from "./routes/ForwardEmail.svelte";
   import Footer from "./components/Footer.svelte";
   import Home from "./routes/Home.svelte";
   import Status from "./routes/MembershipStatus.svelte";
-  import Apply from "./routes/MemberApplicationForm.svelte";
-  import Email from "./routes/ForwardEmail.svelte";
+  import Callout from "./components/Callout.svelte";
   import {
     COMMONHAUS,
     INFO,
@@ -19,6 +20,7 @@
     knownUser,
     load,
     location,
+    toaster,
     uriBase,
   } from "./lib/stores";
 
@@ -73,7 +75,9 @@
     }
   }
 </script>
-
+<div class="toaster {$toaster.show ? 'show' : ''}">
+  <Callout type={$toaster.type} title={$toaster.message}/>
+</div>
 <div class="content">
   {#if $location === ""}
     <Home />
@@ -85,7 +89,6 @@
     <Email />
   {/if}
 </div>
-
 {#if $hasResponse}
   <Footer />
 {/if}

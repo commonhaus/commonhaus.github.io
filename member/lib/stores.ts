@@ -18,17 +18,20 @@ export const ALIASES = uriBase + "/aliases";
 export const COMMONHAUS = uriBase + "/commonhaus";
 export const APPLY = uriBase + "/apply";
 
-export const gitHubData: Writable<GitHubUser> = writable({});
-export const commonhausData: Writable<CommonhausMember> = writable({});
-export const applicationData: Writable<ApplicationData> = writable({});
+export const gitHubData = writable<GitHubUser>({});
+export const commonhausData = writable<CommonhausMember>({});
+export const applicationData = writable<ApplicationData>({});
 
 export const errorFlags = writable<ErrorFlags>({});
+export const outboundPost = writable<boolean>(false);
 
 export const hasResponse = derived([gitHubData, errorFlags], ([$data, $errors]) => $data.name || $errors.unknown);
 export const knownUser = derived([gitHubData, errorFlags], ([$data, $errors]) => $data.name && !$errors.unknown);
 
 export const cookies = writable<Record<string, string>>({});
 export const aliasTargets = writable<Record<string, Alias>>({});
+
+export const toaster = writable({ show: false, message: '', type: '' });
 
 export const fetchLatestStatus = async () => {
     const URI = `${COMMONHAUS}/status`;
@@ -86,10 +89,6 @@ export const hasError = (e: ErrorStatus): boolean => {
     return e !== undefined && e !== ErrorStatus.OK && e !== ErrorStatus.FORBIDDEN;
 }
 
-export const notFound = (e: ErrorStatus): boolean => {
-    return e !== undefined && e === ErrorStatus.NOT_FOUND;
-}
-
 export const hasOtherError = (e: ErrorStatus): boolean => {
     return e !== undefined && e === ErrorStatus.OTHER;
 }
@@ -109,7 +108,7 @@ export const load = async (uri: string): Promise<AbortController> => {
             signal
         });
 
-        await handleResponse(response);
+        await handleResponse(uri, response, 'GET');
     } catch (error) {
         handleErrors(uri, error);
     }
@@ -117,6 +116,7 @@ export const load = async (uri: string): Promise<AbortController> => {
 }
 
 export const post = async (uri: string, body: unknown): Promise<void> => {
+    outboundPost.set(true);
     try {
         const response = await fetch(uri, {
             method: 'POST',
@@ -128,11 +128,25 @@ export const post = async (uri: string, body: unknown): Promise<void> => {
             mode: "cors"
         });
 
-        await handleResponse(response);
+        await handleResponse(uri, response, 'POST');
     } catch (error) {
         handleErrors(uri, error);
     }
+    outboundPost.set(false);
 }
+
+const uri = (k: string) => {
+    switch (k) {
+        case "INFO":
+            return INFO;
+        case "APPLY":
+            return APPLY;
+        case "ALIAS":
+            return ALIASES;
+        default:
+            return COMMONHAUS;
+    }
+};
 
 export const testData = async (uri: string, status: number, message: string, data: unknown) => {
     try {
@@ -144,7 +158,7 @@ export const testData = async (uri: string, status: number, message: string, dat
             }
         });
         console.debug("TEST", data, uri, status, message);
-        await handleResponse(response);
+        await handleResponse(uri, response, 'POST');
     } catch (error) {
         handleErrors(uri, error);
     }
@@ -171,38 +185,71 @@ export const appendData = async (key: string, data: object) => {
             }
         });
         console.debug("APPEND", newData);
-        await handleResponse(response);
+        await handleResponse(uri(key), response, 'POST');
     } catch (error) {
-        handleErrors(COMMONHAUS, error);
+        handleErrors(uri(key), error);
     }
 }
 
-const handleResponse = async (response: Response) => {
-    if (!response.ok) {
-        throw new Error(`${response.status} ${response.statusText}`);
-    }
-    const message = await response.json();
-    for (const [key, value] of Object.entries(message)) {
-        if (key === "INFO") {
-            console.debug("INFO", value);
-            gitHubData.set(value as GitHubUser);
-            errorFlag("info", ErrorStatus.OK);
-            errorFlag("unknown", ErrorStatus.OK);
-        } else if (key == "APPLY") {
-            console.debug("APPLY", value);
-            applicationData.set(value as ApplicationData);
-            errorFlag("apply", ErrorStatus.OK);
-            errorFlag("unknown", ErrorStatus.OK);
-        } else if (key === "HAUS") {
-            console.debug("HAUS", value);
-            commonhausData.set(value as CommonhausMember);
-            errorFlag("haus", ErrorStatus.OK);
-            errorFlag("unknown", ErrorStatus.OK);
-        } else if (key === "ALIAS") {
-            console.debug("ALIAS", value);
-            aliasTargets.set(value as Record<string, Alias>);
-            errorFlag("alias", ErrorStatus.OK);
+export const toastMessage = (type: string, message: string) => {
+    toaster.set({ show: true, message, type });
+
+    setTimeout(() => {
+        toaster.set({ show: false, message: '', type: '' });
+    }, 3000);
+};
+
+const handleResponse = async (uri: string, response: Response, method: string) => {
+    handleErrorResponse(uri, response);
+
+    errorFlag("unknown", ErrorStatus.OK);
+
+    try {
+        if (response.body) {
+            const message = await response.json();
+            for (const [key, value] of Object.entries(message)) {
+                if (key === "INFO") {
+                    console.debug("INFO", value);
+                    gitHubData.set(value as GitHubUser);
+                    errorFlag("info", ErrorStatus.OK);
+                } else if (key == "APPLY") {
+                    console.debug("APPLY", value);
+                    applicationData.set(value as ApplicationData);
+                    errorFlag("apply", ErrorStatus.OK);
+                    errorFlag("unknown", ErrorStatus.OK);
+                } else if (key === "HAUS") {
+                    console.debug("HAUS", value);
+                    commonhausData.set(value as CommonhausMember);
+                    errorFlag("haus", ErrorStatus.OK);
+                    errorFlag("unknown", ErrorStatus.OK);
+                } else if (key === "ALIAS") {
+                    console.debug("ALIAS", value);
+                    aliasTargets.set(value as Record<string, Alias>);
+                    errorFlag("alias", ErrorStatus.OK);
+                }
+            }
+            if (method === 'POST') {
+                toastMessage("success", "So far, so good.");
+            }
         }
+    } catch (error) {
+        handleErrors(uri, error);
+    }
+}
+
+const handleErrorResponse = (uri: string, response: Response) => {
+    if (response.status === 429) {
+        console.debug("Another membership application is in progress");
+    } else if (response.status === 503) {
+        console.debug("Service unavailable: trouble with the GitHub API");
+        toastMessage("caution", "Our connection to GitHub is having a hiccup. Please try again in a little while.");
+    } else if (response.status == 404) {
+        console.debug("Not found");
+        if (uri.includes(APPLY)) {
+            applicationData.set({});
+        }
+    } else if (!response.ok) {
+        throw new Error(`${response.status} ${response.statusText}`);
     }
 }
 
@@ -210,12 +257,7 @@ const handleErrors = (uri: string, error: Error) => {
     if (uri.includes(INFO)) {
         errorFlag("info", flagValue(error));
     } else if (uri.includes(APPLY)) {
-        const errorStatus = flagValue(error);
-        if (errorStatus === ErrorStatus.NOT_FOUND) {
-            applicationData.set({});
-        } else {
-            errorFlag("apply", flagValue(error));
-        }
+        errorFlag("apply", flagValue(error));
     } else if (uri.includes(COMMONHAUS)) {
         errorFlag("haus", flagValue(error));
     } else if (uri.includes(ALIASES)) {
@@ -230,11 +272,11 @@ const flagValue = (error: Error): ErrorStatus => {
         console.error(error.message);
         if (error.message.startsWith("403")) {
             return ErrorStatus.FORBIDDEN;
-        } else if (error.message.startsWith("404")) {
-            return ErrorStatus.NOT_FOUND;
         } else if (error.message.startsWith("5")) {
+            toastMessage("caution", "It seems we've hit a snag on our end. If you could report this, we'd appreciate it!");
             return ErrorStatus.SERVER;
         }
     }
+    toastMessage("caution", "Oops, something unexpected happened. If you could report this, we'd be grateful!");
     return ErrorStatus.OTHER;
 }
