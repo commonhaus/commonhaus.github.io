@@ -8,6 +8,7 @@
     gitHubData,
     hasOtherError,
     load,
+    outboundPost,
     post,
   } from "../lib/stores";
   import { hasRole, showApplication } from "../lib/memberStatus";
@@ -20,12 +21,12 @@
   let additionalNotes = "";
   let roleString = "";
   let hasForm = false;
-  let pending = true;
 
   $: {
     if ($commonhausData.status || $gitHubData.roles || $applicationData) {
       console.debug(
         "application data changed",
+        $applicationData,
         $commonhausData,
         $gitHubData.roles,
       );
@@ -34,39 +35,34 @@
     }
   }
 
+  $: if ($outboundPost) {
+    window.scrollTo(0, 0);
+  }
+
   onMount(async () => {
     if (showApplication($commonhausData.status, $gitHubData.roles)) {
       hasForm = true;
       await load(APPLY);
       resetFormFields();
-      pending = false;
     }
   });
-  const addNotes = () => {
-    if (!additionalNotes) {
-      const status = $commonhausData.status;
-      additionalNotes = `Status: ${status}\r\nRoles: ${roleString}`;
-    }
-  };
   const submitForm = async () => {
-    pending = true;
     await post(APPLY, {
       contributions,
       additionalNotes,
     });
     resetFormFields();
-    pending = false;
-
   };
   const resetForm = () => {
-    pending = true;
     resetFormFields();
-    pending = false;
   };
   const resetFormFields = () => {
     additionalNotes = $applicationData.additionalNotes;
     contributions = $applicationData.contributions;
-    addNotes();
+    if (!additionalNotes) {
+      const status = $commonhausData.status;
+      additionalNotes = `Status: ${status}\r\nRoles: ${roleString}`;
+    }
   };
 </script>
 
@@ -80,7 +76,9 @@
 </p>
 
 {#if hasForm && !$applicationData}
-  <Loading>membership information</Loading>
+  <Loading>Finding up your membership application</Loading>
+{:else if $outboundPost}
+  <Loading>Processing...</Loading>
 {:else if hasOtherError($errorFlags.apply)}
   <Oops>There was an error processing your membership application.</Oops>
 {:else}
@@ -135,13 +133,13 @@
             name="saveAll"
             class="input"
             on:click={submitForm}
-            disabled={pending}>Save</button
+            disabled={$outboundPost}>Save</button
           >
           <button
             name="reset"
             class="input"
             on:click={resetForm}
-            disabled={pending}>Cancel</button
+            disabled={$outboundPost}>Cancel</button
           >
         </span>
       </div>

@@ -11,6 +11,7 @@ export interface GitHubUser {
     avatarUrl?: string;
     company?: string;
     roles?: MemberRole[];
+    hasApplication?: boolean;
 }
 
 export interface GoodStanding {
@@ -110,7 +111,6 @@ export enum DataType {
 export enum ErrorStatus {
     OK = 'OK',
     FORBIDDEN = 'FORBIDDEN',
-    NOT_FOUND = 'NOT_FOUND',
     SERVER = 'SERVER',
     OTHER = 'OTHER'
 }

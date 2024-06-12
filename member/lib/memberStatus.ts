@@ -12,24 +12,18 @@ export const getRoleDescription = (role: string): RoleDescription => {
 }
 
 export const mayHaveAttestations = (status: MemberStatus): boolean => {
-    return status !== MemberStatus.UNKNOWN
-        && status !== MemberStatus.SPONSOR
-        && status !== MemberStatus.PENDING
-        && status !== MemberStatus.DECLINED;
+    return status == MemberStatus.COMMITTEE
+        || status == MemberStatus.ACTIVE    // member
+        || status == MemberStatus.INACTIVE; // member
 }
 
 export const mayHaveEmail = (status: MemberStatus): boolean => {
-    return status !== MemberStatus.DECLINED
-        && status !== MemberStatus.PENDING
-        && status !== MemberStatus.REVOKED
-        && status !== MemberStatus.SPONSOR
-        && status !== MemberStatus.SUSPENDED
-        && status !== MemberStatus.UNKNOWN;
+    return mayHaveAttestations(status);
 }
 
 export const showDiscord = (status: MemberStatus): boolean => {
-    return status !== MemberStatus.REVOKED
-        && status !== MemberStatus.SUSPENDED;
+    return mayHaveAttestations(status)
+        || status == MemberStatus.SPONSOR;
 }
 
 export const hasRole = (roles: string[], role: string): boolean => {
@@ -40,6 +34,11 @@ export const showApplication = (status: MemberStatus, roles: string[]): boolean 
     if (!roles) {
         return false; // not loaded/logged in yet.
     }
-    return (roles.includes("member") && status ===  MemberStatus.INACTIVE)
-        || (!roles.includes("member") && status !== MemberStatus.REVOKED);
+    if (roles.includes("member")) {
+        return status === MemberStatus.INACTIVE;
+    }
+    return status == MemberStatus.COMMITTEE
+        || status == MemberStatus.SPONSOR
+        || status == MemberStatus.PENDING
+        || status == MemberStatus.DECLINED;
 }

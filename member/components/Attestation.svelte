@@ -9,11 +9,10 @@
   } from "../lib/attestations";
   import {
     commonhausData,
+    outboundPost,
   } from "../lib/stores";
 
   export let id;
-
-  let pending = false;
 
   let attestation, currentVersion, date, ok;
   $: {
@@ -24,9 +23,7 @@
   }
 
   const iAgree = async (id) => {
-    pending = true;
     await signAttestation(id);
-    pending = false;
   };
 </script>
 
@@ -40,7 +37,7 @@
     <div class="setting">
       <span class="prompt">{attestationInfo.agreement}</span>
       <span class="control">
-        <button name="agree" on:click={iAgree(id)} disabled={pending}>I Agree</button>
+        <button name="agree" on:click={iAgree(id)} disabled={$outboundPost}>I Agree</button>
       </span>
     </div>
   {/if}

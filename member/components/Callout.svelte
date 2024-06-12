@@ -17,7 +17,7 @@
 <div class="callout" data-callout="{type}">
   {#if title}
     <div class="callout-title">
-      <div class="callout-title-icon">{icons[type]}</div>
+      <div class="callout-title-icon">{@html icons[type]}</div>
       <div class="callout-title-inner">{title}</div>
     </div>
   {/if}
