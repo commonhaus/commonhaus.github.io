@@ -20,20 +20,18 @@
   let contributions = "";
   let additionalNotes = "";
   let roleString = "";
-  let hasForm = false;
+  let loaded = false;
+  let applicationReady = false;
 
   $: {
     if ($commonhausData.status || $gitHubData.roles || $applicationData) {
-      console.debug(
-        "application data changed",
-        $applicationData,
-        $commonhausData,
-        $gitHubData.roles,
-      );
       roleString = $gitHubData.roles?.join(", ") || "none";
       resetForm();
     }
   }
+
+  $: applicationReady = ($gitHubData.hasApplication && $applicationData.created)
+      || !$gitHubData.hasApplication;
 
   $: if ($outboundPost) {
     window.scrollTo(0, 0);
@@ -41,9 +39,9 @@
 
   onMount(async () => {
     if (showApplication($commonhausData.status, $gitHubData.roles)) {
-      hasForm = true;
       await load(APPLY);
       resetFormFields();
+      loaded = true;
     }
   });
   const submitForm = async () => {
@@ -75,7 +73,7 @@
   offices, and a <code>@commonhaus.dev</code> email address.
 </p>
 
-{#if hasForm && !$applicationData}
+{#if !loaded && !applicationReady }
   <Loading>Finding up your membership application</Loading>
 {:else if $outboundPost}
   <Loading>Processing...</Loading>

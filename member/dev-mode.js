@@ -1,4 +1,4 @@
-import { COMMONHAUS, INFO, appendData, load, testData } from './lib/stores.ts';
+import { APPLY, COMMONHAUS, INFO, appendData, load, testData } from './lib/stores.ts';
 import app from "./member.ts";
 
 const user = {
@@ -44,20 +44,49 @@ const application = {
 
 // Define your namespace
 window["commonhaus"] = {
+    reset: async () => {
+        await load(INFO + "?refresh=true");
+        await load(COMMONHAUS + "?refresh=true");
+    },
+    get404: async () => {
+        await testData('GET', COMMONHAUS, 404, "NOT_FOUND", {});
+    },
+    get500: async () => {
+        await testData('GET', COMMONHAUS, 500, "INTERNAL_SERVER_ERROR", {});
+    },
+    get503: async () => {
+        await testData('GET', COMMONHAUS, 503, "GATEWAY_TIMEOUT", {});
+    },
+    post404: async () => {
+        await testData('POST', COMMONHAUS, 404, "NOT_FOUND", {});
+    },
+    post409: async () => {
+        await testData('POST', COMMONHAUS, 409, "CONFLICT", {
+            HAUS: appendData("HAUS", {}),
+        });
+    },
+    post429: async () => {
+        await testData('POST', APPLY, 429, "TOO_MANY_REQUESTS", {
+            HAUS: appendData("HAUS", {}),
+            APPLY: appendData("APPLY", {}),
+        });
+    },
+    post500: async () => {
+        await testData('POST', COMMONHAUS, 500, "INTERNAL_SERVER_ERROR", {});
+    },
+    post503: async () => {
+        await testData('POST', COMMONHAUS, 503, "GATEWAY_TIMEOUT", {});
+    },
     blank: async () => {
-        await testData(COMMONHAUS, 200, "OK", {
+        await testData('GET', COMMONHAUS, 200, "OK", {
             HAUS: {},
             INFO: {},
             ALIAS: {},
             APPLY: {}
         });
     },
-    reset: async () => {
-        await load(INFO + "?refresh=true");
-        await load(COMMONHAUS + "?refresh=true");
-    },
     unauth: async () => {
-        await testData(COMMONHAUS, 403, "FORBIDDEN", {
+        await testData('GET', COMMONHAUS, 403, "FORBIDDEN", {
             HAUS: {
                 ...haus
             },
@@ -67,7 +96,7 @@ window["commonhaus"] = {
         });
     },
     unknown: async () => {
-        await testData(COMMONHAUS, 200, "OK", {
+        await testData('GET', COMMONHAUS, 200, "OK", {
             HAUS: {
                 ...haus
             },
@@ -77,7 +106,7 @@ window["commonhaus"] = {
         });
     },
     sponsor: async () => {
-        await testData(COMMONHAUS, 200, "OK", {
+        await testData('GET', COMMONHAUS, 200, "OK", {
             HAUS: {
                 ...haus,
                 "status": "SPONSOR",
@@ -91,7 +120,7 @@ window["commonhaus"] = {
         });
     },
     member: async () => {
-        await testData(COMMONHAUS, 200, "OK", {
+        await testData('GET', COMMONHAUS, 200, "OK", {
             HAUS: {
                 "status": "ACTIVE",
                 "services": {
@@ -110,7 +139,7 @@ window["commonhaus"] = {
         });
     },
     egc: async () => {
-        await testData(COMMONHAUS, 200, "OK", {
+        await testData('GET', COMMONHAUS, 200, "OK", {
             HAUS: {
                 "status": "COMMITTEE",
                 "services": {
@@ -129,7 +158,7 @@ window["commonhaus"] = {
         });
     },
     cfc: async () => {
-        await testData(COMMONHAUS, 200, "OK", {
+        await testData('GET', COMMONHAUS, 200, "OK", {
             HAUS: {
                 "status": "COMMITTEE",
                 "services": {
@@ -148,99 +177,121 @@ window["commonhaus"] = {
         });
     },
     appendBylaws: async () => {
-        await appendData("HAUS", {
-            "goodUntil": {
-                "attestation": {
-                    "bylaws": {
-                        "date": "2025-06-03",
-                        "version": "cf-YYYY-MM-DD",
-                        "withStatus": "COMMITTEE"
+        await testData('GET', COMMONHAUS, 200, "OK", {
+            HAUS: appendData("HAUS", {
+                "goodUntil": {
+                    "attestation": {
+                        "bylaws": {
+                            "date": "2025-06-03",
+                            "version": "cf-YYYY-MM-DD",
+                            "withStatus": "COMMITTEE"
+                        }
                     }
                 }
-            }
+            })
         });
     },
     appendCouncil: async () => {
-        await appendData("HAUS", {
-            "goodUntil": {
-                "attestation": {
-                    "council": {
-                        "date": "2025-06-03",
-                        "version": "cf-YYYY-MM-DD",
-                        "withStatus": "COMMITTEE"
-                    },
+        await testData('GET', COMMONHAUS, 200, "OK", {
+            HAUS: appendData("HAUS", {
+                "goodUntil": {
+                    "attestation": {
+                        "council": {
+                            "date": "2025-06-03",
+                            "version": "cf-YYYY-MM-DD",
+                            "withStatus": "COMMITTEE"
+                        },
+                    }
                 }
-            }
+            })
         });
     },
     appendEgc: async () => {
-        await appendData("HAUS", {
-            "goodUntil": {
-                "attestation": {
-                    "egc": {
-                        "date": "2025-06-03",
-                        "version": "cf-YYYY-MM-DD",
-                        "withStatus": "COMMITTEE"
-                    },
+        await testData('GET', COMMONHAUS, 200, "OK", {
+            HAUS: appendData("HAUS", {
+                "goodUntil": {
+                    "attestation": {
+                        "egc": {
+                            "date": "2025-06-03",
+                            "version": "cf-YYYY-MM-DD",
+                            "withStatus": "COMMITTEE"
+                        },
+                    }
                 }
-            }
+            })
         });
     },
     appendCoc: async () => {
-        await appendData("HAUS", {
-            "goodUntil": {
-                "attestation": {
-                    "coc": {
-                        "date": "2025-06-03",
-                        "version": "cf-YYYY-MM-DD",
-                        "withStatus": "COMMITTEE"
-                    },
+        await testData('GET', COMMONHAUS, 200, "OK", {
+            HAUS: appendData("HAUS", {
+                "goodUntil": {
+                    "attestation": {
+                        "coc": {
+                            "date": "2025-06-03",
+                            "version": "cf-YYYY-MM-DD",
+                            "withStatus": "COMMITTEE"
+                        },
+                    }
                 }
-            }
+            })
         });
     },
     appendEmail: async () => {
-        await appendData("HAUS", {
-            "goodUntil": {
-                "attestation": {
-                    "email": {
-                        "date": "2025-06-03",
-                        "version": "fe-YYYY-MM-DD",
-                        "withStatus": "COMMITTEE"
-                    },
+        await testData('GET', COMMONHAUS, 200, "OK", {
+            HAUS: appendData("HAUS", {
+                "goodUntil": {
+                    "attestation": {
+                        "email": {
+                            "date": "2025-06-03",
+                            "version": "fe-YYYY-MM-DD",
+                            "withStatus": "COMMITTEE"
+                        },
+                    }
                 }
-            }
+            })
         });
     },
     appendAlias: async () => {
-        await appendData("ALIAS", alias);
+        await testData('GET', COMMONHAUS, 200, "OK", {
+            ALIAS: appendData("ALIAS", alias)
+        });
     },
     appendAppClear: async () => {
-        await appendData("APPLY", {});
+        await testData('GET', COMMONHAUS, 200, "OK", {
+            APPLY: appendData("APPLY", {})
+        });
     },
     appendAppSubmitted: async () => {
-        await appendData("APPLY", application);
+        await testData('GET', COMMONHAUS, 200, "OK", {
+            APPLY: appendData("APPLY", application)
+        });
     },
     appendAppFeedback: async () => {
-        await appendData("APPLY", {
-            "feedback": {
-                "date": "2024-06-03",
-                "htmlContent": "<p>Some feedback</p>"
-            },
+        await testData('GET', COMMONHAUS, 200, "OK", {
+            APPLY: appendData("APPLY", {
+                "feedback": {
+                    "date": "2024-06-03",
+                    "htmlContent": "<p>Some feedback</p>"
+                },
+            })
         });
     },
     appendAppUpdated: async () => {
-        await appendData("APPLY", {
-            "contributions": "Revise content",
-            "updated": "2024-06-04"
+        await testData('GET', COMMONHAUS, 200, "OK", {
+            APPLY: appendData("APPLY", {
+                "contributions": "Revise content",
+                "updated": "2024-06-04"
+            })
         });
     },
     changeRoles: async (roles, status) => {
-        await appendData("INFO", {
-            roles
-        });
-        await appendData("HAUS", {
-            status
+        await testData('GET', COMMONHAUS, 200, "OK", {
+            INFO: appendData("INFO", {
+                    roles
+            }),
+            HAUS: appendData("HAUS", {
+                status
+            })
         });
     },
     // Define more methods...
