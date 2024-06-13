@@ -140,8 +140,9 @@ const handleResponse = async (method: string, uri: string, response: Response) =
     errorFlag("unknown", ErrorStatus.OK);
 
     try {
-        if (response.body) {
-            const message = await response.json();
+        const text = await response.text();
+        if (text) {
+            const message = JSON.parse(text);
             for (const [key, value] of Object.entries(message)) {
                 console.debug(key, value);
                 if (key === "INFO") {
@@ -214,7 +215,7 @@ const flagValue = (error: Error): ErrorStatus => {
         console.debug('Fetch aborted');
         return ErrorStatus.ABORT;
     }
-    console.error(error.message);
+    console.error(error);
     if (error.message.startsWith("403")) {
         return ErrorStatus.FORBIDDEN;
     } else if (error.message.startsWith("5")) {
