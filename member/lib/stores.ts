@@ -15,6 +15,7 @@ export const uriBase = window.location.hostname.includes("localhost")
 export const INFO = uriBase + "/me";
 export const ALIASES = uriBase + "/aliases";
 export const COMMONHAUS = uriBase + "/commonhaus";
+export const REFRESH = uriBase + "/commonhaus/status?refresh=true";
 export const APPLY = uriBase + "/apply";
 
 export const gitHubData = writable<GitHubUser>({});
@@ -96,6 +97,31 @@ export const isOk = (e: ErrorStatus): boolean => {
     return e === undefined || e === ErrorStatus.OK;
 }
 
+export const clear = () => {
+    console.debug("Clearing data");
+    gitHubData.set({});
+    applicationData.set({});
+    commonhausData.set({});
+    aliasTargets.set({});
+    errorFlags.set({});
+}
+
+export const init = async () => {
+    console.debug("Initializing user data");
+    const controller1 = await load(INFO);
+    const controller2 = await load(COMMONHAUS);
+
+    return () => {
+        controller1.abort();
+        controller2.abort();
+    };
+}
+
+export const refresh = async () => {
+    console.debug("Refreshing user data");
+    await post(REFRESH, {});
+}
+
 export const load = async (uri: string): Promise<AbortController> => {
     const controller = new AbortController();
     const signal = controller.signal;
@@ -136,7 +162,6 @@ export const post = async (uri: string, body: unknown): Promise<void> => {
 
 const handleResponse = async (method: string, uri: string, response: Response) => {
     processResponseStatus(method, uri, response);
-
     errorFlag("unknown", ErrorStatus.OK);
 
     try {
@@ -174,7 +199,7 @@ const processResponseStatus = (method: string, uri: string, response: Response) 
             applicationData.set({});
         }
     } else if (response.status === 409) {
-        console.log("A conflict occurred")
+        console.error("A conflict occurred")
         toastMessage("warning",
             "There was a conflict when trying to save your changes. We've pulled the latest data for you. Try again?");
     } else if (response.status === 429) {

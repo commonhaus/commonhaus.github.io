@@ -1,3 +1,11 @@
+<script>
+  import { onMount } from 'svelte';
+
+  onMount(() => {
+    window.scrollTo(0, 0);
+  });
+</script>
+
 <div class="hold">
   <h1>One moment...</h1>
   <div class="coffee-wrapper">

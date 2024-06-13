@@ -16,6 +16,7 @@
     errorFlags,
     getCookies,
     hasResponse,
+    init,
     isForbidden,
     knownUser,
     load,
@@ -32,30 +33,19 @@
     console.debug(event);
   };
 
-  const loadData = async () => {
-    const controller1 = await load(INFO);
-    const controller2 = await load(COMMONHAUS);
-
-    window.addEventListener("error", (event) => {
-      logger("Global Error", event);
-    });
-    window.addEventListener("unhandledrejection", (event) => {
-      logger("Unhandled rejection", event);
-    });
-
-    return () => {
-      controller1.abort();
-      controller2.abort();
-    };
-  };
-
   onMount(async () => {
     getCookies(document.cookie);
     if (!$cookies["id"]) {
       window.location.assign(`${uriBase}/github`);
     } else {
+      window.addEventListener("error", (event) => {
+        logger("Global Error", event);
+      });
+      window.addEventListener("unhandledrejection", (event) => {
+        logger("Unhandled rejection", event);
+      });
+      cleanup = await init();
       loaded = true;
-      cleanup = await loadData();
     }
   });
   onDestroy(async () => {
@@ -75,8 +65,9 @@
     }
   }
 </script>
+
 <div class="toaster {$toaster.show ? 'show' : ''}">
-  <Callout type={$toaster.type} title={$toaster.message}/>
+  <Callout type={$toaster.type} title={$toaster.message} />
 </div>
 <div class="content">
   {#if $location === ""}

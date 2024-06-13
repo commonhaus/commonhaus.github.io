@@ -1,4 +1,4 @@
-import { APPLY, COMMONHAUS, INFO, appendData, load, testData } from './lib/stores.ts';
+import { APPLY, COMMONHAUS, appendData, clear, init, testData } from './lib/stores.ts';
 import app from "./member.ts";
 
 const user = {
@@ -44,9 +44,12 @@ const application = {
 
 // Define your namespace
 window["commonhaus"] = {
+    blank: () => {
+        clear();
+    },
     reset: async () => {
-        await load(INFO + "?refresh=true");
-        await load(COMMONHAUS + "?refresh=true");
+        clear();
+        await refresh();
     },
     get404: async () => {
         await testData('GET', COMMONHAUS, 404, "NOT_FOUND", {});
@@ -76,14 +79,6 @@ window["commonhaus"] = {
     },
     post503: async () => {
         await testData('POST', COMMONHAUS, 503, "GATEWAY_TIMEOUT", {});
-    },
-    blank: async () => {
-        await testData('GET', COMMONHAUS, 200, "OK", {
-            HAUS: {},
-            INFO: {},
-            ALIAS: {},
-            APPLY: {}
-        });
     },
     unauth: async () => {
         await testData('GET', COMMONHAUS, 403, "FORBIDDEN", {
