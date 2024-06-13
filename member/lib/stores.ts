@@ -1,9 +1,8 @@
-import { Writable, writable, derived, get } from "svelte/store";
+import { writable, derived, get } from "svelte/store";
 import { Alias } from "../@types/forwardemail.d.ts";
 import {
     ApplicationData,
     CommonhausMember,
-    DataType,
     ErrorFlags,
     ErrorStatus,
     GitHubUser,
@@ -108,9 +107,9 @@ export const load = async (uri: string): Promise<AbortController> => {
             signal
         });
 
-        await handleResponse(uri, response, 'GET');
+        await handleResponse('GET', uri, response);
     } catch (error) {
-        handleErrors(uri, error);
+        handleErrors('GET', uri, error);
     }
     return controller;
 }
@@ -128,27 +127,113 @@ export const post = async (uri: string, body: unknown): Promise<void> => {
             mode: "cors"
         });
 
-        await handleResponse(uri, response, 'POST');
+        await handleResponse('POST', uri, response);
     } catch (error) {
-        handleErrors(uri, error);
+        handleErrors('POST', uri, error);
     }
     outboundPost.set(false);
 }
 
-const uri = (k: string) => {
-    switch (k) {
-        case "INFO":
-            return INFO;
-        case "APPLY":
-            return APPLY;
-        case "ALIAS":
-            return ALIASES;
-        default:
-            return COMMONHAUS;
+const handleResponse = async (method: string, uri: string, response: Response) => {
+    processResponseStatus(method, uri, response);
+
+    errorFlag("unknown", ErrorStatus.OK);
+
+    try {
+        if (response.body) {
+            const message = await response.json();
+            for (const [key, value] of Object.entries(message)) {
+                console.debug(key, value);
+                if (key === "INFO") {
+                    gitHubData.set(value as GitHubUser);
+                    errorFlag("info", ErrorStatus.OK);
+                } else if (key == "APPLY") {
+                    applicationData.set(value as ApplicationData);
+                    errorFlag("apply", ErrorStatus.OK);
+                    errorFlag("unknown", ErrorStatus.OK);
+                } else if (key === "HAUS") {
+                    commonhausData.set(value as CommonhausMember);
+                    errorFlag("haus", ErrorStatus.OK);
+                    errorFlag("unknown", ErrorStatus.OK);
+                } else if (key === "ALIAS") {
+                    aliasTargets.set(value as Record<string, Alias>);
+                    errorFlag("alias", ErrorStatus.OK);
+                }
+            }
+        }
+    } catch (error) {
+        handleErrors(method, uri, error);
     }
+}
+
+const processResponseStatus = (method: string, uri: string, response: Response) => {
+    if (response.status == 404) {
+        console.debug("Not found");
+        if (uri.includes(APPLY)) {
+            applicationData.set({});
+        }
+    } else if (response.status === 409) {
+        console.log("A conflict occurred")
+        toastMessage("warning",
+            "There was a conflict when trying to save your changes. We've pulled the latest data for you. Try again?");
+    } else if (response.status === 429) {
+        if (uri.includes(APPLY)) {
+            toastMessage("warning", "An update is already in progress, give it a moment.");
+        }
+    } else if (response.status === 503) {
+        console.debug("Service unavailable: trouble with the GitHub API");
+        toastMessage("caution", "Our connection to GitHub is having a hiccup. Please try again in a little while.");
+    } else if (!response.ok) {
+        throw new Error(`${response.status} ${response.statusText}`);
+    } else if (method === 'POST') {
+        toastMessage("success", "So far, so good.");
+    }
+}
+
+const handleErrors = (method: string, uri: string, error: Error) => {
+    const status = flagValue(error);
+    if (method === 'GET') {
+        if (uri.includes(INFO)) {
+            errorFlag("info", status);
+        } else if (uri.includes(APPLY)) {
+            errorFlag("apply", status);
+        } else if (uri.includes(COMMONHAUS)) {
+            errorFlag("haus", status);
+        } else if (uri.includes(ALIASES)) {
+            errorFlag("alias", status);
+        }
+    } else if (status === ErrorStatus.SERVER) {
+        toastMessage("caution", "It seems we've hit a snag on our end. If you could report this, we'd appreciate it!");
+    } else if (status === ErrorStatus.OTHER) {
+        toastMessage("caution", "Oops, something unexpected happened. If you could report this, we'd be grateful!");
+    }
+}
+
+const flagValue = (error: Error): ErrorStatus => {
+    if (error.name === 'AbortError') {
+        console.debug('Fetch aborted');
+        return ErrorStatus.ABORT;
+    }
+    console.error(error.message);
+    if (error.message.startsWith("403")) {
+        return ErrorStatus.FORBIDDEN;
+    } else if (error.message.startsWith("5")) {
+        return ErrorStatus.SERVER;
+    }
+    return ErrorStatus.OTHER;
+}
+
+export const toastMessage = (type: string, message: string) => {
+    toaster.set({ show: true, message, type });
+
+    setTimeout(() => {
+        toaster.set({ show: false, message: '', type: '' });
+    }, type === 'success' ? 3000 : 4000);
 };
 
-export const testData = async (uri: string, status: number, message: string, data: unknown) => {
+// ---- Testing
+
+export const testData = async (method: string, uri: string, status: number, message: string, data: unknown) => {
     try {
         const response = new Response(JSON.stringify(data), {
             status,
@@ -158,125 +243,22 @@ export const testData = async (uri: string, status: number, message: string, dat
             }
         });
         console.debug("TEST", data, uri, status, message);
-        await handleResponse(uri, response, 'POST');
+        await handleResponse(method, uri, response);
     } catch (error) {
-        handleErrors(uri, error);
+        handleErrors(method, uri, error);
     }
 }
 
-export const appendData = async (key: string, data: object) => {
-    try {
-        const newData: Record<string, object> = {};
-        if (key === "INFO") {
-            newData[key] = { ...get(gitHubData), ...data };
-        } else if (key == "APPLY") {
-            newData[key] = { ...get(applicationData), ...data };
-        } else if (key === "HAUS") {
-            newData[key] = { ...get(commonhausData), ...data };
-        } else if (key === "ALIAS") {
-            newData[key] = { ...get(aliasTargets), ...data };
-        }
-
-        const response = new Response(JSON.stringify(newData), {
-            status: 200,
-            statusText: "OK",
-            headers: {
-                'Content-type': 'application/json'
-            }
-        });
-        console.debug("APPEND", newData);
-        await handleResponse(uri(key), response, 'POST');
-    } catch (error) {
-        handleErrors(uri(key), error);
+export const appendData = (key: string, data: object) => {
+    const newData: Record<string, object> = {};
+    if (key === "INFO") {
+        newData[key] = { ...get(gitHubData), ...data };
+    } else if (key == "APPLY") {
+        newData[key] = { ...get(applicationData), ...data };
+    } else if (key === "HAUS") {
+        newData[key] = { ...get(commonhausData), ...data };
+    } else if (key === "ALIAS") {
+        newData[key] = { ...get(aliasTargets), ...data };
     }
-}
-
-export const toastMessage = (type: string, message: string) => {
-    toaster.set({ show: true, message, type });
-
-    setTimeout(() => {
-        toaster.set({ show: false, message: '', type: '' });
-    }, 3000);
+    return newData;
 };
-
-const handleResponse = async (uri: string, response: Response, method: string) => {
-    handleErrorResponse(uri, response);
-
-    errorFlag("unknown", ErrorStatus.OK);
-
-    try {
-        if (response.body) {
-            const message = await response.json();
-            for (const [key, value] of Object.entries(message)) {
-                if (key === "INFO") {
-                    console.debug("INFO", value);
-                    gitHubData.set(value as GitHubUser);
-                    errorFlag("info", ErrorStatus.OK);
-                } else if (key == "APPLY") {
-                    console.debug("APPLY", value);
-                    applicationData.set(value as ApplicationData);
-                    errorFlag("apply", ErrorStatus.OK);
-                    errorFlag("unknown", ErrorStatus.OK);
-                } else if (key === "HAUS") {
-                    console.debug("HAUS", value);
-                    commonhausData.set(value as CommonhausMember);
-                    errorFlag("haus", ErrorStatus.OK);
-                    errorFlag("unknown", ErrorStatus.OK);
-                } else if (key === "ALIAS") {
-                    console.debug("ALIAS", value);
-                    aliasTargets.set(value as Record<string, Alias>);
-                    errorFlag("alias", ErrorStatus.OK);
-                }
-            }
-            if (method === 'POST') {
-                toastMessage("success", "So far, so good.");
-            }
-        }
-    } catch (error) {
-        handleErrors(uri, error);
-    }
-}
-
-const handleErrorResponse = (uri: string, response: Response) => {
-    if (response.status === 429) {
-        console.debug("Another membership application is in progress");
-    } else if (response.status === 503) {
-        console.debug("Service unavailable: trouble with the GitHub API");
-        toastMessage("caution", "Our connection to GitHub is having a hiccup. Please try again in a little while.");
-    } else if (response.status == 404) {
-        console.debug("Not found");
-        if (uri.includes(APPLY)) {
-            applicationData.set({});
-        }
-    } else if (!response.ok) {
-        throw new Error(`${response.status} ${response.statusText}`);
-    }
-}
-
-const handleErrors = (uri: string, error: Error) => {
-    if (uri.includes(INFO)) {
-        errorFlag("info", flagValue(error));
-    } else if (uri.includes(APPLY)) {
-        errorFlag("apply", flagValue(error));
-    } else if (uri.includes(COMMONHAUS)) {
-        errorFlag("haus", flagValue(error));
-    } else if (uri.includes(ALIASES)) {
-        errorFlag("alias", flagValue(error));
-    }
-}
-
-const flagValue = (error: Error): ErrorStatus => {
-    if (error.name === 'AbortError') {
-        console.debug('Fetch aborted');
-    } else {
-        console.error(error.message);
-        if (error.message.startsWith("403")) {
-            return ErrorStatus.FORBIDDEN;
-        } else if (error.message.startsWith("5")) {
-            toastMessage("caution", "It seems we've hit a snag on our end. If you could report this, we'd appreciate it!");
-            return ErrorStatus.SERVER;
-        }
-    }
-    toastMessage("caution", "Oops, something unexpected happened. If you could report this, we'd be grateful!");
-    return ErrorStatus.OTHER;
-}

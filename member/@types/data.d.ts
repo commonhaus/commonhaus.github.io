@@ -109,6 +109,7 @@ export enum DataType {
 }
 
 export enum ErrorStatus {
+    ABORT = 'ABORT',
     OK = 'OK',
     FORBIDDEN = 'FORBIDDEN',
     SERVER = 'SERVER',
