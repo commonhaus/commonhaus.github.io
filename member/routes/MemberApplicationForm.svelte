@@ -105,14 +105,18 @@
         <h3><label for="contributions">Contribution details</label></h3>
         <p>
           Briefly describe your contributions to CF or its projects over the
-          past three months. Include links to pull requests, issues,
-          discussions, or other relevant activities.
+          past three months.
         </p>
         <textarea
           id="contributions"
           bind:value={contributions}
           required
         ></textarea>
+        <p>
+          <span aria-hidden="true">💖</span> Remember: Contributions aren't limited to code!
+          Participation in our online community (such as Discord or GitHub Discussions),
+          or other activities related to CF projects are also considered contributions.
+        </p>
       </section>
 
       <section class="information">
