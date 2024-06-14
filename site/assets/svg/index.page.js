@@ -4,7 +4,7 @@ import { path } from "https://deno.land/x/vento@v0.10.0/deps.ts";
 
 async function compileSprites(files, scope) {
     const spriter = new SVGSpriter({
-        log: 'verbose',
+        log: 'info',
         mode: {
             defs: true,
             symbol: true
