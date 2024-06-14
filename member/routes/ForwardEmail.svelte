@@ -5,7 +5,6 @@
     getAttestationText,
     getNextAttestationDate,
     getRecentAttestationVersion,
-    signAttestation,
   } from "../lib/attestations";
   import {
     ALIASES,
@@ -96,7 +95,7 @@
   {#if recentAttestation}
     <section class="information">
       <p>
-        Your email {Object.keys(aliasUpdates).length === 1
+        Your email {Object.keys(aliasUpdates).length <= 1
           ? "alias"
           : "aliases"}:
       </p>
