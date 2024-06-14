@@ -30,17 +30,36 @@ This project uses [Deno](https://deno.land/) as the runtime, the [Lume static si
 
     Other tasks are available (in `deno.json`, list with `deno task`):
 
-    - `attach`: Attaches a debugger to lume.
-    - `build`: Builds the website.
-    - `debug`: Allows you to attach a debugger to a deno task.
-    - `serve`: Builds and serves the website, and watch for changes.
-    - `checklocal`: test links against a running local server.
-    - `lastmod`: update information about the contents of the foundation submodule (requires GH CLI).
-    - `activity`: Query the latest discussions and PRs from the foundation repository and update corresponding site pages (requires GH CLI).
+    - `build`: Builds the website (first Lume, then Vite+Svelte)
+    - **Lume**
+        - `attach`: Attaches a debugger to lume.
+        - `debug`: Allows you to attach a debugger to a deno task.
+        - `serve`: Builds and serves the website, and watch for changes.
+    - **Vite** (Membership UI, run after Lume)
+        - `vite-build`: use vite to compile svelte files
+        - `vite-dev`: use vite to watch and recompile svelte files
+    - **Generation**
+        - `about`: Update metadata about members of the foundation based on the CONTACTS list.
+        - `activity`: Query the latest discussions and PRs from the foundation repository and update corresponding site pages (requires GH CLI).
+        - `lastmod`: update information about the contents of the foundation submodule (requires GH CLI).
+        - `votes`: Update metadata related to a vote (discussion or PR)
+    - **Verification**
+        - `checklocal`: test links against a running local server.
+        - `checklinks`: check for invalid links
+
+4. **Working on the Membership UI** (requires the [cf-admin-bot](https://github.com/commonhaus/automation))
+
+    The Vite-related task will watch for changes and recompile updated files. This works well with Lume `serve`,
+    just make sure to start Lume first.
+
+    ```bash
+    deno task vite-dev
+    ```
 
 ## Project Structure
 
 - `.github` - build scripts
+- `member` - Svelte-based Membership UI. Requires a backend
 - `site` - source
     - `_data` - data shared by / available to all pages
         - `about.yml` - maintained by `.github/about.ts`
@@ -75,10 +94,11 @@ This project uses [Deno](https://deno.land/) as the runtime, the [Lume static si
         - `index.page.js` - parses all json files in the directory, and creates a page and an svg for each vote result.
 - `_config.ts` - Lume site config (static site generation)
 - `deno.json` - Deno dependency and task configuration (akin to package.json)
+- `vite.config.mjs` - Vite configuration used to build and watch Svelte files for the Membership UI
 
 ### Weird things
 
-- **Foundation pages** have to render properly in both the original repository (and in pdfs) and on the website. That means, some weirdness.
+- **Foundation pages** ('site/foundation') have to render properly in both the original repository (and in pdfs) and on the website. That means, some weirdness.
     - `bylaws.vto` and `foundation.vto` both assume the content already contains the h1/title (which these pages do).
     - `_includes/foundation.json` is generated/updated with the last modified information for the foundation repository.
     - `_includes/foundation.yml` is hand-tended to specify the pages from the foundation repository that should be included in the website (and to specify the URL they should use and provide a meta description, etc.).
@@ -88,6 +108,7 @@ This project uses [Deno](https://deno.land/) as the runtime, the [Lume static si
 - **Sidebars**:
     - `bylaws.vto` defines a navigation sidebar for bylaws and policies.
     - `activityVote.vto` and `activity.vto` both use `activitySidebar.vto` to define a sidebar for individual activity pages.
+- The **Membership UI** (`member/*`) is written with Svelte. It is browser-side only, and built as a secondary step (after Lume). It uses one of the bots as its backend to work with user data (membership application, email alias management, and form-signing).
 
 ## Contributing
 
