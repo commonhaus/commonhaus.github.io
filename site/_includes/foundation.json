@@ -48,7 +48,7 @@
     "genUrl": "/CONTRIBUTING.html"
   },
   "TRADEMARKS.md": {
-    "date": "2024-05-26T01:48:56.000Z",
+    "date": "2024-06-14T18:58:01.000Z",
     "srcPath": "TRADEMARKS.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/TRADEMARKS.md",
@@ -587,5 +587,22 @@
       "legal"
     ],
     "genUrl": "/agreements/bootstrapping/2024-05-24-bootstrapping-easymock.html"
+  },
+  "agreements/bootstrapping/2024-05-27-bootstrapping-feign.md": {
+    "date": "2024-06-14T18:58:01.000Z",
+    "srcPath": "agreements/bootstrapping/2024-05-27-bootstrapping-feign.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-05-27-bootstrapping-feign.md",
+    "type": "submodule",
+    "layout": "layouts/policies.vto",
+    "cssclasses": [
+      "bylaws",
+      "has-aside"
+    ],
+    "tags": [
+      "policies",
+      "legal"
+    ],
+    "genUrl": "/agreements/bootstrapping/2024-05-27-bootstrapping-feign.html"
   }
 }
