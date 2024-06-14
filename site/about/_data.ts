@@ -57,6 +57,9 @@ const egc: ProjectRep[] = [];
 const cfcData: CouncilContact[] = CONTACT_DATA['cf-council'] as CouncilContact[];
 const augmentedCfcData = cfcData.map(item => augmentReference<CouncilContact>(CONTACT_DATA, item));
 for(const item of augmentedCfcData) {
+    if (item.login.includes(".")) {
+        continue;
+    }
     const user = USER_DATA[item.login] as User;
     if (!user) {
         console.log("CFC: No about data for", item.login);
@@ -72,6 +75,9 @@ for(const item of augmentedCfcData) {
 const repData: ProjectContact[] = CONTACT_DATA['egc'] as ProjectContact[];
 const augmentedRepData = repData.map(item => augmentReference<ProjectContact>(CONTACT_DATA, item));
 for(const item of augmentedRepData) {
+    if (item.login.includes(".")) {
+        continue;
+    }
     const user = USER_DATA[item.login] as User;
     const project = PROJECT_DATA[item.project] as Record<string, string>;
     if (!user) {
