@@ -1,6 +1,7 @@
 
 const interestingFiles = [
     '.md',
+    '.yaml'
  ];
  const ignore = [
     'node_modules',
@@ -79,10 +80,12 @@ async function readDir(path: string, relative: string, repo: string, repoRelativ
                     struct.layout = 'layouts/foundation.vto';
                     struct.cssclasses = ['foundation'];
                 }
-            }
-            struct.genUrl = `/${filePath}.html`
+                struct.genUrl = `/${filePath}.html`
                     .replace('.md', '')
                     .replace('README.html', '');
+            } else {
+                struct.genUrl = `/${filePath}`;
+            }
         } else if (dirEntry.isDirectory) {
             const nextDir = `${path}/${dirEntry.name}`;
             const nextRepoRel = `${repoRelative}${dirEntry.name}/`;
