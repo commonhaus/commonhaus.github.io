@@ -202,6 +202,7 @@ main.member {
       bottom: 125%;
       left: 0;
       margin-left: -150px;
+      padding-left: 10px;
 
       opacity: 0;
       transition: opacity 0.3s;
@@ -266,6 +267,15 @@ main.member {
     @include content-align-y;
     border-top: 1px solid var(--border-color);
     text-align: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5em;
+
+    span {
+      text-align: left;
+      flex-grow: 2;
+    }
 
     button[name="reset"] {
       color: var(--text-faint);
