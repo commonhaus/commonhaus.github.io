@@ -15,6 +15,15 @@ interface CouncilContact extends Contact {
 }
 interface ProjectContact extends Contact {
     project: string;
+    projects?: ProjectData[];
+}
+interface ProjectData {
+  name?: string
+  home?: string
+  repo?: string
+  logo?: string
+  wordmark?: boolean
+  description?: string
 }
 interface User {
     login: string;
@@ -28,10 +37,6 @@ interface User {
 interface Councilor extends User {
     'term-start': number;
     role?: string;
-}
-interface ProjectRep extends User {
-    projectName: string;
-    projectUrl: string;
 }
 function augmentReference<T extends Contact>(data: Record<string, Contact[]>, item: T): T {
     if (item.see) {
@@ -48,11 +53,10 @@ function augmentReference<T extends Contact>(data: Record<string, Contact[]>, it
 }
 
 const CONTACT_DATA: Record<string, Contact[]> = safeLoad(Deno.readTextFileSync("./site/foundation/CONTACTS.yaml"));
-const PROJECT_DATA: Record<string, unknown> = safeLoad(Deno.readTextFileSync("./site/foundation/PROJECTS.yaml"));
+const PROJECT_DATA: Record<string, ProjectData> = safeLoad(Deno.readTextFileSync("./site/foundation/PROJECTS.yaml"));
 const USER_DATA: Record<string, unknown> = safeLoad(Deno.readTextFileSync("./site/_data/about.yml"));
 
 const councilors: Councilor[] = [];
-const egc: ProjectRep[] = [];
 
 const cfcData: CouncilContact[] = CONTACT_DATA['cf-council'] as CouncilContact[];
 const augmentedCfcData = cfcData.map(item => augmentReference<CouncilContact>(CONTACT_DATA, item));
@@ -74,28 +78,31 @@ for(const item of augmentedCfcData) {
 
 const repData: ProjectContact[] = CONTACT_DATA['egc'] as ProjectContact[];
 const augmentedRepData = repData.map(item => augmentReference<ProjectContact>(CONTACT_DATA, item));
-for(const item of augmentedRepData) {
-    if (item.login.includes(".")) {
-        continue;
+const egc = augmentedRepData.reduce((acc: ProjectContact[], current: ProjectContact) => {
+    if (current.login.includes(".")) {
+        return acc;
     }
-    const user = USER_DATA[item.login] as User;
-    const project = PROJECT_DATA[item.project] as Record<string, string>;
-    if (!user) {
-        console.log("EGC: No about data for", item.login);
-        continue;
+
+    const index = acc.findIndex(x => x.login === current.login);
+    const data = PROJECT_DATA[current.project] || {};
+    if (!data) {
+        console.log("No project data for", current.project);
     }
-    if (!project) {
-        console.log("No project data for", item.project);
-        continue;
+    if (index !== -1 && acc[index]) {
+        acc[index].projects?.push(data);
+    } else {
+        const user = USER_DATA[current.login] as User;
+        if (!user) {
+            console.log("EGC: No about data for", current.login);
+        }
+        acc.push({
+            ...user,
+            ...current,
+            projects: [data]
+        });
     }
-    const rep: ProjectRep = {
-        ...user,
-        ...item,
-        projectName: project.name,
-        projectUrl: project.home,
-    };
-    egc.push(rep);
-}
+    return acc;
+}, []);
 
 export {
     councilors,

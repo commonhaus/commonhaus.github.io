@@ -36,6 +36,21 @@ interface TeamData {
         };
     };
 }
+interface InviteData {
+    errors?: Error[];
+    data: {
+        organization: {
+            team: {
+                invitations: {
+                    nodes: Invitee[];
+                };
+            };
+        };
+    };
+}
+interface Invitee {
+    invitee: User
+}
 
 const aboutPath = './site/_data/about.yml';
 const aboutYaml = Deno.readTextFileSync(aboutPath);
@@ -65,6 +80,12 @@ function updateEgcReps(data: TeamData) {
         about[a.login] = a;
     }
 }
+function updateEgcInvites(data: InviteData) {
+    const invitees = data.data.organization.team.invitations.nodes;
+    for (const a of invitees) {
+        about[a.invitee.login] = a.invitee;
+    }
+}
 
 const reps: TeamData = JSON.parse(runGraphQL('.github/graphql/query.egc.graphql'));
 if (reps.errors || !reps.data) {
@@ -72,4 +93,10 @@ if (reps.errors || !reps.data) {
     Deno.exit(1);
 }
 updateEgcReps(reps);
+const invites: InviteData = JSON.parse(runGraphQL('.github/graphql/query.egc.invitations.graphql'));
+if (invites.errors || !invites.data) {
+    console.error(reps);
+    Deno.exit(1);
+}
+updateEgcInvites(invites);
 Deno.writeTextFileSync(aboutPath, safeDump(about));

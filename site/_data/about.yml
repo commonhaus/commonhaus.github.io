@@ -122,3 +122,10 @@ henri-tremblay:
     Java Champion. Leads EasyMock and Objenesis and contributes to Ehcache.
     Loves optimization and productivity. In Java and in general. Likes to be
     useful. 
+velo:
+  login: velo
+  url: 'https://github.com/velo'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/136590?v=4'
+  company: null
+  name: Marvin
+  bio: ''

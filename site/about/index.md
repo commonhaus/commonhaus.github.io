@@ -97,7 +97,7 @@ Our project representatives play a pivotal role in the Commonhaus Foundation's [
       <h3><a href="{{ representative.url }}">{{ representative.login }}</a></h3>
       <div class="subhead">
           {{- if representative.name }}{{ representative.name }}<br />{{ /if -}}
-          <a href="{{ representative.projectUrl }}">{{ representative.projectName }}</a>
+          {{- representative.projects.map(p => '<a href="' + p.home + '">' + p.name + '</a>').join(', ') -}}
       </div>
       <p>
         {{- if representative.bio }}{{ representative.bio }}
