@@ -1,7 +1,7 @@
 query {
   organization(login: "commonhaus") {
     team(slug: "cf-egc") {
-      members {
+      members(first: 100) {
         nodes {
           login
           url
