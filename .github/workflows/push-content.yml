@@ -108,7 +108,7 @@ jobs:
           fi
 
       - name: Push GH Pages
-        if: ${{ steps.git-push.outputs.updated == 'true' || steps.submodule.outputs.updated == 'true' || steps.discussion.outputs.updated == 'true' }}
+        if: ${{ steps.git-push.outputs.updated == 'true' || steps.submodule.outputs.updated == 'true' || steps.about.outputs.updated == 'true' || steps.discussion.outputs.updated == 'true' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
