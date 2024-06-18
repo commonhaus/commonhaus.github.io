@@ -1,4 +1,4 @@
-import { APPLY, COMMONHAUS, appendData, clear, init, testData } from './lib/stores.ts';
+import { ALIASES, APPLY, COMMONHAUS, appendData, clear, refresh, testData } from './lib/stores.ts';
 import app from "./member.ts";
 
 const user = {
@@ -167,6 +167,12 @@ window["commonhaus"] = {
                 ...user,
                 "roles" : ["sponsor", "member", "cfc"]
             },
+            ALIAS: {
+            }
+        });
+    },
+    noAlias: async () => {
+        await testData('GET', ALIASES, 200, "OK", {
             ALIAS: {
             }
         });
