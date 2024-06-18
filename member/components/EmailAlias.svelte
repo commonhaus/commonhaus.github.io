@@ -23,7 +23,9 @@
   $: hasRecipients = aliasData.verified_recipients && aliasData.verified_recipients.length > 0;
 
   const handleInputChange = debounce((alias, event) => {
-    const emails = event.target.value.split(",").map((email) => email.trim());
+    console.log("Update alias", alias, event, aliasUpdates, emailErrors);
+    const emails = event.target.value.split(",").map((email) => email.trim()) || [];
+    aliasUpdates[alias] = aliasUpdates[alias] || {};
     aliasUpdates[alias].recipients = emails;
     emailErrors[alias] = !isValidEmailList(emails);
     recipients = event.target.value;
