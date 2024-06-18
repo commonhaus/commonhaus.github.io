@@ -75,6 +75,22 @@ jobs:
             echo "updated=true" >> $GITHUB_OUTPUT
           fi
 
+      - name: Foundation Metadata Update
+        id: about
+        env:
+          GH_TOKEN: ${{ secrets.WEB_REPO_READ }}
+        run: |
+          deno task about
+          git add -A -- ./site/_data
+          if git diff --quiet HEAD; then
+            echo "-- No changes -- "
+          else
+            git commit -am "👥 Auto-update foundation metadata"
+            git pull --rebase
+            git push
+            echo "updated=true" >> $GITHUB_OUTPUT
+          fi
+
       - name: Git Discussion Update
         id: discussion
         env:
