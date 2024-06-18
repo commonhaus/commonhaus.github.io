@@ -1,0 +1,21 @@
+query($login: String!) {
+  organization(login: $login) {
+    sponsorshipsAsMaintainer(first: 100, activeOnly: false) {
+      totalCount
+      nodes {
+        isActive
+        isOneTimePayment
+        isActive
+        isOneTimePayment
+        sponsorEntity {
+          ... on User {
+            login
+          }
+          ... on Organization {
+            login
+          }
+        }
+      }
+    }
+  }
+}
