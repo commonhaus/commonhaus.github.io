@@ -1,0 +1,18 @@
+{
+  "title": "IP Policy clarification/revision",
+  "rss_title": "🗳️  IP Policy clarification/revision",
+  "github": "https://github.com/commonhaus/foundation/pull/78",
+  "author": "ebullient",
+  "number": 78,
+  "date": "2024-02-14T19:03:52Z",
+  "updated": "2024-02-17T16:11:20Z",
+  "url": "/activity/78.html",
+  "type": "pullRequest",
+  "tags": [
+    "post",
+    "reviews",
+    "notice"
+  ],
+  "content": "Revisions to IP Policy:\r\n\r\n- Ensure statements regarding license usage are consistent\r\n- Clarify requirements for contributions\r\n- Require DCO, allow for CLA\r\n- Clarify that non-commercial licenses *can* be used for documentation & samples\r\n\r\n",
+  "closedAt": "2024-02-17T16:11:17Z"
+}

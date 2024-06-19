@@ -1,0 +1,18 @@
+{
+  "title": "Dissolution into bylaws",
+  "rss_title": "🗳️  Dissolution into bylaws",
+  "github": "https://github.com/commonhaus/foundation/pull/75",
+  "author": "ebullient",
+  "number": 75,
+  "date": "2024-02-12T13:00:08Z",
+  "updated": "2024-02-13T22:16:31Z",
+  "url": "/activity/75.html",
+  "type": "pullRequest",
+  "tags": [
+    "post",
+    "reviews",
+    "notice"
+  ],
+  "content": "Update dissolution policy to treat projects as entities with priority (not vetted yet, but this is the idea).\r\n\r\nAttempt to address concerns raised in #68 ",
+  "closedAt": "2024-02-13T22:16:20Z"
+}

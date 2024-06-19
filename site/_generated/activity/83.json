@@ -1,0 +1,18 @@
+{
+  "title": "Revise Covered Trademarks, Disclaimers, Attributions",
+  "rss_title": "🗳️  Revise Covered Trademarks, Disclaimers, Attributions",
+  "github": "https://github.com/commonhaus/foundation/pull/83",
+  "author": "ebullient",
+  "number": 83,
+  "date": "2024-02-15T18:36:52Z",
+  "updated": "2024-02-17T16:10:29Z",
+  "url": "/activity/83.html",
+  "type": "pullRequest",
+  "tags": [
+    "post",
+    "reviews",
+    "notice"
+  ],
+  "content": "- Clarify language around covered word marks and logos. Fix/replace a confusing phrase.\r\n- Simplify trademark usage language\r\n- Fix Disclaimer section\r\n- Add attribution to GNOME Foundation trademark policy\r\n",
+  "closedAt": "2024-02-17T16:10:26Z"
+}

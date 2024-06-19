@@ -1,6 +1,6 @@
 query($name: String!, $owner: String!) {
   repository(owner: $owner, name: $name) {
-    discussions(first: 15, orderBy: {field: UPDATED_AT, direction: DESC}) {
+    discussions(first: 100, orderBy: {field: UPDATED_AT, direction: DESC}) {
       nodes {
         id
         title

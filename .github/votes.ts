@@ -178,7 +178,7 @@ if (voteData.categories) {
 }
 
 // The relative path for the vote file
-const relativeVotePath = `./site/votes/${item.repository.nameWithOwner}/`;
+const relativeVotePath = `./site/_generated/votes/${item.repository.nameWithOwner}/`;
 const fileName = `${item.number}.json`;
 console.log(`Writing vote data to ${relativeVotePath}${fileName}`);
 ensureDirSync(relativeVotePath);

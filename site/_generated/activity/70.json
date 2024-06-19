@@ -1,0 +1,18 @@
+{
+  "title": "revise trademark policy",
+  "rss_title": "🗳️  revise trademark policy",
+  "github": "https://github.com/commonhaus/foundation/pull/70",
+  "author": "ebullient",
+  "number": 70,
+  "date": "2024-02-09T04:00:23Z",
+  "updated": "2024-02-14T14:17:35Z",
+  "url": "/activity/70.html",
+  "type": "pullRequest",
+  "tags": [
+    "post",
+    "reviews",
+    "notice"
+  ],
+  "content": "This is a substantial revision. Sources: \r\n\r\n- [OpenJSF Trademark Policy](https://trademark-policy.openjsf.org/)\r\n- [Gnome Foundation Trademark Usage Guildelines](https://wiki.gnome.org/FoundationBoard/Resources/LicensingGuidelines)\r\n- [Linux Foundation Trademark Usage Policy](https://www.linuxfoundation.org/legal/trademark-usage)\r\n- [OSI Trademark Guidelines](https://opensource.org/trademark-guidelines/#Proper_Trademark_Use)\r\n\r\nMany of these were based on Model Trademark Guidelines (now in the wayback machine):\r\nhttps://web.archive.org/web/20230625000001/http://modeltrademarkguidelines.org/index.php/Model_Trademark_Guidelines\r\n\r\n",
+  "closedAt": "2024-02-14T14:17:17Z"
+}

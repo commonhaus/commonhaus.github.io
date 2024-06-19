@@ -1,0 +1,18 @@
+{
+  "title": "Revisit the succession plan. This needs the most work.",
+  "rss_title": "🗳️  Revisit the succession plan. This needs the most work.",
+  "github": "https://github.com/commonhaus/foundation/pull/81",
+  "author": "ebullient",
+  "number": 81,
+  "date": "2024-02-15T01:41:46Z",
+  "updated": "2024-02-20T00:08:19Z",
+  "url": "/activity/81.html",
+  "type": "pullRequest",
+  "tags": [
+    "post",
+    "reviews",
+    "notice"
+  ],
+  "content": "Note the intent of succession planning to answer the \"what happens when...?\" questions. \r\n\r\nI would like to get to CVE remediation, but I think we need a lot more knowledge and systems in place before we make that promise.\r\n\r\nIt also starts outlining what the Foundation will require from projects (a GOVERNANCE.md file describing governance practices, etc.) and what it recommends (CODEOWNERS).\r\n\r\nThis one needs to be picked apart and put back together again. Feel free to suggest wording changes.",
+  "closedAt": "2024-02-20T00:08:15Z"
+}

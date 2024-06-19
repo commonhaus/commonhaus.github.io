@@ -1,0 +1,20 @@
+{
+  "title": "Undraft the bylaws: membership [due 13 May]",
+  "rss_title": "🗳️  Undraft the bylaws: membership [due 13 May]",
+  "github": "https://github.com/commonhaus/foundation/pull/154",
+  "author": "ebullient",
+  "number": 154,
+  "date": "2024-05-05T23:47:52Z",
+  "updated": "2024-05-13T11:56:52Z",
+  "url": "/activity/154.html",
+  "type": "pullRequest",
+  "tags": [
+    "post",
+    "reviews",
+    "notice",
+    "vote/done",
+    "vote/quorum"
+  ],
+  "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/154.svg)](https://github.com/commonhaus/foundation/pull/154#issuecomment-2095001694 \"IC_kwDOKRPTI8583zBe\")\r\n\r\nReviewing the membership section... \r\n\r\n- Related to #153, I tried to clarify EGC GitHub account requirement (while making clear that projects can be hosted elsewhere).\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment).",
+  "closedAt": "2024-05-13T11:47:07Z"
+}

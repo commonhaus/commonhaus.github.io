@@ -1,0 +1,17 @@
+{
+  "title": "🚀 Achievement Unlocked; Need interested parties to participate and review.",
+  "rss_title": "📣  🚀 Achievement Unlocked; Need interested parties to participate and review.",
+  "github": "https://github.com/commonhaus/foundation/discussions/34",
+  "author": "ebullient",
+  "number": 34,
+  "date": "2023-11-14T03:46:47Z",
+  "updated": "2024-01-16T00:46:16Z",
+  "url": "/activity/34.html",
+  "type": "discussion",
+  "tags": [
+    "post",
+    "announcements"
+  ],
+  "content": "Don't let the relative quiet fool you – like a duck serenely gliding on a lake, there's been a flurry of activity happening under the surface!\r\n\r\n🌟 Big News: We're on Our Way to Incorporation!\r\n\r\nThat's right – we're in the process of bringing the Commonhaus Foundation, Inc. to life. It's an exciting phase, and it means we're getting down to the nitty-gritty.\r\n\r\n🛠️ Time to Roll Up Our Sleeves\r\n\r\nNow's the moment to get serious, especially about our bylaws. I'm looking to collaborate with a small, dedicated group to fine-tune these bylaws before they go for legal review. We're treading into complex territory (just look at the open discussion items, there are good questions in there).\r\n \r\n📝 Check Out the Latest PR\r\n\r\nI've restructured our governance draft such that the contents of the (eventual, final) repository will be the Foundation's bylaws. ~~Take a peek: [PR #33](https://github.com/commonhaus/foundation-draft/pull/33)~~ (See comments). I will merge after a few days, and will begin structured reviews after that.\r\n\r\n🎉 For a Bit of Fun\r\n\r\nI've been working on a draft Hugo website that syncs up with the foundation-draft content.\r\nWhat's next? It will soon pull blog posts from GitHub Discussion announcements like this one, keeping everything interconnected and up-to-date.\r\n\r\nIf you want to help with bylaw revision, I would love it if you found me before I find you. 🫣\r\n\r\n",
+  "closedAt": "2024-01-16T00:46:16Z"
+}
