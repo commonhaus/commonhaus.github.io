@@ -1,0 +1,18 @@
+{
+  "title": "Clarify role/scope of CFC, EGC and EGC membership",
+  "rss_title": "🗳️  Clarify role/scope of CFC, EGC and EGC membership",
+  "github": "https://github.com/commonhaus/foundation/pull/87",
+  "author": "ebullient",
+  "number": 87,
+  "date": "2024-02-20T23:11:10Z",
+  "updated": "2024-02-22T18:24:02Z",
+  "url": "/activity/87.html",
+  "type": "pullRequest",
+  "tags": [
+    "post",
+    "reviews",
+    "notice"
+  ],
+  "content": "- Clarify that a Project Representative appointed to the EGC does not have to be a CF Member\r\n- Clarify role of the CFC (as working board for foundation operations)\r\n- Clarify terms in distinction of votes requiring EGC approval and those requiring CFC approval\r\n",
+  "closedAt": "2024-02-22T18:23:59Z"
+}

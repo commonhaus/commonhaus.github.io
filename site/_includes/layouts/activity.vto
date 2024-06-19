@@ -8,7 +8,7 @@ layout: layouts/activitySidebar.vto
   <h1 id="articleTitle">{{ page |> pageLock }}<a href="{{ page.data.github }}">{{ title }}</a></h1>
 </header>
 <div class="content">
-  {{ content }}
+  {{ content |> md }}
 </div>
 <footer class="byline">
   {{ page |> authorAvatar }}

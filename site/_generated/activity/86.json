@@ -1,0 +1,18 @@
+{
+  "title": "Correct behavior of CLA",
+  "rss_title": "🗳️  Correct behavior of CLA",
+  "github": "https://github.com/commonhaus/foundation/discussions/86",
+  "author": "ebullient",
+  "number": 86,
+  "date": "2024-02-16T18:37:04Z",
+  "updated": "2024-03-02T18:36:52Z",
+  "url": "/activity/86.html",
+  "type": "discussion",
+  "tags": [
+    "post",
+    "consensus building",
+    "notice"
+  ],
+  "content": "### Proposal\r\n\r\nWe have a draft of a CLA in place now.\r\n\r\nI did just [push updated text without a PR](https://github.com/commonhaus/foundation-draft/commit/88c5c58f674fdaa2591d129da387ff16fe07f380) to test a build mechanic: \r\n\r\n- We can keep a file in the top-level administrivia repo for projects that want to use a CLA:\r\n    https://github.com/commonhaus/foundation-draft/blob/main/.github/project-cla.yaml\r\n\r\n    This file lists the project (name and entity, not sure why OpenJSF has those as distinct things, I need to look at more examples and ask the lawyer.. maybe one of you know. For POC, I followed what they did) and an accompanying gist (owned by the commonhaus bot).\r\n\r\n- I updated the GH Action here:\r\n    https://github.com/commonhaus/foundation-draft/blob/main/.github/workflows/cla.yaml\r\n    \r\n    It iterates over all of the projects in that YAML file and creates a temporary file with the  Project Name/Entity and the text of the (common) CLA. It then updates the specific gist with that content.\r\n\r\nThis means we can use common CLA text (reviewed approved collectively as policy) and have it applied per project (preferred by some employers: permission to work on one project does not imply permission to work on another).\r\n\r\n\r\n\r\n### Voting group\r\n\r\n@commonhaus/founders\r\n\r\n### Consensus mechanism\r\n\r\nPlease use emoji reactions to indicate your support:\r\n- **👍 (:+1:)** if it looks good to you\r\n- **👀 (:eyes:)** if you're \"ok\" with it (it may not be your favorite)\r\n- **👎 (:-1:)** if you think this needs discussion first\r\n\r\nAsk questions or raise concerns in comments.\r\n",
+  "closedAt": "2024-03-02T18:36:52Z"
+}

@@ -1,6 +1,6 @@
 import { safeLoad } from "https://deno.land/x/js_yaml_port@3.14.0/js-yaml.js";
 
-// Merge contents of CONTACTS.yaml and ./_data/authors.yml
+// Merge contents of CONTACTS.yaml, PROJECTS.yaml and ./site/_generated/about.yml
 // into a single data structure for Project Representatives and Councilors
 
 interface Contact {
@@ -54,7 +54,7 @@ function augmentReference<T extends Contact>(data: Record<string, Contact[]>, it
 
 const CONTACT_DATA: Record<string, Contact[]> = safeLoad(Deno.readTextFileSync("./site/foundation/CONTACTS.yaml"));
 const PROJECT_DATA: Record<string, ProjectData> = safeLoad(Deno.readTextFileSync("./site/foundation/PROJECTS.yaml"));
-const USER_DATA: Record<string, unknown> = safeLoad(Deno.readTextFileSync("./site/_data/about.yml"));
+const USER_DATA: Record<string, unknown> = safeLoad(Deno.readTextFileSync("./site/_generated/about.yml"));
 
 const councilors: Councilor[] = [];
 

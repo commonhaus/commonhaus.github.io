@@ -1,0 +1,18 @@
+{
+  "title": "Remove CLA language from IP Policy (for now)",
+  "rss_title": "🗳️  Remove CLA language from IP Policy (for now)",
+  "github": "https://github.com/commonhaus/foundation/discussions/77",
+  "author": "ebullient",
+  "number": 77,
+  "date": "2024-02-14T17:36:10Z",
+  "updated": "2024-02-14T19:04:26Z",
+  "url": "/activity/77.html",
+  "type": "discussion",
+  "tags": [
+    "post",
+    "consensus building",
+    "notice"
+  ],
+  "content": "### Proposal\n\nReviewing the IP Policy (again), and...\r\n\r\nIt's one thing to require a DCO. That's pretty typical these days.\r\n\r\nCLAs are more complicated. Example language from IP Policy for OpenJSF:\r\n\r\n> The technical governing body of each Project may provide for additional requirements with respect to contributions. For example, a Project may require that new code contributions to a Project be accompanied by an OpenJS Foundation CLA, available at https://openjsf.org/cla.\r\n\r\nFor CF to be able to deal with CLAs, I think we'd have to define one (for the foundation). See the following:\r\n\r\n- https://openjsf.org/cla\r\n- https://www.apache.org/licenses/contributor-agreements.html\r\n- https://www.eclipse.org/legal/ECA.php\r\n\r\nDo we want to start here? Is DCO enough?\r\n\r\nAt the moment, I'm favoring punting the CLA language, and we can revisit/revise that aspect of the policy when warranted.\r\n\n\n### Voting group\n\n@commonhaus/founders\n\n### Concensus mechanism\n\nPlease use emoji reactions to indicate your support:\r\n- **👍 (:+1:)** if it looks good to you\r\n- **👀 (:eyes:)** if you're \"ok\" with it (it may not be your favorite)\r\n- **👎 (:-1:)** if you think this needs discussion first\r\n\r\nAsk questions or raise concerns in comments.\r\n",
+  "closedAt": "2024-02-14T19:04:26Z"
+}
