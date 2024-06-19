@@ -81,13 +81,13 @@ site
     .use(sitemap({
         query: "metas.robots!=false",
     }))
-    // .use(minifyHTML({
-    //     options: {
-    //         keep_closing_tags: true,
-    //         keep_html_and_head_opening_tags: true,
-    //         keep_spaces_between_attributes: true,
-    //     }
-    // }))
+    .use(minifyHTML({
+        options: {
+            keep_closing_tags: true,
+            keep_html_and_head_opening_tags: true,
+            keep_spaces_between_attributes: true,
+        }
+    }))
     .use(feed({
         output: ["/feed/index.rss", "/feed/index.json"],
         query: "post",
