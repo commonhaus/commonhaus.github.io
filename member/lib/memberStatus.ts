@@ -12,7 +12,7 @@ export const getRoleDescription = (role: string): RoleDescription => {
 }
 
 export const isCfc = (roles: MemberRole[]): boolean => {
-    return roles.findIndex(role => role === "cfc") >= 0;
+    return roles && roles.indexOf(MemberRole.CFC) !== -1;
 }
 
 export const mayHaveAttestations = (status: MemberStatus): boolean => {
