@@ -12,11 +12,12 @@ export const uriBase = window.location.hostname.includes("localhost")
     ? "http://localhost:8082/member"
     : "https://haus-keeper.commonhaus.org/member";
 
-export const INFO = uriBase + "/me";
 export const ALIASES = uriBase + "/aliases";
-export const COMMONHAUS = uriBase + "/commonhaus";
-export const REFRESH = uriBase + "/commonhaus/status?refresh=true";
 export const APPLY = uriBase + "/apply";
+export const COMMONHAUS = uriBase + "/commonhaus";
+export const COUNCIL = uriBase + "/council";
+export const INFO = uriBase + "/me";
+export const REFRESH = uriBase + "/commonhaus/status?refresh=true";
 
 export const gitHubData = writable<GitHubUser>({});
 export const commonhausData = writable<CommonhausMember>({});

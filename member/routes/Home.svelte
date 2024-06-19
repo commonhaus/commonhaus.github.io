@@ -10,14 +10,14 @@
     knownUser,
     outboundPost
   } from "../lib/stores";
+  import Council from "../components/Council.svelte";
   import Discord from "../components/Home-Discord.svelte";
   import ForwardEmail from "../components/Home-ForwardEmail.svelte";
   import Membership from "../components/Home-Membership.svelte";
   import Oops from "../components/Oops.svelte";
   import Loading from "../components/Loading-coffee.svelte";
   import Unknown from "../components/Unknown.svelte";
-  import { showDiscord } from "../lib/memberStatus";
-
+  import { showDiscord, isCfc } from "../lib/memberStatus";
 </script>
 
 {#if !$hasResponse}
@@ -43,6 +43,9 @@
   {#if !$knownUser || isForbidden($errorFlags.haus)}
     <Unknown />
   {:else}
+    {#if isCfc($gitHubData.roles) }
+    <Council />
+    {/if}
     <Membership />
     <ForwardEmail />
     {#if showDiscord($commonhausData.status)}
