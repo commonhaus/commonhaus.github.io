@@ -11,6 +11,10 @@ export const getRoleDescription = (role: string): RoleDescription => {
     return attestationInfo.role[role];
 }
 
+export const isCfc = (roles: MemberRole[]): boolean => {
+    return roles.findIndex(role => role === "cfc") >= 0;
+}
+
 export const mayHaveAttestations = (status: MemberStatus): boolean => {
     return status == MemberStatus.COMMITTEE
         || status == MemberStatus.ACTIVE    // member
