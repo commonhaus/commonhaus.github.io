@@ -10,10 +10,10 @@
     "vite-dev": "export VITE_APP_DEV_MODE=true && deno run -A --unstable --node-modules-dir npm:vite build --watch",
     "vite-build": "deno run -A --unstable --node-modules-dir npm:vite build",
 
-    "about": "deno run --allow-run=gh --allow-read=./.github/graphql,./site/_data/about.yml --allow-write=./site/_data/about.yml ./.github/about.ts",
-    "activity": "deno run --allow-run=gh --allow-read=./.github/graphql,./site/activity,./site/_data/authors.yml --allow-write=./site/activity,./site/_data/authors.yml ./.github/activities.ts",
-    "lastmod": "deno run --allow-run=git,gh --allow-read=. --allow-write=./site/_includes/foundation.json ./.github/lastmod.ts",
-    "votes": "deno run --allow-run=gh --allow-read=./.github/graphql,./site/votes --allow-write=./site/votes ./.github/votes.ts",
+    "about": "deno run --allow-run=gh --allow-read=./.github/graphql,./site/_generated --allow-write=./site/_generated ./.github/about.ts",
+    "activity": "deno run --allow-run=gh --allow-read=./.github/graphql,./site/activity,./site/_generated --allow-write=./site/_generated ./.github/activity.ts",
+    "lastmod": "deno run --allow-run=git,gh --allow-read=. --allow-write=./site/_generated ./.github/lastmod.ts",
+    "votes": "deno run --allow-run=gh --allow-read=./.github/graphql,./site/_generated --allow-write=./site/_generated ./.github/votes.ts",
 
     "checklinks": "deno run --allow-read --allow-net https://deno.land/x/link_checker/crawl.ts https://www.commonhaus.org",
     "checklocal": "deno run --allow-read --allow-net https://deno.land/x/link_checker/crawl.ts http://localhost:3000/"

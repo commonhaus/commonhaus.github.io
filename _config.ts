@@ -17,7 +17,8 @@ import toc from "https://deno.land/x/lume_markdown_plugins@v0.7.0/toc.ts";
 import anchor from "npm:markdown-it-anchor";
 import footnote from "npm:markdown-it-footnote";
 import callouts from "npm:markdown-it-obsidian-callouts";
-import foundationData from "./plugins/foundationData.ts";
+import authorData from "./site/_plugins/authorData.ts";
+import foundationData from "./site/_plugins/foundationData.ts";
 
 const markdown = {
     options: {
@@ -61,6 +62,7 @@ site
     .use(nav())
     .use(resolveUrls())
     .use(foundationData()) // Foundation submodule pages + URL munging
+    .use(authorData())     // Author data for activities
     .use(slugify_urls({
         extensions: [".html"],
         replace: {
@@ -79,13 +81,13 @@ site
     .use(sitemap({
         query: "metas.robots!=false",
     }))
-    .use(minifyHTML({
-        options: {
-            keep_closing_tags: true,
-            keep_html_and_head_opening_tags: true,
-            keep_spaces_between_attributes: true,
-        }
-    }))
+    // .use(minifyHTML({
+    //     options: {
+    //         keep_closing_tags: true,
+    //         keep_html_and_head_opening_tags: true,
+    //         keep_spaces_between_attributes: true,
+    //     }
+    // }))
     .use(feed({
         output: ["/feed/index.rss", "/feed/index.json"],
         query: "post",
@@ -95,7 +97,7 @@ site
             description: "=description",
         },
         items: {
-            title: "=rss-title",
+            title: "=rss_title",
             published: "=date",
             updated: "=updated",
         },
@@ -109,7 +111,7 @@ site
             description: "=description",
         },
         items: {
-            title: "=rss-title",
+            title: "=rss_title",
             published: "=date",
             updated: "=updated",
         },
@@ -151,19 +153,6 @@ site.filter("testLock", (page: Page) => {
     <span aria-label="closed">${page.data.svg.closed}</span>
     <span aria-label="locked">${page.data.svg.lock}</span>
     </span>`;
-});
-
-site.filter("authorAvatar", (page: Page) => {
-    const login = page.data.author;
-    const author = page.data.authors[login];
-    if (author) {
-        return `<a class="avatar" href="${author.url}" target="_top">
-            <img src="${author.avatar}" />
-            <span>${login}</span>
-        </a>`;
-    } else {
-        return `<div class="avatar">${login}</div>\n`;
-    }
 });
 
 site.filter("listVoters", (voters: unknown) => {

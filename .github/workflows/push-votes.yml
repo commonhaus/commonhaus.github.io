@@ -50,7 +50,7 @@ jobs:
         run: |
           echo "Updating vote results..."
           deno task votes "${INPUT}"
-          git add -A -- ./site/votes
+          git add -A -- ./site/_generated/votes
           if git diff --quiet HEAD; then
             echo "-- No changes -- "
           else

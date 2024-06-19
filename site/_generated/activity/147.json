@@ -1,0 +1,19 @@
+{
+  "title": "Update trademark list",
+  "rss_title": "🗳️  Update trademark list",
+  "github": "https://github.com/commonhaus/foundation/pull/147",
+  "author": "ebullient",
+  "number": 147,
+  "date": "2024-04-25T19:46:10Z",
+  "updated": "2024-05-20T18:38:29Z",
+  "url": "/activity/147.html",
+  "type": "pullRequest",
+  "tags": [
+    "post",
+    "reviews",
+    "notice",
+    "vote/done"
+  ],
+  "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/147.svg)](https://github.com/commonhaus/foundation/pull/147#issuecomment-2093775675 \"IC_kwDOKRPTI858zHs7\")\r\n\r\nA listing of foundation trademarks (registered or pending/in use).\r\n\r\nI've used a footnote to indicate that registered and other marks for projects are used with permission until either a formal fiscal hosting agreement is signed or the bootstrapping period ends. That allowed me to explain once, but reference that explanation next to every mark to which it applied.\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nWhat to do: \r\n- If you like it or it looks good to you:\r\n    - Approve the PR\r\n    - **👍 (:+1:)** if it looks good to you\r\n    - **👀 (:eyes:)** if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment). ",
+  "closedAt": "2024-05-05T18:53:58Z"
+}

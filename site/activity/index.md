@@ -1,6 +1,8 @@
 ---
 title: Activity and Notice
 layout: layouts/activityOverview.vto
+metas:
+  robots: false
 ---
 
 - Feed for all CF Activity: [RSS](/feed/index.rss), [JSON](/feed/index.json)

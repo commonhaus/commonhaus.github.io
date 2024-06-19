@@ -71,7 +71,7 @@ jobs:
           GH_TOKEN: ${{ secrets.WEB_REPO_READ }}
         run: |
           deno task about
-          git add -A -- ./site/_data/about.yml
+          git add -A -- ./site/_generated/about.yml
           if git diff --quiet HEAD; then
             echo "-- No changes -- "
           else

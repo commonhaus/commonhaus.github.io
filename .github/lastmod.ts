@@ -10,7 +10,7 @@ const interestingFiles = [
 
 
 const foundationPath = './site/foundation';
-const metaPath = './site/_includes/foundation.json';
+const metaPath = './site/_generated/foundation.json';
 const projectMeta = Deno.readTextFileSync(metaPath);
 const now = new Date().toISOString();
 

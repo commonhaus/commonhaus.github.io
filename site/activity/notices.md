@@ -4,4 +4,6 @@ layout: layouts/activityArchive.vto
 indexId: notices
 indexQuery: "notice !announcements !vote"
 indexName: Notices
+metas:
+  robots: false
 ---

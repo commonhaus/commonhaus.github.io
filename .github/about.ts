@@ -52,7 +52,7 @@ interface Invitee {
     invitee: User
 }
 
-const aboutPath = './site/_data/about.yml';
+const aboutPath = './site/_generated/about.yml';
 const aboutYaml = Deno.readTextFileSync(aboutPath);
 const about = safeLoad(aboutYaml) || {};
 

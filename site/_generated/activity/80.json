@@ -1,0 +1,18 @@
+{
+  "title": "Simplify conflict of interest policy",
+  "rss_title": "🗳️  Simplify conflict of interest policy",
+  "github": "https://github.com/commonhaus/foundation/pull/80",
+  "author": "ebullient",
+  "number": 80,
+  "date": "2024-02-14T20:33:19Z",
+  "updated": "2024-02-17T16:10:46Z",
+  "url": "/activity/80.html",
+  "type": "pullRequest",
+  "tags": [
+    "post",
+    "reviews",
+    "notice"
+  ],
+  "content": "- language for standard of compensation is \"not excessive\"\r\n- add references to relevant Florida statute.\r\n- Simplify determination of conflict and records, to avoid over-specification\r\n- remove violation section, as already covered under bylaws (removing CFC/CF members.. )\r\n",
+  "closedAt": "2024-02-17T16:10:44Z"
+}
