@@ -4,15 +4,10 @@
     "attach": "echo \"import 'lume/cli.ts'\" | deno run --inspect-wait --unstable -A -",
 
     "build": "deno task lume",
+    "vite-build": "deno run -A --unstable --node-modules-dir npm:vite build",
 
     "serve": "export VITE_APP_DEV_MODE=true && deno task lume -s",
     "serve-all": "export MOCK_BACKEND=true && deno task serve",
-
-    "debug": "deno task attach -s",
-
-    "vite-dev": "export VITE_APP_DEV_MODE=true && deno run -A --unstable --node-modules-dir npm:vite build --watch",
-    "vite-dev-all": "export MOCK_BACKEND=true && deno task vite-dev",
-    "vite-build": "deno run -A --unstable --node-modules-dir npm:vite build",
 
     "about": "deno run --allow-run=gh --allow-read=./.github/graphql,./site/_generated --allow-write=./site/_generated ./.github/about.ts",
     "activity": "deno run --allow-run=gh --allow-read=./.github/graphql,./site/activity,./site/_generated --allow-write=./site/_generated ./.github/activity.ts",
