@@ -50,11 +50,6 @@
     aliasesLoaded = true;
   });
 
-  async function refresh() {
-    console.debug("refreshing");
-    await load(ALIASES + "?refresh=true");
-  }
-
   async function saveAll() {
     // send only the email alias and the updated target recipients
     const recipients = {};
@@ -110,28 +105,22 @@
       <div class="setting">
         <span></span>
         <span class="control">
-          <div class="tooltip">
-            <button
-              class="input-square"
-              aria-label="Refetch email information"
-              on:click={refresh}
-            >
-              <svg width="24" height="24"><use xlink:href="/assets/icon-symbol.svg#icon-restart"/></svg>
-              <span class="tooltiptext">Refresh email information</span>
-            </button>
-          </div>
           <button
             name="saveAll"
             class="input"
             on:click={saveAll}
             disabled={$outboundPost}>Save</button
           >
-          <button
-            name="reset"
-            class="input"
-            on:click={resetAll}
-            disabled={$outboundPost}>Cancel</button
-          >
+          <div class="tooltip">
+            <button
+              name="reset"
+              class="input"
+              on:click={resetAll}
+              disabled={$outboundPost}>
+              <span>Cancel</span>
+              <span class="tooltiptext">Reset to previous values</span>
+              </button>
+          </div>
         </span>
       </div>
     </section>

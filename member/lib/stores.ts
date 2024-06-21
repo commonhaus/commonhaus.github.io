@@ -8,9 +8,7 @@ import {
     GitHubUser,
 } from "../@types/data.d.ts";
 
-export const uriBase = window.location.hostname.includes("localhost")
-    ? "http://localhost:8082/member"
-    : "https://haus-keeper.commonhaus.org/member";
+export const uriBase = "__BASE_URL__";
 
 export const ALIASES = uriBase + "/aliases";
 export const APPLY = uriBase + "/apply";
@@ -289,3 +287,12 @@ export const appendData = (key: string, data: object) => {
     }
     return newData;
 };
+
+/** Is this preserved? */
+declare global {
+    interface Window {
+        devMode: any;
+    }
+}
+
+window.devMode = {};

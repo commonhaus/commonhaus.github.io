@@ -30,8 +30,9 @@
     }
   }
 
-  $: applicationReady = ($gitHubData.hasApplication && $applicationData.created)
-      || !$gitHubData.hasApplication;
+  $: applicationReady =
+    ($gitHubData.hasApplication && $applicationData.created) ||
+    !$gitHubData.hasApplication;
 
   $: if ($outboundPost) {
     window.scrollTo(0, 0);
@@ -73,7 +74,7 @@
   offices, and a <code>@commonhaus.dev</code> email address.
 </p>
 
-{#if !loaded && !applicationReady }
+{#if !loaded && !applicationReady}
   <Loading>Finding up your membership application</Loading>
 {:else if $outboundPost}
   <Loading>Processing...</Loading>
@@ -100,32 +101,27 @@
       </Callout>
     {/if}
 
-    <form on:submit|preventDefault={submitForm}>
+    <div>
       <section class="information">
         <h3><label for="contributions">Contribution details</label></h3>
         <p>
           Briefly describe your contributions to CF or its projects over the
           past three months.
         </p>
-        <textarea
-          id="contributions"
-          bind:value={contributions}
-          required
+        <textarea id="contributions" bind:value={contributions} required
         ></textarea>
         <p>
-          <span aria-hidden="true">💖</span> Remember: Contributions aren't limited to code!
-          Participation in our online community (such as Discord or GitHub Discussions),
-          or other activities related to CF projects are also considered contributions.
+          <span aria-hidden="true">💖</span> Remember: Contributions aren't limited
+          to code! Participation in our online community (such as Discord or GitHub
+          Discussions), or other activities related to CF projects are also considered
+          contributions.
         </p>
       </section>
 
       <section class="information">
         <h3><label for="additionalNotes">Additional notes</label></h3>
         <p>(Optional) Any other information or comments you'd like to add?</p>
-        <textarea
-          id="additionalNotes"
-          bind:value={additionalNotes}
-        ></textarea>
+        <textarea id="additionalNotes" bind:value={additionalNotes}></textarea>
       </section>
 
       <div class="setting">
@@ -137,12 +133,17 @@
             on:click={submitForm}
             disabled={$outboundPost}>Save</button
           >
-          <button
-            name="reset"
-            class="input"
-            on:click={resetForm}
-            disabled={$outboundPost}>Cancel</button
-          >
+          <div class="tooltip">
+            <button
+              name="reset"
+              class="input"
+              on:click={resetForm}
+              disabled={$outboundPost}
+            >
+              <span>Cancel</span>
+              <span class="tooltiptext">Reset to previous values</span>
+            </button>
+          </div>
         </span>
       </div>
       <footer class="modified">
@@ -154,7 +155,7 @@
           submitted {new Date($applicationData.created).toDateString()}
         {/if}
       </footer>
-    </form>
+    </div>
   {:else if hasRole($gitHubData.roles, "member")}
     <Callout type="success">
       <p>

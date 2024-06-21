@@ -1,7 +1,4 @@
 <script>
-  if (import.meta.env.VITE_APP_DEV_MODE) {
-    import("./dev-mode.js");
-  }
   import { onMount, onDestroy } from "svelte";
   import Apply from "./routes/MemberApplicationForm.svelte";
   import Email from "./routes/ForwardEmail.svelte";
@@ -10,8 +7,6 @@
   import Status from "./routes/MembershipStatus.svelte";
   import Callout from "./components/Callout.svelte";
   import {
-    COMMONHAUS,
-    INFO,
     cookies,
     errorFlags,
     getCookies,
@@ -19,7 +14,6 @@
     init,
     isForbidden,
     knownUser,
-    load,
     location,
     toaster,
     uriBase,
