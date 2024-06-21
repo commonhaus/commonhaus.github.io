@@ -56,6 +56,10 @@ const site = lume({
 site.copy("static", "/");
 site.mergeKey("cssclasses", "stringArray");
 
+// Build or rebuild the Svelte Membership UI
+site.addEventListener("afterBuild", "deno task vite-build");
+site.addEventListener("afterUpdate", "deno task vite-build");
+
 site
     .use(date())
     .use(inline(/* Options */))
@@ -118,8 +122,6 @@ site
             updated: "=updated",
         },
     }));
-
-site.addEventListener("afterBuild", "deno task vite-build")
 
 site.filter("pageLock", (page: Page) => {
     let result = '';

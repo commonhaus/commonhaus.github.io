@@ -36,12 +36,9 @@ This project uses [Deno](https://deno.land/) as the runtime, the [Lume static si
 
     - `build`: Builds the website (first Lume, then Vite+Svelte)
     - **Lume**
-        - `attach`: Attaches a debugger to lume.
         - `debug`: Allows you to attach a debugger to a deno task.
-        - `serve`: Builds and serves the website, and watch for changes.
-    - **Vite** (Svelte-based Membership UI, run after Lume)
-        - `vite-build`: use vite to compile svelte files
-        - `vite-dev`: use vite to watch and recompile svelte files
+        - `serve`: Builds and serves the website, and watch for changes. Membership UI requires a backing service (see [cf-admin-bot](https://github.com/commonhaus/automation))
+        - `serve-all`: Builds and serves the website, and watch for changes. Provides a mock backend for the Membership UI
     - **Generation** (requires the GH CLI)
         - `about`: Update metadata about members of the foundation based on the CONTACTS list.
         - `activity`: Query the latest discussions and PRs from the foundation repository and update corresponding site pages.
@@ -50,18 +47,6 @@ This project uses [Deno](https://deno.land/) as the runtime, the [Lume static si
     - **Verification**
         - `checklocal`: test links against a running local server.
         - `checklinks`: check for invalid links
-
-5. **Working on the Membership UI** (requires the [cf-admin-bot](https://github.com/commonhaus/automation))
-
-    The Vite-related task will watch for changes and recompile updated files. This works well with Lume `serve`,
-    just make sure to start Lume first.
-
-    ```bash
-    # start Lume to watch, (re)build, and serve files in public/
-    deno task serve
-    # start vite to watch and (re)build public/assets/member.js
-    deno task vite-dev
-    ```
 
 ## Project Structure
 
@@ -106,7 +91,7 @@ This project uses [Deno](https://deno.land/) as the runtime, the [Lume static si
         - `index.page.js` - parses all json files in `site/_generated/votes`, and creates a page and an svg for each vote result.
 - `_config.ts` - Lume site config (static site generation)
 - `deno.json` - Deno dependency and task configuration (akin to package.json)
-- `vite.config.mjs` - Vite configuration used to build and watch Svelte files for the Membership UI
+- `vite.config.mjs` - Vite configuration used to build the Svelte files for the Membership UI
 
 ### Weird things
 
@@ -144,7 +129,7 @@ This project uses [Deno](https://deno.land/) as the runtime, the [Lume static si
     - `site/_includes/layouts/activityVoteArchive.vto` provides an archive page listing all vote results
     - Workflows: `.github/workflows/push-votes.yml`
 - **Membership UI** (`member/*`)
-    - This is a separate/follow-on build for a single-page application (SPA) built with Svelte. It is built as a secondary step (after Lume). It uses one of the bots as its backend to work with user data (membership application, email alias management, and form-signing).
+    This is a separate/follow-on build for a single-page application (SPA) built with Svelte. It uses one of the automation bots as a backend to maintain user data (membership application, email alias management, and form-signing).
 
 ## Contributing
 
