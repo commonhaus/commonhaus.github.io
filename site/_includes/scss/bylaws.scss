@@ -58,6 +58,7 @@ aside.policy-contents {
     font-size: var(--font-smaller);
     h3 {
       font-size: var(--font-size);
+      margin-block-start: 0;
       margin-bottom: .5em;
     }
   }
@@ -99,11 +100,8 @@ aside.policy-contents {
   --nest-hang-text-indent: -1em;
   --nest-indent: 1.2em;
 
-  ul.top-level li:before {
-    content: '•';
-    position: absolute;
-    left: -1em;
-  }
+  display: flex;
+  flex-direction: column-reverse;
 
   div.pagenav {
     ol > li:before {

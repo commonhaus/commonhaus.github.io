@@ -1,5 +1,5 @@
 import lume from "lume/mod.ts";
-import { Data, Page } from "lume/core/file.ts";
+import { Page } from "lume/core/file.ts";
 
 import date from "lume/plugins/date.ts";
 import feed from "lume/plugins/feed.ts";
@@ -7,6 +7,7 @@ import inline from "lume/plugins/inline.ts";
 import metas from "lume/plugins/metas.ts";
 import minifyHTML from "lume/plugins/minify_html.ts";
 import nav from "lume/plugins/nav.ts";
+import pagefind from "lume/plugins/pagefind.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
 import sass from "lume/plugins/sass.ts";
 import sitemap from "lume/plugins/sitemap.ts";
@@ -83,6 +84,17 @@ site
             sourceMap: false,
             sourceMapIncludeSources: true,
         }
+    }))
+    .use(pagefind({
+        indexing: {
+            verbose: true,
+        },
+        ui: {
+            containerId: "search",
+            showImages: false,
+            showEmptyFilters: true,
+            resetStyles: true,
+        },
     }))
     .use(sitemap({
         query: "metas.robots!=false",
