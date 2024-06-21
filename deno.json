@@ -1,19 +1,15 @@
 {
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
-    "attach": "echo \"import 'lume/cli.ts'\" | deno run --inspect-wait --unstable -A -",
-
+    "attach": "echo \"import 'lume/cli.ts'\" | deno run --inspect-wait -A -",
     "build": "deno task lume",
-    "vite-build": "deno run -A --unstable --node-modules-dir npm:vite build",
-
+    "vite-build": "deno run -A --node-modules-dir npm:vite build",
     "serve": "export VITE_APP_DEV_MODE=true && deno task lume -s",
     "serve-all": "export MOCK_BACKEND=true && deno task serve",
-
     "about": "deno run --allow-run=gh --allow-read=./.github/graphql,./site/_generated --allow-write=./site/_generated ./.github/about.ts",
     "activity": "deno run --allow-run=gh --allow-read=./.github/graphql,./site/activity,./site/_generated --allow-write=./site/_generated ./.github/activity.ts",
     "lastmod": "deno run --allow-run=git,gh --allow-read=. --allow-write=./site/_generated ./.github/lastmod.ts",
     "votes": "deno run --allow-run=gh --allow-read=./.github/graphql,./site/_generated --allow-write=./site/_generated ./.github/votes.ts",
-
     "checklinks": "deno run --allow-read --allow-net https://deno.land/x/link_checker/crawl.ts https://www.commonhaus.org",
     "checklocal": "deno run --allow-read --allow-net https://deno.land/x/link_checker/crawl.ts http://localhost:3000/"
   },
@@ -23,7 +19,7 @@
     ]
   },
   "imports": {
-    "lume/": "https://deno.land/x/lume@v2.1.4/",
+    "lume/": "https://deno.land/x/lume@v2.2.1/",
     "npm:markdown-it": "npm:markdown-it@14.0.0",
     "npm:markdown-it-anchor": "npm:markdown-it-anchor@8.6.7",
     "npm:markdown-it-footnote": "npm:markdown-it-footnote@4.0.0",

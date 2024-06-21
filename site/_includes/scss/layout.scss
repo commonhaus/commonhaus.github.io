@@ -39,6 +39,10 @@ main {
     margin-top: 1em;
     background-color: var(--bg-secondary);
     border-top: 1px solid var(--border-color);
+
+    h2 {
+      --h2-size: var(--font-large);
+    }
   }
 }
 footer.site {
@@ -63,6 +67,8 @@ footer.site {
   body {
     --aside-width: 22vw;
   }
+}
+@media(min-width: 700px) {
   main.has-aside {
     display: flex;
     flex-direction: row;
@@ -83,6 +89,16 @@ footer.site {
         time {
           white-space: nowrap;
         }
+      }
+
+      &.policy-contents {
+        flex-direction: column;
+      }
+
+      ul.top-level li:before {
+        content: '•';
+        position: absolute;
+        left: -1em;
       }
     }
   }
