@@ -19,6 +19,7 @@ import footnote from "npm:markdown-it-footnote";
 import callouts from "npm:markdown-it-obsidian-callouts";
 import authorData from "./site/_plugins/authorData.ts";
 import foundationData from "./site/_plugins/foundationData.ts";
+import devBackend from "./site/_plugins/devBackend.ts";
 
 const markdown = {
     options: {
@@ -47,7 +48,8 @@ const site = lume({
     src: "site",
     dest: "public",
     prettyUrls: false,
-    location: new URL("https://www.commonhaus.org")
+    location: new URL("https://www.commonhaus.org"),
+    server: devBackend()
 }, { markdown });
 
 // Copy the content of "static" directory to the root of your site
@@ -117,6 +119,7 @@ site
         },
     }));
 
+site.addEventListener("afterBuild", "deno task vite-build")
 
 site.filter("pageLock", (page: Page) => {
     let result = '';

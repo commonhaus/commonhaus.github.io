@@ -5,28 +5,26 @@ import denoResolve from 'https://deno.land/x/vite_plugin_deno_resolve@0.5.0/mod.
 import { svelte, vitePreprocess } from 'npm:@sveltejs/vite-plugin-svelte';
 import markdownIt from "npm:markdown-it";
 import preprocess from "npm:svelte-preprocess";
+import { replaceCodePlugin } from "npm:vite-plugin-replace";
 
 import "npm:svelte";
 
 const devMode = Deno.env.get("VITE_APP_DEV_MODE") === "true";
+const mockBackend = Deno.env.get("MOCK_BACKEND") === "true";
+console.log("devMode:", devMode, "mockBackend:", mockBackend);
 
-function devOnlyTools() {
-  return {
-    name: "dev-only-tools",
-    transform(source, id) {
-      if (id.includes("dev-mode")) {
-        if (devMode) {
-          return {
-            code: source,
-            map: null, // provide source map if available
-          };
-        } else {
-          return "";
-        }
-      }
-    }
-  }
-}
+const devUrl = mockBackend
+    ? "http://localhost:3000/member"  // Lume middleware
+    : "http://localhost:8082/member"; // Local Quarkus backend
+
+const baseUrl = devMode
+    ? devUrl
+    : "https://haus-keeper.commonhaus.org/member";
+
+const devModeHook = mockBackend
+    ? Deno.readTextFileSync("member/dev-mode.js")
+    : "";
+console.log("baseUrl:", baseUrl, ", devModeHook:", devModeHook === "");
 
 function yamlPlugin() {
   const virtualModuleId = 'virtual:attest-yaml';
@@ -84,7 +82,6 @@ export default defineConfig({
   },
   isWorker: false,
   plugins: [
-    devOnlyTools(),
     yamlPlugin(),
     denoResolve(),
     svelte({
@@ -93,6 +90,18 @@ export default defineConfig({
         vitePreprocess(),
         preprocess()
       ]
+    }),
+    replaceCodePlugin({
+      replacements: [
+        {
+          from: "__BASE_URL__",
+          to: baseUrl,
+        },
+        {
+          from: "window.devMode = {};",
+          to: devModeHook,
+        },
+      ],
     }),
   ]
 });

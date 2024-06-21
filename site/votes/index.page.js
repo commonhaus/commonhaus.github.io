@@ -93,8 +93,6 @@ function createIndex(pages, dir, uri) {
 }
 
 export default function* ({ page }) {
-    console.log(import.meta.dirname);
-    console.log(path.resolve(import.meta.dirname, '../_generated/votes'));
     const genPages = [];
     const dir = path.resolve(import.meta.dirname, '../_generated/votes');
 
