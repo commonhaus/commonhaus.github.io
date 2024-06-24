@@ -14,9 +14,6 @@ graph.json
 node_modules
 old
 public
-site/.hugo_build.lock
-site/resources
 workspace*
-activity*.json
 schema.docs.graphql
 .vite

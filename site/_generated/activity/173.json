@@ -1,0 +1,18 @@
+{
+  "title": "Undraft the bylaws: content templates",
+  "rss_title": "🗳️  Undraft the bylaws: content templates",
+  "github": "https://github.com/commonhaus/foundation/pull/173",
+  "author": "ebullient",
+  "number": 173,
+  "date": "2024-06-21T18:02:53Z",
+  "updated": "2024-06-22T13:36:28Z",
+  "url": "/activity/173.html",
+  "type": "pullRequest",
+  "tags": [
+    "post",
+    "reviews",
+    "vote/open",
+    "notice"
+  ],
+  "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/173.svg)](https://github.com/commonhaus/foundation/pull/173#issuecomment-2183217739 \"IC_kwDOKRPTI86CIUJL\")\r\n\r\nThese templates provide suggestions for a website footer, GOVERNANCE.md file, and language surrounding use of DCO or CLA.\r\n\r\nAll of this is in the realm of recommendation, rather than requirement, but establishes the flavor of what we're looking for.\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\n> [!TIP]\r\n>  Use the +- button to make a suggestion (instead of just adding a comment) to keep things moving forward.\r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes"
+}

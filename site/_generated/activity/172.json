@@ -1,0 +1,18 @@
+{
+  "title": "Undraft the bylaws: CoC [due June 28]",
+  "rss_title": "🗳️  Undraft the bylaws: CoC [due June 28]",
+  "github": "https://github.com/commonhaus/foundation/pull/172",
+  "author": "ebullient",
+  "number": 172,
+  "date": "2024-06-21T17:31:43Z",
+  "updated": "2024-06-22T12:04:44Z",
+  "url": "/activity/172.html",
+  "type": "pullRequest",
+  "tags": [
+    "post",
+    "reviews",
+    "vote/open",
+    "notice"
+  ],
+  "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/172.svg)](https://github.com/commonhaus/foundation/pull/172#issuecomment-2183161249 \"IC_kwDOKRPTI86CIGWh\")\r\n\r\nContinuing with our reviews, taking a detour into the Code of Conduct policy.\r\n\r\nThis PR includes undrafting a template you can use _if_ your project doesn't already have a Code of Conduct established.\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment)."
+}
