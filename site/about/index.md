@@ -114,7 +114,7 @@ The Commonhaus Foundation relies on the participation of a global community.
 Whether you're a developer, contributor, project leader, or simply passionate about open source, there are many ways to contribute and make an impact.
 From joining discussions, contributing to projects, or participating in governance, your voice and contributions are valued here.
 
-<a href="foundation/COMMUNICATION.md" class="text button">Build with us</a>
+<a href="https://github.com/sponsors/commonhaus" class="text button">Build with us</a>
 
 [Bylaws]: ../foundation/bylaws/0-preface.md
 [cfab]: ../foundation/bylaws/4-cf-advisory-board.md
