@@ -6,7 +6,7 @@
   "groupSize": 12,
   "groupVotes": 7,
   "countedVotes": 8,
-  "droppedVotes": 1,
+  "droppedVotes": 2,
   "votingThreshold": "all",
   "categories": {
     "approve": {
@@ -24,6 +24,12 @@
           "login": "ebullient",
           "url": "https://github.com/ebullient",
           "createdAt": "2024-06-21T18:42:19.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "henri-tremblay",
+          "url": "https://github.com/henri-tremblay",
+          "createdAt": "2024-06-27T21:46:48.000+00:00",
           "reaction": "👍"
         },
         {
@@ -51,26 +57,25 @@
           "reaction": "👍"
         }
       ],
-      "teamTotal": 6,
-      "total": 6
+      "teamTotal": 7,
+      "total": 7
     },
     "ok": {
       "reactions": [
         "👀"
       ],
-      "team": [
-        {
-          "login": "henri-tremblay",
-          "url": "https://github.com/henri-tremblay",
-          "createdAt": "2024-06-27T21:46:35.000+00:00",
-          "reaction": "👀"
-        }
-      ],
-      "teamTotal": 1,
-      "total": 2
+      "team": [],
+      "teamTotal": 0,
+      "total": 1
     }
   },
   "duplicates": [
+    {
+      "login": "henri-tremblay",
+      "url": "https://github.com/henri-tremblay",
+      "createdAt": "2024-06-27T21:46:35.000+00:00",
+      "reaction": "👀"
+    },
     {
       "login": "kenfinnigan",
       "url": "https://github.com/kenfinnigan",
@@ -109,7 +114,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-06-21T18:13:18Z",
-  "updated": "2024-06-27T21:46:38Z",
+  "updated": "2024-06-28T00:27:42Z",
   "url": "/votes/commonhaus/foundation/173.html",
   "tags": [
     "vote/open",
