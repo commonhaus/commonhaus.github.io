@@ -6,7 +6,7 @@
   "groupSize": 12,
   "groupVotes": 8,
   "countedVotes": 8,
-  "droppedVotes": 0,
+  "droppedVotes": 1,
   "votingThreshold": "all",
   "categories": {
     "approve": {
@@ -59,7 +59,7 @@
         {
           "login": "velo",
           "url": "https://github.com/velo",
-          "createdAt": "2024-06-22T02:17:52.000+00:00",
+          "createdAt": "2024-07-02T02:22:56.000+00:00",
           "reaction": "👍"
         }
       ],
@@ -67,7 +67,14 @@
       "total": 8
     }
   },
-  "duplicates": [],
+  "duplicates": [
+    {
+      "login": "velo",
+      "url": "https://github.com/velo",
+      "createdAt": "2024-06-22T02:17:52.000+00:00",
+      "reaction": "👍"
+    }
+  ],
   "missingGroupActors": [
     {
       "login": "evanchooly",
@@ -95,7 +102,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-06-21T17:31:48Z",
-  "updated": "2024-06-28T00:27:52Z",
+  "updated": "2024-07-02T03:27:52Z",
   "url": "/votes/commonhaus/foundation/172.html",
   "tags": [
     "vote/open",
