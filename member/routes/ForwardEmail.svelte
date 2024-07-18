@@ -21,9 +21,9 @@
   } from "../lib/stores";
   import Attestation from "../components/Attestation.svelte";
   import CloseButton from "../components/CloseButton.svelte";
-  import EmailAlias from "../components/EmailAlias.svelte";
   import Loading from "../components/Loading-coffee.svelte";
   import Oops from "../components/Oops.svelte";
+  import { debounce } from "../lib/debounce";
   import { mayHaveEmail } from "../lib/memberStatus";
 
   const emailAttestation = getAttestationText("email");
@@ -34,6 +34,9 @@
   let versionChanged = false;
   let nextDate = "due";
   let aliasUpdates = {};
+  let allRecipients = {};
+  let emailErrors = {};
+  let keys = {};
 
   $: {
     recentAttestation = checkRecentAttestation("email", $commonhausData);
@@ -44,11 +47,20 @@
   }
 
   $: aliasUpdates = JSON.parse(JSON.stringify($aliasTargets));
+  $: keys = Object.keys($aliasTargets)
 
   onMount(async () => {
     await load(ALIASES);
     aliasesLoaded = true;
+    resetAll();
   });
+
+  async function generatePassword(alias) {
+    console.log("Generate password for", alias);
+    if (window.confirm("Are you sure you want to generate a new password?")) {
+      await post(ALIASES + "/password", { alias: alias });
+    }
+  }
 
   async function saveAll() {
     // send only the email alias and the updated target recipients
@@ -57,10 +69,24 @@
       recipients[email] = alias.recipients;
     }
     await post(ALIASES, recipients);
+    resetAll();
   }
 
   function resetAll() {
     aliasUpdates = JSON.parse(JSON.stringify($aliasTargets));
+  }
+
+  const handleInputChange = debounce((alias, event) => {
+    const emails = event.target.value.split(",").map((email) => email.trim()) || [];
+    aliasUpdates[alias].recipients = emails;
+    allRecipients[alias] = event.target.value;
+    emailErrors[alias] = !isValidEmailList(emails);
+    console.log("Update alias", alias, allRecipients[alias], aliasUpdates[alias]?.recipients, emailErrors[alias]);
+  }, 300);
+
+  function isValidEmailList(emails) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emails.every((email) => emailRegex.test(email));
   }
 </script>
 
@@ -90,17 +116,49 @@
   {#if recentAttestation}
     <section class="information">
       <p>
-        Your email {Object.keys(aliasUpdates).length <= 1
+        Your email {keys.length <= 1
           ? "alias"
           : "aliases"}:
       </p>
-      {#if Object.keys(aliasUpdates).length > 0}
-        {#each Object.keys(aliasUpdates) as alias}
-          <EmailAlias {alias} {aliasUpdates} />
-        {/each}
-      {:else}
-        <EmailAlias alias={$gitHubData.login} {aliasUpdates} />
-      {/if}
+      {#each keys as alias (alias)}
+        {@const aliasData = aliasUpdates[alias]}
+        {@const hasVerifiedRecipients = aliasData.verified_recipients?.length > 0}
+        <div class="no-title setting">
+          <label class="label" for={alias}>{alias}</label>
+          <span class="control">
+            <input
+              id={alias}
+              type="text"
+              bind:value={allRecipients[alias]}
+              on:input={(event) => handleInputChange(alias, event)}
+              class:error={emailErrors[alias]}
+            />
+            <div class="tooltip">
+              <button
+                class="input-square"
+                aria-label="Generate a SMTP Password for this alias"
+                disabled={$outboundPost || !hasVerifiedRecipients}
+                on:click={generatePassword(alias)}
+              >
+                <svg width="20" height="20"
+                  ><use
+                    xlink:href="/assets/icon-symbol.svg#icon-square-asterisk"
+                  /></svg
+                >
+                <span class="tooltiptext"
+                  >Generate SMTP Password for this alias; requires verified email
+                  address</span
+                >
+              </button>
+            </div>
+          </span>
+          <footer>
+            Verified recipients: <code
+              >{aliasData.verified_recipients?.join(", ") || ""}</code
+            >
+          </footer>
+        </div>
+      {/each}
 
       <div class="setting">
         <span></span>
@@ -117,7 +175,7 @@
               class="input"
               on:click={resetAll}
               disabled={$outboundPost}>
-              <span>Cancel</span>
+              <span>Reset</span>
               <span class="tooltiptext">Reset to previous values</span>
               </button>
           </div>
