@@ -37,7 +37,7 @@ const markdown = {
                 warning: '<svg width="24" height="24"><use xlink:href="/assets/icon-symbol.svg#icon-warning"/></svg>',
             }
         }],
-        [anchor, { level: 2 }],
+        [anchor, { level: 1 }],
         footnote,
     ]
 };
