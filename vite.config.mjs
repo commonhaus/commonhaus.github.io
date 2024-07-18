@@ -24,7 +24,7 @@ const baseUrl = devMode
 const devModeHook = mockBackend
     ? Deno.readTextFileSync("member/dev-mode.js")
     : "";
-console.log("baseUrl:", baseUrl, ", devModeHook:", devModeHook === "");
+console.log("baseUrl:", baseUrl, ", devModeHook:", devModeHook !== "");
 
 function yamlPlugin() {
   const virtualModuleId = 'virtual:attest-yaml';
