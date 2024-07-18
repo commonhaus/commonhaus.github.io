@@ -33,6 +33,7 @@ main.member {
     &.show {
       display: block;
     }
+
     &:not(.show) {
       display: none;
     }
@@ -80,19 +81,24 @@ main.member {
   .information,
   .info-block,
   .setting {
-    h2, &.no-title {
+
+    h2,
+    &.no-title {
       border-top: 1px solid var(--border-color);
     }
+
     h2 {
       padding-top: .8rem;
       font-size: var(--font-large);
     }
+
     h3 {
       border-top: 1px dotted var(--border-color);
       padding-top: .8rem;
       font-size: var(--font-size);
       @include figtree-medium;
     }
+
     footer {
       flex-basis: 100%;
     }
@@ -111,6 +117,7 @@ main.member {
       justify-content: flex-end;
     }
   }
+
   .control {
     display: flex;
     flex-direction: row;
@@ -174,12 +181,25 @@ main.member {
   }
 
   button[name="reset"] {
-    background-color: var(--button-reset-color);
+    background-color: var(--button-reset-bg);
+    color: var(--button-reset-color);
+  }
+
+  input:disabled,
+  button:disabled {
+    pointer-events: none;
+    background-color: var(--button-disabled-bg);
+    color: var(--button-disabled-color);
+  }
+
+  input.error {
+    border-color: var(--error); // Adjust as needed
   }
 
   .label {
     color: var(--accent);
     @include figtree-medium;
+
     &:after {
       content: ":";
     }
@@ -194,7 +214,7 @@ main.member {
       width: 200px;
       background-color: var(--border-color);
       color: var(--text-normal);
-      padding: 5px 0;
+      padding: 5px;
       border-radius: 6px;
 
       position: absolute;
@@ -206,6 +226,9 @@ main.member {
 
       opacity: 0;
       transition: opacity 0.3s;
+
+      white-space: normal; /* Allow text to wrap */
+      text-align: left;
     }
 
     &:hover .tooltiptext {
@@ -219,14 +242,17 @@ main.member {
     flex-direction: row wrap;
     justify-content: space-between;
   }
+
   .ok,
   .required {
     @include figtree-light;
     font-size: var(--font-size);
   }
+
   .ok {
     color: var(--ok);
   }
+
   .required {
     color: var(--required);
   }
@@ -257,6 +283,7 @@ main.member {
     @include figtree-italic;
     text-align: right;
     color: var(--text-muted);
+
     a {
       color: var(--text-muted);
     }
@@ -294,11 +321,13 @@ main.member {
           text-wrap: nowrap;
         }
       }
+
       .prompt {
         flex: 2 1 auto;
       }
     }
   }
+
   @media (min-width: 800px) {
     min-width: 800px;
   }

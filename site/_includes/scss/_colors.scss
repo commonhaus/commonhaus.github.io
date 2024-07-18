@@ -76,15 +76,21 @@ body {
 
   --button-text-color: var(--dark-green);
   --button-bg-color: var(--light-blue);
-  --button-reset-color: #ccc;
   --button-bg-color-hover: var(--ash-gray);
   --button-border-color: transparent;
+
+  --button-reset-color: var(--text-normal);
+  --button-reset-bg: #ccc;
+
+  --button-disabled-color: #ccc;
+  --button-disabled-bg: transparent;
 
   --input-bg-color: var(--bg-secondary);
 
   --accent: var(--asparagus);
   --ok: var(--fern-green);
   --required: var(--goldenrod);
+  --error: var(--cocoa-brown);
 
   --callout-note: 27, 99, 141; // Blue #1B638D
   --callout-note-title: var(--callout-note);
@@ -127,6 +133,7 @@ body {
   --table-team-votes-bg: var(--british-racing-green-rgb);
 
   --ok: var(--asparagus);
+  --error: var(--cocoa-brown);
 
   --callout-tip-title: var(--light-blue-rgb);
   --callout-success-title: var(--yellow-green-rgb);
@@ -134,6 +141,8 @@ body {
   --callout-note-title: 70, 165, 220; // Blue #46A5DC
   --callout-important-title: 150, 129, 201; // Purple #9681C9
   --callout-caution-title: 213, 119, 119; // Red #D57777
+
+  --button-reset-bg: #333;
 
   a {
     color: #c8c7c7;
