@@ -42,6 +42,7 @@ window["commonhaus"] = {
     post503: async () => {
         await testData('POST', COMMONHAUS, 503, "GATEWAY_TIMEOUT", {});
     },
+    alias_verify: async () => await load(ALIASES + "?verify=true"),
     // Define more methods...
 };
 

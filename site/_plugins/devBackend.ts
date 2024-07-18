@@ -53,12 +53,12 @@ function createMockBackend(): Middleware {
         HAUS?: any,
         INFO?: any,
         APPLY?: any,
-        ALIASES?: any
+        ALIAS?: any
     } = {
         HAUS: { ...haus },
         INFO: { ...user },
         APPLY: {},
-        ALIASES: {}
+        ALIAS: {}
     }
 
     function stateResponse(request: Request): Response {
@@ -127,11 +127,23 @@ function createMockBackend(): Middleware {
             // }
             if (request.method === "POST" || request.method === "PUT") {
                 const body = await request.json();
-                console.log(body, state.ALIASES);
-                state.ALIASES = { ...alias };
-                state.ALIASES["commonhaus-bot@commonhaus.dev"].recipients = body.recipients;
+                // { "commonhaus-bot": [ "something@other" ] }
+                const recipients = body["commonhaus-bot"] || body["commonhaus-bot@commonhaus.dev"] || [];
+                state.ALIAS = { ...alias };
+                state.ALIAS["commonhaus-bot@commonhaus.dev"].recipients = recipients;
+                state.HAUS.services.forwardEmail.active = recipients.length > 0;
             }
             return stateResponse(request);
+        } else if (request.url.endsWith("/member/aliases?verify=true")) {
+            state.ALIAS["commonhaus-bot@commonhaus.dev"].verified_recipients =
+                state.ALIAS["commonhaus-bot@commonhaus.dev"].recipients;
+            return stateResponse(request);
+        } else if (request.url.endsWith("/member/aliases/password")) {
+            console.log("password", request.method);
+            return new Response("{}", {
+                status: 200,
+                statusText: "OK"
+            });
         } else if (request.url.endsWith("/member/apply")) {
             if (request.method === "POST" || request.method === "PUT") {
                 const body = await request.text();
