@@ -4,6 +4,7 @@
     "attach": "echo \"import 'lume/cli.ts'\" | deno run --inspect-wait -A -",
     "build": "deno task lume",
     "vite-build": "deno run -A --node-modules-dir npm:vite build",
+    "vite-watch": "export VITE_APP_DEV_MODE=true && deno run -A --node-modules-dir npm:vite build --watch",
     "serve": "export VITE_APP_DEV_MODE=true && deno task lume -s",
     "serve-all": "export MOCK_BACKEND=true && deno task serve",
     "about": "deno run --allow-run=gh --allow-read=./.github/graphql,./site/_generated --allow-write=./site/_generated ./.github/about.ts",

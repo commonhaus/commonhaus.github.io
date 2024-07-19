@@ -7,27 +7,29 @@
     getNextAttestationDate,
   } from "../lib/attestations";
   import { mayHaveEmail } from "../lib/memberStatus";
-  import {
-    commonhausData,
-    gitHubData,
-  } from "../lib/stores";
+  import { commonhausData, gitHubData } from "../lib/stores";
   import ControlButton from "./ControlButton.svelte";
 
   let eligible = false;
   let date = "due";
-  let hasAttestation = false;
+  let hasRecent = false;
   let service = {};
   let status = MemberStatus.UNKNOWN;
   let title = getAttestationTitle("email");
+  let aliases = [];
 
   $: {
-    service = $commonhausData.services?.forwardEmail || {};
-    status = $commonhausData.status;
-    eligible = mayHaveEmail(status) || (service && service.active);
-  }
-  $: {
     date = getNextAttestationDate("email", $commonhausData);
-    hasAttestation = checkRecentAttestation("email", $commonhausData);
+    hasRecent = checkRecentAttestation("email", $commonhausData);
+    status = $commonhausData.status;
+
+    console.debug($commonhausData.services);
+    service = $commonhausData.services?.forwardEmail || {};
+    aliases = [
+      ...(service.hasDefaultAlias ? [`<code>${$gitHubData.login}@commonhaus.dev</code>`] : []),
+      ...(service.aliases?.map(a => `<code>${a}</code>`) || [])
+    ];
+    eligible = mayHaveEmail(status) || aliases.length > 0;
   }
 </script>
 
@@ -43,25 +45,16 @@
 
   {#if eligible}
     <div class="information">
-      {#if service && service.active}
-        <p>
-          <span class="label">Active</span>
-          <code>{$gitHubData.login}@commonhaus.dev</code
-          >{#if service.alt_alias && service.alt_alias.length > 0}
-            {#each service.alt_alias as alias (alias)},
-              <code>{alias}</code
-              >{#if alias !== service.alt_alias[service.alt_alias.length - 1]},
-              {/if}
-            {/each}
-          {/if}
-        </p>
+      {#if aliases.length > 0}
+      <p>
+        <span class="label">Alias{#if aliases.length > 1}es{/if}</span>
+        {@html aliases.join(", ")}
+      </p>
       {/if}
       <ul>
         <li class="good-until">
           <span>{title}</span>
-          <span class:ok={hasAttestation} class:required={!hasAttestation}
-            >{date}</span
-          >
+          <span class:ok={hasRecent} class:required={!hasRecent}>{date}</span>
         </li>
       </ul>
     </div>

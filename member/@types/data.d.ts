@@ -33,7 +33,7 @@ export interface Services {
 }
 
 export interface ForwardEmail {
-    configured: boolean;
+    hasDefaultAlias: boolean;
     altAlias: string[];
 }
 
