@@ -37,6 +37,7 @@
   let allRecipients = {};
   let emailErrors = {};
   let keys = {};
+  let hasErrors = false;
 
   $: {
     recentAttestation = checkRecentAttestation("email", $commonhausData);
@@ -45,9 +46,6 @@
     recentVersion = getRecentAttestationVersion("email", $commonhausData);
     versionChanged = recentVersion !== emailAttestation.version;
   }
-
-  $: aliasUpdates = JSON.parse(JSON.stringify($aliasTargets));
-  $: keys = Object.keys($aliasTargets)
 
   onMount(async () => {
     await load(ALIASES);
@@ -68,12 +66,21 @@
     for (const [email, alias] of Object.entries(aliasUpdates)) {
       recipients[email] = alias.recipients;
     }
+    console.debug("save all", aliasUpdates, recipients);
     await post(ALIASES, recipients);
     resetAll();
   }
 
   function resetAll() {
+    keys = Object.keys($aliasTargets);
     aliasUpdates = JSON.parse(JSON.stringify($aliasTargets));
+    console.debug(aliasUpdates);
+    for (const alias of keys) {
+      if (aliasUpdates[alias].recipients) {
+        allRecipients[alias] = aliasUpdates[alias].recipients.join(", ");
+        emailErrors[alias] = !isValidEmailList(aliasUpdates[alias].recipients);
+      }
+    }
   }
 
   const handleInputChange = debounce((alias, event) => {
@@ -81,7 +88,8 @@
     aliasUpdates[alias].recipients = emails;
     allRecipients[alias] = event.target.value;
     emailErrors[alias] = !isValidEmailList(emails);
-    console.log("Update alias", alias, allRecipients[alias], aliasUpdates[alias]?.recipients, emailErrors[alias]);
+    hasErrors = Object.values(emailErrors).some((error) => error === true);
+    console.debug("Update alias", alias, allRecipients[alias], aliasUpdates[alias]?.recipients, emailErrors[alias]);
   }, 300);
 
   function isValidEmailList(emails) {
@@ -167,7 +175,7 @@
             name="saveAll"
             class="input"
             on:click={saveAll}
-            disabled={$outboundPost}>Save</button
+            disabled={$outboundPost || hasErrors}>Save</button
           >
           <div class="tooltip">
             <button
