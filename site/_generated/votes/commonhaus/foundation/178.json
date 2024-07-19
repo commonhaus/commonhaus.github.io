@@ -1,0 +1,80 @@
+{
+  "voteType": "marthas",
+  "hasQuorum": false,
+  "isDone": false,
+  "group": "commonhaus/cf-egc",
+  "groupSize": 12,
+  "groupVotes": 0,
+  "countedVotes": 0,
+  "droppedVotes": 0,
+  "votingThreshold": "all",
+  "categories": {},
+  "duplicates": [],
+  "missingGroupActors": [
+    {
+      "login": "aalmiray",
+      "url": "https://github.com/aalmiray"
+    },
+    {
+      "login": "velo",
+      "url": "https://github.com/velo"
+    },
+    {
+      "login": "cowtowncoder",
+      "url": "https://github.com/cowtowncoder"
+    },
+    {
+      "login": "marc0der",
+      "url": "https://github.com/marc0der"
+    },
+    {
+      "login": "henri-tremblay",
+      "url": "https://github.com/henri-tremblay"
+    },
+    {
+      "login": "evanchooly",
+      "url": "https://github.com/evanchooly"
+    },
+    {
+      "login": "gavinking",
+      "url": "https://github.com/gavinking"
+    },
+    {
+      "login": "timtebeek",
+      "url": "https://github.com/timtebeek"
+    },
+    {
+      "login": "maxandersen",
+      "url": "https://github.com/maxandersen"
+    },
+    {
+      "login": "cealsair",
+      "url": "https://github.com/cealsair"
+    },
+    {
+      "login": "kenfinnigan",
+      "url": "https://github.com/kenfinnigan"
+    },
+    {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    }
+  ],
+  "manualCloseComments": null,
+  "commentId": "IC_kwDOKRPTI86FjXwM",
+  "github": "https://github.com/commonhaus/foundation/pull/178",
+  "itemId": "PR_kwDOKRPTI8519Ubz",
+  "itemTitle": "Undraft the bylaws: IP Policy [due 2 Aug]",
+  "number": 178,
+  "repoName": "commonhaus/foundation",
+  "type": "vote",
+  "date": "2024-07-19T23:27:30Z",
+  "updated": "2024-07-19T23:27:30Z",
+  "url": "/votes/commonhaus/foundation/178.html",
+  "tags": [
+    "vote/open",
+    "notice",
+    "vote"
+  ],
+  "closed": false
+}
