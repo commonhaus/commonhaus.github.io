@@ -56,7 +56,7 @@
   async function generatePassword(alias) {
     console.log("Generate password for", alias);
     if (window.confirm("Are you sure you want to generate a new password?")) {
-      await post(ALIASES + "/password", { alias: alias });
+      await post(ALIASES + "/password", { email: alias });
     }
   }
 
