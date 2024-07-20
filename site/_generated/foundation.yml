@@ -126,19 +126,19 @@ policies/README:
     with laws and regulations. Offers access to key documents like Bylaws,
     Code of Conduct, Conflict of Interest Policy, and more.
 
-policies/security-policy:
-  url: /policies/security-policy/
-  description: >
-    How to securely report vulnerabilities in Commonhaus Foundation projects.
-    Details responsible disclosure protocols, direct communication with
-    maintainers, and confidentiality. Step-by-step instructions for effective
-    and safe reporting, maintaining project integrity and community safety.
+# policies/security-policy:
+#   url: /policies/security-policy/
+#   description: >
+#     How to securely report vulnerabilities in Commonhaus Foundation projects.
+#     Details responsible disclosure protocols, direct communication with
+#     maintainers, and confidentiality. Step-by-step instructions for effective
+#     and safe reporting, maintaining project integrity and community safety.
 
-policies/succession-plan:
-  url: /policies/succession-plan/
-  description: >
-    Details the Commonhaus Foundation's strategy for project continuity and
-    leadership transitions.
+# policies/succession-plan:
+#   url: /policies/succession-plan/
+#   description: >
+#     Details the Commonhaus Foundation's strategy for project continuity and
+#     leadership transitions.
 
 policies/trademark-policy:
   url: /policies/trademark-policy/
