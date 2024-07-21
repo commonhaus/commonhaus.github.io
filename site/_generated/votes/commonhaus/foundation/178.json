@@ -4,8 +4,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 12,
-  "groupVotes": 2,
-  "countedVotes": 3,
+  "groupVotes": 3,
+  "countedVotes": 4,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -19,10 +19,16 @@
           "url": "https://github.com/cowtowncoder",
           "createdAt": "2024-07-20T16:36:54.000+00:00",
           "reaction": "👍"
+        },
+        {
+          "login": "henri-tremblay",
+          "url": "https://github.com/henri-tremblay",
+          "createdAt": "2024-07-21T18:59:12.000+00:00",
+          "reaction": "👍"
         }
       ],
-      "teamTotal": 1,
-      "total": 2
+      "teamTotal": 2,
+      "total": 3
     },
     "ok": {
       "reactions": [
@@ -53,10 +59,6 @@
     {
       "login": "marc0der",
       "url": "https://github.com/marc0der"
-    },
-    {
-      "login": "henri-tremblay",
-      "url": "https://github.com/henri-tremblay"
     },
     {
       "login": "evanchooly",
@@ -92,7 +94,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-07-19T23:27:30Z",
-  "updated": "2024-07-21T15:30:32Z",
+  "updated": "2024-07-21T21:27:52Z",
   "url": "/votes/commonhaus/foundation/178.html",
   "tags": [
     "vote/open",
