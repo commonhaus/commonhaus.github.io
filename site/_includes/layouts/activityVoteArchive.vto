@@ -1,7 +1,7 @@
 ---
 layout: layouts/baseIndex.vto
 ---
-{{- set allPosts = search.pages("vote", "date=desc") }}
+{{- set allPosts = search.pages("vote", "number=desc") }}
 {{- set postsByYear = allPosts.reduce((acc, post) => {
   const year = new Date(post.date).getFullYear();
   if (!acc[year]) {
