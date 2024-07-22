@@ -81,7 +81,7 @@ jobs:
           GH_TOKEN: ${{ secrets.WEB_REPO_READ }}
         run: |
           deno task about
-          git add -A -- ./site/_data
+          git add -A -- ./site/_generated/about.yml
           if git diff --quiet HEAD; then
             echo "-- No changes -- "
           else
@@ -97,7 +97,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           deno task activity
-          git add -A -- ./site/activity
+          git add -A -- ./site/_generated/activity ./site/_generated/authors.yml
           if git diff --quiet HEAD; then
             echo "-- No changes -- "
           else
