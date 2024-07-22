@@ -139,7 +139,7 @@ export default function () {
                         return [];
                     }
                     // Group posts matching the given query by year
-                    const allPosts = site.search.pages(page.data.indexQuery, "date=desc");
+                    const allPosts = site.search.pages(page.data.indexQuery, "number=desc");
                     const postsByYear: Record<string, Data[]> = {};
                     if (allPosts.length > 0) {
                         allPosts.forEach((post) => {
