@@ -6,7 +6,7 @@
   "groupSize": 12,
   "groupVotes": 5,
   "countedVotes": 5,
-  "droppedVotes": 0,
+  "droppedVotes": 1,
   "votingThreshold": "all",
   "categories": {
     "approve": {
@@ -33,32 +33,36 @@
           "reaction": "👍"
         },
         {
+          "login": "henri-tremblay",
+          "url": "https://github.com/henri-tremblay",
+          "createdAt": "2024-07-23T10:06:10.000+00:00",
+          "reaction": "👍"
+        },
+        {
           "login": "kenfinnigan",
           "url": "https://github.com/kenfinnigan",
           "createdAt": "2024-07-21T21:13:19.000+00:00",
           "reaction": "👍"
         }
       ],
-      "teamTotal": 4,
-      "total": 4
+      "teamTotal": 5,
+      "total": 5
     },
     "ok": {
-      "reactions": [
-        "👀"
-      ],
-      "team": [
-        {
-          "login": "henri-tremblay",
-          "url": "https://github.com/henri-tremblay",
-          "createdAt": "2024-07-21T19:10:11.000+00:00",
-          "reaction": "👀"
-        }
-      ],
-      "teamTotal": 1,
-      "total": 1
+      "reactions": [],
+      "team": [],
+      "teamTotal": 0,
+      "total": 0
     }
   },
-  "duplicates": [],
+  "duplicates": [
+    {
+      "login": "henri-tremblay",
+      "url": "https://github.com/henri-tremblay",
+      "createdAt": "2024-07-21T19:10:11.000+00:00",
+      "reaction": "👀"
+    }
+  ],
   "missingGroupActors": [
     {
       "login": "velo",
@@ -98,7 +102,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-07-19T22:54:01Z",
-  "updated": "2024-07-23T04:42:43Z",
+  "updated": "2024-07-23T12:27:53Z",
   "url": "/votes/commonhaus/foundation/177.html",
   "tags": [
     "vote/open",
