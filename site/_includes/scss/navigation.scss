@@ -46,9 +46,9 @@ footer.site {
   li {
     display: inline;
   }
-  ul.footer-links li:not(:last-of-type)::after {
-    content: "\00a0\00a0";
-  }
+  // ul.footer-links li:not(:last-of-type)::after {
+  //   content: "\00a0\00a0";
+  // }
   .footer-connect {
     width: 100%;
     display: flex;
@@ -67,6 +67,7 @@ footer.site {
   }
   .footer-links {
     flex-wrap: wrap;
+    gap: 1em;
   }
 }
 

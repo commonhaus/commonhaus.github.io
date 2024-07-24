@@ -2,7 +2,9 @@
 templateEngine: [vto]
 layout: layouts/base.vto
 title: Building a forever home for open source projects
-cssclasses: 
+preload:
+- <link rel="preload" fetchpriority="high" as="image" href="/images/hero_mainimage.webp" type="image/webp">
+cssclasses:
 - site-main
 ---
 <div class="hero">

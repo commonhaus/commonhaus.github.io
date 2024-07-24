@@ -103,6 +103,7 @@ export default function* ({ page }) {
         templateEngine: ['vto', 'md'],
         layout: 'layouts/activityVote.vto',
         description: "vote result",
+        stylesheets: ['/assets/activity-voting.css'],
         metas: {
             robots: false,
             description: "vote result"
@@ -184,6 +185,7 @@ export default function* ({ page }) {
         description: "Vote results",
         url: "/votes/index.html",
         cssclasses: ['vote-index'],
+        stylesheets: ['/assets/activity-voting.css'],
         metas: {
             robots: false,
             description: "vote index"

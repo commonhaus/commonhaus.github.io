@@ -11,6 +11,7 @@ function createPages(pages, dir, uri) {
             data.templateEngine = ['vto', 'md'];
             data.layout = "layouts/activity.vto";
             data.cssclasses = ['activity', 'has-aside'];
+            data.stylesheets = ['/assets/activity-voting.css'];
             if (!data.tags.includes('announcements')) {
                 data.metas = {
                     robots: false

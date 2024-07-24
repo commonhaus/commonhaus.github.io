@@ -5,6 +5,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>{{ page.data.title }}</title>
+<link rel="stylesheet" href="/assets/site.css" />
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+{{- for x of page.data.preload }}
+{{ x }}
+{{ /for -}}
 <meta name="author" content="{{ page.data.metas.author }}" />
 <script type="application/ld+json">
 {
@@ -14,19 +20,16 @@
     "description": "{{- page.data.description -}}"
 }
 </script>
-<link rel="stylesheet" href="/assets/site.css" />
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/images/CF_icon_default.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <meta http-equiv="Content-Security-Policy"
   content="default-src 'self';
   script-src 'self' 'wasm-unsafe-eval'
     'sha256-d79S9lLMhFchw1cNHayQT9538hZCrH8AF8kDZVv7c9Q='
-    'sha256-UTLVhQVhZXD3tfR79XPWBsWICqJrhp134cumGG57+P0='
     'sha256-Ftz1+Zqznf5C6jgwdAo8xCGXkJQhzVzJtozZsgVs3Kg='
-    'sha256-IPph6V64yeidoGTl8wzTWpK0TXa6zDWD85DomqH38bo='
+    'sha256-1K89UoFT4hr7nGDj1zIwEOiWuAOxvXCAjN0L5Mf3iPc='
     https://plausible.commonhaus.org;
   style-src 'self' 'unsafe-hashes'
     'sha256-+HGPn2wSlvrmslkAGw5o4jzJb9vOBRB7el8ZIcA2h60='
@@ -35,7 +38,9 @@
     'sha256-6sXldY8jcyJE/vePnJLrKeenYql3FHrrWuH8lwibofg='
     'sha256-HlG+V4lYsjNcUpXSTL+A3oU2w24KY/qEXEbLCJvhqZg='
     'sha256-Nt3wRTslNZZybqyYfmO5vQAXub6UgomMHfUiXJOdEaw='
-    'sha256-mjCXvCiI7QM+qc3wUjLfE81NQ63GSsJcdb/iy9A0DgM='
+    'sha256-rdVJ/ntNb2qUnfTEuEonDxgelzCQ0ad4Og8BgdCB2q0='
+    'sha256-n15iaUgj90nYAtpiSs5iT6XhAWsAwkKu5i8V8FTQ2lo='
+    'sha256-qfSv/r2l0HVJ8sGu6nJbb+k4TBjr4aAIRyZJeWpV6g4='
     https://fonts.googleapis.com;
   img-src 'self' * data:;
   connect-src 'self' https://haus-keeper.commonhaus.org https://plausible.commonhaus.org http://localhost:8082 ;
@@ -47,6 +52,9 @@
 <script type="text/javascript" src="/assets/scroll-toggle.js" inline></script>
 {{- for x of page.data.scripts }}
 <script type="text/javascript" src="{{ x }}" inline></script>
+{{ /for -}}
+{{- for x of page.data.stylesheets }}
+<link rel="stylesheet" href="{{ x }}" />
 {{ /for -}}
 </head>
 <body>

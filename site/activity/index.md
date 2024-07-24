@@ -1,6 +1,8 @@
 ---
 title: Activity and Notice
 layout: layouts/activityOverview.vto
+stylesheets:
+- /assets/activity-voting.css
 metas:
   robots: false
 ---
