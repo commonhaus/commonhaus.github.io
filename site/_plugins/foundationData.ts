@@ -67,6 +67,7 @@ const mergeFoundationPageData = (page: Page, allPages: Page<Data>[]) => {
         ...page.data,
         ...metaData,
         ...pageData,
+        stylesheets: [ "/assets/bylaws-policies.css"]
     };
     page.data.date = new Date(page.data.date);
     page.data.cssclasses = (metaData.cssclasses || []).concat(pageData.cssclasses || []);

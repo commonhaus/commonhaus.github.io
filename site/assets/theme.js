@@ -26,7 +26,6 @@ function updateButton() {
     'light': 'Color scheme: light; next: system preferences',
     'system': 'Color scheme: system preferences; next: dark'
   };
-  button.setAttribute('aria-label', storedTheme);
   button.setAttribute('title', themeTitles[storedTheme]);
   return button;
 }
