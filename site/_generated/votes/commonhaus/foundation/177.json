@@ -4,8 +4,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 12,
-  "groupVotes": 6,
-  "countedVotes": 6,
+  "groupVotes": 7,
+  "countedVotes": 7,
   "droppedVotes": 2,
   "votingThreshold": "all",
   "categories": {
@@ -49,10 +49,16 @@
           "url": "https://github.com/kenfinnigan",
           "createdAt": "2024-07-21T21:13:19.000+00:00",
           "reaction": "👍"
+        },
+        {
+          "login": "timtebeek",
+          "url": "https://github.com/timtebeek",
+          "createdAt": "2024-07-30T22:58:35.000+00:00",
+          "reaction": "👍"
         }
       ],
-      "teamTotal": 6,
-      "total": 6
+      "teamTotal": 7,
+      "total": 7
     },
     "ok": {
       "reactions": [],
@@ -89,10 +95,6 @@
       "url": "https://github.com/gavinking"
     },
     {
-      "login": "timtebeek",
-      "url": "https://github.com/timtebeek"
-    },
-    {
       "login": "maxandersen",
       "url": "https://github.com/maxandersen"
     },
@@ -110,7 +112,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-07-19T22:54:01Z",
-  "updated": "2024-07-26T06:28:03Z",
+  "updated": "2024-07-31T00:28:05Z",
   "url": "/votes/commonhaus/foundation/177.html",
   "tags": [
     "vote/open",
