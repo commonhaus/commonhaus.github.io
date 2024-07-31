@@ -5,13 +5,14 @@
   "author": "ebullient",
   "number": 180,
   "date": "2024-07-23T13:54:37Z",
-  "updated": "2024-07-23T14:32:41Z",
+  "updated": "2024-07-31T16:55:01Z",
   "url": "/activity/180.html",
   "type": "pullRequest",
   "tags": [
     "post",
     "reviews",
+    "vote/open",
     "notice"
   ],
-  "content": "Defining the role of the Advisory Board is one part of this. \r\n\r\nA question: \r\n\r\nAnother part is defining Advisory Board membership tiers, and what those tiers mean.\r\nDoes that belong here, or in another document? \r\n\r\n(Feel free to withhold your vote until that question is resolved).\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment)."
+  "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/180.svg)](https://github.com/commonhaus/foundation/pull/180#issuecomment-2260957720 \"IC_kwDOKRPTI86Gw3oY\")\r\n\r\nDefining the role of the Advisory Board is one part of this. \r\n\r\nEdit: Tiers will be discussed/managed separately.\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment)."
 }
