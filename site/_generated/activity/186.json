@@ -5,7 +5,7 @@
   "author": "ebullient",
   "number": 186,
   "date": "2024-08-05T14:00:43Z",
-  "updated": "2024-08-05T14:01:15Z",
+  "updated": "2024-08-05T15:27:37Z",
   "url": "/activity/186.html",
   "type": "pullRequest",
   "tags": [
@@ -14,5 +14,5 @@
     "vote/open",
     "notice"
   ],
-  "content": "Clarify language for required files (this ties into Policy Panda, too)\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment)."
+  "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/186.svg)](https://github.com/commonhaus/foundation/pull/186#issuecomment-2269154543 \"IC_kwDOKRPTI86HQIzv\")\r\n\r\nClarify language for required files (this ties into Policy Panda, too)\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment)."
 }
