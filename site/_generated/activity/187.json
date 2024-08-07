@@ -5,13 +5,14 @@
   "author": "ebullient",
   "number": 187,
   "date": "2024-08-06T01:59:40Z",
-  "updated": "2024-08-06T01:59:43Z",
+  "updated": "2024-08-07T18:27:37Z",
   "url": "/activity/187.html",
   "type": "pullRequest",
   "tags": [
     "post",
     "reviews",
+    "vote/open",
     "notice"
   ],
-  "content": "For some context, I was thinking about our language after reading this: \r\n\r\nhttps://pyfound.blogspot.com/2024/07/notice-of-python-software-foundation.html\r\n\r\nWe were already reasonably constrained, but it seemed like constraining required/mandatory indemnification to the council/directors and officers at first makes the most sense. We can then allow the CFC to extend that indemnification to cover others (employees or committee members) when appropriate without requiring revisions to bylaws.\r\n\r\nThe revised text also clarifies that advance payments for indemnifications must be made in writing and include an acknowledgement to repay those funds if necessary\r\n\r\nThe language brings in more legal jargon, but I've included TIPs to try and keep things readable.\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment)."
+  "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/187.svg)](https://github.com/commonhaus/foundation/pull/187#issuecomment-2273807144 \"IC_kwDOKRPTI86Hh4so\")\r\n\r\nFor some context, I was thinking about our language after reading this: \r\n\r\nhttps://pyfound.blogspot.com/2024/07/notice-of-python-software-foundation.html\r\n\r\nWe were already reasonably constrained, but it seemed like constraining required/mandatory indemnification to the council/directors and officers at first makes the most sense. We can then allow the CFC to extend that indemnification to cover others (employees or committee members) when appropriate without requiring revisions to bylaws.\r\n\r\nThe revised text also clarifies that advance payments for indemnifications must be made in writing and include an acknowledgement to repay those funds if necessary\r\n\r\nThe language brings in more legal jargon, but I've included TIPs to try and keep things readable.\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment)."
 }
