@@ -1,0 +1,107 @@
+{
+  "voteType": "marthas",
+  "hasQuorum": false,
+  "isDone": false,
+  "group": "commonhaus/cf-egc",
+  "groupSize": 12,
+  "groupVotes": 4,
+  "countedVotes": 4,
+  "droppedVotes": 0,
+  "votingThreshold": "all",
+  "categories": {
+    "approve": {
+      "reactions": [
+        "👍"
+      ],
+      "team": [
+        {
+          "login": "evanchooly",
+          "url": "https://github.com/evanchooly",
+          "createdAt": "2024-08-06T15:55:02.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "kenfinnigan",
+          "url": "https://github.com/kenfinnigan",
+          "createdAt": "2024-08-06T23:36:55.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "velo",
+          "url": "https://github.com/velo",
+          "createdAt": "2024-08-06T02:20:00.000+00:00",
+          "reaction": "👍"
+        }
+      ],
+      "teamTotal": 3,
+      "total": 3
+    },
+    "ok": {
+      "reactions": [
+        "👀"
+      ],
+      "team": [
+        {
+          "login": "ebullient",
+          "url": "https://github.com/ebullient",
+          "createdAt": "2024-08-06T16:20:32.000+00:00",
+          "reaction": "👀"
+        }
+      ],
+      "teamTotal": 1,
+      "total": 1
+    }
+  },
+  "duplicates": [],
+  "missingGroupActors": [
+    {
+      "login": "aalmiray",
+      "url": "https://github.com/aalmiray"
+    },
+    {
+      "login": "cowtowncoder",
+      "url": "https://github.com/cowtowncoder"
+    },
+    {
+      "login": "marc0der",
+      "url": "https://github.com/marc0der"
+    },
+    {
+      "login": "henri-tremblay",
+      "url": "https://github.com/henri-tremblay"
+    },
+    {
+      "login": "gavinking",
+      "url": "https://github.com/gavinking"
+    },
+    {
+      "login": "timtebeek",
+      "url": "https://github.com/timtebeek"
+    },
+    {
+      "login": "maxandersen",
+      "url": "https://github.com/maxandersen"
+    },
+    {
+      "login": "cealsair",
+      "url": "https://github.com/cealsair"
+    }
+  ],
+  "manualCloseComments": null,
+  "commentId": "IC_kwDOKRPTI86Hh4so",
+  "github": "https://github.com/commonhaus/foundation/pull/187",
+  "itemId": "PR_kwDOKRPTI853gxB9",
+  "itemTitle": "Bylaws: revise indemnification language",
+  "number": 187,
+  "repoName": "commonhaus/foundation",
+  "type": "vote",
+  "date": "2024-08-07T15:58:13Z",
+  "updated": "2024-08-07T15:58:13Z",
+  "url": "/votes/commonhaus/foundation/187.html",
+  "tags": [
+    "vote/open",
+    "notice",
+    "vote"
+  ],
+  "closed": false
+}
