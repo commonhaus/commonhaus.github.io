@@ -6,7 +6,7 @@
   "groupSize": 12,
   "groupVotes": 6,
   "countedVotes": 6,
-  "droppedVotes": 0,
+  "droppedVotes": 1,
   "votingThreshold": "all",
   "categories": {
     "approve": {
@@ -56,7 +56,7 @@
         {
           "login": "maxandersen",
           "url": "https://github.com/maxandersen",
-          "createdAt": "2024-08-08T21:04:39.000+00:00",
+          "createdAt": "2024-08-13T08:17:57.000+00:00",
           "reaction": "👀"
         }
       ],
@@ -64,7 +64,14 @@
       "total": 3
     }
   },
-  "duplicates": [],
+  "duplicates": [
+    {
+      "login": "maxandersen",
+      "url": "https://github.com/maxandersen",
+      "createdAt": "2024-08-08T21:04:39.000+00:00",
+      "reaction": "👀"
+    }
+  ],
   "missingGroupActors": [
     {
       "login": "aalmiray",
@@ -100,7 +107,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-08-07T15:58:13Z",
-  "updated": "2024-08-09T01:40:15Z",
+  "updated": "2024-08-13T08:18:01Z",
   "url": "/votes/commonhaus/foundation/187.html",
   "tags": [
     "vote/open",
