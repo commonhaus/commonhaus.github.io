@@ -73,6 +73,86 @@ const quorumSvg = createSVG({
     progress: 1
 });
 
+const progressSvg = [
+    createSVG({
+        width: 132,
+        height: 18,
+        color: "#FFFACD",
+        status: 'in progress',
+        progress: 0
+    }),
+    createSVG({
+        width: 132,
+        height: 18,
+        color: "#FFFACD",
+        status: 'in progress',
+        progress: .1
+    }),
+    createSVG({
+        width: 132,
+        height: 18,
+        color: "#FFFACD",
+        status: 'in progress',
+        progress: .2
+    }),
+    createSVG({
+        width: 132,
+        height: 18,
+        color: "#FFFACD",
+        status: 'in progress',
+        progress: .3
+    }),
+    createSVG({
+        width: 132,
+        height: 18,
+        color: "#FFFACD",
+        status: 'in progress',
+        progress: .4
+    }),
+    createSVG({
+        width: 132,
+        height: 18,
+        color: "#FFFACD",
+        status: 'in progress',
+        progress: .5
+    }),
+    createSVG({
+        width: 132,
+        height: 18,
+        color: "#FFFACD",
+        status: 'in progress',
+        progress: .6
+    }),
+    createSVG({
+        width: 132,
+        height: 18,
+        color: "#FFFACD",
+        status: 'in progress',
+        progress: .7
+    }),
+    createSVG({
+        width: 132,
+        height: 18,
+        color: "#FFFACD",
+        status: 'in progress',
+        progress: .8
+    }),
+    createSVG({
+        width: 132,
+        height: 18,
+        color: "#FFFACD",
+        status: 'in progress',
+        progress: .9
+    }),
+    createSVG({
+        width: 132,
+        height: 18,
+        color: "#FFFACD",
+        status: 'all',
+        progress: 1
+    })
+];
+
 function createIndex(pages, dir, uri) {
     const files = Deno.readDirSync(dir);
     for (const file of files) {
@@ -91,6 +171,9 @@ function createIndex(pages, dir, uri) {
         }
     }
 }
+
+// Function to round down to the nearest multiple of 10
+const roundDownToNearest10 = (num) => Math.floor(num / 10) * 10;
 
 export default function* ({ page }) {
     const genPages = [];
@@ -119,9 +202,6 @@ export default function* ({ page }) {
                 ? Math.ceil(gp.groupSize / 2)
                 : gp.groupSize;
 
-        // gp.hasQuorum = false;
-        // gp.groupVotes = 1;
-
         let suffix = '';
         let svgContent = unknownSvg;
         if (gp.closed) {
@@ -131,14 +211,12 @@ export default function* ({ page }) {
             suffix = '?quorum';
             svgContent = quorumSvg;
         } else {
-            suffix = `?progress=${gp.groupVotes}`;
-            svgContent = createSVG({
-                width: 132,
-                height: 18,
-                color: "#FFFACD",
-                status: 'in progress',
-                progress: gp.groupVotes / requiredVotes
-            });
+            const progress = gp.groupVotes / requiredVotes;
+            const roundedProgress = roundDownToNearest10(progress * 100) / 10; // Convert to percentage and round up
+            console.log("progress", progress, roundedProgress);
+
+            suffix = `?progress=${progress}`;
+            svgContent = progressSvg[roundedProgress];
         }
 
         const newPage = { ...general, ...gp };
@@ -168,15 +246,11 @@ export default function* ({ page }) {
         content: closedSvg
     }
 
-    yield {
-        url: '/votes/vote-progress.svg',
-        content: createSVG({
-            width: 132,
-            height: 18,
-            color: "#FFFACD",
-            status: 'in progress',
-            progress: .6
-        })
+    for (const [index, svg] of progressSvg.entries()) {
+        yield {
+            url: `/votes/progress-${index}.svg`,
+            content: svg
+        };
     }
 
     yield {
