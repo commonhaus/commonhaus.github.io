@@ -4,8 +4,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 12,
-  "groupVotes": 6,
-  "countedVotes": 6,
+  "groupVotes": 8,
+  "countedVotes": 8,
   "droppedVotes": 1,
   "votingThreshold": "all",
   "categories": {
@@ -14,6 +14,18 @@
         "👍"
       ],
       "team": [
+        {
+          "login": "aalmiray",
+          "url": "https://github.com/aalmiray",
+          "createdAt": "2024-08-14T20:44:25.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "cealsair",
+          "url": "https://github.com/cealsair",
+          "createdAt": "2024-08-14T21:20:01.000+00:00",
+          "reaction": "👍"
+        },
         {
           "login": "evanchooly",
           "url": "https://github.com/evanchooly",
@@ -33,8 +45,8 @@
           "reaction": "👍"
         }
       ],
-      "teamTotal": 3,
-      "total": 3
+      "teamTotal": 5,
+      "total": 5
     },
     "ok": {
       "reactions": [
@@ -74,10 +86,6 @@
   ],
   "missingGroupActors": [
     {
-      "login": "aalmiray",
-      "url": "https://github.com/aalmiray"
-    },
-    {
       "login": "cowtowncoder",
       "url": "https://github.com/cowtowncoder"
     },
@@ -92,10 +100,6 @@
     {
       "login": "timtebeek",
       "url": "https://github.com/timtebeek"
-    },
-    {
-      "login": "cealsair",
-      "url": "https://github.com/cealsair"
     }
   ],
   "manualCloseComments": null,
@@ -107,7 +111,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-08-07T15:58:13Z",
-  "updated": "2024-08-14T05:10:22Z",
+  "updated": "2024-08-14T21:20:04Z",
   "url": "/votes/commonhaus/foundation/187.html",
   "tags": [
     "vote/open",
