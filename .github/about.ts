@@ -82,8 +82,11 @@ function updateEgcReps(data: TeamData) {
 }
 function updateEgcInvites(data: InviteData) {
     const invitees = data.data.organization.team.invitations.nodes;
+    console.log(invitees)
     for (const a of invitees) {
-        about[a.invitee.login] = a.invitee;
+        if (a && a.invitee && a.invitee.login) {
+            about[a.invitee.login] = a.invitee;
+        }
     }
 }
 

@@ -23,6 +23,7 @@ jobs:
     permissions:
       contents: write
       actions: write
+
     concurrency:
       group: "push-content"
       cancel-in-progress: true
