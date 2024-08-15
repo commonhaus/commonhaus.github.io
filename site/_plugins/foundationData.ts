@@ -5,12 +5,19 @@ import { Data, Page } from "lume/core/file.ts";
 
 interface Project {
     name: string;
-    home: string;
     repo: string;
-    logo: string;
-    wordmark: string;
-    description: string;
-    draft: boolean;
+    display?: ProjectDisplay;
+    draft?: boolean;
+    home?: string; // temporary
+    logo?: string; // temporary
+    wordmark?: boolean; // temporary
+    description?: string; // temporary
+}
+interface ProjectDisplay {
+    home?: string;
+    logo?: string;
+    wordmark?: boolean;
+    description?: string;
 }
 
 // -------------------
@@ -133,7 +140,11 @@ export default function () {
                 // add function to get list of projects
                 page.data.listProjects = () => {
                     return Object.values(PROJECT_DATA)
-                        .filter((project) => !project.draft);
+                        .filter((project) => !project.draft)
+                        .map((project) => ({
+                            ...project,
+                            ...project.display
+                        }));
                 }
                 page.data.archiveByYear = () => {
                     if (!page.data.indexQuery) {
