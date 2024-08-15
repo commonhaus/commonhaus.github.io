@@ -1,7 +1,7 @@
 {
   "voteType": "marthas",
   "hasQuorum": false,
-  "isDone": false,
+  "isDone": true,
   "group": "commonhaus/cf-egc",
   "groupSize": 12,
   "groupVotes": 5,
@@ -88,21 +88,31 @@
       "url": "https://github.com/maxandersen"
     }
   ],
-  "manualCloseComments": null,
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2024-08-15T12:27:46.000+00:00",
+    "body": "I'm going to close this one for now, and re-open with revisions to address the concerns raised.",
+    "url": "https://github.com/commonhaus/foundation/pull/179#issuecomment-2291177989"
+  },
   "commentId": "IC_kwDOKRPTI86Flb2y",
   "github": "https://github.com/commonhaus/foundation/pull/179",
   "itemId": "PR_kwDOKRPTI8519gVC",
-  "itemTitle": "Undraft the bylaws: Trademark Policy [due 2 Aug]",
+  "itemTitle": "Undraft the bylaws: Trademark Policy [due 17 Aug]",
   "number": 179,
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-07-20T15:22:45Z",
-  "updated": "2024-07-30T22:53:02Z",
+  "updated": "2024-08-15T12:27:50Z",
   "url": "/votes/commonhaus/foundation/179.html",
   "tags": [
-    "vote/open",
     "notice",
-    "vote"
+    "vote/done",
+    "vote",
+    "closed"
   ],
-  "closed": false
+  "closed": true,
+  "closedAt": "2024-08-15T12:27:46Z"
 }
