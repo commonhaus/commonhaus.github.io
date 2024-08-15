@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   gap: 3em;
-  align-items: center;
+  align-items: stretch;
   margin-top: 2em;
 
   .card {
@@ -19,6 +19,7 @@
     .text-content {
       display: flex;
       flex-direction: column;
+      align-self: stretch;
       align-items: flex-start;
       gap: .5em;
 
@@ -195,6 +196,13 @@ main.site-main {
       max-height: 100px;
       width: auto;
     }
+    .wordmark {
+      font-weight: 700;
+      font-size: 50px;
+    }
+    .text-content {
+      flex: 1;
+    }
   }
 }
 img.dark-only {
@@ -210,10 +218,6 @@ img.light-only {
   img.light-only {
     display: none;
   }
-}
-.wordmark {
-  font-weight: 700;
-  font-size: 50px;
 }
 
 main.about {
