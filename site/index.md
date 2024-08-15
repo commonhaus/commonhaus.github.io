@@ -89,10 +89,12 @@ cssclasses:
     <div class="card">
       <span class="logo">
       {{- if project["logo-dark"] }}
-        <img src='{{ project["logo-dark"] }}' alt="" aria-hidden="true" class='dark-only{{ if project.wordmark }} wordmark{{ /if }}' />
+        <img src='{{ project["logo-dark"] }}' alt="" aria-hidden="true" class='dark-only' />
       {{ /if }}
       {{ if project.logo }}
-        <img src="{{ project.logo }}" alt="" aria-hidden="true" class='{{- if project["logo-dark"] }}light-only{{ /if }}{{ if project.wordmark }} wordmark{{ /if }}'/>
+        <img src="{{ project.logo }}" alt="" aria-hidden="true" class='{{- if project["logo-dark"] }}light-only{{ /if }}'/>
+      {{ else }}
+        <div class="wordmark">{{ project.name }}</div>
       {{ /if }}
       </span>
       <div class="text-content">
