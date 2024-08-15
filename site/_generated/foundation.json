@@ -48,7 +48,7 @@
     "genUrl": "/CONTRIBUTING.html"
   },
   "TRADEMARKS.md": {
-    "date": "2024-06-14T18:58:01.000Z",
+    "date": "2024-08-15T19:14:01.000Z",
     "srcPath": "TRADEMARKS.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/TRADEMARKS.md",
@@ -613,7 +613,7 @@
     "genUrl": "/agreements/membership/members.yaml"
   },
   "PROJECTS.yaml": {
-    "date": "2024-08-15T17:44:13.000Z",
+    "date": "2024-08-15T19:09:08.000Z",
     "srcPath": "PROJECTS.yaml",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/PROJECTS.yaml",
@@ -627,10 +627,27 @@
     "genUrl": "/SUPPORTERS.yaml"
   },
   "CONTACTS.yaml": {
-    "date": "2024-08-08T16:13:59.000Z",
+    "date": "2024-08-15T19:09:08.000Z",
     "srcPath": "CONTACTS.yaml",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/CONTACTS.yaml",
     "genUrl": "/CONTACTS.yaml"
+  },
+  "agreements/bootstrapping/agreements/bootstrapping/2024-07-31-bootstrapping-quarkus.md": {
+    "date": "2024-08-15T19:09:08.000Z",
+    "srcPath": "agreements/bootstrapping/agreements/bootstrapping/2024-07-31-bootstrapping-quarkus.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/agreements/bootstrapping/2024-07-31-bootstrapping-quarkus.md",
+    "type": "submodule",
+    "layout": "layouts/policies.vto",
+    "cssclasses": [
+      "bylaws",
+      "has-aside"
+    ],
+    "tags": [
+      "policies",
+      "legal"
+    ],
+    "genUrl": "/agreements/bootstrapping/agreements/bootstrapping/2024-07-31-bootstrapping-quarkus.html"
   }
 }
