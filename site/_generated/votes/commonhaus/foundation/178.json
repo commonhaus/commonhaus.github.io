@@ -29,7 +29,7 @@
         {
           "login": "cowtowncoder",
           "url": "https://github.com/cowtowncoder",
-          "createdAt": "2024-07-20T16:36:54.000+00:00",
+          "createdAt": "2024-08-15T15:31:26.000+00:00",
           "reaction": "👍"
         },
         {
@@ -104,12 +104,12 @@
   "commentId": "IC_kwDOKRPTI86FjXwM",
   "github": "https://github.com/commonhaus/foundation/pull/178",
   "itemId": "PR_kwDOKRPTI8519Ubz",
-  "itemTitle": "Undraft the bylaws: IP Policy [due 2 Aug]",
+  "itemTitle": "Undraft the bylaws: IP Policy [due 17 Aug]",
   "number": 178,
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-07-19T23:27:30Z",
-  "updated": "2024-07-26T06:27:53Z",
+  "updated": "2024-08-15T18:28:31Z",
   "url": "/votes/commonhaus/foundation/178.html",
   "tags": [
     "vote/open",
