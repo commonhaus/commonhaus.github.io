@@ -132,3 +132,10 @@ velo:
   bio: >-
     Java geek and open-source enthusiast, leading projects here and there. Feign
     lead, QueryDSL stalwart, and Commonhaus advocate.
+dandreadis:
+  login: dandreadis
+  url: 'https://github.com/dandreadis'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/332924?v=4'
+  company: Red Hat
+  name: Dimitris Andreadis
+  bio: ''
