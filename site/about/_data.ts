@@ -18,12 +18,8 @@ interface ProjectContact extends Contact {
     projects?: ProjectData[];
 }
 interface ProjectData {
-  name?: string
-  home?: string
-  repo?: string
-  logo?: string
-  wordmark?: boolean
-  description?: string
+  name?: string;
+  repo?: string;
 }
 interface User {
     login: string;

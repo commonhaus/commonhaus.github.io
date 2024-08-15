@@ -213,7 +213,6 @@ export default function* ({ page }) {
         } else {
             const progress = gp.groupVotes / requiredVotes;
             const roundedProgress = roundDownToNearest10(progress * 100) / 10; // Convert to percentage and round up
-            console.log("progress", progress, roundedProgress);
 
             suffix = `?progress=${progress}`;
             svgContent = progressSvg[roundedProgress];
