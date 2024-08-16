@@ -1,6 +1,6 @@
-import { ensureDirSync } from "https://deno.land/std@0.114.0/fs/mod.ts";
-import { join } from "https://deno.land/std@0.114.0/path/mod.ts";
-import { safeLoad, safeDump } from "https://deno.land/x/js_yaml_port@3.14.0/js-yaml.js";
+import { ensureDirSync } from "stdFs";
+import { join } from "stdPath";
+import { safeLoad, safeDump } from "jsYaml";
 
 interface Problem {
     path: string[];

@@ -1,6 +1,6 @@
 import Site from "lume/core/site.ts";
 import modifyUrls from "lume/plugins/modify_urls.ts";
-import { safeLoad } from "https://deno.land/x/js_yaml_port@3.14.0/js-yaml.js";
+import { safeLoad } from "jsYaml";
 import { Data, Page } from "lume/core/file.ts";
 
 interface Project {

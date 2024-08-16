@@ -1,4 +1,4 @@
-import { safeLoad, safeDump } from "https://deno.land/x/js_yaml_port@3.14.0/js-yaml.js";
+import { safeLoad, safeDump } from "jsYaml";
 
 interface Problem {
     path: string[];

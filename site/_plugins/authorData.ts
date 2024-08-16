@@ -1,6 +1,6 @@
 import Site from "lume/core/site.ts";
-import { safeLoad } from "https://deno.land/x/js_yaml_port@3.14.0/js-yaml.js";
-import { Data, Page } from "lume/core/file.ts";
+import { safeLoad } from "jsYaml";
+import { Page } from "lume/core/file.ts";
 
 interface Author {
     login: string;

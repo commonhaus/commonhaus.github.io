@@ -1,5 +1,5 @@
 import SVGSpriter from "npm:svg-sprite";
-import { path } from "https://deno.land/x/vento@v0.10.0/deps.ts";
+import { path } from "vento";
 
 
 async function compileSprites(files, scope) {
