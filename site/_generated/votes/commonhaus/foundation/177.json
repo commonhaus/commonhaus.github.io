@@ -3,7 +3,7 @@
   "hasQuorum": false,
   "isDone": false,
   "group": "commonhaus/cf-egc",
-  "groupSize": 12,
+  "groupSize": 13,
   "groupVotes": 10,
   "countedVotes": 11,
   "droppedVotes": 2,
@@ -105,6 +105,10 @@
       "url": "https://github.com/velo"
     },
     {
+      "login": "dandreadis",
+      "url": "https://github.com/dandreadis"
+    },
+    {
       "login": "marc0der",
       "url": "https://github.com/marc0der"
     }
@@ -118,7 +122,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-07-19T22:54:01Z",
-  "updated": "2024-08-16T00:28:21Z",
+  "updated": "2024-08-16T12:27:51Z",
   "url": "/votes/commonhaus/foundation/177.html",
   "tags": [
     "vote/open",
