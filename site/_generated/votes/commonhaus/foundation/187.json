@@ -3,7 +3,7 @@
   "hasQuorum": false,
   "isDone": false,
   "group": "commonhaus/cf-egc",
-  "groupSize": 12,
+  "groupSize": 13,
   "groupVotes": 10,
   "countedVotes": 10,
   "droppedVotes": 1,
@@ -107,6 +107,10 @@
   ],
   "missingGroupActors": [
     {
+      "login": "dandreadis",
+      "url": "https://github.com/dandreadis"
+    },
+    {
       "login": "marc0der",
       "url": "https://github.com/marc0der"
     },
@@ -124,7 +128,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-08-07T15:58:13Z",
-  "updated": "2024-08-15T21:41:30Z",
+  "updated": "2024-08-16T12:28:21Z",
   "url": "/votes/commonhaus/foundation/187.html",
   "tags": [
     "vote/open",
