@@ -6,7 +6,7 @@
   "groupSize": 13,
   "groupVotes": 7,
   "countedVotes": 7,
-  "droppedVotes": 0,
+  "droppedVotes": 1,
   "votingThreshold": "all",
   "categories": {
     "approve": {
@@ -14,12 +14,6 @@
         "👍"
       ],
       "team": [
-        {
-          "login": "aalmiray",
-          "url": "https://github.com/aalmiray",
-          "createdAt": "2024-08-14T20:43:11.000+00:00",
-          "reaction": "👍"
-        },
         {
           "login": "cealsair",
           "url": "https://github.com/cealsair",
@@ -39,14 +33,20 @@
           "reaction": "👍"
         }
       ],
-      "teamTotal": 4,
-      "total": 4
+      "teamTotal": 3,
+      "total": 3
     },
     "ok": {
       "reactions": [
         "👀"
       ],
       "team": [
+        {
+          "login": "aalmiray",
+          "url": "https://github.com/aalmiray",
+          "createdAt": "2024-08-16T12:52:19.000+00:00",
+          "reaction": "👀"
+        },
         {
           "login": "ebullient",
           "url": "https://github.com/ebullient",
@@ -66,11 +66,18 @@
           "reaction": "👀"
         }
       ],
-      "teamTotal": 3,
-      "total": 3
+      "teamTotal": 4,
+      "total": 4
     }
   },
-  "duplicates": [],
+  "duplicates": [
+    {
+      "login": "aalmiray",
+      "url": "https://github.com/aalmiray",
+      "createdAt": "2024-08-14T20:43:11.000+00:00",
+      "reaction": "👍"
+    }
+  ],
   "missingGroupActors": [
     {
       "login": "velo",
@@ -106,7 +113,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-08-05T14:01:13Z",
-  "updated": "2024-08-16T11:04:39Z",
+  "updated": "2024-08-16T12:52:22Z",
   "url": "/votes/commonhaus/foundation/186.html",
   "tags": [
     "vote/open",
