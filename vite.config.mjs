@@ -1,7 +1,7 @@
-import { safeLoad } from "https://deno.land/x/js_yaml_port@3.14.0/js-yaml.js";
-import * as path from "https://deno.land/std@0.107.0/path/mod.ts";
+import { safeLoad } from "jsYaml";
+import * as path from "stdPath";
 import { defineConfig } from 'npm:vite';
-import denoResolve from 'https://deno.land/x/vite_plugin_deno_resolve@0.5.0/mod.ts';
+import denoResolve from "denoResolve";
 import { svelte, vitePreprocess } from 'npm:@sveltejs/vite-plugin-svelte';
 import markdownIt from "npm:markdown-it";
 import preprocess from "npm:svelte-preprocess";

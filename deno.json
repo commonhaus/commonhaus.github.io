@@ -6,7 +6,7 @@
     "vite-build": "deno run -A --node-modules-dir npm:vite build",
     "vite-watch": "export VITE_APP_DEV_MODE=true && deno run -A --node-modules-dir npm:vite build --watch",
     "serve": "export VITE_APP_DEV_MODE=true && deno task lume -s",
-    "serve-all": "export MOCK_BACKEND=true && deno task serve",
+    "serve-all": "export MOCK_BACKEND=true && deno task serve & deno task vite-watch",
     "about": "deno run --allow-run=gh --allow-read=./.github/graphql,./site/_generated --allow-write=./site/_generated ./.github/about.ts",
     "activity": "deno run --allow-run=gh --allow-read=./.github/graphql,./site/activity,./site/_generated --allow-write=./site/_generated ./.github/activity.ts",
     "lastmod": "deno run --allow-run=git,gh --allow-read=. --allow-write=./site/_generated ./.github/lastmod.ts",
@@ -20,10 +20,16 @@
     ]
   },
   "imports": {
-    "lume/": "https://deno.land/x/lume@v2.2.1/",
+    "denoResolve": "https://deno.land/x/vite_plugin_deno_resolve@0.5.0/mod.ts",
+    "stdFs": "https://deno.land/std@0.114.0/fs/mod.ts",
+    "jsYaml": "https://deno.land/x/js_yaml_port@3.14.0/js-yaml.js",
+    "lume/": "https://deno.land/x/lume@v2.2.4/",
     "npm:markdown-it": "npm:markdown-it@14.0.0",
     "npm:markdown-it-anchor": "npm:markdown-it-anchor@8.6.7",
     "npm:markdown-it-footnote": "npm:markdown-it-footnote@4.0.0",
-    "npm:markdown-it-obsidian-callouts": "npm:markdown-it-obsidian-callouts@0.2.6"
+    "npm:markdown-it-obsidian-callouts": "npm:markdown-it-obsidian-callouts@0.2.6",
+    "stdPath": "https://deno.land/std@0.107.0/path/mod.ts",
+    "toc": "https://deno.land/x/lume_markdown_plugins@v0.7.0/toc.ts",
+    "vento": "https://deno.land/x/vento@v0.10.0/deps.ts"
   }
 }

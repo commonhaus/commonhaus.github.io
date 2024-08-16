@@ -1,4 +1,4 @@
-import { safeLoad } from "https://deno.land/x/js_yaml_port@3.14.0/js-yaml.js";
+import { safeLoad } from "jsYaml";
 
 // Merge contents of CONTACTS.yaml, PROJECTS.yaml and ./site/_generated/about.yml
 // into a single data structure for Project Representatives and Councilors

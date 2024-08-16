@@ -1,4 +1,4 @@
-import { path } from "https://deno.land/x/vento@v0.10.0/deps.ts";
+import { path } from "vento";
 
 function createSVG({ width, height, color, status, progress }) {
     const voteWidth = 46;

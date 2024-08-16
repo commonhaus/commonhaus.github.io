@@ -13,7 +13,7 @@ import sass from "lume/plugins/sass.ts";
 import sitemap from "lume/plugins/sitemap.ts";
 import slugify_urls from "lume/plugins/slugify_urls.ts";
 
-import toc from "https://deno.land/x/lume_markdown_plugins@v0.7.0/toc.ts";
+import toc from "toc";
 
 import anchor from "npm:markdown-it-anchor";
 import footnote from "npm:markdown-it-footnote";
