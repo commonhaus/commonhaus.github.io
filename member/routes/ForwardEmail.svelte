@@ -85,6 +85,9 @@
 
   const handleInputChange = debounce((alias, event) => {
     const emails = event.target.value.split(",").map((email) => email.trim()) || [];
+    if (!aliasUpdates[alias]) {
+      aliasUpdates[alias] = {};
+    }
     aliasUpdates[alias].recipients = emails;
     allRecipients[alias] = event.target.value;
     emailErrors[alias] = !isValidEmailList(emails);
@@ -128,9 +131,49 @@
           ? "alias"
           : "aliases"}:
       </p>
-      {#each keys as alias (alias)}
-        {@const aliasData = aliasUpdates[alias]}
-        {@const hasVerifiedRecipients = aliasData.verified_recipients?.length > 0}
+      <div class="header setting"><div>Alias</div><div>Target address</div></div>
+      {#if keys.length > 0}
+        {#each keys as alias (alias)}
+          {@const aliasData = aliasUpdates[alias]}
+          {@const hasVerifiedRecipients = aliasData.verified_recipients?.length > 0}
+          <div class="no-title setting">
+            <label class="label" for={alias}>{alias}</label>
+            <span class="control">
+              <input
+                id={alias}
+                type="text"
+                bind:value={allRecipients[alias]}
+                on:input={(event) => handleInputChange(alias, event)}
+                class:error={emailErrors[alias]}
+              />
+              <div class="tooltip">
+                <button
+                  class="input-square"
+                  aria-label="Generate a SMTP Password for this alias"
+                  disabled={$outboundPost || !hasVerifiedRecipients}
+                  on:click={generatePassword(alias)}
+                >
+                  <svg width="20" height="20"
+                    ><use
+                      xlink:href="/assets/icon-symbol.svg#icon-square-asterisk"
+                    /></svg
+                  >
+                  <span class="tooltiptext"
+                    >Generate SMTP Password for this alias; requires verified email
+                    address</span
+                  >
+                </button>
+              </div>
+            </span>
+            <footer>
+              Verified recipients: <code
+                >{aliasData.verified_recipients?.join(", ") || ""}</code
+              >
+            </footer>
+          </div>
+        {/each}
+      {:else}
+        {@const alias = $gitHubData.login} <!-- Assign a default value to alias -->
         <div class="no-title setting">
           <label class="label" for={alias}>{alias}</label>
           <span class="control">
@@ -141,32 +184,9 @@
               on:input={(event) => handleInputChange(alias, event)}
               class:error={emailErrors[alias]}
             />
-            <div class="tooltip">
-              <button
-                class="input-square"
-                aria-label="Generate a SMTP Password for this alias"
-                disabled={$outboundPost || !hasVerifiedRecipients}
-                on:click={generatePassword(alias)}
-              >
-                <svg width="20" height="20"
-                  ><use
-                    xlink:href="/assets/icon-symbol.svg#icon-square-asterisk"
-                  /></svg
-                >
-                <span class="tooltiptext"
-                  >Generate SMTP Password for this alias; requires verified email
-                  address</span
-                >
-              </button>
-            </div>
           </span>
-          <footer>
-            Verified recipients: <code
-              >{aliasData.verified_recipients?.join(", ") || ""}</code
-            >
-          </footer>
         </div>
-      {/each}
+      {/if}
 
       <div class="setting">
         <span></span>
