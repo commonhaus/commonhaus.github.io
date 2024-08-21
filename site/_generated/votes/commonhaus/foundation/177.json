@@ -1,12 +1,12 @@
 {
   "voteType": "marthas",
-  "hasQuorum": false,
-  "isDone": false,
+  "hasQuorum": true,
+  "isDone": true,
   "group": "commonhaus/cf-egc",
   "groupSize": 13,
-  "groupVotes": 10,
-  "countedVotes": 11,
-  "droppedVotes": 2,
+  "groupVotes": 13,
+  "countedVotes": 14,
+  "droppedVotes": 3,
   "votingThreshold": "all",
   "categories": {
     "approve": {
@@ -30,6 +30,12 @@
           "login": "cowtowncoder",
           "url": "https://github.com/cowtowncoder",
           "createdAt": "2024-07-20T16:34:52.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "dandreadis",
+          "url": "https://github.com/dandreadis",
+          "createdAt": "2024-08-21T19:49:07.000+00:00",
           "reaction": "👍"
         },
         {
@@ -63,6 +69,12 @@
           "reaction": "👍"
         },
         {
+          "login": "marc0der",
+          "url": "https://github.com/marc0der",
+          "createdAt": "2024-08-25T15:03:26.000+00:00",
+          "reaction": "👍"
+        },
+        {
           "login": "maxandersen",
           "url": "https://github.com/maxandersen",
           "createdAt": "2024-08-08T21:02:00.000+00:00",
@@ -73,10 +85,16 @@
           "url": "https://github.com/timtebeek",
           "createdAt": "2024-07-30T22:58:35.000+00:00",
           "reaction": "👍"
+        },
+        {
+          "login": "velo",
+          "url": "https://github.com/velo",
+          "createdAt": "2024-08-25T15:10:10.000+00:00",
+          "reaction": "👍"
         }
       ],
-      "teamTotal": 10,
-      "total": 11
+      "teamTotal": 13,
+      "total": 14
     },
     "ok": {
       "reactions": [],
@@ -86,6 +104,12 @@
     }
   },
   "duplicates": [
+    {
+      "login": "velo",
+      "url": "https://github.com/velo",
+      "createdAt": "2024-08-21T09:53:17.000+00:00",
+      "reaction": "👍"
+    },
     {
       "login": "aalmiray",
       "url": "https://github.com/aalmiray",
@@ -99,21 +123,16 @@
       "reaction": "👀"
     }
   ],
-  "missingGroupActors": [
-    {
-      "login": "velo",
-      "url": "https://github.com/velo"
+  "missingGroupActors": [],
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
     },
-    {
-      "login": "dandreadis",
-      "url": "https://github.com/dandreadis"
-    },
-    {
-      "login": "marc0der",
-      "url": "https://github.com/marc0der"
-    }
-  ],
-  "manualCloseComments": null,
+    "createdAt": "2024-08-26T12:08:00.000+00:00",
+    "body": "no disagreement",
+    "url": "https://github.com/commonhaus/foundation/pull/177#issuecomment-2310050171"
+  },
   "commentId": "IC_kwDOKRPTI86Fi3AX",
   "github": "https://github.com/commonhaus/foundation/pull/177",
   "itemId": "PR_kwDOKRPTI8519INn",
@@ -122,12 +141,15 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-07-19T22:54:01Z",
-  "updated": "2024-08-16T12:27:51Z",
+  "updated": "2024-08-26T12:08:03Z",
   "url": "/votes/commonhaus/foundation/177.html",
   "tags": [
-    "vote/open",
     "notice",
-    "vote"
+    "vote/done",
+    "vote/quorum",
+    "vote",
+    "closed"
   ],
-  "closed": false
+  "closed": true,
+  "closedAt": "2024-08-26T12:07:56Z"
 }

@@ -4,8 +4,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 13,
-  "groupVotes": 8,
-  "countedVotes": 9,
+  "groupVotes": 10,
+  "countedVotes": 11,
   "droppedVotes": 1,
   "votingThreshold": "all",
   "categories": {
@@ -33,6 +33,12 @@
           "reaction": "👍"
         },
         {
+          "login": "ebullient",
+          "url": "https://github.com/ebullient",
+          "createdAt": "2024-08-27T02:24:36.000+00:00",
+          "reaction": "👍"
+        },
+        {
           "login": "gavinking",
           "url": "https://github.com/gavinking",
           "createdAt": "2024-08-15T22:06:05.000+00:00",
@@ -55,10 +61,16 @@
           "url": "https://github.com/marc0der",
           "createdAt": "2024-07-22T14:47:23.000+00:00",
           "reaction": "👍"
+        },
+        {
+          "login": "velo",
+          "url": "https://github.com/velo",
+          "createdAt": "2024-08-21T09:55:38.000+00:00",
+          "reaction": "👍"
         }
       ],
-      "teamTotal": 7,
-      "total": 8
+      "teamTotal": 9,
+      "total": 10
     },
     "ok": {
       "reactions": [
@@ -86,10 +98,6 @@
   ],
   "missingGroupActors": [
     {
-      "login": "velo",
-      "url": "https://github.com/velo"
-    },
-    {
       "login": "dandreadis",
       "url": "https://github.com/dandreadis"
     },
@@ -100,10 +108,6 @@
     {
       "login": "timtebeek",
       "url": "https://github.com/timtebeek"
-    },
-    {
-      "login": "ebullient",
-      "url": "https://github.com/ebullient"
     }
   ],
   "manualCloseComments": null,
@@ -115,7 +119,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-07-19T23:27:30Z",
-  "updated": "2024-08-16T12:28:11Z",
+  "updated": "2024-08-27T03:28:17Z",
   "url": "/votes/commonhaus/foundation/178.html",
   "tags": [
     "vote/open",

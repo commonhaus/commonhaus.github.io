@@ -5,14 +5,16 @@
   "author": "ebullient",
   "number": 177,
   "date": "2024-07-19T22:53:43Z",
-  "updated": "2024-08-16T12:27:51Z",
+  "updated": "2024-08-26T12:08:05Z",
   "url": "/activity/177.html",
   "type": "pullRequest",
   "tags": [
     "post",
     "reviews",
-    "vote/open",
-    "notice"
+    "notice",
+    "vote/done",
+    "vote/quorum"
   ],
-  "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/177.svg)](https://github.com/commonhaus/foundation/pull/177#issuecomment-2240507927 \"IC_kwDOKRPTI86Fi3AX\")\r\n\r\nContinuing with our reviews: the Conflict of Interest policy.\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment)."
+  "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/177.svg)](https://github.com/commonhaus/foundation/pull/177#issuecomment-2240507927 \"IC_kwDOKRPTI86Fi3AX\")\r\n\r\nContinuing with our reviews: the Conflict of Interest policy.\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment).",
+  "closedAt": "2024-08-26T12:07:56Z"
 }
