@@ -1,11 +1,11 @@
 {
   "voteType": "marthas",
-  "hasQuorum": false,
+  "hasQuorum": true,
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 13,
-  "groupVotes": 12,
-  "countedVotes": 13,
+  "groupVotes": 13,
+  "countedVotes": 14,
   "droppedVotes": 2,
   "votingThreshold": "all",
   "categories": {
@@ -69,6 +69,12 @@
           "reaction": "👍"
         },
         {
+          "login": "marc0der",
+          "url": "https://github.com/marc0der",
+          "createdAt": "2024-08-25T15:03:26.000+00:00",
+          "reaction": "👍"
+        },
+        {
           "login": "maxandersen",
           "url": "https://github.com/maxandersen",
           "createdAt": "2024-08-08T21:02:00.000+00:00",
@@ -87,8 +93,8 @@
           "reaction": "👍"
         }
       ],
-      "teamTotal": 12,
-      "total": 13
+      "teamTotal": 13,
+      "total": 14
     },
     "ok": {
       "reactions": [],
@@ -111,12 +117,7 @@
       "reaction": "👀"
     }
   ],
-  "missingGroupActors": [
-    {
-      "login": "marc0der",
-      "url": "https://github.com/marc0der"
-    }
-  ],
+  "missingGroupActors": [],
   "manualCloseComments": null,
   "commentId": "IC_kwDOKRPTI86Fi3AX",
   "github": "https://github.com/commonhaus/foundation/pull/177",
@@ -126,11 +127,12 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-07-19T22:54:01Z",
-  "updated": "2024-08-21T21:28:04Z",
+  "updated": "2024-08-25T15:03:29Z",
   "url": "/votes/commonhaus/foundation/177.html",
   "tags": [
     "vote/open",
     "notice",
+    "vote/quorum",
     "vote"
   ],
   "closed": false
