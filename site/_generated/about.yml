@@ -67,11 +67,11 @@ kenfinnigan:
   url: 'https://github.com/kenfinnigan'
   avatarUrl: >-
     https://avatars.githubusercontent.com/u/441240?u=aea870e6cad6edfff45e4fc1603b4531c8f57b44&v=4
-  company: '@lumigo-io '
+  company: null
   name: Ken Finnigan
   bio: >-
     Open source engineer, observability, @open-telemetry, author, amateur
-    genealogist. @lumigo-io. @commonhaus Council member
+    genealogist. @commonhaus Council member
 cowtowncoder:
   login: cowtowncoder
   url: 'https://github.com/cowtowncoder'
