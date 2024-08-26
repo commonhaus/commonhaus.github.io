@@ -1,7 +1,7 @@
 {
   "voteType": "marthas",
   "hasQuorum": true,
-  "isDone": false,
+  "isDone": true,
   "group": "commonhaus/cf-egc",
   "groupSize": 13,
   "groupVotes": 13,
@@ -124,7 +124,15 @@
     }
   ],
   "missingGroupActors": [],
-  "manualCloseComments": null,
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2024-08-26T12:08:00.000+00:00",
+    "body": "no disagreement",
+    "url": "https://github.com/commonhaus/foundation/pull/177#issuecomment-2310050171"
+  },
   "commentId": "IC_kwDOKRPTI86Fi3AX",
   "github": "https://github.com/commonhaus/foundation/pull/177",
   "itemId": "PR_kwDOKRPTI8519INn",
@@ -133,13 +141,15 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-07-19T22:54:01Z",
-  "updated": "2024-08-25T15:27:43Z",
+  "updated": "2024-08-26T12:08:03Z",
   "url": "/votes/commonhaus/foundation/177.html",
   "tags": [
-    "vote/open",
     "notice",
+    "vote/done",
     "vote/quorum",
-    "vote"
+    "vote",
+    "closed"
   ],
-  "closed": false
+  "closed": true,
+  "closedAt": "2024-08-26T12:07:56Z"
 }
