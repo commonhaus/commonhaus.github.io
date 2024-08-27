@@ -1,7 +1,7 @@
 {
   "voteType": "marthas",
   "hasQuorum": true,
-  "isDone": false,
+  "isDone": true,
   "group": "commonhaus/cf-council",
   "groupSize": 3,
   "groupVotes": 3,
@@ -39,7 +39,15 @@
   },
   "duplicates": [],
   "missingGroupActors": [],
-  "manualCloseComments": null,
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2024-08-27T23:27:11.000+00:00",
+    "body": "unanimous",
+    "url": "https://github.com/commonhaus/foundation/discussions/193#discussioncomment-10468419"
+  },
   "commentId": "DC_kwDOKRPTI84An7dO",
   "github": "https://github.com/commonhaus/foundation/discussions/193",
   "itemId": "D_kwDOKRPTI84AbF7Z",
@@ -48,13 +56,15 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-08-27T19:55:54Z",
-  "updated": "2024-08-27T23:26:34Z",
+  "updated": "2024-08-27T23:27:16Z",
   "url": "/votes/commonhaus/foundation/193.html",
   "tags": [
-    "vote/open",
     "notice",
+    "vote/done",
     "vote/quorum",
-    "vote"
+    "vote",
+    "closed"
   ],
-  "closed": false
+  "closed": true,
+  "closedAt": "2024-08-27T23:27:11Z"
 }
