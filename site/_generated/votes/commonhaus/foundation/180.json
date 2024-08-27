@@ -108,13 +108,15 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-07-31T16:54:28Z",
-  "updated": "2024-08-27T22:06:26Z",
+  "updated": "2024-08-27T23:26:11Z",
   "url": "/votes/commonhaus/foundation/180.html",
   "tags": [
     "vote/open",
     "notice",
     "vote/quorum",
-    "vote"
+    "vote",
+    "closed"
   ],
-  "closed": false
+  "closed": true,
+  "closedAt": "2024-08-27T23:26:07Z"
 }
