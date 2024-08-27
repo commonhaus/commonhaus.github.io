@@ -1,18 +1,66 @@
 @use 'index' as *;
 
 article.bylaws {
-  h1 {counter-reset: h2}
-  h2 {counter-reset: h3}
-  h1:before {
-    content: var(--ord) ". "
+
+  // This is stupid, but it works.
+  &.ord1 {
+    counter-set: section 1;
   }
-  h2:before {
-    counter-increment: h2;
-    content: var(--ord) "." counter(h2) ". "
+  &.ord2 {
+    counter-set: section 2;
   }
-  h3:before {
-    counter-increment: h3;
-    content: var(--ord) "." counter(h2) "." counter(h3) ". "
+  &.ord3 {
+    counter-set: section 3;
+  }
+  &.ord4 {
+    counter-set: section 4;
+  }
+  &.ord5 {
+    counter-set: section 5;
+  }
+  &.ord6 {
+    counter-set: section 6;
+  }
+  &.ord7 {
+    counter-set: section 7;
+  }
+  &.ord8 {
+    counter-set: section 8;
+  }
+  &.ord9 {
+    counter-set: section 9;
+  }
+  &.ord {
+    h1 {counter-reset: h2}
+    h2 {counter-reset: h3}
+    h1:before {
+      content: counter(section) ". "
+    }
+    h2:before {
+      counter-increment: h2;
+      content: counter(section) "." counter(h2) ". "
+    }
+    h3:before {
+      counter-increment: h3;
+      content: counter(section) "." counter(h2) "." counter(h3) ". "
+    }
+  }
+  &:not(.ord) {
+    h1 {counter-reset: h2}
+    h2 {counter-reset: h3}
+    h2:before {
+      counter-increment: h2;
+      content: counter(h2) ". "
+    }
+    h3:before {
+      counter-increment: h3;
+      content: counter(h2) "." counter(h3) ". "
+    }
+  }
+  &.draft h1:after {
+    content: " Draft";
+    color: var(--text-faint);
+    font-size: var(--font-smaller);
   }
 }
 
@@ -77,7 +125,7 @@ aside.bylaw-contents {
   --nest-hang-text-indent: -0.5em;
   --nest-indent: .5em;
 
-  ul.top-level li:before {
+  ul.top-level.ordered > li:before {
     content: attr(data-ord) ". ";
     position: absolute;
     left: -1em; // Adjust as needed
