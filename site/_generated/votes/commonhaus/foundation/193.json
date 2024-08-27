@@ -4,24 +4,38 @@
   "isDone": false,
   "group": "commonhaus/cf-council",
   "groupSize": 3,
-  "groupVotes": 0,
-  "countedVotes": 0,
+  "groupVotes": 2,
+  "countedVotes": 2,
   "droppedVotes": 0,
   "votingThreshold": "all",
-  "categories": {},
+  "categories": {
+    "approve": {
+      "reactions": [
+        "👍"
+      ],
+      "team": [
+        {
+          "login": "ebullient",
+          "url": "https://github.com/ebullient",
+          "createdAt": "2024-08-27T20:32:02.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "kenfinnigan",
+          "url": "https://github.com/kenfinnigan",
+          "createdAt": "2024-08-27T20:08:07.000+00:00",
+          "reaction": "👍"
+        }
+      ],
+      "teamTotal": 2,
+      "total": 2
+    }
+  },
   "duplicates": [],
   "missingGroupActors": [
     {
       "login": "cealsair",
       "url": "https://github.com/cealsair"
-    },
-    {
-      "login": "kenfinnigan",
-      "url": "https://github.com/kenfinnigan"
-    },
-    {
-      "login": "ebullient",
-      "url": "https://github.com/ebullient"
     }
   ],
   "manualCloseComments": null,
@@ -33,7 +47,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-08-27T19:55:54Z",
-  "updated": "2024-08-27T19:55:55Z",
+  "updated": "2024-08-27T20:32:27Z",
   "url": "/votes/commonhaus/foundation/193.html",
   "tags": [
     "vote/open",
