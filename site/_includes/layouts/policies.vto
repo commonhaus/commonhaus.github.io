@@ -3,7 +3,7 @@ title: Default page title
 language: en
 layout: layouts/base.vto
 ---
-<article class="bylaws">
+<article class="bylaws{{ if page.data.status == "draft" }} draft{{ /if }}">
 {{ content }}
 </article>
 
@@ -33,6 +33,7 @@ layout: layouts/base.vto
 
   <div class="edit">
     <h3>About this Page</h3>
+    {{ if page.data.status == "draft" }}<p>This is a draft</p>{{ /if }}
     <div class="posted">Last updated <time datetime="{{ page.data.date |> date('DATE') }}">{{ page.data.date |> date('d MMMM yyyy') }}</time></div>
     <a href="{{ repoUrl }}">Edit source</a> on GitHub
   </div>
