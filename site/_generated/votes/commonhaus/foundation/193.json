@@ -1,0 +1,44 @@
+{
+  "voteType": "marthas",
+  "hasQuorum": false,
+  "isDone": false,
+  "group": "commonhaus/cf-council",
+  "groupSize": 3,
+  "groupVotes": 0,
+  "countedVotes": 0,
+  "droppedVotes": 0,
+  "votingThreshold": "all",
+  "categories": {},
+  "duplicates": [],
+  "missingGroupActors": [
+    {
+      "login": "cealsair",
+      "url": "https://github.com/cealsair"
+    },
+    {
+      "login": "kenfinnigan",
+      "url": "https://github.com/kenfinnigan"
+    },
+    {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    }
+  ],
+  "manualCloseComments": null,
+  "commentId": "DC_kwDOKRPTI84An7dO",
+  "github": "https://github.com/commonhaus/foundation/discussions/193",
+  "itemId": "D_kwDOKRPTI84AbF7Z",
+  "itemTitle": "CF Officers: social & community manager",
+  "number": 193,
+  "repoName": "commonhaus/foundation",
+  "type": "vote",
+  "date": "2024-08-27T19:55:54Z",
+  "updated": "2024-08-27T19:55:55Z",
+  "url": "/votes/commonhaus/foundation/193.html",
+  "tags": [
+    "vote/open",
+    "notice",
+    "vote"
+  ],
+  "closed": false
+}
