@@ -108,8 +108,18 @@ a.button {
 
 // Lists
 
+article li > ul,
+.content li > ul {
+  margin-top: 0.5em;
+}
+
 li {
-  margin-bottom: 0.2em;
+  margin-bottom: 0.3em;
+}
+
+dt {
+  padding-top: .5em;
+  font-weight: bold;
 }
 
 // Trademark logos

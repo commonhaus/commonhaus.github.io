@@ -25,6 +25,7 @@
   import Oops from "../components/Oops.svelte";
   import { debounce } from "../lib/debounce";
   import { mayHaveEmail } from "../lib/memberStatus";
+  import { scrollToSection } from "../lib/scrollToSection";
 
   const emailAttestation = getAttestationText("email");
 
@@ -35,6 +36,7 @@
   let nextDate = "due";
   let aliasUpdates = {};
   let allRecipients = {};
+  let noRecipients = true;
   let emailErrors = {};
   let keys = {};
   let hasErrors = false;
@@ -74,9 +76,13 @@
   function resetAll() {
     keys = Object.keys($aliasTargets);
     aliasUpdates = JSON.parse(JSON.stringify($aliasTargets));
+    noRecipients = true;
+
     console.debug(aliasUpdates);
+
     for (const alias of keys) {
       if (aliasUpdates[alias].recipients) {
+        noRecipients = false;
         allRecipients[alias] = aliasUpdates[alias].recipients.join(", ");
         emailErrors[alias] = !isValidEmailList(aliasUpdates[alias].recipients);
       }
@@ -84,15 +90,23 @@
   }
 
   const handleInputChange = debounce((alias, event) => {
-    const emails = event.target.value.split(",").map((email) => email.trim()) || [];
+    const emails =
+      event.target.value.split(",").map((email) => email.trim()) || [];
     if (!aliasUpdates[alias]) {
       aliasUpdates[alias] = {};
     }
+    noRecipients = false;
     aliasUpdates[alias].recipients = emails;
     allRecipients[alias] = event.target.value;
     emailErrors[alias] = !isValidEmailList(emails);
     hasErrors = Object.values(emailErrors).some((error) => error === true);
-    console.debug("Update alias", alias, allRecipients[alias], aliasUpdates[alias]?.recipients, emailErrors[alias]);
+    console.debug(
+      "Update alias",
+      alias,
+      allRecipients[alias],
+      aliasUpdates[alias]?.recipients,
+      emailErrors[alias],
+    );
   }, 300);
 
   function isValidEmailList(emails) {
@@ -126,16 +140,44 @@
 {:else if isOk($errorFlags.alias)}
   {#if recentAttestation}
     <section class="information">
-      <p>
-        Your email {keys.length <= 1
-          ? "alias"
-          : "aliases"}:
-      </p>
-      <div class="header setting"><div>Alias</div><div>Target address</div></div>
+      {#if noRecipients}
+        <h3>Setting up Forward Email</h3>
+        <ul>
+          <li>
+            📝 Specifiy the target address for your alias below, and press <kbd
+              >Submit</kbd
+            >.
+          </li>
+          <li>📥 Check for a verification email from Forward Email.</li>
+          <li>✅ Follow the instructions to verify your email address.</li>
+          <li>
+            🎉 You will begin to receive email after you have verified your
+            email address.
+          </li>
+          <li>
+            👀 See <a
+              href="#/"
+              role="button"
+              tabindex="0"
+              on:click|preventDefault={() => scrollToSection("faq")}
+              >additional notes below</a
+            > for how to send mail using your new alias.
+          </li>
+        </ul>
+      {:else}
+        <p>
+          Your email {keys.length <= 1 ? "alias" : "aliases"}:
+        </p>
+      {/if}
+      <div class="header setting">
+        <div>Alias</div>
+        <div>Target address</div>
+      </div>
       {#if keys.length > 0}
         {#each keys as alias (alias)}
           {@const aliasData = aliasUpdates[alias]}
-          {@const hasVerifiedRecipients = aliasData.verified_recipients?.length > 0}
+          {@const hasVerifiedRecipients =
+            aliasData.verified_recipients?.length > 0}
           <div class="no-title setting">
             <label class="label" for={alias}>{alias}</label>
             <span class="control">
@@ -159,8 +201,8 @@
                     /></svg
                   >
                   <span class="tooltiptext"
-                    >Generate SMTP Password for this alias; requires verified email
-                    address</span
+                    >Generate SMTP Password for this alias; requires verified
+                    email address</span
                   >
                 </button>
               </div>
@@ -173,7 +215,8 @@
           </div>
         {/each}
       {:else}
-        {@const alias = $gitHubData.login} <!-- Assign a default value to alias -->
+        {@const alias = $gitHubData.login}
+        <!-- Assign a default value to alias -->
         <div class="no-title setting">
           <label class="label" for={alias}>{alias}</label>
           <span class="control">
@@ -195,17 +238,18 @@
             name="saveAll"
             class="input"
             on:click={saveAll}
-            disabled={$outboundPost || hasErrors}>Save</button
+            disabled={$outboundPost || hasErrors}>Submit</button
           >
           <div class="tooltip">
             <button
               name="reset"
               class="input"
               on:click={resetAll}
-              disabled={$outboundPost}>
+              disabled={$outboundPost}
+            >
               <span>Reset</span>
               <span class="tooltiptext">Reset to previous values</span>
-              </button>
+            </button>
           </div>
         </span>
       </div>
@@ -215,25 +259,68 @@
   <Attestation id="email" />
 {/if}
 
-<div class="information">
-  <h2>References</h2>
-  <ul>
-    <li>
+<div class="information" id="faq">
+  <h2>About Forward Email</h2>
+  <dl>
+    <dt>
       <a href="https://forwardemail.net/en/faq#what-is-forward-email"
         >What is Forward Email?</a
       >
-    </li>
-    <li>
-      <a
-        href="https://forwardemail.net/en/guides/send-mail-as-gmail-custom-domain"
-        >Send Mail As with Gmail</a
-      >
-    </li>
-    <li>
-      <a
-        href="https://forwardemail.net/en/guides/send-email-with-custom-domain-smtp"
-        >Send email with custom domain (SMTP)</a
-      >
-    </li>
-  </ul>
+    </dt>
+
+    <dt>Do I need an account with Forward Email?</dt>
+    <dd>
+      <p>
+        No, you do not need an account with Forward Email to use this service.
+      </p>
+    </dd>
+
+    <dt>I haven't been receiving any email</dt>
+    <dd>
+      <p>
+        You need to verify your email address with Forward Email. Check your
+        spam folder if you haven't received the verification email.
+      </p>
+    </dd>
+
+    <dt>How do I send email using my alias?</dt>
+    <dd>
+      <p>
+        Forward Email uses DMARC. You must use the forwardemail.net SMTP server
+        to send emails or your outgoing emails are likely to get rejected.
+      </p>
+      <p>
+        You must have verified your target email address to send mail as your
+        alias.
+      </p>
+      <ol>
+        <li>
+          Use the <kbd>[*]</kbd> button on the form above to trigger SMTP password
+          generation.
+        </li>
+        <li>
+          An email from Forward Email will be sent to your verified email
+          address. <br />Note: When you click the link in that email, it will
+          show you the generated SMTP password for only <em>30 seconds</em>.
+        </li>
+        <li>
+          Set up your SMTP server (or Gmail) as follows:
+          <ul>
+            <li>
+              <a
+                href="https://forwardemail.net/en/guides/send-mail-as-gmail-custom-domain"
+                >Send Mail As with Gmail</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://forwardemail.net/en/guides/send-email-with-custom-domain-smtp"
+                >Send email with custom domain (SMTP)</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </dd>
+  </dl>
 </div>
