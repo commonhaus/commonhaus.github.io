@@ -23,6 +23,7 @@ interface OfficerContact extends Contact {
 interface ProjectData {
   name?: string;
   repo?: string;
+  display?: Record<string, string>
 }
 interface User {
     login: string;
@@ -87,7 +88,11 @@ const egc = augmentedRepData.reduce((acc: ProjectContact[], current: ProjectCont
     }
 
     const index = acc.findIndex(x => x.login === current.login);
-    const data = PROJECT_DATA[current.project] || {};
+    const project = PROJECT_DATA[current.project] || {};
+    const data = {
+        ...project,
+        ...project.display,
+    }
     if (!data) {
         console.log("No project data for", current.project);
     }

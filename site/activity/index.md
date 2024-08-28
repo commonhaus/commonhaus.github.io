@@ -12,5 +12,5 @@ metas:
 
 > [!note] Related Bylaws
 >
-> - [Notice](../foundation/bylaws/6-notice-records.md#notice)
-> - [Decision Making](../foundation/bylaws/5-decision-making.md)
+> - [Notice](../foundation/bylaws/7-notice-records.md#notice)
+> - [Decision Making](../foundation/bylaws/6-decision-making.md)

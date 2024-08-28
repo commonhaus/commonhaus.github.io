@@ -149,7 +149,7 @@ From joining discussions, contributing to projects, or participating in governan
 
 <a href="https://github.com/sponsors/commonhaus" class="text button">Build with us</a>
 
-[Bylaws]: ../foundation/bylaws/0-preface.md
-[cfab]: ../foundation/bylaws/4-cf-advisory-board.md
-[cfc]: ../foundation/bylaws/3-cf-council.md
-[egc]: ../foundation/bylaws/3-cf-council.md#extended-governance-committee-egc
+[Bylaws]: ../foundation/bylaws/1-preface.md
+[cfab]: ../foundation/bylaws/5-cf-advisory-board.md
+[cfc]: ../foundation/bylaws/4-cf-council.md
+[egc]: ../foundation/bylaws/4-cf-council.md#extended-governance-committee-egc
