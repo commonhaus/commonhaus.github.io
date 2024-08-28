@@ -17,6 +17,9 @@ interface ProjectContact extends Contact {
     project: string;
     projects?: ProjectData[];
 }
+interface OfficerContact extends Contact {
+    role?: string;
+}
 interface ProjectData {
   name?: string;
   repo?: string;
@@ -32,6 +35,9 @@ interface User {
 }
 interface Councilor extends User {
     'term-start': number;
+    role?: string;
+}
+interface Officer extends User {
     role?: string;
 }
 function augmentReference<T extends Contact>(data: Record<string, Contact[]>, item: T): T {
@@ -53,8 +59,9 @@ const PROJECT_DATA: Record<string, ProjectData> = safeLoad(Deno.readTextFileSync
 const USER_DATA: Record<string, unknown> = safeLoad(Deno.readTextFileSync("./site/_generated/about.yml"));
 
 const councilors: Councilor[] = [];
+const officers: Officer[] = [];
 
-const cfcData: CouncilContact[] = CONTACT_DATA['cf-council'] as CouncilContact[];
+const cfcData = CONTACT_DATA['cf-council'] as CouncilContact[];
 const augmentedCfcData = cfcData.map(item => augmentReference<CouncilContact>(CONTACT_DATA, item));
 for(const item of augmentedCfcData) {
     if (item.login.includes(".")) {
@@ -72,7 +79,7 @@ for(const item of augmentedCfcData) {
     councilors.push(councilor);
 }
 
-const repData: ProjectContact[] = CONTACT_DATA['egc'] as ProjectContact[];
+const repData = CONTACT_DATA['egc'] as ProjectContact[];
 const augmentedRepData = repData.map(item => augmentReference<ProjectContact>(CONTACT_DATA, item));
 const egc = augmentedRepData.reduce((acc: ProjectContact[], current: ProjectContact) => {
     if (current.login.includes(".")) {
@@ -100,7 +107,26 @@ const egc = augmentedRepData.reduce((acc: ProjectContact[], current: ProjectCont
     return acc;
 }, []);
 
+const officerData = CONTACT_DATA['officers'] as OfficerContact[];
+const augmentedOfficerData = officerData.map(item => augmentReference<OfficerContact>(CONTACT_DATA, item));
+for(const item of augmentedOfficerData) {
+    if (item.login.includes(".")) {
+        continue;
+    }
+    const user = USER_DATA[item.login] as User;
+    if (!user) {
+        console.log("Officer: No about data for", item.login);
+        continue;
+    }
+    const officer: Officer = {
+        ...user,
+        ...item,
+    };
+    officers.push(officer);
+}
+
 export {
     councilors,
-    egc
+    egc,
+    officers
 }
