@@ -58,8 +58,10 @@ site.copy("static", "/");
 site.mergeKey("cssclasses", "stringArray");
 
 // Build or rebuild the Svelte Membership UI
-site.addEventListener("afterBuild", "deno task vite-build");
-site.addEventListener("afterUpdate", "deno task vite-build");
+if (!Deno.env.get("MOCK_BACKEND")) {
+    site.addEventListener("afterBuild", "deno task vite-build");
+    site.addEventListener("afterUpdate", "deno task vite-build");
+}
 
 site
     .use(date())
