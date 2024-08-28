@@ -9,6 +9,10 @@ cssclasses:
 The Commonhaus Foundation champions the growth and stability of open source projects by fostering a community where developers, contributors, and users support each other.
 Together, we ensure the sustainable development of essential open source libraries and frameworks.
 
+- [Current Councilors](#councilors)
+- [Officers](#officers)
+- [Project Representatives](#project-representatives)
+
 ## Our guiding principles
 
 By embodying these principles, the Commonhaus Foundation aims to provide a nurturing home for open source projects, where innovation is celebrated, collaboration is encouraged, and long-term success is achieved.
@@ -42,7 +46,7 @@ We prioritize **Application Frameworks** and **Libraries** that are critical for
 Our doors are open to everyone passionate about open source innovation. We invite all individuals, not just code contributors, to participate and help shape our organization.
 Our [Bylaws][] detail membership and governance, emphasizing collaboration, diverse perspectives, and advisory input from our [Advisory Board][cfab] to align sponsorship with community interests.
 
-## Current Councilors
+## Councilors
 
 Commonhaus Foundation [Councilors][cfc] represent community interests and ensure the foundation operates responsibly. Elected by CF Members, they serve as the voice of our community, prioritizing the CF community's interests in their decision-making.
 
@@ -77,7 +81,36 @@ Commonhaus Foundation [Councilors][cfc] represent community interests and ensure
 
 _Note: Founding councilors will stand for election as their terms expire._
 
-## Current Project Representatives
+## Officers
+
+<div class="cards">
+{{- for officer of page.data.officers }}
+  <div class="card">
+    {{- if officer.avatarAlt }}
+    <div class="avatar-flip">
+      <img class="avatar-front" src="{{ officer.avatarUrl }}" alt="{{ officer.login }}'s avatar" />
+      <img class="avatar-back" src="{{ officer.avatarAlt }}" alt="{{ officer.login }}'s second avatar" />
+    {{- else }}
+    <div class="avatar">
+      <img src="{{ officer.avatarUrl }}" alt="{{ officer.login }}'s avatar" />
+    {{- /if }}
+    </div>
+    <div class="text-content">
+      <h3><a href="{{ officer.url }}">{{ officer.login }}</a></h3>
+      <div class="subhead">
+        {{- if officer.name }}{{ officer.name }}<br />{{ /if -}}
+        {{- if officer.role }}{{ officer.role }}{{ /if -}}
+      </div>
+      <p>
+        {{- if officer.bio }}{{ officer.bio }}
+        {{- else if officer.company }}<br />{{ officer.company }}{{ /if -}}
+      </p>
+    </div>
+  </div>
+{{- /for }}
+</div>
+
+## Project Representatives
 
 Our project representatives play a pivotal role in the Commonhaus Foundation's [Extended Governance Committee][egc] (EGC), ensuring that the perspectives of each foundation project are represented in foundation-wide decisions.
 
