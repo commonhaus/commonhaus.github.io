@@ -57,15 +57,17 @@ const aboutYaml = Deno.readTextFileSync(aboutPath);
 const about = safeLoad(aboutYaml) || {};
 
 // Get last commit date for a file
-function runGraphQL(filePath: string): string {
-    const command = new Deno.Command('gh', {
-        args: [
-            'api', 'graphql',
-            '-F', "owner=commonhaus",
-            '-F', "name=foundation",
-            '-F', `query=@${filePath}`,
-        ]
-    });
+function runGraphQL(filePath: string, custom: string[] = []): string {
+
+    const args = [
+        'api', 'graphql',
+        ...custom,
+        '-F', "owner=commonhaus",
+        '-F', "name=foundation",
+        '-F', `query=@${filePath}`,
+    ];
+
+    const command = new Deno.Command('gh', { args });
 
     const { code, stdout, stderr } = command.outputSync();
     const output = new TextDecoder().decode(stdout).trim();
@@ -74,7 +76,7 @@ function runGraphQL(filePath: string): string {
     return output;
 }
 
-function updateEgcReps(data: TeamData) {
+function updateTeamMembers(data: TeamData) {
     const members = data.data.organization.team.members.nodes;
     for (const a of members) {
         about[a.login] = a;
@@ -89,17 +91,25 @@ function updateEgcInvites(data: InviteData) {
         }
     }
 }
+const officers: TeamData = JSON.parse(runGraphQL('.github/graphql/query.team.graphql', ['-F', "teamName=cf-officers"]));
+if (officers.errors || !officers.data) {
+    console.error(officers);
+    Deno.exit(1);
+}
+updateTeamMembers(officers);
 
-const reps: TeamData = JSON.parse(runGraphQL('.github/graphql/query.egc.graphql'));
+const reps: TeamData = JSON.parse(runGraphQL('.github/graphql/query.team.graphql', ['-F', "teamName=cf-egc"]));
 if (reps.errors || !reps.data) {
     console.error(reps);
     Deno.exit(1);
 }
-updateEgcReps(reps);
+updateTeamMembers(reps);
+
 const invites: InviteData = JSON.parse(runGraphQL('.github/graphql/query.egc.invitations.graphql'));
 if (invites.errors || !invites.data) {
     console.error(reps);
     Deno.exit(1);
 }
 updateEgcInvites(invites);
+
 Deno.writeTextFileSync(aboutPath, safeDump(about));
