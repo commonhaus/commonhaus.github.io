@@ -29,13 +29,13 @@ bylaws/README:
   description: >
     Index of the Commonhaus Foundation's bylaws.
 
-bylaws/0-preface:
+bylaws/1-preface:
   url: /bylaws/preface.html
   ord: 1
   description: |
     Overview of terms and concepts in the Commonhaus Foundation bylaws
 
-bylaws/1-purpose:
+bylaws/2-purpose:
   url: /bylaws/purpose.html
   ord: 2
   description: >
@@ -43,14 +43,14 @@ bylaws/1-purpose:
     Highlights commitment to open source innovation, community collaboration,
     and project sustainability.
 
-bylaws/2-cf-membership:
+bylaws/3-cf-membership:
   url: /bylaws/cf-membership.html
   ord: 3
   description: >
     Details the Commonhaus Foundation's membership policies, including dues, renewals,
     and suspension.
 
-bylaws/3-cf-council:
+bylaws/4-cf-council:
   url: /bylaws/cf-council.html
   ord: 4
   description: >
@@ -59,7 +59,7 @@ bylaws/3-cf-council:
     It covers aspects of strategic governance, fiduciary duties, elections,
     voting requirements, and member communication.
 
-bylaws/4-cf-advisory-board:
+bylaws/5-cf-advisory-board:
   ord: 5
   url: /bylaws/cf-advisory-board.html
   description: >
@@ -67,16 +67,16 @@ bylaws/4-cf-advisory-board:
     organizations and companies, acting as a link between the foundation and
     the broader tech industry.
 
-bylaws/5-decision-making:
+bylaws/6-decision-making:
   url: /bylaws/decision-making.html
-  ord: 5
+  ord: 6
   description: >
     Outlines the foundation's decision-making, voting, and election processes.
     Simplifies procedures for efficient progression and member participation.
     Details on consensus-seeking, elections, and ensuring governance aligns
     with open source principles.
 
-bylaws/6-notice-records:
+bylaws/7-notice-records:
   ord: 7
   url: /bylaws/notice-records.html
   description: >
@@ -84,7 +84,7 @@ bylaws/6-notice-records:
     Emphasizes asynchronous, electronic communication for efficiency and accessibility.
     Includes notification protocols, record-keeping practices, and ensuring transparent governance.
 
-bylaws/7-indemnification-dissolution:
+bylaws/8-indemnification-dissolution:
   url: /bylaws/indemnification-dissolution.html
   ord: 8
   description: >
@@ -92,7 +92,7 @@ bylaws/7-indemnification-dissolution:
     Emphasizes protecting members and contributors from legal risks, and outlines processes
     for indemnification and asset distribution upon dissolution, aligning with the foundation's mission and values.
 
-bylaws/8-amendments:
+bylaws/9-amendments:
   url: /bylaws/amendments.html
   ord: 9
   description: >
