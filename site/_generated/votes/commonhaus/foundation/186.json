@@ -4,8 +4,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 13,
-  "groupVotes": 10,
-  "countedVotes": 10,
+  "groupVotes": 12,
+  "countedVotes": 12,
   "droppedVotes": 1,
   "votingThreshold": "all",
   "categories": {
@@ -49,10 +49,16 @@
           "url": "https://github.com/marc0der",
           "createdAt": "2024-08-25T15:43:16.000+00:00",
           "reaction": "👍"
+        },
+        {
+          "login": "velo",
+          "url": "https://github.com/velo",
+          "createdAt": "2024-08-29T16:08:58.000+00:00",
+          "reaction": "👍"
         }
       ],
-      "teamTotal": 6,
-      "total": 6
+      "teamTotal": 7,
+      "total": 7
     },
     "ok": {
       "reactions": [
@@ -82,10 +88,16 @@
           "url": "https://github.com/henri-tremblay",
           "createdAt": "2024-08-12T16:26:21.000+00:00",
           "reaction": "👀"
+        },
+        {
+          "login": "maxandersen",
+          "url": "https://github.com/maxandersen",
+          "createdAt": "2024-08-29T14:33:41.000+00:00",
+          "reaction": "👀"
         }
       ],
-      "teamTotal": 4,
-      "total": 4
+      "teamTotal": 5,
+      "total": 5
     }
   },
   "duplicates": [
@@ -97,14 +109,6 @@
     }
   ],
   "missingGroupActors": [
-    {
-      "login": "velo",
-      "url": "https://github.com/velo"
-    },
-    {
-      "login": "maxandersen",
-      "url": "https://github.com/maxandersen"
-    },
     {
       "login": "timtebeek",
       "url": "https://github.com/timtebeek"
@@ -119,7 +123,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-08-05T14:01:13Z",
-  "updated": "2024-08-27T22:09:31Z",
+  "updated": "2024-08-29T18:27:38Z",
   "url": "/votes/commonhaus/foundation/186.html",
   "tags": [
     "vote/open",
