@@ -1,4 +1,4 @@
-import { safeLoad, safeDump } from "jsYaml";
+import { parse, stringify } from "@std/yaml";
 
 interface Problem {
     path: string[];
@@ -54,11 +54,10 @@ interface Invitee {
 
 const aboutPath = './site/_generated/about.yml';
 const aboutYaml = Deno.readTextFileSync(aboutPath);
-const about = safeLoad(aboutYaml) || {};
+const about: Record<string, User> = parse(aboutYaml) as Record<string, User> ?? {};
 
 // Get last commit date for a file
 function runGraphQL(filePath: string, custom: string[] = []): string {
-
     const args = [
         'api', 'graphql',
         ...custom,
@@ -112,4 +111,4 @@ if (invites.errors || !invites.data) {
 }
 updateEgcInvites(invites);
 
-Deno.writeTextFileSync(aboutPath, safeDump(about));
+Deno.writeTextFileSync(aboutPath, stringify(about));

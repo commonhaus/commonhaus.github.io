@@ -1,4 +1,4 @@
-import { ensureDirSync } from "stdFs";
+import { ensureDirSync } from "@std/fs";
 
 interface Problem {
     path: string[];
