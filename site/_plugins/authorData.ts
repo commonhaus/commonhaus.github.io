@@ -1,5 +1,5 @@
 import Site from "lume/core/site.ts";
-import { safeLoad } from "jsYaml";
+import { parse } from "@std/yaml";
 import { Page } from "lume/core/file.ts";
 
 interface Author {
@@ -8,7 +8,7 @@ interface Author {
     avatar: string;
 }
 
-const AUTHOR_DATA: Record<string, Author> = safeLoad(Deno.readTextFileSync("site/_generated/authors.yml"));
+const AUTHOR_DATA: Record<string, Author> = parse(Deno.readTextFileSync("site/_generated/authors.yml")) as Record<string, Author>;
 
 export default function () {
 

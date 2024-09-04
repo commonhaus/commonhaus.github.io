@@ -1,5 +1,5 @@
-import { safeLoad } from "jsYaml";
-import * as path from "stdPath";
+import { parse } from "@std/yaml";
+import * as path from "@std/path";
 import { defineConfig } from 'npm:vite';
 import denoResolve from "denoResolve";
 import { svelte, vitePreprocess } from 'npm:@sveltejs/vite-plugin-svelte';
@@ -40,7 +40,7 @@ function yamlPlugin() {
     async load(id) {
       if (id === resolvedVirtualModuleId) {
         const yamlText = await Deno.readTextFile(yamlFilePath);
-        const yamlData = safeLoad(yamlText) || {};
+        const yamlData = parse(yamlText) || {};
         const md = markdownIt();
 
         // Iterate over the values in yamlData.status and convert

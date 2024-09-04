@@ -1,6 +1,6 @@
-import { ensureDirSync } from "stdFs";
-import { join } from "stdPath";
-import { safeLoad, safeDump } from "jsYaml";
+import { ensureDirSync } from "@std/fs";
+import { join } from "@std/path";
+import { parse, stringify } from "@std/yaml";
 
 interface Problem {
     path: string[];
@@ -106,7 +106,7 @@ interface PageData {
 
 const authorsPath = './site/_generated/authors.yml';
 const authorsYaml = Deno.readTextFileSync(authorsPath);
-const authors = safeLoad(authorsYaml) || {};
+const authors = parse(authorsYaml) as Record<string, Author> || {};
 let authorsUpdated = false;
 
 const prefixMap: Record<string, string> = {
@@ -213,7 +213,7 @@ function updateAuthors(newAuthors: Author[]): void {
             authors[a.login] = {
                 login: a.login,
                 url: a.url,
-                avatar: a.avatarUrl,
+                avatarUrl: a.avatarUrl,
             };
             if (a.name) {
                 authors[a.login].name = a.name;
@@ -272,5 +272,5 @@ if (prs.errors || !prs.data) {
 updatePullRequests(prs);
 
 if (authorsUpdated) {
-    Deno.writeTextFileSync(authorsPath, safeDump(authors));
+    Deno.writeTextFileSync(authorsPath, stringify(authors));
 }

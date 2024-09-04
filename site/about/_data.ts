@@ -1,4 +1,5 @@
-import { safeLoad } from "jsYaml";
+import { parse } from "@std/yaml";
+
 
 // Merge contents of CONTACTS.yaml, PROJECTS.yaml and ./site/_generated/about.yml
 // into a single data structure for Project Representatives and Councilors
@@ -55,9 +56,9 @@ function augmentReference<T extends Contact>(data: Record<string, Contact[]>, it
     return item as T;
 }
 
-const CONTACT_DATA: Record<string, Contact[]> = safeLoad(Deno.readTextFileSync("./site/foundation/CONTACTS.yaml"));
-const PROJECT_DATA: Record<string, ProjectData> = safeLoad(Deno.readTextFileSync("./site/foundation/PROJECTS.yaml"));
-const USER_DATA: Record<string, unknown> = safeLoad(Deno.readTextFileSync("./site/_generated/about.yml"));
+const CONTACT_DATA: Record<string, Contact[]> = parse(Deno.readTextFileSync("./site/foundation/CONTACTS.yaml")) as Record<string, Contact[]>;
+const PROJECT_DATA: Record<string, ProjectData> = parse(Deno.readTextFileSync("./site/foundation/PROJECTS.yaml")) as Record<string, ProjectData>;
+const USER_DATA: Record<string, unknown> = parse(Deno.readTextFileSync("./site/_generated/about.yml")) as Record<string, unknown>;
 
 const councilors: Councilor[] = [];
 const officers: Officer[] = [];

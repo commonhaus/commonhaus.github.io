@@ -138,7 +138,9 @@ dandreadis:
   avatarUrl: 'https://avatars.githubusercontent.com/u/332924?v=4'
   company: Red Hat
   name: Dimitris Andreadis
-  bio: ''
+  bio: >-
+    Engineering Director, overseeing the Quarkus & Cloud Native Runtimes / JBoss
+    EAP / Wildly teams at Red Hat. JBoss Veteran & Open Source Advocate.
 sigrunixia:
   login: sigrunixia
   url: 'https://github.com/sigrunixia'
