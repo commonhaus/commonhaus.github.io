@@ -172,6 +172,9 @@ export default function () {
                     const postsBySection: Record<string, Data[]> = {};
                     if (allPosts.length > 0) {
                         allPosts.forEach((post) => {
+                            if ( post.index === false ) {
+                                return;
+                            }
                             const section = post.url.substring(1, post.url.indexOf('/', 1));
                             if (!postsBySection[section]) {
                                 postsBySection[section] = [];
