@@ -86,7 +86,7 @@ cssclasses:
     </div> -->
     <!-- Other Project Cards -->
     {{- for project of page.data.listProjects() }}
-    <div class="card">
+    <div class="card wide">
       <span class="logo"><a href="{{ project.home }}">
       {{- if project["logo-dark"] }}
         <img src='{{ project["logo-dark"] }}' alt="" aria-hidden="true" class='dark-only' />

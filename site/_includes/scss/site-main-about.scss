@@ -3,15 +3,25 @@
 .cards {
   display: flex;
   flex-direction: column;
-  gap: 3em;
+  gap: 2.5em;
   align-items: stretch;
-  margin-top: 2em;
+  margin-top: 1em;
+
+  &.wrapped {
+    flex-direction: row;
+    flex-wrap: wrap; // Allow the cards to wrap onto multiple lines
+    justify-content: space-between; // Distribute cards evenly in the container
+    align-items: flex-start; // Align items to the top
+  }
+  &.indented {
+    padding-left: 2em;
+  }
 
   .card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2em;
+    gap: 1em;
 
     img {
       width: 25vw;
@@ -28,7 +38,12 @@
         @include figtree-medium;
         margin: 0;
         padding: 0;
-        text-align: center;
+      }
+      h4 {
+        font-size: var(--font-large);
+        @include figtree-medium;
+        margin: 0;
+        padding: 0;
       }
       p {
         margin: 0;
@@ -190,21 +205,83 @@ main.site-main {
       }
     }
   }
+}
 
-  .projects .card {
-    img {
-      max-height: 100px;
-      width: auto;
-    }
-    .wordmark {
-      font-weight: 700;
-      font-size: 50px;
-    }
-    .text-content {
-      flex: 1;
-    }
+main.sponsors {
+  h2:not(:first-of-type) {
+    border-top: 1px solid var(--border-color); /* Change color as needed */
+    padding-top: .8em;
+  }
+  .cards.wide {
+    gap: 2em;
   }
 }
+
+.card.profile {
+  width: 300px;
+  max-width: 300px;
+  flex-direction: row; // Make the image and text be side by side
+  align-items: start; // Align items to the top
+  gap: 1em; // Add some space between the image and text
+
+  .avatar,
+  .avatar-flip {
+    min-width: 75px;
+    min-height: 75px;
+    width: 75px;
+    height: 75px;
+    position: relative;
+  }
+  .avatar-flip {
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 33%; // This makes the image round
+    object-fit: cover; // This ensures the image covers the whole area
+  }
+
+  .avatar-front, .avatar-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+  }
+
+  .avatar-back {
+    transform: rotateY(180deg);
+  }
+
+  &:hover .avatar-flip {
+    transform: rotateY(180deg);
+  }
+
+  .text-content {
+    align-items: flex-start;
+  }
+
+  footer {
+    font-size: var(--font-small);
+  }
+}
+
+.card.wide {
+  img:not(.avatar) {
+    max-height: 100px;
+    width: auto;
+  }
+  .wordmark {
+    font-weight: 700;
+    font-size: 50px;
+  }
+  .text-content {
+    flex: 1;
+  }
+}
+
 img.dark-only {
   display: none;
 }
@@ -217,67 +294,5 @@ img.light-only {
   }
   img.light-only {
     display: none;
-  }
-}
-
-main.about {
-  .cards {
-    @include content-align-y;
-
-    flex-direction: row;
-    flex-wrap: wrap; // Allow the cards to wrap onto multiple lines
-    justify-content: space-between; // Distribute cards evenly in the container
-    align-items: flex-start; // Align items to the top
-
-    .card {
-      width: 300px;
-      max-width: 300px;
-      flex-direction: row; // Make the image and text be side by side
-      align-items: start; // Align items to the top
-      gap: 1em; // Add some space between the image and text
-
-      .avatar,
-      .avatar-flip {
-        min-width: 75px;
-        min-height: 75px;
-        width: 75px;
-        height: 75px;
-        position: relative;
-      }
-      .avatar-flip {
-        transition: transform 0.8s;
-        transform-style: preserve-3d;
-      }
-
-      img {
-        width: 100%;
-        height: 100%;
-        border-radius: 33%; // This makes the image round
-        object-fit: cover; // This ensures the image covers the whole area
-      }
-
-      .avatar-front, .avatar-back {
-        position: absolute;
-        top: 0;
-        left: 0;
-        backface-visibility: hidden;
-      }
-
-      .avatar-back {
-        transform: rotateY(180deg);
-      }
-
-      &:hover .avatar-flip {
-        transform: rotateY(180deg);
-      }
-
-      .text-content {
-        align-items: flex-start;
-      }
-
-      footer {
-        font-size: var(--font-small);
-      }
-    }
   }
 }

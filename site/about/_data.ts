@@ -1,8 +1,26 @@
 import { parse } from "@std/yaml";
 
-
 // Merge contents of CONTACTS.yaml, PROJECTS.yaml and ./site/_generated/about.yml
 // into a single data structure for Project Representatives and Councilors
+
+const tiers = {
+    'in-kind': 'In-Kind',
+    'platinum': 'Platinum',
+    'gold': 'Gold',
+    'silver': 'Silver',
+    'bronze': 'Bronze',
+    'supporter': 'Supporter'
+};
+
+// Create a map for sort order
+const tierSortOrder: { [key: string]: number } = {};
+Object.keys(tiers).forEach((key, index) => {
+    tierSortOrder[key] = index + 1; // +1 to avoid zero index
+});
+
+function sortOrder(a: string) {
+    return tierSortOrder[a] || 99; // Default to 99 if not found
+}
 
 interface Contact {
     login: string;
@@ -20,6 +38,9 @@ interface ProjectContact extends Contact {
 }
 interface OfficerContact extends Contact {
     role?: string;
+}
+interface AdvisorContact extends Contact {
+    organization: string;
 }
 interface ProjectData {
   name?: string;
@@ -42,6 +63,18 @@ interface Councilor extends User {
 interface Officer extends User {
     role?: string;
 }
+interface Sponsor {
+    name: string;
+    description: string;
+    tier?: string[];
+    display?: Record<string, string>;
+    draft?: boolean;
+    reps: AdvisorContact[];
+}
+interface GroupedSponsors {
+    [key: string]: Sponsor[];
+}
+
 function augmentReference<T extends Contact>(data: Record<string, Contact[]>, item: T): T {
     if (item.see) {
         // if there is a reference to contact details from another section, merge it
@@ -57,28 +90,25 @@ function augmentReference<T extends Contact>(data: Record<string, Contact[]>, it
 }
 
 const CONTACT_DATA: Record<string, Contact[]> = parse(Deno.readTextFileSync("./site/foundation/CONTACTS.yaml")) as Record<string, Contact[]>;
+const SPONSOR_DATA: Record<string, Sponsor> = parse(Deno.readTextFileSync("./site/foundation/SPONSORS.yaml")) as Record<string, Sponsor>;
 const PROJECT_DATA: Record<string, ProjectData> = parse(Deno.readTextFileSync("./site/foundation/PROJECTS.yaml")) as Record<string, ProjectData>;
 const USER_DATA: Record<string, unknown> = parse(Deno.readTextFileSync("./site/_generated/about.yml")) as Record<string, unknown>;
 
-const councilors: Councilor[] = [];
-const officers: Officer[] = [];
-
 const cfcData = CONTACT_DATA['cf-council'] as CouncilContact[];
-const augmentedCfcData = cfcData.map(item => augmentReference<CouncilContact>(CONTACT_DATA, item));
-for(const item of augmentedCfcData) {
-    if (item.login.includes(".")) {
+const councilors = cfcData.map(item => augmentReference<CouncilContact>(CONTACT_DATA, item));
+for(const councilor of councilors) {
+    if (councilor.login.includes(".")) {
         continue;
     }
-    const user = USER_DATA[item.login] as User;
+    const user = USER_DATA[councilor.login] as User;
     if (!user) {
-        console.log("CFC: No about data for", item.login);
+        console.log("CFC: No about data for", councilor.login);
         continue;
     }
-    const councilor: Councilor = {
+    Object.assign(councilor, {
         ...user,
-        ...item,
-    };
-    councilors.push(councilor);
+        ...councilor // make sure these take precedence
+    });
 }
 
 const repData = CONTACT_DATA['egc'] as ProjectContact[];
@@ -114,25 +144,67 @@ const egc = augmentedRepData.reduce((acc: ProjectContact[], current: ProjectCont
 }, []);
 
 const officerData = CONTACT_DATA['officers'] as OfficerContact[];
-const augmentedOfficerData = officerData.map(item => augmentReference<OfficerContact>(CONTACT_DATA, item));
-for(const item of augmentedOfficerData) {
-    if (item.login.includes(".")) {
+const officers = officerData.map(item => augmentReference<OfficerContact>(CONTACT_DATA, item));
+for(const officer of officers) {
+    if (officer.login.includes(".")) {
         continue;
     }
-    const user = USER_DATA[item.login] as User;
+    const user = USER_DATA[officer.login] as User;
     if (!user) {
-        console.log("Officer: No about data for", item.login);
+        console.log("Officer: No about data for", officer.login);
         continue;
     }
-    const officer: Officer = {
+    Object.assign(officer, {
         ...user,
-        ...item,
+        ...officer // make sure these take precedence
+    });
+}
+
+// Augment advisory board user data
+const advisorData = CONTACT_DATA['advisory-board'] as AdvisorContact[];
+const augmentedAdvisorData = advisorData.map(item => augmentReference<AdvisorContact>(CONTACT_DATA, item));
+for(const advisor of augmentedAdvisorData) {
+    if (advisor.login.includes(".")) {
+        continue;
+    }
+    // merge data related to the user retrieved from GitHub if available
+    const user = USER_DATA[advisor.login] as User;
+    if (!user) {
+        console.log("Advisory Board: No about data for", advisor.login);
+        continue;
+    }
+    Object.assign(advisor, {
+        ...user,
+        ...advisor // make sure these take precedence
+    });
+}
+
+const groupedSponsors: GroupedSponsors = {};
+Object.entries(SPONSOR_DATA).forEach(([key, value]) => {
+    const sponsor = {
+        ...value,
+        reps: augmentedAdvisorData.filter(x => x.organization === key),
     };
-    officers.push(officer);
+
+    if (sponsor.tier) {
+        const tiers = sponsor.tier.sort((a, b) => sortOrder(a) - sortOrder(b));
+        addToGroup(groupedSponsors, tiers[0], sponsor);
+    } else {
+        addToGroup(groupedSponsors, 'supporter', sponsor);
+    }
+});
+
+function addToGroup(groups: GroupedSponsors, key: string, sponsor: Sponsor) {
+    if (!groups[key]) {
+        groups[key] = [];
+    }
+    groups[key].push(sponsor);
 }
 
 export {
     councilors,
     egc,
-    officers
+    officers,
+    groupedSponsors,
+    tiers
 }
