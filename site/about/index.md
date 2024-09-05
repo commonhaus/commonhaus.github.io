@@ -9,7 +9,7 @@ cssclasses:
 The Commonhaus Foundation champions the growth and stability of open source projects by fostering a community where developers, contributors, and users support each other.
 Together, we ensure the sustainable development of essential open source libraries and frameworks.
 
-- [Current Councilors](#councilors)
+- [Councilors](#councilors)
 - [Officers](#officers)
 - [Project Representatives](#project-representatives)
 
@@ -50,16 +50,16 @@ Our [Bylaws][] detail membership and governance, emphasizing collaboration, dive
 
 Commonhaus Foundation [Councilors][cfc] represent community interests and ensure the foundation operates responsibly. Elected by CF Members, they serve as the voice of our community, prioritizing the CF community's interests in their decision-making.
 
-<div class="cards">
+<div class="cards wrapped">
 {{- for councilor of page.data.councilors }}
-  <div class="card">
+  <div class="card profile">
     {{- if councilor.avatarAlt }}
     <div class="avatar-flip">
-        <img class="avatar-front" src="{{ councilor.avatarUrl }}" alt="{{ councilor.login }}'s avatar" />
-        <img class="avatar-back" src="{{ councilor.avatarAlt }}" alt="{{ councilor.login }}'s second avatar" />
+        <img class="avatar avatar-front" src="{{ councilor.avatarUrl }}" alt="{{ councilor.login }}'s avatar" />
+        <img class="avatar avatar-back" src="{{ councilor.avatarAlt }}" alt="{{ councilor.login }}'s second avatar" />
     {{- else }}
     <div class="avatar">
-      <img src="{{ councilor.avatarUrl }}" alt="{{ councilor.login }}'s avatar" />
+      <img class="avatar" src="{{ councilor.avatarUrl }}" alt="{{ councilor.login }}'s avatar" />
     {{- /if }}
     </div>
     <div class="text-content">
@@ -83,16 +83,16 @@ _Note: Founding councilors will stand for election as their terms expire._
 
 ## Officers
 
-<div class="cards">
+<div class="cards wrapped">
 {{- for officer of page.data.officers }}
-  <div class="card">
+  <div class="card profile">
     {{- if officer.avatarAlt }}
     <div class="avatar-flip">
-      <img class="avatar-front" src="{{ officer.avatarUrl }}" alt="{{ officer.login }}'s avatar" />
-      <img class="avatar-back" src="{{ officer.avatarAlt }}" alt="{{ officer.login }}'s second avatar" />
+      <img class="avatar avatar-front" src="{{ officer.avatarUrl }}" alt="{{ officer.login }}'s avatar" />
+      <img class="avatar avatar-back" src="{{ officer.avatarAlt }}" alt="{{ officer.login }}'s second avatar" />
     {{- else }}
     <div class="avatar">
-      <img src="{{ officer.avatarUrl }}" alt="{{ officer.login }}'s avatar" />
+      <img class="avatar" src="{{ officer.avatarUrl }}" alt="{{ officer.login }}'s avatar" />
     {{- /if }}
     </div>
     <div class="text-content">
@@ -114,16 +114,16 @@ _Note: Founding councilors will stand for election as their terms expire._
 
 Our project representatives play a pivotal role in the Commonhaus Foundation's [Extended Governance Committee][egc] (EGC), ensuring that the perspectives of each foundation project are represented in foundation-wide decisions.
 
-<div class="cards">
+<div class="cards wrapped">
 {{- for representative of page.data.egc }}
-  <div class="card">
+  <div class="card profile">
     {{- if representative.avatarAlt }}
     <div class="avatar-flip">
-      <img class="avatar-front" src="{{ representative.avatarUrl }}" alt="{{ representative.login }}'s avatar" />
-      <img class="avatar-back" src="{{ representative.avatarAlt }}" alt="{{ representative.login }}'s second avatar" />
+      <img class="avatar avatar-front" src="{{ representative.avatarUrl }}" alt="{{ representative.login }}'s avatar" />
+      <img class="avatar avatar-back" src="{{ representative.avatarAlt }}" alt="{{ representative.login }}'s second avatar" />
     {{- else }}
     <div class="avatar">
-      <img src="{{ representative.avatarUrl }}" alt="{{ representative.login }}'s avatar" />
+      <img class="avatar" src="{{ representative.avatarUrl }}" alt="{{ representative.login }}'s avatar" />
     {{- /if }}
     </div>
     <div class="text-content">
