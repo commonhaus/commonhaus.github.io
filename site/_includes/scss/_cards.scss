@@ -80,59 +80,69 @@
         padding: 0;
       }
     }
-  }
-}
 
-.card.profile {
-  width: 300px;
-  max-width: 300px;
-  flex-direction: row; // Make the image and text be side by side
-  align-items: start; // Align items to the top
-  gap: 1em; // Add some space between the image and text
+    &.profile {
+      width: 300px;
+      max-width: 300px;
+      flex-direction: row; // Make the image and text be side by side
+      align-items: start; // Align items to the top
+      gap: 1em; // Add some space between the image and text
 
-  .avatar,
-  .avatar-flip {
-    min-width: 75px;
-    min-height: 75px;
-    width: 75px;
-    height: 75px;
-    position: relative;
-  }
+      .avatar,
+      .avatar-flip {
+        min-width: 75px;
+        min-height: 75px;
+        width: 75px;
+        height: 75px;
+        position: relative;
+      }
 
-  .avatar-flip {
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
+      &.mini {
+        .avatar,
+        .avatar-flip {
+          min-width: 50px;
+          min-height: 50px;
+          width: 50px;
+          height: 50px;
+        }
+      }
 
-  img {
-    width: 100%;
-    height: 100%;
-    border-radius: 33%; // This makes the image round
-    object-fit: cover; // This ensures the image covers the whole area
-  }
+      .avatar-flip {
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
 
-  .avatar-front,
-  .avatar-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden;
-  }
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 33%; // This makes the image round
+        object-fit: cover; // This ensures the image covers the whole area
+      }
 
-  .avatar-back {
-    transform: rotateY(180deg);
-  }
+      .avatar-front,
+      .avatar-back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+      }
 
-  &:hover .avatar-flip {
-    transform: rotateY(180deg);
-  }
+      .avatar-back {
+        transform: rotateY(180deg);
+      }
 
-  .text-content {
-    align-items: flex-start;
-  }
+      &:hover .avatar-flip {
+        transform: rotateY(180deg);
+      }
 
-  footer {
-    font-size: var(--font-small);
+      .text-content {
+        align-items: flex-start;
+      }
+
+      footer {
+        font-size: var(--font-small);
+      }
+    }
   }
 }
 
