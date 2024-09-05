@@ -1,26 +1,7 @@
 import { parse } from "@std/yaml";
 
-// Merge contents of CONTACTS.yaml, PROJECTS.yaml and ./site/_generated/about.yml
+// Merge contents of CONTACTS.yaml, PROJECTS.yaml, SPONSORS.yaml and ./site/_generated/about.yml
 // into a single data structure for Project Representatives and Councilors
-
-const tiers = {
-    'in-kind': 'In-Kind',
-    'platinum': 'Platinum',
-    'gold': 'Gold',
-    'silver': 'Silver',
-    'bronze': 'Bronze',
-    'supporter': 'Supporter'
-};
-
-// Create a map for sort order
-const tierSortOrder: { [key: string]: number } = {};
-Object.keys(tiers).forEach((key, index) => {
-    tierSortOrder[key] = index + 1; // +1 to avoid zero index
-});
-
-function sortOrder(a: string) {
-    return tierSortOrder[a] || 99; // Default to 99 if not found
-}
 
 interface Contact {
     login: string;
@@ -56,12 +37,13 @@ interface User {
     company?: string;
     see?: string;
 }
-interface Councilor extends User {
-    'term-start': number;
-    role?: string;
+interface SponsorData {
+    tiers: Record<string, SponsorTier>;
+    sponsors: Record<string, Sponsor>;
 }
-interface Officer extends User {
-    role?: string;
+interface SponsorTier {
+    name: string;
+    description: string;
 }
 interface Sponsor {
     name: string;
@@ -89,10 +71,21 @@ function augmentReference<T extends Contact>(data: Record<string, Contact[]>, it
     return item as T;
 }
 
-const CONTACT_DATA: Record<string, Contact[]> = parse(Deno.readTextFileSync("./site/foundation/CONTACTS.yaml")) as Record<string, Contact[]>;
-const SPONSOR_DATA: Record<string, Sponsor> = parse(Deno.readTextFileSync("./site/foundation/SPONSORS.yaml")) as Record<string, Sponsor>;
-const PROJECT_DATA: Record<string, ProjectData> = parse(Deno.readTextFileSync("./site/foundation/PROJECTS.yaml")) as Record<string, ProjectData>;
-const USER_DATA: Record<string, unknown> = parse(Deno.readTextFileSync("./site/_generated/about.yml")) as Record<string, unknown>;
+const CONTACT_DATA = parse(Deno.readTextFileSync("./site/foundation/CONTACTS.yaml")) as Record<string, Contact[]>;
+const SPONSOR_DATA = parse(Deno.readTextFileSync("./site/foundation/SPONSORS.yaml")) as SponsorData;
+const PROJECT_DATA = parse(Deno.readTextFileSync("./site/foundation/PROJECTS.yaml")) as Record<string, ProjectData>;
+const USER_DATA = parse(Deno.readTextFileSync("./site/_generated/about.yml")) as Record<string, unknown>;
+
+// Create a map for sort order
+const tiers = SPONSOR_DATA.tiers;
+const tierSortOrder: { [key: string]: number } = {};
+Object.keys(tiers).forEach((key, index) => {
+    tierSortOrder[key] = index + 1; // +1 to avoid zero index
+});
+
+function sortOrder(a: string) {
+    return tierSortOrder[a] || 99; // Default to 99 if not found
+}
 
 const cfcData = CONTACT_DATA['cf-council'] as CouncilContact[];
 const councilors = cfcData.map(item => augmentReference<CouncilContact>(CONTACT_DATA, item));
@@ -180,7 +173,7 @@ for(const advisor of augmentedAdvisorData) {
 }
 
 const groupedSponsors: GroupedSponsors = {};
-Object.entries(SPONSOR_DATA).forEach(([key, value]) => {
+Object.entries(SPONSOR_DATA.sponsors).forEach(([key, value]) => {
     const sponsor = {
         ...value,
         reps: augmentedAdvisorData.filter(x => x.organization === key),

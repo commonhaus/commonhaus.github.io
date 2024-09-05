@@ -7,12 +7,14 @@ cssclasses:
 - sponsors
 ---
 
-<div class="cards wide">
-{{- for key, value of page.data.tiers }}
+<section class="cards wide">
+{{- for key, tier of page.data.tiers }}
 {{- if page.data.groupedSponsors[key] }}
 {{- set sponsorGroup = page.data.groupedSponsors[key] }}
-
-<h2>{{ value }} Sponsors</h2>
+    <header>
+        <h2>{{ tier.name }} Sponsors</h2>
+        <p>{{ tier.description }}</p>
+    </header>
 {{- for sponsor of sponsorGroup }}
     <div class="card wide">
         <span class="logo"><a href="{{ sponsor.display.home }}">
@@ -57,4 +59,4 @@ cssclasses:
 {{- /for }}
 {{ /if -}}
 {{ /for -}}
-</div>
+</section>

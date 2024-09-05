@@ -75,7 +75,7 @@ cssclasses:
   <h2 id="our-projects" tabindex="-1">
     <a class="header-anchor" href="#our-projects">Our Projects</a>
   </h2>
-  <div class="cards">
+  <div class="cards wide">
     <!-- Highlighted Project Card -->
     <!-- <div class="card featured">
       <div class="text-content">
