@@ -2,6 +2,9 @@
 title: Our Sponsors
 description: List of Commonhaus Foundation sponsors and their Advisory Board representatives.
 templateEngine: [vto]
+index: false
+metas:
+  robots: false
 cssclasses:
 - projects
 - sponsors
