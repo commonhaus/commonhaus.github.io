@@ -25,7 +25,7 @@
   }
 
   &.indented {
-    padding-left: 2em;
+    padding-left: 1em;
   }
 
   .card {
@@ -68,8 +68,8 @@
         padding: 0;
       }
 
-      h4 {
-        font-size: var(--font-large);
+      h4, h5 {
+        font-size: var(--font-medium);
         @include figtree-medium;
         margin: 0;
         padding: 0;

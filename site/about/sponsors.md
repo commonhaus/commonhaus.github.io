@@ -33,8 +33,8 @@ cssclasses:
             <h3><a href="{{ sponsor.display.home }}">{{ sponsor.name }}</a></h3>
             <p>{{ sponsor.display.description |> md }}</p>
             {{- if sponsor.reps.length > 0 }}
-            <h4>Advisory Board members</h4>
             <div class="cards wrapped indented">
+                <h4>{{ sponsor.name }} Advisory Board members</h4>
             {{- for rep of sponsor.reps }}
                 <div class="card profile mini">
                     {{- if rep.avatarAlt }}
@@ -47,7 +47,7 @@ cssclasses:
                     {{- /if }}
                     </div>
                     <div class="text-content">
-                    <h3><a href="{{ rep.url }}">{{ rep.login }}</a></h3>
+                    <h5><a href="{{ rep.url }}">{{ rep.login }}</a></h5>
                     <div class="subhead">
                         {{- if rep.name }}{{ rep.name }}<br />{{ /if -}}
                     </div>
