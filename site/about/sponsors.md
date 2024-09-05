@@ -36,7 +36,7 @@ cssclasses:
             <h4>Advisory Board members</h4>
             <div class="cards wrapped indented">
             {{- for rep of sponsor.reps }}
-                <div class="card profile">
+                <div class="card profile mini">
                     {{- if rep.avatarAlt }}
                     <div class="avatar-flip">
                     <img class="avatar avatar-front" src="{{ rep.avatarUrl }}" alt="{{ rep.login }}'s avatar" />
