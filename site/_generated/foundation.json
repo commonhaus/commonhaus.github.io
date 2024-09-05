@@ -460,7 +460,7 @@
     "genUrl": "/agreements/membership/members.yaml"
   },
   "PROJECTS.yaml": {
-    "date": "2024-08-15T19:09:08.000Z",
+    "date": "2024-09-05T01:45:27.000Z",
     "srcPath": "PROJECTS.yaml",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/PROJECTS.yaml",
@@ -649,5 +649,12 @@
       "legal"
     ],
     "genUrl": "/bylaws/7-notice-records.html"
+  },
+  "SPONSORS.yaml": {
+    "date": "2024-09-05T01:46:27.000Z",
+    "srcPath": "SPONSORS.yaml",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/SPONSORS.yaml",
+    "genUrl": "/SPONSORS.yaml"
   }
 }
