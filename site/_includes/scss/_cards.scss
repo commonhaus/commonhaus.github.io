@@ -1,5 +1,9 @@
 @use 'index' as *;
 
+.indented {
+  padding-left: 1em;
+}
+
 .cards {
   display: flex;
   flex-direction: column;
@@ -24,8 +28,18 @@
     align-items: flex-start; // Align items to the top
   }
 
-  &.indented {
-    padding-left: 1em;
+  h3 {
+    font-size: var(--font-large);
+    @include figtree-medium;
+    margin: 0;
+    padding: 0;
+  }
+
+  h4, h5 {
+    font-size: var(--font-medium);
+    @include figtree-medium;
+    margin: 0;
+    padding: 0;
   }
 
   .card {
@@ -60,20 +74,6 @@
       align-self: stretch;
       align-items: flex-start;
       gap: .5em;
-
-      h3 {
-        font-size: var(--font-large);
-        @include figtree-medium;
-        margin: 0;
-        padding: 0;
-      }
-
-      h4, h5 {
-        font-size: var(--font-medium);
-        @include figtree-medium;
-        margin: 0;
-        padding: 0;
-      }
 
       p {
         margin: 0;
