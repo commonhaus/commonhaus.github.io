@@ -87,7 +87,7 @@ cssclasses:
     <!-- Other Project Cards -->
     {{- for project of page.data.listProjects() }}
     <div class="card">
-      <span class="logo">
+      <span class="logo"><a href="{{ project.home }}">
       {{- if project["logo-dark"] }}
         <img src='{{ project["logo-dark"] }}' alt="" aria-hidden="true" class='dark-only' />
       {{ /if }}
@@ -96,11 +96,10 @@ cssclasses:
       {{ else }}
         <div class="wordmark">{{ project.name }}</div>
       {{ /if }}
-      </span>
+      </a></span>
       <div class="text-content">
-        <h3>{{ project.name }}</h3>
+        <h3><a href="{{ project.home }}">{{ project.name }}</a></h3>
         <p>{{ project.description }}</p>
-        <a href="{{ project.home }}">Learn More</a>
       </div>
     </div>
     {{- /for }}
