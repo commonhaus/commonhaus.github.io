@@ -149,3 +149,18 @@ sigrunixia:
   company: '@Obsidianmd'
   name: Rebbecca Bishop
   bio: 'Customer Experience Specialist for @obsidianmd and friend of @commonhaus '
+ashni-mongodb:
+  login: ashni-mongodb
+  url: 'https://github.com/ashni-mongodb'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/105304831?v=4'
+  company: null
+  name: ashni
+  bio: product @ mongodb
+techbelle:
+  login: techbelle
+  url: 'https://github.com/techbelle'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/477680?u=1d6b178d16c552416fa3b2d6092d9751c90dd06d&v=4
+  company: MongoDB
+  name: Rachelle Palmer
+  bio: Eng Lead - App Modernization / GenAI
