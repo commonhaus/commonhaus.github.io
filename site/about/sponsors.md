@@ -33,28 +33,30 @@ cssclasses:
             <h3><a href="{{ sponsor.display.home }}">{{ sponsor.name }}</a></h3>
             <p>{{ sponsor.display.description |> md }}</p>
             {{- if sponsor.reps.length > 0 }}
-            <div class="cards wrapped indented">
+            <div class="indented">
                 <h4>{{ sponsor.name }} Advisory Board members</h4>
-            {{- for rep of sponsor.reps }}
-                <div class="card profile mini">
-                    {{- if rep.avatarAlt }}
-                    <div class="avatar-flip">
-                    <img class="avatar avatar-front" src="{{ rep.avatarUrl }}" alt="{{ rep.login }}'s avatar" />
-                    <img class="avatar avatar-back" src="{{ rep.avatarAlt }}" alt="{{ rep.login }}'s second avatar" />
-                    {{- else }}
-                    <div class="avatar">
-                    <img class="avatar" src="{{ rep.avatarUrl }}" alt="{{ rep.login }}'s avatar" />
-                    {{- /if }}
+                <div class="cards wrapped">
+                {{- for rep of sponsor.reps }}
+                    <div class="card profile mini">
+                        {{- if rep.avatarAlt }}
+                        <div class="avatar-flip">
+                        <img class="avatar avatar-front" src="{{ rep.avatarUrl }}" alt="{{ rep.login }}'s avatar" />
+                        <img class="avatar avatar-back" src="{{ rep.avatarAlt }}" alt="{{ rep.login }}'s second avatar" />
+                        {{- else }}
+                        <div class="avatar">
+                        <img class="avatar" src="{{ rep.avatarUrl }}" alt="{{ rep.login }}'s avatar" />
+                        {{- /if }}
+                        </div>
+                        <div class="text-content">
+                        <h5><a href="{{ rep.url }}">{{ rep.login }}</a></h5>
+                        <div class="subhead">
+                            {{- if rep.name }}{{ rep.name }}<br />{{ /if -}}
+                        </div>
+                        {{- if rep.bio }}<p>{{ rep.bio }}</p>{{ /if -}}
+                        </div>
                     </div>
-                    <div class="text-content">
-                    <h5><a href="{{ rep.url }}">{{ rep.login }}</a></h5>
-                    <div class="subhead">
-                        {{- if rep.name }}{{ rep.name }}<br />{{ /if -}}
-                    </div>
-                    {{- if rep.bio }}<p>{{ rep.bio }}</p>{{ /if -}}
-                    </div>
+                {{ /for -}}
                 </div>
-            {{ /for -}}
             </div>
             {{ /if -}}
         </div>
