@@ -1,0 +1,18 @@
+query($teamName: String!) {
+  organization(login: "commonhaus") {
+    team(slug: $teamName) {
+      invitations(first: 100) {
+        nodes {
+          invitee {
+            login
+            url
+            avatarUrl
+            company
+            name
+            bio
+          }
+        }
+      }
+    }
+  }
+}

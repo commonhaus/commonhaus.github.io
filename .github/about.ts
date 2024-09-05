@@ -81,7 +81,7 @@ function updateTeamMembers(data: TeamData) {
         about[a.login] = a;
     }
 }
-function updateEgcInvites(data: InviteData) {
+function updateTeamInvites(data: InviteData) {
     const invitees = data.data.organization.team.invitations.nodes;
     console.log(invitees)
     for (const a of invitees) {
@@ -90,6 +90,7 @@ function updateEgcInvites(data: InviteData) {
         }
     }
 }
+
 const officers: TeamData = JSON.parse(runGraphQL('.github/graphql/query.team.graphql', ['-F', "teamName=cf-officers"]));
 if (officers.errors || !officers.data) {
     console.error(officers);
@@ -104,11 +105,25 @@ if (reps.errors || !reps.data) {
 }
 updateTeamMembers(reps);
 
-const invites: InviteData = JSON.parse(runGraphQL('.github/graphql/query.egc.invitations.graphql'));
-if (invites.errors || !invites.data) {
+const advisors: TeamData = JSON.parse(runGraphQL('.github/graphql/query.team.graphql', ['-F', "teamName=advisory-board"]));
+if (advisors.errors || !advisors.data) {
+    console.error(advisors);
+    Deno.exit(1);
+}
+updateTeamMembers(advisors);
+
+const pendingEgc: InviteData = JSON.parse(runGraphQL('.github/graphql/query.team.invitations.graphql', ['-F', "teamName=cf-egc"]));
+if (pendingEgc.errors || !pendingEgc.data) {
     console.error(reps);
     Deno.exit(1);
 }
-updateEgcInvites(invites);
+updateTeamInvites(pendingEgc);
+
+const pendingAb: InviteData = JSON.parse(runGraphQL('.github/graphql/query.team.invitations.graphql', ['-F', "teamName=advisory-board"]));
+if (pendingAb.errors || !pendingAb.data) {
+    console.error(reps);
+    Deno.exit(1);
+}
+updateTeamInvites(pendingAb);
 
 Deno.writeTextFileSync(aboutPath, stringify(about));
