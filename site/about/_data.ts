@@ -78,14 +78,6 @@ const USER_DATA = parse(Deno.readTextFileSync("./site/_generated/about.yml")) as
 
 // Create a map for sort order
 const tiers = SPONSOR_DATA.tiers;
-const tierSortOrder: { [key: string]: number } = {};
-Object.keys(tiers).forEach((key, index) => {
-    tierSortOrder[key] = index + 1; // +1 to avoid zero index
-});
-
-function sortOrder(a: string) {
-    return tierSortOrder[a] || 99; // Default to 99 if not found
-}
 
 const cfcData = CONTACT_DATA['cf-council'] as CouncilContact[];
 const councilors = cfcData.map(item => augmentReference<CouncilContact>(CONTACT_DATA, item));
@@ -173,15 +165,17 @@ for(const advisor of augmentedAdvisorData) {
 }
 
 const groupedSponsors: GroupedSponsors = {};
-Object.entries(SPONSOR_DATA.sponsors).forEach(([key, value]) => {
-    const sponsor = {
-        ...value,
-        reps: augmentedAdvisorData.filter(x => x.organization === key),
-    };
+const advisoryBoard: AdvisorContact[] = [];
+Object.entries(SPONSOR_DATA.sponsors).forEach(([key, sponsor]) => {
+    const reps = augmentedAdvisorData.filter(x => x.organization === key);
+    reps.forEach(x => Object.assign(x, {
+        sponsorName: sponsor.name,
+        sponsorHome: sponsor.display?.home || key,
+    }));
+    advisoryBoard.push(...reps);
 
     if (sponsor.tier) {
-        const tiers = sponsor.tier.sort((a, b) => sortOrder(a) - sortOrder(b));
-        addToGroup(groupedSponsors, tiers[0], sponsor);
+        sponsor.tier.forEach(tier => addToGroup(groupedSponsors, tier, sponsor));
     } else {
         addToGroup(groupedSponsors, 'supporter', sponsor);
     }
@@ -199,5 +193,6 @@ export {
     egc,
     officers,
     groupedSponsors,
+    advisoryBoard,
     tiers
 }

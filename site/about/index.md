@@ -155,36 +155,32 @@ Our project representatives play a pivotal role in the Commonhaus Foundation's [
 
 ## Advisory Board
 
+The individuals listed below are representatives nominated by our sponsors to the Commonhaus Foundation's [Advisory Board][ab].
+They bring industry perspectives and expertise to the conversation, to help us ensure that the foundation remains aligned with the needs of the community.
+
 <section class="cards wrapped">
-{{- for key, tier of page.data.tiers }}
-    {{- if page.data.groupedSponsors[key] }}
-        {{- set sponsorGroup = page.data.groupedSponsors[key] }}
-        {{- for sponsor of sponsorGroup }}
-            {{- if sponsor.reps.length > 0 }}
-                {{- for rep of sponsor.reps }}
-                <div class="card profile">
-                    {{- if rep.avatarAlt }}
-                    <div class="avatar-flip">
-                        <img class="avatar avatar-front" src="{{ rep.avatarUrl }}" alt="{{ rep.login }}'s avatar" />
-                        <img class="avatar avatar-back" src="{{ rep.avatarAlt }}" alt="{{ rep.login }}'s second avatar" />
-                    {{- else }}
-                    <div class="avatar">
-                        <img class="avatar" src="{{ rep.avatarUrl }}" alt="{{ rep.login }}'s avatar" />
-                    {{- /if }}
-                    </div>
-                    <div class="text-content">
-                        <h3><a href="{{ rep.url }}">{{ rep.login }}</a></h3>
-                        <div class="subhead">
-                            {{- if rep.name }}{{ rep.name }}<br />{{ /if -}}
-                            <a href="{{ sponsor.display.home }}">{{ sponsor.name }}</a>
-                        </div>
-                        {{- if rep.bio }}<p>{{ rep.bio }}</p>{{ /if -}}
-                    </div>
-                </div>
-                {{ /for -}}
-            {{ /if -}}
-        {{- /for }}
-    {{- /if }}
+{{- for rep of page.data.advisoryBoard }}
+    <div class="card profile">
+        {{- if rep.avatarAlt }}
+        <div class="avatar-flip">
+            <img class="avatar avatar-front" src="{{ rep.avatarUrl }}" alt="{{ rep.login }}'s avatar" />
+            <img class="avatar avatar-back" src="{{ rep.avatarAlt }}" alt="{{ rep.login }}'s second avatar" />
+        {{- else }}
+        <div class="avatar">
+            <img class="avatar" src="{{ rep.avatarUrl }}" alt="{{ rep.login }}'s avatar" />
+        {{- /if }}
+        </div>
+        <div class="text-content">
+            <h3><a href="{{ rep.url }}">{{ rep.login }}</a></h3>
+            <div class="subhead">
+                {{- if rep.name }}{{ rep.name }}<br />{{ /if -}}
+                {{- if rep.sponsorHome }}<a href="{{ sponsorHome }}">{{ rep.sponsorName }}</a>
+                {{- else -}}{{ rep.sponsorName }}
+                {{- /if -}}
+            </div>
+            {{- if rep.bio }}<p>{{ rep.bio }}</p>{{ /if -}}
+        </div>
+    </div>
 {{- /for }}
 </section>
 
@@ -192,3 +188,4 @@ Our project representatives play a pivotal role in the Commonhaus Foundation's [
 [cfab]: ../foundation/bylaws/5-cf-advisory-board.md
 [cfc]: ../foundation/bylaws/4-cf-council.md
 [egc]: ../foundation/bylaws/4-cf-council.md#extended-governance-committee-egc
+[ab]: ../foundation/bylaws/5-cf-advisory-board.md

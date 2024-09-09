@@ -87,16 +87,16 @@ cssclasses:
     <!-- Other Project Cards -->
     {{- for project of page.data.listProjects() }}
     <div class="card wide">
-      <span class="logo"><a href="{{ project.home }}">
+      <span class="logo">
       {{- if project["logo-dark"] }}
-        <img src='{{ project["logo-dark"] }}' alt="" aria-hidden="true" class='dark-only' />
+        <a href="{{ project.home }}" class='dark-only'><img src='{{ project["logo-dark"] }}' alt="" aria-hidden="true" /></a>
       {{ /if }}
       {{ if project.logo }}
-        <img src="{{ project.logo }}" alt="" aria-hidden="true" class='{{- if project["logo-dark"] }}light-only{{ /if }}'/>
+        <a href="{{ project.home }}" class='{{- if project["logo-dark"] }}light-only{{ /if }}'><img src="{{ project.logo }}" alt="" aria-hidden="true"/></a>
       {{ else }}
-        <div class="wordmark">{{ project.name }}</div>
+        <a href="{{ project.home }}" class="wordmark">{{ project.name }}</a>
       {{ /if }}
-      </a></span>
+      </span>
       <div class="text-content">
         <h3><a href="{{ project.home }}">{{ project.name }}</a></h3>
         <p>{{ project.description }}</p>
