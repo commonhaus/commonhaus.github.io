@@ -5,7 +5,7 @@
   "author": "ebullient",
   "number": 195,
   "date": "2024-09-09T22:18:22Z",
-  "updated": "2024-09-09T22:18:26Z",
+  "updated": "2024-09-09T22:20:56Z",
   "url": "/activity/195.html",
   "type": "pullRequest",
   "tags": [
@@ -13,5 +13,5 @@
     "reviews",
     "notice"
   ],
-  "content": "Based on the Model Trademark Guidelines with help and advice from Chestek Legal.\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment)."
+  "content": "Based on the Model Trademark Guidelines with help and advice from Chestek Legal.\r\n\r\nThis is a significant revision.\r\n\r\nvoting group: @commonhaus/cf-egc \r\nattn: @jkschneider \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment)."
 }
