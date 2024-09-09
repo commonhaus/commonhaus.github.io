@@ -50,9 +50,9 @@ cssclasses:
         </span>
         <div class="text-content">
             <p><a href="{{ sponsor.display.home }}">{{ sponsor.name }}</a>. 
-                {{- if sponsor.display[key] }}{{ sponsor.display[key] |> md(true) }}
-               {{- else }}{{ sponsor.display.description |> md(true) }}
-               {{- /if -}}</p>
+                {{- if sponsor.display[key] }} {{ sponsor.display[key] |> md(true) }}
+                {{- else }} {{ sponsor.display.description |> md(true) }}
+                {{- /if -}}</p>
         </div>
     </div>
 {{- /for }}
