@@ -62,15 +62,7 @@ Commonhaus Foundation [Councilors][cfc] represent community interests and ensure
 <section class="cards wrapped">
 {{- for councilor of page.data.councilors }}
   <div class="card profile">
-    {{- if councilor.avatarAlt }}
-    <div class="avatar-flip">
-        <img class="avatar avatar-front" src="{{ councilor.avatarUrl }}" alt="{{ councilor.login }}'s avatar" />
-        <img class="avatar avatar-back" src="{{ councilor.avatarAlt }}" alt="{{ councilor.login }}'s second avatar" />
-    {{- else }}
-    <div class="avatar">
-      <img class="avatar" src="{{ councilor.avatarUrl }}" alt="{{ councilor.login }}'s avatar" />
-    {{- /if }}
-    </div>
+    {{ include "layouts/display-avatar.vto" { user: councilor } }}
     <div class="text-content">
       <h3><a href="{{ councilor.url }}">{{ councilor.login }}</a></h3>
       <div class="subhead">
@@ -95,15 +87,7 @@ _Note: Founding councilors will stand for election as their terms expire._
 <section class="cards wrapped">
 {{- for officer of page.data.officers }}
   <div class="card profile">
-    {{- if officer.avatarAlt }}
-    <div class="avatar-flip">
-      <img class="avatar avatar-front" src="{{ officer.avatarUrl }}" alt="{{ officer.login }}'s avatar" />
-      <img class="avatar avatar-back" src="{{ officer.avatarAlt }}" alt="{{ officer.login }}'s second avatar" />
-    {{- else }}
-    <div class="avatar">
-      <img class="avatar" src="{{ officer.avatarUrl }}" alt="{{ officer.login }}'s avatar" />
-    {{- /if }}
-    </div>
+    {{ include "layouts/display-avatar.vto" { user: officer } }}
     <div class="text-content">
       <h3><a href="{{ officer.url }}">{{ officer.login }}</a></h3>
       <div class="subhead">
@@ -126,15 +110,7 @@ Our project representatives play a pivotal role in the Commonhaus Foundation's [
 <section class="cards wrapped">
 {{- for representative of page.data.egc }}
   <div class="card profile">
-    {{- if representative.avatarAlt }}
-    <div class="avatar-flip">
-      <img class="avatar avatar-front" src="{{ representative.avatarUrl }}" alt="{{ representative.login }}'s avatar" />
-      <img class="avatar avatar-back" src="{{ representative.avatarAlt }}" alt="{{ representative.login }}'s second avatar" />
-    {{- else }}
-    <div class="avatar">
-      <img class="avatar" src="{{ representative.avatarUrl }}" alt="{{ representative.login }}'s avatar" />
-    {{- /if }}
-    </div>
+    {{ include "layouts/display-avatar.vto" { user: representative } }}
     <div class="text-content">
       <h3><a href="{{ representative.url }}">{{ representative.login }}</a></h3>
       <div class="subhead">
@@ -161,15 +137,7 @@ They bring industry perspectives and expertise to the conversation, to help us e
 <section class="cards wrapped">
 {{- for rep of page.data.advisoryBoard }}
     <div class="card profile">
-        {{- if rep.avatarAlt }}
-        <div class="avatar-flip">
-            <img class="avatar avatar-front" src="{{ rep.avatarUrl }}" alt="{{ rep.login }}'s avatar" />
-            <img class="avatar avatar-back" src="{{ rep.avatarAlt }}" alt="{{ rep.login }}'s second avatar" />
-        {{- else }}
-        <div class="avatar">
-            <img class="avatar" src="{{ rep.avatarUrl }}" alt="{{ rep.login }}'s avatar" />
-        {{- /if }}
-        </div>
+        {{ include "layouts/display-avatar.vto" { user: rep } }}
         <div class="text-content">
             <h3><a href="{{ rep.url }}">{{ rep.login }}</a></h3>
             <div class="subhead">

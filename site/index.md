@@ -87,19 +87,10 @@ cssclasses:
     <!-- Other Project Cards -->
     {{- for project of page.data.listProjects() }}
     <div class="card wide">
-      <span class="logo">
-      {{- if project["logo-dark"] }}
-        <a href="{{ project.home }}" class='dark-only'><img src='{{ project["logo-dark"] }}' alt="" aria-hidden="true" /></a>
-      {{ /if }}
-      {{ if project.logo }}
-        <a href="{{ project.home }}" class='{{- if project["logo-dark"] }}light-only{{ /if }}'><img src="{{ project.logo }}" alt="" aria-hidden="true"/></a>
-      {{ else }}
-        <a href="{{ project.home }}" class="wordmark">{{ project.name }}</a>
-      {{ /if }}
-      </span>
+        {{ include "layouts/display-logo.vto" { name: project.name, display: project.display } }}
       <div class="text-content">
-        <h3><a href="{{ project.home }}">{{ project.name }}</a></h3>
-        <p>{{ project.description }}</p>
+        <h3><a href="{{ project.display.home }}">{{ project.name }}</a></h3>
+        <p>{{ project.description |> md(true) }}</p>
       </div>
     </div>
     {{- /for }}

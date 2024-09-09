@@ -1,0 +1,9 @@
+{{- if user.avatarAlt }}
+<div class="avatar-flip">
+    <img class="avatar avatar-front" src="{{ user.avatarUrl }}" alt="{{ user.login }}'s avatar" />
+    <img class="avatar avatar-back" src="{{ user.avatarAlt }}" alt="{{ user.login }}'s second avatar" />
+{{- else }}
+<div class="avatar">
+    <img class="avatar" src="{{ user.avatarUrl }}" alt="{{ user.login }}'s avatar" />
+{{- /if }}
+</div>
