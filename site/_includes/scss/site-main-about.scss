@@ -156,12 +156,14 @@ main.site-main {
 }
 
 main.sponsors {
-  h2:not(:first-of-type) {
-    border-top: 1px solid var(--border-color); /* Change color as needed */
-    padding-top: .8em;
+  hr {
+    border: none;
+    border-top: 2px solid var(--border-color); /* Change color as needed */
+
   }
-  .cards.wide {
-    gap: 2em;
+
+  section {
+    margin-bottom: 3em;
   }
 }
 

@@ -13,12 +13,6 @@
 
   &.wide {
     margin-bottom: 2.5em;
-
-    header:not(:first-of-type) {
-      border: none;
-      border-top: 1px solid var(--border-color); /* Change color as needed */
-      margin: 1em 0;
-    }
   }
 
   &.wrapped {
@@ -48,6 +42,19 @@
     align-items: center;
     gap: .5em;
 
+    .text-content {
+      display: flex;
+      flex-direction: column;
+      align-self: stretch;
+      align-items: flex-start;
+      gap: .5em;
+
+      p {
+        margin: 0;
+        padding: 0;
+      }
+    }
+
     &.wide {
       img:not(.avatar) {
         max-height: 100px;
@@ -64,20 +71,44 @@
       }
     }
 
-    img {
-      width: 25vw;
+    &.two {
+      width: 300px;
+      max-width: 300px;
+      align-items: start; // Align items to the top
+
+      .logo {
+        width: 300px;
+        max-width: 300px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+
+        img {
+          width: unset;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
     }
 
-    .text-content {
-      display: flex;
-      flex-direction: column;
-      align-self: stretch;
-      align-items: flex-start;
-      gap: .5em;
+    &.three {
+      width: 200px;
+      max-width: 200px;
+      align-items: start; // Align items to the top
 
-      p {
-        margin: 0;
-        padding: 0;
+      .logo {
+        width: 200px;
+        max-width: 200px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+
+        img {
+          width: unset;
+          height: 100%;
+          object-fit: contain;
+        }
       }
     }
 
@@ -95,16 +126,6 @@
         width: 75px;
         height: 75px;
         position: relative;
-      }
-
-      &.mini {
-        .avatar,
-        .avatar-flip {
-          min-width: 50px;
-          min-height: 50px;
-          width: 50px;
-          height: 50px;
-        }
       }
 
       .avatar-flip {
@@ -146,20 +167,20 @@
   }
 }
 
-img.dark-only {
+a.dark-only {
   display: none;
 }
 
-img.light-only {
+a.light-only {
   display: block;
 }
 
 .dark {
-  img.dark-only {
+  a.dark-only {
     display: block;
   }
 
-  img.light-only {
+  a.light-only {
     display: none;
   }
 }
