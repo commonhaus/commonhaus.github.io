@@ -12,6 +12,7 @@ Together, we ensure the sustainable development of essential open source librari
 - [Councilors](#councilors)
 - [Officers](#officers)
 - [Project Representatives](#project-representatives)
+- [Advisory Board](#advisory-board)
 
 ## Our guiding principles
 
@@ -46,11 +47,19 @@ We prioritize **Application Frameworks** and **Libraries** that are critical for
 Our doors are open to everyone passionate about open source innovation. We invite all individuals, not just code contributors, to participate and help shape our organization.
 Our [Bylaws][] detail membership and governance, emphasizing collaboration, diverse perspectives, and advisory input from our [Advisory Board][cfab] to align sponsorship with community interests.
 
+## Get involved
+
+The Commonhaus Foundation relies on the participation of a global community.
+Whether you're a developer, contributor, project leader, or simply passionate about open source, there are many ways to contribute and make an impact.
+From joining discussions, contributing to projects, or participating in governance, your voice and contributions are valued here.
+
+<a href="https://github.com/sponsors/commonhaus" class="text button">Build with us</a>
+
 ## Councilors
 
 Commonhaus Foundation [Councilors][cfc] represent community interests and ensure the foundation operates responsibly. Elected by CF Members, they serve as the voice of our community, prioritizing the CF community's interests in their decision-making.
 
-<div class="cards wrapped">
+<section class="cards wrapped">
 {{- for councilor of page.data.councilors }}
   <div class="card profile">
     {{- if councilor.avatarAlt }}
@@ -77,13 +86,13 @@ Commonhaus Foundation [Councilors][cfc] represent community interests and ensure
     </div>
   </div>
 {{- /for }}
-</div>
+</section>
 
 _Note: Founding councilors will stand for election as their terms expire._
 
 ## Officers
 
-<div class="cards wrapped">
+<section class="cards wrapped">
 {{- for officer of page.data.officers }}
   <div class="card profile">
     {{- if officer.avatarAlt }}
@@ -108,13 +117,13 @@ _Note: Founding councilors will stand for election as their terms expire._
     </div>
   </div>
 {{- /for }}
-</div>
+</section>
 
 ## Project Representatives
 
 Our project representatives play a pivotal role in the Commonhaus Foundation's [Extended Governance Committee][egc] (EGC), ensuring that the perspectives of each foundation project are represented in foundation-wide decisions.
 
-<div class="cards wrapped">
+<section class="cards wrapped">
 {{- for representative of page.data.egc }}
   <div class="card profile">
     {{- if representative.avatarAlt }}
@@ -132,22 +141,52 @@ Our project representatives play a pivotal role in the Commonhaus Foundation's [
           {{- if representative.name }}{{ representative.name }}<br />{{ /if -}}
           {{- representative.projects.map(p => '<a href="' + p.home + '">' + p.name + '</a>').join(', ') -}}
       </div>
+      {{- if representative.bio || representative.company}}
       <p>
-        {{- if representative.bio }}{{ representative.bio }}
-        {{- else if representative.company }}<br />{{ representative.company }}{{ /if -}}
+        {{- if representative.bio }}{{ representative.bio }}{{ /if -}}
+        {{- if representative.bio && representative.company}}<br />{{ /if -}}
+        {{- if representative.company }}<br />{{ representative.company }}{{ /if -}}
       </p>
+      {{ /if -}}
     </div>
   </div>
 {{- /for }}
-</div>
+</section>
 
-## Get involved
+## Advisory Board
 
-The Commonhaus Foundation relies on the participation of a global community.
-Whether you're a developer, contributor, project leader, or simply passionate about open source, there are many ways to contribute and make an impact.
-From joining discussions, contributing to projects, or participating in governance, your voice and contributions are valued here.
-
-<a href="https://github.com/sponsors/commonhaus" class="text button">Build with us</a>
+<section class="cards wrapped">
+{{- for key, tier of page.data.tiers }}
+    {{- if page.data.groupedSponsors[key] }}
+        {{- set sponsorGroup = page.data.groupedSponsors[key] }}
+        {{- for sponsor of sponsorGroup }}
+            {{- if sponsor.reps.length > 0 }}
+                {{- for rep of sponsor.reps }}
+                <div class="card profile">
+                    {{- if rep.avatarAlt }}
+                    <div class="avatar-flip">
+                        <img class="avatar avatar-front" src="{{ rep.avatarUrl }}" alt="{{ rep.login }}'s avatar" />
+                        <img class="avatar avatar-back" src="{{ rep.avatarAlt }}" alt="{{ rep.login }}'s second avatar" />
+                    {{- else }}
+                    <div class="avatar">
+                        <img class="avatar" src="{{ rep.avatarUrl }}" alt="{{ rep.login }}'s avatar" />
+                    {{- /if }}
+                    </div>
+                    <div class="text-content">
+                        <h3><a href="{{ rep.url }}">{{ rep.login }}</a></h3>
+                        <div class="subhead">
+                            {{- if rep.name }}{{ rep.name }}<br />{{ /if -}}
+                            <a href="{{ sponsor.display.home }}">{{ sponsor.name }}</a>
+                        </div>
+                        {{- if rep.bio }}<p>{{ rep.bio }}</p>{{ /if -}}
+                    </div>
+                </div>
+                {{ /for -}}
+            {{ /if -}}
+        {{- /for }}
+    {{- /if }}
+{{- /for }}
+</section>
 
 [Bylaws]: ../foundation/bylaws/1-preface.md
 [cfab]: ../foundation/bylaws/5-cf-advisory-board.md
