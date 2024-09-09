@@ -5,14 +5,15 @@
   "author": "ebullient",
   "number": 188,
   "date": "2024-08-08T00:41:14Z",
-  "updated": "2024-09-03T12:28:08Z",
+  "updated": "2024-09-10T01:29:30Z",
   "url": "/activity/188.html",
   "type": "pullRequest",
   "tags": [
     "post",
     "reviews",
-    "vote/open",
-    "notice"
+    "notice",
+    "vote/done"
   ],
-  "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/188.svg)](https://github.com/commonhaus/foundation/pull/188#issuecomment-2274635684 \"IC_kwDOKRPTI86HlC-k\")\r\n\r\nAntitrust policy\r\n\r\nakin to: https://www.linuxfoundation.org/legal/antitrust-policy\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment).\r\n    "
+  "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/188.svg)](https://github.com/commonhaus/foundation/pull/188#issuecomment-2274635684 \"IC_kwDOKRPTI86HlC-k\")\r\n\r\nAntitrust policy\r\n\r\nakin to: https://www.linuxfoundation.org/legal/antitrust-policy\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment).\r\n    ",
+  "closedAt": "2024-09-10T01:29:22Z"
 }

@@ -1,0 +1,102 @@
+{
+  "voteType": "marthas",
+  "hasQuorum": false,
+  "isDone": false,
+  "group": "commonhaus/cf-egc",
+  "groupSize": 13,
+  "groupVotes": 4,
+  "countedVotes": 4,
+  "droppedVotes": 0,
+  "votingThreshold": "all",
+  "categories": {
+    "approve": {
+      "reactions": [
+        "👍"
+      ],
+      "team": [
+        {
+          "login": "cealsair",
+          "url": "https://github.com/cealsair",
+          "createdAt": "2024-09-10T13:30:40.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "cowtowncoder",
+          "url": "https://github.com/cowtowncoder",
+          "createdAt": "2024-09-10T18:41:59.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "ebullient",
+          "url": "https://github.com/ebullient",
+          "createdAt": "2024-09-10T19:20:10.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "velo",
+          "url": "https://github.com/velo",
+          "createdAt": "2024-09-10T13:35:52.000+00:00",
+          "reaction": "👍"
+        }
+      ],
+      "teamTotal": 4,
+      "total": 4
+    }
+  },
+  "duplicates": [],
+  "missingGroupActors": [
+    {
+      "login": "aalmiray",
+      "url": "https://github.com/aalmiray"
+    },
+    {
+      "login": "dandreadis",
+      "url": "https://github.com/dandreadis"
+    },
+    {
+      "login": "marc0der",
+      "url": "https://github.com/marc0der"
+    },
+    {
+      "login": "henri-tremblay",
+      "url": "https://github.com/henri-tremblay"
+    },
+    {
+      "login": "evanchooly",
+      "url": "https://github.com/evanchooly"
+    },
+    {
+      "login": "maxandersen",
+      "url": "https://github.com/maxandersen"
+    },
+    {
+      "login": "gavinking",
+      "url": "https://github.com/gavinking"
+    },
+    {
+      "login": "timtebeek",
+      "url": "https://github.com/timtebeek"
+    },
+    {
+      "login": "kenfinnigan",
+      "url": "https://github.com/kenfinnigan"
+    }
+  ],
+  "manualCloseComments": null,
+  "commentId": "IC_kwDOKRPTI86LflNQ",
+  "github": "https://github.com/commonhaus/foundation/pull/196",
+  "itemId": "PR_kwDOKRPTI8566yQZ",
+  "itemTitle": "📄 Antitrust Policy [due Sept 27]",
+  "number": 196,
+  "repoName": "commonhaus/foundation",
+  "type": "vote",
+  "date": "2024-09-10T10:43:39Z",
+  "updated": "2024-09-10T19:44:41Z",
+  "url": "/votes/commonhaus/foundation/196.html",
+  "tags": [
+    "vote/open",
+    "notice",
+    "vote"
+  ],
+  "closed": false
+}

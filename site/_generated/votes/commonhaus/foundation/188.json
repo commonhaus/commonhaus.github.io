@@ -1,11 +1,11 @@
 {
   "voteType": "marthas",
   "hasQuorum": false,
-  "isDone": false,
+  "isDone": true,
   "group": "commonhaus/cf-egc",
   "groupSize": 13,
   "groupVotes": 11,
-  "countedVotes": 11,
+  "countedVotes": 12,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -91,7 +91,7 @@
         }
       ],
       "teamTotal": 5,
-      "total": 5
+      "total": 6
     }
   },
   "duplicates": [],
@@ -105,7 +105,15 @@
       "url": "https://github.com/timtebeek"
     }
   ],
-  "manualCloseComments": null,
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2024-09-10T01:29:22.000+00:00",
+    "body": "I have enough of a reset that I'm going to close this and re-open to reset the vote w/ a new timeline.withdrawn",
+    "url": "https://github.com/commonhaus/foundation/pull/188#issuecomment-2339432734"
+  },
   "commentId": "IC_kwDOKRPTI86HlC-k",
   "github": "https://github.com/commonhaus/foundation/pull/188",
   "itemId": "PR_kwDOKRPTI853xdTG",
@@ -114,12 +122,14 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-08-08T00:41:57Z",
-  "updated": "2024-09-03T12:28:08Z",
+  "updated": "2024-09-10T01:29:26Z",
   "url": "/votes/commonhaus/foundation/188.html",
   "tags": [
-    "vote/open",
     "notice",
-    "vote"
+    "vote/done",
+    "vote",
+    "closed"
   ],
-  "closed": false
+  "closed": true,
+  "closedAt": "2024-09-10T01:29:22Z"
 }
