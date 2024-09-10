@@ -2,6 +2,12 @@
 
 We appreciate your interest in contributing to our project! This document provides some basic guidelines for contributing.
 
+## Legal
+
+This website's content (excluding generated content and content sourced in repositories with other licenses) is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0). 
+
+All contributions are subject to the [Developer Certificate of Origin (DCO)](https://developercertificate.org/). The DCO text is also included verbatim in the [dco.txt](dco.txt) file in the root directory of the repository.
+
 ## Deno, Lume and Vento
 
 This project uses [Deno](https://deno.land/) as the runtime, the [Lume static site generator](https://lume.land/) and [Vento templating engine](https://vento.js.org/).
