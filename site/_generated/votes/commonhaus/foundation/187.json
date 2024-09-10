@@ -9,6 +9,21 @@
   "droppedVotes": 1,
   "votingThreshold": "all",
   "categories": {
+    "revise": {
+      "reactions": [
+        "👎"
+      ],
+      "team": [
+        {
+          "login": "gavinking",
+          "url": "https://github.com/gavinking",
+          "createdAt": "2024-08-15T21:40:37.000+00:00",
+          "reaction": "👎"
+        }
+      ],
+      "teamTotal": 1,
+      "total": 1
+    },
     "approve": {
       "reactions": [
         "👍"
@@ -23,7 +38,7 @@
         {
           "login": "cealsair",
           "url": "https://github.com/cealsair",
-          "createdAt": "2024-08-14T21:20:01.000+00:00",
+          "createdAt": "2024-09-10T13:40:25.000+00:00",
           "reaction": "👍"
         },
         {
@@ -47,21 +62,6 @@
       ],
       "teamTotal": 5,
       "total": 5
-    },
-    "revise": {
-      "reactions": [
-        "👎"
-      ],
-      "team": [
-        {
-          "login": "gavinking",
-          "url": "https://github.com/gavinking",
-          "createdAt": "2024-08-15T21:40:37.000+00:00",
-          "reaction": "👎"
-        }
-      ],
-      "teamTotal": 1,
-      "total": 1
     },
     "ok": {
       "reactions": [
@@ -132,7 +132,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-08-07T15:58:13Z",
-  "updated": "2024-09-05T09:28:05Z",
+  "updated": "2024-09-10T13:40:28Z",
   "url": "/votes/commonhaus/foundation/187.html",
   "tags": [
     "vote/open",
