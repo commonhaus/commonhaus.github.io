@@ -4,8 +4,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 13,
-  "groupVotes": 2,
-  "countedVotes": 3,
+  "groupVotes": 3,
+  "countedVotes": 4,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -34,9 +34,16 @@
       "reactions": [
         "👀"
       ],
-      "team": [],
-      "teamTotal": 0,
-      "total": 1
+      "team": [
+        {
+          "login": "gavinking",
+          "url": "https://github.com/gavinking",
+          "createdAt": "2024-09-10T22:26:07.000+00:00",
+          "reaction": "👀"
+        }
+      ],
+      "teamTotal": 1,
+      "total": 2
     }
   },
   "duplicates": [],
@@ -74,10 +81,6 @@
       "url": "https://github.com/cowtowncoder"
     },
     {
-      "login": "gavinking",
-      "url": "https://github.com/gavinking"
-    },
-    {
       "login": "timtebeek",
       "url": "https://github.com/timtebeek"
     },
@@ -95,7 +98,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-09-10T18:44:56Z",
-  "updated": "2024-09-10T18:54:45Z",
+  "updated": "2024-09-10T22:26:11Z",
   "url": "/votes/commonhaus/foundation/195.html",
   "tags": [
     "vote/open",
