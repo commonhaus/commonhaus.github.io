@@ -6,7 +6,7 @@
   "groupSize": 13,
   "groupVotes": 12,
   "countedVotes": 12,
-  "droppedVotes": 1,
+  "droppedVotes": 2,
   "votingThreshold": "all",
   "categories": {
     "revise": {
@@ -42,9 +42,21 @@
           "reaction": "👍"
         },
         {
+          "login": "cowtowncoder",
+          "url": "https://github.com/cowtowncoder",
+          "createdAt": "2024-09-11T13:21:24.000+00:00",
+          "reaction": "👍"
+        },
+        {
           "login": "evanchooly",
           "url": "https://github.com/evanchooly",
           "createdAt": "2024-08-06T15:55:02.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "henri-tremblay",
+          "url": "https://github.com/henri-tremblay",
+          "createdAt": "2024-09-14T03:03:27.000+00:00",
           "reaction": "👍"
         },
         {
@@ -60,20 +72,14 @@
           "reaction": "👍"
         }
       ],
-      "teamTotal": 5,
-      "total": 5
+      "teamTotal": 7,
+      "total": 7
     },
     "ok": {
       "reactions": [
         "👀"
       ],
       "team": [
-        {
-          "login": "cowtowncoder",
-          "url": "https://github.com/cowtowncoder",
-          "createdAt": "2024-08-15T15:30:55.000+00:00",
-          "reaction": "👀"
-        },
         {
           "login": "dandreadis",
           "url": "https://github.com/dandreadis",
@@ -84,12 +90,6 @@
           "login": "ebullient",
           "url": "https://github.com/ebullient",
           "createdAt": "2024-08-06T16:20:32.000+00:00",
-          "reaction": "👀"
-        },
-        {
-          "login": "henri-tremblay",
-          "url": "https://github.com/henri-tremblay",
-          "createdAt": "2024-08-15T01:52:32.000+00:00",
           "reaction": "👀"
         },
         {
@@ -105,11 +105,17 @@
           "reaction": "👀"
         }
       ],
-      "teamTotal": 6,
-      "total": 6
+      "teamTotal": 4,
+      "total": 4
     }
   },
   "duplicates": [
+    {
+      "login": "henri-tremblay",
+      "url": "https://github.com/henri-tremblay",
+      "createdAt": "2024-08-15T01:52:32.000+00:00",
+      "reaction": "👀"
+    },
     {
       "login": "maxandersen",
       "url": "https://github.com/maxandersen",
@@ -132,7 +138,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-08-07T15:58:13Z",
-  "updated": "2024-09-10T13:40:28Z",
+  "updated": "2024-09-14T03:28:01Z",
   "url": "/votes/commonhaus/foundation/187.html",
   "tags": [
     "vote/open",

@@ -4,9 +4,9 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 13,
-  "groupVotes": 4,
-  "countedVotes": 4,
-  "droppedVotes": 0,
+  "groupVotes": 6,
+  "countedVotes": 6,
+  "droppedVotes": 1,
   "votingThreshold": "all",
   "categories": {
     "approve": {
@@ -33,17 +33,42 @@
           "reaction": "👍"
         },
         {
+          "login": "gavinking",
+          "url": "https://github.com/gavinking",
+          "createdAt": "2024-09-10T22:09:20.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "kenfinnigan",
+          "url": "https://github.com/kenfinnigan",
+          "createdAt": "2024-09-11T13:44:30.000+00:00",
+          "reaction": "👍"
+        },
+        {
           "login": "velo",
           "url": "https://github.com/velo",
           "createdAt": "2024-09-10T13:35:52.000+00:00",
           "reaction": "👍"
         }
       ],
-      "teamTotal": 4,
-      "total": 4
+      "teamTotal": 6,
+      "total": 6
+    },
+    "ok": {
+      "reactions": [],
+      "team": [],
+      "teamTotal": 0,
+      "total": 0
     }
   },
-  "duplicates": [],
+  "duplicates": [
+    {
+      "login": "gavinking",
+      "url": "https://github.com/gavinking",
+      "createdAt": "2024-09-10T22:06:21.000+00:00",
+      "reaction": "👀"
+    }
+  ],
   "missingGroupActors": [
     {
       "login": "aalmiray",
@@ -70,16 +95,8 @@
       "url": "https://github.com/maxandersen"
     },
     {
-      "login": "gavinking",
-      "url": "https://github.com/gavinking"
-    },
-    {
       "login": "timtebeek",
       "url": "https://github.com/timtebeek"
-    },
-    {
-      "login": "kenfinnigan",
-      "url": "https://github.com/kenfinnigan"
     }
   ],
   "manualCloseComments": null,
@@ -91,7 +108,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-09-10T10:43:39Z",
-  "updated": "2024-09-10T19:44:41Z",
+  "updated": "2024-09-11T15:27:52Z",
   "url": "/votes/commonhaus/foundation/196.html",
   "tags": [
     "vote/open",

@@ -1,0 +1,98 @@
+{
+  "voteType": "marthas",
+  "hasQuorum": false,
+  "isDone": false,
+  "group": "commonhaus/cf-egc",
+  "groupSize": 13,
+  "groupVotes": 2,
+  "countedVotes": 2,
+  "droppedVotes": 0,
+  "votingThreshold": "all",
+  "categories": {
+    "approve": {
+      "reactions": [
+        "👍"
+      ],
+      "team": [
+        {
+          "login": "henri-tremblay",
+          "url": "https://github.com/henri-tremblay",
+          "createdAt": "2024-09-21T21:07:51.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "kenfinnigan",
+          "url": "https://github.com/kenfinnigan",
+          "createdAt": "2024-09-22T20:13:53.000+00:00",
+          "reaction": "👍"
+        }
+      ],
+      "teamTotal": 2,
+      "total": 2
+    }
+  },
+  "duplicates": [],
+  "missingGroupActors": [
+    {
+      "login": "aalmiray",
+      "url": "https://github.com/aalmiray"
+    },
+    {
+      "login": "velo",
+      "url": "https://github.com/velo"
+    },
+    {
+      "login": "dandreadis",
+      "url": "https://github.com/dandreadis"
+    },
+    {
+      "login": "marc0der",
+      "url": "https://github.com/marc0der"
+    },
+    {
+      "login": "evanchooly",
+      "url": "https://github.com/evanchooly"
+    },
+    {
+      "login": "maxandersen",
+      "url": "https://github.com/maxandersen"
+    },
+    {
+      "login": "cealsair",
+      "url": "https://github.com/cealsair"
+    },
+    {
+      "login": "cowtowncoder",
+      "url": "https://github.com/cowtowncoder"
+    },
+    {
+      "login": "gavinking",
+      "url": "https://github.com/gavinking"
+    },
+    {
+      "login": "timtebeek",
+      "url": "https://github.com/timtebeek"
+    },
+    {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    }
+  ],
+  "manualCloseComments": null,
+  "commentId": "IC_kwDOKRPTI86Nb1VB",
+  "github": "https://github.com/commonhaus/foundation/pull/199",
+  "itemId": "PR_kwDOKRPTI858P6LT",
+  "itemTitle": "📝 Clarify decision-making rules [due Oct 20]",
+  "number": 199,
+  "repoName": "commonhaus/foundation",
+  "type": "vote",
+  "date": "2024-09-25T04:18:50Z",
+  "updated": "2024-09-25T04:18:50Z",
+  "url": "/votes/commonhaus/foundation/199.html",
+  "tags": [
+    "vote/open",
+    "notice",
+    "vote"
+  ],
+  "closed": false
+}
