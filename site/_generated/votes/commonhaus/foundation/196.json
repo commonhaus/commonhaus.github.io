@@ -4,8 +4,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 13,
-  "groupVotes": 2,
-  "countedVotes": 2,
+  "groupVotes": 4,
+  "countedVotes": 4,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -21,14 +21,26 @@
           "reaction": "👍"
         },
         {
+          "login": "cowtowncoder",
+          "url": "https://github.com/cowtowncoder",
+          "createdAt": "2024-09-10T18:41:59.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "ebullient",
+          "url": "https://github.com/ebullient",
+          "createdAt": "2024-09-10T19:20:10.000+00:00",
+          "reaction": "👍"
+        },
+        {
           "login": "velo",
           "url": "https://github.com/velo",
           "createdAt": "2024-09-10T13:35:52.000+00:00",
           "reaction": "👍"
         }
       ],
-      "teamTotal": 2,
-      "total": 2
+      "teamTotal": 4,
+      "total": 4
     }
   },
   "duplicates": [],
@@ -58,10 +70,6 @@
       "url": "https://github.com/maxandersen"
     },
     {
-      "login": "cowtowncoder",
-      "url": "https://github.com/cowtowncoder"
-    },
-    {
       "login": "gavinking",
       "url": "https://github.com/gavinking"
     },
@@ -72,10 +80,6 @@
     {
       "login": "kenfinnigan",
       "url": "https://github.com/kenfinnigan"
-    },
-    {
-      "login": "ebullient",
-      "url": "https://github.com/ebullient"
     }
   ],
   "manualCloseComments": null,
@@ -87,7 +91,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-09-10T10:43:39Z",
-  "updated": "2024-09-10T13:35:55Z",
+  "updated": "2024-09-10T19:44:41Z",
   "url": "/votes/commonhaus/foundation/196.html",
   "tags": [
     "vote/open",
