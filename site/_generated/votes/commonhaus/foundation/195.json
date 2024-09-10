@@ -4,8 +4,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 13,
-  "groupVotes": 1,
-  "countedVotes": 2,
+  "groupVotes": 2,
+  "countedVotes": 3,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -19,10 +19,16 @@
           "url": "https://github.com/ebullient",
           "createdAt": "2024-09-09T22:22:35.000+00:00",
           "reaction": "👍"
+        },
+        {
+          "login": "velo",
+          "url": "https://github.com/velo",
+          "createdAt": "2024-09-10T18:54:41.000+00:00",
+          "reaction": "👍"
         }
       ],
-      "teamTotal": 1,
-      "total": 1
+      "teamTotal": 2,
+      "total": 2
     },
     "ok": {
       "reactions": [
@@ -38,10 +44,6 @@
     {
       "login": "aalmiray",
       "url": "https://github.com/aalmiray"
-    },
-    {
-      "login": "velo",
-      "url": "https://github.com/velo"
     },
     {
       "login": "dandreadis",
@@ -93,7 +95,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-09-10T18:44:56Z",
-  "updated": "2024-09-10T18:44:56Z",
+  "updated": "2024-09-10T18:54:45Z",
   "url": "/votes/commonhaus/foundation/195.html",
   "tags": [
     "vote/open",
