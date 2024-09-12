@@ -4,8 +4,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 13,
-  "groupVotes": 11,
-  "countedVotes": 12,
+  "groupVotes": 12,
+  "countedVotes": 13,
   "droppedVotes": 1,
   "votingThreshold": "all",
   "categories": {
@@ -45,6 +45,12 @@
           "reaction": "👍"
         },
         {
+          "login": "evanchooly",
+          "url": "https://github.com/evanchooly",
+          "createdAt": "2024-09-12T21:30:16.000+00:00",
+          "reaction": "👍"
+        },
+        {
           "login": "gavinking",
           "url": "https://github.com/gavinking",
           "createdAt": "2024-08-15T22:06:05.000+00:00",
@@ -75,8 +81,8 @@
           "reaction": "👍"
         }
       ],
-      "teamTotal": 10,
-      "total": 11
+      "teamTotal": 11,
+      "total": 12
     },
     "ok": {
       "reactions": [
@@ -104,10 +110,6 @@
   ],
   "missingGroupActors": [
     {
-      "login": "evanchooly",
-      "url": "https://github.com/evanchooly"
-    },
-    {
       "login": "timtebeek",
       "url": "https://github.com/timtebeek"
     }
@@ -116,12 +118,12 @@
   "commentId": "IC_kwDOKRPTI86FjXwM",
   "github": "https://github.com/commonhaus/foundation/pull/178",
   "itemId": "PR_kwDOKRPTI8519Ubz",
-  "itemTitle": "Undraft the bylaws: IP Policy [due 17 Aug]",
+  "itemTitle": "Undraft the bylaws: IP Policy",
   "number": 178,
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-07-19T23:27:30Z",
-  "updated": "2024-08-27T18:27:37Z",
+  "updated": "2024-09-12T21:30:20Z",
   "url": "/votes/commonhaus/foundation/178.html",
   "tags": [
     "vote/open",
