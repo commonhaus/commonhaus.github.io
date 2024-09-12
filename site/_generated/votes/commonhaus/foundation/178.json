@@ -6,7 +6,7 @@
   "groupSize": 13,
   "groupVotes": 12,
   "countedVotes": 13,
-  "droppedVotes": 1,
+  "droppedVotes": 2,
   "votingThreshold": "all",
   "categories": {
     "approve": {
@@ -106,6 +106,12 @@
       "url": "https://github.com/aalmiray",
       "createdAt": "2024-07-23T04:43:12.000+00:00",
       "reaction": "👍"
+    },
+    {
+      "login": "JooHyukKim",
+      "url": "https://github.com/JooHyukKim",
+      "createdAt": "2024-07-21T07:38:50.000+00:00",
+      "reaction": "👍"
     }
   ],
   "missingGroupActors": [
@@ -123,7 +129,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-07-19T23:27:30Z",
-  "updated": "2024-09-12T21:30:20Z",
+  "updated": "2024-09-12T22:21:50Z",
   "url": "/votes/commonhaus/foundation/178.html",
   "tags": [
     "vote/open",
