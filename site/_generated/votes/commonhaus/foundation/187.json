@@ -6,7 +6,7 @@
   "groupSize": 13,
   "groupVotes": 12,
   "countedVotes": 12,
-  "droppedVotes": 1,
+  "droppedVotes": 2,
   "votingThreshold": "all",
   "categories": {
     "revise": {
@@ -54,6 +54,12 @@
           "reaction": "👍"
         },
         {
+          "login": "henri-tremblay",
+          "url": "https://github.com/henri-tremblay",
+          "createdAt": "2024-09-14T03:03:27.000+00:00",
+          "reaction": "👍"
+        },
+        {
           "login": "kenfinnigan",
           "url": "https://github.com/kenfinnigan",
           "createdAt": "2024-08-06T23:36:55.000+00:00",
@@ -66,8 +72,8 @@
           "reaction": "👍"
         }
       ],
-      "teamTotal": 6,
-      "total": 6
+      "teamTotal": 7,
+      "total": 7
     },
     "ok": {
       "reactions": [
@@ -87,12 +93,6 @@
           "reaction": "👀"
         },
         {
-          "login": "henri-tremblay",
-          "url": "https://github.com/henri-tremblay",
-          "createdAt": "2024-08-15T01:52:32.000+00:00",
-          "reaction": "👀"
-        },
-        {
           "login": "marc0der",
           "url": "https://github.com/marc0der",
           "createdAt": "2024-08-25T15:49:34.000+00:00",
@@ -105,11 +105,17 @@
           "reaction": "👀"
         }
       ],
-      "teamTotal": 5,
-      "total": 5
+      "teamTotal": 4,
+      "total": 4
     }
   },
   "duplicates": [
+    {
+      "login": "henri-tremblay",
+      "url": "https://github.com/henri-tremblay",
+      "createdAt": "2024-08-15T01:52:32.000+00:00",
+      "reaction": "👀"
+    },
     {
       "login": "maxandersen",
       "url": "https://github.com/maxandersen",
@@ -132,7 +138,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-08-07T15:58:13Z",
-  "updated": "2024-09-11T15:28:21Z",
+  "updated": "2024-09-14T03:28:01Z",
   "url": "/votes/commonhaus/foundation/187.html",
   "tags": [
     "vote/open",
