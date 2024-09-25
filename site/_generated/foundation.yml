@@ -1,3 +1,13 @@
+# This content is not automatically generated.
+#
+# If you add a new page in the foundations repo that you want
+# rendered on the website, you must add it here.
+# Include the target URL, SEO descriptionm and any other metadata
+# that is not discovered by the build process (see foundations.json).
+#
+# Note: Pages discovered/included in foundations.json will
+# not be published as webpages unless they are also included here.
+
 COMMUNICATION:
   url: /community/
   description: >
@@ -31,13 +41,11 @@ bylaws/README:
 
 bylaws/1-preface:
   url: /bylaws/preface.html
-  ord: 1
   description: |
     Overview of terms and concepts in the Commonhaus Foundation bylaws
 
 bylaws/2-purpose:
   url: /bylaws/purpose.html
-  ord: 2
   description: >
     Outlines the Commonhaus Foundation's purpose, aligning with its 501(c)(6) status.
     Highlights commitment to open source innovation, community collaboration,
@@ -45,14 +53,12 @@ bylaws/2-purpose:
 
 bylaws/3-cf-membership:
   url: /bylaws/cf-membership.html
-  ord: 3
   description: >
     Details the Commonhaus Foundation's membership policies, including dues, renewals,
     and suspension.
 
 bylaws/4-cf-council:
   url: /bylaws/cf-council.html
-  ord: 4
   description: >
     Bylaws defining the composition, roles, and responsibilities of the
     Commonhaus Foundation Council, the central governing body of the foundation.
@@ -60,7 +66,6 @@ bylaws/4-cf-council:
     voting requirements, and member communication.
 
 bylaws/5-cf-advisory-board:
-  ord: 5
   url: /bylaws/cf-advisory-board.html
   description: >
     Describes the Advisory Board, including representatives from supportive
@@ -69,7 +74,6 @@ bylaws/5-cf-advisory-board:
 
 bylaws/6-decision-making:
   url: /bylaws/decision-making.html
-  ord: 6
   description: >
     Outlines the foundation's decision-making, voting, and election processes.
     Simplifies procedures for efficient progression and member participation.
@@ -77,7 +81,6 @@ bylaws/6-decision-making:
     with open source principles.
 
 bylaws/7-notice-records:
-  ord: 7
   url: /bylaws/notice-records.html
   description: >
     Covers the foundation's notice and record-keeping policies.
@@ -86,7 +89,6 @@ bylaws/7-notice-records:
 
 bylaws/8-indemnification-dissolution:
   url: /bylaws/indemnification-dissolution.html
-  ord: 8
   description: >
     Details the foundation's policies on liability, indemnification, and dissolution.
     Emphasizes protecting members and contributors from legal risks, and outlines processes
@@ -94,7 +96,6 @@ bylaws/8-indemnification-dissolution:
 
 bylaws/9-amendments:
   url: /bylaws/amendments.html
-  ord: 9
   description: >
     Describes the process for amending the foundation's bylaws, utilizing GitHub for
     an efficient, asynchronous method from proposal to approval. Covers proposal submission,
