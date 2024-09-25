@@ -1,7 +1,7 @@
 {
   "voteType": "marthas",
   "hasQuorum": false,
-  "isDone": false,
+  "isDone": true,
   "group": "commonhaus/cf-egc",
   "groupSize": 13,
   "groupVotes": 12,
@@ -129,7 +129,15 @@
       "url": "https://github.com/timtebeek"
     }
   ],
-  "manualCloseComments": null,
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2024-10-02T01:14:51.000+00:00",
+    "body": "- We will raise another PR if Gavin has additional suggestions after consulting with SFC\r\n- After discussion with @jkschneider, we can/should proceed on some items w/o waiting for @timtebeek ",
+    "url": "https://github.com/commonhaus/foundation/pull/187#issuecomment-2387449989"
+  },
   "commentId": "IC_kwDOKRPTI86Hh4so",
   "github": "https://github.com/commonhaus/foundation/pull/187",
   "itemId": "PR_kwDOKRPTI853gxB9",
@@ -138,12 +146,14 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-08-07T15:58:13Z",
-  "updated": "2024-09-14T03:28:01Z",
+  "updated": "2024-10-02T22:27:48Z",
   "url": "/votes/commonhaus/foundation/187.html",
   "tags": [
-    "vote/open",
     "notice",
-    "vote"
+    "vote/done",
+    "vote",
+    "closed"
   ],
-  "closed": false
+  "closed": true,
+  "closedAt": "2024-10-02T01:13:05Z"
 }

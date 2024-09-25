@@ -1,7 +1,7 @@
 {
   "voteType": "marthas",
   "hasQuorum": false,
-  "isDone": false,
+  "isDone": true,
   "group": "commonhaus/cf-egc",
   "groupSize": 13,
   "groupVotes": 12,
@@ -114,7 +114,15 @@
       "url": "https://github.com/timtebeek"
     }
   ],
-  "manualCloseComments": null,
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2024-10-02T01:17:09.000+00:00",
+    "body": "- after discussion with @jkschneider, we can/should proceed on some items without waiting for @timtebeek\r\n- otherwise, no disagreement",
+    "url": "https://github.com/commonhaus/foundation/pull/186#issuecomment-2387451842"
+  },
   "commentId": "IC_kwDOKRPTI86HQIzv",
   "github": "https://github.com/commonhaus/foundation/pull/186",
   "itemId": "PR_kwDOKRPTI853c5Bm",
@@ -123,12 +131,14 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-08-05T14:01:13Z",
-  "updated": "2024-08-29T18:27:38Z",
+  "updated": "2024-10-02T22:27:39Z",
   "url": "/votes/commonhaus/foundation/186.html",
   "tags": [
-    "vote/open",
     "notice",
-    "vote"
+    "vote/done",
+    "vote",
+    "closed"
   ],
-  "closed": false
+  "closed": true,
+  "closedAt": "2024-10-02T01:15:51Z"
 }
