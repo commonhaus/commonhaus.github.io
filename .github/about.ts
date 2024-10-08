@@ -56,7 +56,6 @@ const aboutPath = './site/_generated/about.yml';
 const aboutYaml = Deno.readTextFileSync(aboutPath);
 const about: Record<string, User> = parse(aboutYaml) as Record<string, User> ?? {};
 
-// Get last commit date for a file
 function runGraphQL(filePath: string, custom: string[] = []): string {
     const args = [
         'api', 'graphql',
