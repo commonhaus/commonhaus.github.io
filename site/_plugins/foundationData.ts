@@ -8,16 +8,18 @@ interface Project {
     repo: string;
     display?: ProjectDisplay;
     draft?: boolean;
-    home?: string; // temporary
-    logo?: string; // temporary
-    wordmark?: boolean; // temporary
-    description?: string; // temporary
 }
 interface ProjectDisplay {
     home?: string;
     logo?: string;
-    wordmark?: boolean;
+    "logo-dark"?: string;
     description?: string;
+}
+interface SponsorData {
+    sponsors: Record<string, Sponsor>;
+}
+interface Sponsor {
+    display?: ProjectDisplay;
 }
 
 const EMAIL_REGEX = /(send an email to|email) the \[`?.+?`? mailing list\]\[CONTACTS.yaml\]/g;
@@ -30,8 +32,16 @@ const FORM_REPLACEMENT = '[use our online form](https://forms.gle/t2d4DR6CxXSag2
 const FOUNDATION_DATA: Record<string, unknown> = parse(Deno.readTextFileSync("./site/_generated/foundation.json")) as  Record<string, unknown>;
 const FOUNDATION_PAGES: Record<string, unknown> = parse(Deno.readTextFileSync("./site/_generated/foundation.yml")) as  Record<string, unknown>;
 const PROJECT_DATA: Record<string, Project> = parse(Deno.readTextFileSync("./site/foundation/PROJECTS.yaml")) as Record<string, Project>;
+const SPONSOR_DATA: SponsorData = parse(Deno.readTextFileSync("./site/foundation/SPONSORS.yaml")) as SponsorData;
+
+const IMPORTED_LOGO_URLS: Record<string, string> = {};
 
 const fixFoundationUrls = (url: string) => {
+
+    if (IMPORTED_LOGO_URLS[url]) {
+        // Fix sponsor and project logo URLs to reference local images
+        return IMPORTED_LOGO_URLS[url];
+    }
     if (url.startsWith('http') || url.startsWith('#')) {
         return url;
     }
@@ -102,6 +112,30 @@ const mergeFoundationPageData = (page: Page, allPages: Page<Data>[]) => {
     }
 };
 
+const urlBaseName = (url: string) => {
+    return new URL(url).pathname.split('/').pop();
+}
+
+const importLogo = (name: string, url: string | undefined, segment: string, site: Site) => {
+    if (url && url.startsWith("http")) {
+        if (url.startsWith("https://www.commonhaus.org")) {
+            IMPORTED_LOGO_URLS[url] = url.replace("https://www.commonhaus.org", "");
+            return;
+        }
+        const baseName = urlBaseName(url);
+        if (!baseName) {
+            return;
+        }
+        const file = baseName.startsWith(name)
+                ? baseName
+                : `${name}-${baseName}`;
+        const target = `/images/${segment}/${file}`;
+        site.remoteFile(file, url);
+        site.copy(file, target);
+        IMPORTED_LOGO_URLS[url] = target;
+    }
+}
+
 /**
  * Define the foundationData plugin
  */
@@ -109,6 +143,20 @@ export default function () {
 
     return (site: Site) => {
         console.log("Foundation Submodule data");
+
+        // Copy sponsor and project logos to the local site
+        for(const [k, v] of Object.entries(SPONSOR_DATA.sponsors)) {
+            if (v.display) {
+                importLogo(k, v.display.logo, "sponsors", site);
+                importLogo(k, v.display["logo-dark"], "sponsors", site);
+            }
+        }
+        for(const [k, v] of Object.entries(PROJECT_DATA)) {
+            if (v.display) {
+                importLogo(k, v.display.logo, "projects", site);
+                importLogo(k, v.display["logo-dark"], "projects", site);
+            }
+        }
 
         site.use(modifyUrls({
             fn: fixFoundationUrls
