@@ -115,7 +115,6 @@ const prefixMap: Record<string, string> = {
     reviews: '🗳️  ',
 };
 
-// Get last commit date for a file
 function runGraphQL(filePath: string): string {
     const command = new Deno.Command('gh', {
         args: [
