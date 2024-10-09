@@ -1,0 +1,100 @@
+{
+  "voteType": "marthas",
+  "hasQuorum": false,
+  "isDone": false,
+  "group": "commonhaus/cf-egc",
+  "groupSize": 13,
+  "groupVotes": 3,
+  "countedVotes": 4,
+  "droppedVotes": 0,
+  "votingThreshold": "all",
+  "categories": {
+    "approve": {
+      "reactions": [
+        "👍"
+      ],
+      "team": [
+        {
+          "login": "aalmiray",
+          "url": "https://github.com/aalmiray",
+          "createdAt": "2024-10-08T21:57:44.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "gavinking",
+          "url": "https://github.com/gavinking",
+          "createdAt": "2024-10-08T21:37:24.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "kenfinnigan",
+          "url": "https://github.com/kenfinnigan",
+          "createdAt": "2024-10-08T19:49:47.000+00:00",
+          "reaction": "👍"
+        }
+      ],
+      "teamTotal": 3,
+      "total": 4
+    }
+  },
+  "duplicates": [],
+  "missingGroupActors": [
+    {
+      "login": "velo",
+      "url": "https://github.com/velo"
+    },
+    {
+      "login": "dandreadis",
+      "url": "https://github.com/dandreadis"
+    },
+    {
+      "login": "marc0der",
+      "url": "https://github.com/marc0der"
+    },
+    {
+      "login": "henri-tremblay",
+      "url": "https://github.com/henri-tremblay"
+    },
+    {
+      "login": "evanchooly",
+      "url": "https://github.com/evanchooly"
+    },
+    {
+      "login": "maxandersen",
+      "url": "https://github.com/maxandersen"
+    },
+    {
+      "login": "cealsair",
+      "url": "https://github.com/cealsair"
+    },
+    {
+      "login": "cowtowncoder",
+      "url": "https://github.com/cowtowncoder"
+    },
+    {
+      "login": "timtebeek",
+      "url": "https://github.com/timtebeek"
+    },
+    {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    }
+  ],
+  "manualCloseComments": null,
+  "commentId": "DC_kwDOKRPTI84ApiC0",
+  "github": "https://github.com/commonhaus/foundation/discussions/203",
+  "itemId": "D_kwDOKRPTI84Ab0P0",
+  "itemTitle": "Seconds! Defining alternate project representatives",
+  "number": 203,
+  "repoName": "commonhaus/foundation",
+  "type": "vote",
+  "date": "2024-10-09T04:08:44Z",
+  "updated": "2024-10-09T04:08:45Z",
+  "url": "/votes/commonhaus/foundation/203.html",
+  "tags": [
+    "vote/open",
+    "notice",
+    "vote"
+  ],
+  "closed": false
+}
