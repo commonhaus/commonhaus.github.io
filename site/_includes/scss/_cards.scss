@@ -60,9 +60,16 @@
     }
 
     &.wide {
-      img:not(.avatar) {
-        max-height: 100px;
-        width: auto;
+
+      .logo {
+        max-width: 70%;
+        height: 100px;
+        margin: auto;
+
+        img {
+          width: auto;
+          height: 100px;
+        }
       }
 
       .wordmark {
@@ -88,8 +95,8 @@
         justify-content: center;
 
         img {
-          width: unset;
-          height: 100%;
+          width: auto;
+          height: 150px;
           object-fit: contain;
         }
       }
@@ -109,8 +116,8 @@
         align-content: center;
 
         img {
-          width: unset;
-          height: 100%;
+          width: auto;
+          height: 100px;
           object-fit: contain;
         }
       }
