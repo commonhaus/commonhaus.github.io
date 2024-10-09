@@ -21,6 +21,7 @@ import callouts from "npm:markdown-it-obsidian-callouts";
 import authorData from "./site/_plugins/authorData.ts";
 import foundationData from "./site/_plugins/foundationData.ts";
 import devBackend from "./site/_plugins/devBackend.ts";
+import contentHash from "./site/_plugins/contentHash.ts";
 
 const markdown = {
     options: {
@@ -86,6 +87,9 @@ site
             sourceMap: false,
             sourceMapIncludeSources: true,
         }
+    }))
+    .use(contentHash({
+        attribute: "data-hash",
     }))
     .use(pagefind({
         indexing: {
