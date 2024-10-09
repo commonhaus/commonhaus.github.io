@@ -57,12 +57,14 @@
           "reaction": "👍"
         }
       ],
+      "otherVotes": [],
       "teamTotal": 7,
       "total": 7
     },
     "ok": {
       "reactions": [],
       "team": [],
+      "otherVotes": [],
       "teamTotal": 0,
       "total": 0
     }
@@ -75,6 +77,7 @@
       "reaction": "👀"
     }
   ],
+  "otherVotes": [],
   "missingGroupActors": [
     {
       "login": "aalmiray",
@@ -105,12 +108,12 @@
   "commentId": "IC_kwDOKRPTI86LflNQ",
   "github": "https://github.com/commonhaus/foundation/pull/196",
   "itemId": "PR_kwDOKRPTI8566yQZ",
-  "itemTitle": "📄 Antitrust Policy [due Sept 27]",
+  "itemTitle": "📄 Antitrust Policy [due Oct 27]",
   "number": 196,
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-09-10T10:43:39Z",
-  "updated": "2024-09-27T15:00:07Z",
+  "updated": "2024-10-11T13:17:06Z",
   "url": "/votes/commonhaus/foundation/196.html",
   "tags": [
     "vote/open",
