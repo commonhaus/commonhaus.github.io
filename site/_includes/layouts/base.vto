@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>{{ page.data.title }}</title>
-<link rel="stylesheet" href="/assets/site.css" />
+<link rel="stylesheet" href="/assets/site.css" data-hash />
 <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 {{- for x of page.data.preload }}
@@ -55,7 +55,7 @@
 <script type="text/javascript" src="{{ x }}" inline></script>
 {{ /for -}}
 {{- for x of page.data.stylesheets }}
-<link rel="stylesheet" href="{{ x }}" />
+<link rel="stylesheet" href="{{ x }}" data-hash />
 {{ /for -}}
 </head>
 <body>
