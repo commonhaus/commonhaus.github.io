@@ -1,0 +1,58 @@
+{
+  "voteType": "marthas",
+  "hasQuorum": false,
+  "isDone": false,
+  "group": "commonhaus/cf-council",
+  "groupSize": 3,
+  "groupVotes": 2,
+  "countedVotes": 6,
+  "droppedVotes": 0,
+  "votingThreshold": "all",
+  "categories": {
+    "approve": {
+      "reactions": [
+        "👍"
+      ],
+      "team": [
+        {
+          "login": "ebullient",
+          "url": "https://github.com/ebullient",
+          "createdAt": "2024-10-10T20:43:02.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "kenfinnigan",
+          "url": "https://github.com/kenfinnigan",
+          "createdAt": "2024-10-10T23:14:20.000+00:00",
+          "reaction": "👍"
+        }
+      ],
+      "teamTotal": 2,
+      "total": 6
+    }
+  },
+  "duplicates": [],
+  "missingGroupActors": [
+    {
+      "login": "cealsair",
+      "url": "https://github.com/cealsair"
+    }
+  ],
+  "manualCloseComments": null,
+  "commentId": "IC_kwDOKRPTI86PeoNp",
+  "github": "https://github.com/commonhaus/foundation/pull/205",
+  "itemId": "PR_kwDOKRPTI85-RM_K",
+  "itemTitle": "💸 Sponsorship tiers [due Nov 9] ",
+  "number": 205,
+  "repoName": "commonhaus/foundation",
+  "type": "vote",
+  "date": "2024-10-11T11:02:52Z",
+  "updated": "2024-10-11T11:02:52Z",
+  "url": "/votes/commonhaus/foundation/205.html",
+  "tags": [
+    "vote/open",
+    "notice",
+    "vote"
+  ],
+  "closed": false
+}
