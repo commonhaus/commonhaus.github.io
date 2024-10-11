@@ -1,4 +1,5 @@
 {
+  "title": "📝  Privacy Policy [due Oct 20]",
   "voteType": "marthas",
   "hasQuorum": false,
   "isDone": false,
@@ -137,7 +138,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-09-20T00:21:29Z",
-  "updated": "2024-10-11T13:17:16Z",
+  "updated": "2024-10-11T15:58:29Z",
   "url": "/votes/commonhaus/foundation/198.html",
   "tags": [
     "vote/open",
