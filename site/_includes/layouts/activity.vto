@@ -11,7 +11,7 @@ layout: layouts/activitySidebar.vto
   {{ content |> md }}
 </div>
 <footer class="byline">
-  {{ page |> authorAvatar }}
+  {{ page.data.author |> authorAvatar }}
   {{- if page.data.status && page.data.status.closedAt }}
   <div class="closed">closed on <time datetime="{{ page.data.status.closedAt }}">{{ page.data.status.closedAt |> date('d MMMM yyyy') }}</time></div>
   {{- else if page.data.hasUpdate }}

@@ -14,8 +14,7 @@ export default function () {
 
     return (site: Site) => {
         console.log("Author metadata");
-        site.filter("authorAvatar", (page: Page) => {
-            const login = page.data.author;
+        site.filter("authorAvatar", (login: string) => {
             const author = AUTHOR_DATA[login];
             if (author) {
                 return `<a class="avatar" href="${author.url}" target="_top">

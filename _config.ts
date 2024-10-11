@@ -189,4 +189,15 @@ site.filter("listVoters", (voters: unknown) => {
     }
 });
 
+site.filter("listVoterReactions", (voters: unknown) => {
+    if (voters && Array.isArray(voters)) {
+        return voters
+            .map((voter: { login: string; url: string; reaction: string; }) =>
+                `<a href="${voter.url}" target="_top">${voter.login}</a> (${voter.reaction})`)
+            .join(", ");
+    } else {
+        console.log(voters, "is not an array");
+    }
+});
+
 export default site;

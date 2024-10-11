@@ -222,7 +222,6 @@ export default function* ({ page }) {
         const newPage = { ...general, ...gp };
         newPage.sortedCategories = newPage.categories ? Object.entries(newPage.categories).sort() : [];
         newPage.voteSvg = newPage.url.replace(/\.html$/,`.svg${suffix}`);
-        console.log(newPage);
         yield newPage;
 
         const svg = {
