@@ -1,4 +1,5 @@
 {
+  "title": "📄 Antitrust Policy [due Oct 27]",
   "voteType": "marthas",
   "hasQuorum": false,
   "isDone": false,
@@ -113,7 +114,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-09-10T10:43:39Z",
-  "updated": "2024-10-11T13:17:06Z",
+  "updated": "2024-10-11T15:58:39Z",
   "url": "/votes/commonhaus/foundation/196.html",
   "tags": [
     "vote/open",
