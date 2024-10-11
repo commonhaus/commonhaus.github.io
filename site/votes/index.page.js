@@ -162,7 +162,8 @@ function createIndex(pages, dir, uri) {
             const data = JSON.parse(Deno.readTextFileSync(path.join(dir, file.name)));
             data.content = JSON.stringify(data, null, 2);
             data.date = new Date(data.date);
-            data.title = `Vote results for ${data.repoName}#${data.number}`;
+            data.itemTitle = data.title;
+            data.title = `Results for ${data.repoName}#${data.number}`;
             data.voteItem = `${data.repoName}#${data.number}`;
             data.updated = new Date(data.updated);
             data.url = `${uri}/${file.name.replace(/\.json$/, '.html')}`;
@@ -221,6 +222,7 @@ export default function* ({ page }) {
         const newPage = { ...general, ...gp };
         newPage.sortedCategories = newPage.categories ? Object.entries(newPage.categories).sort() : [];
         newPage.voteSvg = newPage.url.replace(/\.html$/,`.svg${suffix}`);
+        console.log(newPage);
         yield newPage;
 
         const svg = {

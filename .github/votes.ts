@@ -70,6 +70,7 @@ interface VoteData {
     categories?: Record<string, VoteCategory>;
     duplicates: VoteRecord[]
     missingGroupActors: VoteRecord[];
+    title?: string;
 
     // Fields are added (or modified) by this script for rendering
     closed?: boolean;
@@ -79,7 +80,6 @@ interface VoteData {
     github?: string;
     ignored?: VoteCategory;
     itemId?: string;
-    itemTitle?: string;
     number?: number;
     repoName?: string;
     sortedCategories?: [string, VoteCategory][];
@@ -134,7 +134,6 @@ const voteData: VoteData = match ? JSON.parse(match[1].trim()) : {};
 voteData.commentId = comment.id;
 voteData.github = item.url;
 voteData.itemId = item.id;
-voteData.itemTitle = item.title;
 voteData.number = item.number;
 voteData.repoName = item.repository.nameWithOwner;
 voteData.type = 'vote';
