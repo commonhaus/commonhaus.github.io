@@ -63,6 +63,7 @@
           "reaction": "👍"
         }
       ],
+      "otherVotes": [],
       "teamTotal": 8,
       "total": 8
     },
@@ -84,6 +85,14 @@
           "reaction": "👀"
         }
       ],
+      "otherVotes": [
+        {
+          "login": "jkschneider",
+          "url": "https://github.com/jkschneider",
+          "createdAt": "2024-09-09T22:48:34.000+00:00",
+          "reaction": "👀"
+        }
+      ],
       "teamTotal": 2,
       "total": 3
     }
@@ -99,6 +108,14 @@
       "login": "kenfinnigan",
       "url": "https://github.com/kenfinnigan",
       "createdAt": "2024-09-11T13:28:08.000+00:00",
+      "reaction": "👀"
+    }
+  ],
+  "otherVotes": [
+    {
+      "login": "jkschneider",
+      "url": "https://github.com/jkschneider",
+      "createdAt": "2024-09-09T22:48:34.000+00:00",
       "reaction": "👀"
     }
   ],
@@ -125,7 +142,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-09-10T18:44:56Z",
-  "updated": "2024-10-11T03:28:23Z",
+  "updated": "2024-10-11T13:16:46Z",
   "url": "/votes/commonhaus/foundation/195.html",
   "tags": [
     "vote/open",
