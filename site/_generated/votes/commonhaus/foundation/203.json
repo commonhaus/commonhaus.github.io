@@ -4,8 +4,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 13,
-  "groupVotes": 5,
-  "countedVotes": 7,
+  "groupVotes": 7,
+  "countedVotes": 9,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -18,6 +18,12 @@
           "login": "aalmiray",
           "url": "https://github.com/aalmiray",
           "createdAt": "2024-10-08T21:57:44.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "cowtowncoder",
+          "url": "https://github.com/cowtowncoder",
+          "createdAt": "2024-10-11T00:38:41.000+00:00",
           "reaction": "👍"
         },
         {
@@ -43,18 +49,20 @@
           "url": "https://github.com/kenfinnigan",
           "createdAt": "2024-10-08T19:49:47.000+00:00",
           "reaction": "👍"
+        },
+        {
+          "login": "velo",
+          "url": "https://github.com/velo",
+          "createdAt": "2024-10-11T00:49:40.000+00:00",
+          "reaction": "👍"
         }
       ],
-      "teamTotal": 5,
-      "total": 7
+      "teamTotal": 7,
+      "total": 9
     }
   },
   "duplicates": [],
   "missingGroupActors": [
-    {
-      "login": "velo",
-      "url": "https://github.com/velo"
-    },
     {
       "login": "dandreadis",
       "url": "https://github.com/dandreadis"
@@ -76,10 +84,6 @@
       "url": "https://github.com/cealsair"
     },
     {
-      "login": "cowtowncoder",
-      "url": "https://github.com/cowtowncoder"
-    },
-    {
       "login": "timtebeek",
       "url": "https://github.com/timtebeek"
     }
@@ -93,7 +97,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-10-09T04:08:44Z",
-  "updated": "2024-10-10T23:10:57Z",
+  "updated": "2024-10-11T03:27:43Z",
   "url": "/votes/commonhaus/foundation/203.html",
   "tags": [
     "vote/open",
