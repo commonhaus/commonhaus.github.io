@@ -1,4 +1,5 @@
 {
+  "title": "♻️ Reworked Trademark Policy [due Oct 10]",
   "voteType": "marthas",
   "hasQuorum": false,
   "isDone": false,
@@ -142,7 +143,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-09-10T18:44:56Z",
-  "updated": "2024-10-11T13:16:46Z",
+  "updated": "2024-10-11T15:58:59Z",
   "url": "/votes/commonhaus/foundation/195.html",
   "tags": [
     "vote/open",
