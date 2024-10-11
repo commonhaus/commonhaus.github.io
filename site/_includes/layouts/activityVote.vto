@@ -62,12 +62,17 @@ layout: layouts/activitySidebar.vto
     </tr>
   </tfoot>
 </table>
+{{ if page.data.otherVotes && page.data.otherVotes.length }}
+<section class="missing">
+  <p>The following votes were not counted (🙏, but not in required group):
+  {{ page.data.otherVotes |> listVoters }}
+  </p>
+</section>
+{{- /if }}
 {{ if page.data.missingGroupActors && page.data.missingGroupActors.length }}
 <section class="missing">
   <p>The following votes are missing:
-  {{- for user of page.data.missingGroupActors }}
-  <span><a href="{{ user.url }}">{{ user.login }}</a> </span>
-  {{- /for }}
+  {{ page.data.missingGroupActors |> listVoters }}
   </p>
 </section>
 {{- /if }}
@@ -81,7 +86,7 @@ layout: layouts/activitySidebar.vto
   <p>The following votes were not counted (duplicate votes, using most recent):</p>
   <div class="duplicates">
   {{- for d of page.data.duplicates }}
-  <span><a href="{{ d.url }}">{{ d.login }}</a>({{ d.reaction }})</span>
+  <span><a href="{{ d.url }}">{{ d.login }}</a>({{ d.reaction }}) </span>
   {{- /for }}
   </div>
 </section>
