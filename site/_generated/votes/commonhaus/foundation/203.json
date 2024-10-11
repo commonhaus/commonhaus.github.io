@@ -1,4 +1,5 @@
 {
+  "title": "Seconds! Defining alternate project representatives",
   "voteType": "marthas",
   "hasQuorum": false,
   "isDone": false,
@@ -125,7 +126,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-10-09T04:08:44Z",
-  "updated": "2024-10-11T13:16:26Z",
+  "updated": "2024-10-11T15:57:59Z",
   "url": "/votes/commonhaus/foundation/203.html",
   "tags": [
     "vote/open",
