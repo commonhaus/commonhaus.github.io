@@ -27,11 +27,63 @@
           "reaction": "👍"
         }
       ],
+      "otherVotes": [
+        {
+          "login": "JooHyukKim",
+          "url": "https://github.com/JooHyukKim",
+          "createdAt": "2024-10-10T23:28:23.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "cowtowncoder",
+          "url": "https://github.com/cowtowncoder",
+          "createdAt": "2024-10-11T01:32:27.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "henri-tremblay",
+          "url": "https://github.com/henri-tremblay",
+          "createdAt": "2024-10-11T00:07:55.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "velo",
+          "url": "https://github.com/velo",
+          "createdAt": "2024-10-11T00:51:20.000+00:00",
+          "reaction": "👍"
+        }
+      ],
       "teamTotal": 2,
       "total": 6
     }
   },
   "duplicates": [],
+  "otherVotes": [
+    {
+      "login": "JooHyukKim",
+      "url": "https://github.com/JooHyukKim",
+      "createdAt": "2024-10-10T23:28:23.000+00:00",
+      "reaction": "👍"
+    },
+    {
+      "login": "cowtowncoder",
+      "url": "https://github.com/cowtowncoder",
+      "createdAt": "2024-10-11T01:32:27.000+00:00",
+      "reaction": "👍"
+    },
+    {
+      "login": "henri-tremblay",
+      "url": "https://github.com/henri-tremblay",
+      "createdAt": "2024-10-11T00:07:55.000+00:00",
+      "reaction": "👍"
+    },
+    {
+      "login": "velo",
+      "url": "https://github.com/velo",
+      "createdAt": "2024-10-11T00:51:20.000+00:00",
+      "reaction": "👍"
+    }
+  ],
   "missingGroupActors": [
     {
       "login": "cealsair",
@@ -47,7 +99,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-10-11T11:02:52Z",
-  "updated": "2024-10-11T11:02:52Z",
+  "updated": "2024-10-11T13:16:36Z",
   "url": "/votes/commonhaus/foundation/205.html",
   "tags": [
     "vote/open",
