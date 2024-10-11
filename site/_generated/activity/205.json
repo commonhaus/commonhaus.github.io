@@ -1,0 +1,18 @@
+{
+  "title": "💸 Sponsorship tiers [due Nov 9] ",
+  "rss_title": "🗳️  💸 Sponsorship tiers [due Nov 9] ",
+  "github": "https://github.com/commonhaus/foundation/pull/205",
+  "author": "ebullient",
+  "number": 205,
+  "date": "2024-10-10T20:32:20Z",
+  "updated": "2024-10-11T12:27:53Z",
+  "url": "/activity/205.html",
+  "type": "pullRequest",
+  "tags": [
+    "post",
+    "reviews",
+    "vote/open",
+    "notice"
+  ],
+  "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/205.svg)](https://github.com/commonhaus/foundation/pull/205#issuecomment-2407170921 \"IC_kwDOKRPTI86PeoNp\")\r\n\r\nThe Commonhaus Foundation relies on the generous support of our sponsors.\r\n\r\nWorking closely with advice from our @commonhaus/advisory-board, we’ve established a set of sponsorship tiers to recognize our supporters. In keeping with our theme of transparency and collaboration, we will manage sponsorship details within the foundation repository. Specifically, the `SPONSORS.yaml` file will list our sponsoring companies along with their display and description information, similar to how we handle projects with `PROJECTS.yaml`.\r\n\r\nI’ve also put the machinery in place to generate two webpages from this content (currently placeholder content, not yet indexed):\r\n\r\n- [Monetary Sponsors](https://www.commonhaus.org/about/sponsors.html): This page will highlight sponsors who provide financial support.\r\n- [In-Kind Sponsors](https://www.commonhaus.org/about/providers.html): This page will credit those who provide infrastructure, software, and other essential services. The focus will be on the services they provide, rather than a company profile.\r\n\r\nIn terms of character limits for each tier, I’ve kept it concise:  \r\n- **Silver**: Essentially the length of a tweet (240 characters).  \r\n- **Gold**: Double that length (480 characters).  \r\n- **In-kind**: A tweet. I would like this page to focus on the services provided.\r\n\r\nI’d like to gather feedback from everyone, though this is primarily a council decision, as it affects the foundation’s operations. Input on the wording, layout, and structure is very welcome before we proceed to finalize the content.\r\n\r\nvoting group: @commonhaus/cf-council \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment).\r\n    \r\n> [!NOTE]\r\n> This PR also consolidates linting/validation-related code into the `.github` directory, and updates YAML validation to include checking sponsor descriptions against character count limits (excluding html links, punctuation, and whitespace)."
+}
