@@ -1,11 +1,12 @@
 {
+  "title": "💸 Sponsorship tiers [due Nov 9] ",
   "voteType": "marthas",
   "hasQuorum": false,
   "isDone": false,
   "group": "commonhaus/cf-council",
   "groupSize": 3,
   "groupVotes": 2,
-  "countedVotes": 6,
+  "countedVotes": 7,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -35,6 +36,12 @@
           "reaction": "👍"
         },
         {
+          "login": "aalmiray",
+          "url": "https://github.com/aalmiray",
+          "createdAt": "2024-10-11T15:21:18.000+00:00",
+          "reaction": "👍"
+        },
+        {
           "login": "cowtowncoder",
           "url": "https://github.com/cowtowncoder",
           "createdAt": "2024-10-11T01:32:27.000+00:00",
@@ -54,7 +61,7 @@
         }
       ],
       "teamTotal": 2,
-      "total": 6
+      "total": 7
     }
   },
   "duplicates": [],
@@ -63,6 +70,12 @@
       "login": "JooHyukKim",
       "url": "https://github.com/JooHyukKim",
       "createdAt": "2024-10-10T23:28:23.000+00:00",
+      "reaction": "👍"
+    },
+    {
+      "login": "aalmiray",
+      "url": "https://github.com/aalmiray",
+      "createdAt": "2024-10-11T15:21:18.000+00:00",
       "reaction": "👍"
     },
     {
@@ -99,7 +112,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-10-11T11:02:52Z",
-  "updated": "2024-10-11T13:16:36Z",
+  "updated": "2024-10-11T15:58:09Z",
   "url": "/votes/commonhaus/foundation/205.html",
   "tags": [
     "vote/open",

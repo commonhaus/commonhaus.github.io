@@ -1,4 +1,5 @@
 {
+  "title": "📝 Clarify decision-making rules [due Oct 20]",
   "voteType": "marthas",
   "hasQuorum": false,
   "isDone": false,
@@ -124,7 +125,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-09-25T04:18:50Z",
-  "updated": "2024-10-11T13:16:56Z",
+  "updated": "2024-10-11T15:58:49Z",
   "url": "/votes/commonhaus/foundation/199.html",
   "tags": [
     "vote/open",
