@@ -13,15 +13,14 @@ layout: layouts/activitySidebar.vto
   </h1>
 </header>
 <div class="content">
-<a href="#result"><img src="{{ page.data.voteSvg }}"></a>
+{{ if !page.data.closed }}<a href="#result"><img src="{{ page.data.voteSvg }}"></a>{{ /if }}
 
 {{ if page.data.manualCloseComments && page.data.manualCloseComments.body }}
 <section class="manual">
-  <p>This vote was <a href="{{ page.data.manualCloseComments.url }}">closed</a>
-  by <a href="{{ page.data.manualCloseComments.author.url }}">{{ page.data.manualCloseComments.author.login }}</a>
-  with the following comments on <time datetime="{{ page.data.manualCloseComments.createdAt }}">{{ page.data.manualCloseComments.createdAt |> date('d MMMM yyyy') }}</time>:</p>
   <blockquote>
+  <div class="closed"><strong>closed</strong> on <time datetime="{{ page.data.manualCloseComments.createdAt }}">{{ page.data.manualCloseComments.createdAt |> date('d MMMM yyyy') }}</time></div>
   {{ page.data.manualCloseComments.body |> md }}
+  {{ page.data.manualCloseComments.author.login |> authorAvatar }}
   </blockquote>
 </section>
 <hr />
@@ -63,32 +62,29 @@ layout: layouts/activitySidebar.vto
   </tfoot>
 </table>
 {{ if page.data.otherVotes && page.data.otherVotes.length }}
-<section class="missing">
-  <p>Additional input (🙏 🥰 🙌):
-  {{ page.data.otherVotes |> listVoters }}
+<section class="input">
+  <p><strong>Additional input (🙏 🥰 🙌):</strong>
+  {{ page.data.otherVotes |> listVoterReactions }}
   </p>
 </section>
 {{- /if }}
 {{ if page.data.missingGroupActors && page.data.missingGroupActors.length }}
-<section class="missing">
-  <p>The following votes are missing:
+<section class="pending">
+  <p><strong>Pending:</strong>
   {{ page.data.missingGroupActors |> listVoters }}
   </p>
 </section>
 {{- /if }}
 {{ if page.data.ignored }}
 <section class="ignored">
-<p>The following reactions were not counted: {{ page.data.ignored.reactions.join(", ") }}</p>
+<p>Ignored reactions: {{ page.data.ignored.reactions.join(", ") }}</p>
 </section>
 {{ /if -}}
 {{ if page.data.duplicates && page.data.duplicates.length }}
 <section class="duplicates">
-  <p>The following votes were not counted (duplicate votes, using most recent):</p>
-  <div class="duplicates">
-  {{- for d of page.data.duplicates }}
-  <span><a href="{{ d.url }}">{{ d.login }}</a>({{ d.reaction }}) </span>
-  {{- /for }}
-  </div>
+  <p>Duplicates (used most recent):
+  {{ page.data.duplicates |> listVoterReactions }}
+  </p>
 </section>
 {{- /if }}
 

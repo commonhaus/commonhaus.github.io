@@ -3,6 +3,7 @@
   --callout-color: var(--callout-note);
 }
 
+blockquote,
 .callout[data-callout=tip] {
   --callout-title-color: var(--callout-tip-title);
   --callout-color: var(--callout-tip);
@@ -32,6 +33,7 @@
   color: var(--callout-content-color);
 }
 
+blockquote,
 .callout {
   position: relative;
   background-color: rgba(var(--callout-color), 0.1);
