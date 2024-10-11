@@ -81,6 +81,14 @@
           "reaction": "👍"
         }
       ],
+      "otherVotes": [
+        {
+          "login": "JooHyukKim",
+          "url": "https://github.com/JooHyukKim",
+          "createdAt": "2024-09-12T22:21:46.000+00:00",
+          "reaction": "👍"
+        }
+      ],
       "teamTotal": 11,
       "total": 12
     },
@@ -96,6 +104,7 @@
           "reaction": "👀"
         }
       ],
+      "otherVotes": [],
       "teamTotal": 1,
       "total": 1
     }
@@ -120,6 +129,14 @@
       "reaction": "👍"
     }
   ],
+  "otherVotes": [
+    {
+      "login": "JooHyukKim",
+      "url": "https://github.com/JooHyukKim",
+      "createdAt": "2024-09-12T22:21:46.000+00:00",
+      "reaction": "👍"
+    }
+  ],
   "missingGroupActors": [
     {
       "login": "timtebeek",
@@ -130,12 +147,12 @@
   "commentId": "IC_kwDOKRPTI86FjXwM",
   "github": "https://github.com/commonhaus/foundation/pull/178",
   "itemId": "PR_kwDOKRPTI8519Ubz",
-  "itemTitle": "Undraft the bylaws: IP Policy",
+  "itemTitle": "Undraft the bylaws: IP Policy [due Oct 27]",
   "number": 178,
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-07-19T23:27:30Z",
-  "updated": "2024-09-30T21:28:22Z",
+  "updated": "2024-10-11T13:17:26Z",
   "url": "/votes/commonhaus/foundation/178.html",
   "tags": [
     "vote/open",
