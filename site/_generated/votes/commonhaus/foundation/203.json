@@ -57,11 +57,39 @@
           "reaction": "👍"
         }
       ],
+      "otherVotes": [
+        {
+          "login": "JooHyukKim",
+          "url": "https://github.com/JooHyukKim",
+          "createdAt": "2024-10-10T23:10:14.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "sigrunixia",
+          "url": "https://github.com/sigrunixia",
+          "createdAt": "2024-10-08T19:45:56.000+00:00",
+          "reaction": "👍"
+        }
+      ],
       "teamTotal": 7,
       "total": 9
     }
   },
   "duplicates": [],
+  "otherVotes": [
+    {
+      "login": "JooHyukKim",
+      "url": "https://github.com/JooHyukKim",
+      "createdAt": "2024-10-10T23:10:14.000+00:00",
+      "reaction": "👍"
+    },
+    {
+      "login": "sigrunixia",
+      "url": "https://github.com/sigrunixia",
+      "createdAt": "2024-10-08T19:45:56.000+00:00",
+      "reaction": "👍"
+    }
+  ],
   "missingGroupActors": [
     {
       "login": "dandreadis",
@@ -97,7 +125,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-10-09T04:08:44Z",
-  "updated": "2024-10-11T03:27:43Z",
+  "updated": "2024-10-11T13:16:26Z",
   "url": "/votes/commonhaus/foundation/203.html",
   "tags": [
     "vote/open",
