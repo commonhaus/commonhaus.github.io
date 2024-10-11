@@ -1,4 +1,5 @@
 {
+  "title": "Undraft the bylaws: IP Policy [due Oct 27]",
   "voteType": "marthas",
   "hasQuorum": false,
   "isDone": false,
@@ -152,7 +153,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-07-19T23:27:30Z",
-  "updated": "2024-10-11T13:17:26Z",
+  "updated": "2024-10-11T15:58:19Z",
   "url": "/votes/commonhaus/foundation/178.html",
   "tags": [
     "vote/open",
