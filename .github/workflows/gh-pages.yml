@@ -29,7 +29,7 @@ jobs:
     # Cancel in-progress runs if a new one is queued
     steps:
       - name: Setup Deno environment
-        uses: denoland/setup-deno@v1
+        uses: denoland/setup-deno@v2
         with:
           deno-version: v1.x
 
