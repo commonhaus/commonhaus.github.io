@@ -128,12 +128,20 @@ if (!item) {
     Deno.exit(1);
 }
 
+const apiUrlPattern = /https:\/\/api.github.com\/users\/([a-zA-Z0-9_-]+)/g;
+const normalUrl = "https://github.com/$1";
+
+comment.body = comment.body.replaceAll(apiUrlPattern, normalUrl);
+
 const match = comment.body.match(/<!-- vote::data ([\s\S]*?)-->/);
 const voteData: VoteData = match ? JSON.parse(match[1].trim()) : {};
 
 voteData.commentId = comment.id;
 voteData.github = item.url;
 voteData.itemId = item.id;
+if (!voteData.title) {
+    voteData.title = item.title;
+}
 voteData.number = item.number;
 voteData.repoName = item.repository.nameWithOwner;
 voteData.type = 'vote';
