@@ -1,0 +1,57 @@
+{
+  "title": "Additional role descriptions: advisors + officers",
+  "voteType": "marthas",
+  "hasQuorum": false,
+  "isDone": false,
+  "group": "commonhaus/cf-council",
+  "groupSize": 3,
+  "groupVotes": 1,
+  "countedVotes": 1,
+  "droppedVotes": 0,
+  "votingThreshold": "all",
+  "categories": {
+    "ok": {
+      "reactions": [
+        "👀"
+      ],
+      "team": [
+        {
+          "login": "kenfinnigan",
+          "url": "https://github.com/kenfinnigan",
+          "createdAt": "2024-10-15T19:40:31.000+00:00",
+          "reaction": "👀"
+        }
+      ],
+      "otherVotes": [],
+      "teamTotal": 1,
+      "total": 1
+    }
+  },
+  "duplicates": [],
+  "otherVotes": [],
+  "missingGroupActors": [
+    {
+      "login": "cealsair",
+      "url": "https://github.com/cealsair"
+    },
+    {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    }
+  ],
+  "manualCloseComments": null,
+  "commentId": "IC_kwDOKRPTI86P7mCp",
+  "github": "https://github.com/commonhaus/foundation/pull/207",
+  "itemId": "PR_kwDOKRPTI85-t5T_",
+  "number": 207,
+  "repoName": "commonhaus/foundation",
+  "type": "vote",
+  "date": "2024-10-15T18:46:57Z",
+  "updated": "2024-10-15T19:40:33Z",
+  "url": "/votes/commonhaus/foundation/207.html",
+  "tags": [
+    "vote/open",
+    "vote"
+  ],
+  "closed": false
+}
