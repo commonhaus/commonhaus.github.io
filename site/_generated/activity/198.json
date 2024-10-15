@@ -5,14 +5,16 @@
   "author": "ebullient",
   "number": 198,
   "date": "2024-09-19T23:59:57Z",
-  "updated": "2024-10-11T17:12:54Z",
+  "updated": "2024-11-01T13:17:51Z",
   "url": "/activity/198.html",
   "type": "pullRequest",
   "tags": [
     "post",
     "reviews",
     "vote/open",
-    "notice"
+    "notice",
+    "vote/quorum"
   ],
-  "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/198.svg)](https://github.com/commonhaus/foundation/pull/198#issuecomment-2362470101 \"IC_kwDOKRPTI86M0G7V\")\r\n\r\nThis policy applies to the foundation and its websites (not to the projects).\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment)."
+  "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/198.svg)](https://github.com/commonhaus/foundation/pull/198#issuecomment-2362470101 \"IC_kwDOKRPTI86M0G7V\")\r\n\r\nThis policy applies to the foundation and its websites (not to the projects).\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment).",
+  "closedAt": "2024-11-01T13:17:21Z"
 }

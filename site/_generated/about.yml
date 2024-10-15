@@ -5,7 +5,7 @@ aalmiray:
     https://avatars.githubusercontent.com/u/13969?u=6a649c057ec7a4fb3acbd57899cc03c5f7c46819&v=4
   company: null
   name: Andres Almiray
-  bio: "I code for fun and help others in the process. Java Champion. Co-founder of Hackergarten & Hack.Commit.Push. Creator of @jreleaser \U0001F680"
+  bio: "I code for fun and help others in the process. Java Champion Alumni. Co-founder of Hackergarten & Hack.Commit.Push. Creator of @jreleaser \U0001F680"
 maxandersen:
   login: maxandersen
   url: 'https://github.com/maxandersen'
@@ -164,3 +164,10 @@ techbelle:
   company: MongoDB
   name: Rachelle Palmer
   bio: Eng Lead - App Modernization / GenAI
+ashni-mehta:
+  login: ashni-mehta
+  url: 'https://github.com/ashni-mehta'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/105304831?v=4'
+  company: null
+  name: ashni
+  bio: product @ mongodb

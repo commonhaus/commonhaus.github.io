@@ -254,7 +254,7 @@
     "genUrl": "/policies/conflict-of-interest.html"
   },
   "policies/README.md": {
-    "date": "2024-08-28T12:58:54.000Z",
+    "date": "2024-11-01T13:17:21.000Z",
     "srcPath": "policies/README.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/policies/README.md",
@@ -453,7 +453,7 @@
     "genUrl": "/agreements/bootstrapping/2024-05-27-bootstrapping-feign.html"
   },
   "agreements/membership/members.yaml": {
-    "date": "2024-06-08T00:39:14.000Z",
+    "date": "2024-10-24T15:50:38.000Z",
     "srcPath": "agreements/membership/members.yaml",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/membership/members.yaml",
@@ -474,7 +474,7 @@
     "genUrl": "/SUPPORTERS.yaml"
   },
   "CONTACTS.yaml": {
-    "date": "2024-08-28T00:06:44.000Z",
+    "date": "2024-10-16T21:32:26.000Z",
     "srcPath": "CONTACTS.yaml",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/CONTACTS.yaml",
@@ -549,7 +549,7 @@
     "genUrl": "/bylaws/2-purpose.html"
   },
   "bylaws/4-cf-council.md": {
-    "date": "2024-08-28T12:58:54.000Z",
+    "date": "2024-10-25T19:55:08.000Z",
     "srcPath": "bylaws/4-cf-council.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/bylaws/4-cf-council.md",
@@ -651,10 +651,27 @@
     "genUrl": "/bylaws/7-notice-records.html"
   },
   "SPONSORS.yaml": {
-    "date": "2024-10-09T14:38:34.000Z",
+    "date": "2024-10-14T23:27:12.000Z",
     "srcPath": "SPONSORS.yaml",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/SPONSORS.yaml",
     "genUrl": "/SPONSORS.yaml"
+  },
+  "policies/privacy-policy.md": {
+    "date": "2024-11-01T13:17:21.000Z",
+    "srcPath": "policies/privacy-policy.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/policies/privacy-policy.md",
+    "type": "submodule",
+    "layout": "layouts/policies.vto",
+    "cssclasses": [
+      "bylaws",
+      "has-aside"
+    ],
+    "tags": [
+      "policies",
+      "legal"
+    ],
+    "genUrl": "/policies/privacy-policy.html"
   }
 }
