@@ -7,7 +7,7 @@
   "groupSize": 3,
   "groupVotes": 1,
   "countedVotes": 1,
-  "droppedVotes": 0,
+  "droppedVotes": 1,
   "votingThreshold": "all",
   "categories": {
     "ok": {
@@ -28,7 +28,14 @@
     }
   },
   "duplicates": [],
-  "otherVotes": [],
+  "otherVotes": [
+    {
+      "login": "aalmiray",
+      "url": "https://github.com/aalmiray",
+      "createdAt": "2024-10-15T20:35:31.000+00:00",
+      "reaction": "❤️"
+    }
+  ],
   "missingGroupActors": [
     {
       "login": "cealsair",
@@ -47,11 +54,27 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-10-15T18:46:57Z",
-  "updated": "2024-10-15T19:40:33Z",
+  "updated": "2024-10-15T21:27:52Z",
   "url": "/votes/commonhaus/foundation/207.html",
   "tags": [
     "vote/open",
     "vote"
   ],
-  "closed": false
+  "closed": false,
+  "ignored": {
+    "reactions": [
+      "❤️"
+    ],
+    "team": [],
+    "otherVotes": [
+      {
+        "login": "aalmiray",
+        "url": "https://github.com/aalmiray",
+        "createdAt": "2024-10-15T20:35:31.000+00:00",
+        "reaction": "❤️"
+      }
+    ],
+    "teamTotal": 0,
+    "total": 1
+  }
 }
