@@ -1,13 +1,133 @@
 {
+  "title": "Seconds! Defining alternate project representatives",
+  "voteType": "marthas",
+  "hasQuorum": false,
+  "isDone": false,
+  "group": "commonhaus/cf-egc",
+  "groupSize": 13,
+  "groupVotes": 8,
+  "countedVotes": 10,
+  "droppedVotes": 0,
+  "votingThreshold": "all",
+  "categories": {
+    "approve": {
+      "reactions": [
+        "👍"
+      ],
+      "team": [
+        {
+          "login": "aalmiray",
+          "url": "https://github.com/aalmiray",
+          "createdAt": "2024-10-08T21:57:44.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "cowtowncoder",
+          "url": "https://github.com/cowtowncoder",
+          "createdAt": "2024-10-11T00:38:41.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "ebullient",
+          "url": "https://github.com/ebullient",
+          "createdAt": "2024-10-10T19:54:45.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "evanchooly",
+          "url": "https://github.com/evanchooly",
+          "createdAt": "2024-10-15T01:32:37.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "gavinking",
+          "url": "https://github.com/gavinking",
+          "createdAt": "2024-10-08T21:37:24.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "henri-tremblay",
+          "url": "https://github.com/henri-tremblay",
+          "createdAt": "2024-10-10T01:56:48.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "kenfinnigan",
+          "url": "https://github.com/kenfinnigan",
+          "createdAt": "2024-10-08T19:49:47.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "velo",
+          "url": "https://github.com/velo",
+          "createdAt": "2024-10-11T00:49:40.000+00:00",
+          "reaction": "👍"
+        }
+      ],
+      "otherVotes": [
+        {
+          "login": "JooHyukKim",
+          "url": "https://github.com/JooHyukKim",
+          "createdAt": "2024-10-10T23:10:14.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "sigrunixia",
+          "url": "https://github.com/sigrunixia",
+          "createdAt": "2024-10-08T19:45:56.000+00:00",
+          "reaction": "👍"
+        }
+      ],
+      "teamTotal": 8,
+      "total": 10
+    }
+  },
+  "duplicates": [],
+  "otherVotes": [
+    {
+      "login": "JooHyukKim",
+      "url": "https://github.com/JooHyukKim",
+      "createdAt": "2024-10-10T23:10:14.000+00:00",
+      "reaction": "👍"
+    },
+    {
+      "login": "sigrunixia",
+      "url": "https://github.com/sigrunixia",
+      "createdAt": "2024-10-08T19:45:56.000+00:00",
+      "reaction": "👍"
+    }
+  ],
+  "missingGroupActors": [
+    {
+      "login": "dandreadis",
+      "url": "https://github.com/dandreadis"
+    },
+    {
+      "login": "marc0der",
+      "url": "https://github.com/marc0der"
+    },
+    {
+      "login": "maxandersen",
+      "url": "https://github.com/maxandersen"
+    },
+    {
+      "login": "cealsair",
+      "url": "https://github.com/cealsair"
+    },
+    {
+      "login": "timtebeek",
+      "url": "https://github.com/timtebeek"
+    }
+  ],
+  "manualCloseComments": null,
   "commentId": "DC_kwDOKRPTI84ApiC0",
   "github": "https://github.com/commonhaus/foundation/discussions/203",
   "itemId": "D_kwDOKRPTI84Ab0P0",
-  "title": "Seconds! Defining alternate project representatives",
   "number": 203,
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-10-09T04:08:44Z",
-  "updated": "2024-10-16T14:14:14Z",
+  "updated": "2024-10-16T14:19:13Z",
   "url": "/votes/commonhaus/foundation/203.html",
   "tags": [
     "vote/open",
