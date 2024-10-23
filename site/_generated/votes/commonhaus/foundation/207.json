@@ -6,7 +6,7 @@
   "group": "commonhaus/cf-council",
   "groupSize": 3,
   "groupVotes": 2,
-  "countedVotes": 5,
+  "countedVotes": 6,
   "droppedVotes": 2,
   "votingThreshold": "all",
   "categories": {
@@ -46,10 +46,16 @@
           "url": "https://github.com/henri-tremblay",
           "createdAt": "2024-10-18T01:16:16.000+00:00",
           "reaction": "👍"
+        },
+        {
+          "login": "maxandersen",
+          "url": "https://github.com/maxandersen",
+          "createdAt": "2024-10-23T11:14:25.000+00:00",
+          "reaction": "👍"
         }
       ],
       "teamTotal": 2,
-      "total": 5
+      "total": 6
     },
     "ok": {
       "reactions": [],
@@ -91,6 +97,12 @@
       "url": "https://github.com/henri-tremblay",
       "createdAt": "2024-10-18T01:16:16.000+00:00",
       "reaction": "👍"
+    },
+    {
+      "login": "maxandersen",
+      "url": "https://github.com/maxandersen",
+      "createdAt": "2024-10-23T11:14:25.000+00:00",
+      "reaction": "👍"
     }
   ],
   "missingGroupActors": [
@@ -107,7 +119,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-10-15T18:46:57Z",
-  "updated": "2024-10-18T03:28:00Z",
+  "updated": "2024-10-23T12:28:10Z",
   "url": "/votes/commonhaus/foundation/207.html",
   "tags": [
     "vote/open",
