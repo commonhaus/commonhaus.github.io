@@ -1,12 +1,12 @@
 {
   "title": "Additional role descriptions: advisors + officers",
   "voteType": "marthas",
-  "hasQuorum": false,
+  "hasQuorum": true,
   "isDone": false,
   "group": "commonhaus/cf-council",
   "groupSize": 3,
-  "groupVotes": 2,
-  "countedVotes": 6,
+  "groupVotes": 3,
+  "countedVotes": 7,
   "droppedVotes": 2,
   "votingThreshold": "all",
   "categories": {
@@ -15,6 +15,12 @@
         "👍"
       ],
       "team": [
+        {
+          "login": "cealsair",
+          "url": "https://github.com/cealsair",
+          "createdAt": "2024-10-24T15:28:55.000+00:00",
+          "reaction": "👍"
+        },
         {
           "login": "ebullient",
           "url": "https://github.com/ebullient",
@@ -54,8 +60,8 @@
           "reaction": "👍"
         }
       ],
-      "teamTotal": 2,
-      "total": 6
+      "teamTotal": 3,
+      "total": 7
     },
     "ok": {
       "reactions": [],
@@ -105,12 +111,7 @@
       "reaction": "👍"
     }
   ],
-  "missingGroupActors": [
-    {
-      "login": "cealsair",
-      "url": "https://github.com/cealsair"
-    }
-  ],
+  "missingGroupActors": [],
   "manualCloseComments": null,
   "commentId": "IC_kwDOKRPTI86P7mCp",
   "github": "https://github.com/commonhaus/foundation/pull/207",
@@ -119,10 +120,11 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-10-15T18:46:57Z",
-  "updated": "2024-10-23T12:28:10Z",
+  "updated": "2024-10-24T15:28:57Z",
   "url": "/votes/commonhaus/foundation/207.html",
   "tags": [
     "vote/open",
+    "vote/quorum",
     "vote"
   ],
   "closed": false,
