@@ -7,7 +7,7 @@
   "groupSize": 3,
   "groupVotes": 3,
   "countedVotes": 7,
-  "droppedVotes": 2,
+  "droppedVotes": 3,
   "votingThreshold": "all",
   "categories": {
     "approve": {
@@ -18,7 +18,7 @@
         {
           "login": "cealsair",
           "url": "https://github.com/cealsair",
-          "createdAt": "2024-10-24T15:28:55.000+00:00",
+          "createdAt": "2024-10-24T15:29:02.000+00:00",
           "reaction": "👍"
         },
         {
@@ -73,6 +73,12 @@
   },
   "duplicates": [
     {
+      "login": "cealsair",
+      "url": "https://github.com/cealsair",
+      "createdAt": "2024-10-24T15:28:55.000+00:00",
+      "reaction": "👍"
+    },
+    {
       "login": "kenfinnigan",
       "url": "https://github.com/kenfinnigan",
       "createdAt": "2024-10-15T19:40:31.000+00:00",
@@ -120,14 +126,16 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-10-15T18:46:57Z",
-  "updated": "2024-10-24T15:28:57Z",
+  "updated": "2024-10-24T15:30:44Z",
   "url": "/votes/commonhaus/foundation/207.html",
   "tags": [
     "vote/open",
     "vote/quorum",
-    "vote"
+    "vote",
+    "closed"
   ],
-  "closed": false,
+  "closed": true,
+  "closedAt": "2024-10-24T15:30:42Z",
   "ignored": {
     "reactions": [
       "❤️"
