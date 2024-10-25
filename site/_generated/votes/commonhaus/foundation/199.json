@@ -1,14 +1,14 @@
 {
   "title": "📝 Clarify decision-making rules [due Oct 20]",
   "voteType": "marthas",
-  "hasQuorum": false,
+  "hasQuorum": true,
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 13,
   "groupVotes": 11,
   "countedVotes": 12,
   "droppedVotes": 1,
-  "votingThreshold": "all",
+  "votingThreshold": "twothirds",
   "categories": {
     "approve": {
       "reactions": [
@@ -128,11 +128,12 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-09-25T04:18:50Z",
-  "updated": "2024-10-25T19:55:10Z",
+  "updated": "2024-10-25T20:39:47Z",
   "url": "/votes/commonhaus/foundation/199.html",
   "tags": [
     "vote/open",
     "notice",
+    "vote/quorum",
     "vote",
     "closed"
   ],
