@@ -1,14 +1,14 @@
 {
   "title": "♻️ Reworked Trademark Policy [due Oct 10]",
   "voteType": "marthas",
-  "hasQuorum": false,
+  "hasQuorum": true,
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 13,
   "groupVotes": 11,
   "countedVotes": 12,
   "droppedVotes": 2,
-  "votingThreshold": "all",
+  "votingThreshold": "twothirds",
   "categories": {
     "approve": {
       "reactions": [
@@ -144,11 +144,12 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-09-10T18:44:56Z",
-  "updated": "2024-10-18T03:28:20Z",
+  "updated": "2024-10-25T20:39:56Z",
   "url": "/votes/commonhaus/foundation/195.html",
   "tags": [
     "vote/open",
     "notice",
+    "vote/quorum",
     "vote"
   ],
   "closed": false
