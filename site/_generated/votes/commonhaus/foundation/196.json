@@ -8,7 +8,7 @@
   "groupVotes": 8,
   "countedVotes": 8,
   "droppedVotes": 1,
-  "votingThreshold": "all",
+  "votingThreshold": "twothirds",
   "categories": {
     "approve": {
       "reactions": [
@@ -115,7 +115,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-09-10T10:43:39Z",
-  "updated": "2024-10-16T18:27:56Z",
+  "updated": "2024-10-25T20:40:06Z",
   "url": "/votes/commonhaus/foundation/196.html",
   "tags": [
     "vote/open",
