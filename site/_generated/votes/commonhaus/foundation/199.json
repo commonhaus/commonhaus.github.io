@@ -2,7 +2,7 @@
   "title": "📝 Clarify decision-making rules [due Oct 20]",
   "voteType": "marthas",
   "hasQuorum": true,
-  "isDone": false,
+  "isDone": true,
   "group": "commonhaus/cf-egc",
   "groupSize": 13,
   "groupVotes": 11,
@@ -120,7 +120,15 @@
       "url": "https://github.com/timtebeek"
     }
   ],
-  "manualCloseComments": null,
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2024-10-25T21:48:44.000+00:00",
+    "body": "We're beyond the two-thirds participation threshold and beyond the voting period. Will proceed with no unresolved objections.",
+    "url": "https://github.com/commonhaus/foundation/pull/199#issuecomment-2438927865"
+  },
   "commentId": "IC_kwDOKRPTI86Nb1VB",
   "github": "https://github.com/commonhaus/foundation/pull/199",
   "itemId": "PR_kwDOKRPTI858P6LT",
@@ -128,11 +136,11 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-09-25T04:18:50Z",
-  "updated": "2024-10-25T20:39:47Z",
+  "updated": "2024-10-25T21:48:47Z",
   "url": "/votes/commonhaus/foundation/199.html",
   "tags": [
-    "vote/open",
     "notice",
+    "vote/done",
     "vote/quorum",
     "vote",
     "closed"
