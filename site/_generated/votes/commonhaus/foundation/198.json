@@ -6,8 +6,8 @@
   "group": "commonhaus/cf-egc",
   "groupSize": 13,
   "groupVotes": 9,
-  "countedVotes": 10,
-  "droppedVotes": 2,
+  "countedVotes": 11,
+  "droppedVotes": 3,
   "votingThreshold": "twothirds",
   "categories": {
     "approve": {
@@ -70,9 +70,16 @@
           "reaction": "👍"
         }
       ],
-      "otherVotes": [],
+      "otherVotes": [
+        {
+          "login": "sigrunixia",
+          "url": "https://github.com/sigrunixia",
+          "createdAt": "2024-10-31T20:19:49.000+00:00",
+          "reaction": "👍"
+        }
+      ],
       "teamTotal": 9,
-      "total": 9
+      "total": 10
     },
     "ok": {
       "reactions": [
@@ -93,6 +100,12 @@
   },
   "duplicates": [
     {
+      "login": "sigrunixia",
+      "url": "https://github.com/sigrunixia",
+      "createdAt": "2024-10-31T19:21:46.000+00:00",
+      "reaction": "👀"
+    },
+    {
       "login": "cealsair",
       "url": "https://github.com/cealsair",
       "createdAt": "2024-09-30T20:13:38.000+00:00",
@@ -106,6 +119,12 @@
     }
   ],
   "otherVotes": [
+    {
+      "login": "sigrunixia",
+      "url": "https://github.com/sigrunixia",
+      "createdAt": "2024-10-31T20:19:49.000+00:00",
+      "reaction": "👍"
+    },
     {
       "login": "JooHyukKim",
       "url": "https://github.com/JooHyukKim",
@@ -139,7 +158,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-09-20T00:21:29Z",
-  "updated": "2024-10-25T20:40:26Z",
+  "updated": "2024-10-31T21:27:55Z",
   "url": "/votes/commonhaus/foundation/198.html",
   "tags": [
     "vote/open",
