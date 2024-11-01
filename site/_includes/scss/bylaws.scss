@@ -146,7 +146,7 @@ aside.policy-contents {
   --hang-text-indent: 0;
   --nest-hang-pad-left: 1em;
   --nest-hang-text-indent: -1em;
-  --nest-indent: 1.2em;
+  --nest-indent: 1.5em;
 
   display: flex;
   flex-direction: column-reverse;
@@ -156,7 +156,7 @@ aside.policy-contents {
       content: counters(item, ".") ". ";
       counter-increment: item;
       position: absolute;
-      left: -1em;
+      margin-left: -12px;
     }
   }
 }
