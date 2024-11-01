@@ -254,7 +254,7 @@
     "genUrl": "/policies/conflict-of-interest.html"
   },
   "policies/README.md": {
-    "date": "2024-08-28T12:58:54.000Z",
+    "date": "2024-11-01T13:17:21.000Z",
     "srcPath": "policies/README.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/policies/README.md",
@@ -656,5 +656,22 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/SPONSORS.yaml",
     "genUrl": "/SPONSORS.yaml"
+  },
+  "policies/privacy-policy.md": {
+    "date": "2024-11-01T13:17:21.000Z",
+    "srcPath": "policies/privacy-policy.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/policies/privacy-policy.md",
+    "type": "submodule",
+    "layout": "layouts/policies.vto",
+    "cssclasses": [
+      "bylaws",
+      "has-aside"
+    ],
+    "tags": [
+      "policies",
+      "legal"
+    ],
+    "genUrl": "/policies/privacy-policy.html"
   }
 }
