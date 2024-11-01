@@ -62,11 +62,6 @@ site.mergeKey("cssclasses", "stringArray");
 if (!Deno.env.get("DEV_MODE")) {
     site.addEventListener("afterBuild", "deno task vite-build");
     site.addEventListener("afterUpdate", "deno task vite-build");
-
-    // cache busting
-    site.use(contentHash({
-        attribute: "data-hash",
-    }));
 }
 
 site
@@ -92,6 +87,9 @@ site
             sourceMap: false,
             sourceMapIncludeSources: true,
         }
+    }))
+    .use(contentHash({
+        attribute: "data-hash",
     }))
     .use(pagefind({
         indexing: {
