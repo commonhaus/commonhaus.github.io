@@ -84,6 +84,9 @@ export default function (userOptions?: Partial<Options>): Lume.Plugin {
         }
 
         async function computeHash(content: Uint8Array): Promise<string> {
+            if (Deno.env.get("DEV_MODE")) {
+                return '';
+            }
             const hashBuffer = await crypto.subtle.digest("SHA-1", content);
             const hash = encodeHex(new Uint8Array(hashBuffer));
             return hash.substring(0, options.hashLength);
