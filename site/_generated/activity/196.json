@@ -5,14 +5,16 @@
   "author": "ebullient",
   "number": 196,
   "date": "2024-09-10T01:38:27Z",
-  "updated": "2024-11-01T18:48:53Z",
+  "updated": "2024-11-06T14:38:10Z",
   "url": "/activity/196.html",
   "type": "pullRequest",
   "tags": [
     "post",
     "reviews",
-    "vote/open",
-    "notice"
+    "notice",
+    "vote/done",
+    "vote/quorum"
   ],
-  "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/196.svg)](https://github.com/commonhaus/foundation/pull/196#issuecomment-2340311888 \"IC_kwDOKRPTI86LflNQ\")\r\n\r\nRevised enough to restart the vote. Scope (persons and activities) should be better defined. \r\n\r\nI removed the emphasis on meetings as we do most of our work asynchronously.\r\n\r\nFor those that reviewed the first version, look at the second commit for what has changed.\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment)."
+  "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/196.svg)](https://github.com/commonhaus/foundation/pull/196#issuecomment-2340311888 \"IC_kwDOKRPTI86LflNQ\")\r\n\r\nRevised enough to restart the vote. Scope (persons and activities) should be better defined. \r\n\r\nI removed the emphasis on meetings as we do most of our work asynchronously.\r\n\r\nFor those that reviewed the first version, look at the second commit for what has changed.\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment).",
+  "closedAt": "2024-11-06T14:37:21Z"
 }

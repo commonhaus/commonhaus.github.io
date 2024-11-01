@@ -12,7 +12,8 @@
     "post",
     "consensus building",
     "vote/open",
-    "notice"
+    "notice",
+    "vote/quorum"
   ],
   "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/203.svg)](https://github.com/commonhaus/foundation/discussions/203#discussioncomment-10887348 \"DC_kwDOKRPTI84ApiC0\")\r\n\r\n### Proposal\r\n\r\nWe've made it pretty clear that each project gets one vote. \r\nWhat should also be clear is that we want to move away from single points of failure, too. \r\n\r\nI'd like to encourage all projects to have a \"second\" EGC rep.\r\n\r\nIn my mind, the second vote is counted only when the primary is missing. When that is the case, that vote also does count when tallying quorum.\r\n\r\nIn some sense, it then is up to the project who is the primary and who is the secondary depending on time commitments, etc. Both would have access to egc discussions and lists.\r\n\r\nAnything I missed?\r\n\r\n### Voting group\r\n\r\n@commonhaus/cf-egc\r\n\r\n### Consensus mechanism\r\n\r\nPlease use emoji reactions to indicate your support:\r\n- **👍 (:+1:)** if it looks good to you\r\n- **👀 (:eyes:)** if you're \"ok\" with it (it may not be your favorite)\r\n- **👎 (:-1:)** if you think this needs discussion first\r\n\r\nAsk questions or raise concerns in comments.\r\n\r\n"
 }

@@ -1,12 +1,12 @@
 {
   "title": "📄 Antitrust Policy [due Oct 27]",
   "voteType": "marthas",
-  "hasQuorum": false,
-  "isDone": false,
+  "hasQuorum": true,
+  "isDone": true,
   "group": "commonhaus/cf-egc",
   "groupSize": 13,
-  "groupVotes": 8,
-  "countedVotes": 8,
+  "groupVotes": 10,
+  "countedVotes": 10,
   "droppedVotes": 1,
   "votingThreshold": "twothirds",
   "categories": {
@@ -34,6 +34,12 @@
           "reaction": "👍"
         },
         {
+          "login": "dandreadis",
+          "url": "https://github.com/dandreadis",
+          "createdAt": "2024-11-06T14:12:04.000+00:00",
+          "reaction": "👍"
+        },
+        {
           "login": "ebullient",
           "url": "https://github.com/ebullient",
           "createdAt": "2024-09-10T19:20:10.000+00:00",
@@ -58,6 +64,12 @@
           "reaction": "👍"
         },
         {
+          "login": "maxandersen",
+          "url": "https://github.com/maxandersen",
+          "createdAt": "2024-11-05T22:59:15.000+00:00",
+          "reaction": "👍"
+        },
+        {
           "login": "velo",
           "url": "https://github.com/velo",
           "createdAt": "2024-09-10T13:35:52.000+00:00",
@@ -65,8 +77,8 @@
         }
       ],
       "otherVotes": [],
-      "teamTotal": 8,
-      "total": 8
+      "teamTotal": 10,
+      "total": 10
     },
     "ok": {
       "reactions": [],
@@ -87,10 +99,6 @@
   "otherVotes": [],
   "missingGroupActors": [
     {
-      "login": "dandreadis",
-      "url": "https://github.com/dandreadis"
-    },
-    {
       "login": "marc0der",
       "url": "https://github.com/marc0der"
     },
@@ -99,15 +107,19 @@
       "url": "https://github.com/henri-tremblay"
     },
     {
-      "login": "maxandersen",
-      "url": "https://github.com/maxandersen"
-    },
-    {
       "login": "timtebeek",
       "url": "https://github.com/timtebeek"
     }
   ],
-  "manualCloseComments": null,
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2024-11-06T14:38:06.000+00:00",
+    "body": "Proceeding with participation quorum and no issues raised.",
+    "url": "https://github.com/commonhaus/foundation/pull/196#issuecomment-2459926765"
+  },
   "commentId": "IC_kwDOKRPTI86LflNQ",
   "github": "https://github.com/commonhaus/foundation/pull/196",
   "itemId": "PR_kwDOKRPTI8566yQZ",
@@ -115,12 +127,15 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-09-10T10:43:39Z",
-  "updated": "2024-10-25T20:40:06Z",
+  "updated": "2024-11-06T14:38:08Z",
   "url": "/votes/commonhaus/foundation/196.html",
   "tags": [
-    "vote/open",
     "notice",
-    "vote"
+    "vote/done",
+    "vote/quorum",
+    "vote",
+    "closed"
   ],
-  "closed": false
+  "closed": true,
+  "closedAt": "2024-11-06T14:37:21Z"
 }

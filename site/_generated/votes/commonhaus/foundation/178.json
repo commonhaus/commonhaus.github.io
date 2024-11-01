@@ -2,12 +2,12 @@
   "title": "Undraft the bylaws: IP Policy [due Oct 27]",
   "voteType": "marthas",
   "hasQuorum": true,
-  "isDone": false,
+  "isDone": true,
   "group": "commonhaus/cf-egc",
   "groupSize": 13,
   "groupVotes": 12,
   "countedVotes": 13,
-  "droppedVotes": 3,
+  "droppedVotes": 4,
   "votingThreshold": "twothirds",
   "categories": {
     "approve": {
@@ -52,12 +52,6 @@
           "reaction": "👍"
         },
         {
-          "login": "gavinking",
-          "url": "https://github.com/gavinking",
-          "createdAt": "2024-08-15T22:06:05.000+00:00",
-          "reaction": "👍"
-        },
-        {
           "login": "henri-tremblay",
           "url": "https://github.com/henri-tremblay",
           "createdAt": "2024-07-23T10:05:52.000+00:00",
@@ -90,14 +84,20 @@
           "reaction": "👍"
         }
       ],
-      "teamTotal": 11,
-      "total": 12
+      "teamTotal": 10,
+      "total": 11
     },
     "ok": {
       "reactions": [
         "👀"
       ],
       "team": [
+        {
+          "login": "gavinking",
+          "url": "https://github.com/gavinking",
+          "createdAt": "2024-11-01T18:34:33.000+00:00",
+          "reaction": "👀"
+        },
         {
           "login": "maxandersen",
           "url": "https://github.com/maxandersen",
@@ -106,11 +106,17 @@
         }
       ],
       "otherVotes": [],
-      "teamTotal": 1,
-      "total": 1
+      "teamTotal": 2,
+      "total": 2
     }
   },
   "duplicates": [
+    {
+      "login": "gavinking",
+      "url": "https://github.com/gavinking",
+      "createdAt": "2024-08-15T22:06:05.000+00:00",
+      "reaction": "👍"
+    },
     {
       "login": "cealsair",
       "url": "https://github.com/cealsair",
@@ -144,7 +150,15 @@
       "url": "https://github.com/timtebeek"
     }
   ],
-  "manualCloseComments": null,
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2024-11-01T18:45:32.000+00:00",
+    "body": "No voiced objections with ample bake time; proceeding. ",
+    "url": "https://github.com/commonhaus/foundation/pull/178#issuecomment-2452407326"
+  },
   "commentId": "IC_kwDOKRPTI86FjXwM",
   "github": "https://github.com/commonhaus/foundation/pull/178",
   "itemId": "PR_kwDOKRPTI8519Ubz",
@@ -152,13 +166,15 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-07-19T23:27:30Z",
-  "updated": "2024-10-25T20:40:17Z",
+  "updated": "2024-11-01T18:58:31Z",
   "url": "/votes/commonhaus/foundation/178.html",
   "tags": [
-    "vote/open",
     "notice",
+    "vote/done",
     "vote/quorum",
-    "vote"
+    "vote",
+    "closed"
   ],
-  "closed": false
+  "closed": true,
+  "closedAt": "2024-11-01T18:44:37Z"
 }
