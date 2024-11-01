@@ -2,7 +2,7 @@
   "title": "📝  Privacy Policy [due Oct 20]",
   "voteType": "marthas",
   "hasQuorum": true,
-  "isDone": false,
+  "isDone": true,
   "group": "commonhaus/cf-egc",
   "groupSize": 13,
   "groupVotes": 9,
@@ -150,7 +150,15 @@
       "url": "https://github.com/timtebeek"
     }
   ],
-  "manualCloseComments": null,
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2024-11-01T13:17:50.000+00:00",
+    "body": "No concerns w/ enough bake time",
+    "url": "https://github.com/commonhaus/foundation/pull/198#issuecomment-2451857749"
+  },
   "commentId": "IC_kwDOKRPTI86M0G7V",
   "github": "https://github.com/commonhaus/foundation/pull/198",
   "itemId": "PR_kwDOKRPTI858Gf0U",
@@ -158,13 +166,15 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-09-20T00:21:29Z",
-  "updated": "2024-10-31T21:27:55Z",
+  "updated": "2024-11-01T13:26:54Z",
   "url": "/votes/commonhaus/foundation/198.html",
   "tags": [
-    "vote/open",
     "notice",
+    "vote/done",
     "vote/quorum",
-    "vote"
+    "vote",
+    "closed"
   ],
-  "closed": false
+  "closed": true,
+  "closedAt": "2024-11-01T13:17:21Z"
 }
