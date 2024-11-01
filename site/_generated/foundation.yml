@@ -105,8 +105,8 @@ bylaws/9-amendments:
 policies/code-of-conduct:
   url: /policies/code-of-conduct/
   description: >
-    This document serves as the official Code of Conduct for the Commonhaus
-    Foundation, outlining the expectations and standards for behavior within
+    This Code of Conduct for the Commonhaus Foundation, outlining the
+    expectations and standards for behavior within
     the community. It details the commitment to creating a respectful,
     inclusive, and collaborative space, and provides guidelines for conduct,
     along with procedures for reporting and resolving issues.
@@ -114,20 +114,24 @@ policies/code-of-conduct:
 policies/conflict-of-interest:
   url: /policies/conflict-of-interest/
   description: >
-    This policy outlines the Commonhaus Foundation's approach to conflicts of
-    interest, ensuring that all members and contributors act in the best
-    interests of the foundation. It details the procedures for identifying,
+    The Commonhaus Foundation's policy for managing conflicts of
+    interest. It details the procedures for identifying,
     disclosing, and managing conflicts of interest, and provides a framework
     for addressing potential conflicts.
 
 policies/ip-policy:
   url: /policies/ip-policy/
   description: >
-    This policy outlines the Commonhaus Foundation's approach to intellectual
-    property, ensuring that all members and contributors act in the best
-    interests of the foundation. It details the procedures for identifying,
-    disclosing, and managing intellectual property, and provides a framework
-    for addressing potential conflicts.
+    Specifies preferred and required open source licenses, and requirements
+    around contributor agreements (DCO, CLA). Provides guidelines for
+    using copyright notices, and clarifies IP grants.
+
+policies/privacy-policy:
+  url: /policies/privacy-policy/
+  description: >
+    Specifies how personal information is collected, used, and protected, and
+    provides information on how to contact the foundation with privacy
+    concerns or questions.
 
 policies/README:
   url: /policies/
