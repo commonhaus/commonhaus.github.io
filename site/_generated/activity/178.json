@@ -5,14 +5,14 @@
   "author": "ebullient",
   "number": 178,
   "date": "2024-07-19T23:27:15Z",
-  "updated": "2024-11-01T18:45:34Z",
+  "updated": "2024-11-01T18:58:33Z",
   "url": "/activity/178.html",
   "type": "pullRequest",
   "tags": [
     "post",
     "reviews",
-    "vote/open",
     "notice",
+    "vote/done",
     "vote/quorum"
   ],
   "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/178.svg)](https://github.com/commonhaus/foundation/pull/178#issuecomment-2240642060 \"IC_kwDOKRPTI86FjXwM\")\r\n\r\nContinuing with our reviews: the Intellectual Property policy.\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment).",
