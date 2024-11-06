@@ -1,12 +1,12 @@
 {
   "title": "📄 Antitrust Policy [due Oct 27]",
   "voteType": "marthas",
-  "hasQuorum": false,
+  "hasQuorum": true,
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 13,
-  "groupVotes": 8,
-  "countedVotes": 8,
+  "groupVotes": 9,
+  "countedVotes": 9,
   "droppedVotes": 1,
   "votingThreshold": "twothirds",
   "categories": {
@@ -58,6 +58,12 @@
           "reaction": "👍"
         },
         {
+          "login": "maxandersen",
+          "url": "https://github.com/maxandersen",
+          "createdAt": "2024-11-05T22:59:15.000+00:00",
+          "reaction": "👍"
+        },
+        {
           "login": "velo",
           "url": "https://github.com/velo",
           "createdAt": "2024-09-10T13:35:52.000+00:00",
@@ -65,8 +71,8 @@
         }
       ],
       "otherVotes": [],
-      "teamTotal": 8,
-      "total": 8
+      "teamTotal": 9,
+      "total": 9
     },
     "ok": {
       "reactions": [],
@@ -99,10 +105,6 @@
       "url": "https://github.com/henri-tremblay"
     },
     {
-      "login": "maxandersen",
-      "url": "https://github.com/maxandersen"
-    },
-    {
       "login": "timtebeek",
       "url": "https://github.com/timtebeek"
     }
@@ -115,11 +117,12 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-09-10T10:43:39Z",
-  "updated": "2024-10-25T20:40:06Z",
+  "updated": "2024-11-06T00:28:25Z",
   "url": "/votes/commonhaus/foundation/196.html",
   "tags": [
     "vote/open",
     "notice",
+    "vote/quorum",
     "vote"
   ],
   "closed": false
