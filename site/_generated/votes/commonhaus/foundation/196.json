@@ -2,7 +2,7 @@
   "title": "📄 Antitrust Policy [due Oct 27]",
   "voteType": "marthas",
   "hasQuorum": true,
-  "isDone": false,
+  "isDone": true,
   "group": "commonhaus/cf-egc",
   "groupSize": 13,
   "groupVotes": 10,
@@ -111,7 +111,15 @@
       "url": "https://github.com/timtebeek"
     }
   ],
-  "manualCloseComments": null,
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2024-11-06T14:38:06.000+00:00",
+    "body": "Proceeding with participation quorum and no issues raised.",
+    "url": "https://github.com/commonhaus/foundation/pull/196#issuecomment-2459926765"
+  },
   "commentId": "IC_kwDOKRPTI86LflNQ",
   "github": "https://github.com/commonhaus/foundation/pull/196",
   "itemId": "PR_kwDOKRPTI8566yQZ",
@@ -119,11 +127,11 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-09-10T10:43:39Z",
-  "updated": "2024-11-06T14:37:25Z",
+  "updated": "2024-11-06T14:38:08Z",
   "url": "/votes/commonhaus/foundation/196.html",
   "tags": [
-    "vote/open",
     "notice",
+    "vote/done",
     "vote/quorum",
     "vote",
     "closed"
