@@ -254,7 +254,7 @@
     "genUrl": "/policies/conflict-of-interest.html"
   },
   "policies/README.md": {
-    "date": "2024-11-01T18:48:26.000Z",
+    "date": "2024-11-06T14:37:21.000Z",
     "srcPath": "policies/README.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/policies/README.md",
@@ -673,5 +673,22 @@
       "legal"
     ],
     "genUrl": "/policies/privacy-policy.html"
+  },
+  "policies/antitrust-policy.md": {
+    "date": "2024-11-06T14:37:21.000Z",
+    "srcPath": "policies/antitrust-policy.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/policies/antitrust-policy.md",
+    "type": "submodule",
+    "layout": "layouts/policies.vto",
+    "cssclasses": [
+      "bylaws",
+      "has-aside"
+    ],
+    "tags": [
+      "policies",
+      "legal"
+    ],
+    "genUrl": "/policies/antitrust-policy.html"
   }
 }
