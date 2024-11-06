@@ -137,20 +137,22 @@
     }
   ],
   "manualCloseComments": null,
-  "commentId": "IC_kwDOKRPTI86SPO6Q",
+  "commentId": "IC_kwDOKRPTI86LlGLV",
   "github": "https://github.com/commonhaus/foundation/pull/195",
   "itemId": "PR_kwDOKRPTI8566JSo",
   "number": 195,
   "repoName": "commonhaus/foundation",
   "type": "vote",
-  "date": "2024-11-03T15:28:00Z",
-  "updated": "2024-11-03T15:28:00Z",
+  "date": "2024-09-10T18:44:56Z",
+  "updated": "2024-11-06T00:26:35Z",
   "url": "/votes/commonhaus/foundation/195.html",
   "tags": [
     "vote/open",
     "notice",
     "vote/quorum",
-    "vote"
+    "vote",
+    "closed"
   ],
-  "closed": false
+  "closed": true,
+  "closedAt": "2024-11-06T00:26:32Z"
 }
