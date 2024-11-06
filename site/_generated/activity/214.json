@@ -1,0 +1,17 @@
+{
+  "title": "📝 Split trademark policy & guidelines",
+  "rss_title": "🗳️  📝 Split trademark policy & guidelines",
+  "github": "https://github.com/commonhaus/foundation/pull/214",
+  "author": "ebullient",
+  "number": 214,
+  "date": "2024-11-06T14:32:47Z",
+  "updated": "2024-11-06T14:33:18Z",
+  "url": "/activity/214.html",
+  "type": "pullRequest",
+  "tags": [
+    "post",
+    "reviews",
+    "notice"
+  ],
+  "content": "Move usage guidelines to a separate document from policy (infringing vs. not).\r\n\r\nIn updating the draft and pushing to the website, it did become apparent that (as some of you commented to me along the way), the document was too long. \r\n\r\nThis won't require a full vote: there are no substantive changes here. I would appreciate editorial review to make sure I haven't missed or dropped anything.\r\n\r\nreview group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment)."
+}
