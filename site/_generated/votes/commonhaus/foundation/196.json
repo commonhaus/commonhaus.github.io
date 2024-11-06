@@ -5,8 +5,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 13,
-  "groupVotes": 9,
-  "countedVotes": 9,
+  "groupVotes": 10,
+  "countedVotes": 10,
   "droppedVotes": 1,
   "votingThreshold": "twothirds",
   "categories": {
@@ -31,6 +31,12 @@
           "login": "cowtowncoder",
           "url": "https://github.com/cowtowncoder",
           "createdAt": "2024-09-10T18:41:59.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "dandreadis",
+          "url": "https://github.com/dandreadis",
+          "createdAt": "2024-11-06T14:12:04.000+00:00",
           "reaction": "👍"
         },
         {
@@ -71,8 +77,8 @@
         }
       ],
       "otherVotes": [],
-      "teamTotal": 9,
-      "total": 9
+      "teamTotal": 10,
+      "total": 10
     },
     "ok": {
       "reactions": [],
@@ -92,10 +98,6 @@
   ],
   "otherVotes": [],
   "missingGroupActors": [
-    {
-      "login": "dandreadis",
-      "url": "https://github.com/dandreadis"
-    },
     {
       "login": "marc0der",
       "url": "https://github.com/marc0der"
@@ -117,13 +119,15 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-09-10T10:43:39Z",
-  "updated": "2024-11-06T00:28:25Z",
+  "updated": "2024-11-06T14:37:25Z",
   "url": "/votes/commonhaus/foundation/196.html",
   "tags": [
     "vote/open",
     "notice",
     "vote/quorum",
-    "vote"
+    "vote",
+    "closed"
   ],
-  "closed": false
+  "closed": true,
+  "closedAt": "2024-11-06T14:37:21Z"
 }
