@@ -121,7 +121,7 @@ Lorem **ipsum** dolor *sit* amet, ***consectetur*** adipiscing elit, sed do eius
 
 ![done](/votes/vote-closed.svg)
 
-![progess](/votes/vote-progress.svg)
+![progess](/votes/progress-5.svg)
 
 ![quorum](/votes/vote-quorum.svg)
 

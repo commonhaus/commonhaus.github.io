@@ -1,6 +1,7 @@
 import lume from "lume/mod.ts";
 import { Page } from "lume/core/file.ts";
 
+import checkUrls from "lume/plugins/check_urls.ts";
 import date from "lume/plugins/date.ts";
 import feed from "lume/plugins/feed.ts";
 import inline from "lume/plugins/inline.ts";
@@ -139,6 +140,9 @@ site
             published: "=date",
             updated: "=updated",
         },
+    }))
+    .use(checkUrls({
+        strict: true,
     }));
 
 site.filter("pageLock", (page: Page) => {
