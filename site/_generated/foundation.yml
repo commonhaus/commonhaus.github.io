@@ -102,6 +102,12 @@ bylaws/9-amendments:
     change categorization, and community consultation for a transparent, inclusive process.
     Essential for members and contributors interested in governance participation or updates.
 
+policies/antitrust-policy:
+  url: /policies/antitrust/
+  description: >
+    The Commonhaus Foundation's policy on antitrust compliance, outlining
+    guidelines for members to avoid antitrust violations.
+
 policies/code-of-conduct:
   url: /policies/code-of-conduct/
   description: >
