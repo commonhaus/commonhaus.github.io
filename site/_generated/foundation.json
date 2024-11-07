@@ -220,7 +220,7 @@
     "genUrl": "/policies/code-of-conduct.html"
   },
   "policies/trademark-policy.md": {
-    "date": "2024-11-06T01:29:25.000Z",
+    "date": "2024-11-07T13:15:11.000Z",
     "srcPath": "policies/trademark-policy.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/policies/trademark-policy.md",
@@ -254,7 +254,7 @@
     "genUrl": "/policies/conflict-of-interest.html"
   },
   "policies/README.md": {
-    "date": "2024-11-06T14:37:21.000Z",
+    "date": "2024-11-07T13:15:11.000Z",
     "srcPath": "policies/README.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/policies/README.md",
@@ -690,5 +690,22 @@
       "legal"
     ],
     "genUrl": "/policies/antitrust-policy.html"
+  },
+  "policies/trademark-guidelines.md": {
+    "date": "2024-11-07T13:15:11.000Z",
+    "srcPath": "policies/trademark-guidelines.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/policies/trademark-guidelines.md",
+    "type": "submodule",
+    "layout": "layouts/policies.vto",
+    "cssclasses": [
+      "bylaws",
+      "has-aside"
+    ],
+    "tags": [
+      "policies",
+      "legal"
+    ],
+    "genUrl": "/policies/trademark-guidelines.html"
   }
 }
