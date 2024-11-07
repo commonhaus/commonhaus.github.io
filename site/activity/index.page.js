@@ -6,7 +6,10 @@ function createPages(pages, dir, uri) {
         if (file.isDirectory) {
             createPages(pages, path.join(dir, file.name), path.join(uri, file.name));
         } else if (file.name.endsWith('.json')) {
-            const data = JSON.parse(Deno.readTextFileSync(path.join(dir, file.name)));
+            const body = Deno.readTextFileSync(path.join(dir, file.name))
+                    .replace(/foundation-draft/g, 'foundation'); // repo rename
+
+            const data = JSON.parse(body);
             data.updated = new Date(data.updated);
             data.templateEngine = ['vto', 'md'];
             data.layout = "layouts/activity.vto";
