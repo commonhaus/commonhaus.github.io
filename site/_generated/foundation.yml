@@ -157,9 +157,17 @@ policies/README:
 policies/trademark-policy:
   url: /policies/trademark-policy/
   description: >
-    Specifies guidelines for using Commonhaus Foundation's trademarks,
-    including usage rights, licensing, and measures against misuse. Essential
-    for anyone using or intending to use the foundation's trademarks.
+    Defines the Commonhaus Foundation’s trademark policy, covering permissible use,
+    licensing requirements, and restrictions to prevent misuse.
+    Essential for understanding the rights and limitations associated with the
+    foundation’s trademarks, names, and logos.
+
+policies/trademark-guidelines:
+  url: /policies/trademark-policy/guidelines.html
+  description: >
+    Provides practical guidance on proper use of the Commonhaus Foundation’s trademarks
+    in text, materials, and digital media, including marking, logo use, and key
+    trademark concepts.
 
 policies/CLA:
   url: /policies/cla/
