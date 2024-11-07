@@ -12,7 +12,7 @@ layout: layouts/base.vto
     <ul class="top-level ordered">
     {{- for x of page.data.bylaws.nav }}
         <li data-ord="{{ x.ord }}">
-            <a href="{{ x.href }}">{{ x.title }}</a>
+            <a href="{{ x.href }}"{{- if page.data.url == x.href }} class="highlight"{{- /if }}>{{ x.title }}</a>
             {{- if page.data.url == x.href && toc.length }}
             <div class="pagenav">
             <ol>
