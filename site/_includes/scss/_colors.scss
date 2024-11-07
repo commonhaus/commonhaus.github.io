@@ -112,6 +112,8 @@ body {
 
   --callout-content-color: 255, 255, 255; // White
 
+  --highlight-bg: rgba(var(--light-blue-rgb), 0.3);
+
   background-color: var(--bg-primary);
 }
 

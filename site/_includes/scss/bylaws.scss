@@ -69,6 +69,24 @@ aside.policy-contents {
   @include margin-align-y();
   @include content-align-y();
 
+  a.highlight {
+    width: 100%;
+    display: inline-block;
+  }
+
+  a.highlight::before {
+    /* Highlight color */
+    background-color: var(--highlight-bg);
+
+    content: "";
+    position: absolute;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    top: -2px;
+    left: 0;
+    z-index: -1;
+  }
+
   ul.top-level {
     padding-left: var(--hang-pad-left);
 
@@ -125,6 +143,13 @@ aside.bylaw-contents {
   --nest-hang-text-indent: -0.5em;
   --nest-indent: .5em;
 
+  a.highlight {
+    margin-left: 1em;
+  }
+  a.highlight::before {
+    margin-left: -1em;
+  }
+
   ul.top-level.ordered > li:before {
     content: attr(data-ord) ". ";
     position: absolute;
@@ -150,6 +175,10 @@ aside.policy-contents {
 
   display: flex;
   flex-direction: column-reverse;
+
+  a.highlight::before {
+    margin-left: var(--hang-text-indent);
+  }
 
   div.pagenav {
     ol > li:before {
