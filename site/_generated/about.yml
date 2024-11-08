@@ -167,7 +167,8 @@ techbelle:
 ashni-mehta:
   login: ashni-mehta
   url: 'https://github.com/ashni-mehta'
-  avatarUrl: 'https://avatars.githubusercontent.com/u/105304831?v=4'
-  company: null
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/105304831?u=0573b3d5e959a2243cec1fc3cee60f45b6dad4b1&v=4
+  company: '@github '
   name: ashni
-  bio: product @ mongodb
+  bio: 'product @ github, find my old account @ashnimehta'

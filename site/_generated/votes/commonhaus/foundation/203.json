@@ -2,7 +2,7 @@
   "title": "Seconds! Defining alternate project representatives",
   "voteType": "marthas",
   "hasQuorum": true,
-  "isDone": false,
+  "isDone": true,
   "group": "commonhaus/cf-egc",
   "groupSize": 13,
   "groupVotes": 9,
@@ -121,7 +121,15 @@
       "url": "https://github.com/timtebeek"
     }
   ],
-  "manualCloseComments": null,
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2024-11-08T21:06:35.000+00:00",
+    "body": "We're in agreement. I'll get to work.",
+    "url": "https://github.com/commonhaus/foundation/discussions/203#discussioncomment-11193356"
+  },
   "commentId": "DC_kwDOKRPTI84ApiC0",
   "github": "https://github.com/commonhaus/foundation/discussions/203",
   "itemId": "D_kwDOKRPTI84Ab0P0",
@@ -129,13 +137,15 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-10-09T04:08:44Z",
-  "updated": "2024-11-06T15:27:55Z",
+  "updated": "2024-11-08T21:06:39Z",
   "url": "/votes/commonhaus/foundation/203.html",
   "tags": [
-    "vote/open",
     "notice",
+    "vote/done",
     "vote/quorum",
-    "vote"
+    "vote",
+    "closed"
   ],
-  "closed": false
+  "closed": true,
+  "closedAt": "2024-11-08T21:06:35Z"
 }
