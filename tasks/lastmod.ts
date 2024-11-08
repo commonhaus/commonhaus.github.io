@@ -8,7 +8,6 @@ const interestingFiles = [
     'templates'
 ];
 
-
 const foundationPath = './site/foundation';
 const metaPath = './site/_generated/foundation.json';
 const projectMeta = Deno.readTextFileSync(metaPath);

@@ -7,13 +7,11 @@
     "vite-watch": "export VITE_APP_DEV_MODE=true && deno run -A --node-modules-dir npm:vite build --watch",
     "serve": "export DEV_MODE=true && deno task lume -s & deno task vite-watch",
     "serve-all": "export MOCK_BACKEND=true && deno task serve",
-    "about": "deno run --allow-run=gh --allow-read=./.github/graphql,./site/_generated --allow-write=./site/_generated ./.github/about.ts",
-    "activity": "deno run --allow-run=gh --allow-read=./.github/graphql,./site/activity,./site/_generated --allow-write=./site/_generated ./.github/activity.ts",
-    "lastmod": "deno run --allow-run=git,gh --allow-read=. --allow-write=./site/_generated ./.github/lastmod.ts",
-    "votes": "deno run --allow-run=gh --allow-read=./.github/graphql,./site/_generated --allow-write=./site/_generated ./.github/votes.ts",
-    "repair": "for x in `find site/_generated/votes -name '*.json'`; do echo $x; COMMENT=`jq '.commentId' $x`; echo $COMMENT; deno task votes $COMMENT; done",
-    "checklinks": "deno run --allow-read --allow-net https://deno.land/x/link_checker/crawl.ts https://www.commonhaus.org",
-    "checklocal": "deno run --allow-read --allow-net https://deno.land/x/link_checker/crawl.ts http://localhost:3000/"
+    "about": "deno run --allow-run=gh --allow-read=./tasks/graphql,./site/_generated --allow-write=./site/_generated ./tasks/about.ts",
+    "activity": "deno run --allow-run=gh --allow-read=./tasks/graphql,./site/activity,./site/_generated --allow-write=./site/_generated ./tasks/activity.ts",
+    "lastmod": "deno run --allow-run=git,gh --allow-read=. --allow-write=./site/_generated ./tasks/lastmod.ts",
+    "votes": "deno run --allow-run=gh --allow-read=./tasks/graphql,./site/_generated --allow-write=./site/_generated ./tasks/votes.ts",
+    "repair": "deno run --allow-run=gh --allow-read=./tasks/graphql,./site/_generated --allow-write=./site/_generated ./tasks/voteRepair.ts"
   },
   "compilerOptions": {
     "types": [

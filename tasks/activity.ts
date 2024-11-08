@@ -2,108 +2,6 @@ import { ensureDirSync } from "@std/fs";
 import { join } from "@std/path";
 import { parse, stringify } from "@std/yaml";
 
-interface Problem {
-    path: string[];
-    explanation: string;
-}
-interface Error {
-    message: string;
-    extensions?: {
-        "value": string;
-        "problems": Problem[];
-    },
-    locations?: {
-        line: number;
-        column: number;
-    }[];
-}
-interface Label {
-    name: string;
-}
-interface Author {
-    login: string;
-    url: string;
-    avatarUrl: string;
-    company?: string;
-    name?: string;
-}
-interface ItemWithAuthor {
-    id: string;
-    title: string;
-    number: number;
-    author: Author;
-    labels: {
-        nodes: Label[];
-    };
-    url: string;
-    body: string;
-    createdAt: string;
-    updatedAt: string;
-    closed: boolean;
-    closedAt: string;
-    locked: boolean;
-    activeLockReason: string;
-    category?: {
-        name: string;
-    };
-    isAnswered?: boolean;
-    answerChosenAt?: string;
-}
-interface DiscussionsData {
-    errors?: Error[];
-    data: {
-        repository: {
-            discussions: {
-                nodes: ItemWithAuthor[];
-            };
-        };
-    };
-}
-interface PullRequestData {
-    errors?: Error[];
-    data: {
-        repository: {
-            pullRequests: {
-                nodes: ItemWithAuthor[];
-            };
-        };
-    };
-}
-interface PinnedItem {
-    discussion: {
-        id: string;
-    };
-}
-interface PinnedItemData {
-    errors?: Error[];
-    data: {
-        repository: {
-            pinnedDiscussions: {
-                nodes: PinnedItem[];
-            };
-        };
-    };
-}
-interface PageData {
-    author: string;
-    content: string;
-    date: string;
-    github: string;
-    number: number;
-    rss_title: string;
-    tags: string[];
-    title: string;
-    type: string;
-    updated: string;
-    url: string;
-
-    answeredAt?: string;
-    closedAt?: string;
-    description?: string;
-    lockReason?: string;
-    pinned?: boolean;
-}
-
 const authorsPath = './site/_generated/authors.yml';
 const authorsYaml = Deno.readTextFileSync(authorsPath);
 const authors = parse(authorsYaml) as Record<string, Author> || {};
@@ -132,7 +30,7 @@ function runGraphQL(filePath: string): string {
     return output;
 }
 
-const pins: PinnedItemData = JSON.parse(runGraphQL('.github/graphql/query.pinned.graphql'));
+const pins: PinnedItemData = JSON.parse(runGraphQL('tasks/graphql/query.pinned.graphql'));
 if (pins.errors || !pins.data) {
     console.error(pins);
     Deno.exit(1);
@@ -256,14 +154,14 @@ function updatePullRequests(data: PullRequestData) {
 // First, use a deno task to download the last 10 discussions from GitHub > discussions.json
 // Parse the discussions.json file
 
-const discuss: DiscussionsData = JSON.parse(runGraphQL('.github/graphql/query.discussions.graphql'));
+const discuss: DiscussionsData = JSON.parse(runGraphQL('tasks/graphql/query.discussions.graphql'));
 if (discuss.errors || !discuss.data) {
     console.error(discuss);
     Deno.exit(1);
 }
 updateDiscussions(discuss);
 
-const prs: PullRequestData = JSON.parse(runGraphQL('.github/graphql/query.pullrequests.graphql'));
+const prs: PullRequestData = JSON.parse(runGraphQL('tasks/graphql/query.pullrequests.graphql'));
 if (prs.errors || !prs.data) {
     console.error(prs);
     Deno.exit(1);
