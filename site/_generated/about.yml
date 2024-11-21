@@ -172,3 +172,19 @@ ashni-mehta:
   company: '@github '
   name: ashni
   bio: 'product @ github, find my old account @ashnimehta'
+criccomini:
+  login: criccomini
+  url: 'https://github.com/criccomini'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/167569?u=37afdd5338abeac9a5758c23b87081fcf9ba6335&v=4
+  company: null
+  name: Chris Riccomini
+  bio: ''
+Naros:
+  login: Naros
+  url: 'https://github.com/Naros'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/3255568?u=4730e9a35d4b60504321a720796615a705462cef&v=4
+  company: '@RedHatOfficial @debezium @hibernate '
+  name: Chris Cranford
+  bio: "Principal Software Engineer @ Red Hat\r\nWorking on Debezium and Hibernate open source projects."
