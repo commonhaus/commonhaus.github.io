@@ -5,7 +5,6 @@ on:
     inputs:
       comment_id:
         type: string
-        required: true
 
 env:
   GH_BOT_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
@@ -49,7 +48,11 @@ jobs:
           INPUT: ${{ github.event.inputs.comment_id }}
         run: |
           echo "Updating vote results..."
-          deno task votes "${INPUT}"
+          if [ -z "${INPUT}" ]; then
+            deno task repair
+          else
+            deno task votes "${INPUT}"
+          fi
           git add -A -- ./site/_generated/votes
           if git diff --quiet HEAD; then
             echo "-- No changes -- "

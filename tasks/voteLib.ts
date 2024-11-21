@@ -16,8 +16,10 @@ function runGraphQL(commentId: string, filePath: string): string {
 
     const { code, stdout, stderr } = command.outputSync();
     const output = new TextDecoder().decode(stdout).trim();
-    console.log(code, filePath, new TextDecoder().decode(stderr));
-    console.log(output);
+    if (code !== 0) {
+        console.log(code, filePath, new TextDecoder().decode(stderr));
+        console.log(output);
+    }
     console.assert(code === 0);
     return output;
 }
@@ -25,21 +27,20 @@ function runGraphQL(commentId: string, filePath: string): string {
 // Function to fetch the vote data from the GitHub API
 // and transform/normalize it for further processing
 export function fetchVoteData(commentId: string): VoteData {
-    console.log(`Check vote data in comment ${commentId}`);
+    console.log(` == [${commentId}]`);
     const result: Result = JSON.parse(runGraphQL(commentId, 'tasks/graphql/query.comment.graphql'));
-    console.log(result);
 
     // If we have errors, we're done.
-    if (result.errors || !result.data) {
+    if (result.errors || !result.data || result.data.node === null) {
         console.error(result);
-        Deno.exit(1);
+        return {} as VoteData;
     }
     // If we can't find the parent item, we're done
     const comment = result.data.node;
     const item = comment.discussion || comment.issue;
-    if (!item) {
+    if (!item || comment.author?.login !== 'haus-rules-bot') {
         console.error(comment);
-        Deno.exit(1);
+        return {} as VoteData;
     }
 
     comment.body = comment.body.replaceAll(apiUrlPattern, normalUrl);
@@ -99,10 +100,13 @@ export function fetchVoteData(commentId: string): VoteData {
 }
 
 export function processVote(voteData: VoteData) {
+    if (!voteData || !voteData.commentId) {
+        return;
+    }
     // The relative path for the vote file
     const relativeVotePath = `./site/_generated/votes/${voteData.repoName}/`;
     const fileName = `${voteData.number}.json`;
-    console.log(`Writing vote data to ${relativeVotePath}${fileName}`);
+    console.log(`<-- ${voteData.repoName}#${voteData.number} to ${relativeVotePath}${fileName}`);
     ensureDirSync(relativeVotePath);
     Deno.writeTextFileSync(`${relativeVotePath}${fileName}`, JSON.stringify(voteData, null, 2));
 }
