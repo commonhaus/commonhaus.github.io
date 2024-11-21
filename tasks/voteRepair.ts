@@ -1,8 +1,35 @@
 import { join } from "@std/path";
 import { fetchVoteData, processVote } from "./voteLib.ts";
 
+const activityPath = `./site/_generated/activity/`;
 const votePath = `./site/_generated/votes/`;
 const jsonFiles: string[] = [];
+const all = Deno.args.length > 0 && Deno.args[0] == "all";
+
+const seen: string[] = [];
+
+try {
+    if (all) {
+        findFiles(activityPath, jsonFiles);
+        console.log(jsonFiles.length, ' files found.');
+        jsonFiles.forEach(filePath => {
+            const fileContent = Deno.readTextFileSync(filePath);
+            const pageData: PageData = JSON.parse(fileContent);
+            if (pageData && pageData.tags.includes('vote/open')) {
+                const match = pageData.content.match(/^\[!\[🗳️ Vote progress\].*?"([^"]+)"/);
+                if (match && match[1]) {
+                    const commentId = match[1];
+                    console.log(` *  commonhaus/foundation#${pageData.number}`);
+                    const voteData = fetchVoteData(commentId);
+                    processVote(voteData);
+                    seen.push(commentId);
+                }
+            }
+        });
+    }
+} catch (err) {
+    console.error(err);
+}
 
 try {
     console.log('--> ', votePath);
@@ -13,7 +40,7 @@ try {
     jsonFiles.forEach(filePath => {
         const fileContent = Deno.readTextFileSync(filePath);
         let voteData = JSON.parse(fileContent);
-        if (voteData && voteData.commentId) {
+        if (voteData && voteData.commentId && !seen.includes(voteData.commentId)) {
             if (voteData.isDone) {
                 console.log(` -  ${voteData.repoName}#${voteData.number}`);
             } else {

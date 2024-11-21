@@ -1,34 +1,21 @@
 import { ensureDirSync } from "@std/fs";
+import { runGraphQL } from "./queryLib.ts";
 
 const apiUrlPattern = /https:\/\/api.github.com\/users\/([a-zA-Z0-9_-]+)/g;
 const normalUrl = "https://github.com/$1";
 
-function runGraphQL(commentId: string, filePath: string): string {
-    const command = new Deno.Command('gh', {
-        args: [
-            'api', 'graphql',
-            '-F', "owner=commonhaus",
-            '-F', "name=foundation",
-            '-F', `commentId=${commentId}`,
-            '-F', `query=@${filePath}`,
+function commentQuery(commentId: string, filePath: string): string {
+    return runGraphQL(filePath, [
+            '-F', `commentId=${commentId}`
         ]
-    });
-
-    const { code, stdout, stderr } = command.outputSync();
-    const output = new TextDecoder().decode(stdout).trim();
-    if (code !== 0) {
-        console.log(code, filePath, new TextDecoder().decode(stderr));
-        console.log(output);
-    }
-    console.assert(code === 0);
-    return output;
+    );
 }
 
 // Function to fetch the vote data from the GitHub API
 // and transform/normalize it for further processing
 export function fetchVoteData(commentId: string): VoteData {
     console.log(` == [${commentId}]`);
-    const result: Result = JSON.parse(runGraphQL(commentId, 'tasks/graphql/query.comment.graphql'));
+    const result: Result = JSON.parse(commentQuery(commentId, 'tasks/graphql/query.comment.graphql'));
 
     // If we have errors, we're done.
     if (result.errors || !result.data || result.data.node === null) {

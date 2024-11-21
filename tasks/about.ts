@@ -1,28 +1,9 @@
 import { parse, stringify } from "@std/yaml";
+import { runGraphQL } from "./queryLib.ts";
 
 const aboutPath = './site/_generated/about.yml';
 const aboutYaml = Deno.readTextFileSync(aboutPath);
 const about: Record<string, User> = parse(aboutYaml) as Record<string, User> ?? {};
-
-function runGraphQL(filePath: string, custom: string[] = []): string {
-    const args = [
-        'api', 'graphql',
-        ...custom,
-        '-F', "owner=commonhaus",
-        '-F', "name=foundation",
-        '-F', `query=@${filePath}`,
-    ];
-
-    const command = new Deno.Command('gh', { args });
-
-    const { code, stdout, stderr } = command.outputSync();
-    const output = new TextDecoder().decode(stdout).trim();
-    if (code !== 0) {
-        console.log(code, filePath, new TextDecoder().decode(stderr));
-        console.log(output);
-    }
-    return output;
-}
 
 function updateTeamMembers(data: TeamData) {
     const members = data.data.organization.team.members.nodes;
