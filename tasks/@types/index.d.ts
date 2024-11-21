@@ -166,6 +166,9 @@ interface Result {
             id: string;
             updatedAt: string;
             url: string;
+            author?: {
+                login: string;
+            }
         };
     };
 }

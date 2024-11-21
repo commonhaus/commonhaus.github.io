@@ -17,8 +17,10 @@ function runGraphQL(filePath: string, custom: string[] = []): string {
 
     const { code, stdout, stderr } = command.outputSync();
     const output = new TextDecoder().decode(stdout).trim();
-    console.log(code, filePath, new TextDecoder().decode(stderr));
-    console.assert(code === 0);
+    if (code !== 0) {
+        console.log(code, filePath, new TextDecoder().decode(stderr));
+        console.log(output);
+    }
     return output;
 }
 

@@ -5,22 +5,23 @@ const votePath = `./site/_generated/votes/`;
 const jsonFiles: string[] = [];
 
 try {
-    console.log('reading path ', votePath);
+    console.log('--> ', votePath);
     findFiles(votePath, jsonFiles);
-    console.log('files found ', jsonFiles);
+    console.log(jsonFiles.length, ' files found.');
 
     // Process each JSON file
     jsonFiles.forEach(filePath => {
         const fileContent = Deno.readTextFileSync(filePath);
         let voteData = JSON.parse(fileContent);
         if (voteData && voteData.commentId) {
-            console.log(voteData);
-            // Re-fetch the vote data to ensure we have the latest data
-            // then reprocess the data to rewrite the file
-            voteData = fetchVoteData(voteData.commentId);
-            processVote(voteData);
-        } else {
-            console.warn(`No commentId found in file ${filePath}`);
+            if (voteData.isDone) {
+                console.log(` -  ${voteData.repoName}#${voteData.number}`);
+            } else {
+                // Re-fetch the vote data to ensure we have the latest data
+                // then reprocess the data to rewrite the file
+                voteData = fetchVoteData(voteData.commentId);
+                processVote(voteData);
+            }
         }
     });
 } catch (err) {
