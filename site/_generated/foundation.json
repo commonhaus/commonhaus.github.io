@@ -48,7 +48,7 @@
     "genUrl": "/CONTRIBUTING.html"
   },
   "TRADEMARKS.md": {
-    "date": "2024-08-15T19:14:01.000Z",
+    "date": "2024-11-21T20:00:11.000Z",
     "srcPath": "TRADEMARKS.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/TRADEMARKS.md",
@@ -460,7 +460,7 @@
     "genUrl": "/agreements/membership/members.yaml"
   },
   "PROJECTS.yaml": {
-    "date": "2024-10-09T14:38:34.000Z",
+    "date": "2024-11-22T12:46:04.000Z",
     "srcPath": "PROJECTS.yaml",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/PROJECTS.yaml",
@@ -474,7 +474,7 @@
     "genUrl": "/SUPPORTERS.yaml"
   },
   "CONTACTS.yaml": {
-    "date": "2024-10-16T21:32:26.000Z",
+    "date": "2024-11-21T21:13:51.000Z",
     "srcPath": "CONTACTS.yaml",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/CONTACTS.yaml",
@@ -707,5 +707,39 @@
       "legal"
     ],
     "genUrl": "/policies/trademark-guidelines.html"
+  },
+  "agreements/bootstrapping/2024-11-05-bootstrapping-slatedb.md": {
+    "date": "2024-11-21T19:55:13.000Z",
+    "srcPath": "agreements/bootstrapping/2024-11-05-bootstrapping-slatedb.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-11-05-bootstrapping-slatedb.md",
+    "type": "submodule",
+    "layout": "layouts/policies.vto",
+    "cssclasses": [
+      "bylaws",
+      "has-aside"
+    ],
+    "tags": [
+      "policies",
+      "legal"
+    ],
+    "genUrl": "/agreements/bootstrapping/2024-11-05-bootstrapping-slatedb.html"
+  },
+  "agreements/bootstrapping/2024-10-30-bootstrapping-debezium.md": {
+    "date": "2024-11-21T20:00:11.000Z",
+    "srcPath": "agreements/bootstrapping/2024-10-30-bootstrapping-debezium.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-10-30-bootstrapping-debezium.md",
+    "type": "submodule",
+    "layout": "layouts/policies.vto",
+    "cssclasses": [
+      "bylaws",
+      "has-aside"
+    ],
+    "tags": [
+      "policies",
+      "legal"
+    ],
+    "genUrl": "/agreements/bootstrapping/2024-10-30-bootstrapping-debezium.html"
   }
 }
