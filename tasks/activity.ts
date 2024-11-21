@@ -1,6 +1,7 @@
 import { ensureDirSync } from "@std/fs";
 import { join } from "@std/path";
 import { parse, stringify } from "@std/yaml";
+import { runGraphQL } from "./queryLib.ts";
 
 const authorsPath = './site/_generated/authors.yml';
 const authorsYaml = Deno.readTextFileSync(authorsPath);
@@ -12,26 +13,6 @@ const prefixMap: Record<string, string> = {
     'consensus building': '🗳️  ',
     reviews: '🗳️  ',
 };
-
-function runGraphQL(filePath: string): string {
-    const command = new Deno.Command('gh', {
-        args: [
-            'api', 'graphql',
-            '-F', "owner=commonhaus",
-            '-F', "name=foundation",
-            '-F', `query=@${filePath}`,
-        ]
-    });
-
-    const { code, stdout, stderr } = command.outputSync();
-    const output = new TextDecoder().decode(stdout).trim();
-    if (code !== 0) {
-        console.log(code, filePath, new TextDecoder().decode(stderr));
-        console.log(output);
-    }
-    console.assert(code === 0);
-    return output;
-}
 
 const pins: PinnedItemData = JSON.parse(runGraphQL('tasks/graphql/query.pinned.graphql'));
 if (pins.errors || !pins.data) {
