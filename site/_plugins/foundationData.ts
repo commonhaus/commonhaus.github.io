@@ -122,6 +122,9 @@ const importLogo = (name: string, url: string | undefined, segment: string, site
             IMPORTED_LOGO_URLS[url] = url.replace("https://www.commonhaus.org", "");
             return;
         }
+        if (url.includes("/github.com/") && !url.endsWith("?raw=true")) {
+            url += "?raw=true";
+        }
         const baseName = urlBaseName(url);
         if (!baseName) {
             return;
@@ -130,6 +133,7 @@ const importLogo = (name: string, url: string | undefined, segment: string, site
                 ? baseName
                 : `${name}-${baseName}`;
         const target = `/images/${segment}/${file}`;
+        console.log("Importing logo", url, file, target);
         site.remoteFile(file, url);
         site.copy(file, target);
         IMPORTED_LOGO_URLS[url] = target;
