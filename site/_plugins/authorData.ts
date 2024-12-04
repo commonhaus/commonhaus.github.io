@@ -1,6 +1,5 @@
 import Site from "lume/core/site.ts";
 import { parse } from "@std/yaml";
-import { Page } from "lume/core/file.ts";
 
 interface Author {
     login: string;

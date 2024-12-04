@@ -153,5 +153,6 @@ if (prs.errors || !prs.data) {
 updatePullRequests(prs);
 
 if (authorsUpdated) {
-    Deno.writeTextFileSync(authorsPath, stringify(authors));
+    const sorted = Object.fromEntries(Object.entries(authors).sort())
+    Deno.writeTextFileSync(authorsPath, stringify(sorted));
 }
