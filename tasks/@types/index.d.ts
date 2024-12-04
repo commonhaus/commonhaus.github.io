@@ -23,6 +23,7 @@ interface User {
     companyHTML: string;
     name: string;
     bio: string;
+    groups?: string[];
 }
 interface TeamData {
     errors?: Error[];

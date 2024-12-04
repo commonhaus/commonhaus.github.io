@@ -95,8 +95,9 @@ for(const councilor of councilors) {
         ...councilor // make sure these take precedence
     });
 }
+councilors.sort((a, b) => a.login.localeCompare(b.login));
 
-const repData = CONTACT_DATA['egc'] as ProjectContact[];
+const repData = [ ...CONTACT_DATA['egc'], ...CONTACT_DATA['egc-second']] as ProjectContact[];
 const augmentedRepData = repData.map(item => augmentReference<ProjectContact>(CONTACT_DATA, item));
 const egc = augmentedRepData.reduce((acc: ProjectContact[], current: ProjectContact) => {
     if (current.login.includes(".")) {
@@ -127,6 +128,7 @@ const egc = augmentedRepData.reduce((acc: ProjectContact[], current: ProjectCont
     }
     return acc;
 }, []);
+egc.sort((a, b) => a.login.localeCompare(b.login));
 
 const officerData = CONTACT_DATA['officers'] as OfficerContact[];
 const officers = officerData.map(item => augmentReference<OfficerContact>(CONTACT_DATA, item));
@@ -144,6 +146,7 @@ for(const officer of officers) {
         ...officer // make sure these take precedence
     });
 }
+officers.sort((a, b) => a.login.localeCompare(b.login));
 
 // Augment advisory board user data
 const advisorData = CONTACT_DATA['advisory-board'] as AdvisorContact[];
@@ -180,6 +183,7 @@ Object.entries(SPONSOR_DATA.sponsors).forEach(([key, sponsor]) => {
         addToGroup(groupedSponsors, 'supporter', sponsor);
     }
 });
+advisoryBoard.sort((a, b) => a.login.localeCompare(b.login));
 
 function addToGroup(groups: GroupedSponsors, key: string, sponsor: Sponsor) {
     if (!groups[key]) {

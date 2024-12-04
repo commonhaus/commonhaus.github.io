@@ -5,55 +5,48 @@ const aboutPath = './site/_generated/about.yml';
 const aboutYaml = Deno.readTextFileSync(aboutPath);
 const about: Record<string, User> = parse(aboutYaml) as Record<string, User> ?? {};
 
-function updateTeamMembers(data: TeamData) {
+function addGroup(user: User, group: string) {
+    user.groups = user.groups ?? [];
+    if (!user.groups.includes(group)) {
+        user.groups.push(group);
+        user.groups.sort();
+    }
+}
+
+function updateTeamMembers(data: TeamData, group: string) {
     const members = data.data.organization.team.members.nodes;
     for (const a of members) {
+        addGroup(a, group);
         about[a.login] = a;
     }
 }
-function updateTeamInvites(data: InviteData) {
-    const invitees = data.data.organization.team.invitations.nodes;
-    console.log(invitees)
-    for (const a of invitees) {
-        if (a && a.invitee && a.invitee.login) {
-            about[a.invitee.login] = a.invitee;
+function updateTeamInvites(data: InviteData, group: string) {
+    const invitations = data.data.organization.team.invitations.nodes;
+    for (const invite of invitations) {
+        if (invite && invite.invitee && invite.invitee.login) {
+            addGroup(invite.invitee, group);
+            about[invite.invitee.login] = invite.invitee;
         }
     }
 }
 
-const officers: TeamData = JSON.parse(runGraphQL('tasks/graphql/query.team.graphql', ['-F', "teamName=cf-officers"]));
-if (officers.errors || !officers.data) {
-    console.error(officers);
-    Deno.exit(1);
-}
-updateTeamMembers(officers);
+const groups = ['cf-officers', 'cf-egc', 'cf-egc-second', 'advisory-board'];
+for(const group of groups) {
+    console.log(`Updating ${group}`);
+    const data: TeamData = JSON.parse(runGraphQL('tasks/graphql/query.team.graphql', ['-F', `teamName=${group}`]));
+    if (data.errors || !data.data) {
+        console.error(data);
+        Deno.exit(1);
+    }
+    updateTeamMembers(data, group);
 
-const reps: TeamData = JSON.parse(runGraphQL('tasks/graphql/query.team.graphql', ['-F', "teamName=cf-egc"]));
-if (reps.errors || !reps.data) {
-    console.error(reps);
-    Deno.exit(1);
+    const pendingData: InviteData = JSON.parse(runGraphQL('tasks/graphql/query.team.invitations.graphql', ['-F', `teamName=${group}`]));
+    if (pendingData.errors || !pendingData.data) {
+        console.error(pendingData);
+        Deno.exit(1);
+    }
+    updateTeamInvites(pendingData, group);
 }
-updateTeamMembers(reps);
 
-const advisors: TeamData = JSON.parse(runGraphQL('tasks/graphql/query.team.graphql', ['-F', "teamName=advisory-board"]));
-if (advisors.errors || !advisors.data) {
-    console.error(advisors);
-    Deno.exit(1);
-}
-updateTeamMembers(advisors);
-
-const pendingEgc: InviteData = JSON.parse(runGraphQL('tasks/graphql/query.team.invitations.graphql', ['-F', "teamName=cf-egc"]));
-if (pendingEgc.errors || !pendingEgc.data) {
-    console.error(reps);
-    Deno.exit(1);
-}
-updateTeamInvites(pendingEgc);
-
-const pendingAb: InviteData = JSON.parse(runGraphQL('tasks/graphql/query.team.invitations.graphql', ['-F', "teamName=advisory-board"]));
-if (pendingAb.errors || !pendingAb.data) {
-    console.error(reps);
-    Deno.exit(1);
-}
-updateTeamInvites(pendingAb);
-
-Deno.writeTextFileSync(aboutPath, stringify(about));
+const sorted = Object.fromEntries(Object.entries(about).sort())
+Deno.writeTextFileSync(aboutPath, stringify(sorted));

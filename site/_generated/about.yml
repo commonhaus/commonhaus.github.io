@@ -1,3 +1,23 @@
+JooHyukKim:
+  login: JooHyukKim
+  url: 'https://github.com/JooHyukKim'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/61615301?u=ddf57f17a327b402f34d33e3437adda981112811&v=4
+  company: null
+  name: 'Kim, Joo Hyuk'
+  bio: "Member, Core-Dev @FasterXML \r\nMember @commonhaus second-representative of Jackson"
+  groups:
+    - cf-egc-second
+Naros:
+  login: Naros
+  url: 'https://github.com/Naros'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/3255568?u=4730e9a35d4b60504321a720796615a705462cef&v=4
+  company: '@RedHatOfficial @debezium @hibernate '
+  name: Chris Cranford
+  bio: "Principal Software Engineer @ Red Hat\r\nWorking on Debezium and Hibernate open source projects."
+  groups:
+    - cf-egc
 aalmiray:
   login: aalmiray
   url: 'https://github.com/aalmiray'
@@ -6,41 +26,18 @@ aalmiray:
   company: null
   name: Andres Almiray
   bio: "I code for fun and help others in the process. Java Champion Alumni. Co-founder of Hackergarten & Hack.Commit.Push. Creator of @jreleaser \U0001F680"
-maxandersen:
-  login: maxandersen
-  url: 'https://github.com/maxandersen'
-  avatarUrl: 'https://avatars.githubusercontent.com/u/54129?v=4'
-  company: Red Hat
-  name: Max Rydahl Andersen
-  bio: >-
-    Danish guy enjoying working on open source software. Making things happen at
-    Red Hat.
-evanchooly:
-  login: evanchooly
-  url: 'https://github.com/evanchooly'
-  avatarUrl: 'https://avatars.githubusercontent.com/u/195021?v=4'
-  company: '@datadog'
-  name: Justin Lee
-  bio: >-
-    Java Champion. Kotlin fanatic. Bit twiddler. New Yorker. Senior Software
-    Engineer at @datadog
-nmcl:
-  login: nmcl
-  url: 'https://github.com/nmcl'
-  avatarUrl: 'https://avatars.githubusercontent.com/u/580667?v=4'
-  company: Red Hat JBoss
-  name: Mark Little
-  bio: >-
-    I lead the technical direction, research, and development for Red Hat JBoss
-    Middleware.
-ebullient:
-  login: ebullient
-  url: 'https://github.com/ebullient'
+  groups:
+    - cf-egc
+ashni-mehta:
+  login: ashni-mehta
+  url: 'https://github.com/ashni-mehta'
   avatarUrl: >-
-    https://avatars.githubusercontent.com/u/808713?u=8c50c6169b230fc62777f6910f6669b753ae95a8&v=4
-  company: Red Hat
-  name: Erin Schnabel
-  bio: "Java Champion. Distinguished Engineer and maker of things @ Red Hat. \r\nFormer @IBM."
+    https://avatars.githubusercontent.com/u/105304831?u=0573b3d5e959a2243cec1fc3cee60f45b6dad4b1&v=4
+  company: '@github '
+  name: ashni
+  bio: 'product @ github, find my old account @ashnimehta'
+  groups:
+    - advisory-board
 cealsair:
   login: cealsair
   url: 'https://github.com/cealsair'
@@ -51,6 +48,8 @@ cealsair:
   bio: >-
     Staff Developer Advocate @ GitLab. Former @ Red Hat, IBM, Oracle, BEA
     Systems, TIBCO, Lucent Technologies, AT&T Bell Labs. 
+  groups:
+    - cf-egc
 commonhaus-bot:
   login: commonhaus-bot
   url: 'https://github.com/commonhaus-bot'
@@ -62,16 +61,8 @@ commonhaus-bot:
     Automating innovation and fostering collaboration in the open-source
     community. Here to streamline processes and support the Commonhaus
     Foundation's mission. 
-kenfinnigan:
-  login: kenfinnigan
-  url: 'https://github.com/kenfinnigan'
-  avatarUrl: >-
-    https://avatars.githubusercontent.com/u/441240?u=aea870e6cad6edfff45e4fc1603b4531c8f57b44&v=4
-  company: null
-  name: Ken Finnigan
-  bio: >-
-    Open source engineer, observability, @open-telemetry, author, amateur
-    genealogist. @commonhaus Council member
+  groups:
+    - advisory-board
 cowtowncoder:
   login: cowtowncoder
   url: 'https://github.com/cowtowncoder'
@@ -80,14 +71,50 @@ cowtowncoder:
   company: Fasterxml.com
   name: Tatu Saloranta
   bio: 'Java Champion, OSS tinkerer, probably best known as "Dr Jackson".'
-jkschneider:
-  login: jkschneider
-  url: 'https://github.com/jkschneider'
+  groups:
+    - cf-egc
+criccomini:
+  login: criccomini
+  url: 'https://github.com/criccomini'
   avatarUrl: >-
-    https://avatars.githubusercontent.com/u/1697736?u=e30dd29d0621d14d9e2ffe24e79fd8ce908f884b&v=4
-  company: '@openrewrite '
-  name: Jonathan Schnéider
-  bio: 'co-founder/CEO @ Moderne (https://moderne.io).'
+    https://avatars.githubusercontent.com/u/167569?u=37afdd5338abeac9a5758c23b87081fcf9ba6335&v=4
+  company: null
+  name: Chris Riccomini
+  bio: 'Writer of books, code, checks, and newsletters. Working on SlateDB.'
+  groups:
+    - cf-egc
+dandreadis:
+  login: dandreadis
+  url: 'https://github.com/dandreadis'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/332924?v=4'
+  company: Red Hat
+  name: Dimitris Andreadis
+  bio: >-
+    Engineering Director, overseeing the Quarkus & Cloud Native Runtimes / JBoss
+    EAP / Wildly teams at Red Hat. JBoss Veteran & Open Source Advocate.
+  groups:
+    - cf-egc
+ebullient:
+  login: ebullient
+  url: 'https://github.com/ebullient'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/808713?u=8c50c6169b230fc62777f6910f6669b753ae95a8&v=4
+  company: Red Hat
+  name: Erin Schnabel
+  bio: "Java Champion. Distinguished Engineer and maker of things @ Red Hat. \r\nFormer @IBM."
+  groups:
+    - cf-egc
+evanchooly:
+  login: evanchooly
+  url: 'https://github.com/evanchooly'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/195021?v=4'
+  company: '@datadog'
+  name: Justin Lee
+  bio: >-
+    Java Champion. Kotlin fanatic. Bit twiddler. New Yorker. Senior Software
+    Engineer at @datadog
+  groups:
+    - cf-egc
 gavinking:
   login: gavinking
   url: 'https://github.com/gavinking'
@@ -96,23 +123,8 @@ gavinking:
   company: Red Hat
   name: Gavin King
   bio: "Distinguished Engineer at IBM / Red Hat.\r\n\r\nCreator of @Hibernate, @cdi-spec, and @ceylon.\r\n\r\nWorking on @jakartaee Persistence and Data specifications."
-timtebeek:
-  login: timtebeek
-  url: 'https://github.com/timtebeek'
-  avatarUrl: >-
-    https://avatars.githubusercontent.com/u/1027334?u=7221cdfc8719cd4f62eb0213079467cb2b8fea30&v=4
-  company: '@moderneinc '
-  name: Tim te Beek
-  bio: 'Staff software engineer at Moderne, supporting the OpenRewrite community.'
-marc0der:
-  login: marc0der
-  url: 'https://github.com/marc0der'
-  avatarUrl: 'https://avatars.githubusercontent.com/u/144390?v=4'
-  company: Equal Experts
-  name: Marco Vermeulen
-  bio: >-
-    Polyglot FP on the JVM @EqualExperts. Creator of @sdkman, co-author of
-    Manning Functional Programming in Kotlin https://bit.ly/fpinkotlin
+  groups:
+    - cf-egc
 henri-tremblay:
   login: henri-tremblay
   url: 'https://github.com/henri-tremblay'
@@ -123,6 +135,72 @@ henri-tremblay:
     Java Champion. Leads EasyMock and Objenesis and contributes to Ehcache.
     Loves optimization and productivity. In Java and in general. Likes to be
     useful. 
+  groups:
+    - cf-egc
+kenfinnigan:
+  login: kenfinnigan
+  url: 'https://github.com/kenfinnigan'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/441240?u=aea870e6cad6edfff45e4fc1603b4531c8f57b44&v=4
+  company: null
+  name: Ken Finnigan
+  bio: >-
+    Open source engineer, observability, @open-telemetry, author, amateur
+    genealogist. @commonhaus Council member
+  groups:
+    - cf-egc
+marc0der:
+  login: marc0der
+  url: 'https://github.com/marc0der'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/144390?v=4'
+  company: Equal Experts
+  name: Marco Vermeulen
+  bio: >-
+    Polyglot FP on the JVM @EqualExperts. Creator of @sdkman, co-author of
+    Manning Functional Programming in Kotlin https://bit.ly/fpinkotlin
+  groups:
+    - cf-egc
+maxandersen:
+  login: maxandersen
+  url: 'https://github.com/maxandersen'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/54129?v=4'
+  company: Red Hat
+  name: Max Rydahl Andersen
+  bio: >-
+    Danish guy enjoying working on open source software. Making things happen at
+    Red Hat.
+  groups:
+    - cf-egc
+sigrunixia:
+  login: sigrunixia
+  url: 'https://github.com/sigrunixia'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/68425372?u=232fb7113bd3a4ec972dd2343888b595aebe7212&v=4
+  company: '@Obsidianmd'
+  name: Rebbecca Bishop
+  bio: 'Customer Experience Specialist for @obsidianmd and friend of @commonhaus '
+  groups:
+    - cf-officers
+techbelle:
+  login: techbelle
+  url: 'https://github.com/techbelle'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/477680?u=1d6b178d16c552416fa3b2d6092d9751c90dd06d&v=4
+  company: MongoDB
+  name: Rachelle Palmer
+  bio: Eng Lead - App Modernization / GenAI
+  groups:
+    - advisory-board
+timtebeek:
+  login: timtebeek
+  url: 'https://github.com/timtebeek'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/1027334?u=7221cdfc8719cd4f62eb0213079467cb2b8fea30&v=4
+  company: '@moderneinc '
+  name: Tim te Beek
+  bio: 'Staff software engineer at Moderne, supporting the OpenRewrite community.'
+  groups:
+    - cf-egc
 velo:
   login: velo
   url: 'https://github.com/velo'
@@ -132,59 +210,5 @@ velo:
   bio: >-
     Java geek and open-source enthusiast, leading projects here and there. Feign
     lead, QueryDSL stalwart, and Commonhaus advocate.
-dandreadis:
-  login: dandreadis
-  url: 'https://github.com/dandreadis'
-  avatarUrl: 'https://avatars.githubusercontent.com/u/332924?v=4'
-  company: Red Hat
-  name: Dimitris Andreadis
-  bio: >-
-    Engineering Director, overseeing the Quarkus & Cloud Native Runtimes / JBoss
-    EAP / Wildly teams at Red Hat. JBoss Veteran & Open Source Advocate.
-sigrunixia:
-  login: sigrunixia
-  url: 'https://github.com/sigrunixia'
-  avatarUrl: >-
-    https://avatars.githubusercontent.com/u/68425372?u=232fb7113bd3a4ec972dd2343888b595aebe7212&v=4
-  company: '@Obsidianmd'
-  name: Rebbecca Bishop
-  bio: 'Customer Experience Specialist for @obsidianmd and friend of @commonhaus '
-ashni-mongodb:
-  login: ashni-mongodb
-  url: 'https://github.com/ashni-mongodb'
-  avatarUrl: 'https://avatars.githubusercontent.com/u/105304831?v=4'
-  company: null
-  name: ashni
-  bio: product @ mongodb
-techbelle:
-  login: techbelle
-  url: 'https://github.com/techbelle'
-  avatarUrl: >-
-    https://avatars.githubusercontent.com/u/477680?u=1d6b178d16c552416fa3b2d6092d9751c90dd06d&v=4
-  company: MongoDB
-  name: Rachelle Palmer
-  bio: Eng Lead - App Modernization / GenAI
-ashni-mehta:
-  login: ashni-mehta
-  url: 'https://github.com/ashni-mehta'
-  avatarUrl: >-
-    https://avatars.githubusercontent.com/u/105304831?u=0573b3d5e959a2243cec1fc3cee60f45b6dad4b1&v=4
-  company: '@github '
-  name: ashni
-  bio: 'product @ github, find my old account @ashnimehta'
-criccomini:
-  login: criccomini
-  url: 'https://github.com/criccomini'
-  avatarUrl: >-
-    https://avatars.githubusercontent.com/u/167569?u=37afdd5338abeac9a5758c23b87081fcf9ba6335&v=4
-  company: null
-  name: Chris Riccomini
-  bio: 'Writer of books, code, checks, and newsletters. Working on SlateDB.'
-Naros:
-  login: Naros
-  url: 'https://github.com/Naros'
-  avatarUrl: >-
-    https://avatars.githubusercontent.com/u/3255568?u=4730e9a35d4b60504321a720796615a705462cef&v=4
-  company: '@RedHatOfficial @debezium @hibernate '
-  name: Chris Cranford
-  bio: "Principal Software Engineer @ Red Hat\r\nWorking on Debezium and Hibernate open source projects."
+  groups:
+    - cf-egc
