@@ -10,7 +10,6 @@
   "type": "pullRequest",
   "tags": [
     "post",
-    "reviews",
     "notice",
     "vote/done",
     "vote/quorum"
