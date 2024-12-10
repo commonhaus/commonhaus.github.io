@@ -48,7 +48,7 @@
     "genUrl": "/CONTRIBUTING.html"
   },
   "TRADEMARKS.md": {
-    "date": "2024-12-09T22:27:20.000Z",
+    "date": "2024-12-10T13:21:17.000Z",
     "srcPath": "TRADEMARKS.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/TRADEMARKS.md",
@@ -436,14 +436,14 @@
     "genUrl": "/agreements/bootstrapping/2024-05-27-bootstrapping-feign.html"
   },
   "agreements/membership/members.yaml": {
-    "date": "2024-10-24T15:50:38.000Z",
+    "date": "2024-12-10T14:45:21.000Z",
     "srcPath": "agreements/membership/members.yaml",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/membership/members.yaml",
     "genUrl": "/agreements/membership/members.yaml"
   },
   "PROJECTS.yaml": {
-    "date": "2024-12-09T22:27:20.000Z",
+    "date": "2024-12-10T13:21:17.000Z",
     "srcPath": "PROJECTS.yaml",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/PROJECTS.yaml",
@@ -457,7 +457,7 @@
     "genUrl": "/SUPPORTERS.yaml"
   },
   "CONTACTS.yaml": {
-    "date": "2024-12-09T22:27:20.000Z",
+    "date": "2024-12-10T13:21:17.000Z",
     "srcPath": "CONTACTS.yaml",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/CONTACTS.yaml",
@@ -583,7 +583,7 @@
     "genUrl": "/bylaws/3-cf-membership.html"
   },
   "bylaws/1-preface.md": {
-    "date": "2024-08-28T12:58:54.000Z",
+    "date": "2024-12-11T21:09:15.000Z",
     "srcPath": "bylaws/1-preface.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/bylaws/1-preface.md",
@@ -617,7 +617,7 @@
     "genUrl": "/bylaws/6-decision-making.html"
   },
   "bylaws/7-notice-records.md": {
-    "date": "2024-08-28T12:58:54.000Z",
+    "date": "2024-12-11T21:09:15.000Z",
     "srcPath": "bylaws/7-notice-records.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/bylaws/7-notice-records.md",
@@ -741,5 +741,39 @@
       "legal"
     ],
     "genUrl": "/agreements/bootstrapping/2024-03-25-bootstrapping-openrewrite-withdrawn.html"
+  },
+  "agreements/bootstrapping/2024-11-18-bootstrapping-infinispan.md": {
+    "date": "2024-12-10T13:21:17.000Z",
+    "srcPath": "agreements/bootstrapping/2024-11-18-bootstrapping-infinispan.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-11-18-bootstrapping-infinispan.md",
+    "type": "submodule",
+    "layout": "layouts/policies.vto",
+    "cssclasses": [
+      "bylaws",
+      "has-aside"
+    ],
+    "tags": [
+      "policies",
+      "legal"
+    ],
+    "genUrl": "/agreements/bootstrapping/2024-11-18-bootstrapping-infinispan.html"
+  },
+  "agreements/project-contribution/README.md": {
+    "date": "2024-12-12T14:51:53.000Z",
+    "srcPath": "agreements/project-contribution/README.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/project-contribution/README.md",
+    "type": "submodule",
+    "layout": "layouts/policies.vto",
+    "cssclasses": [
+      "bylaws",
+      "has-aside"
+    ],
+    "tags": [
+      "policies",
+      "legal"
+    ],
+    "genUrl": "/agreements/project-contribution/"
   }
 }
