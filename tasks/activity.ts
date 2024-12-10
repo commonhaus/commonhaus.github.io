@@ -11,7 +11,6 @@ let authorsUpdated = false;
 const prefixMap: Record<string, string> = {
     announcements: '📣  ',
     'consensus building': '🗳️  ',
-    reviews: '🗳️  ',
 };
 
 const pins: PinnedItemData = JSON.parse(runGraphQL('tasks/graphql/query.pinned.graphql'));
@@ -23,23 +22,35 @@ if (pins.errors || !pins.data) {
 const htmlComment = /<!--([\s\S]*?)-->/g;
 const pinnedIds = pins.data.repository.pinnedDiscussions.nodes.map((node) => node.discussion.id);
 
-function generateContent(item: ItemWithAuthor, id: string, type: string): string {
-    const prefix = item.category
-        ? prefixMap[item.category.name.toLowerCase()]
-        : '';
+function getItemCategory(category: string | undefined, vote: boolean): string {
+    if (vote) {
+        return '🗳️  ';
+    }
+    if (category) {
+        return prefixMap[category.toLowerCase()] || '';
+    }
+    return '';
+}
 
+function generateContent(item: ItemWithAuthor, id: string, type: string): string {
     const match = item.body.match(/<!-- meta::description ([\s\S]*?)-->/);
     const description = match ? match[1].trim() : '';
 
     const tags = ['post'];
+    let vote = false;
     if (item.category) {
         tags.push(item.category.name.toLowerCase());
     }
     if (item.labels.nodes) {
         for (const label of item.labels.nodes) {
             tags.push(label.name.toLowerCase());
+            vote = vote || label.name.toLowerCase().startsWith('vote');
         }
     }
+
+    const prefix = getItemCategory(item.category?.name, vote);
+
+    console.log(`Generating ${type} ${id} with ${item.category?.name} and ${prefix}`);
 
     const data: PageData = {
         title: item.title,
@@ -127,7 +138,6 @@ function updatePullRequests(data: PullRequestData) {
             pr.labels.nodes.some((label: Label) => label.name.toLowerCase() === 'notice')
         );
 
-    prs.forEach((pr: ItemWithAuthor) => pr.category = { name: 'reviews' });
     writeItemsToFiles(prs, `site/_generated/activity`, "pullRequest");
 
     // Update authors.yml (add/update author of last 10 discussions)

@@ -1,6 +1,6 @@
 {
   "title": "Fix GNOME -> CF in trademark policy",
-  "rss_title": "🗳️  Fix GNOME -> CF in trademark policy",
+  "rss_title": "Fix GNOME -> CF in trademark policy",
   "github": "https://github.com/commonhaus/foundation/pull/175",
   "author": "gavinking",
   "number": 175,
@@ -10,7 +10,6 @@
   "type": "pullRequest",
   "tags": [
     "post",
-    "reviews",
     "notice"
   ],
   "content": "Fix GNOME -> CF\r\n\r\nUPDATE: noticed a couple more problems just below.\r\n\r\n\r\n",
