@@ -201,6 +201,15 @@ timtebeek:
   bio: 'Staff software engineer at Moderne, supporting the OpenRewrite community.'
   groups:
     - cf-egc
+tristantarrant:
+  login: tristantarrant
+  url: 'https://github.com/tristantarrant'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/392478?v=4'
+  company: Red Hat
+  name: Tristan Tarrant
+  bio: Senior Principal Software Engineer
+  groups:
+    - cf-egc
 velo:
   login: velo
   url: 'https://github.com/velo'
