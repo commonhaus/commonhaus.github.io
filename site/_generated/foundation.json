@@ -758,5 +758,22 @@
       "legal"
     ],
     "genUrl": "/agreements/bootstrapping/2024-11-18-bootstrapping-infinispan.html"
+  },
+  "agreements/project-contribution/README.md": {
+    "date": "2024-12-12T14:51:53.000Z",
+    "srcPath": "agreements/project-contribution/README.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/project-contribution/README.md",
+    "type": "submodule",
+    "layout": "layouts/policies.vto",
+    "cssclasses": [
+      "bylaws",
+      "has-aside"
+    ],
+    "tags": [
+      "policies",
+      "legal"
+    ],
+    "genUrl": "/agreements/project-contribution/"
   }
 }
