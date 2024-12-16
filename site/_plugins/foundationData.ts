@@ -99,7 +99,7 @@ const mergeFoundationPageData = (page: Page, allPages: Page<Data>[]) => {
         const content = page.data.content as string;
         const match = content.match(/#\s(.*)$/m); // 'm' flag for multiline
         if (match) {
-            page.data.title = match[1];
+            page.data.title = match[1].replace('Commonhaus Foundation', '');
         } else {
             page.data.title = page.data.basename;
         }

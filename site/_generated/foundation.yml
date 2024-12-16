@@ -1,11 +1,12 @@
-# This content is not automatically generated.
+# This content is not automatically generated, it maps generated
+# content to site URLs
 #
-# If you add a new page in the foundations repo that you want
+# If you add a new page in the foundation repo that you want
 # rendered on the website, you must add it here.
-# Include the target URL, SEO descriptionm and any other metadata
+# Include the target URL, SEO description, and any other metadata
 # that is not discovered by the build process (see foundations.json).
 #
-# Note: Pages discovered/included in foundations.json will
+# Note: Pages discovered/included in foundation.json will
 # not be published as webpages unless they are also included here.
 
 COMMUNICATION:
@@ -33,6 +34,20 @@ TRADEMARKS:
   description: >
     A listing of Commonhaus Foundation trademarks, including logos and phrases,
     with guidelines for their proper use.
+
+agreements/project-contribution/README:
+  url: /policies/fiscal-sponsorship/
+  description: >
+    A guide to the Commonhaus Foundation’s Project Hosting Agreements, including
+    Contribution and Fiscal Sponsorship Agreements. Outlines the terms and processes
+    for projects joining the Foundation and customizing agreements to meet specific needs.
+
+agreements/project-contribution/fiscal-sponsorship-terms-and-conditions:
+  url:  /policies/fiscal-sponsorship/terms-and-conditions.html
+  description: >
+    The Terms and Conditions for projects hosted by the Commonhaus Foundation.
+    Covers governance, leadership transitions, administrative access, and
+    responsibilities for contributors and maintainers under fiscal sponsorship agreements.
 
 bylaws/README:
   url: /bylaws/
@@ -153,12 +168,6 @@ policies/README:
 #     Details responsible disclosure protocols, direct communication with
 #     maintainers, and confidentiality. Step-by-step instructions for effective
 #     and safe reporting, maintaining project integrity and community safety.
-
-# policies/succession-plan:
-#   url: /policies/succession-plan/
-#   description: >
-#     Details the Commonhaus Foundation's strategy for project continuity and
-#     leadership transitions.
 
 policies/trademark-policy:
   url: /policies/trademark-policy/
