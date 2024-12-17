@@ -1,0 +1,106 @@
+{
+  "title": "📝 Fiscal Sponsorship Agreements",
+  "voteType": "marthas",
+  "hasQuorum": false,
+  "isDone": false,
+  "group": "commonhaus/cf-egc",
+  "groupSize": 15,
+  "groupVotes": 1,
+  "countedVotes": 1,
+  "droppedVotes": 0,
+  "votingThreshold": "twothirds",
+  "categories": {
+    "ok": {
+      "reactions": [
+        "👀"
+      ],
+      "team": [
+        {
+          "login": "henri-tremblay",
+          "url": "https://github.com/henri-tremblay",
+          "createdAt": "2024-12-17T02:09:34.000+00:00",
+          "reaction": "👀"
+        }
+      ],
+      "otherVotes": [],
+      "teamTotal": 1,
+      "total": 1
+    }
+  },
+  "duplicates": [],
+  "otherVotes": [],
+  "missingGroupActors": [
+    {
+      "login": "aalmiray",
+      "url": "https://github.com/aalmiray"
+    },
+    {
+      "login": "velo",
+      "url": "https://github.com/velo"
+    },
+    {
+      "login": "dandreadis",
+      "url": "https://github.com/dandreadis"
+    },
+    {
+      "login": "marc0der",
+      "url": "https://github.com/marc0der"
+    },
+    {
+      "login": "evanchooly",
+      "url": "https://github.com/evanchooly"
+    },
+    {
+      "login": "tristantarrant",
+      "url": "https://github.com/tristantarrant"
+    },
+    {
+      "login": "maxandersen",
+      "url": "https://github.com/maxandersen"
+    },
+    {
+      "login": "cealsair",
+      "url": "https://github.com/cealsair"
+    },
+    {
+      "login": "cowtowncoder",
+      "url": "https://github.com/cowtowncoder"
+    },
+    {
+      "login": "gavinking",
+      "url": "https://github.com/gavinking"
+    },
+    {
+      "login": "criccomini",
+      "url": "https://github.com/criccomini"
+    },
+    {
+      "login": "Naros",
+      "url": "https://github.com/Naros"
+    },
+    {
+      "login": "kenfinnigan",
+      "url": "https://github.com/kenfinnigan"
+    },
+    {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    }
+  ],
+  "manualCloseComments": null,
+  "commentId": "IC_kwDOKRPTI86X1XJj",
+  "github": "https://github.com/commonhaus/foundation/pull/219",
+  "itemId": "PR_kwDOKRPTI86FbjaX",
+  "number": 219,
+  "repoName": "commonhaus/foundation",
+  "type": "vote",
+  "date": "2024-12-17T02:09:11Z",
+  "updated": "2024-12-17T02:09:37Z",
+  "url": "/votes/commonhaus/foundation/219.html",
+  "tags": [
+    "vote/open",
+    "notice",
+    "vote"
+  ],
+  "closed": false
+}
