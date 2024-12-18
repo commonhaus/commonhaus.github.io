@@ -775,5 +775,22 @@
       "legal"
     ],
     "genUrl": "/agreements/project-contribution/"
+  },
+  "agreements/project-contribution/terms-and-conditions.md": {
+    "date": "2024-12-18T16:24:53.000Z",
+    "srcPath": "agreements/project-contribution/terms-and-conditions.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/project-contribution/terms-and-conditions.md",
+    "type": "submodule",
+    "layout": "layouts/policies.vto",
+    "cssclasses": [
+      "bylaws",
+      "has-aside"
+    ],
+    "tags": [
+      "policies",
+      "legal"
+    ],
+    "genUrl": "/agreements/project-contribution/terms-and-conditions.html"
   }
 }
