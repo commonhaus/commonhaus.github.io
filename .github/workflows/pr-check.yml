@@ -13,29 +13,36 @@ permissions:
 env:
   GH_BOT_EMAIL: "41898282+github-actions[bot]@users.noreply.github.com"
   GH_BOT_NAME: "GitHub Action"
-  HUGO_VERSION: 0.120.4
+  DENO_DIR: .deno-cache
 
 jobs:
-  main-root:
-    runs-on: ubuntu-latest
-    if: github.repository == 'commonhaus/commonhaus.github.io'
-    steps:
-      - id: is-main-root
-        run: echo "This is 'commonhaus/commonhaus.github.io'"
-
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Setup Deno environment
-        uses: denoland/setup-deno@v2
-        with:
-          deno-version: v1.x
-
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
           submodules: recursive
-          ref: 'main'
+
+      - name: Cache node modules
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: ${{ hashFiles('deno.lock') }}
+
+      - name: Cache Deno dependencies
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.DENO_DIR }}
+          key: ${{ hashFiles('deno.lock') }}
+
+      - name: Setup Deno environment
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Build info
+        run: deno info
 
       - name: Build site
         run: deno task build
