@@ -132,7 +132,7 @@ const importLogo = (name: string, url: string | undefined, segment: string, site
         const file = baseName.startsWith(name)
                 ? baseName
                 : `${name}-${baseName}`;
-        const target = `/images/${segment}/${file}`;
+        const target = `/images/${segment}/${file}`.replace(/%20/, '-');
         console.log("Importing logo", url, file, target);
         site.remoteFile(file, url);
         site.copy(file, target);
