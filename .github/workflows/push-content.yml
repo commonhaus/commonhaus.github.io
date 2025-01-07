@@ -32,20 +32,29 @@ jobs:
     concurrency:
       group: "push-content"
     steps:
-      - name: Setup Deno environment
-        uses: denoland/setup-deno@v2
-        with:
-          deno-version: v1.x
-
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Cache node modules
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: ${{ hashFiles('deno.lock') }}
 
       - name: Cache Deno dependencies
         uses: actions/cache@v4
         with:
           path: ${{ env.DENO_DIR }}
           key: ${{ hashFiles('deno.lock') }}
+
+      - name: Setup Deno environment
+        uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+
+      - name: Build info
+        run: deno info
 
       - name: Git Config
         run: |
