@@ -1,12 +1,12 @@
 {
-  "title": "📝 Fiscal Sponsorship Agreements",
+  "title": "📝 Fiscal Sponsorship Agreements [due Jan 17]",
   "voteType": "marthas",
   "hasQuorum": false,
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 15,
-  "groupVotes": 5,
-  "countedVotes": 5,
+  "groupVotes": 6,
+  "countedVotes": 6,
   "droppedVotes": 0,
   "votingThreshold": "twothirds",
   "categories": {
@@ -20,11 +20,17 @@
           "url": "https://github.com/criccomini",
           "createdAt": "2024-12-18T22:44:14.000+00:00",
           "reaction": "👍"
+        },
+        {
+          "login": "ebullient",
+          "url": "https://github.com/ebullient",
+          "createdAt": "2025-01-08T20:51:56.000+00:00",
+          "reaction": "👍"
         }
       ],
       "otherVotes": [],
-      "teamTotal": 1,
-      "total": 1
+      "teamTotal": 2,
+      "total": 2
     },
     "ok": {
       "reactions": [
@@ -99,10 +105,6 @@
     {
       "login": "Naros",
       "url": "https://github.com/Naros"
-    },
-    {
-      "login": "ebullient",
-      "url": "https://github.com/ebullient"
     }
   ],
   "manualCloseComments": null,
@@ -113,7 +115,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-12-17T02:09:11Z",
-  "updated": "2024-12-24T16:10:50Z",
+  "updated": "2025-01-08T20:53:12Z",
   "url": "/votes/commonhaus/foundation/219.html",
   "tags": [
     "vote/open",
