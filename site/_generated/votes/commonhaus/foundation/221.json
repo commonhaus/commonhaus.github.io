@@ -1,0 +1,144 @@
+{
+  "title": "CF Officers: Advisory Board",
+  "voteType": "marthas",
+  "hasQuorum": true,
+  "isDone": true,
+  "group": "commonhaus/cf-council",
+  "groupSize": 3,
+  "groupVotes": 3,
+  "countedVotes": 9,
+  "droppedVotes": 0,
+  "votingThreshold": "all",
+  "categories": {
+    "approve": {
+      "reactions": [
+        "👍"
+      ],
+      "team": [
+        {
+          "login": "cealsair",
+          "url": "https://github.com/cealsair",
+          "createdAt": "2024-12-30T15:54:26.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "ebullient",
+          "url": "https://github.com/ebullient",
+          "createdAt": "2025-01-08T16:01:03.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "kenfinnigan",
+          "url": "https://github.com/kenfinnigan",
+          "createdAt": "2024-12-19T14:36:24.000+00:00",
+          "reaction": "👍"
+        }
+      ],
+      "otherVotes": [
+        {
+          "login": "JooHyukKim",
+          "url": "https://github.com/JooHyukKim",
+          "createdAt": "2025-01-08T16:01:38.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "criccomini",
+          "url": "https://github.com/criccomini",
+          "createdAt": "2024-12-19T18:15:48.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "evanchooly",
+          "url": "https://github.com/evanchooly",
+          "createdAt": "2024-12-19T13:17:35.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "henri-tremblay",
+          "url": "https://github.com/henri-tremblay",
+          "createdAt": "2024-12-20T20:51:22.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "sigrunixia",
+          "url": "https://github.com/sigrunixia",
+          "createdAt": "2024-12-19T20:58:06.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "tristantarrant",
+          "url": "https://github.com/tristantarrant",
+          "createdAt": "2024-12-20T14:39:14.000+00:00",
+          "reaction": "👍"
+        }
+      ],
+      "teamTotal": 3,
+      "total": 9
+    }
+  },
+  "duplicates": [],
+  "otherVotes": [
+    {
+      "login": "JooHyukKim",
+      "url": "https://github.com/JooHyukKim",
+      "createdAt": "2025-01-08T16:01:38.000+00:00",
+      "reaction": "👍"
+    },
+    {
+      "login": "criccomini",
+      "url": "https://github.com/criccomini",
+      "createdAt": "2024-12-19T18:15:48.000+00:00",
+      "reaction": "👍"
+    },
+    {
+      "login": "evanchooly",
+      "url": "https://github.com/evanchooly",
+      "createdAt": "2024-12-19T13:17:35.000+00:00",
+      "reaction": "👍"
+    },
+    {
+      "login": "henri-tremblay",
+      "url": "https://github.com/henri-tremblay",
+      "createdAt": "2024-12-20T20:51:22.000+00:00",
+      "reaction": "👍"
+    },
+    {
+      "login": "sigrunixia",
+      "url": "https://github.com/sigrunixia",
+      "createdAt": "2024-12-19T20:58:06.000+00:00",
+      "reaction": "👍"
+    },
+    {
+      "login": "tristantarrant",
+      "url": "https://github.com/tristantarrant",
+      "createdAt": "2024-12-20T14:39:14.000+00:00",
+      "reaction": "👍"
+    }
+  ],
+  "missingGroupActors": [],
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2025-01-08T16:03:55.000+00:00",
+    "body": "CF Council approved. Welcome @ashni-mehta! 🎉",
+    "url": "https://github.com/commonhaus/foundation/discussions/221#discussioncomment-11775468"
+  },
+  "commentId": "DC_kwDOKRPTI84As63I",
+  "github": "https://github.com/commonhaus/foundation/discussions/221",
+  "itemId": "D_kwDOKRPTI84AdbXB",
+  "number": 221,
+  "repoName": "commonhaus/foundation",
+  "type": "vote",
+  "date": "2025-01-08T16:00:40Z",
+  "updated": "2025-01-08T16:03:58Z",
+  "url": "/votes/commonhaus/foundation/221.html",
+  "tags": [
+    "notice",
+    "vote/done",
+    "vote/quorum",
+    "vote"
+  ],
+  "closed": false
+}
