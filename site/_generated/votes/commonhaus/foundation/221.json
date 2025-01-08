@@ -1,12 +1,12 @@
 {
   "title": "CF Officers: Advisory Board",
   "voteType": "marthas",
-  "hasQuorum": false,
-  "isDone": false,
+  "hasQuorum": true,
+  "isDone": true,
   "group": "commonhaus/cf-council",
   "groupSize": 3,
-  "groupVotes": 2,
-  "countedVotes": 7,
+  "groupVotes": 3,
+  "countedVotes": 9,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -22,6 +22,12 @@
           "reaction": "👍"
         },
         {
+          "login": "ebullient",
+          "url": "https://github.com/ebullient",
+          "createdAt": "2025-01-08T16:01:03.000+00:00",
+          "reaction": "👍"
+        },
+        {
           "login": "kenfinnigan",
           "url": "https://github.com/kenfinnigan",
           "createdAt": "2024-12-19T14:36:24.000+00:00",
@@ -29,6 +35,12 @@
         }
       ],
       "otherVotes": [
+        {
+          "login": "JooHyukKim",
+          "url": "https://github.com/JooHyukKim",
+          "createdAt": "2025-01-08T16:01:38.000+00:00",
+          "reaction": "👍"
+        },
         {
           "login": "criccomini",
           "url": "https://github.com/criccomini",
@@ -60,12 +72,18 @@
           "reaction": "👍"
         }
       ],
-      "teamTotal": 2,
-      "total": 7
+      "teamTotal": 3,
+      "total": 9
     }
   },
   "duplicates": [],
   "otherVotes": [
+    {
+      "login": "JooHyukKim",
+      "url": "https://github.com/JooHyukKim",
+      "createdAt": "2025-01-08T16:01:38.000+00:00",
+      "reaction": "👍"
+    },
     {
       "login": "criccomini",
       "url": "https://github.com/criccomini",
@@ -97,13 +115,16 @@
       "reaction": "👍"
     }
   ],
-  "missingGroupActors": [
-    {
+  "missingGroupActors": [],
+  "manualCloseComments": {
+    "author": {
       "login": "ebullient",
       "url": "https://github.com/ebullient"
-    }
-  ],
-  "manualCloseComments": null,
+    },
+    "createdAt": "2025-01-08T16:03:55.000+00:00",
+    "body": "CF Council approved. Welcome @ashni-mehta! 🎉",
+    "url": "https://github.com/commonhaus/foundation/discussions/221#discussioncomment-11775468"
+  },
   "commentId": "DC_kwDOKRPTI84As63I",
   "github": "https://github.com/commonhaus/foundation/discussions/221",
   "itemId": "D_kwDOKRPTI84AdbXB",
@@ -111,11 +132,12 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2025-01-08T16:00:40Z",
-  "updated": "2025-01-08T16:00:42Z",
+  "updated": "2025-01-08T16:03:58Z",
   "url": "/votes/commonhaus/foundation/221.html",
   "tags": [
-    "vote/open",
     "notice",
+    "vote/done",
+    "vote/quorum",
     "vote"
   ],
   "closed": false
