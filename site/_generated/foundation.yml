@@ -38,11 +38,10 @@ TRADEMARKS:
 agreements/project-contribution/README:
   url: /policies/fiscal-sponsorship/
   description: >
-    A guide to the Commonhaus Foundation’s Project Hosting Agreements, including
-    Contribution and Fiscal Sponsorship Agreements. Outlines the terms and processes
-    for projects joining the Foundation and customizing agreements to meet specific needs.
+    A guide to the Commonhaus Foundation’s Fiscal Sponsorship Agreements, including
+    Asset Transfer Agreements and our Terms and Conditions.
 
-agreements/project-contribution/fiscal-sponsorship-terms-and-conditions:
+agreements/project-contribution/terms-and-conditions:
   url:  /policies/fiscal-sponsorship/terms-and-conditions.html
   description: >
     The Terms and Conditions for projects hosted by the Commonhaus Foundation.
