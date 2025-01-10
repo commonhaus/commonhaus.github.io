@@ -48,5 +48,5 @@ for(const group of groups) {
     updateTeamInvites(pendingData, group);
 }
 
-const sorted = Object.fromEntries(Object.entries(about).sort())
+const sorted = Object.fromEntries(Object.entries(about).sort());
 Deno.writeTextFileSync(aboutPath, stringify(sorted));
