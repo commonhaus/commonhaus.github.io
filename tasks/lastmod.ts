@@ -105,4 +105,5 @@ for (const key in meta) {
 }
 
 // Write updated foundation metadata
-Deno.writeTextFileSync(metaPath, JSON.stringify(meta, null, 2));
+const sorted = Object.fromEntries(Object.entries(meta).sort())
+Deno.writeTextFileSync(metaPath, JSON.stringify(sorted, null, 2));
