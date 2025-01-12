@@ -16,12 +16,6 @@
       ],
       "team": [
         {
-          "login": "criccomini",
-          "url": "https://github.com/criccomini",
-          "createdAt": "2024-12-18T22:44:14.000+00:00",
-          "reaction": "👍"
-        },
-        {
           "login": "ebullient",
           "url": "https://github.com/ebullient",
           "createdAt": "2025-01-08T20:51:56.000+00:00",
@@ -35,8 +29,8 @@
         }
       ],
       "otherVotes": [],
-      "teamTotal": 3,
-      "total": 3
+      "teamTotal": 2,
+      "total": 2
     },
     "ok": {
       "reactions": [
@@ -47,6 +41,12 @@
           "login": "cowtowncoder",
           "url": "https://github.com/cowtowncoder",
           "createdAt": "2024-12-20T00:11:31.000+00:00",
+          "reaction": "👀"
+        },
+        {
+          "login": "criccomini",
+          "url": "https://github.com/criccomini",
+          "createdAt": "2025-01-12T18:03:45.000+00:00",
           "reaction": "👀"
         },
         {
@@ -63,8 +63,8 @@
         }
       ],
       "otherVotes": [],
-      "teamTotal": 3,
-      "total": 3
+      "teamTotal": 4,
+      "total": 4
     }
   },
   "duplicates": [
@@ -122,7 +122,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-12-17T02:09:11Z",
-  "updated": "2025-01-11T02:03:40Z",
+  "updated": "2025-01-12T18:03:48Z",
   "url": "/votes/commonhaus/foundation/219.html",
   "tags": [
     "vote/open",
