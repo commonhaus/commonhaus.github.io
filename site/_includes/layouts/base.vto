@@ -5,9 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>{{ page.data.title }}</title>
+<link rel="stylesheet" href="/assets/fonts.css" data-hash />
 <link rel="stylesheet" href="/assets/site.css" data-hash />
-<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
-<link rel="preconnect" href="https://fonts.googleapis.com/">
 {{- for x of page.data.preload }}
 {{ x }}
 {{ /for -}}
@@ -20,9 +19,9 @@
     "description": "{{- page.data.description -}}"
 }
 </script>
-<link rel="icon" href="/favicon.ico" sizes="32x32">
-<link rel="icon" href="/images/CF_icon_default.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="/favicon.ico" sizes="32x32" data-hash>
+<link rel="icon" href="/images/CF_icon_default.svg" type="image/svg+xml" data-hash>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" data-hash>
 <link rel="manifest" href="/site.webmanifest">
 <meta http-equiv="Content-Security-Policy"
   content="default-src 'self';
@@ -47,8 +46,7 @@
   connect-src 'self' https://haus-keeper.commonhaus.org https://plausible.commonhaus.org http://localhost:8082 ;
   base-uri 'none';
   object-src 'none';
-  form-action 'none';
-  font-src 'self' https://fonts.gstatic.com;" />
+  form-action 'none';" />
 <script type="text/javascript" src="/assets/theme.js" inline></script>
 <script type="text/javascript" src="/assets/scroll-toggle.js" inline></script>
 {{- for x of page.data.scripts }}
