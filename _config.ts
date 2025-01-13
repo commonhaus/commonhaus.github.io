@@ -4,6 +4,7 @@ import { Page } from "lume/core/file.ts";
 import checkUrls from "lume/plugins/check_urls.ts";
 import date from "lume/plugins/date.ts";
 import feed from "lume/plugins/feed.ts";
+import googleFonts from "lume/plugins/google_fonts.ts";
 import inline from "lume/plugins/inline.ts";
 import metas from "lume/plugins/metas.ts";
 import minifyHTML from "lume/plugins/minify_html.ts";
@@ -71,6 +72,12 @@ site
     .use(metas())
     .use(toc())
     .use(nav())
+    .use(googleFonts({
+        folder: "/assets/fonts",
+        cssFile: "/assets/fonts.css",
+        fonts:
+            "https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap",
+    }))
     .use(resolveUrls())
     .use(foundationData()) // Foundation submodule pages + URL munging
     .use(authorData())     // Author data for activities
