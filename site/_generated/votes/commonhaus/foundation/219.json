@@ -1,13 +1,13 @@
 {
   "title": "📝 Fiscal Sponsorship Agreements [due Jan 17]",
   "voteType": "marthas",
-  "hasQuorum": false,
-  "isDone": false,
+  "hasQuorum": true,
+  "isDone": true,
   "group": "commonhaus/cf-egc",
   "groupSize": 15,
-  "groupVotes": 8,
-  "countedVotes": 8,
-  "droppedVotes": 2,
+  "groupVotes": 13,
+  "countedVotes": 13,
+  "droppedVotes": 5,
   "votingThreshold": "twothirds",
   "categories": {
     "approve": {
@@ -16,9 +16,27 @@
       ],
       "team": [
         {
+          "login": "Naros",
+          "url": "https://github.com/Naros",
+          "createdAt": "2025-01-16T12:23:01.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "aalmiray",
+          "url": "https://github.com/aalmiray",
+          "createdAt": "2025-01-17T08:48:37.000+00:00",
+          "reaction": "👍"
+        },
+        {
           "login": "criccomini",
           "url": "https://github.com/criccomini",
           "createdAt": "2025-01-12T18:11:42.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "dandreadis",
+          "url": "https://github.com/dandreadis",
+          "createdAt": "2025-01-26T22:01:35.000+00:00",
           "reaction": "👍"
         },
         {
@@ -28,27 +46,33 @@
           "reaction": "👍"
         },
         {
-          "login": "kenfinnigan",
-          "url": "https://github.com/kenfinnigan",
-          "createdAt": "2025-01-11T02:03:38.000+00:00",
+          "login": "evanchooly",
+          "url": "https://github.com/evanchooly",
+          "createdAt": "2025-01-27T16:04:41.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "marc0der",
+          "url": "https://github.com/marc0der",
+          "createdAt": "2025-01-17T16:48:12.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "tristantarrant",
+          "url": "https://github.com/tristantarrant",
+          "createdAt": "2025-01-25T13:03:07.000+00:00",
           "reaction": "👍"
         }
       ],
       "otherVotes": [],
-      "teamTotal": 3,
-      "total": 3
+      "teamTotal": 8,
+      "total": 8
     },
     "ok": {
       "reactions": [
         "👀"
       ],
       "team": [
-        {
-          "login": "aalmiray",
-          "url": "https://github.com/aalmiray",
-          "createdAt": "2025-01-12T19:55:59.000+00:00",
-          "reaction": "👀"
-        },
         {
           "login": "cealsair",
           "url": "https://github.com/cealsair",
@@ -62,15 +86,21 @@
           "reaction": "👀"
         },
         {
+          "login": "gavinking",
+          "url": "https://github.com/gavinking",
+          "createdAt": "2025-01-25T14:24:19.000+00:00",
+          "reaction": "👀"
+        },
+        {
           "login": "henri-tremblay",
           "url": "https://github.com/henri-tremblay",
           "createdAt": "2024-12-17T02:09:34.000+00:00",
           "reaction": "👀"
         },
         {
-          "login": "marc0der",
-          "url": "https://github.com/marc0der",
-          "createdAt": "2024-12-24T16:10:48.000+00:00",
+          "login": "kenfinnigan",
+          "url": "https://github.com/kenfinnigan",
+          "createdAt": "2025-01-15T20:08:11.000+00:00",
           "reaction": "👀"
         }
       ],
@@ -80,6 +110,18 @@
     }
   },
   "duplicates": [
+    {
+      "login": "Naros",
+      "url": "https://github.com/Naros",
+      "createdAt": "2025-01-16T12:22:15.000+00:00",
+      "reaction": "👍"
+    },
+    {
+      "login": "aalmiray",
+      "url": "https://github.com/aalmiray",
+      "createdAt": "2025-01-12T19:55:59.000+00:00",
+      "reaction": "👀"
+    },
     {
       "login": "criccomini",
       "url": "https://github.com/criccomini",
@@ -91,6 +133,12 @@
       "url": "https://github.com/kenfinnigan",
       "createdAt": "2025-01-11T02:03:27.000+00:00",
       "reaction": "👍"
+    },
+    {
+      "login": "marc0der",
+      "url": "https://github.com/marc0der",
+      "createdAt": "2024-12-24T16:10:48.000+00:00",
+      "reaction": "👀"
     }
   ],
   "otherVotes": [],
@@ -100,31 +148,19 @@
       "url": "https://github.com/velo"
     },
     {
-      "login": "dandreadis",
-      "url": "https://github.com/dandreadis"
-    },
-    {
-      "login": "evanchooly",
-      "url": "https://github.com/evanchooly"
-    },
-    {
-      "login": "tristantarrant",
-      "url": "https://github.com/tristantarrant"
-    },
-    {
       "login": "maxandersen",
       "url": "https://github.com/maxandersen"
-    },
-    {
-      "login": "gavinking",
-      "url": "https://github.com/gavinking"
-    },
-    {
-      "login": "Naros",
-      "url": "https://github.com/Naros"
     }
   ],
-  "manualCloseComments": null,
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2025-01-27T18:23:21.000+00:00",
+    "body": "Merging this with the understanding that there will be an additional PR with the resolution of https://github.com/commonhaus/foundation/discussions/225 ",
+    "url": "https://github.com/commonhaus/foundation/pull/219#issuecomment-2616574583"
+  },
   "commentId": "IC_kwDOKRPTI86X1XJj",
   "github": "https://github.com/commonhaus/foundation/pull/219",
   "itemId": "PR_kwDOKRPTI86FbjaX",
@@ -132,12 +168,15 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-12-17T02:09:11Z",
-  "updated": "2025-01-13T13:34:55Z",
+  "updated": "2025-01-27T18:23:24Z",
   "url": "/votes/commonhaus/foundation/219.html",
   "tags": [
-    "vote/open",
     "notice",
-    "vote"
+    "vote/done",
+    "vote/quorum",
+    "vote",
+    "closed"
   ],
-  "closed": false
+  "closed": true,
+  "closedAt": "2025-01-27T18:24:09Z"
 }

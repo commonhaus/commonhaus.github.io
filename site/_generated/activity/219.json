@@ -5,13 +5,15 @@
   "author": "ebullient",
   "number": 219,
   "date": "2024-12-17T01:54:55Z",
-  "updated": "2025-01-13T13:47:48Z",
+  "updated": "2025-01-27T18:24:11Z",
   "url": "/activity/219.html",
   "type": "pullRequest",
   "tags": [
     "post",
-    "vote/open",
-    "notice"
+    "notice",
+    "vote/done",
+    "vote/quorum"
   ],
-  "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/219.svg)](https://github.com/commonhaus/foundation/pull/219#issuecomment-2547348067 \"IC_kwDOKRPTI86X1XJj\")\r\n\r\nThis PR defines the agreements and terms for officially transitioning projects and assets to the Foundation. \r\n\r\n1. The **Fiscal Sponsorship Agreement** is the formal legal contract between the Commonhaus Foundation (“Sponsor”) and a Project’s representatives (“Signatories”). It sets out the legal relationship, roles, and responsibilities for Projects under the Foundation’s fiscal sponsorship.\r\n\r\n2. The **Terms and Conditions for Fiscal Sponsorship** provides detailed operational guidelines for sponsored Projects. These Terms clarify how Projects are supported, outline financial and administrative processes, and define responsibilities for both the Project and the Sponsor.\r\n\r\n3. The **Asset Transfer Agreement** governs the transfer of assets (such as funds, trademarks, or other property) from the current owner (the “Assignor”) to the Sponsor as part of the fiscal sponsorship arrangement.\r\n\r\nWhen we have approved these documents, each project will effectively be at the beginning of the On-boarding phase (as described in the Terms and Conditions).\r\n\r\nvoting group: @commonhaus/cf-egc\r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment)."
+  "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/219.svg)](https://github.com/commonhaus/foundation/pull/219#issuecomment-2547348067 \"IC_kwDOKRPTI86X1XJj\")\r\n\r\nThis PR defines the agreements and terms for officially transitioning projects and assets to the Foundation. \r\n\r\n1. The **Fiscal Sponsorship Agreement** is the formal legal contract between the Commonhaus Foundation (“Sponsor”) and a Project’s representatives (“Signatories”). It sets out the legal relationship, roles, and responsibilities for Projects under the Foundation’s fiscal sponsorship.\r\n\r\n2. The **Terms and Conditions for Fiscal Sponsorship** provides detailed operational guidelines for sponsored Projects. These Terms clarify how Projects are supported, outline financial and administrative processes, and define responsibilities for both the Project and the Sponsor.\r\n\r\n3. The **Asset Transfer Agreement** governs the transfer of assets (such as funds, trademarks, or other property) from the current owner (the “Assignor”) to the Sponsor as part of the fiscal sponsorship arrangement.\r\n\r\nWhen we have approved these documents, each project will effectively be at the beginning of the On-boarding phase (as described in the Terms and Conditions).\r\n\r\nvoting group: @commonhaus/cf-egc\r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment).",
+  "closedAt": "2025-01-27T18:24:09Z"
 }
