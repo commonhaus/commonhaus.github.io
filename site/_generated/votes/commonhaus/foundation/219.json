@@ -5,9 +5,9 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 15,
-  "groupVotes": 8,
-  "countedVotes": 8,
-  "droppedVotes": 2,
+  "groupVotes": 9,
+  "countedVotes": 9,
+  "droppedVotes": 3,
   "votingThreshold": "twothirds",
   "categories": {
     "approve": {
@@ -15,6 +15,12 @@
         "👍"
       ],
       "team": [
+        {
+          "login": "Naros",
+          "url": "https://github.com/Naros",
+          "createdAt": "2025-01-16T12:23:01.000+00:00",
+          "reaction": "👍"
+        },
         {
           "login": "criccomini",
           "url": "https://github.com/criccomini",
@@ -29,8 +35,8 @@
         }
       ],
       "otherVotes": [],
-      "teamTotal": 2,
-      "total": 2
+      "teamTotal": 3,
+      "total": 3
     },
     "ok": {
       "reactions": [
@@ -81,6 +87,12 @@
   },
   "duplicates": [
     {
+      "login": "Naros",
+      "url": "https://github.com/Naros",
+      "createdAt": "2025-01-16T12:22:15.000+00:00",
+      "reaction": "👍"
+    },
+    {
       "login": "criccomini",
       "url": "https://github.com/criccomini",
       "createdAt": "2025-01-12T18:11:21.000+00:00",
@@ -118,10 +130,6 @@
     {
       "login": "gavinking",
       "url": "https://github.com/gavinking"
-    },
-    {
-      "login": "Naros",
-      "url": "https://github.com/Naros"
     }
   ],
   "manualCloseComments": null,
@@ -132,7 +140,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-12-17T02:09:11Z",
-  "updated": "2025-01-15T20:08:14Z",
+  "updated": "2025-01-16T12:23:04Z",
   "url": "/votes/commonhaus/foundation/219.html",
   "tags": [
     "vote/open",
