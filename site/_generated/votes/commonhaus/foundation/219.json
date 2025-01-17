@@ -7,7 +7,7 @@
   "groupSize": 15,
   "groupVotes": 9,
   "countedVotes": 9,
-  "droppedVotes": 4,
+  "droppedVotes": 5,
   "votingThreshold": "twothirds",
   "categories": {
     "approve": {
@@ -38,11 +38,17 @@
           "url": "https://github.com/ebullient",
           "createdAt": "2025-01-08T20:51:56.000+00:00",
           "reaction": "👍"
+        },
+        {
+          "login": "marc0der",
+          "url": "https://github.com/marc0der",
+          "createdAt": "2025-01-17T16:48:12.000+00:00",
+          "reaction": "👍"
         }
       ],
       "otherVotes": [],
-      "teamTotal": 4,
-      "total": 4
+      "teamTotal": 5,
+      "total": 5
     },
     "ok": {
       "reactions": [
@@ -72,17 +78,11 @@
           "url": "https://github.com/kenfinnigan",
           "createdAt": "2025-01-15T20:08:11.000+00:00",
           "reaction": "👀"
-        },
-        {
-          "login": "marc0der",
-          "url": "https://github.com/marc0der",
-          "createdAt": "2024-12-24T16:10:48.000+00:00",
-          "reaction": "👀"
         }
       ],
       "otherVotes": [],
-      "teamTotal": 5,
-      "total": 5
+      "teamTotal": 4,
+      "total": 4
     }
   },
   "duplicates": [
@@ -109,6 +109,12 @@
       "url": "https://github.com/kenfinnigan",
       "createdAt": "2025-01-11T02:03:27.000+00:00",
       "reaction": "👍"
+    },
+    {
+      "login": "marc0der",
+      "url": "https://github.com/marc0der",
+      "createdAt": "2024-12-24T16:10:48.000+00:00",
+      "reaction": "👀"
     }
   ],
   "otherVotes": [],
@@ -146,7 +152,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-12-17T02:09:11Z",
-  "updated": "2025-01-17T09:28:15Z",
+  "updated": "2025-01-17T18:28:15Z",
   "url": "/votes/commonhaus/foundation/219.html",
   "tags": [
     "vote/open",
