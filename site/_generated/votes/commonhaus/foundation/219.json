@@ -7,7 +7,7 @@
   "groupSize": 15,
   "groupVotes": 9,
   "countedVotes": 9,
-  "droppedVotes": 3,
+  "droppedVotes": 4,
   "votingThreshold": "twothirds",
   "categories": {
     "approve": {
@@ -19,6 +19,12 @@
           "login": "Naros",
           "url": "https://github.com/Naros",
           "createdAt": "2025-01-16T12:23:01.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "aalmiray",
+          "url": "https://github.com/aalmiray",
+          "createdAt": "2025-01-17T08:48:37.000+00:00",
           "reaction": "👍"
         },
         {
@@ -35,20 +41,14 @@
         }
       ],
       "otherVotes": [],
-      "teamTotal": 3,
-      "total": 3
+      "teamTotal": 4,
+      "total": 4
     },
     "ok": {
       "reactions": [
         "👀"
       ],
       "team": [
-        {
-          "login": "aalmiray",
-          "url": "https://github.com/aalmiray",
-          "createdAt": "2025-01-12T19:55:59.000+00:00",
-          "reaction": "👀"
-        },
         {
           "login": "cealsair",
           "url": "https://github.com/cealsair",
@@ -81,8 +81,8 @@
         }
       ],
       "otherVotes": [],
-      "teamTotal": 6,
-      "total": 6
+      "teamTotal": 5,
+      "total": 5
     }
   },
   "duplicates": [
@@ -91,6 +91,12 @@
       "url": "https://github.com/Naros",
       "createdAt": "2025-01-16T12:22:15.000+00:00",
       "reaction": "👍"
+    },
+    {
+      "login": "aalmiray",
+      "url": "https://github.com/aalmiray",
+      "createdAt": "2025-01-12T19:55:59.000+00:00",
+      "reaction": "👀"
     },
     {
       "login": "criccomini",
@@ -140,7 +146,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-12-17T02:09:11Z",
-  "updated": "2025-01-16T12:23:04Z",
+  "updated": "2025-01-17T09:28:15Z",
   "url": "/votes/commonhaus/foundation/219.html",
   "tags": [
     "vote/open",
