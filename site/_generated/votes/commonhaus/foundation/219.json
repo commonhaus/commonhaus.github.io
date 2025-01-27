@@ -46,6 +46,12 @@
           "reaction": "👍"
         },
         {
+          "login": "evanchooly",
+          "url": "https://github.com/evanchooly",
+          "createdAt": "2025-01-27T16:04:41.000+00:00",
+          "reaction": "👍"
+        },
+        {
           "login": "marc0der",
           "url": "https://github.com/marc0der",
           "createdAt": "2025-01-17T16:48:12.000+00:00",
@@ -59,8 +65,8 @@
         }
       ],
       "otherVotes": [],
-      "teamTotal": 7,
-      "total": 7
+      "teamTotal": 8,
+      "total": 8
     },
     "ok": {
       "reactions": [
@@ -77,12 +83,6 @@
           "login": "cowtowncoder",
           "url": "https://github.com/cowtowncoder",
           "createdAt": "2024-12-20T00:11:31.000+00:00",
-          "reaction": "👀"
-        },
-        {
-          "login": "evanchooly",
-          "url": "https://github.com/evanchooly",
-          "createdAt": "2025-01-27T15:38:52.000+00:00",
           "reaction": "👀"
         },
         {
@@ -105,8 +105,8 @@
         }
       ],
       "otherVotes": [],
-      "teamTotal": 6,
-      "total": 6
+      "teamTotal": 5,
+      "total": 5
     }
   },
   "duplicates": [
@@ -160,7 +160,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-12-17T02:09:11Z",
-  "updated": "2025-01-27T15:39:02Z",
+  "updated": "2025-01-27T16:04:43Z",
   "url": "/votes/commonhaus/foundation/219.html",
   "tags": [
     "vote/open",
