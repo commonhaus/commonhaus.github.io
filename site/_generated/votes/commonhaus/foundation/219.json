@@ -5,8 +5,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 15,
-  "groupVotes": 11,
-  "countedVotes": 11,
+  "groupVotes": 12,
+  "countedVotes": 12,
   "droppedVotes": 5,
   "votingThreshold": "twothirds",
   "categories": {
@@ -34,6 +34,12 @@
           "reaction": "👍"
         },
         {
+          "login": "dandreadis",
+          "url": "https://github.com/dandreadis",
+          "createdAt": "2025-01-26T22:01:35.000+00:00",
+          "reaction": "👍"
+        },
+        {
           "login": "ebullient",
           "url": "https://github.com/ebullient",
           "createdAt": "2025-01-08T20:51:56.000+00:00",
@@ -53,8 +59,8 @@
         }
       ],
       "otherVotes": [],
-      "teamTotal": 6,
-      "total": 6
+      "teamTotal": 7,
+      "total": 7
     },
     "ok": {
       "reactions": [
@@ -136,10 +142,6 @@
       "url": "https://github.com/velo"
     },
     {
-      "login": "dandreadis",
-      "url": "https://github.com/dandreadis"
-    },
-    {
       "login": "evanchooly",
       "url": "https://github.com/evanchooly"
     },
@@ -156,7 +158,7 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-12-17T02:09:11Z",
-  "updated": "2025-01-25T14:24:22Z",
+  "updated": "2025-01-27T00:28:02Z",
   "url": "/votes/commonhaus/foundation/219.html",
   "tags": [
     "vote/open",
