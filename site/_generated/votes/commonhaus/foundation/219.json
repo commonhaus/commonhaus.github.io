@@ -2,7 +2,7 @@
   "title": "📝 Fiscal Sponsorship Agreements [due Jan 17]",
   "voteType": "marthas",
   "hasQuorum": true,
-  "isDone": false,
+  "isDone": true,
   "group": "commonhaus/cf-egc",
   "groupSize": 15,
   "groupVotes": 13,
@@ -152,7 +152,15 @@
       "url": "https://github.com/maxandersen"
     }
   ],
-  "manualCloseComments": null,
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2025-01-27T18:23:21.000+00:00",
+    "body": "Merging this with the understanding that there will be an additional PR with the resolution of https://github.com/commonhaus/foundation/discussions/225 ",
+    "url": "https://github.com/commonhaus/foundation/pull/219#issuecomment-2616574583"
+  },
   "commentId": "IC_kwDOKRPTI86X1XJj",
   "github": "https://github.com/commonhaus/foundation/pull/219",
   "itemId": "PR_kwDOKRPTI86FbjaX",
@@ -160,13 +168,15 @@
   "repoName": "commonhaus/foundation",
   "type": "vote",
   "date": "2024-12-17T02:09:11Z",
-  "updated": "2025-01-27T16:04:43Z",
+  "updated": "2025-01-27T18:23:24Z",
   "url": "/votes/commonhaus/foundation/219.html",
   "tags": [
-    "vote/open",
     "notice",
+    "vote/done",
     "vote/quorum",
-    "vote"
+    "vote",
+    "closed"
   ],
-  "closed": false
+  "closed": true,
+  "closedAt": "2025-01-27T18:24:09Z"
 }
