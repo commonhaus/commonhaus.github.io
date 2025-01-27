@@ -391,7 +391,7 @@
     "genUrl": "/agreements/membership/members.yaml"
   },
   "agreements/project-contribution/README.md": {
-    "date": "2024-12-16T16:37:14.000Z",
+    "date": "2025-01-27T18:24:09.000Z",
     "srcPath": "agreements/project-contribution/README.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/project-contribution/README.md",
@@ -407,8 +407,42 @@
     ],
     "genUrl": "/agreements/project-contribution/"
   },
+  "agreements/project-contribution/asset-transfer-agreement.md": {
+    "date": "2025-01-27T18:24:09.000Z",
+    "srcPath": "agreements/project-contribution/asset-transfer-agreement.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/project-contribution/asset-transfer-agreement.md",
+    "type": "submodule",
+    "layout": "layouts/policies.vto",
+    "cssclasses": [
+      "bylaws",
+      "has-aside"
+    ],
+    "tags": [
+      "policies",
+      "legal"
+    ],
+    "genUrl": "/agreements/project-contribution/asset-transfer-agreement.html"
+  },
+  "agreements/project-contribution/fiscal-sponsorship-agreement.md": {
+    "date": "2025-01-27T18:24:09.000Z",
+    "srcPath": "agreements/project-contribution/fiscal-sponsorship-agreement.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/project-contribution/fiscal-sponsorship-agreement.md",
+    "type": "submodule",
+    "layout": "layouts/policies.vto",
+    "cssclasses": [
+      "bylaws",
+      "has-aside"
+    ],
+    "tags": [
+      "policies",
+      "legal"
+    ],
+    "genUrl": "/agreements/project-contribution/fiscal-sponsorship-agreement.html"
+  },
   "agreements/project-contribution/terms-and-conditions.md": {
-    "date": "2024-12-18T16:24:53.000Z",
+    "date": "2025-01-27T18:24:09.000Z",
     "srcPath": "agreements/project-contribution/terms-and-conditions.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/project-contribution/terms-and-conditions.md",
