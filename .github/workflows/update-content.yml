@@ -123,6 +123,8 @@ jobs:
           fi
 
   process_votes:
+    concurrency:
+      group: "push-content"
     permissions:
       contents: write
     uses: commonhaus/vote-record-actions/.github/workflows/receive-votes.yml@main
