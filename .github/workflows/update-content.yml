@@ -1,6 +1,9 @@
 name: update-activity-content
 
 on:
+  schedule:
+    - cron: '47 5,21 * * *'
+
   push:
     branches:
       - 'main'
