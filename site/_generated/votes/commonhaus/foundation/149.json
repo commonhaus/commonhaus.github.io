@@ -108,17 +108,15 @@
   "title": "Undraft the bylaws: CF Council [due: 7 May]",
   "number": 149,
   "repoName": "commonhaus/foundation",
-  "type": "vote",
   "date": "2024-05-01T00:05:22Z",
   "updated": "2024-05-06T20:02:29Z",
-  "url": "/votes/commonhaus/foundation/149.html",
   "tags": [
     "notice",
     "vote/done",
     "vote/quorum",
-    "vote",
     "closed"
   ],
   "closed": true,
-  "closedAt": "2024-05-06T20:22:50Z"
+  "closedAt": "2024-05-06T20:22:50Z",
+  "progress": "https://www.commonhaus.org/votes/vote-closed.svg"
 }

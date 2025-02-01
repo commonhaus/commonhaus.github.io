@@ -109,16 +109,14 @@
   "title": "🛂 Member agreement language",
   "number": 168,
   "repoName": "commonhaus/foundation",
-  "type": "vote",
   "date": "2024-05-31T16:10:47Z",
   "updated": "2024-06-07T14:15:35Z",
-  "url": "/votes/commonhaus/foundation/168.html",
   "tags": [
     "vote/done",
     "vote/quorum",
-    "vote",
     "closed"
   ],
   "closed": true,
-  "closedAt": "2024-06-07T12:22:16Z"
+  "closedAt": "2024-06-07T12:22:16Z",
+  "progress": "https://www.commonhaus.org/votes/vote-closed.svg"
 }

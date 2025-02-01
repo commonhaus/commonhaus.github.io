@@ -134,17 +134,15 @@
   "itemId": "PR_kwDOKRPTI858P6LT",
   "number": 199,
   "repoName": "commonhaus/foundation",
-  "type": "vote",
   "date": "2024-09-25T04:18:50Z",
   "updated": "2024-10-25T21:48:47Z",
-  "url": "/votes/commonhaus/foundation/199.html",
   "tags": [
     "notice",
     "vote/done",
     "vote/quorum",
-    "vote",
     "closed"
   ],
   "closed": true,
-  "closedAt": "2024-10-25T19:55:08Z"
+  "closedAt": "2024-10-25T19:55:08Z",
+  "progress": "https://www.commonhaus.org/votes/vote-closed.svg"
 }

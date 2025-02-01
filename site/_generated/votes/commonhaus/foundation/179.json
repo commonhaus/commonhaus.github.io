@@ -103,16 +103,14 @@
   "title": "Undraft the bylaws: Trademark Policy [due 17 Aug]",
   "number": 179,
   "repoName": "commonhaus/foundation",
-  "type": "vote",
   "date": "2024-07-20T15:22:45Z",
   "updated": "2024-08-15T12:27:50Z",
-  "url": "/votes/commonhaus/foundation/179.html",
   "tags": [
     "notice",
     "vote/done",
-    "vote",
     "closed"
   ],
   "closed": true,
-  "closedAt": "2024-08-15T12:27:46Z"
+  "closedAt": "2024-08-15T12:27:46Z",
+  "progress": "https://www.commonhaus.org/votes/vote-closed.svg"
 }

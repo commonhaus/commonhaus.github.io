@@ -97,17 +97,15 @@
   "title": "Undraft the bylaws: decision making [due May 17]",
   "number": 158,
   "repoName": "commonhaus/foundation",
-  "type": "vote",
   "date": "2024-05-11T16:03:39Z",
   "updated": "2024-05-17T12:34:28Z",
-  "url": "/votes/commonhaus/foundation/158.html",
   "tags": [
     "notice",
     "vote/done",
     "vote/quorum",
-    "vote",
     "closed"
   ],
   "closed": true,
-  "closedAt": "2024-05-17T13:38:55Z"
+  "closedAt": "2024-05-17T13:38:55Z",
+  "progress": "https://www.commonhaus.org/votes/vote-closed.svg"
 }

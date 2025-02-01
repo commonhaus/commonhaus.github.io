@@ -139,17 +139,15 @@
   "title": "Undraft the bylaws: Conflict of Interest Policy [due 2 Aug]",
   "number": 177,
   "repoName": "commonhaus/foundation",
-  "type": "vote",
   "date": "2024-07-19T22:54:01Z",
   "updated": "2024-08-26T12:08:03Z",
-  "url": "/votes/commonhaus/foundation/177.html",
   "tags": [
     "notice",
     "vote/done",
     "vote/quorum",
-    "vote",
     "closed"
   ],
   "closed": true,
-  "closedAt": "2024-08-26T12:07:56Z"
+  "closedAt": "2024-08-26T12:07:56Z",
+  "progress": "https://www.commonhaus.org/votes/vote-closed.svg"
 }
