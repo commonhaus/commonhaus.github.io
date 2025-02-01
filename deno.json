@@ -10,8 +10,6 @@
     "about": "deno run --allow-run=gh --allow-read=./tasks/graphql,./site/_generated --allow-write=./site/_generated ./tasks/about.ts",
     "activity": "deno run --allow-run=gh --allow-read=./tasks/graphql,./site/activity,./site/_generated --allow-write=./site/_generated ./tasks/activity.ts",
     "lastmod": "deno run --allow-run=git,gh --allow-read=. --allow-write=./site/_generated ./tasks/lastmod.ts",
-    "votes": "deno run --allow-run=gh --allow-read=./tasks/graphql,./site/_generated --allow-write=./site/_generated ./tasks/votes.ts",
-    "repair": "deno run --allow-run=gh --allow-read=./tasks/graphql,./site/_generated --allow-write=./site/_generated ./tasks/voteRepair.ts"
   },
   "compilerOptions": {
     "types": [
