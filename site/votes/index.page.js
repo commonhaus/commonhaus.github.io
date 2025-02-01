@@ -160,6 +160,10 @@ function createIndex(pages, dir, uri) {
             createIndex(pages, path.join(dir, file.name), path.join(uri, file.name));
         } else if (file.name.endsWith('.json')) {
             const data = JSON.parse(Deno.readTextFileSync(path.join(dir, file.name)));
+            const tags = new Set(data.tags || []);
+            tags.add("vote");
+            data.tags = [ ...tags ];
+            data.type = "vote";
             data.content = JSON.stringify(data, null, 2);
             data.date = new Date(data.date);
             data.itemTitle = data.title;
