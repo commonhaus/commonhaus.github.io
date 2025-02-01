@@ -27,13 +27,16 @@ env:
   REPO: commonhaus/commonhaus.github.io
 
 jobs:
-  build:
+  build_refresh:
     runs-on: ubuntu-latest
     permissions:
       contents: write
       actions: write
     concurrency:
       group: "push-content"
+    outputs:
+      updated: steps.git-push.outputs.updated || steps.submodule.outputs.updated || steps.about.outputs.updated || steps.discussion.outputs.updated
+
     steps:
       - uses: actions/checkout@v4
         with:
@@ -119,8 +122,25 @@ jobs:
             echo "updated=true" >> $GITHUB_OUTPUT
           fi
 
+  process_votes:
+    permissions:
+      contents: write
+    uses: commonhaus/vote-record-actions/.github/workflows/receive-votes.yml@main
+    with:
+      repositories: "commonhaus/foundation"
+      target_dir: "site/_generated/votes"
+      branch: "main"
+    secrets: inherit
+
+  update:
+    needs: [build_refresh, process_votes]
+    if: needs.process_votes.outputs.votes_updated || needs.build_refresh.outputs.updated
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: write
+    steps:
       - name: Push GH Pages
-        if: ${{ steps.git-push.outputs.updated == 'true' || steps.submodule.outputs.updated == 'true' || steps.about.outputs.updated == 'true' || steps.discussion.outputs.updated == 'true' }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
