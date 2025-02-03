@@ -54,17 +54,15 @@
   "title": "CF Officers: social & community manager",
   "number": 193,
   "repoName": "commonhaus/foundation",
-  "type": "vote",
   "date": "2024-08-27T19:55:54Z",
   "updated": "2024-08-27T23:27:16Z",
-  "url": "/votes/commonhaus/foundation/193.html",
   "tags": [
     "notice",
     "vote/done",
     "vote/quorum",
-    "vote",
     "closed"
   ],
   "closed": true,
-  "closedAt": "2024-08-27T23:27:11Z"
+  "closedAt": "2024-08-27T23:27:11Z",
+  "progress": "https://www.commonhaus.org/votes/vote-closed.svg"
 }

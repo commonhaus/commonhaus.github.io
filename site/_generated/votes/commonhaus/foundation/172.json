@@ -124,17 +124,15 @@
   "title": "Undraft the bylaws: CoC [due June 28]",
   "number": 172,
   "repoName": "commonhaus/foundation",
-  "type": "vote",
   "date": "2024-06-21T17:31:48Z",
   "updated": "2024-07-19T13:59:02Z",
-  "url": "/votes/commonhaus/foundation/172.html",
   "tags": [
     "notice",
     "vote/done",
     "vote/quorum",
-    "vote",
     "closed"
   ],
   "closed": true,
-  "closedAt": "2024-07-09T12:44:54Z"
+  "closedAt": "2024-07-09T12:44:54Z",
+  "progress": "https://www.commonhaus.org/votes/vote-closed.svg"
 }

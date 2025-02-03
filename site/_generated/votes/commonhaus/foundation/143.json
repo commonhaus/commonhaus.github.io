@@ -71,17 +71,15 @@
   "title": "☑️ Undraft the bylaws: preface, purpose, amendments [due: 26 Apr]",
   "number": 143,
   "repoName": "commonhaus/foundation",
-  "type": "vote",
   "date": "2024-04-24T16:58:09Z",
   "updated": "2024-04-26T14:23:18Z",
-  "url": "/votes/commonhaus/foundation/143.html",
   "tags": [
     "notice",
     "vote/done",
     "vote/quorum",
-    "vote",
     "closed"
   ],
   "closed": true,
-  "closedAt": "2024-04-26T14:23:57Z"
+  "closedAt": "2024-04-26T14:23:57Z",
+  "progress": "https://www.commonhaus.org/votes/vote-closed.svg"
 }

@@ -144,16 +144,14 @@
   "title": "Bylaws: revise indemnification language",
   "number": 187,
   "repoName": "commonhaus/foundation",
-  "type": "vote",
   "date": "2024-08-07T15:58:13Z",
   "updated": "2024-10-02T22:27:48Z",
-  "url": "/votes/commonhaus/foundation/187.html",
   "tags": [
     "notice",
     "vote/done",
-    "vote",
     "closed"
   ],
   "closed": true,
-  "closedAt": "2024-10-02T01:13:05Z"
+  "closedAt": "2024-10-02T01:13:05Z",
+  "progress": "https://www.commonhaus.org/votes/vote-closed.svg"
 }

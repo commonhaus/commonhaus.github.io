@@ -120,16 +120,14 @@
   "title": "📄 Antitrust policy [due 23 Aug]",
   "number": 188,
   "repoName": "commonhaus/foundation",
-  "type": "vote",
   "date": "2024-08-08T00:41:57Z",
   "updated": "2024-09-10T01:29:26Z",
-  "url": "/votes/commonhaus/foundation/188.html",
   "tags": [
     "notice",
     "vote/done",
-    "vote",
     "closed"
   ],
   "closed": true,
-  "closedAt": "2024-09-10T01:29:22Z"
+  "closedAt": "2024-09-10T01:29:22Z",
+  "progress": "https://www.commonhaus.org/votes/vote-closed.svg"
 }

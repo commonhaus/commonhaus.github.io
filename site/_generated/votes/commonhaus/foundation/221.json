@@ -130,15 +130,15 @@
   "itemId": "D_kwDOKRPTI84AdbXB",
   "number": 221,
   "repoName": "commonhaus/foundation",
-  "type": "vote",
   "date": "2025-01-08T16:00:40Z",
   "updated": "2025-01-08T16:03:58Z",
-  "url": "/votes/commonhaus/foundation/221.html",
   "tags": [
     "notice",
     "vote/done",
     "vote/quorum",
-    "vote"
+    "closed"
   ],
-  "closed": false
+  "closed": true,
+  "closedAt": "2025-01-08T20:59:13Z",
+  "progress": "https://www.commonhaus.org/votes/vote-closed.svg"
 }

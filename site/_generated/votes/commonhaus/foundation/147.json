@@ -90,16 +90,14 @@
   "title": "Update trademark list",
   "number": 147,
   "repoName": "commonhaus/foundation",
-  "type": "vote",
   "date": "2024-05-03T21:17:11Z",
-  "updated": "2024-05-08T18:13:06Z",
-  "url": "/votes/commonhaus/foundation/147.html",
+  "updated": "2024-05-20T18:38:29Z",
   "tags": [
     "notice",
     "vote/done",
-    "vote",
     "closed"
   ],
   "closed": true,
-  "closedAt": "2024-05-05T18:53:58Z"
+  "closedAt": "2024-05-05T18:53:58Z",
+  "progress": "https://www.commonhaus.org/votes/vote-closed.svg"
 }

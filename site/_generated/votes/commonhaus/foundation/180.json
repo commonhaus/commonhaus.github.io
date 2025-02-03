@@ -114,17 +114,15 @@
   "title": "📝 Undraft the bylaws: Advisory Board",
   "number": 180,
   "repoName": "commonhaus/foundation",
-  "type": "vote",
   "date": "2024-07-31T16:54:28Z",
   "updated": "2024-08-28T12:00:38Z",
-  "url": "/votes/commonhaus/foundation/180.html",
   "tags": [
     "notice",
     "vote/done",
     "vote/quorum",
-    "vote",
     "closed"
   ],
   "closed": true,
-  "closedAt": "2024-08-27T23:26:07Z"
+  "closedAt": "2024-08-27T23:26:07Z",
+  "progress": "https://www.commonhaus.org/votes/vote-closed.svg"
 }
