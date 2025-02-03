@@ -157,7 +157,7 @@ site.filter("pageLock", (page: Page) => {
     if (page.data.pinned) {
         result += `<span aria-label="pinned">${page.data.svg.pin}</span> `;
     }
-    if (page.data.closedAt) {
+    if (page.data.closedAt || page.data.closed) {
         result += `<span aria-label="closed">${page.data.svg.closed}</span> `;
     }
     if (page.data.lockReason) {
@@ -172,7 +172,8 @@ site.filter("postLock", (data: Record<string, unknown>) => {
     if (data.pinned) {
         result += `<span aria-label="pinned">${svg.pin}</span> `;
     }
-    if (data.closedAt) {
+    console.log(data.number, data.closed, data.closedAt);
+    if (data.closedAt || data.closed) {
         result += `<span aria-label="closed">${svg.closed}</span> `;
     }
     if (data.lockReason) {
