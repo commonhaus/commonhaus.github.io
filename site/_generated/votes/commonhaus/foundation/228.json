@@ -1,0 +1,160 @@
+{
+  "title": "📝 Terms and Conditions: clarify communication requirements [due Feb25]",
+  "voteType": "marthas",
+  "hasQuorum": true,
+  "isDone": false,
+  "group": "commonhaus/cf-egc",
+  "groupSize": 15,
+  "groupVotes": 10,
+  "countedVotes": 11,
+  "droppedVotes": 2,
+  "votingThreshold": "twothirds",
+  "categories": {
+    "approve": {
+      "reactions": [
+        "👍"
+      ],
+      "team": [
+        {
+          "login": "Naros",
+          "url": "https://github.com/Naros",
+          "createdAt": "2025-02-09T20:03:30.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "aalmiray",
+          "url": "https://github.com/aalmiray",
+          "createdAt": "2025-02-10T20:51:41.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "cealsair",
+          "url": "https://github.com/cealsair",
+          "createdAt": "2025-02-10T20:44:35.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "criccomini",
+          "url": "https://github.com/criccomini",
+          "createdAt": "2025-02-09T16:01:45.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "evanchooly",
+          "url": "https://github.com/evanchooly",
+          "createdAt": "2025-02-10T20:09:19.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "gavinking",
+          "url": "https://github.com/gavinking",
+          "createdAt": "2025-02-10T21:01:00.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "henri-tremblay",
+          "url": "https://github.com/henri-tremblay",
+          "createdAt": "2025-02-11T05:00:56.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "kenfinnigan",
+          "url": "https://github.com/kenfinnigan",
+          "createdAt": "2025-02-08T15:34:28.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "tristantarrant",
+          "url": "https://github.com/tristantarrant",
+          "createdAt": "2025-02-11T17:51:52.000+00:00",
+          "reaction": "👍"
+        }
+      ],
+      "otherVotes": [
+        {
+          "login": "yrodiere",
+          "url": "https://github.com/yrodiere",
+          "createdAt": "2025-02-10T12:34:39.000+00:00",
+          "reaction": "👍"
+        }
+      ],
+      "teamTotal": 9,
+      "total": 10
+    },
+    "ok": {
+      "reactions": [
+        "👀"
+      ],
+      "team": [
+        {
+          "login": "ebullient",
+          "url": "https://github.com/ebullient",
+          "createdAt": "2025-02-07T15:35:18.000+00:00",
+          "reaction": "👀"
+        }
+      ],
+      "otherVotes": [],
+      "teamTotal": 1,
+      "total": 1
+    }
+  },
+  "duplicates": [
+    {
+      "login": "cealsair",
+      "url": "https://github.com/cealsair",
+      "createdAt": "2025-02-10T20:44:14.000+00:00",
+      "reaction": "👍"
+    },
+    {
+      "login": "kenfinnigan",
+      "url": "https://github.com/kenfinnigan",
+      "createdAt": "2025-02-07T21:36:32.000+00:00",
+      "reaction": "👀"
+    }
+  ],
+  "otherVotes": [
+    {
+      "login": "yrodiere",
+      "url": "https://github.com/yrodiere",
+      "createdAt": "2025-02-10T12:34:39.000+00:00",
+      "reaction": "👍"
+    }
+  ],
+  "missingGroupActors": [
+    {
+      "login": "velo",
+      "url": "https://github.com/velo"
+    },
+    {
+      "login": "dandreadis",
+      "url": "https://github.com/dandreadis"
+    },
+    {
+      "login": "marc0der",
+      "url": "https://github.com/marc0der"
+    },
+    {
+      "login": "maxandersen",
+      "url": "https://github.com/maxandersen"
+    },
+    {
+      "login": "cowtowncoder",
+      "url": "https://github.com/cowtowncoder"
+    }
+  ],
+  "manualCloseComments": null,
+  "commentId": "IC_kwDOKRPTI86djP7j",
+  "github": "https://github.com/commonhaus/foundation/pull/228",
+  "itemId": "PR_kwDOKRPTI86KbdhA",
+  "number": 228,
+  "repoName": "commonhaus/foundation",
+  "date": "2025-02-07T15:34:52Z",
+  "updated": "2025-02-11T18:28:01Z",
+  "tags": [
+    "vote/open",
+    "notice",
+    "vote/quorum"
+  ],
+  "closed": false,
+  "progress": "https://www.commonhaus.org/votes/vote-quorum.svg"
+}
