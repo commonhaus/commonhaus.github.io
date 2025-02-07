@@ -1,0 +1,91 @@
+{
+  "title": "📝 Terms and Conditions: clarify communication requirements [due Feb25]",
+  "voteType": "marthas",
+  "hasQuorum": false,
+  "isDone": false,
+  "group": "commonhaus/cf-egc",
+  "groupSize": 15,
+  "groupVotes": 0,
+  "countedVotes": 0,
+  "droppedVotes": 0,
+  "votingThreshold": "twothirds",
+  "categories": {},
+  "duplicates": [],
+  "otherVotes": [],
+  "missingGroupActors": [
+    {
+      "login": "aalmiray",
+      "url": "https://github.com/aalmiray"
+    },
+    {
+      "login": "velo",
+      "url": "https://github.com/velo"
+    },
+    {
+      "login": "dandreadis",
+      "url": "https://github.com/dandreadis"
+    },
+    {
+      "login": "marc0der",
+      "url": "https://github.com/marc0der"
+    },
+    {
+      "login": "henri-tremblay",
+      "url": "https://github.com/henri-tremblay"
+    },
+    {
+      "login": "evanchooly",
+      "url": "https://github.com/evanchooly"
+    },
+    {
+      "login": "tristantarrant",
+      "url": "https://github.com/tristantarrant"
+    },
+    {
+      "login": "maxandersen",
+      "url": "https://github.com/maxandersen"
+    },
+    {
+      "login": "cealsair",
+      "url": "https://github.com/cealsair"
+    },
+    {
+      "login": "cowtowncoder",
+      "url": "https://github.com/cowtowncoder"
+    },
+    {
+      "login": "gavinking",
+      "url": "https://github.com/gavinking"
+    },
+    {
+      "login": "criccomini",
+      "url": "https://github.com/criccomini"
+    },
+    {
+      "login": "Naros",
+      "url": "https://github.com/Naros"
+    },
+    {
+      "login": "kenfinnigan",
+      "url": "https://github.com/kenfinnigan"
+    },
+    {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    }
+  ],
+  "manualCloseComments": null,
+  "commentId": "IC_kwDOKRPTI86djP7j",
+  "github": "https://github.com/commonhaus/foundation/pull/228",
+  "itemId": "PR_kwDOKRPTI86KbdhA",
+  "number": 228,
+  "repoName": "commonhaus/foundation",
+  "date": "2025-02-07T15:34:52Z",
+  "updated": "2025-02-07T15:34:52Z",
+  "tags": [
+    "vote/open",
+    "notice"
+  ],
+  "closed": false,
+  "progress": "https://www.commonhaus.org/votes/progress-0.svg"
+}
