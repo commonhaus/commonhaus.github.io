@@ -5,9 +5,9 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 15,
-  "groupVotes": 5,
-  "countedVotes": 6,
-  "droppedVotes": 1,
+  "groupVotes": 6,
+  "countedVotes": 7,
+  "droppedVotes": 2,
   "votingThreshold": "twothirds",
   "categories": {
     "approve": {
@@ -19,6 +19,12 @@
           "login": "Naros",
           "url": "https://github.com/Naros",
           "createdAt": "2025-02-09T20:03:30.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "cealsair",
+          "url": "https://github.com/cealsair",
+          "createdAt": "2025-02-10T20:44:35.000+00:00",
           "reaction": "👍"
         },
         {
@@ -48,8 +54,8 @@
           "reaction": "👍"
         }
       ],
-      "teamTotal": 4,
-      "total": 5
+      "teamTotal": 5,
+      "total": 6
     },
     "ok": {
       "reactions": [
@@ -69,6 +75,12 @@
     }
   },
   "duplicates": [
+    {
+      "login": "cealsair",
+      "url": "https://github.com/cealsair",
+      "createdAt": "2025-02-10T20:44:14.000+00:00",
+      "reaction": "👍"
+    },
     {
       "login": "kenfinnigan",
       "url": "https://github.com/kenfinnigan",
@@ -114,10 +126,6 @@
       "url": "https://github.com/maxandersen"
     },
     {
-      "login": "cealsair",
-      "url": "https://github.com/cealsair"
-    },
-    {
       "login": "cowtowncoder",
       "url": "https://github.com/cowtowncoder"
     },
@@ -133,11 +141,11 @@
   "number": 228,
   "repoName": "commonhaus/foundation",
   "date": "2025-02-07T15:34:52Z",
-  "updated": "2025-02-10T20:09:22Z",
+  "updated": "2025-02-10T20:44:37Z",
   "tags": [
     "vote/open",
     "notice"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-5.svg"
+  "progress": "https://www.commonhaus.org/votes/progress-6.svg"
 }
