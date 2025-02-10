@@ -5,8 +5,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 15,
-  "groupVotes": 6,
-  "countedVotes": 7,
+  "groupVotes": 8,
+  "countedVotes": 9,
   "droppedVotes": 2,
   "votingThreshold": "twothirds",
   "categories": {
@@ -19,6 +19,12 @@
           "login": "Naros",
           "url": "https://github.com/Naros",
           "createdAt": "2025-02-09T20:03:30.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "aalmiray",
+          "url": "https://github.com/aalmiray",
+          "createdAt": "2025-02-10T20:51:41.000+00:00",
           "reaction": "👍"
         },
         {
@@ -40,6 +46,12 @@
           "reaction": "👍"
         },
         {
+          "login": "gavinking",
+          "url": "https://github.com/gavinking",
+          "createdAt": "2025-02-10T21:01:00.000+00:00",
+          "reaction": "👍"
+        },
+        {
           "login": "kenfinnigan",
           "url": "https://github.com/kenfinnigan",
           "createdAt": "2025-02-08T15:34:28.000+00:00",
@@ -54,8 +66,8 @@
           "reaction": "👍"
         }
       ],
-      "teamTotal": 5,
-      "total": 6
+      "teamTotal": 7,
+      "total": 8
     },
     "ok": {
       "reactions": [
@@ -98,10 +110,6 @@
   ],
   "missingGroupActors": [
     {
-      "login": "aalmiray",
-      "url": "https://github.com/aalmiray"
-    },
-    {
       "login": "velo",
       "url": "https://github.com/velo"
     },
@@ -128,10 +136,6 @@
     {
       "login": "cowtowncoder",
       "url": "https://github.com/cowtowncoder"
-    },
-    {
-      "login": "gavinking",
-      "url": "https://github.com/gavinking"
     }
   ],
   "manualCloseComments": null,
@@ -141,11 +145,11 @@
   "number": 228,
   "repoName": "commonhaus/foundation",
   "date": "2025-02-07T15:34:52Z",
-  "updated": "2025-02-10T20:44:37Z",
+  "updated": "2025-02-10T21:01:03Z",
   "tags": [
     "vote/open",
     "notice"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-6.svg"
+  "progress": "https://www.commonhaus.org/votes/progress-8.svg"
 }
