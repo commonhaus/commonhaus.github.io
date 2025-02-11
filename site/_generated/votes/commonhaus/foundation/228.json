@@ -1,12 +1,12 @@
 {
   "title": "📝 Terms and Conditions: clarify communication requirements [due Feb25]",
   "voteType": "marthas",
-  "hasQuorum": false,
+  "hasQuorum": true,
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 15,
-  "groupVotes": 9,
-  "countedVotes": 10,
+  "groupVotes": 10,
+  "countedVotes": 11,
   "droppedVotes": 2,
   "votingThreshold": "twothirds",
   "categories": {
@@ -62,6 +62,12 @@
           "url": "https://github.com/kenfinnigan",
           "createdAt": "2025-02-08T15:34:28.000+00:00",
           "reaction": "👍"
+        },
+        {
+          "login": "tristantarrant",
+          "url": "https://github.com/tristantarrant",
+          "createdAt": "2025-02-11T17:51:52.000+00:00",
+          "reaction": "👍"
         }
       ],
       "otherVotes": [
@@ -72,8 +78,8 @@
           "reaction": "👍"
         }
       ],
-      "teamTotal": 8,
-      "total": 9
+      "teamTotal": 9,
+      "total": 10
     },
     "ok": {
       "reactions": [
@@ -128,10 +134,6 @@
       "url": "https://github.com/marc0der"
     },
     {
-      "login": "tristantarrant",
-      "url": "https://github.com/tristantarrant"
-    },
-    {
       "login": "maxandersen",
       "url": "https://github.com/maxandersen"
     },
@@ -147,11 +149,12 @@
   "number": 228,
   "repoName": "commonhaus/foundation",
   "date": "2025-02-07T15:34:52Z",
-  "updated": "2025-02-11T06:28:04Z",
+  "updated": "2025-02-11T18:28:01Z",
   "tags": [
     "vote/open",
-    "notice"
+    "notice",
+    "vote/quorum"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-9.svg"
+  "progress": "https://www.commonhaus.org/votes/vote-quorum.svg"
 }
