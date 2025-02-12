@@ -137,6 +137,16 @@ henri-tremblay:
     useful. 
   groups:
     - cf-egc
+karesti:
+  login: karesti
+  url: 'https://github.com/karesti'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/233499?u=cc2b31f6441f1ef89f21e279e1ec3008301301e6&v=4
+  company: Red Hat
+  name: Katia Aresti
+  bio: Principal Software Engineer
+  groups:
+    - cf-egc-second
 kenfinnigan:
   login: kenfinnigan
   url: 'https://github.com/kenfinnigan'
