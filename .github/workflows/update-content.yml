@@ -36,6 +36,7 @@ jobs:
       group: "push-content"
     outputs:
       updated: steps.git-push.outputs.updated || steps.submodule.outputs.updated || steps.about.outputs.updated || steps.discussion.outputs.updated
+      votes_updated: steps.count_votes.outputs.votes_updated
 
     steps:
       - uses: actions/checkout@v4
@@ -122,21 +123,17 @@ jobs:
             echo "updated=true" >> $GITHUB_OUTPUT
           fi
 
-  process_votes:
-    concurrency:
-      group: "push-content"
-    permissions:
-      contents: write
-    uses: commonhaus/vote-record-actions/.github/workflows/receive-votes.yml@main
-    with:
-      repositories: "commonhaus/foundation"
-      target_dir: "site/_generated/votes"
-      branch: "main"
-    secrets: inherit
+      - name: Count votes
+        id: count_votes
+        uses: commonhaus/vote-record-actions/.github/actions/count-votes@main
+        with:
+          repositories: "commonhaus/foundation"
+          target_dir: "site/_generated/votes"
+          branch: "main"
 
   update:
-    needs: [build_refresh, process_votes]
-    if: needs.process_votes.outputs.votes_updated || needs.build_refresh.outputs.updated
+    needs: build_refresh
+    if: needs.build_refresh.outputs.votes_updated || needs.build_refresh.outputs.updated
     runs-on: ubuntu-latest
     permissions:
       contents: write
