@@ -1,10 +1,10 @@
 {{- if tier.layout == 1 }}
-<section class="cards wide">
+<section class="cards wide" id="tier-1">
   {{- for sponsor of sponsorGroup }}
       <div class="card wide">
-          {{ include "layouts/display-logo.vto" { name: sponsor.name, display: sponsor.display } }}
+          {{ include "layouts/display-logo.vto" { name: sponsor.name, display: sponsor.display, rel: "sponsored" } }}
           <div class="text-content">
-              <h3><a href="{{ sponsor.display.home }}">{{ sponsor.name }}</a></h3>
+              <h3><a href="{{ sponsor.display.home }}" rel="sponsored">{{ sponsor.name }}</a></h3>
               <p>{{ sponsor.display.description |> md(true) }}</p>
           </div>
       </div>
@@ -13,9 +13,9 @@
 <section class="cards wrapped">
   {{- for sponsor of sponsorGroup }}
       <div class="card two">
-          {{ include "layouts/display-logo.vto" { name: sponsor.name, display: sponsor.display } }}
+          {{ include "layouts/display-logo.vto" { name: sponsor.name, display: sponsor.display, rel: "sponsored" } }}
           <div class="text-content">
-              <p><a href="{{ sponsor.display.home }}">{{ sponsor.name }}</a>.
+              <p><a href="{{ sponsor.display.home }}" rel="sponsored">{{ sponsor.name }}</a>.
                   {{- if sponsor.display[key] }} {{ sponsor.display[key] |> md(true) }}
                   {{- else }} {{ sponsor.display.description |> md(true) }}
                   {{- /if -}}</p>
@@ -26,7 +26,7 @@
 <section class="cards wrapped">
   {{- for sponsor of sponsorGroup }}
       <div class="card three">
-          {{ include "layouts/display-logo.vto" { name: sponsor.name, display: sponsor.display } }}
+          {{ include "layouts/display-logo.vto" { name: sponsor.name, display: sponsor.display, rel: "sponsored" } }}
       </div>
   {{- /for }}
 {{ /if -}}
