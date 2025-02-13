@@ -12,7 +12,7 @@
     "genUrl": "/CODE_OF_CONDUCT.html"
   },
   "COMMUNICATION.md": {
-    "date": "2025-01-11T02:37:14.000Z",
+    "date": "2025-02-13T17:21:10.000Z",
     "srcPath": "COMMUNICATION.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/COMMUNICATION.md",
@@ -408,7 +408,7 @@
     "genUrl": "/agreements/project-contribution/"
   },
   "agreements/project-contribution/asset-transfer-agreement.md": {
-    "date": "2025-01-27T18:24:09.000Z",
+    "date": "2025-02-13T19:49:08.000Z",
     "srcPath": "agreements/project-contribution/asset-transfer-agreement.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/project-contribution/asset-transfer-agreement.md",
@@ -440,6 +440,23 @@
       "legal"
     ],
     "genUrl": "/agreements/project-contribution/fiscal-sponsorship-agreement.html"
+  },
+  "agreements/project-contribution/onboarding-checklist.md": {
+    "date": "2025-02-13T18:38:05.000Z",
+    "srcPath": "agreements/project-contribution/onboarding-checklist.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/project-contribution/onboarding-checklist.md",
+    "type": "submodule",
+    "layout": "layouts/policies.vto",
+    "cssclasses": [
+      "bylaws",
+      "has-aside"
+    ],
+    "tags": [
+      "policies",
+      "legal"
+    ],
+    "genUrl": "/agreements/project-contribution/onboarding-checklist.html"
   },
   "agreements/project-contribution/terms-and-conditions.md": {
     "date": "2025-02-11T23:26:47.000Z",
