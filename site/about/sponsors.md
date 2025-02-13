@@ -8,6 +8,8 @@ metas:
 cssclasses:
 - projects
 - sponsors
+scripts:
+- /assets/random-sponsor.js
 ---
 
 <ul class="two-columns">

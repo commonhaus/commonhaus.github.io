@@ -1,9 +1,9 @@
 <span class="logo">
 {{- if display["logo-dark"] }}
-    <a href="{{ display.home }}" class='dark-only'><img src='{{ display["logo-dark"] }}' alt="" aria-hidden="true" /></a>
+    <a href="{{ display.home }}" {{- if rel }}rel="{{ rel }}" {{ /if }}class='dark-only'><img src='{{ display["logo-dark"] }}' alt="" aria-hidden="true" /></a>
 {{ /if }}{{- if display.logo }}
-    <a href="{{ display.home }}" class='{{- if display["logo-dark"] }}light-only{{ /if }}'><img src="{{ display.logo }}" alt="" aria-hidden="true"  /></a>
+    <a href="{{ display.home }}" {{- if rel }}rel="{{ rel }}" {{ /if }}class='{{- if display["logo-dark"] }}light-only{{ /if }}'><img src="{{ display.logo }}" alt="" aria-hidden="true"  /></a>
 {{ else }}
-    <a href="{{ display.home }}" class="wordmark">{{ name }}</a>
+    <a href="{{ display.home }}" {{- if rel }}rel="{{ rel }}" {{ /if }}class="wordmark">{{ name }}</a>
 {{ /if -}}
 </span>
