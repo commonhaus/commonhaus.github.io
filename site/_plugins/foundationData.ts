@@ -36,11 +36,22 @@ const SPONSOR_DATA: SponsorData = parse(Deno.readTextFileSync("./site/foundation
 
 const IMPORTED_LOGO_URLS: Record<string, string> = {};
 
-const fixFoundationUrls = (url: string) => {
+const rawUrl = (url: string) => {
+    if (url.includes("/github.com/") && !url.endsWith("?raw=true")) {
+        url += "?raw=true";
+    }
+    return url;
+}
 
-    if (IMPORTED_LOGO_URLS[url]) {
+const unrawUrl = (url: string) => {
+    return url.replace("?raw=true", "");
+}
+
+const fixFoundationUrls = (url: string) => {
+    const cachedLocalImg = IMPORTED_LOGO_URLS[unrawUrl(url)];
+    if (cachedLocalImg) {
         // Fix sponsor and project logo URLs to reference local images
-        return IMPORTED_LOGO_URLS[url];
+        return cachedLocalImg;
     }
     if (url.startsWith('http') || url.startsWith('#')) {
         return url;
@@ -122,9 +133,7 @@ const importLogo = (name: string, url: string | undefined, segment: string, site
             IMPORTED_LOGO_URLS[url] = url.replace("https://www.commonhaus.org", "");
             return;
         }
-        if (url.includes("/github.com/") && !url.endsWith("?raw=true")) {
-            url += "?raw=true";
-        }
+        url = rawUrl(url);
         const baseName = urlBaseName(url);
         if (!baseName) {
             return;
@@ -136,7 +145,7 @@ const importLogo = (name: string, url: string | undefined, segment: string, site
         console.log("Importing logo", url, file, target);
         site.remoteFile(file, url);
         site.copy(file, target);
-        IMPORTED_LOGO_URLS[url] = target;
+        IMPORTED_LOGO_URLS[unrawUrl(url)] = target;
     }
 }
 

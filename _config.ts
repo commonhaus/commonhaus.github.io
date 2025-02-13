@@ -172,7 +172,6 @@ site.filter("postLock", (data: Record<string, unknown>) => {
     if (data.pinned) {
         result += `<span aria-label="pinned">${svg.pin}</span> `;
     }
-    console.log(data.number, data.closed, data.closedAt);
     if (data.closedAt || data.closed) {
         result += `<span aria-label="closed">${svg.closed}</span> `;
     }
