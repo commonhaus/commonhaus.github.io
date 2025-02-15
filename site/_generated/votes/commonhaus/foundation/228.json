@@ -2,7 +2,7 @@
   "title": "📝 Terms and Conditions: clarify communication requirements [due Feb25]",
   "voteType": "marthas",
   "hasQuorum": true,
-  "isDone": false,
+  "isDone": true,
   "group": "commonhaus/cf-egc",
   "groupSize": 15,
   "groupVotes": 10,
@@ -142,19 +142,29 @@
       "url": "https://github.com/cowtowncoder"
     }
   ],
-  "manualCloseComments": null,
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2025-02-11T23:26:41.000+00:00",
+    "body": "Quorum! Let's go! 🚀",
+    "url": "https://github.com/commonhaus/foundation/pull/228#issuecomment-2652288142"
+  },
   "commentId": "IC_kwDOKRPTI86djP7j",
   "github": "https://github.com/commonhaus/foundation/pull/228",
   "itemId": "PR_kwDOKRPTI86KbdhA",
   "number": 228,
   "repoName": "commonhaus/foundation",
   "date": "2025-02-07T15:34:52Z",
-  "updated": "2025-02-11T18:28:01Z",
+  "updated": "2025-02-11T23:26:45Z",
   "tags": [
-    "vote/open",
     "notice",
-    "vote/quorum"
+    "vote/done",
+    "vote/quorum",
+    "closed"
   ],
-  "closed": false,
-  "progress": "https://www.commonhaus.org/votes/vote-quorum.svg"
+  "closed": true,
+  "closedAt": "2025-02-11T23:26:47Z",
+  "progress": "https://www.commonhaus.org/votes/vote-closed.svg"
 }
