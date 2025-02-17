@@ -60,10 +60,9 @@ const site = lume({
 site.copy("static", "/");
 site.mergeKey("cssclasses", "stringArray");
 
-// Build or rebuild the Svelte Membership UI
+// Build the membership UI when not in dev mode
 if (!Deno.env.get("DEV_MODE")) {
     site.addEventListener("afterBuild", "deno task vite-build");
-    site.addEventListener("afterUpdate", "deno task vite-build");
 }
 
 site
