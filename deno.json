@@ -1,15 +1,16 @@
 {
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
+    "lumeWatch": "deno task lume -s & deno task vite-watch",
     "attach": "echo \"import 'lume/cli.ts'\" | deno run --inspect-wait -A -",
     "build": "deno task lume",
     "vite-build": "deno run -A --node-modules-dir npm:vite build",
-    "vite-watch": "export VITE_APP_DEV_MODE=true && deno run -A --node-modules-dir npm:vite build --watch",
-    "serve": "export DEV_MODE=true && deno task vite-watch & deno task lume -s",
-    "serve-all": "export MOCK_BACKEND=true && deno task serve",
+    "vite-watch": "deno run -A --node-modules-dir npm:vite build --watch",
+    "serve": "deno run -A ./tasks/serve.js",
+    "serve-all": "deno run -A ./tasks/serve-all.js",
     "about": "deno run --allow-run=gh --allow-read=./tasks/graphql,./site/_generated --allow-write=./site/_generated ./tasks/about.ts",
     "activity": "deno run --allow-run=gh --allow-read=./tasks/graphql,./site/activity,./site/_generated --allow-write=./site/_generated ./tasks/activity.ts",
-    "lastmod": "deno run --allow-run=git,gh --allow-read=. --allow-write=./site/_generated ./tasks/lastmod.ts",
+    "lastmod": "deno run --allow-run=git,gh --allow-read=. --allow-write=./site/_generated ./tasks/lastmod.ts"
   },
   "compilerOptions": {
     "types": [
