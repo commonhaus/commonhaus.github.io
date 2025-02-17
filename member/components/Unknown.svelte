@@ -9,9 +9,15 @@
     projects. Even a small contribution can have a significant impact.
   </p>
 
-  <a href="https://github.com/sponsors/commonhaus" class="text button"
-    >Become a Sponsor</a
-  >
+  <p>
+    <a href="https://github.com/sponsors/commonhaus" class="text button">
+      Become a GitHub Sponsor
+    </a>
+    or
+    <a href="https://opencollective.com/commonhaus-foundation/donate" class="text button">
+      Donate to our Collective
+    </a>
+  </p>
 
   <p>
     Sponsors directly support our initiatives and gain access to our exclusive
