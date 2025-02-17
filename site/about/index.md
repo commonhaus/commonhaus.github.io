@@ -129,6 +129,7 @@ Our project representatives play a pivotal role in the Commonhaus Foundation's [
 {{- /for }}
 </section>
 
+{{ if page.data.advisoryBoard }}
 ## Advisory Board
 
 The individuals listed below are representatives nominated by our sponsors to the Commonhaus Foundation's [Advisory Board][ab].
@@ -151,6 +152,7 @@ They bring industry perspectives and expertise to the conversation, to help us e
     </div>
 {{- /for }}
 </section>
+{{ /if }}
 
 [Bylaws]: ../foundation/bylaws/1-preface.md
 [cfab]: ../foundation/bylaws/5-cf-advisory-board.md
