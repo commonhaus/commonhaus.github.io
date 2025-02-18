@@ -125,7 +125,7 @@ jobs:
 
       - name: Count votes
         id: count_votes
-        uses: commonhaus/vote-record-actions/.github/actions/count-votes@1.0.2
+        uses: commonhaus/vote-record-actions/actions/count-votes@1.0.4
         with:
           repositories: "commonhaus/foundation"
           target_dir: "site/_generated/votes"
