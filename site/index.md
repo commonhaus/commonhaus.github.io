@@ -6,6 +6,8 @@ preload:
 - <link rel="preload" fetchpriority="high" as="image" href="/images/hero_mainimage.webp" type="image/webp">
 cssclasses:
 - site-main
+scripts:
+- /assets/random-project.js
 ---
 <div class="hero">
   <section class="text">
@@ -71,7 +73,7 @@ cssclasses:
 
 <hr />
 
-<section class="projects">
+<section class="projects" id="project-list">
   <h2 id="our-projects" tabindex="-1">
     <a class="header-anchor" href="#our-projects">Our Projects</a>
   </h2>
