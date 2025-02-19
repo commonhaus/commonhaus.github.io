@@ -5,13 +5,15 @@
   "author": "ebullient",
   "number": 233,
   "date": "2025-02-13T18:39:14Z",
-  "updated": "2025-02-18T16:50:57Z",
+  "updated": "2025-02-20T18:56:41Z",
   "url": "/activity/233.html",
   "type": "pullRequest",
   "tags": [
     "post",
-    "vote/open",
-    "notice"
+    "notice",
+    "vote/done",
+    "vote/quorum"
   ],
-  "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/233.svg)](https://github.com/commonhaus/foundation/pull/233#issuecomment-2658229212 \"IC_kwDOKRPTI86ecVvc\")\r\n\r\nDraft sponsorship agreement for corporate sponsors.\r\n\r\nvoting group: @commonhaus/cf-council \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment)."
+  "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/233.svg)](https://github.com/commonhaus/foundation/pull/233#issuecomment-2658229212 \"IC_kwDOKRPTI86ecVvc\")\r\n\r\nDraft sponsorship agreement for corporate sponsors.\r\n\r\nvoting group: @commonhaus/cf-council \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment).",
+  "closedAt": "2025-02-20T18:56:38Z"
 }

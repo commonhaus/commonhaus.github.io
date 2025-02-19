@@ -1,13 +1,13 @@
 {
   "title": "Draft Sponsorship",
   "voteType": "marthas",
-  "hasQuorum": false,
-  "isDone": false,
+  "hasQuorum": true,
+  "isDone": true,
   "group": "commonhaus/cf-council",
   "groupSize": 3,
-  "groupVotes": 2,
-  "countedVotes": 7,
-  "droppedVotes": 2,
+  "groupVotes": 3,
+  "countedVotes": 8,
+  "droppedVotes": 3,
   "votingThreshold": "all",
   "categories": {
     "approve": {
@@ -15,6 +15,12 @@
         "👍"
       ],
       "team": [
+        {
+          "login": "cealsair",
+          "url": "https://github.com/cealsair",
+          "createdAt": "2025-02-20T14:28:57.000+00:00",
+          "reaction": "👍"
+        },
         {
           "login": "kenfinnigan",
           "url": "https://github.com/kenfinnigan",
@@ -54,8 +60,8 @@
           "reaction": "👍"
         }
       ],
-      "teamTotal": 1,
-      "total": 6
+      "teamTotal": 2,
+      "total": 7
     },
     "ok": {
       "reactions": [
@@ -75,6 +81,12 @@
     }
   },
   "duplicates": [
+    {
+      "login": "cealsair",
+      "url": "https://github.com/cealsair",
+      "createdAt": "2025-02-20T14:27:37.000+00:00",
+      "reaction": "👍"
+    },
     {
       "login": "kenfinnigan",
       "url": "https://github.com/kenfinnigan",
@@ -120,24 +132,30 @@
       "reaction": "👍"
     }
   ],
-  "missingGroupActors": [
-    {
-      "login": "cealsair",
-      "url": "https://github.com/cealsair"
-    }
-  ],
-  "manualCloseComments": null,
+  "missingGroupActors": [],
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2025-02-20T18:56:34.000+00:00",
+    "body": "approved by council with EGC & officer support 🎉",
+    "url": "https://github.com/commonhaus/foundation/pull/233#issuecomment-2672403985"
+  },
   "commentId": "IC_kwDOKRPTI86ecVvc",
   "github": "https://github.com/commonhaus/foundation/pull/233",
   "itemId": "PR_kwDOKRPTI86LJZNl",
   "number": 233,
   "repoName": "commonhaus/foundation",
   "date": "2025-02-14T04:19:39Z",
-  "updated": "2025-02-17T15:34:48Z",
+  "updated": "2025-02-20T18:56:38Z",
   "tags": [
-    "vote/open",
-    "notice"
+    "notice",
+    "vote/done",
+    "vote/quorum",
+    "closed"
   ],
-  "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-6.svg"
+  "closed": true,
+  "closedAt": "2025-02-20T18:56:38Z",
+  "progress": "https://www.commonhaus.org/votes/vote-closed.svg"
 }
