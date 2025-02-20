@@ -1,6 +1,7 @@
 
 const interestingFiles = [
     '.md',
+    '.yml',
     '.yaml'
  ];
  const ignore = [
@@ -67,18 +68,7 @@ async function readDir(path: string, relative: string, repo: string, repoRelativ
 
             if (dirEntry.name.endsWith('.md')) {
                 struct.type = 'submodule';
-                if (filePath.includes('bylaws')) {
-                    struct.layout = 'layouts/bylaws.vto';
-                    struct.cssclasses = ['bylaws', 'has-aside'];
-                    struct.tags = ['bylaws', 'legal'];
-                } else if (filePath.includes('policies') || filePath.includes('agreements')) {
-                    struct.layout = 'layouts/policies.vto';
-                    struct.cssclasses = ['bylaws', 'has-aside'];
-                    struct.tags = ['policies', 'legal'];
-                } else {
-                    struct.layout = 'layouts/foundation.vto';
-                    struct.cssclasses = ['foundation'];
-                }
+                struct.layout = 'layouts/foundation.vto';
                 struct.genUrl = `/${filePath}.html`
                     .replace('.md', '')
                     .replace('README.html', '');

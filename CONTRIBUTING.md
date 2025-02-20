@@ -81,7 +81,7 @@ This project uses [Deno](https://deno.land/) as the runtime, the [Lume static si
         - `codehaus.md` - Codehaus legacy
         - Other content from the foundation repo is placed into this section by `site/_plugins/foundationData.ts`
     - `activity` - Generated pages for discussions and PRs.
-        - `_data.yaml` - Common/default metadata for all pages in this section
+        - `_data.yml` - Common/default metadata for all pages in this section
         - `announcements.md` - Filtered view of announcements
         - `index.md` - Landing page (overview of all activity)
         - `index.page.js` - Generate pages from `site/_generated/activity/*.json`

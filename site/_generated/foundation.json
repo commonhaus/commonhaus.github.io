@@ -6,9 +6,6 @@
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/CODE_OF_CONDUCT.md",
     "type": "submodule",
     "layout": "layouts/foundation.vto",
-    "cssclasses": [
-      "foundation"
-    ],
     "genUrl": "/CODE_OF_CONDUCT.html"
   },
   "COMMUNICATION.md": {
@@ -18,9 +15,6 @@
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/COMMUNICATION.md",
     "type": "submodule",
     "layout": "layouts/foundation.vto",
-    "cssclasses": [
-      "foundation"
-    ],
     "genUrl": "/COMMUNICATION.html"
   },
   "CONTACTS.yaml": {
@@ -37,9 +31,6 @@
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/CONTRIBUTING.md",
     "type": "submodule",
     "layout": "layouts/foundation.vto",
-    "cssclasses": [
-      "foundation"
-    ],
     "genUrl": "/CONTRIBUTING.html"
   },
   "FAQ.md": {
@@ -49,9 +40,6 @@
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/FAQ.md",
     "type": "submodule",
     "layout": "layouts/foundation.vto",
-    "cssclasses": [
-      "foundation"
-    ],
     "genUrl": "/FAQ.html"
   },
   "GOVERNANCE.md": {
@@ -61,9 +49,6 @@
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/GOVERNANCE.md",
     "type": "submodule",
     "layout": "layouts/foundation.vto",
-    "cssclasses": [
-      "foundation"
-    ],
     "genUrl": "/GOVERNANCE.html"
   },
   "PROJECTS.yaml": {
@@ -80,9 +65,6 @@
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/README.md",
     "type": "submodule",
     "layout": "layouts/foundation.vto",
-    "cssclasses": [
-      "foundation"
-    ],
     "genUrl": "/"
   },
   "SPONSORS.yaml": {
@@ -106,9 +88,6 @@
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/TRADEMARKS.md",
     "type": "submodule",
     "layout": "layouts/foundation.vto",
-    "cssclasses": [
-      "foundation"
-    ],
     "genUrl": "/TRADEMARKS.html"
   },
   "agreements/bootstrapping/2024-03-12-bootstrapping-jbang.md": {
@@ -117,15 +96,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-03-12-bootstrapping-jbang.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/agreements/bootstrapping/2024-03-12-bootstrapping-jbang.html"
   },
   "agreements/bootstrapping/2024-03-13-bootstrapping-jreleaser.md": {
@@ -134,15 +105,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-03-13-bootstrapping-jreleaser.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/agreements/bootstrapping/2024-03-13-bootstrapping-jreleaser.html"
   },
   "agreements/bootstrapping/2024-03-15-bootstrapping-morphia.md": {
@@ -151,15 +114,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-03-15-bootstrapping-morphia.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/agreements/bootstrapping/2024-03-15-bootstrapping-morphia.html"
   },
   "agreements/bootstrapping/2024-03-25-bootstrapping-jackson.md": {
@@ -168,15 +123,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-03-25-bootstrapping-jackson.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/agreements/bootstrapping/2024-03-25-bootstrapping-jackson.html"
   },
   "agreements/bootstrapping/2024-03-25-bootstrapping-openrewrite-withdrawn.md": {
@@ -185,15 +132,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-03-25-bootstrapping-openrewrite-withdrawn.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/agreements/bootstrapping/2024-03-25-bootstrapping-openrewrite-withdrawn.html"
   },
   "agreements/bootstrapping/2024-04-02-bootstrapping-hibernate.md": {
@@ -202,15 +141,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-04-02-bootstrapping-hibernate.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/agreements/bootstrapping/2024-04-02-bootstrapping-hibernate.html"
   },
   "agreements/bootstrapping/2024-05-06-bootstrapping-objenesis.md": {
@@ -219,15 +150,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-05-06-bootstrapping-objenesis.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/agreements/bootstrapping/2024-05-06-bootstrapping-objenesis.html"
   },
   "agreements/bootstrapping/2024-05-18-bootstrapping-sdkman.md": {
@@ -236,15 +159,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-05-18-bootstrapping-sdkman.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/agreements/bootstrapping/2024-05-18-bootstrapping-sdkman.html"
   },
   "agreements/bootstrapping/2024-05-24-bootstrapping-easymock.md": {
@@ -253,15 +168,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-05-24-bootstrapping-easymock.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/agreements/bootstrapping/2024-05-24-bootstrapping-easymock.html"
   },
   "agreements/bootstrapping/2024-05-27-bootstrapping-feign.md": {
@@ -270,15 +177,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-05-27-bootstrapping-feign.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/agreements/bootstrapping/2024-05-27-bootstrapping-feign.html"
   },
   "agreements/bootstrapping/2024-10-30-bootstrapping-debezium.md": {
@@ -287,15 +186,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-10-30-bootstrapping-debezium.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/agreements/bootstrapping/2024-10-30-bootstrapping-debezium.html"
   },
   "agreements/bootstrapping/2024-11-05-bootstrapping-slatedb.md": {
@@ -304,15 +195,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-11-05-bootstrapping-slatedb.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/agreements/bootstrapping/2024-11-05-bootstrapping-slatedb.html"
   },
   "agreements/bootstrapping/2024-11-18-bootstrapping-infinispan.md": {
@@ -321,15 +204,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-11-18-bootstrapping-infinispan.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/agreements/bootstrapping/2024-11-18-bootstrapping-infinispan.html"
   },
   "agreements/bootstrapping/agreements/bootstrapping/2024-07-31-bootstrapping-quarkus.md": {
@@ -338,15 +213,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/agreements/bootstrapping/2024-07-31-bootstrapping-quarkus.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/agreements/bootstrapping/agreements/bootstrapping/2024-07-31-bootstrapping-quarkus.html"
   },
   "agreements/bootstrapping/bootstrapping.md": {
@@ -355,15 +222,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/bootstrapping.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/agreements/bootstrapping/bootstrapping.html"
   },
   "agreements/membership/README.md": {
@@ -372,15 +231,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/membership/README.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/agreements/membership/"
   },
   "agreements/membership/members.yaml": {
@@ -396,15 +247,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/project-contribution/README.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/agreements/project-contribution/"
   },
   "agreements/project-contribution/asset-transfer-agreement.md": {
@@ -413,15 +256,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/project-contribution/asset-transfer-agreement.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/agreements/project-contribution/asset-transfer-agreement.html"
   },
   "agreements/project-contribution/fiscal-sponsorship-agreement.md": {
@@ -430,15 +265,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/project-contribution/fiscal-sponsorship-agreement.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/agreements/project-contribution/fiscal-sponsorship-agreement.html"
   },
   "agreements/project-contribution/onboarding-checklist.md": {
@@ -447,15 +274,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/project-contribution/onboarding-checklist.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/agreements/project-contribution/onboarding-checklist.html"
   },
   "agreements/project-contribution/terms-and-conditions.md": {
@@ -464,15 +283,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/project-contribution/terms-and-conditions.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/agreements/project-contribution/terms-and-conditions.html"
   },
   "agreements/sponsorship/README.md": {
@@ -481,15 +292,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/sponsorship/README.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/agreements/sponsorship/"
   },
   "agreements/sponsorship/sponsorship-agreement.md": {
@@ -498,15 +301,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/sponsorship/sponsorship-agreement.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/agreements/sponsorship/sponsorship-agreement.html"
   },
   "bylaws/1-preface.md": {
@@ -515,15 +310,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/bylaws/1-preface.md",
     "type": "submodule",
-    "layout": "layouts/bylaws.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "bylaws",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/bylaws/1-preface.html"
   },
   "bylaws/2-purpose.md": {
@@ -532,15 +319,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/bylaws/2-purpose.md",
     "type": "submodule",
-    "layout": "layouts/bylaws.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "bylaws",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/bylaws/2-purpose.html"
   },
   "bylaws/3-cf-membership.md": {
@@ -549,15 +328,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/bylaws/3-cf-membership.md",
     "type": "submodule",
-    "layout": "layouts/bylaws.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "bylaws",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/bylaws/3-cf-membership.html"
   },
   "bylaws/4-cf-council.md": {
@@ -566,15 +337,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/bylaws/4-cf-council.md",
     "type": "submodule",
-    "layout": "layouts/bylaws.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "bylaws",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/bylaws/4-cf-council.html"
   },
   "bylaws/5-cf-advisory-board.md": {
@@ -583,15 +346,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/bylaws/5-cf-advisory-board.md",
     "type": "submodule",
-    "layout": "layouts/bylaws.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "bylaws",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/bylaws/5-cf-advisory-board.html"
   },
   "bylaws/6-decision-making.md": {
@@ -600,15 +355,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/bylaws/6-decision-making.md",
     "type": "submodule",
-    "layout": "layouts/bylaws.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "bylaws",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/bylaws/6-decision-making.html"
   },
   "bylaws/7-notice-records.md": {
@@ -617,15 +364,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/bylaws/7-notice-records.md",
     "type": "submodule",
-    "layout": "layouts/bylaws.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "bylaws",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/bylaws/7-notice-records.html"
   },
   "bylaws/8-indemnification-dissolution.md": {
@@ -634,15 +373,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/bylaws/8-indemnification-dissolution.md",
     "type": "submodule",
-    "layout": "layouts/bylaws.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "bylaws",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/bylaws/8-indemnification-dissolution.html"
   },
   "bylaws/9-amendments.md": {
@@ -651,15 +382,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/bylaws/9-amendments.md",
     "type": "submodule",
-    "layout": "layouts/bylaws.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "bylaws",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/bylaws/9-amendments.html"
   },
   "bylaws/README.md": {
@@ -668,15 +391,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/bylaws/README.md",
     "type": "submodule",
-    "layout": "layouts/bylaws.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "bylaws",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/bylaws/"
   },
   "elections/candidate-template.md": {
@@ -686,9 +401,6 @@
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/elections/candidate-template.md",
     "type": "submodule",
     "layout": "layouts/foundation.vto",
-    "cssclasses": [
-      "foundation"
-    ],
     "genUrl": "/elections/candidate-template.html"
   },
   "policies/CLA.md": {
@@ -697,15 +409,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/policies/CLA.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/policies/CLA.html"
   },
   "policies/README.md": {
@@ -714,15 +418,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/policies/README.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/policies/"
   },
   "policies/antitrust-policy.md": {
@@ -731,15 +427,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/policies/antitrust-policy.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/policies/antitrust-policy.html"
   },
   "policies/code-of-conduct.md": {
@@ -748,15 +436,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/policies/code-of-conduct.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/policies/code-of-conduct.html"
   },
   "policies/conflict-of-interest.md": {
@@ -765,15 +445,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/policies/conflict-of-interest.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/policies/conflict-of-interest.html"
   },
   "policies/ip-policy.md": {
@@ -782,15 +454,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/policies/ip-policy.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/policies/ip-policy.html"
   },
   "policies/privacy-policy.md": {
@@ -799,15 +463,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/policies/privacy-policy.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/policies/privacy-policy.html"
   },
   "policies/security-policy.md": {
@@ -816,15 +472,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/policies/security-policy.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/policies/security-policy.html"
   },
   "policies/succession-plan.md": {
@@ -833,15 +481,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/policies/succession-plan.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/policies/succession-plan.html"
   },
   "policies/trademark-guidelines.md": {
@@ -850,15 +490,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/policies/trademark-guidelines.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/policies/trademark-guidelines.html"
   },
   "policies/trademark-policy.md": {
@@ -867,15 +499,7 @@
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/policies/trademark-policy.md",
     "type": "submodule",
-    "layout": "layouts/policies.vto",
-    "cssclasses": [
-      "bylaws",
-      "has-aside"
-    ],
-    "tags": [
-      "policies",
-      "legal"
-    ],
+    "layout": "layouts/foundation.vto",
     "genUrl": "/policies/trademark-policy.html"
   }
 }
