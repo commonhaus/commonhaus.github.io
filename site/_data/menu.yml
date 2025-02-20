@@ -9,16 +9,16 @@ about:
         href: /about
       - title: Our Projects
         href: /#our-projects
-      - title: Governance
-        href: /about/governance.html
+      - title: Our Sponsors
+        href: /about/sponsors/
       - title: Foundation Bylaws
         href: /bylaws
       - title: Foundation Policies
         href: /policies
-      - title: Foundation Trademarks
-        href: /trademarks
-      - title: Frequently Asked Questions
+      - title: FAQ
         href: /about/faq.html
+      - title: Trademarks
+        href: /trademarks
       - title: Brand guidelines
         href: /about/branding.html
 
@@ -37,6 +37,7 @@ activity:
         href: /activity/notices.html
       - title: Vote Results
         href: /votes
+
 community:
   title: Community
   href: /community/
@@ -46,6 +47,10 @@ community:
     children:
       - title: Overview
         href: /community/
+      - title: Our Supporters
+        href: /about/sponsors/supporters.html
+      - title: Support our work
+        href: /community/#support-our-efforts
       - title: Discussions
         href: https://github.com/commonhaus/foundation/discussions
       - title: GitHub Repository

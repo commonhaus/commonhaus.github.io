@@ -117,6 +117,10 @@ article li > ul,
   margin-top: 0.5em;
 }
 
+ul.plain-list {
+  list-style-type: none;
+}
+
 li {
   margin-bottom: 0.3em;
 }

@@ -22,11 +22,6 @@ FAQ:
     Common questions about the Commonhaus Foundation and its advantages for
     Open Source projects.
 
-GOVERNANCE:
-  url: /about/governance.html
-  metas:
-    robots: false
-
 TRADEMARKS:
   url: /trademarks/
   cssclasses:
@@ -47,6 +42,12 @@ agreements/project-contribution/terms-and-conditions:
     The Terms and Conditions for projects hosted by the Commonhaus Foundation.
     Covers governance, leadership transitions, administrative access, and
     responsibilities for contributors and maintainers under fiscal sponsorship agreements.
+
+agreements/sponsorship/README:
+  url:  /about/sponsorship.html
+  description: >
+    Describes Corporate sponsorship tiers for the Commonhaus Foundation including
+    benefits and contact information.
 
 bylaws/README:
   url: /bylaws/

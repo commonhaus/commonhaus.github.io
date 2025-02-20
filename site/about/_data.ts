@@ -71,6 +71,8 @@ function augmentReference<T extends Contact>(data: Record<string, Contact[]>, it
     return item as T;
 }
 
+const devMode = Deno.env.get("DEV_MODE") || false;
+
 const CONTACT_DATA = parse(Deno.readTextFileSync("./site/foundation/CONTACTS.yaml")) as Record<string, Contact[]>;
 const SPONSOR_DATA = parse(Deno.readTextFileSync("./site/foundation/SPONSORS.yaml")) as SponsorData;
 const PROJECT_DATA = parse(Deno.readTextFileSync("./site/foundation/PROJECTS.yaml")) as Record<string, ProjectData>;
@@ -170,6 +172,10 @@ for(const advisor of augmentedAdvisorData) {
 const groupedSponsors: GroupedSponsors = {};
 const advisoryBoard: AdvisorContact[] = [];
 Object.entries(SPONSOR_DATA.sponsors).forEach(([key, sponsor]) => {
+    if (sponsor.draft && !devMode) {
+        return;
+    }
+
     const reps = augmentedAdvisorData.filter(x => x.organization === key);
     reps.forEach(x => Object.assign(x, {
         sponsorName: sponsor.name,
@@ -192,11 +198,45 @@ function addToGroup(groups: GroupedSponsors, key: string, sponsor: Sponsor) {
     groups[key].push(sponsor);
 }
 
+function tieredSponsors(): GroupedSponsors {
+    const filteredGroups: GroupedSponsors = { };
+    for (const [key, sponsors] of Object.entries(groupedSponsors)) {
+        if (sponsors && key != 'in-kind') {
+            filteredGroups[key] = sponsors;
+        }
+    }
+    return filteredGroups;
+}
+
+function filteredTiers(filteredSponsors: GroupedSponsors): Record<string, SponsorTier> {
+    const tiers: Record<string, SponsorTier> = {};
+    for (const [key, sponsor] of Object.entries(SPONSOR_DATA.tiers)) {
+        if (filteredSponsors[key]) {
+            tiers[key] = sponsor;
+        }
+    }
+    return tiers;
+}
+
+function inKind(): Sponsor[] {
+    return groupedSponsors['in-kind'];
+}
+
+function tier(tier: string): SponsorTier {
+    return tiers[tier];
+}
+
+function supporters(): User[] {
+    return [];
+}
+
 export {
     councilors,
     egc,
     officers,
-    groupedSponsors,
-    advisoryBoard,
-    tiers
+    tier,
+    tieredSponsors,
+    filteredTiers,
+    inKind,
+    supporters
 }
