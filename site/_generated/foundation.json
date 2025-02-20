@@ -12,7 +12,7 @@
     "genUrl": "/CODE_OF_CONDUCT.html"
   },
   "COMMUNICATION.md": {
-    "date": "2025-02-13T17:21:10.000Z",
+    "date": "2025-02-20T18:56:37.000Z",
     "srcPath": "COMMUNICATION.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/COMMUNICATION.md",
@@ -86,7 +86,7 @@
     "genUrl": "/"
   },
   "SPONSORS.yaml": {
-    "date": "2025-02-16T16:45:58.000Z",
+    "date": "2025-02-20T18:56:37.000Z",
     "srcPath": "SPONSORS.yaml",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/SPONSORS.yaml",
@@ -425,7 +425,7 @@
     "genUrl": "/agreements/project-contribution/asset-transfer-agreement.html"
   },
   "agreements/project-contribution/fiscal-sponsorship-agreement.md": {
-    "date": "2025-01-27T18:24:09.000Z",
+    "date": "2025-02-20T18:56:37.000Z",
     "srcPath": "agreements/project-contribution/fiscal-sponsorship-agreement.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/project-contribution/fiscal-sponsorship-agreement.md",
@@ -474,6 +474,40 @@
       "legal"
     ],
     "genUrl": "/agreements/project-contribution/terms-and-conditions.html"
+  },
+  "agreements/sponsorship/sponsorship-agreement.md": {
+    "date": "2025-02-20T18:56:37.000Z",
+    "srcPath": "agreements/sponsorship/sponsorship-agreement.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/sponsorship/sponsorship-agreement.md",
+    "type": "submodule",
+    "layout": "layouts/policies.vto",
+    "cssclasses": [
+      "bylaws",
+      "has-aside"
+    ],
+    "tags": [
+      "policies",
+      "legal"
+    ],
+    "genUrl": "/agreements/sponsorship/sponsorship-agreement.html"
+  },
+  "agreements/sponsorship/sponsorship-tiers.md": {
+    "date": "2025-02-20T18:56:37.000Z",
+    "srcPath": "agreements/sponsorship/sponsorship-tiers.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/sponsorship/sponsorship-tiers.md",
+    "type": "submodule",
+    "layout": "layouts/policies.vto",
+    "cssclasses": [
+      "bylaws",
+      "has-aside"
+    ],
+    "tags": [
+      "policies",
+      "legal"
+    ],
+    "genUrl": "/agreements/sponsorship/sponsorship-tiers.html"
   },
   "bylaws/1-preface.md": {
     "date": "2024-12-11T21:09:15.000Z",
