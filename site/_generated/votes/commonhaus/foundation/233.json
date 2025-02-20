@@ -2,7 +2,7 @@
   "title": "Draft Sponsorship",
   "voteType": "marthas",
   "hasQuorum": true,
-  "isDone": false,
+  "isDone": true,
   "group": "commonhaus/cf-council",
   "groupSize": 3,
   "groupVotes": 3,
@@ -133,19 +133,29 @@
     }
   ],
   "missingGroupActors": [],
-  "manualCloseComments": null,
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2025-02-20T18:56:34.000+00:00",
+    "body": "approved by council with EGC & officer support 🎉",
+    "url": "https://github.com/commonhaus/foundation/pull/233#issuecomment-2672403985"
+  },
   "commentId": "IC_kwDOKRPTI86ecVvc",
   "github": "https://github.com/commonhaus/foundation/pull/233",
   "itemId": "PR_kwDOKRPTI86LJZNl",
   "number": 233,
   "repoName": "commonhaus/foundation",
   "date": "2025-02-14T04:19:39Z",
-  "updated": "2025-02-20T14:29:00Z",
+  "updated": "2025-02-20T18:56:38Z",
   "tags": [
-    "vote/open",
     "notice",
-    "vote/quorum"
+    "vote/done",
+    "vote/quorum",
+    "closed"
   ],
-  "closed": false,
-  "progress": "https://www.commonhaus.org/votes/vote-quorum.svg"
+  "closed": true,
+  "closedAt": "2025-02-20T18:56:38Z",
+  "progress": "https://www.commonhaus.org/votes/vote-closed.svg"
 }
