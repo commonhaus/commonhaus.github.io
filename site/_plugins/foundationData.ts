@@ -3,23 +3,22 @@ import modifyUrls from "lume/plugins/modify_urls.ts";
 import { parse } from "@std/yaml";
 import { Data, Page } from "lume/core/file.ts";
 
+interface LogoDisplay {
+    logo?: string;
+    "logo-dark"?: string;
+}
 interface Project {
     name: string;
     repo: string;
-    display?: ProjectDisplay;
+    display?: LogoDisplay;
     draft?: boolean;
-}
-interface ProjectDisplay {
-    home?: string;
-    logo?: string;
-    "logo-dark"?: string;
-    description?: string;
 }
 interface SponsorData {
     sponsors: Record<string, Sponsor>;
 }
 interface Sponsor {
-    display?: ProjectDisplay;
+    display?: LogoDisplay;
+    inKind?: LogoDisplay;
 }
 
 const EMAIL_REGEX = /(send an email to|email) the \[`?.+?`? mailing list\]\[CONTACTS.yaml\]/g;
@@ -162,6 +161,10 @@ export default function () {
             if (v.display) {
                 importLogo(k, v.display.logo, "sponsors", site);
                 importLogo(k, v.display["logo-dark"], "sponsors", site);
+            }
+            if (v.inKind) {
+                importLogo(k, v.inKind.logo, "sponsors", site);
+                importLogo(k, v.inKind["logo-dark"], "sponsors", site);
             }
         }
         for(const [k, v] of Object.entries(PROJECT_DATA)) {

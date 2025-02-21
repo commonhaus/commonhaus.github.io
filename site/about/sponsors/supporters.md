@@ -16,7 +16,7 @@ cssclasses:
 
 <p>We also extend our thanks to our <a href="index.md">Sponsors</a> and <a href="providers.md">Infrastructure & Service Providers</a>.</p>
 
-{{- if supporters }}
+{{- if supporters && supporters.length }}
 <section class="cards wrapped">
 {{- for user of supporters }}
 <div class="card avatar-only">

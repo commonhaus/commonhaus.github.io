@@ -45,12 +45,19 @@ interface SponsorTier {
     name: string;
     description: string;
 }
+interface Display {
+    draft?: boolean;
+    home?: string;
+    logo?: string;
+    "logo-dark"?: string;
+    description?: string;
+}
 interface Sponsor {
     name: string;
     description: string;
     tier?: string[];
-    display?: Record<string, string>;
-    draft?: boolean;
+    display?: Display;
+    inKind?: Display;
     reps: AdvisorContact[];
 }
 interface GroupedSponsors {
@@ -172,36 +179,47 @@ for(const advisor of augmentedAdvisorData) {
 const groupedSponsors: GroupedSponsors = {};
 const advisoryBoard: AdvisorContact[] = [];
 Object.entries(SPONSOR_DATA.sponsors).forEach(([key, sponsor]) => {
-    if (sponsor.draft && !devMode) {
-        return;
+    const display = sponsor.display || {};
+    if (!display.draft) {
+        const reps = augmentedAdvisorData.filter(x => x.organization === key);
+        reps.forEach(x => Object.assign(x, {
+            sponsorName: sponsor.name,
+            sponsorHome: sponsor.display?.home || key,
+        }));
+        advisoryBoard.push(...reps);
     }
 
-    const reps = augmentedAdvisorData.filter(x => x.organization === key);
-    reps.forEach(x => Object.assign(x, {
-        sponsorName: sponsor.name,
-        sponsorHome: sponsor.display?.home || key,
-    }));
-    advisoryBoard.push(...reps);
+    if (sponsor.inKind) {
+        sponsor.inKind.logo = sponsor.inKind.logo || sponsor.display?.logo;
+        sponsor.inKind["logo-dark"] = sponsor.inKind["logo-dark"] || sponsor.display?.["logo-dark"];
+        sponsor.inKind.home = sponsor.inKind.home || sponsor.display?.home;
+    }
 
     if (sponsor.tier) {
-        sponsor.tier.forEach(tier => addToGroup(groupedSponsors, tier, sponsor));
+        sponsor.tier.forEach(tier => {
+            const display = tier == 'inKind' ? sponsor.inKind : sponsor.display;
+            console.log(devMode, "Adding sponsor", sponsor.name, "to tier", tier, "with display", display?.draft);
+            if (devMode || !display?.draft) {
+                addToGroup(groupedSponsors, tier, sponsor);
+            }
+        });
     } else {
         addToGroup(groupedSponsors, 'supporter', sponsor);
     }
 });
 advisoryBoard.sort((a, b) => a.login.localeCompare(b.login));
 
-function addToGroup(groups: GroupedSponsors, key: string, sponsor: Sponsor) {
-    if (!groups[key]) {
-        groups[key] = [];
+function addToGroup(groups: GroupedSponsors, tier: string, sponsor: Sponsor) {
+    if (!groups[tier]) {
+        groups[tier] = [];
     }
-    groups[key].push(sponsor);
+    groups[tier].push(sponsor);
 }
 
 function tieredSponsors(): GroupedSponsors {
     const filteredGroups: GroupedSponsors = { };
     for (const [key, sponsors] of Object.entries(groupedSponsors)) {
-        if (sponsors && key != 'in-kind') {
+        if (sponsors && key != 'inKind') {
             filteredGroups[key] = sponsors;
         }
     }
@@ -219,7 +237,7 @@ function filteredTiers(filteredSponsors: GroupedSponsors): Record<string, Sponso
 }
 
 function inKind(): Sponsor[] {
-    return groupedSponsors['in-kind'];
+    return groupedSponsors['inKind'];
 }
 
 function tier(tier: string): SponsorTier {
