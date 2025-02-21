@@ -181,6 +181,15 @@ maxandersen:
     Red Hat.
   groups:
     - cf-egc
+quintesse:
+  login: quintesse
+  url: 'https://github.com/quintesse'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/778793?v=4'
+  company: RedHat
+  name: Tako Schotanus
+  bio: ''
+  groups:
+    - cf-egc-second
 sigrunixia:
   login: sigrunixia
   url: 'https://github.com/sigrunixia'
