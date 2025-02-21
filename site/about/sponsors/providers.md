@@ -11,7 +11,7 @@ cssclasses:
 ---
 
 {{- set inKind = page.data.inKind() }}
-{{- set tier = page.data.tier("in-kind") }}
+{{- set tier = page.data.tier("inKind") }}
 <p>{{ tier.description }}</p>
 
 <p>We also extend our thanks to our <a href="index.md">Sponsors</a> and <a href="supporters.md">Supporters</a>.</p>
