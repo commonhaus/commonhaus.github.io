@@ -180,7 +180,7 @@ maxandersen:
     Danish guy enjoying working on open source software. Making things happen at
     Red Hat.
   groups:
-    - cf-egc
+    - cf-egc-second
 quintesse:
   login: quintesse
   url: 'https://github.com/quintesse'
