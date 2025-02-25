@@ -241,3 +241,13 @@ velo:
     lead, QueryDSL stalwart, and Commonhaus advocate.
   groups:
     - cf-egc
+yrodiere:
+  login: yrodiere
+  url: 'https://github.com/yrodiere'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/412878?u=cba007bbff0965b5717d7fc0ec0f62b129ee09c8&v=4
+  company: Red Hat - @hibernate
+  name: Yoann Rodière
+  bio: Hibernate team at Red Hat
+  groups:
+    - cf-egc-second
