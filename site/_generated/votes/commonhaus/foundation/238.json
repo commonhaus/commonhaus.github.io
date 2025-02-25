@@ -5,18 +5,38 @@
   "isDone": false,
   "group": "commonhaus/cf-council",
   "groupSize": 3,
-  "groupVotes": 0,
-  "countedVotes": 0,
-  "droppedVotes": 0,
+  "groupVotes": 1,
+  "countedVotes": 1,
+  "droppedVotes": 1,
   "votingThreshold": "all",
-  "categories": {},
-  "duplicates": [],
-  "otherVotes": [],
-  "missingGroupActors": [
+  "categories": {
+    "approve": {
+      "reactions": [
+        "👍"
+      ],
+      "team": [
+        {
+          "login": "cealsair",
+          "url": "https://github.com/cealsair",
+          "createdAt": "2025-02-25T14:00:44.000+00:00",
+          "reaction": "👍"
+        }
+      ],
+      "otherVotes": [],
+      "teamTotal": 1,
+      "total": 1
+    }
+  },
+  "duplicates": [
     {
       "login": "cealsair",
-      "url": "https://github.com/cealsair"
-    },
+      "url": "https://github.com/cealsair",
+      "createdAt": "2025-02-25T14:00:34.000+00:00",
+      "reaction": "👍"
+    }
+  ],
+  "otherVotes": [],
+  "missingGroupActors": [
     {
       "login": "kenfinnigan",
       "url": "https://github.com/kenfinnigan"
@@ -33,10 +53,10 @@
   "number": 238,
   "repoName": "commonhaus/foundation",
   "date": "2025-02-25T13:47:42Z",
-  "updated": "2025-02-25T13:47:42Z",
+  "updated": "2025-02-25T14:00:45Z",
   "tags": [
     "vote/open"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-0.svg"
+  "progress": "https://www.commonhaus.org/votes/progress-3.svg"
 }
