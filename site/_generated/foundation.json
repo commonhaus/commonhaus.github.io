@@ -180,6 +180,15 @@
     "layout": "layouts/foundation.vto",
     "genUrl": "/agreements/bootstrapping/2024-05-27-bootstrapping-feign.html"
   },
+  "agreements/bootstrapping/2024-07-31-bootstrapping-quarkus.md": {
+    "date": "2025-02-25T20:57:33.000Z",
+    "srcPath": "agreements/bootstrapping/2024-07-31-bootstrapping-quarkus.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2024-07-31-bootstrapping-quarkus.md",
+    "type": "submodule",
+    "layout": "layouts/foundation.vto",
+    "genUrl": "/agreements/bootstrapping/2024-07-31-bootstrapping-quarkus.html"
+  },
   "agreements/bootstrapping/2024-10-30-bootstrapping-debezium.md": {
     "date": "2024-11-21T20:00:11.000Z",
     "srcPath": "agreements/bootstrapping/2024-10-30-bootstrapping-debezium.md",
@@ -206,15 +215,6 @@
     "type": "submodule",
     "layout": "layouts/foundation.vto",
     "genUrl": "/agreements/bootstrapping/2024-11-18-bootstrapping-infinispan.html"
-  },
-  "agreements/bootstrapping/agreements/bootstrapping/2024-07-31-bootstrapping-quarkus.md": {
-    "date": "2024-08-28T12:58:54.000Z",
-    "srcPath": "agreements/bootstrapping/agreements/bootstrapping/2024-07-31-bootstrapping-quarkus.md",
-    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
-    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/agreements/bootstrapping/2024-07-31-bootstrapping-quarkus.md",
-    "type": "submodule",
-    "layout": "layouts/foundation.vto",
-    "genUrl": "/agreements/bootstrapping/agreements/bootstrapping/2024-07-31-bootstrapping-quarkus.html"
   },
   "agreements/bootstrapping/bootstrapping.md": {
     "date": "2024-08-28T12:58:54.000Z",
