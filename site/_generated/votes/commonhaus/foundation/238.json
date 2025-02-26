@@ -1,12 +1,12 @@
 {
   "title": "📝 infrastructure/service provider section",
   "voteType": "marthas",
-  "hasQuorum": false,
+  "hasQuorum": true,
   "isDone": false,
   "group": "commonhaus/cf-council",
   "groupSize": 3,
-  "groupVotes": 1,
-  "countedVotes": 1,
+  "groupVotes": 3,
+  "countedVotes": 3,
   "droppedVotes": 1,
   "votingThreshold": "all",
   "categories": {
@@ -20,11 +20,23 @@
           "url": "https://github.com/cealsair",
           "createdAt": "2025-02-25T14:00:44.000+00:00",
           "reaction": "👍"
+        },
+        {
+          "login": "ebullient",
+          "url": "https://github.com/ebullient",
+          "createdAt": "2025-02-25T23:01:51.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "kenfinnigan",
+          "url": "https://github.com/kenfinnigan",
+          "createdAt": "2025-02-26T00:08:27.000+00:00",
+          "reaction": "👍"
         }
       ],
       "otherVotes": [],
-      "teamTotal": 1,
-      "total": 1
+      "teamTotal": 3,
+      "total": 3
     }
   },
   "duplicates": [
@@ -36,16 +48,7 @@
     }
   ],
   "otherVotes": [],
-  "missingGroupActors": [
-    {
-      "login": "kenfinnigan",
-      "url": "https://github.com/kenfinnigan"
-    },
-    {
-      "login": "ebullient",
-      "url": "https://github.com/ebullient"
-    }
-  ],
+  "missingGroupActors": [],
   "manualCloseComments": null,
   "commentId": "IC_kwDOKRPTI86f3KWy",
   "github": "https://github.com/commonhaus/foundation/pull/238",
@@ -53,10 +56,11 @@
   "number": 238,
   "repoName": "commonhaus/foundation",
   "date": "2025-02-25T13:47:42Z",
-  "updated": "2025-02-25T14:00:45Z",
+  "updated": "2025-02-26T00:08:30Z",
   "tags": [
-    "vote/open"
+    "vote/open",
+    "vote/quorum"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-3.svg"
+  "progress": "https://www.commonhaus.org/votes/vote-quorum.svg"
 }
