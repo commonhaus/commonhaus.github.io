@@ -18,6 +18,15 @@ Naros:
   bio: "Principal Software Engineer @ Red Hat\r\nWorking on Debezium and Hibernate open source projects."
   groups:
     - cf-egc
+SamBarker:
+  login: SamBarker
+  url: 'https://github.com/SamBarker'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/2833578?v=4'
+  company: Red Hat
+  name: Sam Barker
+  bio: Helping bytes move faster between systems from the bottom of the earth...
+  groups:
+    - cf-egc-second
 aalmiray:
   login: aalmiray
   url: 'https://github.com/aalmiray'
@@ -99,7 +108,7 @@ ebullient:
   url: 'https://github.com/ebullient'
   avatarUrl: >-
     https://avatars.githubusercontent.com/u/808713?u=8c50c6169b230fc62777f6910f6669b753ae95a8&v=4
-  company: Red Hat
+  company: 'Red Hat, @commonhaus '
   name: Erin Schnabel
   bio: "Java Champion. Distinguished Engineer and maker of things @ Red Hat. \r\nFormer @IBM."
   groups:
@@ -135,6 +144,15 @@ henri-tremblay:
     Java Champion. Leads EasyMock and Objenesis and contributes to Ehcache.
     Loves optimization and productivity. In Java and in general. Likes to be
     useful. 
+  groups:
+    - cf-egc
+k-wall:
+  login: k-wall
+  url: 'https://github.com/k-wall'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/18440250?v=4'
+  company: Red Hat
+  name: Keith Wall
+  bio: ''
   groups:
     - cf-egc
 karesti:
