@@ -68,7 +68,7 @@ Commonhaus Foundation [Councilors][cfc] represent community interests and ensure
       <div class="subhead">
         {{- if councilor.name }}{{ councilor.name }}<br />{{ /if -}}
         {{- if councilor['term-start'] == 2023 }}Founder{{ if councilor.role }}, {{ /if }}{{ /if -}}
-        {{- if councilor.role }}{{ councilor.role }}{{ /if -}}
+        {{ if councilor.role }}{{ councilor.role }}{{ /if -}}
       </div>
       <p>
         {{- if councilor.bio }}{{ councilor.bio |> md }}
