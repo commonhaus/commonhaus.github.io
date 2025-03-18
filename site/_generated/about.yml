@@ -18,6 +18,15 @@ Naros:
   bio: "Principal Software Engineer @ Red Hat\r\nWorking on Debezium and Hibernate open source projects."
   groups:
     - cf-egc
+SamBarker:
+  login: SamBarker
+  url: 'https://github.com/SamBarker'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/2833578?v=4'
+  company: Red Hat
+  name: Sam Barker
+  bio: ''
+  groups:
+    - cf-egc-second
 aalmiray:
   login: aalmiray
   url: 'https://github.com/aalmiray'
@@ -135,6 +144,15 @@ henri-tremblay:
     Java Champion. Leads EasyMock and Objenesis and contributes to Ehcache.
     Loves optimization and productivity. In Java and in general. Likes to be
     useful. 
+  groups:
+    - cf-egc
+k-wall:
+  login: k-wall
+  url: 'https://github.com/k-wall'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/18440250?v=4'
+  company: Red Hat
+  name: Keith Wall
+  bio: ''
   groups:
     - cf-egc
 karesti:
