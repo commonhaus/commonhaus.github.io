@@ -7,8 +7,9 @@
     hasResponse,
     isForbidden,
     isOk,
+    isServerError,
     knownUser,
-    outboundPost
+    outboundPost,
   } from "../lib/stores";
   import Council from "../components/Council.svelte";
   import Discord from "../components/Home-Discord.svelte";
@@ -18,9 +19,14 @@
   import Loading from "../components/Loading-coffee.svelte";
   import Unknown from "../components/Unknown.svelte";
   import { showDiscord, isCfc } from "../lib/memberStatus";
+
 </script>
 
-{#if !$hasResponse}
+{#if $knownUser === undefined && isServerError($errorFlags.info)}
+  <Oops></Oops>
+{:else if $knownUser === undefined && isForbidden($errorFlags.info)}
+  <Unknown />
+{:else if !$hasResponse}
   <Loading>Fetching your user data</Loading>
 {:else if $outboundPost}
   <Loading>Processing...</Loading>
@@ -40,11 +46,11 @@
     <p><span class="label">Login</span> {$gitHubData.login}</p>
   </div>
 
-  {#if !$knownUser || isForbidden($errorFlags.haus)}
+  {#if !$knownUser}
     <Unknown />
   {:else}
-    {#if isCfc($gitHubData.roles) }
-    <Council />
+    {#if isCfc($gitHubData.roles)}
+      <Council />
     {/if}
     <Membership />
     <ForwardEmail />

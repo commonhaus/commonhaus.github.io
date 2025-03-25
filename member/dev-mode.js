@@ -20,7 +20,7 @@ window["commonhaus"] = {
         await testData('GET', COMMONHAUS, 500, "INTERNAL_SERVER_ERROR", {});
     },
     get503: async () => {
-        await testData('GET', COMMONHAUS, 503, "GATEWAY_TIMEOUT", {});
+        await testData('GET', COMMONHAUS, 503, "SERVICE_UNAVAILABLE", {});
     },
     post404: async () => {
         await testData('POST', COMMONHAUS, 404, "NOT_FOUND", {});
@@ -40,7 +40,7 @@ window["commonhaus"] = {
         await testData('POST', COMMONHAUS, 500, "INTERNAL_SERVER_ERROR", {});
     },
     post503: async () => {
-        await testData('POST', COMMONHAUS, 503, "GATEWAY_TIMEOUT", {});
+        await testData('POST', COMMONHAUS, 503, "SERVICE_UNAVAILABLE", {});
     },
     alias_verify: async () => await load(ALIASES + "?verify=true"),
     // Define more methods...

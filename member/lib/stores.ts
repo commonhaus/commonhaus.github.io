@@ -80,6 +80,10 @@ const errorFlag = (flag: keyof ErrorFlags, value: ErrorStatus) => {
     });
 };
 
+export const isServerError = (e: ErrorStatus): boolean => {
+    return e !== undefined && e === ErrorStatus.SERVER;
+}
+
 export const isForbidden = (e: ErrorStatus): boolean => {
     return e !== undefined && e === ErrorStatus.FORBIDDEN;
 }
@@ -160,10 +164,10 @@ export const post = async (uri: string, body: unknown): Promise<void> => {
 }
 
 const handleResponse = async (method: string, uri: string, response: Response) => {
-    processResponseStatus(method, uri, response);
-    errorFlag("unknown", ErrorStatus.OK);
-
     try {
+        processResponseStatus(method, uri, response);
+        errorFlag("unknown", ErrorStatus.OK);
+
         const text = await response.text();
         if (text) {
             const message = JSON.parse(text);
@@ -192,31 +196,41 @@ const handleResponse = async (method: string, uri: string, response: Response) =
 }
 
 const processResponseStatus = (method: string, uri: string, response: Response) => {
-    if (response.status == 404) {
-        console.debug("Not found");
-        if (uri.includes(APPLY)) {
-            applicationData.set({});
-        }
-    } else if (response.status === 409) {
-        console.error("A conflict occurred")
-        toastMessage("warning",
-            "There was a conflict when trying to save your changes. We've pulled the latest data for you. Try again?");
-    } else if (response.status === 429) {
-        if (uri.includes(APPLY)) {
-            toastMessage("warning", "An update is already in progress, give it a moment.");
-        }
-    } else if (response.status === 503) {
-        console.debug("Service unavailable: trouble with the GitHub API");
-        toastMessage("caution", "Our connection to GitHub is having a hiccup. Please try again in a little while.");
-    } else if (!response.ok) {
-        throw new Error(`${response.status} ${response.statusText}`);
-    } else if (method === 'POST') {
-        toastMessage("success", "So far, so good.");
+    switch (response.status) {
+        case 400:
+            console.error("Bad request", response);
+            if (uri.includes(APPLY)) {
+                applicationData.set({});
+            }
+            break;
+        case 404:
+            console.debug("Not found");
+            if (uri.includes(APPLY)) {
+                applicationData.set({});
+            }
+            break;
+        case 409:
+            console.error("A conflict occurred");
+            toastMessage("warning",
+                "There was a conflict when trying to save your changes. We've pulled the latest data for you. Try again?");
+            break;
+        case 429:
+            if (uri.includes(APPLY)) {
+                toastMessage("warning", "An update is already in progress, give it a moment.");
+            }
+            break;
+        default:
+            if (!response.ok) {
+                throw new Error(`${response.status} ${response.statusText}`);
+            } else if (method === 'POST') {
+                toastMessage("success", "So far, so good.");
+            }
+            break;
     }
 }
 
-const handleErrors = (method: string, uri: string, error: Error) => {
-    const status = flagValue(error);
+const handleErrors = (method: string, uri: string, error: unknown) => {
+    const status = flagValue(error as Error);
     if (method === 'GET') {
         if (uri.includes(INFO)) {
             errorFlag("info", status);
@@ -239,7 +253,6 @@ const flagValue = (error: Error): ErrorStatus => {
         console.debug('Fetch aborted');
         return ErrorStatus.ABORT;
     }
-    console.error(error);
     if (error.message.startsWith("403")) {
         return ErrorStatus.FORBIDDEN;
     } else if (error.message.startsWith("5")) {
