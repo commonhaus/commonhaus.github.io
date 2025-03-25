@@ -13,6 +13,7 @@
     hasResponse,
     init,
     isForbidden,
+    isServerError,
     knownUser,
     location,
     toaster,
@@ -49,12 +50,9 @@
   });
 
   $: {
-    if (
-      $location !== "" &&
-      (!$knownUser ||
-        isForbidden($errorFlags.info) ||
-        isForbidden($errorFlags.haus))
-    ) {
+    if (!$knownUser ||
+        isServerError($errorFlags.info) ||
+        isForbidden($errorFlags.info)) {
       window.location.hash = "";
     }
   }

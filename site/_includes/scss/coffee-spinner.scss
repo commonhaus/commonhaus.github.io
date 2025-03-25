@@ -6,6 +6,20 @@ body {
   --steam2-delay: 750ms;
   --steam3-delay: 1100ms;
 }
+.sad-face {
+  --steam-height: -40px;
+  --steam1-delay: 300ms; // left eye appears first
+  --steam2-delay: 400ms; // right eye appears next
+  --steam3-delay: 450ms; // frown appears last
+  .steam3 {
+    --steam-start-height: 20px;
+  }
+  .steam1,
+  .steam2 {
+    --steam-start-height: 25px;
+  }
+}
+
 .coffee-wrapper {
   width: 100px;
   height: 100px;

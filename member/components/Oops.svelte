@@ -1,9 +1,94 @@
+<script>
+  import { hasResponse } from "../lib/stores";
+</script>
+
 <div class="hold error">
   <h1>Oops!</h1>
+  <div class="coffee-wrapper sad-face" title='Sad emoji face in steam from "Doodle Basic Emoji Face Vectors Collection" by BomSymbols
+       (https://creativemarket.com/BomSymbols?ref=svgrepo.com) in CC Attribution License via SVG Repo (https://www.svgrepo.com/)'>
+    <svg
+      version="1.1"
+      id="Layer_1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      viewBox="0 0 1200 1200"
+      style="enable-background:new 0 0 1200 1200;"
+      xml:space="preserve"
+    >
+      <g transform="translate(275, 100) scale(5)">
+        <path
+          class="steam steam1"
+          d="M27.6,34.3c-2.2,2.3-4.2,4.8-5.5,7.5c-1.6,3.4,2.7,7.4,5.6,4.3c3.6-3.8,6.2-8.5,9.8-12.4
+        c1.5-1.6,1.1-3.9-0.7-5.1c-2.7-1.9-5.1-4.2-7.4-6.5c-1.7-1.8-3.3-4.8-6.1-4.8c-0.7,0-1.2,0.5-1.5,1.1c-1.1,2.7,1.9,5.9,3.4,7.9
+        c0.4,0.5,0.9,1,1.3,1.5c-0.9,0-1.9,0-2.7,0c-2.9,0-6.8-0.3-9.2,1.6c-1.1,0.8-1.3,2.5,0,3.2c2.5,1.5,5.8,1,8.6,1.2
+        C24.7,33.9,26.1,34.1,27.6,34.3z"
+        />
+        <!-- Right eye -->
+        <path
+          class="steam steam2"
+          d="M76.1,29.4c-2.4-1.8-6.3-1.5-9.2-1.6c-0.9,0-1.8,0-2.7,0c0.4-0.5,0.9-1,1.3-1.5c1.6-2,4.6-5.2,3.4-7.9
+        c-0.3-0.6-0.7-1.1-1.5-1.1c-2.8,0-4.3,3-6.1,4.8c-2.3,2.4-4.7,4.6-7.4,6.5c-1.7,1.2-2.2,3.5-0.7,5.1c3.6,3.9,6.2,8.6,9.8,12.4
+        c2.9,3.1,7.2-0.8,5.6-4.3c-1.3-2.6-3.3-5.1-5.5-7.5c1.5-0.2,2.9-0.4,4.3-0.5c2.8-0.2,6.1,0.3,8.6-1.2
+        C77.4,31.9,77.2,30.2,76.1,29.4z"
+        />
+        <!-- Frown -->
+        <path
+          class="steam steam3"
+          d="M44.5,56c-5.6,0-11.3,1.7-16.1,4.6c-3.7,2.2-10.3,6.9-10.2,11.7c0,1,1,1.4,1.8,1c2.1-0.9,3.4-3.2,5-4.7
+        c1.7-1.6,3.6-3,5.6-4.2c4.2-2.4,9-3.7,13.8-3.6c4.7,0.1,9.2,1.5,13.1,3.9c4.3,2.6,6.9,6.1,9.7,10.1c2.1,3,6.5,0.5,4.9-2.9
+        C67.7,62.1,55.1,56,44.5,56z"
+        />
+      </g>
+
+      <g>
+        <path
+          class="cup-outline backdrop"
+          d="M1049,562.5c-40.2-23.3-86.3-29.5-130.9-20.8v-53.4c0-10-8-18.1-18.1-18.1H110.6c-10.2,0-18.1,8.1-18.1,18.1
+         v250.2c0,126.2,56.6,239.2,145.7,314.9H72c-8.8,0-16,7.2-16,16v22.6c0,53.7,43.5,97.2,97.2,97.2h697.7
+         c66.2,0,119.8-53.6,119.8-119.8v0c0-8.8-7.2-16-16-16H772.4c31.6-26.8,59.1-58.4,81.5-93.5c0,0,0,0,0,0l0,0c0,0,0,0,0,0
+         c1.4,0.8,2.5,1.5,4,2c90.3,31.3,198.4-11.3,253.5-106.6C1173,748.5,1144.4,617.5,1049,562.5z M1011.7,797.6
+         c-24.3,41.8-69.6,63.2-108.4,51.8l0,0c9.8-35.3,14.9-72.5,14.9-110.9v-74.7c1.5-0.1,2.5-0.4,3.6-0.9c22.1-8,46.4-7.3,66.7,4.5
+         C1029.8,691.3,1039.2,749.8,1011.7,797.6z"
+        />
+        <path
+          class="cup-fg"
+          d="M298.5,1053.4H712c102.3-67.3,169.8-183.2,169.8-314.9V506.4H128.7v232.1
+             C128.7,870.2,196.2,986.1,298.5,1053.4z"
+        />
+        <path
+          class="cup-fg handle"
+          d="M1079.8,837.1c-45.3,78.5-133.1,115.9-207.8,91.2c0,0,0,0,0,0v0c0,0,0,0,0,0c7.6-14.3,14.1-29.2,19.9-44.5
+             c53.7,16.2,117.5-10.3,150.8-68.1c38.4-66.3,21-146.6-36.3-179.7c-27.2-15.6-58.4-18.4-88.5-10v-47.3c38.1-9.1,78-4.9,112.8,15.1
+             C1109.9,639.5,1131,748.7,1079.8,837.1z"
+        />
+        <path
+          class="cup-fg saucer"
+          d="M935.9,1086.5c-8,39.6-43.1,69.5-85,69.5H153.2c-35.3,0-64.1-28.7-64.1-64.1v-5.5H935.9"
+        />
+        <path
+          class="cup-outline overlay"
+          d="M186.4,602.7v113.1c0,122.4,39.2,188.8,108.4,252.6c7.3,6.8,18.9,6.3,25.7-1c6.9-7.4,6.2-18.9-1.1-25.7
+             c-62-57-96.8-116.5-96.8-226V602.7c0-10-8.3-18.1-18.1-18.1C194.3,584.6,186.4,592.7,186.4,602.7L186.4,602.7z"
+        />
+      </g>
+    </svg>
+  </div>
   <p><slot></slot></p>
-  <p>The reset button at the bottom of this page may help, or you can try again later.</p>
-  <footer>
-    Even better (but optional), <a href="https://github.com/commonhaus/automation">open an issue</a>
-    with any errors shown in the browser's debug console (or both!).
-  </footer>
+  {#if $hasResponse}
+    <p>
+      You might want to try the refresh button at the bottom of the page or
+      check your network connection.
+    </p>
+    <footer>
+      Even better (but optional), <a
+        href="https://github.com/commonhaus/automation">open an issue</a
+      >
+      with any errors shown in the browser's debug console (or both!).
+    </footer>
+  {:else}
+    <p>We need a moment to clean up this mess.<br />Please try again in a bit.</p>
+  {/if}
 </div>
+
