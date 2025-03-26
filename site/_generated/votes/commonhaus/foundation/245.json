@@ -1,0 +1,106 @@
+{
+  "title": "📝⚖️ Revisions to Asset Transfer Agreement",
+  "voteType": "marthas",
+  "hasQuorum": false,
+  "isDone": false,
+  "group": "commonhaus/cf-egc",
+  "groupSize": 16,
+  "groupVotes": 1,
+  "countedVotes": 1,
+  "droppedVotes": 0,
+  "votingThreshold": "twothirds",
+  "categories": {
+    "approve": {
+      "reactions": [
+        "👍"
+      ],
+      "team": [
+        {
+          "login": "henri-tremblay",
+          "url": "https://github.com/henri-tremblay",
+          "createdAt": "2025-03-26T15:49:01.000+00:00",
+          "reaction": "👍"
+        }
+      ],
+      "otherVotes": []
+    }
+  },
+  "duplicates": [],
+  "otherVotes": [],
+  "missingGroupActors": [
+    {
+      "login": "aalmiray",
+      "url": "https://github.com/aalmiray"
+    },
+    {
+      "login": "velo",
+      "url": "https://github.com/velo"
+    },
+    {
+      "login": "dandreadis",
+      "url": "https://github.com/dandreadis"
+    },
+    {
+      "login": "marc0der",
+      "url": "https://github.com/marc0der"
+    },
+    {
+      "login": "evanchooly",
+      "url": "https://github.com/evanchooly"
+    },
+    {
+      "login": "tristantarrant",
+      "url": "https://github.com/tristantarrant"
+    },
+    {
+      "login": "maxandersen",
+      "url": "https://github.com/maxandersen"
+    },
+    {
+      "login": "k-wall",
+      "url": "https://github.com/k-wall"
+    },
+    {
+      "login": "cealsair",
+      "url": "https://github.com/cealsair"
+    },
+    {
+      "login": "cowtowncoder",
+      "url": "https://github.com/cowtowncoder"
+    },
+    {
+      "login": "gavinking",
+      "url": "https://github.com/gavinking"
+    },
+    {
+      "login": "criccomini",
+      "url": "https://github.com/criccomini"
+    },
+    {
+      "login": "Naros",
+      "url": "https://github.com/Naros"
+    },
+    {
+      "login": "kenfinnigan",
+      "url": "https://github.com/kenfinnigan"
+    },
+    {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    }
+  ],
+  "manualCloseComments": null,
+  "commentId": "IC_kwDOKRPTI86kPLZT",
+  "github": "https://github.com/commonhaus/foundation/pull/245",
+  "itemId": "PR_kwDOKRPTI86QIDZp",
+  "number": 245,
+  "repoName": "commonhaus/foundation",
+  "date": "2025-03-26T18:46:41Z",
+  "updated": "2025-03-26T18:46:41Z",
+  "tags": [
+    "vote/open",
+    "notice"
+  ],
+  "closed": false,
+  "progress": "https://www.commonhaus.org/votes/progress-0.svg"
+}
