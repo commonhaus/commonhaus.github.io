@@ -1,12 +1,12 @@
 {
   "title": "📝⚖️ Revisions to Asset Transfer Agreement",
   "voteType": "marthas",
-  "hasQuorum": false,
+  "hasQuorum": true,
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 16,
-  "groupVotes": 6,
-  "countedVotes": 6,
+  "groupVotes": 11,
+  "countedVotes": 11,
   "droppedVotes": 0,
   "votingThreshold": "twothirds",
   "categories": {
@@ -28,9 +28,21 @@
           "reaction": "👍"
         },
         {
+          "login": "criccomini",
+          "url": "https://github.com/criccomini",
+          "createdAt": "2025-03-27T20:41:06.000+00:00",
+          "reaction": "👍"
+        },
+        {
           "login": "ebullient",
           "url": "https://github.com/ebullient",
           "createdAt": "2025-03-26T18:54:48.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "evanchooly",
+          "url": "https://github.com/evanchooly",
+          "createdAt": "2025-03-28T14:18:00.000+00:00",
           "reaction": "👍"
         },
         {
@@ -43,6 +55,18 @@
           "login": "henri-tremblay",
           "url": "https://github.com/henri-tremblay",
           "createdAt": "2025-03-26T15:49:01.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "maxandersen",
+          "url": "https://github.com/maxandersen",
+          "createdAt": "2025-03-28T12:43:06.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "tristantarrant",
+          "url": "https://github.com/tristantarrant",
+          "createdAt": "2025-03-28T15:00:19.000+00:00",
           "reaction": "👍"
         }
       ],
@@ -57,6 +81,12 @@
           "login": "dandreadis",
           "url": "https://github.com/dandreadis",
           "createdAt": "2025-03-27T13:04:40.000+00:00",
+          "reaction": "👀"
+        },
+        {
+          "login": "kenfinnigan",
+          "url": "https://github.com/kenfinnigan",
+          "createdAt": "2025-03-29T18:52:35.000+00:00",
           "reaction": "👀"
         }
       ],
@@ -75,18 +105,6 @@
       "url": "https://github.com/marc0der"
     },
     {
-      "login": "evanchooly",
-      "url": "https://github.com/evanchooly"
-    },
-    {
-      "login": "tristantarrant",
-      "url": "https://github.com/tristantarrant"
-    },
-    {
-      "login": "maxandersen",
-      "url": "https://github.com/maxandersen"
-    },
-    {
       "login": "k-wall",
       "url": "https://github.com/k-wall"
     },
@@ -97,14 +115,6 @@
     {
       "login": "cowtowncoder",
       "url": "https://github.com/cowtowncoder"
-    },
-    {
-      "login": "criccomini",
-      "url": "https://github.com/criccomini"
-    },
-    {
-      "login": "kenfinnigan",
-      "url": "https://github.com/kenfinnigan"
     }
   ],
   "manualCloseComments": null,
@@ -114,11 +124,14 @@
   "number": 245,
   "repoName": "commonhaus/foundation",
   "date": "2025-03-26T18:46:41Z",
-  "updated": "2025-03-27T15:56:23Z",
+  "updated": "2025-03-29T21:21:03Z",
   "tags": [
     "vote/open",
-    "notice"
+    "notice",
+    "vote/quorum",
+    "closed"
   ],
-  "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-5.svg"
+  "closed": true,
+  "closedAt": "2025-03-29T21:20:03Z",
+  "progress": "https://www.commonhaus.org/votes/vote-closed.svg"
 }

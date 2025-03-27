@@ -52,7 +52,7 @@
     "genUrl": "/GOVERNANCE.html"
   },
   "PROJECTS.yaml": {
-    "date": "2025-03-18T23:28:52.000Z",
+    "date": "2025-04-01T20:19:17.000Z",
     "srcPath": "PROJECTS.yaml",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/PROJECTS.yaml",
@@ -68,7 +68,7 @@
     "genUrl": "/"
   },
   "SPONSORS.yaml": {
-    "date": "2025-03-18T23:22:14.000Z",
+    "date": "2025-04-07T20:02:29.000Z",
     "srcPath": "SPONSORS.yaml",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/SPONSORS.yaml",
@@ -260,7 +260,7 @@
     "genUrl": "/agreements/project-contribution/"
   },
   "agreements/project-contribution/asset-transfer-agreement.md": {
-    "date": "2025-02-21T00:42:59.000Z",
+    "date": "2025-03-29T21:20:03.000Z",
     "srcPath": "agreements/project-contribution/asset-transfer-agreement.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/project-contribution/asset-transfer-agreement.md",
@@ -278,7 +278,7 @@
     "genUrl": "/agreements/project-contribution/fiscal-sponsorship-agreement.html"
   },
   "agreements/project-contribution/onboarding-checklist.md": {
-    "date": "2025-02-13T18:38:05.000Z",
+    "date": "2025-03-31T12:42:57.000Z",
     "srcPath": "agreements/project-contribution/onboarding-checklist.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/project-contribution/onboarding-checklist.md",
@@ -305,7 +305,7 @@
     "genUrl": "/agreements/sponsorship/"
   },
   "agreements/sponsorship/sponsorship-agreement.md": {
-    "date": "2025-02-26T00:27:34.000Z",
+    "date": "2025-03-28T14:54:35.000Z",
     "srcPath": "agreements/sponsorship/sponsorship-agreement.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/sponsorship/sponsorship-agreement.md",
