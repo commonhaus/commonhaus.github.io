@@ -34,6 +34,12 @@
           "reaction": "👍"
         },
         {
+          "login": "gavinking",
+          "url": "https://github.com/gavinking",
+          "createdAt": "2025-03-27T15:55:09.000+00:00",
+          "reaction": "👍"
+        },
+        {
           "login": "henri-tremblay",
           "url": "https://github.com/henri-tremblay",
           "createdAt": "2025-03-26T15:49:01.000+00:00",
@@ -51,12 +57,6 @@
           "login": "dandreadis",
           "url": "https://github.com/dandreadis",
           "createdAt": "2025-03-27T13:04:40.000+00:00",
-          "reaction": "👀"
-        },
-        {
-          "login": "gavinking",
-          "url": "https://github.com/gavinking",
-          "createdAt": "2025-03-27T15:53:00.000+00:00",
           "reaction": "👀"
         }
       ],
@@ -114,7 +114,7 @@
   "number": 245,
   "repoName": "commonhaus/foundation",
   "date": "2025-03-26T18:46:41Z",
-  "updated": "2025-03-27T15:53:55Z",
+  "updated": "2025-03-27T15:56:23Z",
   "tags": [
     "vote/open",
     "notice"
