@@ -1,6 +1,7 @@
 @use 'index' as *;
 
 // match in scroll-toggle.js
+// --menu-height and --menu-top are also set in scroll-toggle.js
 $menu-snap: 650px;
 
 $z-index-footer: 5;
@@ -170,6 +171,8 @@ header.site {
         width: 100vw;
         // height: set in scroll-toggle.js
         // top: set in scroll-toggle.js
+        top: var(--menu-top);
+        height: var(--menu-height);
         right: 0;
         opacity: 0;
         transform: translateX(100%);

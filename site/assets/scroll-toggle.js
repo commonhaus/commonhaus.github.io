@@ -1,18 +1,21 @@
 document.addEventListener('DOMContentLoaded', function () {
     const header = document.querySelector('header.site');
-    const menu = document.querySelector('ul.top-level');
     const menuSnap = 650;
 
     function checkViewport(e) {
+        let height, top;
         if (e.matches) {
             // If the viewport is at least menuSnap pixels wide
-            menu.style.height = 'auto';
-            menu.style.top = header.offsetHeight + 'px';
+            height = 'auto';
+            top = header.offsetHeight + 'px';
         } else {
             // If the viewport is less than menuSnap pixels wide
-            menu.style.height = (globalThis.innerHeight - header.offsetHeight) + 'px';
-            menu.style.top = header.offsetHeight + 'px';
+            height = (globalThis.innerHeight - header.offsetHeight) + 'px';
+            top = header.offsetHeight + 'px';
         }
+
+        header.style.setProperty('--menu-height', height);
+        header.style.setProperty('--menu-top', top);
     }
 
     const mql = window.matchMedia(`(min-width: ${menuSnap}px)`);

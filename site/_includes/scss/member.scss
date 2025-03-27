@@ -39,7 +39,10 @@ main.member {
     }
   }
 
-  a.close {
+  button.close {
+    --button-bg-color: transparent;
+    --button-bg-color-hover: transparent;
+    --button-text-color: var(--text-normal);
     position: absolute;
     top: 0;
     right: 0;
@@ -280,6 +283,7 @@ main.member {
   .content {
     flex: 2 1 auto;
     min-height: calc(100vh - 15em);
+    position: relative;
   }
 
   .modified,

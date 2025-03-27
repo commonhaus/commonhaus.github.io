@@ -1,10 +1,16 @@
 <script>
-  function goHome(event) {
-    event.preventDefault();
-    window.location.hash = "";
-  }
+  const handleClick = (_) => {
+    window.location.assign(window.location.pathname);
+  };
 </script>
 
-<a class="close" href="#/" on:click={goHome} aria-label="Close and go to home page">
-  <svg width="24" height="24"><use xlink:href="/assets/icon-symbol.svg#icon-circle-x"/></svg>
-</a>
+<button
+  class="close"
+  id="member-close"
+  aria-label="Close and go to home page"
+  on:click={handleClick}
+>
+  <svg width="24" height="24"
+    ><use xlink:href="/assets/icon-symbol.svg#icon-circle-x" /></svg
+  >
+</button>
