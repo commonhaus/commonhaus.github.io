@@ -5,8 +5,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 16,
-  "groupVotes": 7,
-  "countedVotes": 7,
+  "groupVotes": 9,
+  "countedVotes": 9,
   "droppedVotes": 0,
   "votingThreshold": "twothirds",
   "categories": {
@@ -40,6 +40,12 @@
           "reaction": "👍"
         },
         {
+          "login": "evanchooly",
+          "url": "https://github.com/evanchooly",
+          "createdAt": "2025-03-28T14:18:00.000+00:00",
+          "reaction": "👍"
+        },
+        {
           "login": "gavinking",
           "url": "https://github.com/gavinking",
           "createdAt": "2025-03-27T15:55:09.000+00:00",
@@ -49,6 +55,12 @@
           "login": "henri-tremblay",
           "url": "https://github.com/henri-tremblay",
           "createdAt": "2025-03-26T15:49:01.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "maxandersen",
+          "url": "https://github.com/maxandersen",
+          "createdAt": "2025-03-28T12:43:06.000+00:00",
           "reaction": "👍"
         }
       ],
@@ -81,16 +93,8 @@
       "url": "https://github.com/marc0der"
     },
     {
-      "login": "evanchooly",
-      "url": "https://github.com/evanchooly"
-    },
-    {
       "login": "tristantarrant",
       "url": "https://github.com/tristantarrant"
-    },
-    {
-      "login": "maxandersen",
-      "url": "https://github.com/maxandersen"
     },
     {
       "login": "k-wall",
@@ -116,11 +120,11 @@
   "number": 245,
   "repoName": "commonhaus/foundation",
   "date": "2025-03-26T18:46:41Z",
-  "updated": "2025-03-27T21:28:09Z",
+  "updated": "2025-03-28T14:33:09Z",
   "tags": [
     "vote/open",
     "notice"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-6.svg"
+  "progress": "https://www.commonhaus.org/votes/progress-8.svg"
 }
