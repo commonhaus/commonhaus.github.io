@@ -1,12 +1,12 @@
 {
   "title": "📝⚖️ Revisions to Asset Transfer Agreement",
   "voteType": "marthas",
-  "hasQuorum": false,
+  "hasQuorum": true,
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 16,
-  "groupVotes": 10,
-  "countedVotes": 10,
+  "groupVotes": 11,
+  "countedVotes": 11,
   "droppedVotes": 0,
   "votingThreshold": "twothirds",
   "categories": {
@@ -82,6 +82,12 @@
           "url": "https://github.com/dandreadis",
           "createdAt": "2025-03-27T13:04:40.000+00:00",
           "reaction": "👀"
+        },
+        {
+          "login": "kenfinnigan",
+          "url": "https://github.com/kenfinnigan",
+          "createdAt": "2025-03-29T18:52:35.000+00:00",
+          "reaction": "👀"
         }
       ],
       "otherVotes": []
@@ -109,10 +115,6 @@
     {
       "login": "cowtowncoder",
       "url": "https://github.com/cowtowncoder"
-    },
-    {
-      "login": "kenfinnigan",
-      "url": "https://github.com/kenfinnigan"
     }
   ],
   "manualCloseComments": null,
@@ -122,11 +124,12 @@
   "number": 245,
   "repoName": "commonhaus/foundation",
   "date": "2025-03-26T18:46:41Z",
-  "updated": "2025-03-28T15:28:00Z",
+  "updated": "2025-03-29T18:53:39Z",
   "tags": [
     "vote/open",
-    "notice"
+    "notice",
+    "vote/quorum"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-9.svg"
+  "progress": "https://www.commonhaus.org/votes/vote-quorum.svg"
 }
