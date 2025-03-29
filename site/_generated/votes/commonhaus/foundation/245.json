@@ -128,8 +128,10 @@
   "tags": [
     "vote/open",
     "notice",
-    "vote/quorum"
+    "vote/quorum",
+    "closed"
   ],
-  "closed": false,
-  "progress": "https://www.commonhaus.org/votes/vote-quorum.svg"
+  "closed": true,
+  "closedAt": "2025-03-29T21:20:03Z",
+  "progress": "https://www.commonhaus.org/votes/vote-closed.svg"
 }
