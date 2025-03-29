@@ -5,13 +5,14 @@
   "author": "ebullient",
   "number": 245,
   "date": "2025-03-26T00:34:01Z",
-  "updated": "2025-03-28T15:28:01Z",
+  "updated": "2025-03-29T18:53:40Z",
   "url": "/activity/245.html",
   "type": "pullRequest",
   "tags": [
     "post",
     "vote/open",
-    "notice"
+    "notice",
+    "vote/quorum"
   ],
   "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/245.svg)](https://github.com/commonhaus/foundation/pull/245#issuecomment-2755442259 \"IC_kwDOKRPTI86kPLZT\")\r\n\r\nSome clarifications to language as the instrument is put to use, you might say.\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment).\r\n"
 }
