@@ -24,8 +24,7 @@
       <div class="card two">
           {{ include "layouts/display-logo.vto" { name: sponsor.name, display: display, rel: "sponsored" } }}
           <div class="text-content">
-              <p><a href="{{ display.home }}" rel="sponsored">{{ sponsor.name }}</a>.
-                  {{- if display[key] }} {{ display[key] |> md(true) }}
+              <p>{{- if display[key] }} {{ display[key] |> md(true) }}
                   {{- else }} {{ display.description |> md(true) }}
                   {{- /if -}}</p>
           </div>
