@@ -14,15 +14,45 @@ interface Error {
     }[];
 }
 
-// Team / Authors
+// OpenCollective data
+
+interface SocialLink {
+    type: string;
+    url: string;
+}
+interface OCBacker {
+    account: {
+        id: string;
+        name: string;
+        slug: string;
+        isIncognito: boolean;
+        imageUrl: string;
+        socialLinks: SocialLink[];
+    }
+}
+interface OCBackerData {
+    errors?: Error[];
+    data: {
+        account: {
+            members: {
+                totalCount: number;
+                limit: number;
+                nodes: OCBacker[];
+            };
+        };
+    }
+}
+
+// GitHub: Team / Authors
+
 interface User {
     login: string;
     url: string;
     avatarUrl: string;
-    company: string;
-    companyHTML: string;
     name: string;
-    bio: string;
+    bio?: string;
+    company?: string;
+    companyHTML?: string;
     groups?: string[];
 }
 interface TeamData {
@@ -51,6 +81,22 @@ interface InviteData {
 }
 interface Invitee {
     invitee: User
+}
+
+// GitHub Sponsors
+
+interface SponsorData {
+    errors?: Error[];
+    data: {
+        organization: {
+            sponsorshipsAsMaintainer: {
+                totalCount: number;
+                nodes: {
+                    sponsorEntity: User;
+                }[];
+            }
+        }
+    }
 }
 
 // Discussion/Pull Request activity data

@@ -8,7 +8,7 @@
     "vite-watch": "deno run -A --node-modules-dir npm:vite build --watch",
     "serve": "deno run -A ./tasks/serve.js",
     "serve-all": "deno run -A ./tasks/serve-all.js",
-    "about": "deno run --allow-run=gh --allow-read=./tasks/graphql,./site/_generated --allow-write=./site/_generated ./tasks/about.ts",
+    "about": "deno run --allow-run=gh --allow-net --allow-read=./tasks/graphql,./site/_generated --allow-write=./site/_generated ./tasks/about.ts",
     "activity": "deno run --allow-run=gh --allow-read=./tasks/graphql,./site/activity,./site/_generated --allow-write=./site/_generated ./tasks/activity.ts",
     "lastmod": "deno run --allow-run=git,gh --allow-read=. --allow-write=./site/_generated ./tasks/lastmod.ts",
     "checkCsp": "deno run --allow-read=./public ./tasks/checkCsp.ts"

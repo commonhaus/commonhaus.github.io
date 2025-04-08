@@ -1,0 +1,22 @@
+query account($slug: String, $offset: Int!) {
+    account(slug: $slug) {
+        members(role: BACKER, limit: 100, offset: $offset) {
+            totalCount
+            offset
+            limit
+            nodes {
+                account {
+                    id
+                    name
+                    slug
+                    imageUrl
+                    isIncognito
+                    socialLinks {
+                        type
+                        url
+                    }
+                }
+            }
+        }
+    }
+}
