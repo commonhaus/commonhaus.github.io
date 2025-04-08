@@ -22,7 +22,15 @@ export const mayHaveAttestations = (status: MemberStatus): boolean => {
 }
 
 export const mayHaveEmail = (status: MemberStatus): boolean => {
+    return mayHaveCommonhausEmail(status) || mayHaveAlternateEmail(status);
+}
+
+export const mayHaveCommonhausEmail = (status: MemberStatus): boolean => {
     return mayHaveAttestations(status);
+}
+
+export const mayHaveAlternateEmail = (status: MemberStatus): boolean => {
+    return mayHaveAttestations(status) || status == MemberStatus.CONTRIBUTOR;
 }
 
 export const showDiscord = (status: MemberStatus): boolean => {

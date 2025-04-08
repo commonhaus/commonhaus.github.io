@@ -1,11 +1,12 @@
 // This is a find-replace extension of stores.ts for local dev-mode testing
 
-// Define your namespace
+// Namespace. See site/_plugins/devBackend.ts when working w/ serve-all
 window["commonhaus"] = {
     blank: () => {
         clear();
     },
     cfc: async () => await post(COMMONHAUS + "/status?role=cfc"),
+    contributor: async () => await post(COMMONHAUS + "/status?role=contributor"),
     egc: async () => await post(COMMONHAUS + "/status?role=egc"),
     member: async () => await post(COMMONHAUS + "/status?role=member"),
     sponsor: async () => await post(COMMONHAUS + "/status?role=sponsor"),
