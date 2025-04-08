@@ -22,6 +22,13 @@
     align-items: flex-start; // Align items to the top
   }
 
+  &.avatars {
+    gap: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap; // Allow the cards to wrap onto multiple lines
+    justify-content: space-around;
+  }
+
   h3 {
     font-size: var(--font-large);
     @include figtree-medium;
@@ -123,13 +130,8 @@
       }
     }
 
+    &.avatar-only,
     &.profile {
-      width: 300px;
-      max-width: 300px;
-      flex-direction: row; // Make the image and text be side by side
-      align-items: start; // Align items to the top
-      gap: 1em; // Add some space between the image and text
-
       .avatar,
       .avatar-flip {
         min-width: 75px;
@@ -166,6 +168,15 @@
       &:hover .avatar-flip {
         transform: rotateY(180deg);
       }
+
+    }
+
+    &.profile {
+      width: 300px;
+      max-width: 300px;
+      flex-direction: row; // Make the image and text be side by side
+      align-items: start; // Align items to the top
+      gap: 1em; // Add some space between the image and text
 
       .text-content {
         align-items: flex-start;

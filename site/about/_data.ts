@@ -1,4 +1,5 @@
 import { parse } from "@std/yaml";
+import { MEMBERS } from "../../tasks/constants.ts";
 
 // Merge contents of CONTACTS.yaml, PROJECTS.yaml, SPONSORS.yaml and ./site/_generated/about.yml
 // into a single data structure for Project Representatives and Councilors
@@ -36,6 +37,7 @@ interface User {
     name?: string;
     company?: string;
     see?: string;
+    groups?: string[];
 }
 interface SponsorData {
     tiers: Record<string, SponsorTier>;
@@ -83,7 +85,8 @@ const devMode = Deno.env.get("DEV_MODE") || false;
 const CONTACT_DATA = parse(Deno.readTextFileSync("./site/foundation/CONTACTS.yaml")) as Record<string, Contact[]>;
 const SPONSOR_DATA = parse(Deno.readTextFileSync("./site/foundation/SPONSORS.yaml")) as SponsorData;
 const PROJECT_DATA = parse(Deno.readTextFileSync("./site/foundation/PROJECTS.yaml")) as Record<string, ProjectData>;
-const USER_DATA = parse(Deno.readTextFileSync("./site/_generated/about.yml")) as Record<string, unknown>;
+const USER_DATA = parse(Deno.readTextFileSync("./site/_generated/about.yml")) as Record<string, User>;
+const SUPPORTER_DATA = parse(Deno.readTextFileSync("./site/_generated/supporters.yml")) as Record<string, User>;
 
 // Create a map for sort order
 const tiers = SPONSOR_DATA.tiers;
@@ -244,8 +247,17 @@ function tier(tier: string): SponsorTier {
     return tiers[tier];
 }
 
+function members(): User[] {
+    return Object.values(USER_DATA)
+        .filter((user: User) => user.groups?.includes(MEMBERS) && user.groups?.length === 1);
+}
+
 function supporters(): User[] {
-    return [];
+    const result = [
+        ...Object.values(SUPPORTER_DATA),
+        ...Object.values(USER_DATA).filter((user: User) => user.groups?.includes(MEMBERS))
+    ];
+    return result;
 }
 
 export {
@@ -256,5 +268,6 @@ export {
     tieredSponsors,
     filteredTiers,
     inKind,
+    members,
     supporters
 }

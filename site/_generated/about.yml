@@ -1,3 +1,13 @@
+DavideD:
+  login: DavideD
+  url: 'https://github.com/DavideD'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/559221?u=9a903d5d908e756350299a038f3c32ea731cb1f8&v=4
+  company: '@hibernate @RedHatOfficial'
+  name: Davide D'Alto
+  bio: ''
+  groups:
+    - members
 JooHyukKim:
   login: JooHyukKim
   url: 'https://github.com/JooHyukKim'
@@ -8,6 +18,7 @@ JooHyukKim:
   bio: "Member, Core-Dev @FasterXML \r\nMember @commonhaus second-representative of Jackson"
   groups:
     - cf-egc-second
+    - members
 Naros:
   login: Naros
   url: 'https://github.com/Naros'
@@ -27,6 +38,15 @@ SamBarker:
   bio: Helping bytes move faster between systems from the bottom of the earth...
   groups:
     - cf-egc-second
+Sanne:
+  login: Sanne
+  url: 'https://github.com/Sanne'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/42573?v=4'
+  company: Red Hat
+  name: Sanne Grinovero
+  bio: "Hibernate team lead, Quarkus R&D, Java Champion, Architect at Red Hat.\r\n\r\nDutch, Italian, living near London. \r\n\r\nPassion for OSS and JVM, likes efficient code."
+  groups:
+    - members
 aalmiray:
   login: aalmiray
   url: 'https://github.com/aalmiray'
@@ -37,6 +57,7 @@ aalmiray:
   bio: "I code for fun and help others in the process. Java Champion Alumni. Co-founder of Hackergarten & Hack.Commit.Push. Creator of @jreleaser \U0001F680"
   groups:
     - cf-egc
+    - cf-officers
 ashni-mehta:
   login: ashni-mehta
   url: 'https://github.com/ashni-mehta'
@@ -47,6 +68,17 @@ ashni-mehta:
   bio: product @ github
   groups:
     - advisory-board
+    - cf-officers
+beikov:
+  login: beikov
+  url: 'https://github.com/beikov'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/358916?u=f2738658907e68bcbfdcd4cca600edae1671b72f&v=4
+  company: Red Hat & Blazebit
+  name: Christian Beikov
+  bio: ''
+  groups:
+    - members
 cealsair:
   login: cealsair
   url: 'https://github.com/cealsair'
@@ -72,6 +104,10 @@ commonhaus-bot:
     Foundation's mission. 
   groups:
     - advisory-board
+    - cf-egc
+    - cf-egc-second
+    - cf-officers
+    - members
 cowtowncoder:
   login: cowtowncoder
   url: 'https://github.com/cowtowncoder'
@@ -92,6 +128,16 @@ criccomini:
   bio: 'Writer of books, code, checks, and newsletters. Working on SlateDB.'
   groups:
     - cf-egc
+cstamas:
+  login: cstamas
+  url: 'https://github.com/cstamas'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/45165?u=c81da45c3947008bc0321bfdf65dbe1baa101ae2&v=4
+  company: '@flatwhite '
+  name: Tamas Cservenak
+  bio: ''
+  groups:
+    - members
 dandreadis:
   login: dandreadis
   url: 'https://github.com/dandreadis'
@@ -103,6 +149,16 @@ dandreadis:
     EAP / Wildly teams at Red Hat. JBoss Veteran & Open Source Advocate.
   groups:
     - cf-egc
+    - members
+dreab8:
+  login: dreab8
+  url: 'https://github.com/dreab8'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/432649?v=4'
+  company: Red Hat
+  name: Andrea Boriero
+  bio: ''
+  groups:
+    - members
 ebullient:
   login: ebullient
   url: 'https://github.com/ebullient'
@@ -113,6 +169,16 @@ ebullient:
   bio: "Java Champion. Distinguished Engineer and maker of things @ Red Hat. \r\nFormer @IBM."
   groups:
     - cf-egc
+    - members
+emmanuelbernard:
+  login: emmanuelbernard
+  url: 'https://github.com/emmanuelbernard'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/300760?v=4'
+  company: Red Hat
+  name: Emmanuel Bernard
+  bio: ''
+  groups:
+    - members
 evanchooly:
   login: evanchooly
   url: 'https://github.com/evanchooly'
@@ -134,6 +200,7 @@ gavinking:
   bio: "Distinguished Engineer at IBM / Red Hat.\r\n\r\nCreator of @Hibernate, @cdi-spec, and @ceylon.\r\n\r\nWorking on @jakartaee Persistence and Data specifications."
   groups:
     - cf-egc
+    - members
 henri-tremblay:
   login: henri-tremblay
   url: 'https://github.com/henri-tremblay'
@@ -146,6 +213,16 @@ henri-tremblay:
     useful. 
   groups:
     - cf-egc
+jivebreaddev:
+  login: jivebreaddev
+  url: 'https://github.com/jivebreaddev'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/89639413?u=596d8f99029779d3a056cebd4cf236693017971e&v=4
+  company: null
+  name: jivebreaddev
+  bio: ''
+  groups:
+    - members
 k-wall:
   login: k-wall
   url: 'https://github.com/k-wall'
@@ -177,6 +254,16 @@ kenfinnigan:
     genealogist. Former @ Red Hat.
   groups:
     - cf-egc
+    - members
+koentsje:
+  login: koentsje
+  url: 'https://github.com/koentsje'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/621954?v=4'
+  company: Red Hat
+  name: Koen Aers
+  bio: null
+  groups:
+    - members
 marc0der:
   login: marc0der
   url: 'https://github.com/marc0der'
@@ -188,6 +275,15 @@ marc0der:
     Manning Functional Programming in Kotlin https://bit.ly/fpinkotlin
   groups:
     - cf-egc
+marko-bekhta:
+  login: marko-bekhta
+  url: 'https://github.com/marko-bekhta'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/4004823?v=4'
+  company: null
+  name: Marko Bekhta
+  bio: ''
+  groups:
+    - members
 maxandersen:
   login: maxandersen
   url: 'https://github.com/maxandersen'
@@ -198,7 +294,30 @@ maxandersen:
     Danish guy enjoying working on open source software. Making things happen at
     Red Hat.
   groups:
+    - cf-egc
     - cf-egc-second
+    - members
+mbladel:
+  login: mbladel
+  url: 'https://github.com/mbladel'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/25681369?u=337d4ff5b7477a76aeca13f384343d8e679c442c&v=4
+  company: Red Hat
+  name: Marco Belladelli
+  bio: ''
+  groups:
+    - members
+nmcl:
+  login: nmcl
+  url: 'https://github.com/nmcl'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/580667?v=4'
+  company: Red Hat JBoss
+  name: Mark Little
+  bio: >-
+    I lead the technical direction, research, and development for Red Hat JBoss
+    Middleware.
+  groups:
+    - members
 quintesse:
   login: quintesse
   url: 'https://github.com/quintesse'
@@ -209,6 +328,28 @@ quintesse:
   bio: ''
   groups:
     - cf-egc-second
+rfichtner:
+  login: rfichtner
+  url: 'https://github.com/rfichtner'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/18716660?u=2a3c99a137165a9e46160fee2c13622e5ed2a500&v=4
+  company: XDEV Software
+  name: Richard Fichtner
+  bio: "CEO of XDEV Software,\r\nProgrammer, \r\nLoves Java ❤️☕, \r\n Founder JUG Oberpfalz, \r\nCo-organizer @jcon_conference, \r\nFather and Husband"
+  groups:
+    - members
+sebersole:
+  login: sebersole
+  url: 'https://github.com/sebersole'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/234515?u=db65d4a58bd8d05e493eca0ac733d09918643909&v=4
+  company: JBoss / Red Hat / IBM
+  name: Steve Ebersole
+  bio: >-
+    Project lead for the Hibernate ORM project.  Developer of Gradle plugins. 
+    OSS advocate.  Outdoor advocate ;)
+  groups:
+    - members
 sigrunixia:
   login: sigrunixia
   url: 'https://github.com/sigrunixia'
@@ -219,6 +360,7 @@ sigrunixia:
   bio: 'Customer Experience Specialist for @obsidianmd and friend of @commonhaus '
   groups:
     - cf-officers
+    - members
 techbelle:
   login: techbelle
   url: 'https://github.com/techbelle'
@@ -269,3 +411,4 @@ yrodiere:
   bio: Hibernate team at Red Hat
   groups:
     - cf-egc-second
+    - members

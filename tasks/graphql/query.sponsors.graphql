@@ -1,20 +1,24 @@
 query($login: String!) {
   organization(login: $login) {
-    sponsorshipsAsMaintainer(first: 100, activeOnly: false) {
+    sponsorshipsAsMaintainer(first: 50, activeOnly: false, includePrivate: false, orderBy: {field: CREATED_AT, direction: DESC}) {
       totalCount
       nodes {
-        isActive
-        isOneTimePayment
-        isActive
-        isOneTimePayment
         sponsorEntity {
           ... on User {
-            login
+              login
+              url
+              avatarUrl
           }
           ... on Organization {
-            login
+              login
+              url
+              avatarUrl
           }
         }
+      }
+      pageInfo {
+          hasNextPage
+          endCursor
       }
     }
   }

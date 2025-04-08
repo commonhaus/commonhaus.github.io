@@ -13,6 +13,7 @@ Together, we ensure the sustainable development of essential open source librari
 - [Officers](#officers)
 - [Project Representatives](#project-representatives)
 - [Advisory Board](#advisory-board)
+- [Members](#members)
 
 ## Our guiding principles
 
@@ -150,6 +151,19 @@ They bring industry perspectives and expertise to the conversation, to help us e
             {{- if rep.bio }}<p>{{ rep.bio }}</p>{{ /if -}}
         </div>
     </div>
+{{- /for }}
+</section>
+{{ /if }}
+
+{{- set members = page.data.members() }}
+{{- if members && members.length }}
+## Members
+
+<section class="cards avatars">
+{{- for user of members }}
+<div class="card avatar-only">
+{{ include "layouts/display-avatar.vto" { user } }}
+</div>
 {{- /for }}
 </section>
 {{ /if }}

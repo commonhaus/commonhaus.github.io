@@ -16,7 +16,13 @@ on:
       - 'site/**'
 
   repository_dispatch:
+
   workflow_dispatch:
+    inputs:
+      about:
+        description: Regenerate about (CONTACTS.yaml) and sponsors information
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -25,6 +31,7 @@ env:
   GH_BOT_NAME: "GitHub Action"
   DENO_DIR: .deno-cache
   REPO: commonhaus/commonhaus.github.io
+  LAST_ABOUT: "site/_generated/.last_about"
 
 jobs:
   build_refresh:
@@ -91,13 +98,68 @@ jobs:
             echo "updated=true" >> $GITHUB_OUTPUT
           fi
 
+      - name: Check for changes in foundation submodule
+        id: check_changes
+        env:
+          LAST_ABOUT: ${{ env.LAST_ABOUT }}
+          RUN_ABOUT: ${{ inputs.about }}
+        run: |
+          # Check last run timestamp
+          CURRENT_TIME=$(date +%s)
+          DAYS_THRESHOLD=7
+
+          function refresh() {
+            local file=$1
+            local input=$2
+
+            if [ -f "${file}" ]; then
+              local last=$(cat "${file}")
+              local days_diff=$(( (${CURRENT_TIME} - ${last}) / 86400 ))
+              if [ ${days_diff} -ge ${DAYS_THRESHOLD} ]; then
+                echo "true"
+              else
+                echo "${input}"
+              fi
+            else
+              echo "true"
+            fi
+          }
+
+          # Check for changes in the foundation submodule
+          pushd site/foundation > /dev/null
+          DIFF_FILES=$(git diff --name-only HEAD~1 HEAD)
+          # Exit if git diff fails
+          if [ $? -ne 0 ]; then
+            echo "Error: Failed to run git diff" >&2
+            exit 1
+          fi
+
+          CONTACTS_CHANGED=$(echo "$DIFF_FILES" | grep -q "CONTACTS.yaml" && echo "true" || echo "false")
+          PROJECTS_CHANGED=$(echo "$DIFF_FILES" | grep -q "PROJECTS.yaml" && echo "true" || echo "false")
+          popd > /dev/null
+
+          # Determine if updates are needed
+          REFRESH_ABOUT=$(refresh "${LAST_ABOUT}" "${RUN_ABOUT}")
+          UPDATE_ABOUT="false"
+          if [[ "${REFRESH_ABOUT}" == "true" || "${CONTACTS_CHANGED}" == "true" || "${PROJECTS_CHANGED}" == "true" ]]; then
+            UPDATE_ABOUT="true"
+          fi
+          echo "update_required=$UPDATE_ABOUT" >> $GITHUB_OUTPUT
+
       - name: Foundation Metadata Update
         id: about
+        if: steps.check_changes.outputs.update_required
         env:
           GH_TOKEN: ${{ secrets.WEB_REPO_READ }}
+          LAST_ABOUT: ${{ env.LAST_ABOUT }}
         run: |
-          deno task about
-          git add -A -- ./site/_generated/about.yml
+          date +%s > ${LAST_ABOUT}
+
+          if ! deno task about; then
+            echo "Error: Failed to run deno task about" >&2
+            exit 1
+          fi
+          git add -A -- ./site/_generated/about.yml "${LAST_ABOUT}"
           if git diff --quiet HEAD; then
             echo "-- No changes -- "
           else
@@ -112,7 +174,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          deno task activity
+          if ! deno task activity; then
+            echo "Error: Failed to run deno task activity" >&2
+            exit 1
+          fi
           git add -A -- ./site/_generated/activity ./site/_generated/authors.yml
           if git diff --quiet HEAD; then
             echo "-- No changes -- "
