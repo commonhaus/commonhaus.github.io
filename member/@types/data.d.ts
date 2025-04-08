@@ -59,6 +59,7 @@ export enum MemberStatus {
     REVOKED = 'REVOKED',
     SUSPENDED = 'SUSPENDED',
     SPONSOR = 'SPONSOR',
+    CONTRIBUTOR = 'CONTRIBUTOR', // project contributor, not sponsor or member
     UNKNOWN = 'UNKNOWN'
 }
 

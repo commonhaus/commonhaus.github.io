@@ -1,3 +1,4 @@
+import { xml_node } from "https://deno.land/x/xml@6.0.4/parse.ts";
 import { Middleware } from "lume/core/server.ts";
 
 const devMode = Deno.env.get("VITE_APP_DEV_MODE") === "true";
@@ -133,6 +134,18 @@ function createMockBackend(): Middleware {
                 state.ALIAS["commonhaus-bot@commonhaus.dev"].recipients = recipients;
                 state.HAUS.services.forwardEmail.active = recipients.length > 0;
             }
+            if (state.HAUS.services.forwardEmail?.altAlias) {
+                for (const x of state.HAUS.services.forwardEmail.altAlias) {
+                    state.ALIAS[x] = {
+                        "name": `alt alias ${x}`,
+                        "is_enabled": false,
+                        "recipients": [x]
+                    };
+                }
+            }
+            const commonhaus = Object.keys(state.ALIAS).find((key) => key.endsWith("@commonhaus.dev"));
+            state.HAUS.services.forwardEmail.hasDefaultAlias = !!commonhaus;
+
             return stateResponse(request);
         } else if (request.url.endsWith("/member/aliases?verify=true")) {
             state.ALIAS["commonhaus-bot@commonhaus.dev"].verified_recipients =
@@ -185,7 +198,7 @@ function createMockBackend(): Middleware {
         } else if (request.url.includes("/member/commonhaus/status")) {
             if (request.url.includes("refresh=true")) {
                 console.log("refreshing state");
-                state.ALIASES = {};
+                state.ALIAS = {};
                 state.APPLY = {};
                 state.HAUS = { ...haus };
                 state.INFO = { ...user };
@@ -205,6 +218,12 @@ function createMockBackend(): Middleware {
             if (request.url.includes("role=cfc")) {
                 state.HAUS.status = "COMMITTEE";
                 state.INFO.roles.push("cfc");
+            }
+            if (request.url.includes("role=contributor")) {
+                state.HAUS.status = "CONTRIBUTOR";
+                state.HAUS.services.forwardEmail.altAlias = ['other@whatever.org'],
+                state.INFO.roles.push("contributor");
+                state.ALIAS = {};
             }
             return stateResponse(request);
         } else if (request.url.endsWith("/member/commonhaus") && request.method === "GET") {

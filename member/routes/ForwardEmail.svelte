@@ -24,7 +24,9 @@
   import Loading from "../components/Loading-coffee.svelte";
   import Oops from "../components/Oops.svelte";
   import { debounce } from "../lib/debounce";
-  import { mayHaveEmail } from "../lib/memberStatus";
+  import { mayHaveEmail,
+    mayHaveCommonhausEmail
+  } from "../lib/memberStatus";
   import { scrollToSection } from "../lib/scrollToSection";
 
   const emailAttestation = getAttestationText("email");
@@ -41,7 +43,17 @@
   let keys = {};
   let hasErrors = false;
 
+  let eligible = false;
+  let eligibleForDefault = false;
+  let hasDefaultAlias = false;
+
   $: {
+    // Check overall email eligibility
+    eligible = mayHaveEmail($commonhausData.status);
+    // Check eligibility for default email alias
+    eligibleForDefault = mayHaveCommonhausEmail($commonhausData.status);
+    hasDefaultAlias = $commonhausData.services?.forwardEmail?.hasDefaultAlias;
+
     recentAttestation = checkRecentAttestation("email", $commonhausData);
     nextDate = getNextAttestationDate("email", $commonhausData);
 
@@ -127,9 +139,9 @@
   email aliases for our members.
 </p>
 
-{#if isForbidden($errorFlags.alias) || !mayHaveEmail($commonhausData.status)}
+{#if isForbidden($errorFlags.alias) || !eligible}
   <section class="information">
-    <p>You are not eligible for ForwardEmail service (membership status).</p>
+    <p>You are not eligible for ForwardEmail service (membership status or role).</p>
   </section>
 {:else if $outboundPost}
   <Loading>Processing...</Loading>
@@ -214,7 +226,8 @@
             </footer>
           </div>
         {/each}
-      {:else}
+      {/if}
+      {#if eligibleForDefault && !hasDefaultAlias }
         {@const alias = $gitHubData.login}
         <!-- Assign a default value to alias -->
         <div class="no-title setting">
