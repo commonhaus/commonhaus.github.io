@@ -2,7 +2,7 @@
   "title": "📝⚖️ Revisions to Asset Transfer Agreement",
   "voteType": "marthas",
   "hasQuorum": true,
-  "isDone": false,
+  "isDone": true,
   "group": "commonhaus/cf-egc",
   "groupSize": 16,
   "groupVotes": 11,
@@ -117,17 +117,25 @@
       "url": "https://github.com/cowtowncoder"
     }
   ],
-  "manualCloseComments": null,
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2025-04-08T10:27:17.000+00:00",
+    "body": "We're good to go.",
+    "url": "https://github.com/commonhaus/foundation/pull/245#issuecomment-2785973760"
+  },
   "commentId": "IC_kwDOKRPTI86kPLZT",
   "github": "https://github.com/commonhaus/foundation/pull/245",
   "itemId": "PR_kwDOKRPTI86QIDZp",
   "number": 245,
   "repoName": "commonhaus/foundation",
   "date": "2025-03-26T18:46:41Z",
-  "updated": "2025-03-29T21:21:03Z",
+  "updated": "2025-04-08T10:28:37Z",
   "tags": [
-    "vote/open",
     "notice",
+    "vote/done",
     "vote/quorum",
     "closed"
   ],
