@@ -68,10 +68,15 @@ The website combines content from multiple sources through several transformatio
 
 ### Content structure:
 
+- `foundation-content` - *git submodule*.  
+    Contains bylaws, policies, and other governance documents.
+    - Canonical sources: CONTACTS.yaml, PROJECTS.yaml, etc.
+    - Content processed and published by `site/foundation.page.ts` and 
+    - 👤 Map of foundaton content to URL is in `site/_foundation.yml`
+    - The `site/_plugins/foundationPages.ts` plugin manages logo import/caching, URL fixing, and other rendering functions
 - `member` - Svelte-based Membership UI. Requires a backend
 - `site` - Root for Deno/Lume static content
     - `_data` - data shared by / available to all pages
-        - `bylaws.yml` - 👤 sidebar TOC for bylaws (manual updates)
         - `menu.yml` - 👤 site navigation menu (manual updates)
         - `metas.yml` - default metadata configuration
         - `svg.yml` - common/reusable svg sprites
@@ -85,12 +90,13 @@ The website combines content from multiple sources through several transformatio
     - `_includes` - rendering artifacts
         - `layouts` - content layout templates
         - `scss` - sass css fragments
+    - `_plugins` - Custom plugins for augmenting and rendering content
     - `about` - "About the foundation"
         - `_data.ts` - Dynamic metadata based on merging generated sources (see below)
         - `index.md` - About Us landing page (cfc, egc, members)
         - `branding.md` - Branding guidelines
         - `codehaus.md` - Codehaus legacy
-        - Other content from the foundation repo is placed into this section by `site/_plugins/foundationData.ts`
+        - Other content is placed into this section by `site/_plugins/foundationPages.ts`
     - `activity` - Generated pages for discussions and PRs.
         - `_data.yml` - Common/default metadata for all pages in this section
         - `announcements.md` - Filtered view of announcements
@@ -99,15 +105,17 @@ The website combines content from multiple sources through several transformatio
         - `notices.md` - Filtered view of notices
     - `assets` - static source files (processed by Lume)
         - `svg` the svg icon files in this folder are combined into a single sprite by SVGSpriter in `index.page.js`
-    - `community` - empty directory.  
-        The landing page for this section is `foundation/COMMUNICATION.md` (See `site/_generated/foundation.yml`)
-    - `foundation` - *git submodule*.  
-        Contains bylaws, policies, and other governance documents.
-        - Canonical sources: CONTACTS.yaml, PROJECTS.yaml, etc.
-        - See  `site/_plugins/foundationData.ts`
+    - `bylaws` - location of bylaws (mostly generated)
+        - `_data_.yml` - 👤 sidebar TOC for bylaws (manual updates)
+    - `community`
+        - The landing page for this section is `foundation/COMMUNICATION.md` (See `site/_foundation.yml`)
+        - `discord.md` common landing page to direct folks to our discord server
+    - `member`: placeholder location for member UI
+    - `policies`:
+        - `_data`: additional attributes for rendering policies
     - `static` - static files (copied to output directory)
     - `votes` - vote result summaries
-        - `index.page.js` - parses all json files in `site/_generated/votes`, and creates a page and an svg for each vote result.
+        - `index.page.js` - parses json files in `site/_generated/votes`, and creates a page and an svg for each vote result.
 - `tasks` - 👷 Build scripts
 - `_config.ts` - Lume site config (static site generation)
 - `deno.json` - Deno dependency and task configuration (akin to package.json)

@@ -17,12 +17,6 @@ Our website serves as the primary information hub about our mission, ongoing pro
 
 We welcome contributions from the community! If you wish to contribute to the website, please read our [Contribution Guidelines][contributions] for more information on how to get started.
 
-### Sections of the site are either generated or sourced from other locations.
-
-- `site/activity` pages are generated from PRs and other activity in other Commonhaus Foundation repositories. See 
-- `site/foundation` is a github submodule; it is the source for bylaws, policies, and other governance documents.
-- `site/votes` contains generated vote results
-
 ## License
 
 This website's content (excluding generated content and content sourced in repositories with other licenses) is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA 4.0). To view a copy of this license, visit [http://creativecommons.org/licenses/by-sa/4.0/](http://creativecommons.org/licenses/by-sa/4.0/) or see the [LICENSE](LICENSE) file in this repository.

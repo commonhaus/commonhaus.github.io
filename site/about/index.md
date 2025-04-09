@@ -168,8 +168,8 @@ They bring industry perspectives and expertise to the conversation, to help us e
 </section>
 {{ /if }}
 
-[Bylaws]: ../foundation/bylaws/1-preface.md
-[cfab]: ../foundation/bylaws/5-cf-advisory-board.md
-[cfc]: ../foundation/bylaws/4-cf-council.md
-[egc]: ../foundation/bylaws/4-cf-council.md#extended-governance-committee-egc
-[ab]: ../foundation/bylaws/5-cf-advisory-board.md
+[Bylaws]: /foundation-content/bylaws/1-preface.md
+[cfab]: /foundation-content/bylaws/5-cf-advisory-board.md
+[cfc]: /foundation-content/bylaws/4-cf-council.md
+[egc]: /foundation-content/bylaws/4-cf-council.md#extended-governance-committee-egc
+[ab]: /foundation-content/bylaws/5-cf-advisory-board.md

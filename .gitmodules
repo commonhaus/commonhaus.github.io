@@ -1,0 +1,3 @@
+[submodule "foundation-content"]
+	path = foundation-content
+	url = https://github.com/commonhaus/foundation.git

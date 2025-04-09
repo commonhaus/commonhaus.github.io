@@ -1,4 +1,6 @@
 layout: 'layouts/policies.vto'
+stylesheets:
+- /assets/bylaws-policies.css
 cssclasses:
 - bylaws
 - has-aside

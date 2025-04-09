@@ -126,7 +126,7 @@ jobs:
           }
 
           # Check for changes in the foundation submodule
-          pushd site/foundation > /dev/null
+          pushd foundation-content > /dev/null
           DIFF_FILES=$(git diff --name-only HEAD~1 HEAD)
           # Exit if git diff fails
           if [ $? -ne 0 ]; then
