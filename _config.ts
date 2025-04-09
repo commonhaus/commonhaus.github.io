@@ -21,7 +21,7 @@ import anchor from "npm:markdown-it-anchor";
 import footnote from "npm:markdown-it-footnote";
 import callouts from "npm:markdown-it-obsidian-callouts";
 import authorData from "./site/_plugins/authorData.ts";
-import foundationData from "./site/_plugins/foundationData.ts";
+import foundationPages from "./site/_plugins/foundationPages.ts";
 import devBackend from "./site/_plugins/devBackend.ts";
 import contentHash from "./site/_plugins/contentHash.ts";
 
@@ -53,7 +53,10 @@ const site = lume({
     dest: "public",
     prettyUrls: false,
     location: new URL("https://www.commonhaus.org"),
-    server: devBackend()
+    server: devBackend(),
+    watcher: {
+        include: [ "foundation-content" ]
+    }
 }, { markdown });
 
 // Copy the content of "static" directory to the root of your site
@@ -78,7 +81,7 @@ site
             "https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap",
     }))
     .use(resolveUrls())
-    .use(foundationData()) // Foundation submodule pages + URL munging
+    .use(foundationPages()) // Foundation submodule pages + URL munging
     .use(authorData())     // Author data for activities
     .use(slugify_urls({
         extensions: [".html"],
