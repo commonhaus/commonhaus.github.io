@@ -1,7 +1,37 @@
 layout: 'layouts/bylaws.vto'
+stylesheets:
+- /assets/bylaws-policies.css
 cssclasses:
 - bylaws
 - has-aside
 tags:
 - bylaws
 - legal
+bylaws_nav:
+- title: Preface
+  href: /bylaws/preface.html
+  ord: 1
+- title: Purpose
+  href: /bylaws/purpose.html
+  ord: 2
+- title: CF Membership
+  href: /bylaws/cf-membership.html
+  ord: 3
+- title: CF Council
+  href: /bylaws/cf-council.html
+  ord: 4
+- title: CF Advisory Board
+  href: /bylaws/cf-advisory-board.html
+  ord: 5
+- title: Decision Making
+  href: /bylaws/decision-making.html
+  ord: 6
+- title: Notice and Records
+  href: /bylaws/notice-records.html
+  ord: 7
+- title: Insurance, Indemnification, and Dissolution
+  href: /bylaws/indemnification-dissolution.html
+  ord: 8
+- title: Amendments
+  href: /bylaws/amendments.html
+  ord: 9

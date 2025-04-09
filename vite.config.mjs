@@ -29,7 +29,7 @@ console.log("baseUrl:", baseUrl, ", devModeHook:", devModeHook !== "");
 function yamlPlugin() {
   const virtualModuleId = 'virtual:attest-yaml';
   const resolvedVirtualModuleId = '\0' + virtualModuleId
-  const yamlFilePath = path.resolve('site/foundation/agreements/membership/members.yaml');
+  const yamlFilePath = path.resolve('foundation-content/agreements/membership/members.yaml');
   return {
     name: 'yaml-plugin',
     resolveId(source) {

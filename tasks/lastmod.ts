@@ -9,7 +9,7 @@ const interestingFiles = [
     'templates'
 ];
 
-const foundationPath = './site/foundation';
+const foundationPath = './foundation-content';
 const metaPath = './site/_generated/foundation.json';
 const projectMeta = Deno.readTextFileSync(metaPath);
 const now = new Date().toISOString();
@@ -27,22 +27,6 @@ function gitLastCommitDate(filePath: string, repoDir: string): Date {
     const output = new TextDecoder().decode(stdout).trim();
     console.assert(code === 0);
     return new Date(output);
-}
-
-function getGithubUrl(repoDir: string): string {
-    const data = Deno.readFileSync(`${Deno.cwd()}/.gitmodules`);
-    const gitmodules = new TextDecoder("utf-8").decode(data);
-
-    // Extract the project name from the directory path
-    const projectName = repoDir.substring(repoDir.lastIndexOf('/') + 1);
-
-    // Use a regular expression to find the URL for the project
-    const regex = new RegExp(`(https.*?/${projectName})\\.git`, 'i');
-    const match = gitmodules.match(regex);
-    const githubUrl = match ? match[1] + '/blob/main/' : '';
-    console.log(`GitHub URL: ${githubUrl}`)
-
-    return githubUrl;
 }
 
 async function readDir(path: string, relative: string, repo: string, repoRelative: string, ghUrl: string) {
@@ -68,7 +52,6 @@ async function readDir(path: string, relative: string, repo: string, repoRelativ
 
             if (dirEntry.name.endsWith('.md')) {
                 struct.type = 'submodule';
-                struct.layout = 'layouts/foundation.vto';
                 struct.genUrl = `/${filePath}.html`
                     .replace('.md', '')
                     .replace('README.html', '');
@@ -83,7 +66,7 @@ async function readDir(path: string, relative: string, repo: string, repoRelativ
     }
 }
 
-const ghUrl = getGithubUrl(foundationPath);
+const ghUrl = "https://github.com/commonhaus/foundation/blob/main/";
 await readDir(foundationPath, '', foundationPath, '', ghUrl);
 for (const key in meta) {
     if (meta[key].visited !== now) {

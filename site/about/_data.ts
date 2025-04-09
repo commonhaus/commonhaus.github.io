@@ -25,9 +25,10 @@ interface AdvisorContact extends Contact {
     organization: string;
 }
 interface ProjectData {
-  name?: string;
-  repo?: string;
-  display?: Record<string, string>
+    name?: string;
+    repo?: string;
+    display?: Record<string, string>;
+    draft?: boolean;
 }
 interface User {
     login: string;
@@ -82,9 +83,9 @@ function augmentReference<T extends Contact>(data: Record<string, Contact[]>, it
 
 const devMode = Deno.env.get("DEV_MODE") || false;
 
-const CONTACT_DATA = parse(Deno.readTextFileSync("./site/foundation/CONTACTS.yaml")) as Record<string, Contact[]>;
-const SPONSOR_DATA = parse(Deno.readTextFileSync("./site/foundation/SPONSORS.yaml")) as SponsorData;
-const PROJECT_DATA = parse(Deno.readTextFileSync("./site/foundation/PROJECTS.yaml")) as Record<string, ProjectData>;
+const CONTACT_DATA = parse(Deno.readTextFileSync("./foundation-content/CONTACTS.yaml")) as Record<string, Contact[]>;
+const SPONSOR_DATA = parse(Deno.readTextFileSync("./foundation-content/SPONSORS.yaml")) as SponsorData;
+const PROJECT_DATA = parse(Deno.readTextFileSync("./foundation-content/PROJECTS.yaml")) as Record<string, ProjectData>;
 const USER_DATA = parse(Deno.readTextFileSync("./site/_generated/about.yml")) as Record<string, User>;
 const SUPPORTER_DATA = parse(Deno.readTextFileSync("./site/_generated/supporters.yml")) as Record<string, User>;
 
@@ -93,7 +94,7 @@ const tiers = SPONSOR_DATA.tiers;
 
 const cfcData = CONTACT_DATA['cf-council'] as CouncilContact[];
 const councilors = cfcData.map(item => augmentReference<CouncilContact>(CONTACT_DATA, item));
-for(const councilor of councilors) {
+for (const councilor of councilors) {
     if (councilor.login.includes(".")) {
         continue;
     }
@@ -109,7 +110,9 @@ for(const councilor of councilors) {
 }
 councilors.sort((a, b) => a.login.localeCompare(b.login));
 
-const repData = [ ...CONTACT_DATA['egc'], ...CONTACT_DATA['egc-second']] as ProjectContact[];
+const repData = [
+    ...CONTACT_DATA['egc'],
+    ...CONTACT_DATA['egc-second']] as ProjectContact[];
 const augmentedRepData = repData.map(item => augmentReference<ProjectContact>(CONTACT_DATA, item));
 const egc = augmentedRepData.reduce((acc: ProjectContact[], current: ProjectContact) => {
     if (current.login.includes(".")) {
@@ -144,7 +147,7 @@ egc.sort((a, b) => a.login.localeCompare(b.login));
 
 const officerData = CONTACT_DATA['officers'] as OfficerContact[];
 const officers = officerData.map(item => augmentReference<OfficerContact>(CONTACT_DATA, item));
-for(const officer of officers) {
+for (const officer of officers) {
     if (officer.login.includes(".")) {
         continue;
     }
@@ -163,7 +166,7 @@ officers.sort((a, b) => a.login.localeCompare(b.login));
 // Augment advisory board user data
 const advisorData = CONTACT_DATA['advisory-board'] as AdvisorContact[];
 const augmentedAdvisorData = advisorData.map(item => augmentReference<AdvisorContact>(CONTACT_DATA, item));
-for(const advisor of augmentedAdvisorData) {
+for (const advisor of augmentedAdvisorData) {
     if (advisor.login.includes(".")) {
         continue;
     }
@@ -220,7 +223,7 @@ function addToGroup(groups: GroupedSponsors, tier: string, sponsor: Sponsor) {
 }
 
 function tieredSponsors(): GroupedSponsors {
-    const filteredGroups: GroupedSponsors = { };
+    const filteredGroups: GroupedSponsors = {};
     for (const [key, sponsors] of Object.entries(groupedSponsors)) {
         if (sponsors && key != 'inKind') {
             filteredGroups[key] = sponsors;
