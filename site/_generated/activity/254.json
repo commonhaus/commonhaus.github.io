@@ -1,0 +1,17 @@
+{
+  "title": "Clarify Project Representation vs Project Lead",
+  "rss_title": "Clarify Project Representation vs Project Lead",
+  "github": "https://github.com/commonhaus/foundation/pull/254",
+  "author": "maxandersen",
+  "number": 254,
+  "date": "2025-04-11T08:39:38Z",
+  "updated": "2025-04-11T11:30:01Z",
+  "url": "/activity/254.html",
+  "type": "pullRequest",
+  "tags": [
+    "post",
+    "notice"
+  ],
+  "content": "This PR clarifies that the EGC is made up of Project Representatives (not necessarily the same as Project Leads and/or Signatories)\r\n",
+  "closedAt": "2025-04-11T11:30:01Z"
+}
