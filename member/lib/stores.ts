@@ -13,7 +13,6 @@ export const uriBase = "__BASE_URL__";
 export const ALIASES = uriBase + "/aliases";
 export const APPLY = uriBase + "/apply";
 export const COMMONHAUS = uriBase + "/commonhaus";
-export const COUNCIL = uriBase + "/council";
 export const INFO = uriBase + "/me";
 export const REFRESH = uriBase + "/commonhaus/status?refresh=true";
 
