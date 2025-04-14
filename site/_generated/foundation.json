@@ -7,13 +7,13 @@
     "type": "submodule",
     "genUrl": "/CODE_OF_CONDUCT.html"
   },
-  "COMMUNICATION.md": {
-    "date": "2025-02-20T21:14:20.000Z",
-    "srcPath": "COMMUNICATION.md",
+  "COMMUNITY.md": {
+    "date": "2025-04-15T00:44:43.000Z",
+    "srcPath": "COMMUNITY.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
-    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/COMMUNICATION.md",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/COMMUNITY.md",
     "type": "submodule",
-    "genUrl": "/COMMUNICATION.html"
+    "genUrl": "/COMMUNITY.html"
   },
   "CONTACTS.yaml": {
     "date": "2025-03-18T22:59:21.000Z",
@@ -54,7 +54,7 @@
     "genUrl": "/PROJECTS.yaml"
   },
   "README.md": {
-    "date": "2025-04-08T10:36:10.000Z",
+    "date": "2025-04-15T00:44:43.000Z",
     "srcPath": "README.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/README.md",
@@ -331,7 +331,7 @@
     "genUrl": "/bylaws/6-decision-making.html"
   },
   "bylaws/7-notice-records.md": {
-    "date": "2025-01-11T02:37:14.000Z",
+    "date": "2025-04-15T00:44:43.000Z",
     "srcPath": "bylaws/7-notice-records.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/bylaws/7-notice-records.md",
