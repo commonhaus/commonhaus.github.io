@@ -9,7 +9,7 @@
 # Note: Pages discovered/included in foundation.json will
 # not be published as webpages unless they are also included here.
 
-COMMUNICATION:
+COMMUNITY:
   url: /community/
   description: >
     Direct channels to connect with the Commonhaus Foundation and engage with
