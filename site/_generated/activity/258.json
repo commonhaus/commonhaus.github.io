@@ -1,0 +1,18 @@
+{
+  "title": "🎉 Kroxylicious joins Commonhaus!",
+  "rss_title": "📣  🎉 Kroxylicious joins Commonhaus!",
+  "github": "https://github.com/commonhaus/foundation/discussions/258",
+  "author": "aalmiray",
+  "number": 258,
+  "date": "2025-04-18T17:05:59Z",
+  "updated": "2025-04-18T17:13:56Z",
+  "url": "/activity/258.html",
+  "type": "discussion",
+  "tags": [
+    "post",
+    "announcements",
+    "notice"
+  ],
+  "content": "### Announcement\r\n\r\nWindermere, Florida - All remote – April 18th, 2025 – Today, the [Commonhaus Foundation](https://www.commonhaus.org/) is pleased to announce that Kroxylicious joins as a member project.\r\n\r\n[Kroxylicious](https://kroxylicious.io/), is an early-stage project which seeks to lower the cost of developing Kafka proxies by providing a lot of the common requirements out-of-the-box. This lets developers focus on the logic needed to get their proxy to do what they need.\r\n\r\n[Sam Barker](https://www.linkedin.com/in/sambarker/) shares the following regarding the move to Commonhaus:\r\n\r\n> Kroxylicious the snappy open source proxy for Apache Kafka®, is steadily growing in adoption and we want adopters and contributors to feel assured about the project’s future, and open source nature. For this reason we felt now was the right time to find an open source software foundation to work within. As such we are very excited to be joining the Commonhaus foundation. \r\n> \r\n> We believe that Commonhaus provides a great home for the project\r\n> \r\n>  - The foundation’s emphasis on self-government and code-first is exactly the kind of lightweight approach that will allow us to continue to iterate quickly and explore opportunities.\r\n>  - A vendor-neutral venue to allow us to bridge the various communities we interact with, and encourage participation from the broad Kafka ecosystem.\r\n>  - As a geographically distributed team with little synchronous time we wanted to find a home that understands and values asynchronous communication.\r\n>  - The Commonhaus foundation's commitment to being a stable long term home gives us confidence we will be supported as we grow.\r\n>  - Finding a home amongst projects we so heavily depend on such as SDKMan and Jackson.\r\n\r\nSam is a principal software engineer at Red Hat, focusing on the Apache Kafka ecosystem. He has been building latency sensitive systems for longer than he’d care to admit. Since joining Red Hat he has gone from building upon open source to helping build those foundations.\r\n\r\n### \r\n\r\n\r\n",
+  "description": "Kroxylicous joins the Commonhaus as a member project"
+}
