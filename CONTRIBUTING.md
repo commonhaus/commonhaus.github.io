@@ -108,7 +108,7 @@ The website combines content from multiple sources through several transformatio
     - `bylaws` - location of bylaws (mostly generated)
         - `_data_.yml` - 👤 sidebar TOC for bylaws (manual updates)
     - `community`
-        - The landing page for this section is `foundation/COMMUNICATION.md` (See `site/_foundation.yml`)
+        - The landing page for this section is `foundation/COMMUNITY.md` (See `site/_foundation.yml`)
         - `discord.md` common landing page to direct folks to our discord server
     - `member`: placeholder location for member UI
     - `policies`:
