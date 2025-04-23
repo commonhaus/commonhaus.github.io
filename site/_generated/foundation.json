@@ -16,7 +16,7 @@
     "genUrl": "/COMMUNITY.html"
   },
   "CONTACTS.yaml": {
-    "date": "2025-03-18T22:59:21.000Z",
+    "date": "2025-04-24T13:56:46.000Z",
     "srcPath": "CONTACTS.yaml",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/CONTACTS.yaml",
@@ -47,7 +47,7 @@
     "genUrl": "/GOVERNANCE.html"
   },
   "PROJECTS.yaml": {
-    "date": "2025-04-08T10:37:08.000Z",
+    "date": "2025-04-24T13:56:46.000Z",
     "srcPath": "PROJECTS.yaml",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/PROJECTS.yaml",
@@ -76,7 +76,7 @@
     "genUrl": "/SUPPORTERS.yaml"
   },
   "TRADEMARKS.md": {
-    "date": "2025-03-18T22:59:21.000Z",
+    "date": "2025-04-24T13:56:46.000Z",
     "srcPath": "TRADEMARKS.md",
     "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/TRADEMARKS.md",
@@ -202,6 +202,14 @@
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2025-02-10-bootstrapping-kroxylicious.md",
     "type": "submodule",
     "genUrl": "/agreements/bootstrapping/2025-02-10-bootstrapping-kroxylicious.html"
+  },
+  "agreements/bootstrapping/2025-03-17-bootstrapping-wildfly.md": {
+    "date": "2025-04-24T13:56:46.000Z",
+    "srcPath": "agreements/bootstrapping/2025-03-17-bootstrapping-wildfly.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/bootstrapping/2025-03-17-bootstrapping-wildfly.md",
+    "type": "submodule",
+    "genUrl": "/agreements/bootstrapping/2025-03-17-bootstrapping-wildfly.html"
   },
   "agreements/bootstrapping/bootstrapping.md": {
     "date": "2024-08-28T12:58:54.000Z",
