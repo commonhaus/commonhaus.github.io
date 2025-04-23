@@ -19,7 +19,7 @@ This project uses [Deno](https://deno.land/) as the runtime, the [Lume static si
     You can do this by running the following command:
 
     ```bash
-    git clone --recursive <https://github.com/commonhaus/commonhaus.github.io.git>
+    git clone --recursive https://github.com/commonhaus/commonhaus.github.io.git
     ```
 
 2. **Install Deno**
