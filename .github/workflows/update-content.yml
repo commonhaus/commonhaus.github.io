@@ -144,6 +144,7 @@ jobs:
           if [[ "${REFRESH_ABOUT}" == "true" || "${CONTACTS_CHANGED}" == "true" || "${PROJECTS_CHANGED}" == "true" ]]; then
             UPDATE_ABOUT="true"
           fi
+          echo "refresh_required=$REFRESH_ABOUT" >> $GITHUB_OUTPUT
           echo "update_required=$UPDATE_ABOUT" >> $GITHUB_OUTPUT
 
       - name: Foundation Metadata Update
@@ -152,6 +153,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.WEB_REPO_READ }}
           LAST_ABOUT: ${{ env.LAST_ABOUT }}
+          REFRESH_ABOUT: ${{ steps.check_changes.outputs.refresh_required }}
         run: |
           date +%s > ${LAST_ABOUT}
 
@@ -159,14 +161,20 @@ jobs:
             echo "Error: Failed to run deno task about" >&2
             exit 1
           fi
-          git add -A -- ./site/_generated/about.yml "${LAST_ABOUT}"
-          if git diff --quiet HEAD; then
-            echo "-- No changes -- "
-          else
+
+          # Update the timestamp only if content changes or threshold expired
+          git add -A -- ./site/_generated/about.yml
+          if [[ "${REFRESH_ABOUT}" == "true" ]] || ! git diff --quiet HEAD; then
+            echo "Content changes detected or refresh threshold expired. Committing updates..."
+            date +%s > ${LAST_ABOUT}
+            git add ${LAST_ABOUT}
+
             git commit -am "👥 Auto-update foundation metadata"
             git pull --rebase
             git push
             echo "updated=true" >> $GITHUB_OUTPUT
+          else
+            echo "-- No changes -- "
           fi
 
       - name: Git Discussion Update
