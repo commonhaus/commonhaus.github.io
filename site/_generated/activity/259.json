@@ -1,0 +1,18 @@
+{
+  "title": "🎉 WildFly joins Commonhaus!",
+  "rss_title": "📣  🎉 WildFly joins Commonhaus!",
+  "github": "https://github.com/commonhaus/foundation/discussions/259",
+  "author": "aalmiray",
+  "number": 259,
+  "date": "2025-04-30T09:58:27Z",
+  "updated": "2025-04-30T09:58:27Z",
+  "url": "/activity/259.html",
+  "type": "discussion",
+  "tags": [
+    "post",
+    "announcements",
+    "notice"
+  ],
+  "content": "### Announcement\n\nWindermere, Florida - All remote – Apr 30th, 2025 – Today, the Commonhaus Foundation is pleased to announce that Wildfly joins as a member project.\r\n\r\n[WildFly](https://www.wildfly.org/) is a powerful, modular, & lightweight application server that helps you build amazing enterprise Java applications.\r\n\r\n[Brian Stansberry](https://www.linkedin.com/in/brian-stansberry-5220636), current lead of the Wildfly project, explains the reasoning behind this move:\r\n\r\n> WildFly is a well-established project that wishes to continue to grow and develop. We believe being associated with Commonhaus can help us:\r\n>\r\n> * Grow our contributor and user communities by associating the project with a vendor-neutral foundation.\r\n> * Update our governance model to incorporate current open source best practices.\r\n> * Continue to improve our openness when it comes to roadmaps, designs and solution discussions.\r\n>\r\n> We want to continue to evolve and improve, but we also have a lot of experience running a successful and very complex project. We believe Commonhaus’ guiding principles around honoring project and community identity and offering guidance instead of mandates, with its “community-first” governance model, make it an excellent fit for WildFly.\r\n\r\nBrian has joined Commonhaus as a Member. He's been working on the WildFly and JBoss AS since 2003, previously acting as the lead of the project's high availability clustering, administration and management and cloud components. Brian’s best education was at the school of open source, where he learned everything he knows about software development. Brian lives in St. Louis, in the central US.\n\n### \n\n\r\n",
+  "description": "Commonhaus welcomes Wildfly as the latest member of its growing lists of projects"
+}
