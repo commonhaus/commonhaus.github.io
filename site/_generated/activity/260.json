@@ -1,0 +1,16 @@
+{
+  "title": "📝 Draft templates for amendments to agreements",
+  "rss_title": "📝 Draft templates for amendments to agreements",
+  "github": "https://github.com/commonhaus/foundation/pull/260",
+  "author": "ebullient",
+  "number": 260,
+  "date": "2025-05-01T12:47:16Z",
+  "updated": "2025-05-01T12:47:19Z",
+  "url": "/activity/260.html",
+  "type": "pullRequest",
+  "tags": [
+    "post",
+    "notice"
+  ],
+  "content": "These will serve as amendments for agreements (to add additional assets owned by an assignor, or to add/remove signatories).\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment)."
+}
