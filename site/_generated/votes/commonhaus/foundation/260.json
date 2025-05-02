@@ -7,7 +7,7 @@
   "groupSize": 17,
   "groupVotes": 3,
   "countedVotes": 4,
-  "droppedVotes": 0,
+  "droppedVotes": 1,
   "votingThreshold": "twothirds",
   "categories": {
     "approve": {
@@ -45,14 +45,21 @@
         {
           "login": "k-wall",
           "url": "https://github.com/k-wall",
-          "createdAt": "2025-05-02T11:34:40.000+00:00",
+          "createdAt": "2025-05-02T13:20:45.000+00:00",
           "reaction": "👀"
         }
       ],
       "otherVotes": []
     }
   },
-  "duplicates": [],
+  "duplicates": [
+    {
+      "login": "k-wall",
+      "url": "https://github.com/k-wall",
+      "createdAt": "2025-05-02T13:20:22.000+00:00",
+      "reaction": "👍"
+    }
+  ],
   "otherVotes": [
     {
       "login": "sigrunixia",
@@ -126,7 +133,7 @@
   "number": 260,
   "repoName": "commonhaus/foundation",
   "date": "2025-05-01T16:41:49Z",
-  "updated": "2025-05-02T11:35:52Z",
+  "updated": "2025-05-02T13:21:56Z",
   "tags": [
     "vote/open",
     "notice"
