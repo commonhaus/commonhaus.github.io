@@ -186,7 +186,10 @@ emmanuelbernard:
   avatarUrl: 'https://avatars.githubusercontent.com/u/300760?v=4'
   company: Red Hat
   name: Emmanuel Bernard
-  bio: ''
+  bio: >-
+    Senior Distinguished Engineer at Red Hat and Java Champion. Has his hands in
+    @hibernate, @quarkusio, @lescastcodeurs and tons of other open source
+    initiatives.
   groups:
     - members
 evanchooly:
