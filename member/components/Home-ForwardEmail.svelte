@@ -27,7 +27,7 @@
     service = $commonhausData.services?.forwardEmail || {};
     aliases = [
       ...(service.hasDefaultAlias ? [`<code>${$gitHubData.login}@commonhaus.dev</code>`] : []),
-      ...(service.aliases?.map(a => `<code>${a}</code>`) || [])
+      ...(service.altAlias?.map(a => `<code>${a}</code>`) || [])
     ];
     eligible = mayHaveEmail(status) || aliases.length > 0;
   }

@@ -220,9 +220,21 @@ function createMockBackend(): Middleware {
                 state.INFO.roles.push("cfc");
             }
             if (request.url.includes("role=contributor")) {
-                state.HAUS.status = "CONTRIBUTOR";
-                state.HAUS.services.forwardEmail.altAlias = ['other@whatever.org'],
                 state.INFO.roles.push("contributor");
+                state.HAUS.status = "CONTRIBUTOR";
+                state.HAUS.services.forwardEmail.hasDefaultAlias = false;
+                state.HAUS.services.forwardEmail.altAlias = [
+                  "postmaster@project.org",
+                  "root@project.org",
+                  "support@project.org",
+                  "translators@project.org",
+                  "webmaster@project.org",
+                  "ci@project.org",
+                  "training@project.org",
+                  "paypal@project.org",
+                  "admin@project.org",
+                  "all@project.org"
+                ];
                 state.ALIAS = {};
             }
             return stateResponse(request);
