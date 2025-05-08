@@ -155,8 +155,6 @@ jobs:
           LAST_ABOUT: ${{ env.LAST_ABOUT }}
           REFRESH_ABOUT: ${{ steps.check_changes.outputs.refresh_required }}
         run: |
-          date +%s > ${LAST_ABOUT}
-
           if ! deno task about; then
             echo "Error: Failed to run deno task about" >&2
             exit 1
@@ -164,6 +162,7 @@ jobs:
 
           # Update the timestamp only if content changes or threshold expired
           git add -A -- ./site/_generated/about.yml
+
           if [[ "${REFRESH_ABOUT}" == "true" ]] || ! git diff --quiet HEAD; then
             echo "Content changes detected or refresh threshold expired. Committing updates..."
             date +%s > ${LAST_ABOUT}
