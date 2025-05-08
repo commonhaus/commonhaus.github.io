@@ -1,5 +1,6 @@
 <script>
   import { onMount, onDestroy } from "svelte";
+  import { scrollToSection } from "./lib/scrollToSection";
   import Apply from "./routes/MemberApplicationForm.svelte";
   import Email from "./routes/ForwardEmail.svelte";
   import Footer from "./components/Footer.svelte";
@@ -61,6 +62,16 @@
 <div class="toaster {$toaster.show ? 'show' : ''}">
   <Callout type={$toaster.type} title={$toaster.message} />
 </div>
+{#if $hasResponse}
+  <a
+  id="reset-info"
+  href="#/"
+  role="button"
+  on:click|preventDefault={() => scrollToSection("member-reset")}
+  >
+  ✽
+  </a>
+{/if}
 <div class="content">
   {#if $location === ""}
     <Home />

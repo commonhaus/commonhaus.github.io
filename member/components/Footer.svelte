@@ -10,11 +10,11 @@
   }
 </script>
 
-<footer class="member-footer">
+<footer class="member-footer" id="member-reset">
   <span>
-    This application makes round-trips to GitHub. It won't win any races.
+    ✽ This application makes round-trips to GitHub. It won't win any races.
     If things get weird, try this reload button (it does more than just refreshing the page).
-    If that doesn't work, let us know.
+    If that doesn't work, <a href="/community/discord.html">let us know</a>.
   </span>
   <div class="tooltip">
     <button name="reset"

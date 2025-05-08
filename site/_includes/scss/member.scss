@@ -39,6 +39,14 @@ main.member {
     }
   }
 
+  #reset-info {
+    position: absolute;
+    right: 0;
+    top: 0;
+    @include margin-align-y;
+    @include content-align-y;
+  }
+
   button.close {
     --button-bg-color: transparent;
     --button-bg-color-hover: transparent;
