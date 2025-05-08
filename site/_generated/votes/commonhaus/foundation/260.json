@@ -5,8 +5,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 17,
-  "groupVotes": 4,
-  "countedVotes": 6,
+  "groupVotes": 5,
+  "countedVotes": 7,
   "droppedVotes": 2,
   "votingThreshold": "twothirds",
   "categories": {
@@ -15,6 +15,12 @@
         "👍"
       ],
       "team": [
+        {
+          "login": "aalmiray",
+          "url": "https://github.com/aalmiray",
+          "createdAt": "2025-05-08T07:04:26.000+00:00",
+          "reaction": "👍"
+        },
         {
           "login": "ebullient",
           "url": "https://github.com/ebullient",
@@ -94,10 +100,6 @@
   ],
   "missingGroupActors": [
     {
-      "login": "aalmiray",
-      "url": "https://github.com/aalmiray"
-    },
-    {
       "login": "velo",
       "url": "https://github.com/velo"
     },
@@ -153,11 +155,11 @@
   "number": 260,
   "repoName": "commonhaus/foundation",
   "date": "2025-05-01T16:41:49Z",
-  "updated": "2025-05-06T04:36:27Z",
+  "updated": "2025-05-08T09:28:15Z",
   "tags": [
     "vote/open",
     "notice"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-3.svg"
+  "progress": "https://www.commonhaus.org/votes/progress-4.svg"
 }
