@@ -7,7 +7,7 @@
   "groupSize": 17,
   "groupVotes": 8,
   "countedVotes": 10,
-  "droppedVotes": 2,
+  "droppedVotes": 3,
   "votingThreshold": "twothirds",
   "categories": {
     "approve": {
@@ -25,6 +25,12 @@
           "login": "aalmiray",
           "url": "https://github.com/aalmiray",
           "createdAt": "2025-05-08T07:04:26.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "cealsair",
+          "url": "https://github.com/cealsair",
+          "createdAt": "2025-05-13T14:49:04.000+00:00",
           "reaction": "👍"
         },
         {
@@ -73,12 +79,6 @@
       ],
       "team": [
         {
-          "login": "cealsair",
-          "url": "https://github.com/cealsair",
-          "createdAt": "2025-05-13T14:43:13.000+00:00",
-          "reaction": "👀"
-        },
-        {
           "login": "k-wall",
           "url": "https://github.com/k-wall",
           "createdAt": "2025-05-02T13:20:45.000+00:00",
@@ -89,6 +89,12 @@
     }
   },
   "duplicates": [
+    {
+      "login": "cealsair",
+      "url": "https://github.com/cealsair",
+      "createdAt": "2025-05-13T14:48:58.000+00:00",
+      "reaction": "👍"
+    },
     {
       "login": "SamBarker",
       "url": "https://github.com/SamBarker",
@@ -161,7 +167,7 @@
   "number": 260,
   "repoName": "commonhaus/foundation",
   "date": "2025-05-01T16:41:49Z",
-  "updated": "2025-05-13T14:43:13Z",
+  "updated": "2025-05-13T14:49:09Z",
   "tags": [
     "vote/open",
     "notice"
