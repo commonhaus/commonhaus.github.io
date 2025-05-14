@@ -115,6 +115,11 @@ body {
   --highlight-bg: rgba(var(--light-blue-rgb), 0.3);
 
   background-color: var(--bg-primary);
+
+
+  .dark-only {display: none;}
+  .light-only {display: inline-block;}
+
 }
 
 .dark body {
@@ -159,4 +164,7 @@ body {
       background-color: #fff;
     }
   }
+  
+  .dark-only {display: inline-block;}
+  .light-only {display: none;}
 }
