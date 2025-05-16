@@ -1,12 +1,12 @@
 {
   "title": "📝 Draft templates for amendments to agreements",
   "voteType": "marthas",
-  "hasQuorum": false,
+  "hasQuorum": true,
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 17,
-  "groupVotes": 11,
-  "countedVotes": 13,
+  "groupVotes": 12,
+  "countedVotes": 14,
   "droppedVotes": 3,
   "votingThreshold": "twothirds",
   "categories": {
@@ -37,6 +37,12 @@
           "login": "cealsair",
           "url": "https://github.com/cealsair",
           "createdAt": "2025-05-13T14:49:04.000+00:00",
+          "reaction": "👍"
+        },
+        {
+          "login": "cowtowncoder",
+          "url": "https://github.com/cowtowncoder",
+          "createdAt": "2025-05-15T23:05:10.000+00:00",
           "reaction": "👍"
         },
         {
@@ -158,10 +164,6 @@
       "url": "https://github.com/maxandersen"
     },
     {
-      "login": "cowtowncoder",
-      "url": "https://github.com/cowtowncoder"
-    },
-    {
       "login": "gavinking",
       "url": "https://github.com/gavinking"
     }
@@ -173,11 +175,12 @@
   "number": 260,
   "repoName": "commonhaus/foundation",
   "date": "2025-05-01T16:41:49Z",
-  "updated": "2025-05-14T12:34:53Z",
+  "updated": "2025-05-16T00:24:00Z",
   "tags": [
     "vote/open",
-    "notice"
+    "notice",
+    "vote/quorum"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-9.svg"
+  "progress": "https://www.commonhaus.org/votes/vote-quorum.svg"
 }
