@@ -132,9 +132,9 @@ criccomini:
   login: criccomini
   url: 'https://github.com/criccomini'
   avatarUrl: >-
-    https://avatars.githubusercontent.com/u/167569?u=e4fb8c4a1239bc3c6b017ebafb4f669c63378c2d&v=4
+    https://avatars.githubusercontent.com/u/167569?u=7d2e19aee0399bb88ce863a38234afb5ce9662be&v=4
   company: null
-  name: Chris Riccomini
+  name: Chris
   bio: 'Writer of books, code, checks, and newsletters. Working on SlateDB.'
   groups:
     - cf-egc
