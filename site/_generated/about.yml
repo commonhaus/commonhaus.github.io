@@ -207,10 +207,10 @@ gavinking:
   login: gavinking
   url: 'https://github.com/gavinking'
   avatarUrl: >-
-    https://avatars.githubusercontent.com/u/579974?u=2053a5f4ed0ddd89b2f7de04d7ea64c386fc619d&v=4
-  company: Red Hat
+    https://avatars.githubusercontent.com/u/579974?u=9870df599013dd5bc58d6c4f20442052e9a1e46a&v=4
+  company: IBM
   name: Gavin King
-  bio: "Distinguished Engineer at IBM / Red Hat.\r\n\r\nCreator of @Hibernate, @cdi-spec, and @ceylon.\r\n\r\nWorking on @jakartaee Persistence and Data specifications."
+  bio: "Red Hat Distinguished Engineer at IBM.\r\n\r\nCreator of @Hibernate, @cdi-spec, and @ceylon.\r\n\r\nWorking on @jakartaee Query, Persistence, and Data specifications."
   groups:
     - cf-egc
     - members
