@@ -250,6 +250,22 @@
     "type": "submodule",
     "genUrl": "/agreements/project-contribution/asset-transfer-agreement.html"
   },
+  "agreements/project-contribution/asset-transfer-amendment-email.md": {
+    "date": "2025-05-22T10:45:31.000Z",
+    "srcPath": "agreements/project-contribution/asset-transfer-amendment-email.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/project-contribution/asset-transfer-amendment-email.md",
+    "type": "submodule",
+    "genUrl": "/agreements/project-contribution/asset-transfer-amendment-email.html"
+  },
+  "agreements/project-contribution/asset-transfer-amendment.md": {
+    "date": "2025-05-22T10:45:31.000Z",
+    "srcPath": "agreements/project-contribution/asset-transfer-amendment.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/project-contribution/asset-transfer-amendment.md",
+    "type": "submodule",
+    "genUrl": "/agreements/project-contribution/asset-transfer-amendment.html"
+  },
   "agreements/project-contribution/fiscal-sponsorship-agreement.md": {
     "date": "2025-05-08T14:17:33.000Z",
     "srcPath": "agreements/project-contribution/fiscal-sponsorship-agreement.md",
@@ -257,6 +273,22 @@
     "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/project-contribution/fiscal-sponsorship-agreement.md",
     "type": "submodule",
     "genUrl": "/agreements/project-contribution/fiscal-sponsorship-agreement.html"
+  },
+  "agreements/project-contribution/fiscal-sponsorship-amendment-email.md": {
+    "date": "2025-05-22T10:45:31.000Z",
+    "srcPath": "agreements/project-contribution/fiscal-sponsorship-amendment-email.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/project-contribution/fiscal-sponsorship-amendment-email.md",
+    "type": "submodule",
+    "genUrl": "/agreements/project-contribution/fiscal-sponsorship-amendment-email.html"
+  },
+  "agreements/project-contribution/fiscal-sponsorship-amendment.md": {
+    "date": "2025-05-22T10:45:31.000Z",
+    "srcPath": "agreements/project-contribution/fiscal-sponsorship-amendment.md",
+    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
+    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/agreements/project-contribution/fiscal-sponsorship-amendment.md",
+    "type": "submodule",
+    "genUrl": "/agreements/project-contribution/fiscal-sponsorship-amendment.html"
   },
   "agreements/project-contribution/onboarding-checklist.md": {
     "date": "2025-04-28T22:21:00.000Z",
