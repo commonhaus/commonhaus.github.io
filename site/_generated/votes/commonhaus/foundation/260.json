@@ -2,7 +2,7 @@
   "title": "📝 Draft templates for amendments to agreements",
   "voteType": "marthas",
   "hasQuorum": true,
-  "isDone": false,
+  "isDone": true,
   "group": "commonhaus/cf-egc",
   "groupSize": 17,
   "groupVotes": 12,
@@ -168,17 +168,25 @@
       "url": "https://github.com/gavinking"
     }
   ],
-  "manualCloseComments": null,
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2025-05-22T16:05:40.000+00:00",
+    "body": "Quorum w/o contention. Moving forward. 🚀",
+    "url": "https://github.com/commonhaus/foundation/pull/260#issuecomment-2901792308"
+  },
   "commentId": "IC_kwDOKRPTI86plpO-",
   "github": "https://github.com/commonhaus/foundation/pull/260",
   "itemId": "PR_kwDOKRPTI86Uo0VW",
   "number": 260,
   "repoName": "commonhaus/foundation",
   "date": "2025-05-01T16:41:49Z",
-  "updated": "2025-05-22T10:45:50Z",
+  "updated": "2025-05-22T16:05:52Z",
   "tags": [
-    "vote/open",
     "notice",
+    "vote/done",
     "vote/quorum",
     "closed"
   ],
