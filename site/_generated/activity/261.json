@@ -1,0 +1,17 @@
+{
+  "title": "Automated Project Health reports",
+  "rss_title": "Automated Project Health reports",
+  "github": "https://github.com/commonhaus/foundation/discussions/261",
+  "author": "ebullient",
+  "number": 261,
+  "date": "2025-05-22T11:02:25Z",
+  "updated": "2025-05-22T11:02:26Z",
+  "url": "/activity/261.html",
+  "type": "discussion",
+  "tags": [
+    "post",
+    "general",
+    "notice"
+  ],
+  "content": "I am playing with how to automate gathering data to support a project health dashboard.\r\n\r\nHere are some ideas: \r\n\r\n- Data can be augmented with information in the private project repository\r\n- Raw statistics collected in the private project repository (JSON)\r\n- Rendered dashboards with aggregated data + signatory comments could be rendered as markdown + mermaid in GitHub and optionally on the website (foundation repository)\r\n\r\nI would like some other opinions on information that is useful (or not) to include.\r\n\r\n- Some information requires tending (like # of committers). \r\n- Some information does not currently have a great API to fetch (download statistics from Maven, though there may be better ways to do this with upgraded tools).\r\n\r\nAny other thoughts/ideas?"
+}
