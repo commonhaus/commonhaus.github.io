@@ -5,7 +5,7 @@
   "author": "ebullient",
   "number": 260,
   "date": "2025-05-01T12:47:16Z",
-  "updated": "2025-05-22T03:24:00Z",
+  "updated": "2025-05-22T10:45:51Z",
   "url": "/activity/260.html",
   "type": "pullRequest",
   "tags": [
@@ -14,5 +14,6 @@
     "notice",
     "vote/quorum"
   ],
-  "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/260.svg)](https://github.com/commonhaus/foundation/pull/260#issuecomment-2845217726 \"IC_kwDOKRPTI86plpO-\")\r\n\r\nThese will serve as amendments for agreements (to add additional assets owned by an assignor, or to add/remove signatories).\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment)."
+  "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/260.svg)](https://github.com/commonhaus/foundation/pull/260#issuecomment-2845217726 \"IC_kwDOKRPTI86plpO-\")\r\n\r\nThese will serve as amendments for agreements (to add additional assets owned by an assignor, or to add/remove signatories).\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- Approve the PR or react with 👍 (:+1:) if it looks good to you\r\n- Review with Comments or react with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment).",
+  "closedAt": "2025-05-22T10:45:32Z"
 }
