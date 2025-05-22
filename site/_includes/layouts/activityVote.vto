@@ -68,7 +68,7 @@ layout: layouts/activitySidebar.vto
   </p>
 </section>
 {{- /if }}
-{{ if page.data.missingGroupActors && page.data.missingGroupActors.length }}
+{{ if page.data.missingGroupActors?.length }}
 <section class="pending">
   <p><strong>Pending:</strong>
   {{ page.data.missingGroupActors |> listVoters }}
@@ -80,7 +80,7 @@ layout: layouts/activitySidebar.vto
 <p>Ignored reactions: {{ page.data.ignored.reactions.join(", ") }}</p>
 </section>
 {{ /if -}}
-{{ if page.data.duplicates && page.data.duplicates.length }}
+{{ if page.data.duplicates?.length }}
 <section class="duplicates">
   <p>Duplicates (used most recent):
   {{ page.data.duplicates |> listVoterReactions }}
