@@ -1,0 +1,43 @@
+.brandbox {
+   display: flex;
+   flex-wrap: wrap;
+
+  .brandblock {
+    width: 50%;
+    p {
+      text-align: center;
+    }
+  }
+
+  .colorblock {
+    padding: 2rem;
+    width: 40%;
+    h4, p {
+      color: white;
+      text-align: center;
+    }
+  }
+
+  .fern { background-color: #4D7343; }
+  .asparagus { background-color: #78A658; }
+  .yellowgreen { background-color: #A9D962; }
+  .lightblue { background-color: #BAD3D9; }
+  .ashgray { background-color: #a7bec3; }
+  .goldenrod { background-color: #D6A509; }
+  .cocoabrown { background-color: #D96704; }
+  .britishracinggreen { background-color: #1A402A; }
+  .darkgreen { background-color: #012626; }
+  .white { background-color: #ffffff; }
+  .black { background-color: #000000; }
+
+  @media(max-width: 672px) {
+
+    .brandblock, .colorblock {
+      width: 100%;
+    }
+  }
+}
+
+.logopadding {
+  padding: 2rem 0 2.5rem 0;
+}
