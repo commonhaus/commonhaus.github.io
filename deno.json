@@ -19,15 +19,15 @@
     ]
   },
   "imports": {
-    "@std/fs": "jsr:@std/fs@^1.0.3",
-    "@std/path": "jsr:@std/path@^1.0.4",
-    "@std/yaml": "jsr:@std/yaml@^1.0.5",
+    "@std/fs": "jsr:@std/fs@^1.0.17",
+    "@std/path": "jsr:@std/path@^1.0.9",
+    "@std/yaml": "jsr:@std/yaml@^1.0.6",
     "denoResolve": "https://deno.land/x/vite_plugin_deno_resolve@0.5.0/mod.ts",
     "lume/": "https://deno.land/x/lume@v2.5.2/",
-    "npm:markdown-it": "npm:markdown-it@14.0.0",
-    "npm:markdown-it-anchor": "npm:markdown-it-anchor@8.6.7",
+    "npm:markdown-it": "npm:markdown-it@14.1.0",
+    "npm:markdown-it-anchor": "npm:markdown-it-anchor@9.2.0",
     "npm:markdown-it-footnote": "npm:markdown-it-footnote@4.0.0",
-    "npm:markdown-it-obsidian-callouts": "npm:markdown-it-obsidian-callouts@0.2.6",
+    "npm:markdown-it-obsidian-callouts": "npm:markdown-it-obsidian-callouts@0.3.2",
     "toc": "https://deno.land/x/lume_markdown_plugins@v0.7.0/toc.ts",
     "vento": "https://deno.land/x/vento@v0.10.0/deps.ts"
   },
