@@ -28,42 +28,42 @@ Access the **[Commonhaus Foundation Brand Repo](https://github.com/commonhaus/ar
 When using the Commonhaus Foundation logo, make sure to leave an appropriate amount space around the logo. We define "appropriate" as the height of the capital F in the "Foundation" in the word mark in the logo itself.
 
 This is the minimum space to be left around the logo:
-<img class="light-only" src="/assets/brand_logo_spacing_vert_light.svg" aria-hidden="true" alt="Appropriate spacing for the vertical Commonhaus Foundation logo">
-<img class="dark-only" src="/assets/brand_logo_spacing_vert_dark.svg" aria-hidden="true" alt="Appropriate spacing for the vertical Commonhaus Foundation logo">
-<img class="light-only" src="/assets/brand_logo_spacing_hori_light.svg" aria-hidden="true" alt="Appropriate spacing for the horizontal Commonhaus Foundation logo">
-<img class="dark-only" src="/assets/brand_logo_spacing_hori_dark.svg" aria-hidden="true" alt="Appropriate spacing for the horizontal Commonhaus Foundation logo">
+<img class="light-only" src="/images/brand/brand_logo_spacing_vert_light.svg" aria-hidden="true" alt="Appropriate spacing for the vertical Commonhaus Foundation logo">
+<img class="dark-only" src="/images/brand/brand_logo_spacing_vert_dark.svg" aria-hidden="true" alt="Appropriate spacing for the vertical Commonhaus Foundation logo">
+<img class="light-only" src="/images/brand/brand_logo_spacing_hori_light.svg" aria-hidden="true" alt="Appropriate spacing for the horizontal Commonhaus Foundation logo">
+<img class="dark-only" src="/images/brand/brand_logo_spacing_hori_dark.svg" aria-hidden="true" alt="Appropriate spacing for the horizontal Commonhaus Foundation logo">
 
 ### Improper logo usage
 
 <div class="brandbox">
 	<div class="brandblock">
-		<img class="light-only" src="/assets/brand_logo_skew_light.svg" aria-hidden="true" alt="Example image of skewing the logo" >
-		<img class="dark-only" src="/assets/brand_logo_skew_dark.svg" aria-hidden="true" alt="Example image of skewing the logo">
+		<img class="light-only" src="/images/brand/brand_logo_skew_light.svg" aria-hidden="true" alt="Example image of skewing the logo" >
+		<img class="dark-only" src="/images/brand/brand_logo_skew_dark.svg" aria-hidden="true" alt="Example image of skewing the logo">
 		<p>Don't distort, stretch or skew the logo</p>
 	</div>
 	<div class="brandblock">
-		<img class="light-only" src="/assets/brand_logo_recolor_light.svg" aria-hidden="true" alt="Example image of recoloring the logo">
-		<img class="dark-only" src="/assets/brand_logo_recolor_dark.svg" aria-hidden="true" alt="Example image of recoloring the logo">
+		<img class="light-only" src="/images/brand/brand_logo_recolor_light.svg" aria-hidden="true" alt="Example image of recoloring the logo">
+		<img class="dark-only" src="/images/brand/brand_logo_recolor_dark.svg" aria-hidden="true" alt="Example image of recoloring the logo">
 		<p>Don't recolor the logo</p>
 	</div>
 	<div class="brandblock">
-		<img class="light-only" src="/assets/brand_logo_gradient_light.svg" aria-hidden="true" alt="Don't use a gradient on the logo">
-		<img class="dark-only" src="/assets/brand_logo_gradient_dark.svg" aria-hidden="true" alt="Don't use a gradient on the logo">
+		<img class="light-only" src="/images/brand/brand_logo_gradient_light.svg" aria-hidden="true" alt="Don't use a gradient on the logo">
+		<img class="dark-only" src="/images/brand/brand_logo_gradient_dark.svg" aria-hidden="true" alt="Don't use a gradient on the logo">
 		<p>Don't use a gradient on the logo</p>
 	</div>
 	<div class="brandblock">
-		<img class="light-only" src="/assets/brand_logo_resize_light.svg" aria-hidden="true" alt="Example image of changing the relationshipo between logomark and the typography">
-		<img class="dark-only" src="/assets/brand_logo_resize_dark.svg" aria-hidden="true" alt="Example image of changing the relationshipo between logomark and the typography">
+		<img class="light-only" src="/images/brand/brand_logo_resize_light.svg" aria-hidden="true" alt="Example image of changing the relationshipo between logomark and the typography">
+		<img class="dark-only" src="/images/brand/brand_logo_resize_dark.svg" aria-hidden="true" alt="Example image of changing the relationshipo between logomark and the typography">
 		<p>Don't change the size relationship between the logomark and the typography</p>
 	</div>
 	<div class="brandblock">
-		<img class="light-only" src="/assets/brand_logo_logotype_light.svg" aria-hidden="true" alt="Example of using the logotype without the logomark">
-		<img class="dark-only" src="/assets/brand_logo_logotype_dark.svg" aria-hidden="true" alt="Example of using the logotype without the logomark">
+		<img class="light-only" src="/images/brand/brand_logo_logotype_light.svg" aria-hidden="true" alt="Example of using the logotype without the logomark">
+		<img class="dark-only" src="/images/brand/brand_logo_logotype_dark.svg" aria-hidden="true" alt="Example of using the logotype without the logomark">
 		<p>Don't use the type without the logomark</p>
 	</div>
 	<div class="brandblock">
-		<img class="light-only" src="/assets/brand_logo_dropshadow_light.svg" aria-hidden="true" alt="Example of adding a dropshadow">
-		<img class="dark-only" src="/assets/brand_logo_dropshadow_dark.svg" aria-hidden="true" alt="Example of adding a dropshadow">
+		<img class="light-only" src="/images/brand/brand_logo_dropshadow_light.svg" aria-hidden="true" alt="Example of adding a dropshadow">
+		<img class="dark-only" src="/images/brand/brand_logo_dropshadow_dark.svg" aria-hidden="true" alt="Example of adding a dropshadow">
 		<p>Don't add dropshadows or effects</p>
 	</div>
 </div>
@@ -74,10 +74,10 @@ In some applications, the user may want to use a one-color version of the logo w
 
 <div class="brandbox">
   <div class="brandblock white">
-	<img src="/assets/brand_onecolor_horizontal_light.svg" aria-hidden="true" alt="Example of one-color tint or shade usage">
+	<img src="/images/brand/brand_onecolor_horizontal_light.svg" aria-hidden="true" alt="Example of one-color tint or shade usage">
   </div>
 	<div class="brandblock black">
-	<img src="/assets/brand_onecolor_horizontal_dark.svg" aria-hidden="true" alt="Example of one-color tint or shade usage">
+	<img src="/images/brand/brand_onecolor_horizontal_dark.svg" aria-hidden="true" alt="Example of one-color tint or shade usage">
   </div>
 </div>
 
