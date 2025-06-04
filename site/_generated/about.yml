@@ -394,6 +394,15 @@ timtebeek:
   bio: 'Staff software engineer at Moderne, supporting the OpenRewrite community.'
   groups:
     - cf-egc
+tomjenkinson:
+  login: tomjenkinson
+  url: 'https://github.com/tomjenkinson'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/317340?v=4'
+  company: null
+  name: Tom Jenkinson
+  bio: ''
+  groups:
+    - cf-egc-second
 tristantarrant:
   login: tristantarrant
   url: 'https://github.com/tristantarrant'
