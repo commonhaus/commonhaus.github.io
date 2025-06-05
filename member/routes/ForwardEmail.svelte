@@ -90,8 +90,6 @@
     aliasUpdates = JSON.parse(JSON.stringify($aliasTargets));
     noRecipients = true;
 
-    console.debug(aliasUpdates);
-
     for (const alias of keys) {
       if (aliasUpdates[alias].recipients) {
         noRecipients = false;

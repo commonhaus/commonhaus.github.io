@@ -15,6 +15,10 @@ export const isCfc = (roles: MemberRole[]): boolean => {
     return roles && roles.indexOf(MemberRole.CFC) !== -1;
 }
 
+export const isOps = (roles: MemberRole[]): boolean => {
+    return roles && roles.indexOf(MemberRole.OPS) !== -1;
+}
+
 export const mayHaveAttestations = (status: MemberStatus): boolean => {
     return status == MemberStatus.COMMITTEE
         || status == MemberStatus.ACTIVE    // member

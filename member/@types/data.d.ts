@@ -47,7 +47,8 @@ export enum MemberRole {
     CFC = 'cfc',
     EGC = 'egc',
     MEMBER = 'member',
-    SPONSOR = 'sponsor'
+    SPONSOR = 'sponsor',
+    OPS = 'ops',
 }
 
 export enum MemberStatus {

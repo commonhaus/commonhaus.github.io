@@ -18,7 +18,7 @@
   import Oops from "../components/Oops.svelte";
   import Loading from "../components/Loading-coffee.svelte";
   import Unknown from "../components/Unknown.svelte";
-  import { showDiscord, isCfc } from "../lib/memberStatus";
+  import { showDiscord, isCfc, isOps } from "../lib/memberStatus";
 
 </script>
 
@@ -49,7 +49,7 @@
   {#if !$knownUser}
     <Unknown />
   {:else}
-    {#if isCfc($gitHubData.roles)}
+    {#if isCfc($gitHubData.roles) || isOps($gitHubData.roles)}
       <Council />
     {/if}
     <Membership />
