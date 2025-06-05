@@ -310,6 +310,16 @@ maxandersen:
     - cf-egc
     - cf-egc-second
     - members
+mbellade:
+  login: mbellade
+  url: 'https://github.com/mbellade'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/25681369?u=fb91b69fa0c1ae46ae19ade593758d2cb29d1d1b&v=4
+  company: Red Hat
+  name: Marco Belladelli
+  bio: ''
+  groups:
+    - members
 mbladel:
   login: mbladel
   url: 'https://github.com/mbladel'
