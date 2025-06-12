@@ -89,6 +89,7 @@ bstansberry:
   bio: WildFly project lead / Red Hat JBoss EAP Architect
   groups:
     - cf-egc
+    - cf-egc-second
 cealsair:
   login: cealsair
   url: 'https://github.com/cealsair'
