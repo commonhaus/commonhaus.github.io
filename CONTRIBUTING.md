@@ -42,7 +42,7 @@ This project uses [Deno](https://deno.land/) as the runtime, the [Lume static si
 
     - `build`: Builds the website (first Lume, then Vite+Svelte)
     - **Lume**
-        - `attach`: Allows you to attach a debugger to a deno task.
+        - `attach`: Allows you to attach a debugger to a deno task (may not work with current vite watcher setup).
         - `serve`: Builds and serves the website, and watch for changes. Membership UI requires a backing service (see [cf-admin-bot](https://github.com/commonhaus/automation))
         - `serve-all`: Builds and serves the website, and watch for changes. Provides a mock backend for the Membership UI
     - **Generation** (requires the GH CLI)
@@ -50,6 +50,35 @@ This project uses [Deno](https://deno.land/) as the runtime, the [Lume static si
         - `activity`: Query the latest discussions and PRs from the foundation repository and update corresponding site pages.
         - `lastmod`: update information about the contents of the foundation submodule.
         - `checkCsp`: Recompute CSP hashes (see the [CSP header in the base layout](site/_includes/layouts/base.vto))
+
+## Development with Mock Backend
+
+The `serve-all` task provides a fully mocked backend for the membership UI, allowing development without a real GitHub App backend.
+
+**Environment Variables**:
+- `VITE_APP_DEV_MODE=true` - Enables development mode
+- `MOCK_BACKEND=true` - Activates the mock backend middleware
+- `DEV_MODE=true` - General development flag
+
+**Mock Backend Features**:
+The mock backend (implemented in `site/_plugins/devBackend.ts`) provides:
+- User authentication simulation with different roles (sponsor, member, contributor, egc, cfc)
+- Membership application processing
+- Email alias management
+- Forward email service simulation
+- Various error condition testing (403, 404, 500, 503, 409, 429)
+
+**Development Testing Functions**:
+When running with mock backend, browser console provides testing functions via `window.commonhaus`:
+- `commonhaus.sponsor()` - Simulate sponsor role
+- `commonhaus.member()` - Simulate member role
+- `commonhaus.contributor()` - Simulate contributor role
+- `commonhaus.egc()` - Simulate EGC committee role
+- `commonhaus.cfc()` - Simulate CFC committee role
+- `commonhaus.refresh()` - Reset to initial state
+- `commonhaus.get403()`, `commonhaus.post500()`, etc. - Test error conditions
+
+This allows comprehensive testing of the membership UI without requiring backend services.
 
 ## Content Generation Architecture
 
@@ -106,9 +135,9 @@ The website combines content from multiple sources through several transformatio
     - `assets` - static source files (processed by Lume)
         - `svg` the svg icon files in this folder are combined into a single sprite by SVGSpriter in `index.page.js`
     - `bylaws` - location of bylaws (mostly generated)
-        - `_data_.yml` - 👤 sidebar TOC for bylaws (manual updates)
+        - `_data.yml` - 👤 sidebar TOC for bylaws (manual updates)
     - `community`
-        - The landing page for this section is `foundation/COMMUNITY.md` (See `site/_foundation.yml`)
+        - The landing page for this section is `foundation-content/COMMUNITY.md` (See `site/_foundation.yml`)
         - `discord.md` common landing page to direct folks to our discord server
     - `member`: placeholder location for member UI
     - `policies`:

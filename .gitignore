@@ -17,4 +17,5 @@ public
 workspace*
 schema.docs.graphql
 .vite
-codemcp.toml
+.claude
+repomix

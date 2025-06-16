@@ -1,0 +1,46 @@
+project_prompt = """
+# Commonhaus Foundation Website
+
+For comprehensive technical context, review `.gpt-data/website-overview.md` which contains:
+- Core technologies (Deno, Lume, Vento, Svelte)
+- Project architecture and build process
+- Technical constraints and development guidelines
+- Detailed project structure
+- AI working relationship guidelines
+
+Also review `./CONTRIBUTING.md` for setup instructions and contribution guidelines.
+
+Key points:
+- Uses Deno runtime with Lume static site generator
+- Svelte UI in `member/` directory serves as GitHub App frontend
+- Ignore files in `public`, `node_modules`, and `.vscode` directories
+- Do not use React - use Svelte for interactive components
+"""
+
+[commands.serve]
+command = ["deno task serve"]
+doc = "Builds and serves the website; watches for changes"
+
+[commands.serve_all]
+command = ["deno task serve-all"]
+doc = " Builds and serves the website with mock backend for Membership UI"
+
+[commands.build]
+command = ["deno task build"]
+doc = "Builds the website (first Lume, then Vite+Svelte)"
+
+[commands.about]
+command = ["deno task about"]
+doc = "Update metadata about members of the foundation"
+
+[commands.activity]
+command = ["deno task activity"]
+doc = "Query and update latest discussions and PRs from foundation repository"
+
+[commands.lastmod]
+command = ["deno task lastmod"]
+doc = "Update information about the contents of the foundation submodule"
+
+[commands.checkCsp]
+command = ["deno task checkCsp"]
+doc = "Recompute CSP hashes"
