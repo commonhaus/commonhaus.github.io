@@ -89,7 +89,8 @@ export default defineConfig({
       preprocess: [
         vitePreprocess(),
         preprocess()
-      ]
+      ],
+      emitCss: true
     }),
     replaceCodePlugin({
       replacements: [
