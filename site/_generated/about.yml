@@ -84,9 +84,9 @@ bstansberry:
   url: 'https://github.com/bstansberry'
   avatarUrl: >-
     https://avatars.githubusercontent.com/u/299242?u=a2ee6fdfeea0194936ef931ec3cf34d3f52d6228&v=4
-  company: Red Hat
+  company: IBM
   name: Brian Stansberry
-  bio: WildFly project lead / Red Hat JBoss EAP Architect
+  bio: "WildFly project lead\r\nJBoss EAP Architect"
   groups:
     - cf-egc
     - cf-egc-second
