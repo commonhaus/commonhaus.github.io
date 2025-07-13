@@ -434,6 +434,16 @@ velo:
     lead, QueryDSL stalwart, and Commonhaus advocate.
   groups:
     - cf-egc
+xstefank:
+  login: xstefank
+  url: 'https://github.com/xstefank'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/9353101?u=3f378e09d5447bfbdaec113c6fb9cc9a7032af12&v=4
+  company: Red Hat
+  name: Martin Stefanko
+  bio: "Principal Software Engineer at Red Hat\r\n\r\nAuthor of Quarkus in Action - http://mng.bz/mj1W\r\nFree E-book - https://developers.redhat.com/e-books/quarkus-action"
+  groups:
+    - members
 yrodiere:
   login: yrodiere
   url: 'https://github.com/yrodiere'
