@@ -46,6 +46,7 @@ Sanne:
   name: Sanne Grinovero
   bio: "Hibernate team lead, Quarkus R&D, Java Champion, Architect at Red Hat.\r\n\r\nDutch, Italian, living near London. \r\n\r\nPassion for OSS and JVM, likes efficient code."
   groups:
+    - cf-egc-second
     - members
 aalmiray:
   login: aalmiray
@@ -175,9 +176,9 @@ ebullient:
   url: 'https://github.com/ebullient'
   avatarUrl: >-
     https://avatars.githubusercontent.com/u/808713?u=8c50c6169b230fc62777f6910f6669b753ae95a8&v=4
-  company: 'Red Hat, @commonhaus '
+  company: '@IBM, @commonhaus '
   name: Erin Schnabel
-  bio: "Java Champion. Distinguished Engineer and maker of things @ Red Hat. \r\nFormer @IBM."
+  bio: 'Java Champion. Distinguished Engineer and maker of things @ Red Hat. '
   groups:
     - cf-egc
     - members
