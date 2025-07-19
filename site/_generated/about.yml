@@ -238,6 +238,15 @@ jivebreaddev:
   bio: ''
   groups:
     - members
+jjpbolano:
+  login: jjpbolano
+  url: 'https://github.com/jjpbolano'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/3940018?v=4'
+  company: null
+  name: null
+  bio: null
+  groups:
+    - cf-egc-second
 k-wall:
   login: k-wall
   url: 'https://github.com/k-wall'
