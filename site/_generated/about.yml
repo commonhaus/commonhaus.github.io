@@ -24,9 +24,9 @@ Naros:
   url: 'https://github.com/Naros'
   avatarUrl: >-
     https://avatars.githubusercontent.com/u/3255568?u=4730e9a35d4b60504321a720796615a705462cef&v=4
-  company: '@RedHatOfficial @debezium @hibernate '
+  company: '@IBM @RedHatOfficial @debezium @hibernate '
   name: Chris Cranford
-  bio: "Principal Software Engineer @ Red Hat\r\nWorking on Debezium and Hibernate open source projects."
+  bio: "Principal Software Engineer @ IBM and Red Hat\r\nWorking on Debezium and Hibernate open source projects."
   groups:
     - cf-egc
 SamBarker:
