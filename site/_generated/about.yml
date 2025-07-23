@@ -42,9 +42,9 @@ Sanne:
   login: Sanne
   url: 'https://github.com/Sanne'
   avatarUrl: 'https://avatars.githubusercontent.com/u/42573?v=4'
-  company: Red Hat
+  company: IBM
   name: Sanne Grinovero
-  bio: "Hibernate team lead, Quarkus R&D, Java Champion, Architect at Red Hat.\r\n\r\nDutch, Italian, living near London. \r\n\r\nPassion for OSS and JVM, likes efficient code."
+  bio: "Hibernate team, Quarkus team, Java Champion, Commonhaus Foundation.\r\n\r\nDutch, Italian, living near London. \r\n\r\nPassion for OSS and JVM, likes efficient code."
   groups:
     - cf-egc-second
     - members
@@ -241,10 +241,13 @@ jivebreaddev:
 jjpbolano:
   login: jjpbolano
   url: 'https://github.com/jjpbolano'
-  avatarUrl: 'https://avatars.githubusercontent.com/u/3940018?v=4'
-  company: null
-  name: null
-  bio: null
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/3940018?u=a820733ec3e59c3f2c9e127f26b652647ecfc99d&v=4
+  company: IBM
+  name: Jorge Javier Perez Bolaño
+  bio: >-
+    Engineering Manager at IBM and Red Hat. Working with passionate engineers on
+    Debezium and previously on Teiid.
   groups:
     - cf-egc-second
 k-wall:
