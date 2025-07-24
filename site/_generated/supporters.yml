@@ -51,6 +51,10 @@ cristatus:
   login: cristatus
   url: 'https://github.com/cristatus'
   avatarUrl: 'https://avatars.githubusercontent.com/u/282290?v=4'
+darranl:
+  login: darranl
+  url: 'https://github.com/darranl'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/481922?v=4'
 deepy:
   login: deepy
   url: 'https://github.com/deepy'
