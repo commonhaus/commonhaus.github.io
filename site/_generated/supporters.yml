@@ -51,10 +51,6 @@ cristatus:
   login: cristatus
   url: 'https://github.com/cristatus'
   avatarUrl: 'https://avatars.githubusercontent.com/u/282290?v=4'
-darranl:
-  login: darranl
-  url: 'https://github.com/darranl'
-  avatarUrl: 'https://avatars.githubusercontent.com/u/481922?v=4'
 deepy:
   login: deepy
   url: 'https://github.com/deepy'
@@ -70,11 +66,6 @@ edeandrea:
   url: 'https://github.com/edeandrea'
   avatarUrl: >-
     https://avatars.githubusercontent.com/u/363447?u=ff66d411d8dac44c66b9314c346130c784c16370&v=4
-gsmet:
-  login: gsmet
-  url: 'https://github.com/gsmet'
-  avatarUrl: >-
-    https://avatars.githubusercontent.com/u/1279749?u=e462a6165ea17647aed446ca31fae604338ae18c&v=4
 ikysil:
   login: ikysil
   url: 'https://github.com/ikysil'

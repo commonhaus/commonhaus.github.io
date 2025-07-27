@@ -162,6 +162,17 @@ dandreadis:
   groups:
     - cf-egc
     - members
+darranl:
+  login: darranl
+  url: 'https://github.com/darranl'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/481922?v=4'
+  company: null
+  name: Darran Lofthouse
+  bio: >-
+    Software Engineer working on security architecture for the WildFly
+    application server, also interested in Raspberry Pi embedded software.
+  groups:
+    - members
 dreab8:
   login: dreab8
   url: 'https://github.com/dreab8'
@@ -215,6 +226,16 @@ gavinking:
   bio: "Red Hat Distinguished Engineer at IBM.\r\n\r\nCreator of @Hibernate, @cdi-spec, and @ceylon.\r\n\r\nWorking on @jakartaee Query, Persistence, and Data specifications."
   groups:
     - cf-egc
+    - members
+gsmet:
+  login: gsmet
+  url: 'https://github.com/gsmet'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/1279749?u=e462a6165ea17647aed446ca31fae604338ae18c&v=4
+  company: Red Hat
+  name: Guillaume Smet
+  bio: 'Happy camper at @RedHatOfficial, improving Quarkus one commit at a time.'
+  groups:
     - members
 henri-tremblay:
   login: henri-tremblay
