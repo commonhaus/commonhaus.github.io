@@ -29,6 +29,7 @@ Naros:
   bio: "Principal Software Engineer @ IBM and Red Hat\r\nWorking on Debezium and Hibernate open source projects."
   groups:
     - cf-egc
+    - members
 SamBarker:
   login: SamBarker
   url: 'https://github.com/SamBarker'
