@@ -178,7 +178,7 @@ dreab8:
   login: dreab8
   url: 'https://github.com/dreab8'
   avatarUrl: 'https://avatars.githubusercontent.com/u/432649?v=4'
-  company: Red Hat
+  company: IBM
   name: Andrea Boriero
   bio: ''
   groups:
@@ -250,6 +250,16 @@ henri-tremblay:
     useful. 
   groups:
     - cf-egc
+jamezp:
+  login: jamezp
+  url: 'https://github.com/jamezp'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/420065?u=9dc7029e853ee02eb0fbfb6237a9c9a124ec6b1f&v=4
+  company: Red Hat
+  name: James R. Perkins
+  bio: ''
+  groups:
+    - members
 jivebreaddev:
   login: jivebreaddev
   url: 'https://github.com/jivebreaddev'
