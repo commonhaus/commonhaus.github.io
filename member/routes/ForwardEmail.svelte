@@ -46,13 +46,16 @@
   let eligible = false;
   let eligibleForDefault = false;
   let hasDefaultAlias = false;
+  let createDefaultAlias = false;
 
   $: {
     // Check overall email eligibility
     eligible = mayHaveEmail($commonhausData.status);
+
     // Check eligibility for default email alias
     eligibleForDefault = mayHaveCommonhausEmail($commonhausData.status);
     hasDefaultAlias = $commonhausData.services?.forwardEmail?.hasDefaultAlias;
+    createDefaultAlias = !JSON.stringify($aliasTargets).includes("commonhaus.dev");
 
     recentAttestation = checkRecentAttestation("email", $commonhausData);
     nextDate = getNextAttestationDate("email", $commonhausData);
@@ -225,7 +228,7 @@
           </div>
         {/each}
       {/if}
-      {#if eligibleForDefault && !hasDefaultAlias }
+      {#if eligibleForDefault && createDefaultAlias }
         {@const alias = $gitHubData.login}
         <!-- Assign a default value to alias -->
         <div class="no-title setting">
