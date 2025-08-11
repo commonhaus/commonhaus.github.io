@@ -43,7 +43,8 @@ main.member {
     position: absolute;
     right: 0;
     top: 0;
-    @include margin-align-y;
+    padding-left: 5px;
+    padding-right: 5px;
     @include content-align-y;
   }
 

@@ -155,7 +155,7 @@
     <section class="information">
       {#if noRecipients}
         <h3>Setting up Forward Email</h3>
-        <ul>
+        <ol>
           <li>
             📝 Specifiy the target address for your alias below, and press <kbd
               >Submit</kbd
@@ -163,20 +163,18 @@
           </li>
           <li>📥 Check for a verification email from Forward Email.</li>
           <li>✅ Follow the instructions to verify your email address.</li>
-          <li>
-            🎉 You will begin to receive email after you have verified your
-            email address.
-          </li>
-          <li>
-            👀 See <a
+        </ol>
+        <p>
+          🎉 You will begin to receive email after you have verified your
+          email address.<br /><br />
+          👀 See <a
               href="#/"
               role="button"
               tabindex="0"
               on:click|preventDefault={() => scrollToSection("faq")}
               >additional notes below</a
             > for how to send mail using your new alias.
-          </li>
-        </ul>
+        </p>
       {:else}
         <p>
           Your email {keys.length <= 1 ? "alias" : "aliases"}:

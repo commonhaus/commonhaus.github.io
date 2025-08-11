@@ -1,25 +1,31 @@
 @mixin content-pad {
   padding: var(--height-padding) var(--width-padding);
 }
+
 @mixin content-pad-narrow {
   padding: var(--height-padding) calc(var(--width-padding)/2);
 }
+
 @mixin content-align {
   padding-left: var(--width-padding);
   padding-right: var(--width-padding);
 }
+
 @mixin content-align-with-aside {
   padding-left: var(--width-padding);
   padding-right: 0;
 }
+
 @mixin content-align-y {
   padding-top: var(--height-padding);
   padding-bottom: var(--height-padding);
 }
+
 @mixin margin-align-y {
   margin-top: var(--height-padding);
   margin-bottom: var(--height-padding);
 }
+
 @mixin aside-margin-width {
   --active-width: calc(var(--aside-width) - .5em);
   max-width: var(--active-width);
@@ -27,6 +33,7 @@
   width: var(--active-width);
   margin-right: .5em;
 }
+
 @mixin max-width-margin {
   max-width: 800px;
   margin: 0 auto;
