@@ -1,12 +1,12 @@
 {
   "title": "💸 Add mention of enterprise support offerings for tiered sponsors.",
   "voteType": "marthas",
-  "hasQuorum": false,
+  "hasQuorum": true,
   "isDone": false,
   "group": "commonhaus/cf-council",
   "groupSize": 3,
-  "groupVotes": 2,
-  "countedVotes": 4,
+  "groupVotes": 3,
+  "countedVotes": 5,
   "droppedVotes": 2,
   "votingThreshold": "all",
   "categories": {
@@ -19,6 +19,12 @@
           "login": "cealsair",
           "url": "https://github.com/cealsair",
           "createdAt": "2025-08-15T12:37:51Z",
+          "reaction": "👍"
+        },
+        {
+          "login": "ebullient",
+          "url": "https://github.com/ebullient",
+          "createdAt": "2025-08-15T15:30:30Z",
           "reaction": "👍"
         },
         {
@@ -79,22 +85,17 @@
       "reaction": "👀"
     }
   ],
-  "missingGroupActors": [
-    {
-      "login": "ebullient",
-      "url": "https://github.com/ebullient"
-    }
-  ],
   "commentId": "IC_kwDOKRPTI86-NbuG",
   "github": "https://github.com/commonhaus/foundation/pull/270",
   "itemId": "PR_kwDOKRPTI86j0wou",
   "number": 270,
   "repoName": "commonhaus/foundation",
   "date": "2025-08-15T10:22:08Z",
-  "updated": "2025-08-15T14:39:44Z",
+  "updated": "2025-08-15T15:31:44Z",
   "tags": [
-    "vote/open"
+    "vote/open",
+    "vote/quorum"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-6.svg"
+  "progress": "https://www.commonhaus.org/votes/vote-quorum.svg"
 }
