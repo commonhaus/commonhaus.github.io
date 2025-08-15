@@ -6,9 +6,32 @@
   "group": "commonhaus/cf-council",
   "groupSize": 3,
   "groupVotes": 0,
-  "countedVotes": 0,
+  "countedVotes": 1,
   "droppedVotes": 0,
   "votingThreshold": "all",
+  "categories": {
+    "ok": {
+      "reactions": [
+        "👀"
+      ],
+      "otherVotes": [
+        {
+          "login": "maxandersen",
+          "url": "https://github.com/maxandersen",
+          "createdAt": "2025-08-15T10:39:01Z",
+          "reaction": "👀"
+        }
+      ]
+    }
+  },
+  "otherVotes": [
+    {
+      "login": "maxandersen",
+      "url": "https://github.com/maxandersen",
+      "createdAt": "2025-08-15T10:39:01Z",
+      "reaction": "👀"
+    }
+  ],
   "missingGroupActors": [
     {
       "login": "cealsair",
@@ -29,7 +52,7 @@
   "number": 270,
   "repoName": "commonhaus/foundation",
   "date": "2025-08-15T10:22:08Z",
-  "updated": "2025-08-15T10:22:08Z",
+  "updated": "2025-08-15T10:39:15Z",
   "tags": [
     "vote/open"
   ],
