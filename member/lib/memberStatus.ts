@@ -3,7 +3,20 @@ import { attestationInfo } from "./attestations.ts";
 
 export const getPrimaryRole = (roles: MemberRole[]): MemberRole => {
     const rolePriority = attestationInfo.rolePriority;
-    roles.sort((a, b) => rolePriority.indexOf(a) - rolePriority.indexOf(b));
+    roles.sort((a, b) => {
+        const aIndex = rolePriority.indexOf(a);
+        const bIndex = rolePriority.indexOf(b);
+        
+        // Both roles are in priority list
+        if (aIndex !== -1 && bIndex !== -1) {
+            return aIndex - bIndex;
+        }
+        
+        // One or both roles not in list: known roles come first, then lexical sort
+        if (aIndex !== -1) return -1; // a is known, b is not
+        if (bIndex !== -1) return 1;  // b is known, a is not
+        return a.localeCompare(b);    // both unknown, sort lexically
+    });
     return roles[0];
 }
 
