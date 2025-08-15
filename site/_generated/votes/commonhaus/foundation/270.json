@@ -6,8 +6,8 @@
   "group": "commonhaus/cf-council",
   "groupSize": 3,
   "groupVotes": 2,
-  "countedVotes": 3,
-  "droppedVotes": 1,
+  "countedVotes": 4,
+  "droppedVotes": 2,
   "votingThreshold": "all",
   "categories": {
     "approve": {
@@ -20,20 +20,26 @@
           "url": "https://github.com/cealsair",
           "createdAt": "2025-08-15T12:37:51Z",
           "reaction": "👍"
+        },
+        {
+          "login": "kenfinnigan",
+          "url": "https://github.com/kenfinnigan",
+          "createdAt": "2025-08-15T13:19:58Z",
+          "reaction": "👍"
+        }
+      ],
+      "otherVotes": [
+        {
+          "login": "criccomini",
+          "url": "https://github.com/criccomini",
+          "createdAt": "2025-08-15T13:48:06Z",
+          "reaction": "👍"
         }
       ]
     },
     "ok": {
       "reactions": [
         "👀"
-      ],
-      "team": [
-        {
-          "login": "kenfinnigan",
-          "url": "https://github.com/kenfinnigan",
-          "createdAt": "2025-08-15T13:19:09Z",
-          "reaction": "👀"
-        }
       ],
       "otherVotes": [
         {
@@ -47,6 +53,12 @@
   },
   "duplicates": [
     {
+      "login": "kenfinnigan",
+      "url": "https://github.com/kenfinnigan",
+      "createdAt": "2025-08-15T13:19:09Z",
+      "reaction": "👀"
+    },
+    {
       "login": "cealsair",
       "url": "https://github.com/cealsair",
       "createdAt": "2025-08-15T12:34:06Z",
@@ -54,6 +66,12 @@
     }
   ],
   "otherVotes": [
+    {
+      "login": "criccomini",
+      "url": "https://github.com/criccomini",
+      "createdAt": "2025-08-15T13:48:06Z",
+      "reaction": "👍"
+    },
     {
       "login": "maxandersen",
       "url": "https://github.com/maxandersen",
@@ -73,7 +91,7 @@
   "number": 270,
   "repoName": "commonhaus/foundation",
   "date": "2025-08-15T10:22:08Z",
-  "updated": "2025-08-15T13:19:19Z",
+  "updated": "2025-08-15T14:39:44Z",
   "tags": [
     "vote/open"
   ],
