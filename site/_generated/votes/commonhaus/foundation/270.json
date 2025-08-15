@@ -2,7 +2,7 @@
   "title": "💸 Add mention of enterprise support offerings for tiered sponsors.",
   "voteType": "marthas",
   "hasQuorum": true,
-  "isDone": false,
+  "isDone": true,
   "group": "commonhaus/cf-council",
   "groupSize": 3,
   "groupVotes": 3,
@@ -85,17 +85,28 @@
       "reaction": "👀"
     }
   ],
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2025-08-15T16:31:12Z",
+    "body": "Unanimous CFC vote. Merging.",
+    "url": "https://github.com/commonhaus/foundation/pull/270#issuecomment-3192099011"
+  },
   "commentId": "IC_kwDOKRPTI86-NbuG",
   "github": "https://github.com/commonhaus/foundation/pull/270",
   "itemId": "PR_kwDOKRPTI86j0wou",
   "number": 270,
   "repoName": "commonhaus/foundation",
   "date": "2025-08-15T10:22:08Z",
-  "updated": "2025-08-15T15:31:44Z",
+  "updated": "2025-08-15T16:31:36Z",
   "tags": [
-    "vote/open",
-    "vote/quorum"
+    "vote/done",
+    "vote/quorum",
+    "closed"
   ],
-  "closed": false,
-  "progress": "https://www.commonhaus.org/votes/vote-quorum.svg"
+  "closed": true,
+  "closedAt": "2025-08-15T16:31:21Z",
+  "progress": "https://www.commonhaus.org/votes/vote-closed.svg"
 }
