@@ -1,0 +1,38 @@
+{
+  "title": "💸 Add mention of enterprise support offerings for tiered sponsors.",
+  "voteType": "marthas",
+  "hasQuorum": false,
+  "isDone": false,
+  "group": "commonhaus/cf-council",
+  "groupSize": 3,
+  "groupVotes": 0,
+  "countedVotes": 0,
+  "droppedVotes": 0,
+  "votingThreshold": "all",
+  "missingGroupActors": [
+    {
+      "login": "cealsair",
+      "url": "https://github.com/cealsair"
+    },
+    {
+      "login": "kenfinnigan",
+      "url": "https://github.com/kenfinnigan"
+    },
+    {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    }
+  ],
+  "commentId": "IC_kwDOKRPTI86-NbuG",
+  "github": "https://github.com/commonhaus/foundation/pull/270",
+  "itemId": "PR_kwDOKRPTI86j0wou",
+  "number": 270,
+  "repoName": "commonhaus/foundation",
+  "date": "2025-08-15T10:22:08Z",
+  "updated": "2025-08-15T10:22:08Z",
+  "tags": [
+    "vote/open"
+  ],
+  "closed": false,
+  "progress": "https://www.commonhaus.org/votes/progress-0.svg"
+}
