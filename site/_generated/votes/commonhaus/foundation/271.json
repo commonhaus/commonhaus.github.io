@@ -5,10 +5,25 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 17,
-  "groupVotes": 0,
-  "countedVotes": 0,
+  "groupVotes": 1,
+  "countedVotes": 1,
   "droppedVotes": 0,
   "votingThreshold": "twothirds",
+  "categories": {
+    "ok": {
+      "reactions": [
+        "👀"
+      ],
+      "team": [
+        {
+          "login": "gavinking",
+          "url": "https://github.com/gavinking",
+          "createdAt": "2025-08-15T23:42:06Z",
+          "reaction": "👀"
+        }
+      ]
+    }
+  },
   "missingGroupActors": [
     {
       "login": "aalmiray",
@@ -59,10 +74,6 @@
       "url": "https://github.com/cowtowncoder"
     },
     {
-      "login": "gavinking",
-      "url": "https://github.com/gavinking"
-    },
-    {
       "login": "criccomini",
       "url": "https://github.com/criccomini"
     },
@@ -85,7 +96,7 @@
   "number": 271,
   "repoName": "commonhaus/foundation",
   "date": "2025-08-15T20:56:25Z",
-  "updated": "2025-08-15T21:03:11Z",
+  "updated": "2025-08-15T23:42:20Z",
   "tags": [
     "vote/open",
     "notice"
