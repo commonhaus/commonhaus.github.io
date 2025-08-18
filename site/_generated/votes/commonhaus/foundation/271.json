@@ -5,8 +5,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 17,
-  "groupVotes": 3,
-  "countedVotes": 4,
+  "groupVotes": 4,
+  "countedVotes": 5,
   "droppedVotes": 0,
   "votingThreshold": "twothirds",
   "categories": {
@@ -34,6 +34,12 @@
         "👀"
       ],
       "team": [
+        {
+          "login": "Naros",
+          "url": "https://github.com/Naros",
+          "createdAt": "2025-08-18T21:50:55Z",
+          "reaction": "👀"
+        },
         {
           "login": "gavinking",
           "url": "https://github.com/gavinking",
@@ -105,10 +111,6 @@
       "url": "https://github.com/criccomini"
     },
     {
-      "login": "Naros",
-      "url": "https://github.com/Naros"
-    },
-    {
       "login": "kenfinnigan",
       "url": "https://github.com/kenfinnigan"
     },
@@ -123,11 +125,11 @@
   "number": 271,
   "repoName": "commonhaus/foundation",
   "date": "2025-08-15T20:56:25Z",
-  "updated": "2025-08-18T15:54:46Z",
+  "updated": "2025-08-18T21:51:12Z",
   "tags": [
     "vote/open",
     "notice"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-2.svg"
+  "progress": "https://www.commonhaus.org/votes/progress-3.svg"
 }
