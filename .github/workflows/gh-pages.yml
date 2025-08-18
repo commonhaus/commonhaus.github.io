@@ -28,7 +28,7 @@ jobs:
     # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
     # Cancel in-progress runs if a new one is queued
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
           submodules: recursive
