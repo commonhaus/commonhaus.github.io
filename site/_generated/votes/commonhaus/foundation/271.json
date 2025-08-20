@@ -5,8 +5,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 17,
-  "groupVotes": 3,
-  "countedVotes": 3,
+  "groupVotes": 4,
+  "countedVotes": 4,
   "droppedVotes": 0,
   "votingThreshold": "twothirds",
   "categories": {
@@ -32,6 +32,13 @@
           "url": "https://github.com/tristantarrant",
           "createdAt": "2025-08-16T08:48:36Z",
           "reaction": "👍"
+        },
+        {
+          "login": "yrodiere",
+          "url": "https://github.com/yrodiere",
+          "createdAt": "2025-08-20T12:50:09Z",
+          "reaction": "👍",
+          "alternate": true
         }
       ]
     }
@@ -100,11 +107,11 @@
   "number": 271,
   "repoName": "commonhaus/foundation",
   "date": "2025-08-15T20:56:25Z",
-  "updated": "2025-08-19T15:24:04Z",
+  "updated": "2025-08-20T12:50:26Z",
   "tags": [
     "vote/open",
     "notice"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-2.svg"
+  "progress": "https://www.commonhaus.org/votes/progress-3.svg"
 }
