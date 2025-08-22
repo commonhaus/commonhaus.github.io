@@ -192,7 +192,9 @@ ebullient:
     https://avatars.githubusercontent.com/u/808713?u=8c50c6169b230fc62777f6910f6669b753ae95a8&v=4
   company: '@IBM, @commonhaus '
   name: Erin Schnabel
-  bio: 'Java Champion. Distinguished Engineer and maker of things @ Red Hat. '
+  bio: >-
+    Java Champion. Maker of things. Distinguished Engineer @ Red Hat, Senior
+    Technical Staff Member @ IBM
   groups:
     - cf-egc
     - members
