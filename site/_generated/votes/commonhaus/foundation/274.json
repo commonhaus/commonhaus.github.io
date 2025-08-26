@@ -6,9 +6,56 @@
   "group": "commonhaus/cf-council",
   "groupSize": 3,
   "groupVotes": 0,
-  "countedVotes": 0,
+  "countedVotes": 3,
   "droppedVotes": 0,
   "votingThreshold": "all",
+  "categories": {
+    "approve": {
+      "reactions": [
+        "👍"
+      ],
+      "otherVotes": [
+        {
+          "login": "brunobat",
+          "url": "https://github.com/brunobat",
+          "createdAt": "2025-08-26T17:18:38Z",
+          "reaction": "👍"
+        },
+        {
+          "login": "cescoffier",
+          "url": "https://github.com/cescoffier",
+          "createdAt": "2025-08-26T17:06:17Z",
+          "reaction": "👍"
+        },
+        {
+          "login": "gastaldi",
+          "url": "https://github.com/gastaldi",
+          "createdAt": "2025-08-26T17:21:16Z",
+          "reaction": "👍"
+        }
+      ]
+    }
+  },
+  "otherVotes": [
+    {
+      "login": "brunobat",
+      "url": "https://github.com/brunobat",
+      "createdAt": "2025-08-26T17:18:38Z",
+      "reaction": "👍"
+    },
+    {
+      "login": "cescoffier",
+      "url": "https://github.com/cescoffier",
+      "createdAt": "2025-08-26T17:06:17Z",
+      "reaction": "👍"
+    },
+    {
+      "login": "gastaldi",
+      "url": "https://github.com/gastaldi",
+      "createdAt": "2025-08-26T17:21:16Z",
+      "reaction": "👍"
+    }
+  ],
   "missingGroupActors": [
     {
       "login": "cealsair",
@@ -29,7 +76,7 @@
   "number": 274,
   "repoName": "commonhaus/foundation",
   "date": "2025-08-26T17:05:50Z",
-  "updated": "2025-08-26T17:05:50Z",
+  "updated": "2025-08-26T18:24:00Z",
   "tags": [
     "vote/open",
     "notice"
