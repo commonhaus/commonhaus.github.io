@@ -1,12 +1,12 @@
 {
   "title": "Add compliance language",
   "voteType": "marthas",
-  "hasQuorum": false,
+  "hasQuorum": true,
   "isDone": false,
   "group": "commonhaus/cf-council",
   "groupSize": 3,
-  "groupVotes": 2,
-  "countedVotes": 9,
+  "groupVotes": 3,
+  "countedVotes": 10,
   "droppedVotes": 1,
   "votingThreshold": "all",
   "categories": {
@@ -25,6 +25,12 @@
           "login": "ebullient",
           "url": "https://github.com/ebullient",
           "createdAt": "2025-08-26T19:36:00Z",
+          "reaction": "👍"
+        },
+        {
+          "login": "kenfinnigan",
+          "url": "https://github.com/kenfinnigan",
+          "createdAt": "2025-08-27T11:46:45Z",
           "reaction": "👍"
         }
       ],
@@ -126,23 +132,18 @@
       "reaction": "👍"
     }
   ],
-  "missingGroupActors": [
-    {
-      "login": "kenfinnigan",
-      "url": "https://github.com/kenfinnigan"
-    }
-  ],
   "commentId": "IC_kwDOKRPTI87AOfoz",
   "github": "https://github.com/commonhaus/foundation/pull/274",
   "itemId": "PR_kwDOKRPTI86ldEsm",
   "number": 274,
   "repoName": "commonhaus/foundation",
   "date": "2025-08-26T17:05:50Z",
-  "updated": "2025-08-27T11:42:05Z",
+  "updated": "2025-08-27T11:46:59Z",
   "tags": [
     "vote/open",
-    "notice"
+    "notice",
+    "vote/quorum"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-6.svg"
+  "progress": "https://www.commonhaus.org/votes/vote-quorum.svg"
 }
