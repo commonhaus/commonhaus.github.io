@@ -6,7 +6,7 @@
   "group": "commonhaus/cf-council",
   "groupSize": 3,
   "groupVotes": 1,
-  "countedVotes": 5,
+  "countedVotes": 6,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -46,6 +46,12 @@
           "url": "https://github.com/gastaldi",
           "createdAt": "2025-08-26T17:21:16Z",
           "reaction": "👍"
+        },
+        {
+          "login": "gavinking",
+          "url": "https://github.com/gavinking",
+          "createdAt": "2025-08-26T23:24:25Z",
+          "reaction": "👍"
         }
       ]
     }
@@ -74,6 +80,12 @@
       "url": "https://github.com/gastaldi",
       "createdAt": "2025-08-26T17:21:16Z",
       "reaction": "👍"
+    },
+    {
+      "login": "gavinking",
+      "url": "https://github.com/gavinking",
+      "createdAt": "2025-08-26T23:24:25Z",
+      "reaction": "👍"
     }
   ],
   "missingGroupActors": [
@@ -92,7 +104,7 @@
   "number": 274,
   "repoName": "commonhaus/foundation",
   "date": "2025-08-26T17:05:50Z",
-  "updated": "2025-08-26T19:37:36Z",
+  "updated": "2025-08-27T00:24:01Z",
   "tags": [
     "vote/open",
     "notice"
