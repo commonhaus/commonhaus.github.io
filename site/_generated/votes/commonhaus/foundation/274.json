@@ -2,7 +2,7 @@
   "title": "Add compliance language",
   "voteType": "marthas",
   "hasQuorum": true,
-  "isDone": false,
+  "isDone": true,
   "group": "commonhaus/cf-council",
   "groupSize": 3,
   "groupVotes": 3,
@@ -132,18 +132,29 @@
       "reaction": "👍"
     }
   ],
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2025-08-27T14:35:59Z",
+    "body": "no objections, lots in favor. Proceed / fail forward.",
+    "url": "https://github.com/commonhaus/foundation/pull/274#issuecomment-3228467505"
+  },
   "commentId": "IC_kwDOKRPTI87AOfoz",
   "github": "https://github.com/commonhaus/foundation/pull/274",
   "itemId": "PR_kwDOKRPTI86ldEsm",
   "number": 274,
   "repoName": "commonhaus/foundation",
   "date": "2025-08-26T17:05:50Z",
-  "updated": "2025-08-27T11:46:59Z",
+  "updated": "2025-08-27T14:36:16Z",
   "tags": [
-    "vote/open",
     "notice",
-    "vote/quorum"
+    "vote/done",
+    "vote/quorum",
+    "closed"
   ],
-  "closed": false,
-  "progress": "https://www.commonhaus.org/votes/vote-quorum.svg"
+  "closed": true,
+  "closedAt": "2025-08-27T14:35:17Z",
+  "progress": "https://www.commonhaus.org/votes/vote-closed.svg"
 }
