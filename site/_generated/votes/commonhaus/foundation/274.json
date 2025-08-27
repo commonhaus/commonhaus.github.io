@@ -6,7 +6,7 @@
   "group": "commonhaus/cf-council",
   "groupSize": 3,
   "groupVotes": 1,
-  "countedVotes": 7,
+  "countedVotes": 8,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -54,6 +54,12 @@
           "reaction": "👍"
         },
         {
+          "login": "tristantarrant",
+          "url": "https://github.com/tristantarrant",
+          "createdAt": "2025-08-27T09:57:31Z",
+          "reaction": "👍"
+        },
+        {
           "login": "yrodiere",
           "url": "https://github.com/yrodiere",
           "createdAt": "2025-08-27T09:11:47Z",
@@ -94,6 +100,12 @@
       "reaction": "👍"
     },
     {
+      "login": "tristantarrant",
+      "url": "https://github.com/tristantarrant",
+      "createdAt": "2025-08-27T09:57:31Z",
+      "reaction": "👍"
+    },
+    {
       "login": "yrodiere",
       "url": "https://github.com/yrodiere",
       "createdAt": "2025-08-27T09:11:47Z",
@@ -116,7 +128,7 @@
   "number": 274,
   "repoName": "commonhaus/foundation",
   "date": "2025-08-26T17:05:50Z",
-  "updated": "2025-08-27T09:12:03Z",
+  "updated": "2025-08-27T10:52:37Z",
   "tags": [
     "vote/open",
     "notice"
