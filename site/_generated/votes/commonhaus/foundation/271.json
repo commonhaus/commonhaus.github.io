@@ -5,8 +5,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 17,
-  "groupVotes": 7,
-  "countedVotes": 7,
+  "groupVotes": 9,
+  "countedVotes": 9,
   "droppedVotes": 0,
   "votingThreshold": "twothirds",
   "categories": {
@@ -19,6 +19,12 @@
           "login": "Naros",
           "url": "https://github.com/Naros",
           "createdAt": "2025-08-19T13:40:58Z",
+          "reaction": "👍"
+        },
+        {
+          "login": "criccomini",
+          "url": "https://github.com/criccomini",
+          "createdAt": "2025-09-09T16:37:41Z",
           "reaction": "👍"
         },
         {
@@ -52,6 +58,12 @@
           "reaction": "👍"
         },
         {
+          "login": "velo",
+          "url": "https://github.com/velo",
+          "createdAt": "2025-09-09T16:46:31Z",
+          "reaction": "👍"
+        },
+        {
           "login": "yrodiere",
           "url": "https://github.com/yrodiere",
           "createdAt": "2025-08-20T12:50:09Z",
@@ -65,10 +77,6 @@
     {
       "login": "aalmiray",
       "url": "https://github.com/aalmiray"
-    },
-    {
-      "login": "velo",
-      "url": "https://github.com/velo"
     },
     {
       "login": "marc0der",
@@ -101,10 +109,6 @@
     {
       "login": "gavinking",
       "url": "https://github.com/gavinking"
-    },
-    {
-      "login": "criccomini",
-      "url": "https://github.com/criccomini"
     }
   ],
   "commentId": "IC_kwDOKRPTI86-TUAs",
@@ -113,11 +117,11 @@
   "number": 271,
   "repoName": "commonhaus/foundation",
   "date": "2025-08-15T20:56:25Z",
-  "updated": "2025-09-09T15:32:44Z",
+  "updated": "2025-09-09T16:46:41Z",
   "tags": [
     "vote/open",
     "notice"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-5.svg"
+  "progress": "https://www.commonhaus.org/votes/progress-7.svg"
 }
