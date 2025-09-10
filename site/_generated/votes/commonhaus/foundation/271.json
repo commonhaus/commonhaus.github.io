@@ -7,7 +7,7 @@
   "groupSize": 17,
   "groupVotes": 10,
   "countedVotes": 10,
-  "droppedVotes": 0,
+  "droppedVotes": 1,
   "votingThreshold": "twothirds",
   "categories": {
     "approve": {
@@ -54,7 +54,7 @@
         {
           "login": "kenfinnigan",
           "url": "https://github.com/kenfinnigan",
-          "createdAt": "2025-08-21T11:55:26Z",
+          "createdAt": "2025-09-10T23:06:28Z",
           "reaction": "👍"
         },
         {
@@ -79,6 +79,14 @@
       ]
     }
   },
+  "duplicates": [
+    {
+      "login": "kenfinnigan",
+      "url": "https://github.com/kenfinnigan",
+      "createdAt": "2025-08-21T11:55:26Z",
+      "reaction": "👍"
+    }
+  ],
   "missingGroupActors": [
     {
       "login": "aalmiray",
@@ -119,7 +127,7 @@
   "number": 271,
   "repoName": "commonhaus/foundation",
   "date": "2025-08-15T20:56:25Z",
-  "updated": "2025-09-09T18:24:00Z",
+  "updated": "2025-09-10T23:06:43Z",
   "tags": [
     "vote/open",
     "notice"
