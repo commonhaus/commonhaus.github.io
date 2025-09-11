@@ -46,24 +46,24 @@ jobs:
       votes_updated: steps.count_votes.outputs.votes_updated
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@08eba0b27e820071cde6df949e0beb9ba4906955 # v4.3.0
         with:
           fetch-depth: 0
 
       - name: Cache node modules
-        uses: actions/cache@v4
+        uses: actions/cache@0400d5f644dc74513175e3cd8d07132dd4860809 # v4.2.4
         with:
           path: node_modules
           key: ${{ hashFiles('deno.lock') }}
 
       - name: Cache Deno dependencies
-        uses: actions/cache@v4
+        uses: actions/cache@0400d5f644dc74513175e3cd8d07132dd4860809 # v4.2.4
         with:
           path: ${{ env.DENO_DIR }}
           key: ${{ hashFiles('deno.lock') }}
 
       - name: Setup Deno environment
-        uses: denoland/setup-deno@v2
+        uses: denoland/setup-deno@e95548e56dfa95d4e1a28d6f422fafe75c4c26fb # v2.0.3
         with:
           deno-version: v2.x
 
@@ -197,7 +197,7 @@ jobs:
 
       - name: Count votes
         id: count_votes
-        uses: commonhaus/vote-record-actions/actions/count-votes@1.0.5
+        uses: commonhaus/vote-record-actions/actions/count-votes@be7b4de5d375f01feb9ff8942c231c5546f046f6 # 1.0.5
         with:
           repositories: "commonhaus/foundation"
           target_dir: "site/_generated/votes"
