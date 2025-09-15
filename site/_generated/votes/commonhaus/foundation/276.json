@@ -1,0 +1,108 @@
+{
+  "title": "📝 notes/guidance for security policy [due Oct 11]",
+  "voteType": "marthas",
+  "hasQuorum": false,
+  "isDone": false,
+  "group": "commonhaus/cf-egc",
+  "groupSize": 17,
+  "groupVotes": 2,
+  "countedVotes": 2,
+  "droppedVotes": 0,
+  "votingThreshold": "twothirds",
+  "categories": {
+    "approve": {
+      "reactions": [
+        "👍"
+      ],
+      "team": [
+        {
+          "login": "henri-tremblay",
+          "url": "https://github.com/henri-tremblay",
+          "createdAt": "2025-09-11T21:17:46Z",
+          "reaction": "👍"
+        },
+        {
+          "login": "kenfinnigan",
+          "url": "https://github.com/kenfinnigan",
+          "createdAt": "2025-09-12T00:39:28Z",
+          "reaction": "👍"
+        }
+      ]
+    }
+  },
+  "missingGroupActors": [
+    {
+      "login": "aalmiray",
+      "url": "https://github.com/aalmiray"
+    },
+    {
+      "login": "velo",
+      "url": "https://github.com/velo"
+    },
+    {
+      "login": "dandreadis",
+      "url": "https://github.com/dandreadis"
+    },
+    {
+      "login": "marc0der",
+      "url": "https://github.com/marc0der"
+    },
+    {
+      "login": "evanchooly",
+      "url": "https://github.com/evanchooly"
+    },
+    {
+      "login": "tristantarrant",
+      "url": "https://github.com/tristantarrant"
+    },
+    {
+      "login": "maxandersen",
+      "url": "https://github.com/maxandersen"
+    },
+    {
+      "login": "k-wall",
+      "url": "https://github.com/k-wall"
+    },
+    {
+      "login": "cealsair",
+      "url": "https://github.com/cealsair"
+    },
+    {
+      "login": "bstansberry",
+      "url": "https://github.com/bstansberry"
+    },
+    {
+      "login": "cowtowncoder",
+      "url": "https://github.com/cowtowncoder"
+    },
+    {
+      "login": "gavinking",
+      "url": "https://github.com/gavinking"
+    },
+    {
+      "login": "criccomini",
+      "url": "https://github.com/criccomini"
+    },
+    {
+      "login": "Naros",
+      "url": "https://github.com/Naros"
+    },
+    {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    }
+  ],
+  "commentId": "IC_kwDOKRPTI87Dn7iH",
+  "github": "https://github.com/commonhaus/foundation/pull/276",
+  "itemId": "PR_kwDOKRPTI86oFoTb",
+  "number": 276,
+  "repoName": "commonhaus/foundation",
+  "date": "2025-09-11T17:37:48Z",
+  "updated": "2025-09-12T03:24:01Z",
+  "tags": [
+    "vote/open",
+    "notice"
+  ],
+  "closed": false,
+  "progress": "https://www.commonhaus.org/votes/progress-1.svg"
+}
