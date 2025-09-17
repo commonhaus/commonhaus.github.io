@@ -6,7 +6,7 @@
   "group": "commonhaus/cf-egc",
   "groupSize": 17,
   "groupVotes": 3,
-  "countedVotes": 3,
+  "countedVotes": 4,
   "droppedVotes": 0,
   "votingThreshold": "twothirds",
   "categories": {
@@ -33,9 +33,25 @@
           "createdAt": "2025-09-12T00:39:28Z",
           "reaction": "👍"
         }
+      ],
+      "otherVotes": [
+        {
+          "login": "jjpbolano",
+          "url": "https://github.com/jjpbolano",
+          "createdAt": "2025-09-17T06:49:45Z",
+          "reaction": "👍"
+        }
       ]
     }
   },
+  "otherVotes": [
+    {
+      "login": "jjpbolano",
+      "url": "https://github.com/jjpbolano",
+      "createdAt": "2025-09-17T06:49:45Z",
+      "reaction": "👍"
+    }
+  ],
   "missingGroupActors": [
     {
       "login": "aalmiray",
@@ -100,7 +116,7 @@
   "number": 276,
   "repoName": "commonhaus/foundation",
   "date": "2025-09-11T17:37:48Z",
-  "updated": "2025-09-17T03:23:59Z",
+  "updated": "2025-09-17T09:24:01Z",
   "tags": [
     "vote/open",
     "notice"
