@@ -19,9 +19,9 @@
     ]
   },
   "imports": {
-    "@std/fs": "jsr:@std/fs@^1.0.17",
-    "@std/path": "jsr:@std/path@^1.0.9",
-    "@std/yaml": "jsr:@std/yaml@^1.0.6",
+    "@std/fs": "jsr:@std/fs@^1.0.19",
+    "@std/path": "jsr:@std/path@^1.1.2",
+    "@std/yaml": "jsr:@std/yaml@^1.0.9",
     "denoResolve": "https://deno.land/x/vite_plugin_deno_resolve@0.5.0/mod.ts",
     "lume/": "https://deno.land/x/lume@v2.5.2/",
     "npm:markdown-it": "npm:markdown-it@14.1.0",
