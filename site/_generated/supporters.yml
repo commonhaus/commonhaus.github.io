@@ -94,6 +94,11 @@ jpechane:
   url: 'https://github.com/jpechane'
   avatarUrl: >-
     https://avatars.githubusercontent.com/u/650600?u=17b6df4ffa6ae30a02ba5183b44eeda44c12cc4f&v=4
+kmos:
+  login: kmos
+  url: 'https://github.com/kmos'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/8403734?u=f3bc89ed68770a35ab449096476881ae42e0fa82&v=4
 linux-china:
   login: linux-china
   url: 'https://github.com/linux-china'
