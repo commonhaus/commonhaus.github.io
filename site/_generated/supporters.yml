@@ -104,6 +104,11 @@ lobaorn:
   url: 'https://github.com/lobaorn'
   avatarUrl: >-
     https://avatars.githubusercontent.com/u/2183482?u=22d39716f3e4fce64c0ef1b3cc7b34143062a4d4&v=4
+mfvitale:
+  login: mfvitale
+  url: 'https://github.com/mfvitale'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/2572323?u=656415e60e62f0fb86bb47a1e154393f6f72063f&v=4
 murainwood:
   login: murainwood
   url: 'https://github.com/murainwood'
@@ -137,6 +142,10 @@ vincentmayers:
   url: 'https://github.com/vincentmayers'
   avatarUrl: >-
     https://avatars.githubusercontent.com/u/5480295?u=290d2c3cca62c6ac4b9304d56329c8a8bb96bf11&v=4
+vjuranek:
+  login: vjuranek
+  url: 'https://github.com/vjuranek'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/494573?v=4'
 wakingrufus:
   login: wakingrufus
   name: John B
