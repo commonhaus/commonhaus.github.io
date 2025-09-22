@@ -1,12 +1,12 @@
 {
   "title": "📝 Update Ts&Cs; Trademark costs & responsibility [due Sep 15]",
   "voteType": "marthas",
-  "hasQuorum": false,
+  "hasQuorum": true,
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 17,
-  "groupVotes": 11,
-  "countedVotes": 11,
+  "groupVotes": 12,
+  "countedVotes": 12,
   "droppedVotes": 1,
   "votingThreshold": "twothirds",
   "categories": {
@@ -25,6 +25,12 @@
           "login": "aalmiray",
           "url": "https://github.com/aalmiray",
           "createdAt": "2025-09-11T02:51:36Z",
+          "reaction": "👍"
+        },
+        {
+          "login": "bstansberry",
+          "url": "https://github.com/bstansberry",
+          "createdAt": "2025-09-22T20:20:59Z",
           "reaction": "👍"
         },
         {
@@ -115,10 +121,6 @@
       "url": "https://github.com/cealsair"
     },
     {
-      "login": "bstansberry",
-      "url": "https://github.com/bstansberry"
-    },
-    {
       "login": "gavinking",
       "url": "https://github.com/gavinking"
     }
@@ -129,11 +131,12 @@
   "number": 271,
   "repoName": "commonhaus/foundation",
   "date": "2025-08-15T20:56:25Z",
-  "updated": "2025-09-11T03:24:03Z",
+  "updated": "2025-09-22T21:24:08Z",
   "tags": [
     "vote/open",
-    "notice"
+    "notice",
+    "vote/quorum"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-9.svg"
+  "progress": "https://www.commonhaus.org/votes/vote-quorum.svg"
 }
