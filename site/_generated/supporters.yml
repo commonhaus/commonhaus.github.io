@@ -36,7 +36,7 @@ Postremus:
   login: Postremus
   url: 'https://github.com/Postremus'
   avatarUrl: >-
-    https://avatars.githubusercontent.com/u/1223135?u=4f9a20b4756d6bd9d3dd4923831e7629edd0f161&v=4
+    https://avatars.githubusercontent.com/u/1223135?u=98796e2a88b25a35f0649452fabb9130f98380c8&v=4
 Sharofiddin:
   login: Sharofiddin
   url: 'https://github.com/Sharofiddin'
@@ -94,6 +94,10 @@ jpechane:
   url: 'https://github.com/jpechane'
   avatarUrl: >-
     https://avatars.githubusercontent.com/u/650600?u=17b6df4ffa6ae30a02ba5183b44eeda44c12cc4f&v=4
+k-wall:
+  login: k-wall
+  url: 'https://github.com/k-wall'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/18440250?v=4'
 kmos:
   login: kmos
   url: 'https://github.com/kmos'
