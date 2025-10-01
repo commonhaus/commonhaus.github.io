@@ -2,7 +2,7 @@
   "title": "📝 Update Ts&Cs; Trademark costs & responsibility [due Sep 15]",
   "voteType": "marthas",
   "hasQuorum": true,
-  "isDone": false,
+  "isDone": true,
   "group": "commonhaus/cf-egc",
   "groupSize": 17,
   "groupVotes": 12,
@@ -125,18 +125,29 @@
       "url": "https://github.com/gavinking"
     }
   ],
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2025-10-01T22:13:59Z",
+    "body": "Proceeding! Thanks to all for responding.",
+    "url": "https://github.com/commonhaus/foundation/pull/271#issuecomment-3358344053"
+  },
   "commentId": "IC_kwDOKRPTI86-TUAs",
   "github": "https://github.com/commonhaus/foundation/pull/271",
   "itemId": "PR_kwDOKRPTI86j5RXb",
   "number": 271,
   "repoName": "commonhaus/foundation",
   "date": "2025-08-15T20:56:25Z",
-  "updated": "2025-09-22T21:24:08Z",
+  "updated": "2025-10-01T22:14:13Z",
   "tags": [
-    "vote/open",
     "notice",
-    "vote/quorum"
+    "vote/done",
+    "vote/quorum",
+    "closed"
   ],
-  "closed": false,
-  "progress": "https://www.commonhaus.org/votes/vote-quorum.svg"
+  "closed": true,
+  "closedAt": "2025-10-01T22:13:33Z",
+  "progress": "https://www.commonhaus.org/votes/vote-closed.svg"
 }
