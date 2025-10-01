@@ -1,0 +1,39 @@
+{
+  "title": "Scott Stark as Eclipse Foundation liaison (officer)",
+  "voteType": "marthas",
+  "hasQuorum": false,
+  "isDone": false,
+  "group": "commonhaus/cf-council",
+  "groupSize": 3,
+  "groupVotes": 0,
+  "countedVotes": 0,
+  "droppedVotes": 0,
+  "votingThreshold": "all",
+  "missingGroupActors": [
+    {
+      "login": "cealsair",
+      "url": "https://github.com/cealsair"
+    },
+    {
+      "login": "kenfinnigan",
+      "url": "https://github.com/kenfinnigan"
+    },
+    {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    }
+  ],
+  "commentId": "DC_kwDOKRPTI84A3kpS",
+  "github": "https://github.com/commonhaus/foundation/discussions/278",
+  "itemId": "D_kwDOKRPTI84AiOVb",
+  "number": 278,
+  "repoName": "commonhaus/foundation",
+  "date": "2025-10-01T22:22:02Z",
+  "updated": "2025-10-01T22:22:03Z",
+  "tags": [
+    "vote/open",
+    "notice"
+  ],
+  "closed": false,
+  "progress": "https://www.commonhaus.org/votes/progress-0.svg"
+}
