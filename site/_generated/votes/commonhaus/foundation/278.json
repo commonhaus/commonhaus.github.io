@@ -5,22 +5,51 @@
   "isDone": false,
   "group": "commonhaus/cf-council",
   "groupSize": 3,
-  "groupVotes": 0,
-  "countedVotes": 0,
+  "groupVotes": 2,
+  "countedVotes": 3,
   "droppedVotes": 0,
   "votingThreshold": "all",
+  "categories": {
+    "approve": {
+      "reactions": [
+        "👍"
+      ],
+      "team": [
+        {
+          "login": "ebullient",
+          "url": "https://github.com/ebullient",
+          "createdAt": "2025-10-01T22:22:30Z",
+          "reaction": "👍"
+        },
+        {
+          "login": "kenfinnigan",
+          "url": "https://github.com/kenfinnigan",
+          "createdAt": "2025-10-01T22:47:57Z",
+          "reaction": "👍"
+        }
+      ],
+      "otherVotes": [
+        {
+          "login": "dmlloyd",
+          "url": "https://github.com/dmlloyd",
+          "createdAt": "2025-10-01T23:03:17Z",
+          "reaction": "👍"
+        }
+      ]
+    }
+  },
+  "otherVotes": [
+    {
+      "login": "dmlloyd",
+      "url": "https://github.com/dmlloyd",
+      "createdAt": "2025-10-01T23:03:17Z",
+      "reaction": "👍"
+    }
+  ],
   "missingGroupActors": [
     {
       "login": "cealsair",
       "url": "https://github.com/cealsair"
-    },
-    {
-      "login": "kenfinnigan",
-      "url": "https://github.com/kenfinnigan"
-    },
-    {
-      "login": "ebullient",
-      "url": "https://github.com/ebullient"
     }
   ],
   "commentId": "DC_kwDOKRPTI84A3kpS",
@@ -29,11 +58,11 @@
   "number": 278,
   "repoName": "commonhaus/foundation",
   "date": "2025-10-01T22:22:02Z",
-  "updated": "2025-10-01T22:22:03Z",
+  "updated": "2025-10-02T00:24:04Z",
   "tags": [
     "vote/open",
     "notice"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-0.svg"
+  "progress": "https://www.commonhaus.org/votes/progress-6.svg"
 }
