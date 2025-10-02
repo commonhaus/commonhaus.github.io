@@ -6,7 +6,7 @@
   "group": "commonhaus/cf-council",
   "groupSize": 3,
   "groupVotes": 2,
-  "countedVotes": 6,
+  "countedVotes": 7,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -29,6 +29,12 @@
         }
       ],
       "otherVotes": [
+        {
+          "login": "aalmiray",
+          "url": "https://github.com/aalmiray",
+          "createdAt": "2025-10-02T09:32:48Z",
+          "reaction": "👍"
+        },
         {
           "login": "cowtowncoder",
           "url": "https://github.com/cowtowncoder",
@@ -57,6 +63,12 @@
     }
   },
   "otherVotes": [
+    {
+      "login": "aalmiray",
+      "url": "https://github.com/aalmiray",
+      "createdAt": "2025-10-02T09:32:48Z",
+      "reaction": "👍"
+    },
     {
       "login": "cowtowncoder",
       "url": "https://github.com/cowtowncoder",
@@ -94,7 +106,7 @@
   "number": 278,
   "repoName": "commonhaus/foundation",
   "date": "2025-10-01T22:22:02Z",
-  "updated": "2025-10-02T09:24:00Z",
+  "updated": "2025-10-02T12:24:01Z",
   "tags": [
     "vote/open",
     "notice"
