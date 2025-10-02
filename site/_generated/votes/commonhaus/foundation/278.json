@@ -6,7 +6,7 @@
   "group": "commonhaus/cf-council",
   "groupSize": 3,
   "groupVotes": 2,
-  "countedVotes": 3,
+  "countedVotes": 5,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -30,9 +30,21 @@
       ],
       "otherVotes": [
         {
+          "login": "cowtowncoder",
+          "url": "https://github.com/cowtowncoder",
+          "createdAt": "2025-10-02T03:14:01Z",
+          "reaction": "👍"
+        },
+        {
           "login": "dmlloyd",
           "url": "https://github.com/dmlloyd",
           "createdAt": "2025-10-01T23:03:17Z",
+          "reaction": "👍"
+        },
+        {
+          "login": "gavinking",
+          "url": "https://github.com/gavinking",
+          "createdAt": "2025-10-02T03:13:34Z",
           "reaction": "👍"
         }
       ]
@@ -40,9 +52,21 @@
   },
   "otherVotes": [
     {
+      "login": "cowtowncoder",
+      "url": "https://github.com/cowtowncoder",
+      "createdAt": "2025-10-02T03:14:01Z",
+      "reaction": "👍"
+    },
+    {
       "login": "dmlloyd",
       "url": "https://github.com/dmlloyd",
       "createdAt": "2025-10-01T23:03:17Z",
+      "reaction": "👍"
+    },
+    {
+      "login": "gavinking",
+      "url": "https://github.com/gavinking",
+      "createdAt": "2025-10-02T03:13:34Z",
       "reaction": "👍"
     }
   ],
@@ -58,7 +82,7 @@
   "number": 278,
   "repoName": "commonhaus/foundation",
   "date": "2025-10-01T22:22:02Z",
-  "updated": "2025-10-02T00:24:04Z",
+  "updated": "2025-10-02T03:23:58Z",
   "tags": [
     "vote/open",
     "notice"
