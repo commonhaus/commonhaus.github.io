@@ -6,7 +6,7 @@
   "group": "commonhaus/cf-council",
   "groupSize": 3,
   "groupVotes": 2,
-  "countedVotes": 5,
+  "countedVotes": 6,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -46,6 +46,12 @@
           "url": "https://github.com/gavinking",
           "createdAt": "2025-10-02T03:13:34Z",
           "reaction": "👍"
+        },
+        {
+          "login": "yrodiere",
+          "url": "https://github.com/yrodiere",
+          "createdAt": "2025-10-02T07:19:27Z",
+          "reaction": "👍"
         }
       ]
     }
@@ -68,6 +74,12 @@
       "url": "https://github.com/gavinking",
       "createdAt": "2025-10-02T03:13:34Z",
       "reaction": "👍"
+    },
+    {
+      "login": "yrodiere",
+      "url": "https://github.com/yrodiere",
+      "createdAt": "2025-10-02T07:19:27Z",
+      "reaction": "👍"
     }
   ],
   "missingGroupActors": [
@@ -82,7 +94,7 @@
   "number": 278,
   "repoName": "commonhaus/foundation",
   "date": "2025-10-01T22:22:02Z",
-  "updated": "2025-10-02T03:23:58Z",
+  "updated": "2025-10-02T09:24:00Z",
   "tags": [
     "vote/open",
     "notice"
