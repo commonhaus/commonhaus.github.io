@@ -6,7 +6,7 @@
   "group": "commonhaus/cf-council",
   "groupSize": 3,
   "groupVotes": 2,
-  "countedVotes": 8,
+  "countedVotes": 9,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -29,6 +29,12 @@
         }
       ],
       "otherVotes": [
+        {
+          "login": "Sanne",
+          "url": "https://github.com/Sanne",
+          "createdAt": "2025-10-02T21:37:47Z",
+          "reaction": "👍"
+        },
         {
           "login": "aalmiray",
           "url": "https://github.com/aalmiray",
@@ -69,6 +75,12 @@
     }
   },
   "otherVotes": [
+    {
+      "login": "Sanne",
+      "url": "https://github.com/Sanne",
+      "createdAt": "2025-10-02T21:37:47Z",
+      "reaction": "👍"
+    },
     {
       "login": "aalmiray",
       "url": "https://github.com/aalmiray",
@@ -118,7 +130,7 @@
   "number": 278,
   "repoName": "commonhaus/foundation",
   "date": "2025-10-01T22:22:02Z",
-  "updated": "2025-10-02T15:24:02Z",
+  "updated": "2025-10-03T00:23:58Z",
   "tags": [
     "vote/open",
     "notice"
