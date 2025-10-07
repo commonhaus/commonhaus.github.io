@@ -197,9 +197,8 @@ site.filter("listVoters", (voters: unknown) => {
             .map((voter: { login: string; url: string; }) =>
                 `<a href="${voter.url}" target="_top">${voter.login}</a>`)
             .join(", ");
-    } else {
-        console.log(voters, "is not an array");
     }
+    return "";
 });
 
 site.filter("listVoterReactions", (voters: unknown) => {
@@ -208,9 +207,8 @@ site.filter("listVoterReactions", (voters: unknown) => {
             .map((voter: { login: string; url: string; reaction: string; }) =>
                 `<a href="${voter.url}" target="_top">${voter.login}</a> (${voter.reaction})`)
             .join(", ");
-    } else {
-        console.log(voters, "is not an array");
     }
+    return "";
 });
 
 export default site;

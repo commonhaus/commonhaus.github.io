@@ -184,6 +184,14 @@ policies/trademark-guidelines:
     in text, materials, and digital media, including marking, logo use, and key
     trademark concepts.
 
+policies/trademark-costs:
+  url: /policies/trademark-policy/management-costs.html
+  description: >
+    Outlines the Commonhaus Foundation's policy for managing trademark costs,
+    including registration, renewal, and enforcement fees. Details responsibilities,
+    typical costs for U.S. trademark registration and transfers, and the payment
+    process for projects under fiscal sponsorship.
+
 policies/CLA:
   url: /policies/cla/
   description: >

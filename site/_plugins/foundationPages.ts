@@ -65,7 +65,14 @@ const fixFoundationUrls = (url: string, page: Page) => {
             }
             resolvedPath = normalize(join(dir, match[1]));
         }
-        const target = FOUNDATION_PAGES[resolvedPath.replace('.md', '')];
+        const lookupKey = resolvedPath.replace('.md', '');
+        const target = FOUNDATION_PAGES[lookupKey];
+        if (!target) {
+            console.warn(`⚠️ No foundation page mapping found for: ${lookupKey}`);
+            console.warn(`   Original URL: ${url}`);
+            console.warn(`   Page path: ${page.data.srcPath || page.src.path}`);
+            return url; // Return original URL if no mapping exists
+        }
         return target.url + (match[2] || '');
     }
 
