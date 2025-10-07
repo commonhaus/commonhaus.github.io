@@ -3,6 +3,7 @@ title: Infrastructure & Service Providers
 description: List of companies providing infrastructure services to the Commonhaus Foundation.
 templateEngine: [vto]
 index: false
+redirect: /about/sponsors/#providers
 metas:
   robots: false
 cssclasses:

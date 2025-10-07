@@ -7,6 +7,7 @@
 <title>{{ page.data.title }}</title>
 <link rel="stylesheet" href="/assets/fonts.css" data-hash />
 <link rel="stylesheet" href="/assets/site.css" data-hash />
+{{ if page.data.redirect }}<meta http-equiv="refresh" content="0; url={{ redirect }}">{{ /if }}
 {{- for x of page.data.preload }}
 {{ x }}
 {{ /for -}}

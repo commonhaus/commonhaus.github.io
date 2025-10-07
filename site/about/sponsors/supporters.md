@@ -3,6 +3,7 @@ title: Our Supporters
 description: List of individuals supporting the Commonhaus Foundation.
 templateEngine: [vto, md]
 index: false
+redirect: /about/sponsors/#supporters
 metas:
   robots: false
 cssclasses:

@@ -29,7 +29,7 @@ Want to become a sponsor? Learn more about our <a href="/about/sponsorship.html"
 </ul>
 {{ /if }}
 
-<p>We also extend our thanks to our <a href="providers.md">Infrastructure & Service Providers</a> and <a href="supporters.md">Community Supporters</a>.</p>
+<p>We also extend our thanks to our <a href="#providers">Infrastructure & Service Providers</a> and <a href="#supporters">Community Supporters</a>.</p>
 
 {{- for key, tier of tiers }}
 {{- if tieredSponsors[key] }}
@@ -41,3 +41,38 @@ Want to become a sponsor? Learn more about our <a href="/about/sponsorship.html"
 {{ include "layouts/display-sponsors.vto" { tier: tier, sponsorGroup: sponsorGroup } }}
 {{ /if -}}
 {{ /for -}}
+
+<hr />
+<h2 id="providers"><a class="header-anchor" href="#providers">Infrastructure & Service Providers</a></h2>
+
+{{- set inKind = page.data.inKind() }}
+{{- set tier = page.data.tier("inKind") }}
+<p>{{ tier.description }}</p>
+
+{{- if inKind }}
+{{ include "layouts/display-sponsors.vto" {
+        tier: tier,
+        sponsorGroup: inKind } }}
+{{ else }}
+<p>Coming soon 🚀 </p>
+{{ /if }}
+
+<hr />
+<h2 id="supporters"><a class="header-anchor" href="#supporters">Supporters</a></h2>
+
+We deeply appreciate the contributions of our Supporters, whose financial
+support helps sustain the work of the Commonhaus Foundation and our projects.
+
+{{- set supporters = page.data.supporters() }}
+{{- if supporters && supporters.length }}
+<section class="cards avatars">
+{{- for user of supporters }}
+<div class="card avatar-only">
+{{- include "layouts/display-avatar.vto" { user } -}}
+</div>
+{{- /for }}
+</section>
+{{ else }}
+<p>Coming soon 🚀 </p>
+{{ /if }}
+
