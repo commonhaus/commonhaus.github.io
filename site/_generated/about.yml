@@ -434,6 +434,15 @@ sigrunixia:
   groups:
     - cf-officers
     - members
+starksm64:
+  login: starksm64
+  url: 'https://github.com/starksm64'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/332210?v=4'
+  company: Red Hat
+  name: Scott M Stark
+  bio: ''
+  groups:
+    - cf-officers
 techbelle:
   login: techbelle
   url: 'https://github.com/techbelle'
