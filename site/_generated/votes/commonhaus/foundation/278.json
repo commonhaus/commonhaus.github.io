@@ -1,12 +1,12 @@
 {
   "title": "Scott Stark as Eclipse Foundation liaison (officer)",
   "voteType": "marthas",
-  "hasQuorum": false,
+  "hasQuorum": true,
   "isDone": false,
   "group": "commonhaus/cf-council",
   "groupSize": 3,
-  "groupVotes": 2,
-  "countedVotes": 10,
+  "groupVotes": 3,
+  "countedVotes": 11,
   "droppedVotes": 0,
   "votingThreshold": "all",
   "categories": {
@@ -15,6 +15,12 @@
         "👍"
       ],
       "team": [
+        {
+          "login": "cealsair",
+          "url": "https://github.com/cealsair",
+          "createdAt": "2025-10-08T01:47:30Z",
+          "reaction": "👍"
+        },
         {
           "login": "ebullient",
           "url": "https://github.com/ebullient",
@@ -130,23 +136,18 @@
       "reaction": "👍"
     }
   ],
-  "missingGroupActors": [
-    {
-      "login": "cealsair",
-      "url": "https://github.com/cealsair"
-    }
-  ],
   "commentId": "DC_kwDOKRPTI84A3kpS",
   "github": "https://github.com/commonhaus/foundation/discussions/278",
   "itemId": "D_kwDOKRPTI84AiOVb",
   "number": 278,
   "repoName": "commonhaus/foundation",
   "date": "2025-10-01T22:22:02Z",
-  "updated": "2025-10-05T09:24:03Z",
+  "updated": "2025-10-08T03:24:05Z",
   "tags": [
     "vote/open",
-    "notice"
+    "notice",
+    "vote/quorum"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-6.svg"
+  "progress": "https://www.commonhaus.org/votes/vote-quorum.svg"
 }
