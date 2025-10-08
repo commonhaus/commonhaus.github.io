@@ -5,8 +5,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 17,
-  "groupVotes": 9,
-  "countedVotes": 12,
+  "groupVotes": 10,
+  "countedVotes": 13,
   "droppedVotes": 0,
   "votingThreshold": "twothirds",
   "categories": {
@@ -43,6 +43,12 @@
           "login": "dandreadis",
           "url": "https://github.com/dandreadis",
           "createdAt": "2025-09-18T12:54:40Z",
+          "reaction": "👍"
+        },
+        {
+          "login": "ebullient",
+          "url": "https://github.com/ebullient",
+          "createdAt": "2025-10-08T19:09:18Z",
           "reaction": "👍"
         },
         {
@@ -152,10 +158,6 @@
     {
       "login": "gavinking",
       "url": "https://github.com/gavinking"
-    },
-    {
-      "login": "ebullient",
-      "url": "https://github.com/ebullient"
     }
   ],
   "commentId": "IC_kwDOKRPTI87Dn7iH",
@@ -164,11 +166,11 @@
   "number": 276,
   "repoName": "commonhaus/foundation",
   "date": "2025-09-11T17:37:48Z",
-  "updated": "2025-10-03T15:24:10Z",
+  "updated": "2025-10-08T21:24:03Z",
   "tags": [
     "vote/open",
     "notice"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-7.svg"
+  "progress": "https://www.commonhaus.org/votes/progress-8.svg"
 }
