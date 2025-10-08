@@ -2,7 +2,7 @@
   "title": "Scott Stark as Eclipse Foundation liaison (officer)",
   "voteType": "marthas",
   "hasQuorum": true,
-  "isDone": false,
+  "isDone": true,
   "group": "commonhaus/cf-council",
   "groupSize": 3,
   "groupVotes": 3,
@@ -136,18 +136,29 @@
       "reaction": "👍"
     }
   ],
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2025-10-08T16:36:50Z",
+    "body": "We're good to go. Welcome @starksm64! 🚀",
+    "url": "https://github.com/commonhaus/foundation/discussions/278#discussioncomment-14628503"
+  },
   "commentId": "DC_kwDOKRPTI84A3kpS",
   "github": "https://github.com/commonhaus/foundation/discussions/278",
   "itemId": "D_kwDOKRPTI84AiOVb",
   "number": 278,
   "repoName": "commonhaus/foundation",
   "date": "2025-10-01T22:22:02Z",
-  "updated": "2025-10-08T03:24:05Z",
+  "updated": "2025-10-08T16:37:10Z",
   "tags": [
-    "vote/open",
     "notice",
-    "vote/quorum"
+    "vote/done",
+    "vote/quorum",
+    "closed"
   ],
-  "closed": false,
-  "progress": "https://www.commonhaus.org/votes/vote-quorum.svg"
+  "closed": true,
+  "closedAt": "2025-10-08T16:36:50Z",
+  "progress": "https://www.commonhaus.org/votes/vote-closed.svg"
 }
