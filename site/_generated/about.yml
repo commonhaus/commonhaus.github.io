@@ -438,9 +438,9 @@ starksm64:
   login: starksm64
   url: 'https://github.com/starksm64'
   avatarUrl: 'https://avatars.githubusercontent.com/u/332210?v=4'
-  company: Red Hat
+  company: IBM
   name: Scott M Stark
-  bio: ''
+  bio: "Developer at IBM\r\nJBoss co-founder"
   groups:
     - cf-officers
 techbelle:
