@@ -1,12 +1,12 @@
 {
   "title": "📝 notes/guidance for security policy [due Oct 11]",
   "voteType": "marthas",
-  "hasQuorum": false,
+  "hasQuorum": true,
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 17,
-  "groupVotes": 11,
-  "countedVotes": 14,
+  "groupVotes": 12,
+  "countedVotes": 15,
   "droppedVotes": 0,
   "votingThreshold": "twothirds",
   "categories": {
@@ -102,6 +102,12 @@
           "url": "https://github.com/bstansberry",
           "createdAt": "2025-10-08T21:50:14Z",
           "reaction": "👀"
+        },
+        {
+          "login": "gavinking",
+          "url": "https://github.com/gavinking",
+          "createdAt": "2025-10-18T16:45:38Z",
+          "reaction": "👀"
         }
       ],
       "otherVotes": [
@@ -158,10 +164,6 @@
     {
       "login": "cealsair",
       "url": "https://github.com/cealsair"
-    },
-    {
-      "login": "gavinking",
-      "url": "https://github.com/gavinking"
     }
   ],
   "commentId": "IC_kwDOKRPTI87Dn7iH",
@@ -170,11 +172,12 @@
   "number": 276,
   "repoName": "commonhaus/foundation",
   "date": "2025-09-11T17:37:48Z",
-  "updated": "2025-10-09T00:24:04Z",
+  "updated": "2025-10-18T18:24:02Z",
   "tags": [
     "vote/open",
-    "notice"
+    "notice",
+    "vote/quorum"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-9.svg"
+  "progress": "https://www.commonhaus.org/votes/vote-quorum.svg"
 }
