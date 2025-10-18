@@ -5,13 +5,14 @@
   "author": "ebullient",
   "number": 276,
   "date": "2025-09-11T17:34:55Z",
-  "updated": "2025-10-18T16:04:56Z",
+  "updated": "2025-10-18T18:24:29Z",
   "url": "/activity/276.html",
   "type": "pullRequest",
   "tags": [
     "post",
     "vote/open",
-    "notice"
+    "notice",
+    "vote/quorum"
   ],
   "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/276.svg)](https://github.com/commonhaus/foundation/pull/276#issuecomment-3282024583 \"IC_kwDOKRPTI87Dn7iH\")\r\n\r\nGoes hand-in-hand with https://github.com/commonhaus/.github/pull/3\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- React with 👍 (:+1:) or Approve a review  if it looks good to you\r\n- React with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision:\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment)."
 }
