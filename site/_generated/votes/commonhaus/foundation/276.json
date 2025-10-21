@@ -6,7 +6,7 @@
   "group": "commonhaus/cf-egc",
   "groupSize": 17,
   "groupVotes": 12,
-  "countedVotes": 16,
+  "countedVotes": 17,
   "droppedVotes": 0,
   "votingThreshold": "twothirds",
   "categories": {
@@ -64,16 +64,15 @@
           "reaction": "👍"
         },
         {
-          "login": "karesti",
-          "url": "https://github.com/karesti",
-          "createdAt": "2025-09-17T11:56:50Z",
-          "reaction": "👍",
-          "alternate": true
-        },
-        {
           "login": "kenfinnigan",
           "url": "https://github.com/kenfinnigan",
           "createdAt": "2025-09-12T00:39:28Z",
+          "reaction": "👍"
+        },
+        {
+          "login": "tristantarrant",
+          "url": "https://github.com/tristantarrant",
+          "createdAt": "2025-10-21T11:12:01Z",
           "reaction": "👍"
         }
       ],
@@ -88,6 +87,12 @@
           "login": "jjpbolano",
           "url": "https://github.com/jjpbolano",
           "createdAt": "2025-09-17T06:49:45Z",
+          "reaction": "👍"
+        },
+        {
+          "login": "karesti",
+          "url": "https://github.com/karesti",
+          "createdAt": "2025-09-17T11:56:50Z",
           "reaction": "👍"
         },
         {
@@ -140,6 +145,12 @@
       "reaction": "👍"
     },
     {
+      "login": "karesti",
+      "url": "https://github.com/karesti",
+      "createdAt": "2025-09-17T11:56:50Z",
+      "reaction": "👍"
+    },
+    {
       "login": "yrodiere",
       "url": "https://github.com/yrodiere",
       "createdAt": "2025-10-20T09:07:18Z",
@@ -166,10 +177,6 @@
       "url": "https://github.com/evanchooly"
     },
     {
-      "login": "tristantarrant",
-      "url": "https://github.com/tristantarrant"
-    },
-    {
       "login": "maxandersen",
       "url": "https://github.com/maxandersen"
     },
@@ -184,7 +191,7 @@
   "number": 276,
   "repoName": "commonhaus/foundation",
   "date": "2025-09-11T17:37:48Z",
-  "updated": "2025-10-20T09:24:00Z",
+  "updated": "2025-10-21T12:24:02Z",
   "tags": [
     "vote/open",
     "notice",
