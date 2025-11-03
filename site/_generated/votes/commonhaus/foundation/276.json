@@ -2,7 +2,7 @@
   "title": "📝 notes/guidance for security policy [due Oct 11]",
   "voteType": "marthas",
   "hasQuorum": true,
-  "isDone": false,
+  "isDone": true,
   "group": "commonhaus/cf-egc",
   "groupSize": 17,
   "groupVotes": 12,
@@ -185,16 +185,25 @@
       "url": "https://github.com/cealsair"
     }
   ],
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2025-11-03T14:38:54Z",
+    "body": "Quorum reached. Updates to templates pushed.",
+    "url": "https://github.com/commonhaus/foundation/pull/276#issuecomment-3480895734"
+  },
   "commentId": "IC_kwDOKRPTI87Dn7iH",
   "github": "https://github.com/commonhaus/foundation/pull/276",
   "itemId": "PR_kwDOKRPTI86oFoTb",
   "number": 276,
   "repoName": "commonhaus/foundation",
   "date": "2025-09-11T17:37:48Z",
-  "updated": "2025-11-03T01:13:52Z",
+  "updated": "2025-11-03T14:39:13Z",
   "tags": [
-    "vote/open",
     "notice",
+    "vote/done",
     "vote/quorum",
     "closed"
   ],
