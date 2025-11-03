@@ -191,12 +191,14 @@
   "number": 276,
   "repoName": "commonhaus/foundation",
   "date": "2025-09-11T17:37:48Z",
-  "updated": "2025-10-24T15:17:51Z",
+  "updated": "2025-11-03T01:13:52Z",
   "tags": [
     "vote/open",
     "notice",
-    "vote/quorum"
+    "vote/quorum",
+    "closed"
   ],
-  "closed": false,
-  "progress": "https://www.commonhaus.org/votes/vote-quorum.svg"
+  "closed": true,
+  "closedAt": "2025-11-03T01:13:35Z",
+  "progress": "https://www.commonhaus.org/votes/vote-closed.svg"
 }
