@@ -122,9 +122,9 @@
     "jsr:@std/yaml@1.0.4": "1.0.4",
     "jsr:@std/yaml@1.0.5": "1.0.5",
     "jsr:@std/yaml@^1.0.0-rc.1": "1.0.5",
+    "jsr:@std/yaml@^1.0.10": "1.0.10",
     "jsr:@std/yaml@^1.0.4": "1.0.5",
     "jsr:@std/yaml@^1.0.5": "1.0.5",
-    "jsr:@std/yaml@^1.0.9": "1.0.9",
     "npm:@js-temporal/polyfill@0.4.4": "0.4.4",
     "npm:@sveltejs/vite-plugin-svelte@*": "3.1.2_svelte@4.2.19_vite@5.4.3__sass@1.77.8_sass@1.77.8_@types+node@18.16.19",
     "npm:@types/estree@1.0.5": "1.0.5",
@@ -548,8 +548,8 @@
     "@std/yaml@1.0.5": {
       "integrity": "71ba3d334305ee2149391931508b2c293a8490f94a337eef3a09cade1a2a2742"
     },
-    "@std/yaml@1.0.9": {
-      "integrity": "6bad3dc766dd85b4b37eabcba81b6aa4eac7a392792ae29abcfb0f90602d55bb"
+    "@std/yaml@1.0.10": {
+      "integrity": "245706ea3511cc50c8c6d00339c23ea2ffa27bd2c7ea5445338f8feff31fa58e"
     }
   },
   "npm": {
@@ -1044,42 +1044,19 @@
       "os": ["win32"],
       "cpu": ["x64"]
     },
-    "@sveltejs/vite-plugin-svelte-inspector@2.1.0_@sveltejs+vite-plugin-svelte@3.1.2__svelte@4.2.19__vite@5.4.3___sass@1.77.8__sass@1.77.8_svelte@4.2.19_vite@5.4.3__sass@1.77.8_sass@1.77.8": {
-      "integrity": "sha512-9QX28IymvBlSCqsCll5t0kQVxipsfhFFL+L2t3nTWfXnddYwxBuAEtTtlaVQpRz9c37BhJjltSeY4AJSC03SSg==",
-      "dependencies": [
-        "@sveltejs/vite-plugin-svelte@3.1.2_svelte@4.2.19_vite@5.4.3__sass@1.77.8_sass@1.77.8",
-        "debug",
-        "svelte",
-        "vite@5.4.3_sass@1.77.8"
-      ]
-    },
     "@sveltejs/vite-plugin-svelte-inspector@2.1.0_@sveltejs+vite-plugin-svelte@3.1.2__svelte@4.2.19__vite@5.4.3___sass@1.77.8__sass@1.77.8_svelte@4.2.19_vite@5.4.3__sass@1.77.8_sass@1.77.8_@types+node@18.16.19": {
       "integrity": "sha512-9QX28IymvBlSCqsCll5t0kQVxipsfhFFL+L2t3nTWfXnddYwxBuAEtTtlaVQpRz9c37BhJjltSeY4AJSC03SSg==",
       "dependencies": [
-        "@sveltejs/vite-plugin-svelte@3.1.2_svelte@4.2.19_vite@5.4.3__sass@1.77.8_sass@1.77.8_@types+node@18.16.19",
+        "@sveltejs/vite-plugin-svelte",
         "debug",
         "svelte",
         "vite@5.4.3_sass@1.77.8_@types+node@18.16.19"
       ]
     },
-    "@sveltejs/vite-plugin-svelte@3.1.2_svelte@4.2.19_vite@5.4.3__sass@1.77.8_sass@1.77.8": {
-      "integrity": "sha512-Txsm1tJvtiYeLUVRNqxZGKR/mI+CzuIQuc2gn+YCs9rMTowpNZ2Nqt53JdL8KF9bLhAf2ruR/dr9eZCwdTriRA==",
-      "dependencies": [
-        "@sveltejs/vite-plugin-svelte-inspector@2.1.0_@sveltejs+vite-plugin-svelte@3.1.2__svelte@4.2.19__vite@5.4.3___sass@1.77.8__sass@1.77.8_svelte@4.2.19_vite@5.4.3__sass@1.77.8_sass@1.77.8",
-        "debug",
-        "deepmerge",
-        "kleur",
-        "magic-string",
-        "svelte",
-        "svelte-hmr",
-        "vite@5.4.3_sass@1.77.8",
-        "vitefu@0.2.5_vite@5.4.3__sass@1.77.8_sass@1.77.8"
-      ]
-    },
     "@sveltejs/vite-plugin-svelte@3.1.2_svelte@4.2.19_vite@5.4.3__sass@1.77.8_sass@1.77.8_@types+node@18.16.19": {
       "integrity": "sha512-Txsm1tJvtiYeLUVRNqxZGKR/mI+CzuIQuc2gn+YCs9rMTowpNZ2Nqt53JdL8KF9bLhAf2ruR/dr9eZCwdTriRA==",
       "dependencies": [
-        "@sveltejs/vite-plugin-svelte-inspector@2.1.0_@sveltejs+vite-plugin-svelte@3.1.2__svelte@4.2.19__vite@5.4.3___sass@1.77.8__sass@1.77.8_svelte@4.2.19_vite@5.4.3__sass@1.77.8_sass@1.77.8_@types+node@18.16.19",
+        "@sveltejs/vite-plugin-svelte-inspector",
         "debug",
         "deepmerge",
         "kleur",
@@ -1087,7 +1064,7 @@
         "svelte",
         "svelte-hmr",
         "vite@5.4.3_sass@1.77.8_@types+node@18.16.19",
-        "vitefu@0.2.5_vite@5.4.3__sass@1.77.8_sass@1.77.8_@types+node@18.16.19"
+        "vitefu"
       ]
     },
     "@trysound/sax@0.2.0": {
@@ -2213,29 +2190,6 @@
       ],
       "bin": true
     },
-    "vite@5.4.3_sass@1.77.8": {
-      "integrity": "sha512-IH+nl64eq9lJjFqU+/yrRnrHPVTlgy42/+IzbOdaFDVlyLgI/wDlf+FCobXLX1cT0X5+7LMyH1mIy2xJdLfo8Q==",
-      "dependencies": [
-        "esbuild@0.21.5",
-        "postcss",
-        "rollup@4.21.2",
-        "sass@1.77.8"
-      ],
-      "optionalDependencies": [
-        "fsevents"
-      ],
-      "optionalPeers": [
-        "@types/node",
-        "less@*",
-        "lightningcss@^1.21.0",
-        "sass@*",
-        "sass-embedded@*",
-        "stylus@*",
-        "sugarss@*",
-        "terser@^5.4.0"
-      ],
-      "bin": true
-    },
     "vite@5.4.3_sass@1.77.8_@types+node@18.16.19": {
       "integrity": "sha512-IH+nl64eq9lJjFqU+/yrRnrHPVTlgy42/+IzbOdaFDVlyLgI/wDlf+FCobXLX1cT0X5+7LMyH1mIy2xJdLfo8Q==",
       "dependencies": [
@@ -2253,15 +2207,6 @@
         "sass@1.77.8"
       ],
       "bin": true
-    },
-    "vitefu@0.2.5_vite@5.4.3__sass@1.77.8_sass@1.77.8": {
-      "integrity": "sha512-SgHtMLoqaeeGnd2evZ849ZbACbnwQCIwRH57t18FxcXoZop0uQu0uzlIhJBlF/eWVzuce0sHeqPcDo+evVcg8Q==",
-      "dependencies": [
-        "vite@5.4.3_sass@1.77.8"
-      ],
-      "optionalPeers": [
-        "vite@^3.0.0 || ^4.0.0 || ^5.0.0"
-      ]
     },
     "vitefu@0.2.5_vite@5.4.3__sass@1.77.8_sass@1.77.8_@types+node@18.16.19": {
       "integrity": "sha512-SgHtMLoqaeeGnd2evZ849ZbACbnwQCIwRH57t18FxcXoZop0uQu0uzlIhJBlF/eWVzuce0sHeqPcDo+evVcg8Q==",
@@ -3486,7 +3431,7 @@
     "dependencies": [
       "jsr:@std/fs@^1.0.19",
       "jsr:@std/path@^1.1.2",
-      "jsr:@std/yaml@^1.0.9",
+      "jsr:@std/yaml@^1.0.10",
       "npm:markdown-it-anchor@9.2.0",
       "npm:markdown-it-footnote@4.0.0",
       "npm:markdown-it-obsidian-callouts@0.3.2",
