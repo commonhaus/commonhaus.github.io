@@ -9,6 +9,10 @@
     event.preventDefault();
     await load(uriBase + "/keeper/verifyLogins");
   }
+  async function cfcInstallations(event) {
+    event.preventDefault();
+    await load(uriBase + "/manager/installations");
+  }
   async function cfcOrg(event) {
     event.preventDefault();
     await load(uriBase + "/manager/org");
@@ -32,9 +36,14 @@
   <ul>
     <li><a href="#/" on:click={cfcProjectAliases}>Keeper: Resync project aliases</a></li>
     <li><a href="#/" on:click={cfcVerifyLogins}>Keeper: Verify logins</a></li>
+  </ul>
+  <ul>
+    <li><a href="#/" on:click={cfcInstallations}>Manager: Verify HausManager installations</a></li>
     <li><a href="#/" on:click={cfcOrg}>Manager: Resync organization membership</a></li>
     <li><a href="#/" on:click={cfcProjects}>Manager: Resync project configuration</a></li>
     <li><a href="#/" on:click={cfcSponsors}>Manager: Resync sponsors</a></li>
+  </ul>
+  <ul>
     <li><a href="#/" on:click={cfcVotes}>Rules: Count votes</a></li>
   </ul>
 </div>
