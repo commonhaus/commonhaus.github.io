@@ -259,9 +259,11 @@ jamezp:
   url: 'https://github.com/jamezp'
   avatarUrl: >-
     https://avatars.githubusercontent.com/u/420065?u=9dc7029e853ee02eb0fbfb6237a9c9a124ec6b1f&v=4
-  company: IBM
+  company: '@IBM '
   name: James R. Perkins
-  bio: ''
+  bio: >-
+    Software Developer @IBM. Co-lead @jakartaee EE 12. Lead @resteasy. Committer
+    @wildfly & JBoss EAP.
   groups:
     - members
 jivebreaddev:
