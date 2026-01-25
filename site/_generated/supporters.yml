@@ -18,6 +18,10 @@ HanSolo:
   url: 'https://github.com/HanSolo'
   avatarUrl: >-
     https://avatars.githubusercontent.com/u/62843?u=9827ec0fc3afd15d018b0e51bb014daf055ba118&v=4
+JYC11:
+  login: JYC11
+  url: 'https://github.com/JYC11'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/72298654?v=4'
 JohannesRabauer:
   login: JohannesRabauer
   url: 'https://github.com/JohannesRabauer'
@@ -86,11 +90,21 @@ gaetanBloch:
   url: 'https://github.com/gaetanBloch'
   avatarUrl: >-
     https://avatars.githubusercontent.com/u/583199?u=50c49e83d6b4feb78a091901ea02ead1462f442b&v=4
+giwankim:
+  login: giwankim
+  url: 'https://github.com/giwankim'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/14240606?u=e00d31f931a82844eb84353c90893d6a52f6e94d&v=4
 hun-cloud:
   login: hun-cloud
   url: 'https://github.com/hun-cloud'
   avatarUrl: >-
     https://avatars.githubusercontent.com/u/89080095?u=25ae231200d225cb597351c5b139696b38355684&v=4
+hyunw9:
+  login: hyunw9
+  url: 'https://github.com/hyunw9'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/43662405?u=407b39d16bcad5dc8b5f93e984ec4032ae054fea&v=4
 ikysil:
   login: ikysil
   url: 'https://github.com/ikysil'
@@ -113,6 +127,11 @@ k-wall:
   login: k-wall
   url: 'https://github.com/k-wall'
   avatarUrl: 'https://avatars.githubusercontent.com/u/18440250?v=4'
+kimgun95:
+  login: kimgun95
+  url: 'https://github.com/kimgun95'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/54833128?u=e9c23c764b9b9e6688526e1e077424d2124c6163&v=4
 kmos:
   login: kmos
   url: 'https://github.com/kmos'
