@@ -25,6 +25,12 @@ import foundationPages from "./site/_plugins/foundationPages.ts";
 import devBackend from "./site/_plugins/devBackend.ts";
 import contentHash from "./site/_plugins/contentHash.ts";
 
+// GitHub-compatible slugify: strips special chars like () instead of encoding them
+const ghSlugify = (s: string) =>
+    String(s).trim().toLowerCase()
+        .replace(/[^\w\s-]/g, '')
+        .replace(/\s+/g, '-');
+
 const markdown = {
     options: {
         breaks: false,
@@ -40,7 +46,7 @@ const markdown = {
                 warning: '<svg width="24" height="24"><use xlink:href="/assets/icon-symbol.svg#icon-warning"/></svg>',
             }
         }],
-        [anchor, { level: 1 }],
+        [anchor, { level: 1, slugify: ghSlugify }],
         footnote,
     ]
 };
