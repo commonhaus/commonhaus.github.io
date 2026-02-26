@@ -8,6 +8,18 @@ DavideD:
   bio: ''
   groups:
     - members
+FDelporte:
+  login: FDelporte
+  url: 'https://github.com/FDelporte'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/1415873?u=210082a099bf99036ad4d362f46194b6c1e4f37a&v=4
+  company: webtechie.be - Pi4J - CoderDojo
+  name: Frank Delporte
+  bio: >-
+    #JavaOnRaspberryPi - Java Champion - Author of 'Getting Started with Java on
+    Raspberry Pi' - Technical Writer Azul - Team member Pi4J - CoderDojo Belgium
+  groups:
+    - cf-egc
 JooHyukKim:
   login: JooHyukKim
   url: 'https://github.com/JooHyukKim'
@@ -198,6 +210,16 @@ ebullient:
   groups:
     - cf-egc
     - members
+eitch:
+  login: eitch
+  url: 'https://github.com/eitch'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/245382?u=6af78a44f0ebe5040cd48c795cdaa6e5694fe185&v=4
+  company: '@atexxi'
+  name: Robert von Burg
+  bio: 'Creator of https://strolch.li'
+  groups:
+    - cf-egc-second
 emmanuelbernard:
   login: emmanuelbernard
   url: 'https://github.com/emmanuelbernard'
