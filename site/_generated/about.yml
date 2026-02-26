@@ -254,6 +254,17 @@ gavinking:
   groups:
     - cf-egc
     - members
+graemerocher:
+  login: graemerocher
+  url: 'https://github.com/graemerocher'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/66626?v=4'
+  company: '@Oraclelabs'
+  name: Graeme Rocher
+  bio: >-
+    Creator of Grails (http://grails.org) and Micronaut (http://micronaut.io)
+    frameworks. Architect at Oracle
+  groups:
+    - cf-egc-second
 gsmet:
   login: gsmet
   url: 'https://github.com/gsmet'
@@ -435,6 +446,16 @@ rfichtner:
   bio: "CEO of XDEV Software,\r\nProgrammer, \r\nLoves Java ❤️☕, \r\n Founder JUG Oberpfalz, \r\nCo-organizer @jcon_conference, \r\nFather and Husband"
   groups:
     - members
+sdelamo:
+  login: sdelamo
+  url: 'https://github.com/sdelamo'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/864788?u=6f286b21ed6f5b37479197d20b5db90a099ad633&v=4
+  company: Oracle
+  name: Sergio del Amo
+  bio: "\r\n    \r\n"
+  groups:
+    - cf-egc
 sebersole:
   login: sebersole
   url: 'https://github.com/sebersole'
