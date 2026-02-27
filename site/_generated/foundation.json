@@ -410,14 +410,6 @@
     "type": "submodule",
     "genUrl": "/elections/candidate-template.html"
   },
-  "policies/CLA.md": {
-    "date": "2024-02-16T18:24:37.000Z",
-    "srcPath": "policies/CLA.md",
-    "githubUrl": "https://github.com/commonhaus/foundation/blob/main/",
-    "repoUrl": "https://github.com/commonhaus/foundation/blob/main/policies/CLA.md",
-    "type": "submodule",
-    "genUrl": "/policies/CLA.html"
-  },
   "policies/README.md": {
     "date": "2025-02-20T21:14:20.000Z",
     "srcPath": "policies/README.md",
