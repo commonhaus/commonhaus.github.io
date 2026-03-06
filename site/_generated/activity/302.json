@@ -1,0 +1,18 @@
+{
+  "title": "🎉 PI4J joins Commonhaus!",
+  "rss_title": "📣  🎉 PI4J joins Commonhaus!",
+  "github": "https://github.com/commonhaus/foundation/discussions/302",
+  "author": "aalmiray",
+  "number": 302,
+  "date": "2026-03-06T11:07:16Z",
+  "updated": "2026-03-06T11:07:16Z",
+  "url": "/activity/302.html",
+  "type": "discussion",
+  "tags": [
+    "post",
+    "announcements",
+    "notice"
+  ],
+  "content": "### Announcement\n\nWindermere, Florida - All remote – Mar 5th, 2026 – Today, the [Commonhaus Foundation](https://www.commonhaus.org/) is pleased to announce that PI4J joins as a member project.\r\n\r\n[PI4J](https://www.pi4j.com/) has been the Java library for interacting with the Raspberry Pi's GPIO pins and hardware interfaces since 2012. What started as a passion project by Robert Savage has grown into an actively maintained open-source library used by Java developers worldwide to connect their code to the physical world — buttons, LEDs, sensors, displays, and more. The recently released V4, based on the Foreign Function and Memory (FFM) API, shows that it keeps up with the evolution of Java and single-board computers.\r\n\r\n[Frank Delporte](https://www.linkedin.com/in/frankdelporte/), currently the main communicator and documentation lead of the Pi4J project, shares the following:\r\n\r\n> Joining the Commonhaus Foundation is a natural next step for the project's long-term sustainability. As with many open-source projects, contributors come and go, and we want to ensure Pi4J can continue, regardless of what happens to the current [team members](https://www.pi4j.com/about/team/). Commonhaus gets the keys to our critical infrastructure, acting as a neutral anchor that ensures the project can always be handed over and kept alive. Beyond that, we share Commonhaus's values: honoring project identity, keeping governance lightweight, and putting the community first, as that has been the success of the Pi4J project.\r\n\r\nFrank Delporte is a Java Champion and Technical Writer at Azul, and the author of Getting Started with Java on Raspberry Pi and a regular speaker at Java conferences. He contributes to the Friends of OpenJDK community through the Foojay.io website and podcast, and co-founded two CoderDojo clubs in Belgium, where he introduces programming and electronics to young people. Frank lives in Passendale, Belgium.\n\n### \n\n\r\n",
+  "description": "PI4j is the Java library for interacting with the Raspberry Pi's GPIO pins and hardware interfaces. PI4J joins Commonhaus"
+}
