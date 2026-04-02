@@ -5,9 +5,9 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 19,
-  "groupVotes": 2,
-  "countedVotes": 2,
-  "droppedVotes": 0,
+  "groupVotes": 3,
+  "countedVotes": 3,
+  "droppedVotes": 1,
   "votingThreshold": "twothirds",
   "categories": {
     "approve": {
@@ -15,6 +15,12 @@
         "👍"
       ],
       "team": [
+        {
+          "login": "cealsair",
+          "url": "https://github.com/cealsair",
+          "createdAt": "2026-04-02T21:25:26Z",
+          "reaction": "👍"
+        },
         {
           "login": "evanchooly",
           "url": "https://github.com/evanchooly",
@@ -37,6 +43,14 @@
       ]
     }
   },
+  "duplicates": [
+    {
+      "login": "cealsair",
+      "url": "https://github.com/cealsair",
+      "createdAt": "2026-04-02T21:25:13Z",
+      "reaction": "👍"
+    }
+  ],
   "missingGroupActors": [
     {
       "login": "aalmiray",
@@ -75,10 +89,6 @@
       "url": "https://github.com/k-wall"
     },
     {
-      "login": "cealsair",
-      "url": "https://github.com/cealsair"
-    },
-    {
       "login": "bstansberry",
       "url": "https://github.com/bstansberry"
     },
@@ -113,11 +123,11 @@
   "number": 304,
   "repoName": "commonhaus/foundation",
   "date": "2026-04-02T16:27:33Z",
-  "updated": "2026-04-02T17:28:19Z",
+  "updated": "2026-04-02T21:25:30Z",
   "tags": [
     "vote/open",
     "notice"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-1.svg"
+  "progress": "https://www.commonhaus.org/votes/progress-2.svg"
 }
