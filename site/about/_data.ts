@@ -62,6 +62,11 @@ interface Sponsor {
     display?: Display;
     inKind?: Display;
     reps: AdvisorContact[];
+    ossi?: {
+        role: 'founder' | 'partner';
+        home?: string;
+        description?: string;
+    };
 }
 interface GroupedSponsors {
     [key: string]: Sponsor[];
@@ -250,6 +255,22 @@ function tier(tier: string): SponsorTier {
     return tiers[tier];
 }
 
+function ossiSponsors(): GroupedSponsors {
+    const result: GroupedSponsors = {};
+    for (const [key, sponsors] of Object.entries(groupedSponsors)) {
+        if (key === 'inKind') continue;
+        const ossi = sponsors.filter(s => s.ossi);
+        if (ossi.length === 0) continue;
+        // founders first, then partners, otherwise preserve order
+        result[key] = ossi.sort((a, b) => {
+            if (a.ossi?.role === 'founder' && b.ossi?.role !== 'founder') return -1;
+            if (a.ossi?.role !== 'founder' && b.ossi?.role === 'founder') return 1;
+            return 0;
+        });
+    }
+    return result;
+}
+
 function members(): User[] {
     return Object.values(USER_DATA)
         .filter((user: User) => user.groups?.includes(MEMBERS) && user.groups?.length === 1);
@@ -272,5 +293,6 @@ export {
     filteredTiers,
     inKind,
     members,
-    supporters
+    supporters,
+    ossiSponsors
 }
