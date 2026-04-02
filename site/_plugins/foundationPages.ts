@@ -99,6 +99,33 @@ const urlBaseName = (url: string) => {
     return new URL(url).pathname.split('/').pop();
 }
 
+const trademarkName = (url: string): string => {
+    try {
+        const u = new URL(url);
+        const path = u.pathname;
+        if (u.hostname === 'camo.githubusercontent.com') {
+            // camo proxy - use short hash as prefix
+            return path.split('/').filter(Boolean)[0].substring(0, 8);
+        }
+        if (u.hostname === 'github.com' || u.hostname === 'raw.githubusercontent.com') {
+            // commonhaus/artwork/.../projects/{name}/...
+            const m = path.match(/\/artwork\/(?:blob\/[^/]+|[^/]+)\/projects\/([^/]+)\//);
+            if (m) return m[1];
+            // commonhaus/artwork/.../foundation/...
+            if (path.includes('/artwork/')) return 'commonhaus';
+            // /{org}/{repo}/... → use repo name
+            const parts = path.split('/').filter(Boolean);
+            return parts.length >= 2 ? parts[1] : (parts[0] || 'trademark');
+        }
+        // hostname-based fallback: jbang.dev → jbang, jreleaser.org → jreleaser
+        const hostParts = u.hostname.split('.');
+        const idx = hostParts[0] === 'www' ? 1 : 0;
+        return hostParts[idx] || 'trademark';
+    } catch {
+        return 'trademark';
+    }
+};
+
 const importLogo = (name: string, url: string | undefined, segment: string, site: Site) => {
     if (url && url.startsWith("http")) {
         if (url.startsWith("https://www.commonhaus.org")) {
@@ -152,6 +179,15 @@ export default function () {
             if (v.display) {
                 importLogo(k, v.display.logo, "projects", site);
                 importLogo(k, v.display["logo-dark"], "projects", site);
+            }
+        }
+
+        // Cache logos referenced in TRADEMARKS.md that aren't already imported
+        const trademarksContent = Deno.readTextFileSync("./foundation-content/TRADEMARKS.md");
+        const trademarkImgUrls = [...trademarksContent.matchAll(/<img\s[^>]*src="([^"]+)"/g)].map(m => m[1]);
+        for (const url of trademarkImgUrls) {
+            if (!IMPORTED_LOGO_URLS[unrawUrl(url)]) {
+                importLogo(trademarkName(url), url, "trademarks", site);
             }
         }
 
