@@ -1,0 +1,33 @@
+{{- if tier.layout == 1 }}
+<section class="cards wide">
+  {{- for sponsor of sponsorGroup }}
+  {{- set ossiHome = sponsor.ossi.home || sponsor.display.home }}
+  {{- set ossiDescription = sponsor.ossi.description || sponsor.display.description }}
+      <div class="card wide">
+          {{ include "layouts/display-logo.vto" { name: sponsor.name, display: sponsor.display, rel: "sponsored" } }}
+          <div class="text-content">
+              <h3><a href="{{ ossiHome }}" rel="sponsored">{{ sponsor.name }}</a></h3>
+              {{- if sponsor.ossi.role === 'founder' }}
+              <!-- TODO: founder badge -->
+              {{- /if }}
+              <p>{{ ossiDescription |> md(true) }}</p>
+          </div>
+      </div>
+  {{- /for }}
+{{- else if tier.layout == 2 }}
+<section class="cards wrapped">
+  {{- for sponsor of sponsorGroup }}
+  {{- set ossiHome = sponsor.ossi.home || sponsor.display.home }}
+  {{- set ossiDescription = sponsor.ossi.description || sponsor.display.description }}
+      <div class="card two">
+          {{ include "layouts/display-logo.vto" { name: sponsor.name, display: sponsor.display, rel: "sponsored" } }}
+          <div class="text-content">
+              {{- if sponsor.ossi.role === 'founder' }}
+              <!-- TODO: founder badge -->
+              {{- /if }}
+              <p>{{ ossiDescription |> md(true) }}</p>
+          </div>
+      </div>
+  {{- /for }}
+{{ /if -}}
+</section>
