@@ -6,7 +6,7 @@
   "group": "commonhaus/cf-egc",
   "groupSize": 19,
   "groupVotes": 5,
-  "countedVotes": 5,
+  "countedVotes": 6,
   "droppedVotes": 1,
   "votingThreshold": "twothirds",
   "categories": {
@@ -31,6 +31,14 @@
           "login": "kenfinnigan",
           "url": "https://github.com/kenfinnigan",
           "createdAt": "2026-04-03T00:15:20Z",
+          "reaction": "👍"
+        }
+      ],
+      "otherVotes": [
+        {
+          "login": "sigrunixia",
+          "url": "https://github.com/sigrunixia",
+          "createdAt": "2026-04-03T00:16:31Z",
           "reaction": "👍"
         }
       ]
@@ -60,6 +68,14 @@
       "login": "cealsair",
       "url": "https://github.com/cealsair",
       "createdAt": "2026-04-02T21:25:13Z",
+      "reaction": "👍"
+    }
+  ],
+  "otherVotes": [
+    {
+      "login": "sigrunixia",
+      "url": "https://github.com/sigrunixia",
+      "createdAt": "2026-04-03T00:16:31Z",
       "reaction": "👍"
     }
   ],
@@ -127,7 +143,7 @@
   "number": 304,
   "repoName": "commonhaus/foundation",
   "date": "2026-04-02T16:27:33Z",
-  "updated": "2026-04-03T00:15:36Z",
+  "updated": "2026-04-03T00:24:00Z",
   "tags": [
     "vote/open",
     "notice"
