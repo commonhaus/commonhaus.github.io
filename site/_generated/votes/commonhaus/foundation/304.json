@@ -5,8 +5,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 19,
-  "groupVotes": 5,
-  "countedVotes": 6,
+  "groupVotes": 6,
+  "countedVotes": 7,
   "droppedVotes": 1,
   "votingThreshold": "twothirds",
   "categories": {
@@ -15,6 +15,12 @@
         "👍"
       ],
       "team": [
+        {
+          "login": "FDelporte",
+          "url": "https://github.com/FDelporte",
+          "createdAt": "2026-04-03T05:57:43Z",
+          "reaction": "👍"
+        },
         {
           "login": "cealsair",
           "url": "https://github.com/cealsair",
@@ -105,10 +111,6 @@
       "url": "https://github.com/maxandersen"
     },
     {
-      "login": "FDelporte",
-      "url": "https://github.com/FDelporte"
-    },
-    {
       "login": "k-wall",
       "url": "https://github.com/k-wall"
     },
@@ -143,11 +145,11 @@
   "number": 304,
   "repoName": "commonhaus/foundation",
   "date": "2026-04-02T16:27:33Z",
-  "updated": "2026-04-03T00:24:00Z",
+  "updated": "2026-04-03T05:57:54Z",
   "tags": [
     "vote/open",
     "notice"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-3.svg"
+  "progress": "https://www.commonhaus.org/votes/progress-4.svg"
 }
