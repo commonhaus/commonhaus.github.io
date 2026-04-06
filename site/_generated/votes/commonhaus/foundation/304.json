@@ -5,7 +5,7 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 19,
-  "groupVotes": 11,
+  "groupVotes": 12,
   "countedVotes": 14,
   "droppedVotes": 1,
   "votingThreshold": "twothirds",
@@ -31,6 +31,12 @@
           "login": "cealsair",
           "url": "https://github.com/cealsair",
           "createdAt": "2026-04-02T21:25:26Z",
+          "reaction": "👍"
+        },
+        {
+          "login": "cowtowncoder",
+          "url": "https://github.com/cowtowncoder",
+          "createdAt": "2026-04-06T17:30:21Z",
           "reaction": "👍"
         },
         {
@@ -75,12 +81,6 @@
           "login": "sigrunixia",
           "url": "https://github.com/sigrunixia",
           "createdAt": "2026-04-03T00:16:31Z",
-          "reaction": "👍"
-        },
-        {
-          "login": "tatu-at-datastax",
-          "url": "https://github.com/tatu-at-datastax",
-          "createdAt": "2026-04-06T15:54:04Z",
           "reaction": "👍"
         }
       ]
@@ -132,12 +132,6 @@
       "url": "https://github.com/sigrunixia",
       "createdAt": "2026-04-03T00:16:31Z",
       "reaction": "👍"
-    },
-    {
-      "login": "tatu-at-datastax",
-      "url": "https://github.com/tatu-at-datastax",
-      "createdAt": "2026-04-06T15:54:04Z",
-      "reaction": "👍"
     }
   ],
   "missingGroupActors": [
@@ -170,10 +164,6 @@
       "url": "https://github.com/bstansberry"
     },
     {
-      "login": "cowtowncoder",
-      "url": "https://github.com/cowtowncoder"
-    },
-    {
       "login": "gavinking",
       "url": "https://github.com/gavinking"
     }
@@ -184,11 +174,11 @@
   "number": 304,
   "repoName": "commonhaus/foundation",
   "date": "2026-04-02T16:27:33Z",
-  "updated": "2026-04-06T17:24:53Z",
+  "updated": "2026-04-06T17:35:23Z",
   "tags": [
     "vote/open",
     "notice"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-8.svg"
+  "progress": "https://www.commonhaus.org/votes/progress-9.svg"
 }
