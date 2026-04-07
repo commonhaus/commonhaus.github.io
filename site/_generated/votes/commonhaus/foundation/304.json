@@ -10,20 +10,6 @@
   "droppedVotes": 1,
   "votingThreshold": "twothirds",
   "categories": {
-    "revise": {
-      "reactions": [
-        "👎"
-      ],
-      "team": [
-        {
-          "login": "yrodiere",
-          "url": "https://github.com/yrodiere",
-          "createdAt": "2026-04-07T09:36:57Z",
-          "reaction": "👎",
-          "alternate": true
-        }
-      ]
-    },
     "approve": {
       "reactions": [
         "👍"
@@ -82,6 +68,13 @@
           "url": "https://github.com/sdelamo",
           "createdAt": "2026-04-06T14:26:13Z",
           "reaction": "👍"
+        },
+        {
+          "login": "yrodiere",
+          "url": "https://github.com/yrodiere",
+          "createdAt": "2026-04-07T19:21:38Z",
+          "reaction": "👍",
+          "alternate": true
         }
       ],
       "otherVotes": [
@@ -200,7 +193,7 @@
   "number": 304,
   "repoName": "commonhaus/foundation",
   "date": "2026-04-02T16:27:33Z",
-  "updated": "2026-04-07T12:23:58Z",
+  "updated": "2026-04-07T19:21:53Z",
   "tags": [
     "vote/open",
     "notice",
