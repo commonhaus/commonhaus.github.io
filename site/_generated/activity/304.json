@@ -5,13 +5,14 @@
   "author": "ebullient",
   "number": 304,
   "date": "2026-04-02T16:25:26Z",
-  "updated": "2026-04-06T17:35:23Z",
+  "updated": "2026-04-07T09:37:36Z",
   "url": "/activity/304.html",
   "type": "pullRequest",
   "tags": [
     "post",
     "vote/open",
-    "notice"
+    "notice",
+    "vote/quorum"
   ],
   "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/304.svg)](https://github.com/commonhaus/foundation/pull/304#issuecomment-4179022631 \"IC_kwDOKRPTI875FtMn\")\r\n\r\nAdjust Terms & Conditions to include disclosure of EoL versions and link to Foundation OSSI page.\r\n\r\nGoes with https://github.com/commonhaus/commonhaus.github.io/pull/47\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- React with 👍 (:+1:) or Approve a review  if it looks good to you\r\n- React with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision:\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment)."
 }
