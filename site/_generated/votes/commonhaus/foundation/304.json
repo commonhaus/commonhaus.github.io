@@ -6,10 +6,24 @@
   "group": "commonhaus/cf-egc",
   "groupSize": 19,
   "groupVotes": 13,
-  "countedVotes": 15,
+  "countedVotes": 16,
   "droppedVotes": 1,
   "votingThreshold": "twothirds",
   "categories": {
+    "revise": {
+      "reactions": [
+        "👎"
+      ],
+      "team": [
+        {
+          "login": "yrodiere",
+          "url": "https://github.com/yrodiere",
+          "createdAt": "2026-04-07T09:36:57Z",
+          "reaction": "👎",
+          "alternate": true
+        }
+      ]
+    },
     "approve": {
       "reactions": [
         "👍"
@@ -78,24 +92,16 @@
           "reaction": "👍"
         },
         {
+          "login": "eitch",
+          "url": "https://github.com/eitch",
+          "createdAt": "2026-04-07T11:21:12Z",
+          "reaction": "👍"
+        },
+        {
           "login": "sigrunixia",
           "url": "https://github.com/sigrunixia",
           "createdAt": "2026-04-03T00:16:31Z",
           "reaction": "👍"
-        }
-      ]
-    },
-    "revise": {
-      "reactions": [
-        "👎"
-      ],
-      "team": [
-        {
-          "login": "yrodiere",
-          "url": "https://github.com/yrodiere",
-          "createdAt": "2026-04-07T09:36:57Z",
-          "reaction": "👎",
-          "alternate": true
         }
       ]
     },
@@ -139,6 +145,12 @@
       "login": "dmlloyd",
       "url": "https://github.com/dmlloyd",
       "createdAt": "2026-04-03T17:15:59Z",
+      "reaction": "👍"
+    },
+    {
+      "login": "eitch",
+      "url": "https://github.com/eitch",
+      "createdAt": "2026-04-07T11:21:12Z",
       "reaction": "👍"
     },
     {
@@ -188,7 +200,7 @@
   "number": 304,
   "repoName": "commonhaus/foundation",
   "date": "2026-04-02T16:27:33Z",
-  "updated": "2026-04-07T09:37:22Z",
+  "updated": "2026-04-07T12:23:58Z",
   "tags": [
     "vote/open",
     "notice",
