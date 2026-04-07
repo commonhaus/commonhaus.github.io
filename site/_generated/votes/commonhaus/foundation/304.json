@@ -1,12 +1,12 @@
 {
   "title": "Updates to T&C and Sponsorship agreements for OSSI ",
   "voteType": "marthas",
-  "hasQuorum": false,
+  "hasQuorum": true,
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 19,
-  "groupVotes": 12,
-  "countedVotes": 14,
+  "groupVotes": 13,
+  "countedVotes": 15,
   "droppedVotes": 1,
   "votingThreshold": "twothirds",
   "categories": {
@@ -82,6 +82,20 @@
           "url": "https://github.com/sigrunixia",
           "createdAt": "2026-04-03T00:16:31Z",
           "reaction": "👍"
+        }
+      ]
+    },
+    "revise": {
+      "reactions": [
+        "👎"
+      ],
+      "team": [
+        {
+          "login": "yrodiere",
+          "url": "https://github.com/yrodiere",
+          "createdAt": "2026-04-07T09:36:57Z",
+          "reaction": "👎",
+          "alternate": true
         }
       ]
     },
@@ -174,11 +188,12 @@
   "number": 304,
   "repoName": "commonhaus/foundation",
   "date": "2026-04-02T16:27:33Z",
-  "updated": "2026-04-06T17:35:23Z",
+  "updated": "2026-04-07T09:37:22Z",
   "tags": [
     "vote/open",
-    "notice"
+    "notice",
+    "vote/quorum"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-9.svg"
+  "progress": "https://www.commonhaus.org/votes/vote-quorum.svg"
 }
