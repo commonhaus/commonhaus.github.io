@@ -6,7 +6,7 @@
   "group": "commonhaus/cf-egc",
   "groupSize": 19,
   "groupVotes": 13,
-  "countedVotes": 16,
+  "countedVotes": 17,
   "droppedVotes": 1,
   "votingThreshold": "twothirds",
   "categories": {
@@ -52,6 +52,12 @@
           "reaction": "👍"
         },
         {
+          "login": "gavinking",
+          "url": "https://github.com/gavinking",
+          "createdAt": "2026-04-07T21:54:21Z",
+          "reaction": "👍"
+        },
+        {
           "login": "henri-tremblay",
           "url": "https://github.com/henri-tremblay",
           "createdAt": "2026-04-03T12:15:58Z",
@@ -68,13 +74,6 @@
           "url": "https://github.com/sdelamo",
           "createdAt": "2026-04-06T14:26:13Z",
           "reaction": "👍"
-        },
-        {
-          "login": "yrodiere",
-          "url": "https://github.com/yrodiere",
-          "createdAt": "2026-04-07T19:21:38Z",
-          "reaction": "👍",
-          "alternate": true
         }
       ],
       "otherVotes": [
@@ -94,6 +93,12 @@
           "login": "sigrunixia",
           "url": "https://github.com/sigrunixia",
           "createdAt": "2026-04-03T00:16:31Z",
+          "reaction": "👍"
+        },
+        {
+          "login": "yrodiere",
+          "url": "https://github.com/yrodiere",
+          "createdAt": "2026-04-07T19:21:38Z",
           "reaction": "👍"
         }
       ]
@@ -151,6 +156,12 @@
       "url": "https://github.com/sigrunixia",
       "createdAt": "2026-04-03T00:16:31Z",
       "reaction": "👍"
+    },
+    {
+      "login": "yrodiere",
+      "url": "https://github.com/yrodiere",
+      "createdAt": "2026-04-07T19:21:38Z",
+      "reaction": "👍"
     }
   ],
   "missingGroupActors": [
@@ -181,10 +192,6 @@
     {
       "login": "bstansberry",
       "url": "https://github.com/bstansberry"
-    },
-    {
-      "login": "gavinking",
-      "url": "https://github.com/gavinking"
     }
   ],
   "commentId": "IC_kwDOKRPTI875FtMn",
@@ -193,7 +200,7 @@
   "number": 304,
   "repoName": "commonhaus/foundation",
   "date": "2026-04-02T16:27:33Z",
-  "updated": "2026-04-07T19:21:53Z",
+  "updated": "2026-04-08T00:24:03Z",
   "tags": [
     "vote/open",
     "notice",
