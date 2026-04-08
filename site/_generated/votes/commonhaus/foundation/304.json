@@ -6,7 +6,7 @@
   "group": "commonhaus/cf-egc",
   "groupSize": 19,
   "groupVotes": 13,
-  "countedVotes": 16,
+  "countedVotes": 17,
   "droppedVotes": 1,
   "votingThreshold": "twothirds",
   "categories": {
@@ -103,13 +103,6 @@
       ],
       "team": [
         {
-          "login": "SamBarker",
-          "url": "https://github.com/SamBarker",
-          "createdAt": "2026-04-04T06:02:23Z",
-          "reaction": "👀",
-          "alternate": true
-        },
-        {
           "login": "aalmiray",
           "url": "https://github.com/aalmiray",
           "createdAt": "2026-04-02T21:54:24Z",
@@ -119,6 +112,20 @@
           "login": "criccomini",
           "url": "https://github.com/criccomini",
           "createdAt": "2026-04-02T17:24:59Z",
+          "reaction": "👀"
+        },
+        {
+          "login": "k-wall",
+          "url": "https://github.com/k-wall",
+          "createdAt": "2026-04-08T07:53:08Z",
+          "reaction": "👀"
+        }
+      ],
+      "otherVotes": [
+        {
+          "login": "SamBarker",
+          "url": "https://github.com/SamBarker",
+          "createdAt": "2026-04-04T06:02:23Z",
           "reaction": "👀"
         }
       ]
@@ -150,6 +157,12 @@
       "url": "https://github.com/sigrunixia",
       "createdAt": "2026-04-03T00:16:31Z",
       "reaction": "👍"
+    },
+    {
+      "login": "SamBarker",
+      "url": "https://github.com/SamBarker",
+      "createdAt": "2026-04-04T06:02:23Z",
+      "reaction": "👀"
     }
   ],
   "missingGroupActors": [
@@ -174,10 +187,6 @@
       "url": "https://github.com/maxandersen"
     },
     {
-      "login": "k-wall",
-      "url": "https://github.com/k-wall"
-    },
-    {
       "login": "bstansberry",
       "url": "https://github.com/bstansberry"
     }
@@ -188,7 +197,7 @@
   "number": 304,
   "repoName": "commonhaus/foundation",
   "date": "2026-04-02T16:27:33Z",
-  "updated": "2026-04-08T07:13:32Z",
+  "updated": "2026-04-08T09:23:58Z",
   "tags": [
     "vote/open",
     "notice",
