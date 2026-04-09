@@ -5,8 +5,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 19,
-  "groupVotes": 13,
-  "countedVotes": 17,
+  "groupVotes": 14,
+  "countedVotes": 18,
   "droppedVotes": 1,
   "votingThreshold": "twothirds",
   "categories": {
@@ -25,6 +25,12 @@
           "login": "Naros",
           "url": "https://github.com/Naros",
           "createdAt": "2026-04-03T07:36:26Z",
+          "reaction": "👍"
+        },
+        {
+          "login": "bstansberry",
+          "url": "https://github.com/bstansberry",
+          "createdAt": "2026-04-09T00:41:24Z",
           "reaction": "👍"
         },
         {
@@ -185,10 +191,6 @@
     {
       "login": "maxandersen",
       "url": "https://github.com/maxandersen"
-    },
-    {
-      "login": "bstansberry",
-      "url": "https://github.com/bstansberry"
     }
   ],
   "commentId": "IC_kwDOKRPTI875FtMn",
@@ -197,7 +199,7 @@
   "number": 304,
   "repoName": "commonhaus/foundation",
   "date": "2026-04-02T16:27:33Z",
-  "updated": "2026-04-08T09:23:58Z",
+  "updated": "2026-04-09T00:41:40Z",
   "tags": [
     "vote/open",
     "notice",
