@@ -7,7 +7,7 @@
   "groupSize": 19,
   "groupVotes": 14,
   "countedVotes": 18,
-  "droppedVotes": 1,
+  "droppedVotes": 2,
   "votingThreshold": "twothirds",
   "categories": {
     "approve": {
@@ -30,7 +30,7 @@
         {
           "login": "bstansberry",
           "url": "https://github.com/bstansberry",
-          "createdAt": "2026-04-09T00:41:24Z",
+          "createdAt": "2026-04-09T00:41:52Z",
           "reaction": "👍"
         },
         {
@@ -139,6 +139,12 @@
   },
   "duplicates": [
     {
+      "login": "bstansberry",
+      "url": "https://github.com/bstansberry",
+      "createdAt": "2026-04-09T00:41:24Z",
+      "reaction": "👍"
+    },
+    {
       "login": "cealsair",
       "url": "https://github.com/cealsair",
       "createdAt": "2026-04-02T21:25:13Z",
@@ -199,7 +205,7 @@
   "number": 304,
   "repoName": "commonhaus/foundation",
   "date": "2026-04-02T16:27:33Z",
-  "updated": "2026-04-09T00:41:40Z",
+  "updated": "2026-04-09T03:23:58Z",
   "tags": [
     "vote/open",
     "notice",
