@@ -7,7 +7,7 @@
   "groupSize": 19,
   "groupVotes": 15,
   "countedVotes": 20,
-  "droppedVotes": 2,
+  "droppedVotes": 3,
   "votingThreshold": "twothirds",
   "categories": {
     "approve": {
@@ -78,7 +78,7 @@
         {
           "login": "sdelamo",
           "url": "https://github.com/sdelamo",
-          "createdAt": "2026-04-06T14:26:13Z",
+          "createdAt": "2026-04-15T14:08:14Z",
           "reaction": "👍"
         },
         {
@@ -157,6 +157,12 @@
       "reaction": "👍"
     },
     {
+      "login": "sdelamo",
+      "url": "https://github.com/sdelamo",
+      "createdAt": "2026-04-06T14:26:13Z",
+      "reaction": "👍"
+    },
+    {
       "login": "cealsair",
       "url": "https://github.com/cealsair",
       "createdAt": "2026-04-02T21:25:13Z",
@@ -219,7 +225,7 @@
   "number": 304,
   "repoName": "commonhaus/foundation",
   "date": "2026-04-02T16:27:33Z",
-  "updated": "2026-04-13T09:35:33Z",
+  "updated": "2026-04-15T14:08:28Z",
   "tags": [
     "vote/open",
     "notice",
