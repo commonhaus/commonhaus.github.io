@@ -5,8 +5,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 19,
-  "groupVotes": 2,
-  "countedVotes": 3,
+  "groupVotes": 3,
+  "countedVotes": 4,
   "droppedVotes": 0,
   "votingThreshold": "twothirds",
   "categories": {
@@ -19,6 +19,12 @@
           "login": "ebullient",
           "url": "https://github.com/ebullient",
           "createdAt": "2026-04-16T18:54:01Z",
+          "reaction": "👍"
+        },
+        {
+          "login": "kenfinnigan",
+          "url": "https://github.com/kenfinnigan",
+          "createdAt": "2026-04-16T22:34:06Z",
           "reaction": "👍"
         }
       ],
@@ -117,10 +123,6 @@
     {
       "login": "Naros",
       "url": "https://github.com/Naros"
-    },
-    {
-      "login": "kenfinnigan",
-      "url": "https://github.com/kenfinnigan"
     }
   ],
   "commentId": "IC_kwDOKRPTI87-Db2D",
@@ -129,11 +131,11 @@
   "number": 307,
   "repoName": "commonhaus/foundation",
   "date": "2026-04-16T17:59:44Z",
-  "updated": "2026-04-16T19:10:04Z",
+  "updated": "2026-04-16T22:34:20Z",
   "tags": [
     "vote/open",
     "notice"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-1.svg"
+  "progress": "https://www.commonhaus.org/votes/progress-2.svg"
 }
