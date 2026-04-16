@@ -5,8 +5,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 19,
-  "groupVotes": 15,
-  "countedVotes": 21,
+  "groupVotes": 16,
+  "countedVotes": 22,
   "droppedVotes": 3,
   "votingThreshold": "twothirds",
   "categories": {
@@ -37,6 +37,12 @@
           "login": "cowtowncoder",
           "url": "https://github.com/cowtowncoder",
           "createdAt": "2026-04-06T17:30:21Z",
+          "reaction": "👍"
+        },
+        {
+          "login": "dandreadis",
+          "url": "https://github.com/dandreadis",
+          "createdAt": "2026-04-16T12:31:40Z",
           "reaction": "👍"
         },
         {
@@ -219,10 +225,6 @@
       "url": "https://github.com/velo"
     },
     {
-      "login": "dandreadis",
-      "url": "https://github.com/dandreadis"
-    },
-    {
       "login": "maxandersen",
       "url": "https://github.com/maxandersen"
     },
@@ -237,7 +239,7 @@
   "number": 304,
   "repoName": "commonhaus/foundation",
   "date": "2026-04-02T16:27:33Z",
-  "updated": "2026-04-15T15:24:05Z",
+  "updated": "2026-04-16T15:24:05Z",
   "tags": [
     "vote/open",
     "notice",
