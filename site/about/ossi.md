@@ -69,7 +69,7 @@ Our OSSI partners bridge that gap, providing ongoing support for EOL software so
   <li>Commitment to supporting the EOL software they cover and coordinating responsible CVE disclosure with project maintainers to minimize the window of unpatched vulnerability exposure.</li>
 </ul>
 
-<p>To apply, see our <a href="/about/sponsorship.html">sponsorship tiers and benefits</a> and contact us at <a href="mailto:sponsors@commonhaus.org">sponsors@commonhaus.org</a>.</p>
+<p>To apply, see our <a href="/about/sponsorship.html">sponsorship tiers and benefits</a>, the <a href="/about/sponsors/ossi-agreement/">OSSI sponsorship addendum</a> and contact us at <a href="mailto:sponsors@commonhaus.org">sponsors@commonhaus.org</a>.</p>
 
 <hr />
 
