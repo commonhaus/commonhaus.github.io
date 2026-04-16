@@ -2,7 +2,7 @@
   "title": "Updates to T&C and Sponsorship agreements for OSSI ",
   "voteType": "marthas",
   "hasQuorum": true,
-  "isDone": false,
+  "isDone": true,
   "group": "commonhaus/cf-egc",
   "groupSize": 19,
   "groupVotes": 16,
@@ -233,16 +233,25 @@
       "url": "https://github.com/Naros"
     }
   ],
+  "manualCloseComments": {
+    "author": {
+      "login": "ebullient",
+      "url": "https://github.com/ebullient"
+    },
+    "createdAt": "2026-04-16T20:44:23Z",
+    "body": "Quorum with approval; proceeding.",
+    "url": "https://github.com/commonhaus/foundation/pull/304#issuecomment-4263289813"
+  },
   "commentId": "IC_kwDOKRPTI875FtMn",
   "github": "https://github.com/commonhaus/foundation/pull/304",
   "itemId": "PR_kwDOKRPTI87PnCIy",
   "number": 304,
   "repoName": "commonhaus/foundation",
   "date": "2026-04-02T16:27:33Z",
-  "updated": "2026-04-16T17:35:55Z",
+  "updated": "2026-04-16T20:44:40Z",
   "tags": [
-    "vote/open",
     "notice",
+    "vote/done",
     "vote/quorum",
     "closed"
   ],
