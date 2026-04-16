@@ -239,12 +239,14 @@
   "number": 304,
   "repoName": "commonhaus/foundation",
   "date": "2026-04-02T16:27:33Z",
-  "updated": "2026-04-16T15:24:05Z",
+  "updated": "2026-04-16T17:35:55Z",
   "tags": [
     "vote/open",
     "notice",
-    "vote/quorum"
+    "vote/quorum",
+    "closed"
   ],
-  "closed": false,
-  "progress": "https://www.commonhaus.org/votes/vote-quorum.svg"
+  "closed": true,
+  "closedAt": "2026-04-16T17:35:38Z",
+  "progress": "https://www.commonhaus.org/votes/vote-closed.svg"
 }
