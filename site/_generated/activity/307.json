@@ -5,7 +5,7 @@
   "author": "ebullient",
   "number": 307,
   "date": "2026-04-16T17:59:07Z",
-  "updated": "2026-04-16T17:59:44Z",
+  "updated": "2026-04-16T18:23:59Z",
   "url": "/activity/307.html",
   "type": "pullRequest",
   "tags": [
@@ -13,5 +13,5 @@
     "vote/open",
     "notice"
   ],
-  "content": "Updated partner reference guidelines to require mentioning all vendors providing EOL support.\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- React with 👍 (:+1:) or Approve a review  if it looks good to you\r\n- React with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision:\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment)."
+  "content": "[![🗳️ Vote progress](https://www.commonhaus.org/votes/commonhaus/foundation/307.svg)](https://github.com/commonhaus/foundation/pull/307#issuecomment-4262313347 \"IC_kwDOKRPTI87-Db2D\")\r\n\r\nUpdated partner reference guidelines to require mentioning all vendors providing EOL support.\r\n\r\nvoting group: @commonhaus/cf-egc \r\n\r\nDo one of the following:\r\n\r\n- React with 👍 (:+1:) or Approve a review  if it looks good to you\r\n- React with 👀 (:eyes:) if you're \"ok\" with it (it may not be your favorite)\r\n- If you think it needs discussion or revision:\r\n    - Create a review, add your comments and require changes\r\n    - Use the +- button to make a suggestion (instead of just adding a comment)."
 }
