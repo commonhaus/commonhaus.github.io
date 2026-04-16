@@ -5,10 +5,54 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 19,
-  "groupVotes": 0,
-  "countedVotes": 0,
+  "groupVotes": 2,
+  "countedVotes": 3,
   "droppedVotes": 0,
   "votingThreshold": "twothirds",
+  "categories": {
+    "approve": {
+      "reactions": [
+        "👍"
+      ],
+      "team": [
+        {
+          "login": "ebullient",
+          "url": "https://github.com/ebullient",
+          "createdAt": "2026-04-16T18:54:01Z",
+          "reaction": "👍"
+        }
+      ],
+      "otherVotes": [
+        {
+          "login": "dmlloyd",
+          "url": "https://github.com/dmlloyd",
+          "createdAt": "2026-04-16T18:29:20Z",
+          "reaction": "👍"
+        }
+      ]
+    },
+    "ok": {
+      "reactions": [
+        "👀"
+      ],
+      "team": [
+        {
+          "login": "gavinking",
+          "url": "https://github.com/gavinking",
+          "createdAt": "2026-04-16T18:56:52Z",
+          "reaction": "👀"
+        }
+      ]
+    }
+  },
+  "otherVotes": [
+    {
+      "login": "dmlloyd",
+      "url": "https://github.com/dmlloyd",
+      "createdAt": "2026-04-16T18:29:20Z",
+      "reaction": "👍"
+    }
+  ],
   "missingGroupActors": [
     {
       "login": "aalmiray",
@@ -63,10 +107,6 @@
       "url": "https://github.com/cowtowncoder"
     },
     {
-      "login": "gavinking",
-      "url": "https://github.com/gavinking"
-    },
-    {
       "login": "sdelamo",
       "url": "https://github.com/sdelamo"
     },
@@ -81,10 +121,6 @@
     {
       "login": "kenfinnigan",
       "url": "https://github.com/kenfinnigan"
-    },
-    {
-      "login": "ebullient",
-      "url": "https://github.com/ebullient"
     }
   ],
   "commentId": "IC_kwDOKRPTI87-Db2D",
@@ -93,11 +129,11 @@
   "number": 307,
   "repoName": "commonhaus/foundation",
   "date": "2026-04-16T17:59:44Z",
-  "updated": "2026-04-16T17:59:44Z",
+  "updated": "2026-04-16T19:10:04Z",
   "tags": [
     "vote/open",
     "notice"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-0.svg"
+  "progress": "https://www.commonhaus.org/votes/progress-1.svg"
 }
