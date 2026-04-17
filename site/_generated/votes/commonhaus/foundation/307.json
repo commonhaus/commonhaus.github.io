@@ -6,7 +6,7 @@
   "group": "commonhaus/cf-egc",
   "groupSize": 19,
   "groupVotes": 6,
-  "countedVotes": 7,
+  "countedVotes": 8,
   "droppedVotes": 1,
   "votingThreshold": "twothirds",
   "categories": {
@@ -52,6 +52,12 @@
           "url": "https://github.com/dmlloyd",
           "createdAt": "2026-04-16T18:29:20Z",
           "reaction": "👍"
+        },
+        {
+          "login": "eitch",
+          "url": "https://github.com/eitch",
+          "createdAt": "2026-04-17T13:25:19Z",
+          "reaction": "👍"
         }
       ]
     },
@@ -82,6 +88,12 @@
       "login": "dmlloyd",
       "url": "https://github.com/dmlloyd",
       "createdAt": "2026-04-16T18:29:20Z",
+      "reaction": "👍"
+    },
+    {
+      "login": "eitch",
+      "url": "https://github.com/eitch",
+      "createdAt": "2026-04-17T13:25:19Z",
       "reaction": "👍"
     }
   ],
@@ -145,7 +157,7 @@
   "number": 307,
   "repoName": "commonhaus/foundation",
   "date": "2026-04-16T17:59:44Z",
-  "updated": "2026-04-17T08:53:57Z",
+  "updated": "2026-04-17T15:24:05Z",
   "tags": [
     "vote/open",
     "notice"
