@@ -5,8 +5,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 19,
-  "groupVotes": 4,
-  "countedVotes": 5,
+  "groupVotes": 6,
+  "countedVotes": 7,
   "droppedVotes": 1,
   "votingThreshold": "twothirds",
   "categories": {
@@ -15,6 +15,18 @@
         "👍"
       ],
       "team": [
+        {
+          "login": "FDelporte",
+          "url": "https://github.com/FDelporte",
+          "createdAt": "2026-04-17T06:16:16Z",
+          "reaction": "👍"
+        },
+        {
+          "login": "Naros",
+          "url": "https://github.com/Naros",
+          "createdAt": "2026-04-17T04:21:34Z",
+          "reaction": "👍"
+        },
         {
           "login": "cealsair",
           "url": "https://github.com/cealsair",
@@ -107,10 +119,6 @@
       "url": "https://github.com/maxandersen"
     },
     {
-      "login": "FDelporte",
-      "url": "https://github.com/FDelporte"
-    },
-    {
       "login": "k-wall",
       "url": "https://github.com/k-wall"
     },
@@ -129,10 +137,6 @@
     {
       "login": "criccomini",
       "url": "https://github.com/criccomini"
-    },
-    {
-      "login": "Naros",
-      "url": "https://github.com/Naros"
     }
   ],
   "commentId": "IC_kwDOKRPTI87-Db2D",
@@ -141,11 +145,11 @@
   "number": 307,
   "repoName": "commonhaus/foundation",
   "date": "2026-04-16T17:59:44Z",
-  "updated": "2026-04-17T01:55:55Z",
+  "updated": "2026-04-17T06:24:01Z",
   "tags": [
     "vote/open",
     "notice"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-3.svg"
+  "progress": "https://www.commonhaus.org/votes/progress-4.svg"
 }
