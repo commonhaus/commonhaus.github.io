@@ -7,7 +7,7 @@
   "groupSize": 19,
   "groupVotes": 6,
   "countedVotes": 8,
-  "droppedVotes": 1,
+  "droppedVotes": 2,
   "votingThreshold": "twothirds",
   "categories": {
     "approve": {
@@ -24,7 +24,7 @@
         {
           "login": "Naros",
           "url": "https://github.com/Naros",
-          "createdAt": "2026-04-17T04:21:34Z",
+          "createdAt": "2026-04-26T12:10:26Z",
           "reaction": "👍"
         },
         {
@@ -76,6 +76,12 @@
     }
   },
   "duplicates": [
+    {
+      "login": "Naros",
+      "url": "https://github.com/Naros",
+      "createdAt": "2026-04-17T04:21:34Z",
+      "reaction": "👍"
+    },
     {
       "login": "cealsair",
       "url": "https://github.com/cealsair",
@@ -157,7 +163,7 @@
   "number": 307,
   "repoName": "commonhaus/foundation",
   "date": "2026-04-16T17:59:44Z",
-  "updated": "2026-04-17T15:24:05Z",
+  "updated": "2026-04-26T12:10:41Z",
   "tags": [
     "vote/open",
     "notice"
