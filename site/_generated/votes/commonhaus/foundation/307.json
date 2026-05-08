@@ -5,8 +5,8 @@
   "isDone": false,
   "group": "commonhaus/cf-egc",
   "groupSize": 19,
-  "groupVotes": 9,
-  "countedVotes": 11,
+  "groupVotes": 11,
+  "countedVotes": 13,
   "droppedVotes": 2,
   "votingThreshold": "twothirds",
   "categories": {
@@ -25,6 +25,12 @@
           "login": "Naros",
           "url": "https://github.com/Naros",
           "createdAt": "2026-04-26T12:10:26Z",
+          "reaction": "👍"
+        },
+        {
+          "login": "aalmiray",
+          "url": "https://github.com/aalmiray",
+          "createdAt": "2026-05-08T14:21:27Z",
           "reaction": "👍"
         },
         {
@@ -85,6 +91,12 @@
       ],
       "team": [
         {
+          "login": "criccomini",
+          "url": "https://github.com/criccomini",
+          "createdAt": "2026-05-08T14:05:29Z",
+          "reaction": "👀"
+        },
+        {
           "login": "gavinking",
           "url": "https://github.com/gavinking",
           "createdAt": "2026-04-16T18:56:52Z",
@@ -123,10 +135,6 @@
   ],
   "missingGroupActors": [
     {
-      "login": "aalmiray",
-      "url": "https://github.com/aalmiray"
-    },
-    {
       "login": "velo",
       "url": "https://github.com/velo"
     },
@@ -157,10 +165,6 @@
     {
       "login": "sdelamo",
       "url": "https://github.com/sdelamo"
-    },
-    {
-      "login": "criccomini",
-      "url": "https://github.com/criccomini"
     }
   ],
   "commentId": "IC_kwDOKRPTI87-Db2D",
@@ -169,11 +173,11 @@
   "number": 307,
   "repoName": "commonhaus/foundation",
   "date": "2026-04-16T17:59:44Z",
-  "updated": "2026-05-08T12:24:03Z",
+  "updated": "2026-05-08T15:24:04Z",
   "tags": [
     "vote/open",
     "notice"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-6.svg"
+  "progress": "https://www.commonhaus.org/votes/progress-8.svg"
 }
