@@ -20,6 +20,15 @@ FDelporte:
     Technical Writer Azul - Team member Pi4J - Creator of Lottie4J
   groups:
     - cf-egc
+JakeWharton:
+  login: JakeWharton
+  url: 'https://github.com/JakeWharton'
+  avatarUrl: 'https://avatars.githubusercontent.com/u/66577?v=4'
+  company: '@SkylightFamily'
+  name: Jake Wharton
+  bio: ''
+  groups:
+    - cf-egc-second
 JooHyukKim:
   login: JooHyukKim
   url: 'https://github.com/JooHyukKim'
@@ -489,6 +498,16 @@ starksm64:
   bio: "Developer at IBM,\r\nJBoss co-founder"
   groups:
     - cf-officers
+swankjesse:
+  login: swankjesse
+  url: 'https://github.com/swankjesse'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/133019?u=e74de21cd4a2948b635fcc48cf7b2f4957263915&v=4
+  company: 'Square, Inc.'
+  name: Jesse Wilson
+  bio: ''
+  groups:
+    - cf-egc
 techbelle:
   login: techbelle
   url: 'https://github.com/techbelle'
