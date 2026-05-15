@@ -4,7 +4,7 @@
   "hasQuorum": false,
   "isDone": false,
   "group": "commonhaus/cf-egc",
-  "groupSize": 19,
+  "groupSize": 20,
   "groupVotes": 11,
   "countedVotes": 13,
   "droppedVotes": 2,
@@ -135,6 +135,10 @@
   ],
   "missingGroupActors": [
     {
+      "login": "swankjesse",
+      "url": "https://github.com/swankjesse"
+    },
+    {
       "login": "velo",
       "url": "https://github.com/velo"
     },
@@ -173,11 +177,11 @@
   "number": 307,
   "repoName": "commonhaus/foundation",
   "date": "2026-04-16T17:59:44Z",
-  "updated": "2026-05-08T15:24:04Z",
+  "updated": "2026-05-15T18:24:03Z",
   "tags": [
     "vote/open",
     "notice"
   ],
   "closed": false,
-  "progress": "https://www.commonhaus.org/votes/progress-8.svg"
+  "progress": "https://www.commonhaus.org/votes/progress-7.svg"
 }
