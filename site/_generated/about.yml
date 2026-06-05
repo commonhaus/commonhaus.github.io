@@ -392,6 +392,16 @@ marko-bekhta:
   bio: ''
   groups:
     - members
+markszymanski:
+  login: markszymanski
+  url: 'https://github.com/markszymanski'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/260983406?u=ff76aff3cb323370ef6e7051f27a72716a393708&v=4
+  company: HeroDevs
+  name: Mark Szymanski
+  bio: Technical Product Manager at HeroDevs
+  groups:
+    - advisory-board
 maxandersen:
   login: maxandersen
   url: 'https://github.com/maxandersen'

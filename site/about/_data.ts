@@ -285,6 +285,7 @@ function supporters(): User[] {
 }
 
 export {
+    advisoryBoard,
     councilors,
     egc,
     officers,

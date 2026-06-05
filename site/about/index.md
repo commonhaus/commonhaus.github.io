@@ -153,8 +153,8 @@ They bring industry perspectives and expertise to the conversation, to help us e
     </div>
 {{- /for }}
 </section>
-{{ /if }}
 
+{{ /if }}
 {{- set members = page.data.members() }}
 {{- if members && members.length }}
 ## Members
