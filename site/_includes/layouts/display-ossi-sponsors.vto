@@ -7,10 +7,10 @@
           {{ include "layouts/display-logo.vto" { name: sponsor.name, display: sponsor.display, rel: "sponsored" } }}
           <div class="text-content">
               <h3><a href="{{ ossiHome }}" rel="sponsored">{{ sponsor.name }}</a></h3>
-              {{- if sponsor.ossi.role === 'founder' }}
-              <!-- TODO: founder badge -->
-              {{- /if }}
               <p>{{ ossiDescription |> md(true) }}</p>
+              {{- if sponsor.ossi.role === 'founder' }}
+              <img src="/images/CF_badges_founder.png" alt="Founding OSSI Sponsor" class="founder-badge" />
+              {{- /if }}
           </div>
       </div>
   {{- /for }}
@@ -22,9 +22,6 @@
       <div class="card two">
           {{ include "layouts/display-logo.vto" { name: sponsor.name, display: sponsor.display, rel: "sponsored" } }}
           <div class="text-content">
-              {{- if sponsor.ossi.role === 'founder' }}
-              <!-- TODO: founder badge -->
-              {{- /if }}
               <p>{{ ossiDescription |> md(true) }}</p>
           </div>
       </div>
