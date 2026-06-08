@@ -144,7 +144,7 @@ They bring industry perspectives and expertise to the conversation, to help us e
             <h3><a href="{{ rep.url }}">{{ rep.login }}</a></h3>
             <div class="subhead">
                 {{- if rep.name }}{{ rep.name }}<br />{{ /if -}}
-                {{- if rep.sponsorHome }}<a href="{{ sponsorHome }}">{{ rep.sponsorName }}</a>
+                {{- if rep.sponsorHome }}<a href="{{ rep.sponsorHome }}">{{ rep.sponsorName }}</a>
                 {{- else -}}{{ rep.sponsorName }}
                 {{- /if -}}
             </div>
