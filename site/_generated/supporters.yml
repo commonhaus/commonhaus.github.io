@@ -233,6 +233,11 @@ rubenskj:
   url: 'https://github.com/rubenskj'
   avatarUrl: >-
     https://avatars.githubusercontent.com/u/36218162?u=269b7c575559780a77a14cfb8c6c5ec4ff3c97ca&v=4
+shadowpgp:
+  login: shadowpgp
+  url: 'https://github.com/shadowpgp'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/31535703?u=742d4e12dbeaaf4d5f555dec07ac24843beb6c26&v=4
 sshaaf:
   login: sshaaf
   url: 'https://github.com/sshaaf'
