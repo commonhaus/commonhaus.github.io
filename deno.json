@@ -4,6 +4,7 @@
     "lumeWatch": "VITE_WATCH_ACTIVE=true deno task lume -s & deno task vite-watch",
     "attach": "echo \"import 'lume/cli.ts'\" | deno run --inspect-wait -A -",
     "build": "deno task lume",
+    "member-test": "deno test --allow-env member/",
     "vite-build": "deno run -A --node-modules-dir npm:vite build",
     "vite-watch": "deno run -A --node-modules-dir npm:vite build --watch",
     "serve": "deno run -A ./tasks/serve.js",

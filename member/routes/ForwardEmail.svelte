@@ -19,6 +19,7 @@
     outboundPost,
     post,
     postPassword,
+    toastMessage,
   } from "../lib/stores";
   import Attestation from "../components/Attestation.svelte";
   import CloseButton from "../components/CloseButton.svelte";
@@ -100,8 +101,9 @@
     try {
       const { alias, recipients, has_imap } = event.detail;
       const updates = aliasUpdatePayload({ [alias]: { recipients, has_imap } });
-      await post(ALIASES, updates);
+      await post(ALIASES, updates, true);
       editAlias = null;
+      toastMessage("success", "Alias updated.");
     } catch (error) {
       editError = error.message || "Unable to update this alias.";
     }
@@ -117,8 +119,9 @@
     try {
       const { alias, recipients, has_imap } = event.detail;
       const updates = aliasUpdatePayload({ [alias]: { recipients, has_imap } });
-      await post(ALIASES, updates);
+      await post(ALIASES, updates, true);
       creatingAlias = false;
+      toastMessage("success", "Alias created.");
     } catch (error) {
       createError = error.message || "Unable to create this alias.";
     }
@@ -310,11 +313,10 @@
         </li>
       </ul>
       <p>
-        The <kbd>[*]</kbd> button generates the shared Password for sending and
-        receiving. Forward Email sends a one-time link to the verified target
-        address; the generated Password is shown for only <em>30 seconds</em>.
-        Use your full alias email address as the username when configuring your
-        client.
+        The <kbd>[*]</kbd> button manages the shared Password for sending and
+        receiving. You set the Password yourself; there is no system-generated
+        password and nothing is emailed to you. Use your full alias email
+        address as the username when configuring your client.
       </p>
       <p>
         See Forward Email's

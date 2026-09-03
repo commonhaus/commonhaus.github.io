@@ -1,7 +1,7 @@
 <script>
   import { createEventDispatcher } from "svelte";
   import { onDestroy, onMount } from "svelte";
-  import { isValidNewPassword } from "../lib/forwardEmail";
+  import { computeResetFlag, isValidNewPassword } from "../lib/forwardEmail";
   import CloseButton from "./CloseButton.svelte";
 
   export let alias = "";
@@ -17,6 +17,7 @@
   let selectedEmail = verifiedRecipients[0] || "";
   let dialog;
   let newPasswordInput;
+  let dismissedError = false;
 
   onMount(() => {
     dialog?.showModal();
@@ -32,14 +33,20 @@
     : "";
   $: canSubmit = newPassword.length > 0 && !newPasswordError &&
     (!hasImap || hasCurrentPassword || resetConfirmed);
+  $: displayedError = dismissedError ? "" : error;
+
+  function onFieldChange() {
+    dismissedError = true;
+  }
 
   function submit() {
     if (!canSubmit || busy) return;
+    dismissedError = false;
     dispatch("submit", {
       alias,
       password: currentPassword || undefined,
       new_password: newPassword,
-      reset: hasImap && !hasCurrentPassword && resetConfirmed,
+      reset: computeResetFlag(hasImap, hasCurrentPassword, resetConfirmed),
       email: selectedEmail || undefined,
     });
   }
@@ -77,6 +84,7 @@
         aria-invalid={!!newPasswordError}
         bind:value={newPassword}
         bind:this={newPasswordInput}
+        on:input={onFieldChange}
       />
       <p class="password-help">
         Must be 128 characters or fewer, cannot start or end with whitespace, and cannot contain
@@ -96,6 +104,7 @@
         type="password"
         autocomplete="current-password"
         bind:value={currentPassword}
+        on:input={onFieldChange}
       />
       {#if hasCurrentPassword}
         <div class="password-callout success">
@@ -108,7 +117,7 @@
       {:else if hasImap}
         <div class="confirmation">
         <label class="password-callout warning checkbox-label">
-          <input type="checkbox" bind:checked={resetConfirmed} />
+          <input type="checkbox" bind:checked={resetConfirmed} on:change={onFieldChange} />
           <span>
             IMAP/POP3: I understand that, if this alias already has a mailbox, continuing without the
             current Password will reset the existing mailbox and delete all messages.
@@ -136,15 +145,15 @@
       </section>
     {/if}
 
-    {#if error}
-      <div class="password-callout error">{error}</div>
+    {#if displayedError}
+      <div class="password-callout error">{displayedError}</div>
     {/if}
 
     <hr />
     <div class="password-modal-actions">
       <button type="button" class="input" on:click={close} disabled={busy}>Cancel</button>
       <button type="button" class="input" on:click={submit} disabled={!canSubmit || busy}>
-        {hasCurrentPassword ? "Change Password" : "Generate Password"}
+        Change Password
       </button>
     </div>
   </div>

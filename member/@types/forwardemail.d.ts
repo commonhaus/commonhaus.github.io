@@ -22,3 +22,16 @@ interface AliasDomain {
     name: string;
     id: string;
 }
+
+interface PasswordRequest {
+    alias: string;
+    password?: string;
+    new_password: string;
+    reset: boolean;
+    email?: string;
+}
+
+interface PasswordResponse {
+    username: string;
+    password: string;
+}

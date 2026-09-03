@@ -3,6 +3,7 @@ import { Middleware } from "lume/core/server.ts";
 
 const devMode = Deno.env.get("VITE_APP_DEV_MODE") === "true";
 const mockBackend = Deno.env.get("MOCK_BACKEND") === "true";
+const MOCK_MAX_RECIPIENTS_PER_ALIAS = 10;
 
 function createMockBackend(): Middleware {
     console.log("devMode:", devMode, "mockBackend:", mockBackend);
@@ -132,11 +133,34 @@ function createMockBackend(): Middleware {
                 // { "commonhaus-bot": { recipients: ["something@other"], has_imap: true } }
                 const update = body["commonhaus-bot"] || body["commonhaus-bot@commonhaus.dev"] || {};
                 const recipients = Array.isArray(update) ? update : update.recipients || [];
+                const hasImap = Array.isArray(update) ? false : update.has_imap === true;
+
+                if (recipients.length === 0 && !hasImap) {
+                    return new Response(JSON.stringify({
+                        "ERROR": "alias must have at least one recipient or have_imap enabled"
+                    }), {
+                        status: 400,
+                        statusText: "BAD_REQUEST",
+                        headers: {
+                            'Content-type': 'application/json'
+                        }
+                    });
+                }
+                if (recipients.length > MOCK_MAX_RECIPIENTS_PER_ALIAS) {
+                    return new Response(JSON.stringify({
+                        "ERROR": `recipients exceeds max_recipients_per_alias (${MOCK_MAX_RECIPIENTS_PER_ALIAS}) for commonhaus-bot@commonhaus.dev`
+                    }), {
+                        status: 400,
+                        statusText: "BAD_REQUEST",
+                        headers: {
+                            'Content-type': 'application/json'
+                        }
+                    });
+                }
+
                 state.ALIAS = { ...alias };
                 state.ALIAS["commonhaus-bot@commonhaus.dev"].recipients = recipients;
-                state.ALIAS["commonhaus-bot@commonhaus.dev"].has_imap = Array.isArray(update)
-                    ? false
-                    : update.has_imap === true;
+                state.ALIAS["commonhaus-bot@commonhaus.dev"].has_imap = hasImap;
                 state.HAUS.services.forwardEmail.active = recipients.length > 0;
             }
             if (state.HAUS.services.forwardEmail?.altAlias) {
@@ -160,10 +184,22 @@ function createMockBackend(): Middleware {
             console.log("password", request.method);
             const body = request.method === "POST" ? await request.json() : {};
             const passwordAlias = body.alias || "commonhaus-bot@commonhaus.dev";
+            if (!/^[^\s@]+@[^\s@]+$/.test(passwordAlias)) {
+                return new Response(JSON.stringify({
+                    "ERROR": "alias is not a valid email address"
+                }), {
+                    status: 400,
+                    statusText: "BAD_REQUEST",
+                    headers: {
+                        'Content-type': 'application/json'
+                    }
+                });
+            }
             return new Response(JSON.stringify({
-                "username": passwordAlias,
-                "password": body.new_password || "mock-generated-password",
-                "has_imap": state.ALIAS[passwordAlias]?.has_imap === true
+                "ALIAS": {
+                    "username": passwordAlias,
+                    "password": body.new_password || "mock-generated-password"
+                }
             }), {
                 status: 200,
                 statusText: "OK",

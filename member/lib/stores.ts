@@ -1,5 +1,5 @@
 import { writable, derived, get } from "svelte/store";
-import type { Alias } from "../@types/forwardemail.d.ts";
+import type { Alias, PasswordRequest, PasswordResponse } from "../@types/forwardemail.d.ts";
 import { ErrorStatus } from "../@types/data.d.ts";
 import type {
     ApplicationData,
@@ -7,6 +7,7 @@ import type {
     ErrorFlags,
     GitHubUser,
 } from "../@types/data.d.ts";
+import { extractErrorReason, unwrapPasswordResponse } from "./forwardEmail.ts";
 
 export const uriBase = "__BASE_URL__";
 
@@ -142,10 +143,11 @@ export const load = async (uri: string): Promise<AbortController> => {
     return controller;
 }
 
-export const post = async (uri: string, body: unknown): Promise<void> => {
+export const post = async (uri: string, body: unknown, rethrow = false): Promise<void> => {
     outboundPost.set(true);
+    let response: Response;
     try {
-        const response = await fetch(uri, {
+        response = await fetch(uri, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -154,15 +156,22 @@ export const post = async (uri: string, body: unknown): Promise<void> => {
             credentials: "include",
             mode: "cors"
         });
-
-        await handleResponse('POST', uri, response);
     } catch (error) {
+        // A fetch()-level failure never reaches handleResponse, so
+        // handleErrors hasn't run for it yet — always call it here.
         handleErrors('POST', uri, error);
+        outboundPost.set(false);
+        if (rethrow) throw error;
+        return;
     }
-    outboundPost.set(false);
+    try {
+        await handleResponse('POST', uri, response, rethrow);
+    } finally {
+        outboundPost.set(false);
+    }
 }
 
-export const postPassword = async (body: unknown): Promise<unknown> => {
+export const postPassword = async (body: PasswordRequest): Promise<PasswordResponse> => {
     const uri = `${ALIASES}/password`;
     outboundPost.set(true);
     try {
@@ -174,11 +183,20 @@ export const postPassword = async (body: unknown): Promise<unknown> => {
             mode: "cors"
         });
         if (!response.ok) {
-            throw new Error(`${response.status} ${response.statusText}`);
+            const text = await response.text();
+            let reason: string | undefined;
+            try {
+                reason = text ? extractErrorReason(JSON.parse(text)) : undefined;
+            } catch {
+                reason = undefined;
+            }
+            throw new Error(reason ?? `${response.status} ${response.statusText}`);
         }
         const text = await response.text();
-        return text ? JSON.parse(text) : undefined;
+        return unwrapPasswordResponse(text ? JSON.parse(text) : undefined);
     } catch (error) {
+        // Re-thrown (unlike handleResponse's catch) so submitPassword can
+        // populate passwordError with the real reason.
         handleErrors('POST', uri, error);
         throw error;
     } finally {
@@ -186,15 +204,16 @@ export const postPassword = async (body: unknown): Promise<unknown> => {
     }
 }
 
-const handleResponse = async (method: string, uri: string, response: Response) => {
+const handleResponse = async (method: string, uri: string, response: Response, rethrow = false) => {
     try {
-        processResponseStatus(method, uri, response);
+        const text = await response.text();
+        const body: unknown = text ? JSON.parse(text) : undefined;
+
+        processResponseStatus(method, uri, response, body);
         errorFlag("unknown", ErrorStatus.OK);
 
-        const text = await response.text();
-        if (text) {
-            const message = JSON.parse(text);
-            for (const [key, value] of Object.entries(message)) {
+        if (body) {
+            for (const [key, value] of Object.entries(body)) {
                 console.debug(key, value);
                 if (key === "INFO") {
                     gitHubData.set(value as GitHubUser);
@@ -215,17 +234,25 @@ const handleResponse = async (method: string, uri: string, response: Response) =
         }
     } catch (error) {
         handleErrors(method, uri, error);
+        if (rethrow) {
+            throw error;
+        }
     }
 }
 
-const processResponseStatus = (method: string, uri: string, response: Response) => {
+const processResponseStatus = (method: string, uri: string, response: Response, body: unknown) => {
     switch (response.status) {
-        case 400:
+        case 400: {
             console.error("Bad request", response);
             if (uri.includes(APPLY)) {
                 applicationData.set({});
             }
+            const reason = extractErrorReason(body);
+            if (reason) {
+                throw new Error(reason);
+            }
             break;
+        }
         case 404:
             console.debug("Not found");
             if (uri.includes(APPLY)) {
@@ -264,6 +291,10 @@ const handleErrors = (method: string, uri: string, error: unknown) => {
         } else if (uri.includes(ALIASES)) {
             errorFlag("alias", status);
         }
+    } else if (uri.includes(ALIASES)) {
+        // Alias/password errors already surface their specific backend
+        // reason via editError/createError/passwordError — skip the
+        // generic toast below to avoid showing both.
     } else if (status === ErrorStatus.SERVER) {
         toastMessage("caution", "It seems we've hit a snag on our end. If you could report this, we'd appreciate it!");
     } else if (status === ErrorStatus.OTHER) {

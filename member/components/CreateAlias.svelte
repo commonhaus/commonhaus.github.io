@@ -13,6 +13,7 @@
   let imapEnabled = false;
   let dialog;
   let recipientInput;
+  let dismissedError = false;
 
   onMount(() => {
     dialog?.showModal();
@@ -29,9 +30,15 @@
     ? "Enter a valid target address, or enable IMAP/POP3/CalDAV/CardDAV."
     : "";
   $: canSubmit = !recipientError && (recipientList.length > 0 || imapEnabled);
+  $: displayedError = dismissedError ? "" : error;
+
+  function onFieldChange() {
+    dismissedError = true;
+  }
 
   function submit() {
     if (!canSubmit || busy) return;
+    dismissedError = false;
     dispatch("submit", {
       alias,
       recipients: recipientList,
@@ -71,6 +78,7 @@
         aria-invalid={!!recipientError}
         bind:value={recipientText}
         bind:this={recipientInput}
+        on:input={onFieldChange}
       />
       </label>
       <p class="password-help">
@@ -82,7 +90,7 @@
     <section>
       <h3>Inbox <span class="password-help">(optional)</span></h3>
       <label class="checkbox-label">
-        <input type="checkbox" bind:checked={imapEnabled} />
+        <input type="checkbox" bind:checked={imapEnabled} on:change={onFieldChange} />
         <span>
           Enable IMAP/POP3/CalDAV/CardDAV
           <span class="password-help checkbox-help">
@@ -101,8 +109,8 @@
     {#if recipientError}
       <div class="password-callout error">{recipientError}</div>
     {/if}
-    {#if error}
-      <div class="password-callout error">{error}</div>
+    {#if displayedError}
+      <div class="password-callout error">{displayedError}</div>
     {/if}
 
     <div class="password-modal-actions">

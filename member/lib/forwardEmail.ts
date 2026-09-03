@@ -1,3 +1,5 @@
+import type { PasswordResponse } from "../@types/forwardemail.d.ts";
+
 export interface AliasUpdate {
   recipients: string[];
   has_imap: boolean;
@@ -27,4 +29,31 @@ export function isValidRecipientList(
   if (recipients.length === 0) return hasImap;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return recipients.every((email) => emailRegex.test(email));
+}
+
+export function computeResetFlag(
+  hasImap: boolean,
+  hasCurrentPassword: boolean,
+  resetConfirmed: boolean,
+): boolean {
+  return hasImap && !hasCurrentPassword && resetConfirmed;
+}
+
+export function extractErrorReason(body: unknown): string | undefined {
+  if (typeof body !== "object" || body === null) return undefined;
+  const reason = (body as Record<string, unknown>).ERROR;
+  return typeof reason === "string" ? reason : undefined;
+}
+
+export function unwrapPasswordResponse(body: unknown): PasswordResponse {
+  const alias = (body as { ALIAS?: unknown } | null | undefined)?.ALIAS;
+  if (
+    typeof alias === "object" &&
+    alias !== null &&
+    typeof (alias as PasswordResponse).username === "string" &&
+    typeof (alias as PasswordResponse).password === "string"
+  ) {
+    return alias as PasswordResponse;
+  }
+  throw new Error("Unexpected password response shape from server.");
 }
