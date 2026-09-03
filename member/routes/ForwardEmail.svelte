@@ -301,22 +301,21 @@
 
     <dt>How do I use my alias with an email client?</dt>
     <dd>
-      <p>Forward Email works as an additional mailbox for your alias:</p>
       <ul>
         <li>
-          IMAP/POP3/CalDAV/CardDAV storage is optional and can be enabled at the
-          same time as forwarding.
+          To send mail, use the Forward Email SMTP servers. Forward Email uses DMARC,
+          so other outgoing servers are likely to be rejected.
         </li>
         <li>
-          To send mail, use the Forward Email servers. Forward Email uses DMARC,
-          so other outgoing servers are likely to be rejected.
+          Inbox: IMAP/POP3/CalDAV/CardDAV storage is optional and can be enabled at the
+          same time as, or instead of, forwarding.
         </li>
       </ul>
       <p>
-        The <kbd>[*]</kbd> button manages the shared Password for sending and
-        receiving. You set the Password yourself; there is no system-generated
-        password and nothing is emailed to you. Use your full alias email
-        address as the username when configuring your client.
+        The <kbd>[*]</kbd> button manages your password for sending (SMTP)
+        or receiving (IMAP/POP3 only) email.
+        Use your full alias email address as the username when configuring
+        your client.
       </p>
       <p>
         See Forward Email's
