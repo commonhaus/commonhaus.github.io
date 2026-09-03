@@ -131,7 +131,10 @@ function createMockBackend(): Middleware {
             if (request.method === "POST" || request.method === "PUT") {
                 const body = await request.json();
                 // { "commonhaus-bot": { recipients: ["something@other"], has_imap: true } }
-                const update = body["commonhaus-bot"] || body["commonhaus-bot@commonhaus.dev"] || {};
+                const aliasKey = body["commonhaus-bot"]
+                    ? "commonhaus-bot"
+                    : "commonhaus-bot@commonhaus.dev";
+                const update = body[aliasKey] || {};
                 const recipients = Array.isArray(update) ? update : update.recipients || [];
                 const hasImap = Array.isArray(update) ? false : update.has_imap === true;
 
@@ -158,10 +161,29 @@ function createMockBackend(): Middleware {
                     });
                 }
 
-                state.ALIAS = { ...alias };
-                state.ALIAS["commonhaus-bot@commonhaus.dev"].recipients = recipients;
-                state.ALIAS["commonhaus-bot@commonhaus.dev"].has_imap = hasImap;
+                // Mirrors the real backend: POST/PUT only echoes back the
+                // alias(es) that were actually in this request, not the
+                // member's complete set (only GET returns everything) — so
+                // update `state.ALIAS` for local GET/verify consistency, but
+                // respond with just the touched alias.
+                state.ALIAS["commonhaus-bot@commonhaus.dev"] = {
+                    ...alias["commonhaus-bot@commonhaus.dev"],
+                    recipients,
+                    has_imap: hasImap,
+                };
                 state.HAUS.services.forwardEmail.active = recipients.length > 0;
+                const commonhaus = Object.keys(state.ALIAS).find((key) => key.endsWith("@commonhaus.dev"));
+                state.HAUS.services.forwardEmail.hasDefaultAlias = !!commonhaus;
+
+                return new Response(JSON.stringify({
+                    "ALIAS": { "commonhaus-bot@commonhaus.dev": state.ALIAS["commonhaus-bot@commonhaus.dev"] }
+                }), {
+                    status: 200,
+                    statusText: "OK",
+                    headers: {
+                        'Content-type': 'application/json'
+                    }
+                });
             }
             if (state.HAUS.services.forwardEmail?.altAlias) {
                 for (const x of state.HAUS.services.forwardEmail.altAlias) {

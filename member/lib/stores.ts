@@ -227,7 +227,15 @@ const handleResponse = async (method: string, uri: string, response: Response, r
                     errorFlag("haus", ErrorStatus.OK);
                     errorFlag("unknown", ErrorStatus.OK);
                 } else if (key === "ALIAS") {
-                    aliasTargets.set(value as Record<string, Alias>);
+                    // GET returns the member's complete, authoritative set
+                    // of aliases; POST only echoes back the alias(es) just
+                    // updated, so merge rather than replace to avoid
+                    // dropping every other alias from local state.
+                    if (method === 'GET') {
+                        aliasTargets.set(value as Record<string, Alias>);
+                    } else {
+                        aliasTargets.update((current) => ({ ...current, ...(value as Record<string, Alias>) }));
+                    }
                     errorFlag("alias", ErrorStatus.OK);
                 }
             }
