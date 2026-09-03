@@ -57,6 +57,13 @@ main.member {
     right: 0;
     padding: 1rem;
     cursor: pointer;
+    outline: none;
+
+    &:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: -0.5rem;
+      border-radius: 50%;
+    }
   }
 
   .hold {
@@ -359,6 +366,15 @@ main.member {
 
   .password-modal-content h3 {
     margin: 0;
+
+    .password-help {
+      @include figtree-light;
+      color: var(--text-muted);
+    }
+  }
+
+  .choose-one-both {
+    @include figtree-medium;
   }
 
   .password-modal-content .checkbox-label {
@@ -370,6 +386,11 @@ main.member {
 
   .password-help {
     font-size: 0.9em;
+  }
+
+  .checkbox-help {
+    display: block;
+    margin-top: 0.25rem;
   }
 
   .password-callout {
@@ -392,6 +413,10 @@ main.member {
   .alias-details {
     flex-basis: 100%;
     font-size: var(--font-smaller);
+  }
+
+  .alias-summary {
+    font-size: var(--font-size);
   }
 
   .modified,

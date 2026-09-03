@@ -24,16 +24,13 @@
   import CloseButton from "../components/CloseButton.svelte";
   import Loading from "../components/Loading-coffee.svelte";
   import Oops from "../components/Oops.svelte";
-  import { debounce } from "../lib/debounce";
   import { mayHaveEmail,
     mayHaveCommonhausEmail
   } from "../lib/memberStatus";
-  import { scrollToSection } from "../lib/scrollToSection";
-  import {
-    aliasUpdatePayload,
-    isValidRecipientList,
-  } from "../lib/forwardEmail";
+  import { aliasUpdatePayload } from "../lib/forwardEmail";
   import ManagePassword from "../components/ManagePassword.svelte";
+  import EditAlias from "../components/EditAlias.svelte";
+  import CreateAlias from "../components/CreateAlias.svelte";
 
   const emailAttestation = getAttestationText("email");
 
@@ -42,12 +39,7 @@
   let recentVersion = emailAttestation.version;
   let versionChanged = false;
   let nextDate = "due";
-  let aliasUpdates = {};
-  let allRecipients = {};
-  let noRecipients = true;
-  let emailErrors = {};
   let keys = {};
-  let hasErrors = false;
 
   let eligible = false;
   let eligibleForDefault = false;
@@ -55,8 +47,10 @@
   let createDefaultAlias = false;
   let passwordAlias = null;
   let passwordError = "";
-
-  $: hasErrors = Object.values(emailErrors).some((error) => error === true);
+  let editAlias = null;
+  let editError = "";
+  let creatingAlias = false;
+  let createError = "";
 
   $: {
     // Check overall email eligibility
@@ -66,6 +60,8 @@
     eligibleForDefault = mayHaveCommonhausEmail($commonhausData.status);
     hasDefaultAlias = $commonhausData.services?.forwardEmail?.hasDefaultAlias;
     createDefaultAlias = !JSON.stringify($aliasTargets).includes("commonhaus.dev");
+
+    keys = Object.keys($aliasTargets);
 
     recentAttestation = checkRecentAttestation("email", $commonhausData);
     nextDate = getNextAttestationDate("email", $commonhausData);
@@ -77,7 +73,6 @@
   onMount(async () => {
     await load(ALIASES);
     aliasesLoaded = true;
-    resetAll();
   });
 
   function generatePassword(alias) {
@@ -95,72 +90,38 @@
     }
   }
 
-  async function saveAll() {
-    // send only the email alias and the updated target recipients
-    const updates = aliasUpdatePayload(aliasUpdates);
-    console.debug("save all", aliasUpdates, updates);
-    await post(ALIASES, updates);
-    resetAll();
+  function openEditAlias(alias) {
+    editError = "";
+    editAlias = alias;
   }
 
-  function resetAll() {
-    keys = Object.keys($aliasTargets);
-    aliasUpdates = JSON.parse(JSON.stringify($aliasTargets));
-    const nextAllRecipients = {};
-    const nextEmailErrors = {};
-
-    for (const alias of keys) {
-      const recipients = aliasUpdates[alias].recipients || [];
-      nextAllRecipients[alias] = recipients.join(", ");
-      nextEmailErrors[alias] = !isValidRecipientList(
-        recipients,
-        aliasUpdates[alias].has_imap,
-      );
+  async function submitEditAlias(event) {
+    editError = "";
+    try {
+      const { alias, recipients, has_imap } = event.detail;
+      const updates = aliasUpdatePayload({ [alias]: { recipients, has_imap } });
+      await post(ALIASES, updates);
+      editAlias = null;
+    } catch (error) {
+      editError = error.message || "Unable to update this alias.";
     }
-
-    allRecipients = nextAllRecipients;
-    emailErrors = nextEmailErrors;
-    noRecipients = keys.every((alias) =>
-      (aliasUpdates[alias].recipients || []).length === 0
-    );
   }
 
-  const handleInputChange = debounce((alias, event) => {
-    const value = event.target.value.trim();
-    const emails = value ? value.split(",").map((email) => email.trim()) : [];
-    if (!aliasUpdates[alias]) {
-      aliasUpdates[alias] = {};
-    }
-    noRecipients = false;
-    aliasUpdates[alias].recipients = emails;
-    allRecipients[alias] = event.target.value;
-    emailErrors = {
-      ...emailErrors,
-      [alias]: !isValidRecipientList(emails, aliasUpdates[alias].has_imap),
-    };
-    console.debug(
-      "Update alias",
-      alias,
-      allRecipients[alias],
-      aliasUpdates[alias]?.recipients,
-      emailErrors[alias],
-    );
-  }, 300);
+  function openCreateAlias() {
+    createError = "";
+    creatingAlias = true;
+  }
 
-  function handleImapChange(alias, event) {
-    const hasImap = event.currentTarget.checked;
-    aliasUpdates = {
-      ...aliasUpdates,
-      [alias]: {
-        ...(aliasUpdates[alias] || {}),
-        has_imap: hasImap,
-      },
-    };
-    const recipients = aliasUpdates[alias].recipients || [];
-    emailErrors = {
-      ...emailErrors,
-      [alias]: !isValidRecipientList(recipients, hasImap),
-    };
+  async function submitCreateAlias(event) {
+    createError = "";
+    try {
+      const { alias, recipients, has_imap } = event.detail;
+      const updates = aliasUpdatePayload({ [alias]: { recipients, has_imap } });
+      await post(ALIASES, updates);
+      creatingAlias = false;
+    } catch (error) {
+      createError = error.message || "Unable to create this alias.";
+    }
   }
 </script>
 
@@ -189,66 +150,34 @@
 {:else if isOk($errorFlags.alias)}
   {#if recentAttestation}
     <section class="information">
-      {#if noRecipients}
-        <h3>Setting up Forward Email</h3>
-        <ol>
-          <li>
-            📝 Enter a valid target address for your alias below. If you want
-            mailbox storage, enable IMAP/POP3/CalDAV/CardDAV too, then press
-            <kbd>Submit</kbd>.
-          </li>
-          <li>
-            📥 Check the target address for a verification email from Forward
-            Email, then follow its instructions.
-          </li>
-          <li>
-            🔑 After the target address is verified, use the <kbd>[*]</kbd>
-            button to generate a Password for your alias.
-          </li>
-          <li>
-            📬 Configure your email client with the alias and Password using
-            the <a href="https://forwardemail.net/en/faq#email-clients"
-              >email client instructions</a
-            >.
-          </li>
-        </ol>
-        <p>
-          🎉 Forwarding begins after you verify your target address. If enabled,
-          mailbox storage works alongside forwarding.<br /><br />
-          👀 See <a
-              href="#/"
-              role="button"
-              tabindex="0"
-              on:click|preventDefault={() => scrollToSection("faq")}
-              >additional notes below</a
-            > for how to send mail using your new alias.
-        </p>
-      {:else}
-        <p>
-          Your email {keys.length <= 1 ? "alias" : "aliases"}:
-        </p>
-      {/if}
       <div class="header setting">
         <div>Alias</div>
-        <div>Target address</div>
       </div>
       {#if keys.length > 0}
         {#each keys as alias (alias)}
-          {@const aliasData = aliasUpdates[alias]}
+          {@const aliasData = $aliasTargets[alias]}
           {@const hasVerifiedRecipients =
             aliasData.verified_recipients?.length > 0}
           {@const canManagePassword = hasVerifiedRecipients || aliasData.has_imap}
+          {@const targetRecipients = aliasData.recipients || []}
+          {@const target = targetRecipients.join(", ")}
+          {@const verifiedTargets = targetRecipients.filter((r) =>
+            aliasData.verified_recipients?.includes(r))}
+          {@const unverifiedTargets = targetRecipients.filter((r) =>
+            !aliasData.verified_recipients?.includes(r))}
           <div class="no-title setting">
-            <label class="label" for={alias}>{alias}</label>
+            <span class="label">{alias}</span>
             <span class="control">
-              <input
-                id={alias}
-                type="text"
-                placeholder="forward-to-me@test.org"
-                bind:value={allRecipients[alias]}
-                on:input={(event) => handleInputChange(alias, event)}
-                class:error={emailErrors[alias]}
-              />
+              <button
+                class="input-square"
+                aria-label="Edit this alias"
+                disabled={$outboundPost}
+                on:click={() => openEditAlias(alias)}
+              >
+                <svg width="20" height="20"
+                  ><use xlink:href="/assets/icon-symbol.svg#icon-pencil" /></svg
+                >
+              </button>
               <div class="tooltip">
                 <button
                   class="input-square"
@@ -267,74 +196,41 @@
                 </button>
               </div>
             </span>
-            <div class="alias-details">
-              Verified recipients: <code
-                >{aliasData.verified_recipients?.join(", ") || ""}</code
-              >
-              <div>
-              <label>
-                <input
-                  type="checkbox"
-                  checked={aliasUpdates[alias].has_imap}
-                  on:change={(event) => handleImapChange(alias, event)}
-                />
-                Enable IMAP/POP3/CalDAV/CardDAV
-              </label>
+            {#if target}
+              <div class="alias-details">
+                → {target}
               </div>
-            </div>
+              {#if verifiedTargets.length > 0}
+                <div class="alias-details">
+                  Verified: <span class="ok">{verifiedTargets.join(", ")}</span>
+                </div>
+              {/if}
+              {#if unverifiedTargets.length > 0}
+                <div class="alias-details">
+                  Pending verification: <span class="required">{unverifiedTargets.join(", ")}</span>
+                </div>
+              {/if}
+            {/if}
+            {#if aliasData.has_imap}
+              <div class="alias-details">
+                IMAP/POP3/CalDAV/CardDAV: enabled
+              </div>
+            {/if}
           </div>
         {/each}
       {/if}
       {#if eligibleForDefault && createDefaultAlias }
         {@const alias = $gitHubData.login}
-        <!-- Assign a default value to alias -->
         <div class="no-title setting">
-          <label class="label" for={alias}>{alias}</label>
+          <span class="label">{alias}</span>
           <span class="control">
-            <input
-              id={alias}
-              type="text"
-              placeholder="forward-to-me@test.org"
-              bind:value={allRecipients[alias]}
-              on:input={(event) => handleInputChange(alias, event)}
-              class:error={emailErrors[alias]}
-            />
+            <span class="alias-summary required">Not yet created&nbsp;</span>
+            <button class="input" on:click={openCreateAlias} disabled={$outboundPost}>
+              Create
+            </button>
           </span>
-          <div class="alias-details">
-            <label>
-              <input
-                type="checkbox"
-                checked={aliasUpdates[alias]?.has_imap || false}
-                on:change={(event) => handleImapChange(alias, event)}
-              />
-              Enable IMAP/POP3/CalDAV/CardDAV
-            </label>
-          </div>
         </div>
       {/if}
-
-      <div class="setting">
-        <span></span>
-        <span class="control">
-          <button
-            name="saveAll"
-            class="input"
-            on:click={saveAll}
-            disabled={$outboundPost || hasErrors}>Submit</button
-          >
-          <div class="tooltip">
-            <button
-              name="reset"
-              class="input"
-              on:click={resetAll}
-              disabled={$outboundPost}
-            >
-              <span>Reset</span>
-              <span class="tooltiptext">Reset to previous values</span>
-            </button>
-          </div>
-        </span>
-      </div>
       </section>
   {/if}
 
@@ -344,12 +240,35 @@
 {#if passwordAlias}
   <ManagePassword
     alias={passwordAlias}
-    hasImap={aliasUpdates[passwordAlias]?.has_imap}
-    validatedEmail={aliasUpdates[passwordAlias]?.verified_recipients?.[0] || ""}
+    hasImap={$aliasTargets[passwordAlias]?.has_imap}
+    validatedEmail={$aliasTargets[passwordAlias]?.verified_recipients?.[0] || ""}
     busy={$outboundPost}
     error={passwordError}
     on:submit={submitPassword}
     on:close={() => (passwordAlias = null)}
+  />
+{/if}
+
+{#if editAlias}
+  <EditAlias
+    alias={editAlias}
+    recipients={$aliasTargets[editAlias]?.recipients || []}
+    hasImap={$aliasTargets[editAlias]?.has_imap || false}
+    verifiedRecipients={$aliasTargets[editAlias]?.verified_recipients || []}
+    busy={$outboundPost}
+    error={editError}
+    on:submit={submitEditAlias}
+    on:close={() => (editAlias = null)}
+  />
+{/if}
+
+{#if creatingAlias}
+  <CreateAlias
+    alias={$gitHubData.login}
+    busy={$outboundPost}
+    error={createError}
+    on:submit={submitCreateAlias}
+    on:close={() => (creatingAlias = false)}
   />
 {/if}
 

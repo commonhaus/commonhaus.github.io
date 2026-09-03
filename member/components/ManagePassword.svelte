@@ -16,8 +16,12 @@
   let resetConfirmed = false;
   let emailInstructions = !!validatedEmail;
   let dialog;
+  let newPasswordInput;
 
-  onMount(() => dialog?.showModal());
+  onMount(() => {
+    dialog?.showModal();
+    newPasswordInput?.focus();
+  });
   onDestroy(() => {
     if (dialog?.open) dialog.close();
   });
@@ -72,6 +76,7 @@
         maxlength="128"
         aria-invalid={!!newPasswordError}
         bind:value={newPassword}
+        bind:this={newPasswordInput}
       />
       <p class="password-help">
         Must be 128 characters or fewer, cannot start or end with whitespace, and cannot contain
@@ -106,7 +111,7 @@
           <input type="checkbox" bind:checked={resetConfirmed} />
           <span>
             IMAP/POP3: I understand that, if this alias already has a mailbox, continuing without the
-            current Password will delete the existing mailbox and all messages.
+            current Password will reset the existing mailbox and delete all messages.
           </span>
         </label>
         </div>
