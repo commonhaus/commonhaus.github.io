@@ -1,7 +1,7 @@
 {
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
-    "lumeWatch": "deno task lume -s & deno task vite-watch",
+    "lumeWatch": "VITE_WATCH_ACTIVE=true deno task lume -s & deno task vite-watch",
     "attach": "echo \"import 'lume/cli.ts'\" | deno run --inspect-wait -A -",
     "build": "deno task lume",
     "vite-build": "deno run -A --node-modules-dir npm:vite build",

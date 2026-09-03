@@ -69,8 +69,11 @@ const site = lume({
 site.copy("static", "/");
 site.mergeKey("cssclasses", "stringArray");
 
-// Build the membership UI when not in dev mode
-if (!Deno.env.get("DEV_MODE")) {
+// Build the membership UI when not in dev mode. Skip this when vite-watch
+// is already running (lumeWatch) — it owns member.js's continuous rebuild,
+// and racing a one-shot `vite-build` against it clobbers whichever finishes
+// last, sometimes shipping a build that lost VITE_APP_DEV_MODE/MOCK_BACKEND.
+if (!Deno.env.get("DEV_MODE") && !Deno.env.get("VITE_WATCH_ACTIVE")) {
     site.addEventListener("afterBuild", "deno task vite-build");
 }
 
