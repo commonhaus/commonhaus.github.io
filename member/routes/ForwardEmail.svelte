@@ -241,7 +241,7 @@
   <ManagePassword
     alias={passwordAlias}
     hasImap={$aliasTargets[passwordAlias]?.has_imap}
-    validatedEmail={$aliasTargets[passwordAlias]?.verified_recipients?.[0] || ""}
+    verifiedRecipients={$aliasTargets[passwordAlias]?.verified_recipients || []}
     busy={$outboundPost}
     error={passwordError}
     on:submit={submitPassword}

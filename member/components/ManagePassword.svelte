@@ -6,7 +6,7 @@
 
   export let alias = "";
   export let hasImap = false;
-  export let validatedEmail = "";
+  export let verifiedRecipients = [];
   export let busy = false;
   export let error = "";
 
@@ -14,7 +14,7 @@
   let currentPassword = "";
   let newPassword = "";
   let resetConfirmed = false;
-  let emailInstructions = !!validatedEmail;
+  let selectedEmail = verifiedRecipients[0] || "";
   let dialog;
   let newPasswordInput;
 
@@ -40,7 +40,7 @@
       password: currentPassword || undefined,
       new_password: newPassword,
       reset: hasImap && !hasCurrentPassword && resetConfirmed,
-      email: emailInstructions ? validatedEmail : undefined,
+      email: selectedEmail || undefined,
     });
   }
 
@@ -118,11 +118,22 @@
       {/if}
     </section>
 
-    {#if validatedEmail}
-      <label class="checkbox-label">
-        <input type="checkbox" bind:checked={emailInstructions} />
-        <span>Email Password instructions to <code>{validatedEmail}</code></span>
-      </label>
+    {#if verifiedRecipients.length > 0}
+      <section>
+        <h3>Email instructions</h3>
+        <div class="radio-group">
+          {#each verifiedRecipients as recipient (recipient)}
+            <label class="checkbox-label">
+              <input type="radio" name="email-instructions" value={recipient} bind:group={selectedEmail} />
+              <span>Send instructions to <code>{recipient}</code></span>
+            </label>
+          {/each}
+          <label class="checkbox-label">
+            <input type="radio" name="email-instructions" value="" bind:group={selectedEmail} />
+            <span>Don't send instructions</span>
+          </label>
+        </div>
+      </section>
     {/if}
 
     {#if error}
