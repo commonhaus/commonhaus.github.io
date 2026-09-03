@@ -1,4 +1,4 @@
-interface Alias {
+export interface Alias {
     domain: AliasDomain;
     name: string;
     is_enabled: boolean;
@@ -12,18 +12,18 @@ interface Alias {
     updated_at: string;
 }
 
-interface AliasOwner {
+export interface AliasOwner {
     email: string;
     display_name: string;
     id: string;
 }
 
-interface AliasDomain {
+export interface AliasDomain {
     name: string;
     id: string;
 }
 
-interface PasswordRequest {
+export interface PasswordRequest {
     alias: string;
     password?: string;
     new_password: string;
@@ -31,7 +31,7 @@ interface PasswordRequest {
     email?: string;
 }
 
-interface PasswordResponse {
+export interface PasswordResponse {
     username: string;
     password: string;
 }

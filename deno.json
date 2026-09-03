@@ -5,6 +5,7 @@
     "attach": "echo \"import 'lume/cli.ts'\" | deno run --inspect-wait -A -",
     "build": "deno task lume",
     "member-test": "deno test --allow-env member/",
+    "member-check": "deno run -A --node-modules-dir npm:svelte-check --tsconfig ./tsconfig.json",
     "vite-build": "deno run -A --node-modules-dir npm:vite build",
     "vite-watch": "deno run -A --node-modules-dir npm:vite build --watch",
     "serve": "deno run -A ./tasks/serve.js",

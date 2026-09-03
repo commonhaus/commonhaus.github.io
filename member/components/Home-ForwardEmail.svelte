@@ -1,6 +1,6 @@
 <!-- ForwardEmail.svelte -->
 <script>
-  import { MemberStatus } from "../@types/data.d.ts";
+  import { MemberStatus } from "../@types/data.ts";
   import {
     checkRecentAttestation,
     getAttestationTitle,

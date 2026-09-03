@@ -1,9 +1,9 @@
 import attestData from 'virtual:attest-yaml'; // see vite.config.ts
-import type { AttestationInfo, AttestationText, CommonhausMember } from "../@types/data.d.ts";
+import type { AttestationInfo, AttestationText, CommonhausMember } from "../@types/data.ts";
 import { getRoleDescription } from "./memberStatus.ts";
 import { COMMONHAUS, post } from "./stores.ts";
 
-export const attestationInfo: AttestationInfo = attestData;
+export const attestationInfo: AttestationInfo = attestData as AttestationInfo;
 
 const datePattern = /^\d{4}-\d{2}-\d{2}$/;
 

@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import { MemberRole } from "../@types/data.d.ts";
+  import { MemberRole } from "../@types/data.ts";
   import { scrollToSection } from "../lib/scrollToSection";
   import {
     getRequiredAttestations,

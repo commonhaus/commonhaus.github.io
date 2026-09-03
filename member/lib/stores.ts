@@ -1,12 +1,12 @@
 import { writable, derived, get } from "svelte/store";
 import type { Alias, PasswordRequest, PasswordResponse } from "../@types/forwardemail.d.ts";
-import { ErrorStatus } from "../@types/data.d.ts";
+import { ErrorStatus } from "../@types/data.ts";
 import type {
     ApplicationData,
     CommonhausMember,
     ErrorFlags,
     GitHubUser,
-} from "../@types/data.d.ts";
+} from "../@types/data.ts";
 import { extractErrorReason, unwrapPasswordResponse } from "./forwardEmail.ts";
 
 export const uriBase = "__BASE_URL__";
