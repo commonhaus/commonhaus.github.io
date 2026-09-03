@@ -1,10 +1,10 @@
 import { writable, derived, get } from "svelte/store";
-import { Alias } from "../@types/forwardemail.d.ts";
-import {
+import type { Alias } from "../@types/forwardemail.d.ts";
+import { ErrorStatus } from "../@types/data.d.ts";
+import type {
     ApplicationData,
     CommonhausMember,
     ErrorFlags,
-    ErrorStatus,
     GitHubUser,
 } from "../@types/data.d.ts";
 

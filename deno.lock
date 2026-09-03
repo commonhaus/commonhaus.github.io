@@ -125,7 +125,7 @@
     "jsr:@std/yaml@^1.0.5": "1.1.2",
     "jsr:@std/yaml@^1.1.2": "1.1.2",
     "npm:@js-temporal/polyfill@0.4.4": "0.4.4",
-    "npm:@sveltejs/vite-plugin-svelte@*": "3.1.2_svelte@4.2.19_vite@5.4.3__@types+node@18.16.19__sass@1.85.0_sass@1.85.0",
+    "npm:@sveltejs/vite-plugin-svelte@*": "3.1.2_svelte@4.2.19_vite@5.4.3_sass@1.85.0",
     "npm:@types/estree@1.0.5": "1.0.5",
     "npm:@types/estree@1.0.6": "1.0.6",
     "npm:@types/node@*": "18.16.19",
@@ -151,11 +151,12 @@
     "npm:sass@1.82.0": "1.82.0",
     "npm:sass@1.83.1": "1.83.1",
     "npm:sass@1.85.0": "1.85.0",
-    "npm:svelte-preprocess@*": "6.0.2_sass@1.85.0_svelte@4.2.19",
+    "npm:svelte-check@*": "4.7.6_svelte@4.2.19_typescript@6.0.3",
+    "npm:svelte-preprocess@*": "6.0.2_sass@1.85.0_svelte@4.2.19_typescript@6.0.3",
     "npm:svelte@*": "4.2.19",
     "npm:svg-sprite@*": "2.0.4",
     "npm:unidecode@1.1.0": "1.1.0",
-    "npm:vite-plugin-replace@*": "0.1.1_vite@2.9.18__sass@1.85.0_sass@1.85.0",
+    "npm:vite-plugin-replace@*": "0.1.1_vite@2.9.18_sass@1.85.0",
     "npm:vite@*": "5.4.3_@types+node@18.16.19_sass@1.85.0"
   },
   "jsr": {
@@ -1058,7 +1059,10 @@
       "os": ["win32"],
       "cpu": ["x64"]
     },
-    "@sveltejs/vite-plugin-svelte-inspector@2.1.0_@sveltejs+vite-plugin-svelte@3.1.2__svelte@4.2.19__vite@5.4.3___@types+node@18.16.19___sass@1.85.0__sass@1.85.0_svelte@4.2.19_vite@5.4.3__@types+node@18.16.19__sass@1.85.0_sass@1.85.0": {
+    "@sveltejs/load-config@0.2.3": {
+      "integrity": "sha512-VT3qmUb8pRV2QrZjd8iAmtg8lf4W0TIjZbvXtz5MKei/q96teWZgGJyyidJzOjzZzvdq616eSRVeMYIQChUTAQ=="
+    },
+    "@sveltejs/vite-plugin-svelte-inspector@2.1.0_@sveltejs+vite-plugin-svelte@3.1.2_svelte@4.2.19_vite@5.4.3_sass@1.85.0": {
       "integrity": "sha512-9QX28IymvBlSCqsCll5t0kQVxipsfhFFL+L2t3nTWfXnddYwxBuAEtTtlaVQpRz9c37BhJjltSeY4AJSC03SSg==",
       "dependencies": [
         "@sveltejs/vite-plugin-svelte",
@@ -1067,7 +1071,7 @@
         "vite@5.4.3_@types+node@18.16.19_sass@1.85.0"
       ]
     },
-    "@sveltejs/vite-plugin-svelte@3.1.2_svelte@4.2.19_vite@5.4.3__@types+node@18.16.19__sass@1.85.0_sass@1.85.0": {
+    "@sveltejs/vite-plugin-svelte@3.1.2_svelte@4.2.19_vite@5.4.3_sass@1.85.0": {
       "integrity": "sha512-Txsm1tJvtiYeLUVRNqxZGKR/mI+CzuIQuc2gn+YCs9rMTowpNZ2Nqt53JdL8KF9bLhAf2ruR/dr9eZCwdTriRA==",
       "dependencies": [
         "@sveltejs/vite-plugin-svelte-inspector",
@@ -1538,6 +1542,9 @@
         "@types/estree@1.0.6"
       ]
     },
+    "fdir@6.5.0": {
+      "integrity": "sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg=="
+    },
     "fecha@4.2.3": {
       "integrity": "sha512-OP2IUU6HeYKJi3i0z4A19kHMQoLVs4Hc+DPqqxI2h/DPZHTm/vjsfC6P0b4jCMy14XizLBqvndQ+UilD7707Jw=="
     },
@@ -1769,6 +1776,9 @@
         "brace-expansion"
       ]
     },
+    "mri@1.2.0": {
+      "integrity": "sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA=="
+    },
     "ms@2.1.2": {
       "integrity": "sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w=="
     },
@@ -1957,6 +1967,12 @@
       ],
       "bin": true
     },
+    "sade@1.8.1": {
+      "integrity": "sha512-xal3CZX1Xlo/k4ApwCFrHVACi9fBqJ7V+mwhBsuf/1IOKbBy098Fex+Wa/5QMubw09pSZ/u8EY8PWgevJsXp1A==",
+      "dependencies": [
+        "mri"
+      ]
+    },
     "safe-buffer@5.1.2": {
       "integrity": "sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g=="
     },
@@ -2062,20 +2078,36 @@
     "supports-preserve-symlinks-flag@1.0.0": {
       "integrity": "sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w=="
     },
+    "svelte-check@4.7.6_svelte@4.2.19_typescript@6.0.3": {
+      "integrity": "sha512-t2scM//ZuVbSY/T2w6FSBw1v9s2NEmh/g+sy1lqtosW5ylBV5AF4wFb1Ts9Kf3MbfPDUDJDZ9L436YT0SPTdvw==",
+      "dependencies": [
+        "@jridgewell/trace-mapping",
+        "@sveltejs/load-config",
+        "chokidar@4.0.1",
+        "fdir",
+        "picocolors",
+        "sade",
+        "svelte",
+        "typescript"
+      ],
+      "bin": true
+    },
     "svelte-hmr@0.16.0_svelte@4.2.19": {
       "integrity": "sha512-Gyc7cOS3VJzLlfj7wKS0ZnzDVdv3Pn2IuVeJPk9m2skfhcu5bq3wtIZyQGggr7/Iim5rH5cncyQft/kRLupcnA==",
       "dependencies": [
         "svelte"
       ]
     },
-    "svelte-preprocess@6.0.2_sass@1.85.0_svelte@4.2.19": {
+    "svelte-preprocess@6.0.2_sass@1.85.0_svelte@4.2.19_typescript@6.0.3": {
       "integrity": "sha512-OvDTLfaOkkhjprbDKO0SOCkjNYuHy16dbD4SpqbIi6QiabOMHxRT4km5/dzbFFkmW1L0E2INF3MFltG2pgOyKQ==",
       "dependencies": [
         "sass@1.85.0",
-        "svelte"
+        "svelte",
+        "typescript"
       ],
       "optionalPeers": [
-        "sass@1.85.0"
+        "sass@1.85.0",
+        "typescript"
       ],
       "scripts": true
     },
@@ -2149,6 +2181,10 @@
     "tslib@2.7.0": {
       "integrity": "sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA=="
     },
+    "typescript@6.0.3": {
+      "integrity": "sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==",
+      "bin": true
+    },
     "uc.micro@2.1.0": {
       "integrity": "sha512-ARDJmphmdvUk6Glw7y9DQ2bFkKBHwQHLi2lsaH6PPmz/Ka9sFOBsBluozhDltWmnv9u/cF6Rt87znRTPV+yp/A=="
     },
@@ -2169,7 +2205,7 @@
         "replace-ext"
       ]
     },
-    "vite-plugin-replace@0.1.1_vite@2.9.18__sass@1.85.0_sass@1.85.0": {
+    "vite-plugin-replace@0.1.1_vite@2.9.18_sass@1.85.0": {
       "integrity": "sha512-v+okl3JNt2pf1jDYijw+WPVt6h9FWa/atTi+qnSFBqmKThLTDhlesx0r3bh+oFPmxRJmis5tNx9HtN6lGFoqWg==",
       "dependencies": [
         "vite@2.9.18_sass@1.85.0"
@@ -2210,7 +2246,7 @@
       ],
       "bin": true
     },
-    "vitefu@0.2.5_vite@5.4.3__@types+node@18.16.19__sass@1.85.0_sass@1.85.0": {
+    "vitefu@0.2.5_vite@5.4.3_sass@1.85.0": {
       "integrity": "sha512-SgHtMLoqaeeGnd2evZ849ZbACbnwQCIwRH57t18FxcXoZop0uQu0uzlIhJBlF/eWVzuce0sHeqPcDo+evVcg8Q==",
       "dependencies": [
         "vite@5.4.3_@types+node@18.16.19_sass@1.85.0"

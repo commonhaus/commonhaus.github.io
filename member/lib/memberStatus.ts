@@ -1,4 +1,5 @@
-import { MemberStatus, MemberRole, RoleDescription } from "../@types/data.d.ts";
+import { MemberStatus, MemberRole } from "../@types/data.d.ts";
+import type { RoleDescription } from "../@types/data.d.ts";
 import { attestationInfo } from "./attestations.ts";
 
 export const getPrimaryRole = (roles: MemberRole[]): MemberRole => {

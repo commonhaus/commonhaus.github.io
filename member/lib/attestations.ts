@@ -1,5 +1,5 @@
 import attestData from 'virtual:attest-yaml'; // see vite.config.ts
-import { AttestationInfo, AttestationText, CommonhausMember } from "../@types/data.d.ts";
+import type { AttestationInfo, AttestationText, CommonhausMember } from "../@types/data.d.ts";
 import { getRoleDescription } from "./memberStatus.ts";
 import { COMMONHAUS, post } from "./stores.ts";
 
