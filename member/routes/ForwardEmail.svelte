@@ -18,6 +18,7 @@
     load,
     outboundPost,
     post,
+    postPassword,
   } from "../lib/stores";
   import Attestation from "../components/Attestation.svelte";
   import CloseButton from "../components/CloseButton.svelte";
@@ -28,6 +29,11 @@
     mayHaveCommonhausEmail
   } from "../lib/memberStatus";
   import { scrollToSection } from "../lib/scrollToSection";
+  import {
+    aliasUpdatePayload,
+    isValidRecipientList,
+  } from "../lib/forwardEmail";
+  import ManagePassword from "../components/ManagePassword.svelte";
 
   const emailAttestation = getAttestationText("email");
 
@@ -47,6 +53,10 @@
   let eligibleForDefault = false;
   let hasDefaultAlias = false;
   let createDefaultAlias = false;
+  let passwordAlias = null;
+  let passwordError = "";
+
+  $: hasErrors = Object.values(emailErrors).some((error) => error === true);
 
   $: {
     // Check overall email eligibility
@@ -70,49 +80,64 @@
     resetAll();
   });
 
-  async function generatePassword(alias) {
-    console.log("Generate password for", alias);
-    if (window.confirm("Are you sure you want to generate a new password?")) {
-      await post(ALIASES + "/password", { email: alias });
+  function generatePassword(alias) {
+    passwordError = "";
+    passwordAlias = alias;
+  }
+
+  async function submitPassword(event) {
+    passwordError = "";
+    try {
+      await postPassword(event.detail);
+      passwordAlias = null;
+    } catch (error) {
+      passwordError = error.message || "Unable to manage the Password.";
     }
   }
 
   async function saveAll() {
     // send only the email alias and the updated target recipients
-    const recipients = {};
-    for (const [email, alias] of Object.entries(aliasUpdates)) {
-      recipients[email] = alias.recipients;
-    }
-    console.debug("save all", aliasUpdates, recipients);
-    await post(ALIASES, recipients);
+    const updates = aliasUpdatePayload(aliasUpdates);
+    console.debug("save all", aliasUpdates, updates);
+    await post(ALIASES, updates);
     resetAll();
   }
 
   function resetAll() {
     keys = Object.keys($aliasTargets);
     aliasUpdates = JSON.parse(JSON.stringify($aliasTargets));
-    noRecipients = true;
+    const nextAllRecipients = {};
+    const nextEmailErrors = {};
 
     for (const alias of keys) {
-      if (aliasUpdates[alias].recipients) {
-        noRecipients = false;
-        allRecipients[alias] = aliasUpdates[alias].recipients.join(", ");
-        emailErrors[alias] = !isValidEmailList(aliasUpdates[alias].recipients);
-      }
+      const recipients = aliasUpdates[alias].recipients || [];
+      nextAllRecipients[alias] = recipients.join(", ");
+      nextEmailErrors[alias] = !isValidRecipientList(
+        recipients,
+        aliasUpdates[alias].has_imap,
+      );
     }
+
+    allRecipients = nextAllRecipients;
+    emailErrors = nextEmailErrors;
+    noRecipients = keys.every((alias) =>
+      (aliasUpdates[alias].recipients || []).length === 0
+    );
   }
 
   const handleInputChange = debounce((alias, event) => {
-    const emails =
-      event.target.value.split(",").map((email) => email.trim()) || [];
+    const value = event.target.value.trim();
+    const emails = value ? value.split(",").map((email) => email.trim()) : [];
     if (!aliasUpdates[alias]) {
       aliasUpdates[alias] = {};
     }
     noRecipients = false;
     aliasUpdates[alias].recipients = emails;
     allRecipients[alias] = event.target.value;
-    emailErrors[alias] = !isValidEmailList(emails);
-    hasErrors = Object.values(emailErrors).some((error) => error === true);
+    emailErrors = {
+      ...emailErrors,
+      [alias]: !isValidRecipientList(emails, aliasUpdates[alias].has_imap),
+    };
     console.debug(
       "Update alias",
       alias,
@@ -122,9 +147,20 @@
     );
   }, 300);
 
-  function isValidEmailList(emails) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emails.every((email) => emailRegex.test(email));
+  function handleImapChange(alias, event) {
+    const hasImap = event.currentTarget.checked;
+    aliasUpdates = {
+      ...aliasUpdates,
+      [alias]: {
+        ...(aliasUpdates[alias] || {}),
+        has_imap: hasImap,
+      },
+    };
+    const recipients = aliasUpdates[alias].recipients || [];
+    emailErrors = {
+      ...emailErrors,
+      [alias]: !isValidRecipientList(recipients, hasImap),
+    };
   }
 </script>
 
@@ -157,16 +193,28 @@
         <h3>Setting up Forward Email</h3>
         <ol>
           <li>
-            📝 Specifiy the target address for your alias below, and press <kbd
-              >Submit</kbd
+            📝 Enter a valid target address for your alias below. If you want
+            mailbox storage, enable IMAP/POP3/CalDAV/CardDAV too, then press
+            <kbd>Submit</kbd>.
+          </li>
+          <li>
+            📥 Check the target address for a verification email from Forward
+            Email, then follow its instructions.
+          </li>
+          <li>
+            🔑 After the target address is verified, use the <kbd>[*]</kbd>
+            button to generate a Password for your alias.
+          </li>
+          <li>
+            📬 Configure your email client with the alias and Password using
+            the <a href="https://forwardemail.net/en/faq#email-clients"
+              >email client instructions</a
             >.
           </li>
-          <li>📥 Check for a verification email from Forward Email.</li>
-          <li>✅ Follow the instructions to verify your email address.</li>
         </ol>
         <p>
-          🎉 You will begin to receive email after you have verified your
-          email address.<br /><br />
+          🎉 Forwarding begins after you verify your target address. If enabled,
+          mailbox storage works alongside forwarding.<br /><br />
           👀 See <a
               href="#/"
               role="button"
@@ -189,12 +237,14 @@
           {@const aliasData = aliasUpdates[alias]}
           {@const hasVerifiedRecipients =
             aliasData.verified_recipients?.length > 0}
+          {@const canManagePassword = hasVerifiedRecipients || aliasData.has_imap}
           <div class="no-title setting">
             <label class="label" for={alias}>{alias}</label>
             <span class="control">
               <input
                 id={alias}
                 type="text"
+                placeholder="forward-to-me@test.org"
                 bind:value={allRecipients[alias]}
                 on:input={(event) => handleInputChange(alias, event)}
                 class:error={emailErrors[alias]}
@@ -202,9 +252,9 @@
               <div class="tooltip">
                 <button
                   class="input-square"
-                  aria-label="Generate a SMTP Password for this alias"
-                  disabled={$outboundPost || !hasVerifiedRecipients}
-                  on:click={generatePassword(alias)}
+                  aria-label="Manage Password for this alias"
+                  disabled={$outboundPost || !canManagePassword}
+                  on:click={() => generatePassword(alias)}
                 >
                   <svg width="20" height="20"
                     ><use
@@ -212,17 +262,26 @@
                     /></svg
                   >
                   <span class="tooltiptext"
-                    >Generate SMTP Password for this alias; requires verified
-                    email address</span
+                    >Manage Password for this alias</span
                   >
                 </button>
               </div>
             </span>
-            <footer>
+            <div class="alias-details">
               Verified recipients: <code
                 >{aliasData.verified_recipients?.join(", ") || ""}</code
               >
-            </footer>
+              <div>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={aliasUpdates[alias].has_imap}
+                  on:change={(event) => handleImapChange(alias, event)}
+                />
+                Enable IMAP/POP3/CalDAV/CardDAV
+              </label>
+              </div>
+            </div>
           </div>
         {/each}
       {/if}
@@ -235,11 +294,22 @@
             <input
               id={alias}
               type="text"
+              placeholder="forward-to-me@test.org"
               bind:value={allRecipients[alias]}
               on:input={(event) => handleInputChange(alias, event)}
               class:error={emailErrors[alias]}
             />
           </span>
+          <div class="alias-details">
+            <label>
+              <input
+                type="checkbox"
+                checked={aliasUpdates[alias]?.has_imap || false}
+                on:change={(event) => handleImapChange(alias, event)}
+              />
+              Enable IMAP/POP3/CalDAV/CardDAV
+            </label>
+          </div>
         </div>
       {/if}
 
@@ -265,10 +335,22 @@
           </div>
         </span>
       </div>
-    </section>
+      </section>
   {/if}
 
   <Attestation id="email" />
+{/if}
+
+{#if passwordAlias}
+  <ManagePassword
+    alias={passwordAlias}
+    hasImap={aliasUpdates[passwordAlias]?.has_imap}
+    validatedEmail={aliasUpdates[passwordAlias]?.verified_recipients?.[0] || ""}
+    busy={$outboundPost}
+    error={passwordError}
+    on:submit={submitPassword}
+    on:close={() => (passwordAlias = null)}
+  />
 {/if}
 
 <div class="information" id="faq">
@@ -287,7 +369,7 @@
       </p>
     </dd>
 
-    <dt>I haven't been receiving any email</dt>
+    <dt>I haven't been receiving any email (forwarding)</dt>
     <dd>
       <p>
         You need to verify your email address with Forward Email. Check your
@@ -295,44 +377,32 @@
       </p>
     </dd>
 
-    <dt>How do I send email using my alias?</dt>
+    <dt>How do I use my alias with an email client?</dt>
     <dd>
+      <p>Forward Email works as an additional mailbox for your alias:</p>
+      <ul>
+        <li>
+          IMAP/POP3/CalDAV/CardDAV storage is optional and can be enabled at the
+          same time as forwarding.
+        </li>
+        <li>
+          To send mail, use the Forward Email servers. Forward Email uses DMARC,
+          so other outgoing servers are likely to be rejected.
+        </li>
+      </ul>
       <p>
-        Forward Email uses DMARC. You must use the forwardemail.net SMTP server
-        to send emails or your outgoing emails are likely to get rejected.
+        The <kbd>[*]</kbd> button generates the shared Password for sending and
+        receiving. Forward Email sends a one-time link to the verified target
+        address; the generated Password is shown for only <em>30 seconds</em>.
+        Use your full alias email address as the username when configuring your
+        client.
       </p>
       <p>
-        You must have verified your target email address to send mail as your
-        alias.
+        See Forward Email's
+        <a href="https://forwardemail.net/en/faq#email-clients"
+          >email client instructions</a
+        > for server and port settings.
       </p>
-      <ol>
-        <li>
-          Use the <kbd>[*]</kbd> button on the form above to trigger SMTP password
-          generation.
-        </li>
-        <li>
-          An email from Forward Email will be sent to your verified email
-          address. <br />Note: When you click the link in that email, it will
-          show you the generated SMTP password for only <em>30 seconds</em>.
-        </li>
-        <li>
-          Set up your SMTP server (or Gmail) as follows:
-          <ul>
-            <li>
-              <a
-                href="https://forwardemail.net/en/guides/send-mail-as-gmail-custom-domain"
-                >Send Mail As with Gmail</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://forwardemail.net/en/guides/send-email-with-custom-domain-smtp"
-                >Send email with custom domain (SMTP)</a
-              >
-            </li>
-          </ul>
-        </li>
-      </ol>
     </dd>
   </dl>
 </div>

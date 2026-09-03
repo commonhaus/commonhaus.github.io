@@ -46,7 +46,8 @@ function createMockBackend(): Middleware {
             "is_enabled": false,
             "recipients": [
                 "test@commonhaus.dev"
-            ]
+            ],
+            "has_imap": false
         }
     };
 
@@ -128,10 +129,14 @@ function createMockBackend(): Middleware {
             // }
             if (request.method === "POST" || request.method === "PUT") {
                 const body = await request.json();
-                // { "commonhaus-bot": [ "something@other" ] }
-                const recipients = body["commonhaus-bot"] || body["commonhaus-bot@commonhaus.dev"] || [];
+                // { "commonhaus-bot": { recipients: ["something@other"], has_imap: true } }
+                const update = body["commonhaus-bot"] || body["commonhaus-bot@commonhaus.dev"] || {};
+                const recipients = Array.isArray(update) ? update : update.recipients || [];
                 state.ALIAS = { ...alias };
                 state.ALIAS["commonhaus-bot@commonhaus.dev"].recipients = recipients;
+                state.ALIAS["commonhaus-bot@commonhaus.dev"].has_imap = Array.isArray(update)
+                    ? false
+                    : update.has_imap === true;
                 state.HAUS.services.forwardEmail.active = recipients.length > 0;
             }
             if (state.HAUS.services.forwardEmail?.altAlias) {
@@ -153,9 +158,18 @@ function createMockBackend(): Middleware {
             return stateResponse(request);
         } else if (request.url.endsWith("/member/aliases/password")) {
             console.log("password", request.method);
-            return new Response("{}", {
+            const body = request.method === "POST" ? await request.json() : {};
+            const passwordAlias = body.alias || "commonhaus-bot@commonhaus.dev";
+            return new Response(JSON.stringify({
+                "username": passwordAlias,
+                "password": body.new_password || "mock-generated-password",
+                "has_imap": state.ALIAS[passwordAlias]?.has_imap === true
+            }), {
                 status: 200,
-                statusText: "OK"
+                statusText: "OK",
+                headers: {
+                    'Content-type': 'application/json'
+                }
             });
         } else if (request.url.endsWith("/member/apply")) {
             if (request.method === "POST" || request.method === "PUT") {

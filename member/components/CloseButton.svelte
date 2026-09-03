@@ -1,13 +1,22 @@
 <script>
-  const handleClick = (_) => {
-    window.location.assign(window.location.pathname);
+  export let onClose = null;
+  export let buttonId = "member-close";
+  export let ariaLabel = "Close and go to home page";
+
+  const handleClick = () => {
+    if (onClose) {
+      onClose();
+    } else {
+      window.location.assign(window.location.pathname);
+    }
   };
 </script>
 
 <button
   class="close"
-  id="member-close"
-  aria-label="Close and go to home page"
+  id={buttonId}
+  type="button"
+  aria-label={ariaLabel}
   on:click={handleClick}
 >
   <svg width="24" height="24"

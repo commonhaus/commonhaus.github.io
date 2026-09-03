@@ -3,6 +3,7 @@ interface Alias {
     name: string;
     is_enabled: boolean;
     has_recipient_verification: boolean;
+    has_imap: boolean;
     verified_recipients: Set<string>;
     recipients: Set<string>;
     id: string;

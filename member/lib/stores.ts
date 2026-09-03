@@ -162,6 +162,30 @@ export const post = async (uri: string, body: unknown): Promise<void> => {
     outboundPost.set(false);
 }
 
+export const postPassword = async (body: unknown): Promise<unknown> => {
+    const uri = `${ALIASES}/password`;
+    outboundPost.set(true);
+    try {
+        const response = await fetch(uri, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body),
+            credentials: "include",
+            mode: "cors"
+        });
+        if (!response.ok) {
+            throw new Error(`${response.status} ${response.statusText}`);
+        }
+        const text = await response.text();
+        return text ? JSON.parse(text) : undefined;
+    } catch (error) {
+        handleErrors('POST', uri, error);
+        throw error;
+    } finally {
+        outboundPost.set(false);
+    }
+}
+
 const handleResponse = async (method: string, uri: string, response: Response) => {
     try {
         processResponseStatus(method, uri, response);

@@ -144,7 +144,8 @@ main.member {
   button.input,
   button.input-square,
   input[type="text"],
-  input[type="email"] {
+  input[type="email"],
+  input[type="password"] {
     box-sizing: border-box;
     border: 1px solid var(--border-color);
     border-radius: 5px;
@@ -176,7 +177,8 @@ main.member {
 
   textarea,
   input[type="text"],
-  input[type="email"] {
+  input[type="email"],
+  input[type="password"] {
     padding: 10px;
     min-width: 20em;
     background-color: var(--input-bg-color);
@@ -293,6 +295,103 @@ main.member {
     flex: 2 1 auto;
     min-height: calc(100vh - 15em);
     position: relative;
+  }
+
+  .password-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: block;
+    width: min(800px, calc(100% - 2rem));
+    height: fit-content;
+    max-width: none;
+    max-height: calc(100vh - 2rem);
+    overflow-y: auto;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+
+    &::backdrop {
+      background: rgb(0 0 0 / 50%);
+    }
+  }
+
+  .password-modal-content {
+    position: relative;
+    width: auto;
+    padding: 1rem 1.5rem;
+    background: var(--background-primary, white);
+    color: var(--text-normal, inherit);
+    border: 1px solid var(--background-modifier-border, #ccc);
+    border-radius: 0.4rem;
+    box-shadow: 0 0.5rem 2rem rgb(0 0 0 / 30%);
+
+    label:not(.checkbox-label) {
+      display: block;
+      margin-top: 1rem;
+    }
+
+    input[type="password"] {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      margin-top: 0.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    > p {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  .password-modal-content section + section {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--background-modifier-border, #ccc);
+  }
+
+  .password-modal-content h3 {
+    margin: 0;
+  }
+
+  .password-modal-content .checkbox-label {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-start;
+    margin-top: 1rem;
+  }
+
+  .password-help {
+    font-size: 0.9em;
+  }
+
+  .password-callout {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 0.25rem;
+
+    &.warning { background: #fce8cd; }
+    &.success { background: #d9f2df; }
+    &.error { background: #f8d7da; }
+  }
+
+  .password-modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .alias-details {
+    flex-basis: 100%;
+    font-size: var(--font-smaller);
   }
 
   .modified,
