@@ -8,6 +8,16 @@ DavideD:
   bio: ''
   groups:
     - members
+Elexy:
+  login: Elexy
+  url: 'https://github.com/Elexy'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/439063?u=a931b04e22fa14dd606a179e1e6043366cd7a5c1&v=4
+  company: Pumiwex S.L.
+  name: Alex Knol
+  bio: '| AI | Cybersecurity | Leadership | Crypto | Triathlon | Curious |'
+  groups:
+    - advisory-board
 FDelporte:
   login: FDelporte
   url: 'https://github.com/FDelporte'
@@ -130,6 +140,18 @@ cealsair:
     Systems, TIBCO, Lucent Technologies, AT&T Bell Labs. 
   groups:
     - cf-egc
+chrisdemars:
+  login: chrisdemars
+  url: 'https://github.com/chrisdemars'
+  avatarUrl: >-
+    https://avatars.githubusercontent.com/u/6799474?u=28ffcf33c34abc7420b1a26c1e7a18205aac4c9c&v=4
+  company: null
+  name: Chris DeMars
+  bio: >-
+    Senior Developer Advocate | 🏅 5x Microsoft MVP | 🏅 2x Progress Champion |
+    🏅 Former GDE, Cloudinary MDE, Auth0 Ambassador
+  groups:
+    - advisory-board
 commonhaus-bot:
   login: commonhaus-bot
   url: 'https://github.com/commonhaus-bot'
