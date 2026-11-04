@@ -24,8 +24,8 @@ export const applicationData = writable<ApplicationData>({});
 export const errorFlags = writable<ErrorFlags>({});
 export const outboundPost = writable<boolean>(false);
 
-export const hasResponse = derived([gitHubData, errorFlags], ([$data, $errors]) => $data.name || $errors.unknown);
-export const knownUser = derived([gitHubData, errorFlags], ([$data, $errors]) => $data.name && !$errors.unknown);
+export const hasResponse = derived([gitHubData, errorFlags], ([$data, $errors]) => $data.login || $errors.unknown);
+export const knownUser = derived([gitHubData, errorFlags], ([$data, $errors]) => $data.login && !$errors.unknown);
 
 export const cookies = writable<Record<string, string>>({});
 export const aliasTargets = writable<Record<string, Alias>>({});
